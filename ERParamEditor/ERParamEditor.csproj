@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ERParamUtils\ERParamUtils.csproj" />
+    <ProjectReference Include="..\FSParam\FSParam.csproj" />
+    <ProjectReference Include="..\SoulsFormats\SoulsFormats.csproj" />
+    <ProjectReference Include="..\StudioUtils\StudioUtils.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="mod-config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
