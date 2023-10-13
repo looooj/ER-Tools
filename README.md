@@ -1,7 +1,7 @@
 # ER-Tools
 Elden Ring Param Edit Tools
 
-# Refer Projects
+# Reference  Projects
 https://github.com/soulsmods/DSMapStudio
 
 
