@@ -43,9 +43,9 @@
             statusInfo = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             panelBottom = new Panel();
+            buttonRestore = new Button();
             buttonTest = new Button();
             buttonExec = new Button();
-            comboBox1 = new ComboBox();
             errorProvider1 = new ErrorProvider(components);
             panel1.SuspendLayout();
             panelClient.SuspendLayout();
@@ -129,9 +129,9 @@
             // 
             buttonOpenParam.Location = new Point(24, 12);
             buttonOpenParam.Name = "buttonOpenParam";
-            buttonOpenParam.Size = new Size(75, 23);
+            buttonOpenParam.Size = new Size(146, 23);
             buttonOpenParam.TabIndex = 0;
-            buttonOpenParam.Text = "Open";
+            buttonOpenParam.Text = "OpenParam";
             buttonOpenParam.UseVisualStyleBackColor = true;
             buttonOpenParam.Click += buttonOpenParam_Click;
             // 
@@ -182,14 +182,24 @@
             // 
             // panelBottom
             // 
+            panelBottom.Controls.Add(buttonRestore);
             panelBottom.Controls.Add(buttonTest);
             panelBottom.Controls.Add(buttonExec);
-            panelBottom.Controls.Add(comboBox1);
             panelBottom.Dock = DockStyle.Bottom;
             panelBottom.Location = new Point(0, 525);
             panelBottom.Name = "panelBottom";
             panelBottom.Size = new Size(1008, 45);
             panelBottom.TabIndex = 12;
+            // 
+            // buttonRestore
+            // 
+            buttonRestore.Location = new Point(123, 12);
+            buttonRestore.Name = "buttonRestore";
+            buttonRestore.Size = new Size(75, 23);
+            buttonRestore.TabIndex = 3;
+            buttonRestore.Text = "Restore";
+            buttonRestore.UseVisualStyleBackColor = true;
+            buttonRestore.Click += buttonRestore_Click;
             // 
             // buttonTest
             // 
@@ -199,25 +209,18 @@
             buttonTest.TabIndex = 2;
             buttonTest.Text = "Test";
             buttonTest.UseVisualStyleBackColor = true;
+            buttonTest.Visible = false;
             buttonTest.Click += buttonTest_Click_1;
             // 
             // buttonExec
             // 
-            buttonExec.Location = new Point(227, 12);
+            buttonExec.Location = new Point(25, 12);
             buttonExec.Name = "buttonExec";
             buttonExec.Size = new Size(75, 23);
             buttonExec.TabIndex = 1;
             buttonExec.Text = "Exec";
             buttonExec.UseVisualStyleBackColor = true;
             buttonExec.Click += buttonExec_Click_1;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(12, 12);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(195, 25);
-            comboBox1.TabIndex = 0;
             // 
             // errorProvider1
             // 
@@ -233,7 +236,7 @@
             Controls.Add(panelClient);
             Controls.Add(panel1);
             Name = "MainForm";
-            Text = "Form1";
+            Text = "ERParamEditor";
             Load += MainForm_Load;
             Shown += MainForm_Shown;
             SizeChanged += MainForm_SizeChanged;
@@ -261,12 +264,12 @@
         private Panel panelBottom;
         private Button buttonTest;
         private Button buttonExec;
-        private ComboBox comboBox1;
         private ComboBox comboBoxProjectList;
         private Panel panelParamList;
         private ListView listViewParam;
         private Panel panel3;
         private Button buttonOpenParam;
         private ErrorProvider errorProvider1;
+        private Button buttonRestore;
     }
 }

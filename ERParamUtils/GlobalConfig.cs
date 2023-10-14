@@ -1,4 +1,4 @@
-﻿using ErParamTool;
+﻿using ERParamUtils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ namespace ERParamUtils
     public class GlobalConfig
     {
         public static string BaseDir=@".";
-        public static string AssetsDir = "";
+        public static string AssetsDir = "assets";
         public static string RegulationFileName = "regulation.bin";
         private static string ConfigFile="config.txt";
 
@@ -38,6 +38,10 @@ namespace ERParamUtils
         public static void Load() {
 
             DictConfig config = new();
+
+            if (!File.Exists(ConfigFile)) {
+                return;
+            }
 
             config.Load(ConfigFile);
 

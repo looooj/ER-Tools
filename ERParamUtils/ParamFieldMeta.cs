@@ -12,29 +12,29 @@ namespace ERParamUtils
 
     public class ParamFieldEnum
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
 
         public string ParamName = "";
         public string Name = "";
         public string ValueType = "";
-        public Dictionary<string, string> NameValueDict = new();
         public Dictionary<string, string> ValueNameDict = new();
 
 
-        public static List<ParamFieldEnum> ParseEnums(XmlDocument doc)
-        {
-            //
 
+        public static List<ParamFieldEnum> ParseEnums(XmlDocument doc, string filename)
+        {
             List<ParamFieldEnum> enums = new();
             XmlElement? root = doc.DocumentElement;
             if (root == null)
                 return enums;
 
-            var enumsEle = root["enums"];
+            var enumsEle = root["Enums"];
 
             if (enumsEle == null)
                 return enums;
 
-            var enumList = enumsEle.GetElementsByTagName("enum");
+            var enumList = enumsEle.GetElementsByTagName("Enum");
 
             for (int i = 0; i < enumList.Count; i++)
             {
@@ -43,10 +43,21 @@ namespace ERParamUtils
                 if (child == null)
                     continue;
 
-                ParamFieldEnum paramFieldEnum = ParseEnum((XmlElement)child);
 
-                if (paramFieldEnum.NameValueDict.Count > 0)
-                    enums.Add(paramFieldEnum);
+                try
+                {
+                    ParamFieldEnum paramFieldEnum = ParseEnum((XmlElement)child);
+
+
+
+                    if (paramFieldEnum.ValueNameDict.Count > 0)
+                        enums.Add(paramFieldEnum);
+                }
+                catch (Exception ex) {
+
+                    logger.Error( ex, string.Format("{0} Enum {1}", filename,i));
+
+                }
             }
 
             return enums;
@@ -75,7 +86,6 @@ namespace ERParamUtils
 
                 var name = optionEle.GetAttribute("Name");
                 var value = optionEle.GetAttribute("Value");
-                paramFieldEnum.NameValueDict.Add(name, value);
                 paramFieldEnum.ValueNameDict.Add(value,name);
             }
             return paramFieldEnum;
@@ -160,12 +170,17 @@ namespace ERParamUtils
 
     public class ParamFieldMetaManager
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
 
         static Dictionary<string, ParamFieldEnum> EnumsDict = new();
 
         public static void Load()
         {
             EnumsDict.Clear();
+
+            logger.Info("===LoadMeta");
+
 
             string dir = ParamdexConfig.Get().GetParamMetaDir();
             var files = Directory.GetFiles(dir, "*.xml");
@@ -176,24 +191,33 @@ namespace ERParamUtils
                 XmlDocument doc = new XmlDocument();
                 doc.LoadXml(xml);
 
-                var paramEnums = ParamFieldEnum.ParseEnums(doc);
+                var paramEnums = ParamFieldEnum.ParseEnums(doc,file);
                 foreach (var v in paramEnums) {
-
-                    EnumsDict.Add(v.Name, v);
+                    //logger.Info("AddEnum " + v.Name+ "," + Path.GetFileNameWithoutExtension(file));
+                    if (!EnumsDict.ContainsKey(v.Name))
+                    {
+                        EnumsDict.Add(v.Name, v);
+                    }
                 }
 
-            }
-            //GetParamMetaDir
+            }          
 
         }
+        /*
+        public static Dictionary<Object, string>? FindDict(string valueType) {
 
+
+            return null;
+        } 
+        */
+        //ParamFieldMetaManager
         public static string FindEnumValueText(string valueType, string value) {
 
             if (EnumsDict.ContainsKey(valueType)) {
 
                 var e = EnumsDict[valueType];
                 if (e.ValueNameDict.ContainsKey(value)) {
-                    return e.ValueNameDict[value] + "(" + value + ")";
+                    return e.ValueNameDict[value];
                 }
             }
             return value;

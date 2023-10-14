@@ -12,7 +12,8 @@ namespace ERParamUtils
 
         public static bool CheckProject(string projectName)
         {
-
+            if (projectName == null || projectName.Length < 3)
+                return false;
 
             string fn = GlobalConfig.GetProjectDir(projectName) + @"\" + ParamProject.ConfigName;
 
@@ -51,11 +52,7 @@ namespace ERParamUtils
             ParamProject paramProject = new(name);
 
             paramProject.Create(modRegulationPath);
-            //paramProject.Name = name;
-            //paramProject.ModRegulationPath = modRegulationPath;
-            //paramProject.CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             Directory.CreateDirectory(paramProject.GetDir());
-
             paramProject.SaveConfig();
             paramProject.LoadParams();
             GlobalConfig.SetCurrentProject(paramProject);
@@ -98,7 +95,9 @@ namespace ERParamUtils
         {
 
             string fn = GlobalConfig.GetProjectsDir() + @"\lastproject.txt";
-
+            if (!File.Exists(fn)) {
+                return "";
+            }
             string lastProjectName = File.ReadAllText(fn);
 
             return lastProjectName;

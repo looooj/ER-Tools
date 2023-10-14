@@ -1,5 +1,5 @@
-using ErParamEditor;
 using ERParamUtils;
+using ERParamUtils.UpateParam;
 using NLog;
 
 namespace ERParamEditor
@@ -22,21 +22,21 @@ namespace ERParamEditor
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            InitControls();
-            InitConfig();
+
 
 
         }
         private bool FirstShow = true;
 
-        private static async Task<int> InitLoadTask() {
+        private static async Task<int> InitLoadTask()
+        {
 
-            logger.Info("===InitLoadTask 1");
+
 
             RowNamesManager.Load();
             ParamFieldMetaManager.Load();
             ParamProjectManager.OpenLastProject();
-            logger.Info("===InitLoadTask 2");
+
             return 1;
         }
 
@@ -45,6 +45,9 @@ namespace ERParamEditor
 
             if (FirstShow)
             {
+                InitControls();
+                InitConfig();
+
                 await Task.Run(InitLoadTask);
 
                 logger.Info("===InitRefreshProject 1");
@@ -54,11 +57,14 @@ namespace ERParamEditor
             FirstShow = false;
         }
 
-        private ContextMenuStrip menuProject;
-
+        private ContextMenuStrip? menuProject;
 
         void InitControls()
         {
+#if DEBUG
+            buttonTest.Visible = true;
+#endif
+
             menuProject = new();
 
             WindowState = FormWindowState.Maximized;
@@ -88,13 +94,18 @@ namespace ERParamEditor
         {
 
             GlobalConfig.Load();
- 
+
+            SpecEquipConfig.LoadConfig();
+        }
+
+        void EnabledPanels(bool enabled)
+        {
+            panelBottom.Enabled = enabled;
+            panelParamList.Enabled = enabled;
         }
 
         void RefreshProject()
         {
-
-            
 
             comboBoxProjectList.Items.Clear();
 
@@ -119,8 +130,10 @@ namespace ERParamEditor
             if (project == null)
             {
                 ListViewUtils.AddItem(listViewProject, "CurrentProject", "?");
+                EnabledPanels(false);
                 return;
             }
+            EnabledPanels(true);
 
             ListViewUtils.AddItem(listViewProject, "ProjectDir", project.GetDir());
             ListViewUtils.AddItem(listViewProject, "ProjectName", project.GetName());
@@ -139,7 +152,7 @@ namespace ERParamEditor
 
         }
 
-        private void OpenInExplorerClick(object sender, EventArgs e)
+        private void OpenInExplorerClick(object? sender, EventArgs e)
         {
             ProcessUtils.OpenInExplorer(GlobalConfig.GetProjectsDir());
         }
@@ -188,6 +201,22 @@ namespace ERParamEditor
 
         private void buttonExec_Click_1(object sender, EventArgs e)
         {
+            ParamProject? paramProject = GlobalConfig.GetCurrentProject();
+            if (paramProject == null)
+                return;
+
+            ParamUpdateForm form = new();
+
+            form.Exec(paramProject);
+            /*
+            DialogResult r = MessageBox.Show("Are you sure update Regulation.bin", "", MessageBoxButtons.YesNo);
+            if (r != DialogResult.Yes)
+            {
+                return;
+            }
+
+            UpdateParamExector.Exec(paramProject, new UpdateParamOptions());
+            */
 
         }
 
@@ -210,14 +239,20 @@ namespace ERParamEditor
         void OpenParamRowForm()
         {
 
+            ParamProject? paramProject = GlobalConfig.GetCurrentProject();
+            if (paramProject == null)
+                return;
+
             if (listViewParam.SelectedItems.Count < 1)
                 return;
 
             var selection = listViewParam.SelectedItems[0];
+            var param = paramProject.FindParam(selection.Text);
+            if (param == null)
+                return;
 
-
-            ParamRowForm paramRowForm = new ParamRowForm();
-            paramRowForm.CurrentParam = GlobalConfig.GetCurrentProject().FindParam(selection.Text);
+            ParamRowForm paramRowForm = new();
+            paramRowForm.CurrentParam = param;
             paramRowForm.ShowDialog();
         }
 
@@ -226,6 +261,16 @@ namespace ERParamEditor
             OpenParamRowForm();
         }
 
+        private void buttonRestore_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Are you sure", "", MessageBoxButtons.YesNo);
+            if (r != DialogResult.Yes)
+            {
+                return;
+            }
 
+            GlobalConfig.GetCurrentProject().Restore();
+
+        }
     }
 }

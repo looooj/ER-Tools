@@ -15,13 +15,13 @@ namespace ERParamUtils
         public string? DisplayName { get; set; }
         public string? Key { get; set; }
         public string? Value { get; set; }
-        public string? Type { get; set; }
+        public string? InternalType { get; set; }
         public string? Comment { get; set; }
     }
 
     public interface IParamCellItemProc
     {
-      
+
         bool Proc(FSParam.Param param, FSParam.Param.Row row, ParamCellItem item);
         List<ParamCellItem> End(FSParam.Param param, FSParam.Param.Row row, List<ParamCellItem> items);
     }
@@ -34,8 +34,8 @@ namespace ERParamUtils
             List<ParamCellItem> items = new();
             if (row != null)
             {
-                ShopLineParamCellProc shopLineParamCellProc = new ShopLineParamCellProc();
-
+                ShopLineParamCellProc shopLineParamCellProc = new();
+                LotParamCellProc lotParamCellProc = new();
                 for (int i = 0; i < row.Cells.Count; i++)
                 {
 
@@ -44,16 +44,31 @@ namespace ERParamUtils
                     item.ColIndex = i;
                     item.DisplayName = cell.Def.DisplayName;
                     item.Key = cell.Def.InternalName;
-                    item.Type = cell.Def.InternalType;
+                    item.InternalType = cell.Def.InternalType;
                     var v = cell.Value;
                     var str = v.ToString();
                     if (str != null)
+                    {
                         item.Value = str;
+                        if (item.InternalType.Length > 6)
+                        {
+                            var valueText = ParamFieldMetaManager.FindEnumValueText(item.InternalType, str);
+                            if (valueText != str)
+                            {
+                                item.Value = string.Format("{0}({1})", valueText, str);
+                            }
+                        }
+                    }
 
-                    //if (item.Type.StartsWith("dummy"))
-                    //    continue;
+                    if (item.InternalType.StartsWith("dummy"))
+                        continue;
+                    if (item.Key.StartsWith("PAD"))
+                    {
+                        continue;
+                    }
 
                     shopLineParamCellProc.Proc(param, row, item);
+                    lotParamCellProc.Proc(param, row, item);
                     items.Add(item);
                 }
             }
@@ -71,11 +86,17 @@ namespace ERParamUtils
         }
     }
 
+
+    public static class ShopCol
+    {
+        public static readonly int EquipId = 0;
+        public static readonly int EquipType = 7;
+    }
+
     class ShopLineParamCellProc : IParamCellItemProc
     {
         public List<ParamCellItem> End(Param param, Param.Row row, List<ParamCellItem> items)
         {
-            //throw new NotImplementedException();
 
             return items;
         }
@@ -84,18 +105,54 @@ namespace ERParamUtils
         {
             if (param.Name != ParamNames.ShopLineupParam)
                 return true;
-            
+
 
             if (item.Key == "equipId")
             {
 
-                int shopEquipType = ParamRowUtils.GetCellInt(row, ERShopCol.EquipType, (int)ShopEquipType.None);
+                int shopEquipType = ParamRowUtils.GetCellInt(row, ShopCol.EquipType, (int)ShopEquipType.None);
 
-                int id = ParamRowUtils.GetCellInt(row, ERShopCol.EquipId, 0);
+                int id = ParamRowUtils.GetCellInt(row, ShopCol.EquipId, 0);
 
                 string name = RowNamesManager.FindShopEquipName(id, shopEquipType);
 
                 item.Comment = name;
+            }
+            return true;
+        }
+    }
+
+    class LotParamCellProc : IParamCellItemProc
+    {
+        public List<ParamCellItem> End(Param param, Param.Row row, List<ParamCellItem> items)
+        {
+    
+            return items;
+        }
+
+        public bool Proc(Param param, Param.Row row, ParamCellItem item)
+        {
+
+            if ((param.Name != ParamNames.ItemLotParamEnemy && param.Name != ParamNames.ItemLotParamMap))
+                return true;
+
+            for (int i = 3; i >= 1; i--)
+            {
+
+                //lotItemId01
+                if (item.Key == ("lotItemId0" + i))
+                {
+
+                    int itemId = ParamRowUtils.GetCellInt(row, "lotItemId0" + i, 0);
+                    if (itemId <= 0)
+                        return true;
+
+                    int itemType = ParamRowUtils.GetCellInt(row, "lotItemCategory0" + i, 0);
+
+                    string itemName = RowNamesManager.FindEquipName(itemId, itemType);
+
+                    item.Comment = itemName;
+                }
             }
             return true;
         }

@@ -1,9 +1,10 @@
-﻿using ErParamTool;
+﻿using ERParamUtils;
 using SoulsFormats;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using static Org.BouncyCastle.Math.EC.ECCurve;
+using static SoulsFormats.MQB;
 
 namespace ERParamUtils
 {
@@ -11,9 +12,10 @@ namespace ERParamUtils
 
     public class ParamProject
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
-        //string Dir="";
-        string Name="";
+
+        string Name ="";
         string ModRegulationPath="";
         string CreateTime="";
      
@@ -53,15 +55,24 @@ namespace ERParamUtils
             return GetDir() + @"\regulation.bin";
         }
 
+        public string GetOrginalRegulationPath() {
+            return GetRegulationPath() + ".org";
+        }
+
         public string GetModRegulationPath()
         {
             return ModRegulationPath;
         }
 
+
+        public string GetUpdateDir()
+        {
+            return GetDir() + @"\update";
+        }
+
         public string GetUpdateFile(string filename)
         {
-            string path = GetDir() + @"\update\" + filename;
-            return path;
+            return  GetUpdateDir() + @"\" + filename;
         }
 
 
@@ -111,7 +122,7 @@ namespace ERParamUtils
 
             if (!File.Exists(path)) {
                 File.Copy(GetModRegulationPath(), path);
-                File.Copy(GetModRegulationPath(), path+".bak");
+                File.Copy(GetModRegulationPath(), GetOrginalRegulationPath());
             }
 
             LoadParamdefs();
@@ -134,16 +145,18 @@ namespace ERParamUtils
             }
             Dictionary<string, FSParam.Param> paramBank = _params;
 
-            List<string> filenames = new();
+            List<string> paramNames = new();
             foreach (var f in parambnd.Files)
             {
-                filenames.Add(f.Name);
+                //paramNames.Add(f.Name);
 
                 if (!f.Name.ToUpper().EndsWith(".PARAM"))
                 {
                     continue;
                 }
+
                 string paramName = Path.GetFileNameWithoutExtension(f.Name);
+                paramNames.Add(paramName);
                 if (paramBank.ContainsKey(paramName))
                 {
                     continue;
@@ -207,8 +220,8 @@ namespace ERParamUtils
                 }
             }
 
-            string tmpFilenames = GlobalConfig.GetProjectDir(Name) + @"\filenames.txt";
-            File.WriteAllLines(tmpFilenames, filenames);
+            string tmpFilenames = GlobalConfig.GetProjectDir(Name) + @"\param-list.txt";
+            File.WriteAllLines(tmpFilenames, paramNames);
         }
 
 
@@ -216,12 +229,9 @@ namespace ERParamUtils
         public void ImpRowNames()
         {
 
-            //string namesDir = ParamdexConfig.Get().GetParamNamesDir();
-
             foreach (string paramName in _params.Keys)
             {
-                //string fn = namesDir + @"\" + paramName + ".txt";
-
+       
     
                 var names = RowNamesManager.LoadNames(paramName);
                 if (names.Count < 1)
@@ -245,7 +255,7 @@ namespace ERParamUtils
 
 
             if (_params.ContainsKey(paramName) ) { 
-                //TryGetValue(paramName, out FSParam.Param? param)) {
+               
                 return _params[paramName];
             }
             return null;
@@ -282,15 +292,21 @@ namespace ERParamUtils
 
             string savePath = GetRegulationPath();
 
+            logger.Info("===save {0} -> {1}", savePath);
+
             SFUtil.EncryptERRegulation(savePath, currentBinder as BND4);
         }
 
         public void Restore() {
 
-            string fn = GetRegulationPath() + ".bak";
+            string source = GetOrginalRegulationPath();
+            string target = GetRegulationPath();
 
-            if (!File.Exists(fn)) {
-                File.Copy(GetModRegulationPath(), fn);
+            if (File.Exists(source)) {
+
+                logger.Info("===restore {0} -> {1}", source, target);
+
+                File.Copy(source, target);
             }
             
         }
@@ -299,6 +315,10 @@ namespace ERParamUtils
 
             string source = GetRegulationPath();
             string target = GetModRegulationPath();
+
+            logger.Info("===publish {0} -> {1}",
+                source, target);
+
             File.Copy(source,target);
         }
 
@@ -327,11 +347,16 @@ namespace ERParamUtils
             CreateTime = config.GetString("CreateTime", "?");
         }
 
+        public void InitDirs() {
+
+            Directory.CreateDirectory(GetUpdateDir());
+        } 
 
         public void CheckConfig() { 
         
 
         }
+
 
     }
 }

@@ -6,29 +6,6 @@ using System.Threading.Tasks;
 
 namespace ERParamUtils
 {
-    /*
-    public class EquipType
-    {
-        public static readonly int None = 0;
-        public static readonly int Good = 1;
-        public static readonly int Weapon = 2;
-        public static readonly int Protector = 3;
-        public static readonly int Accessory = 4;
-        public static readonly int Gem = 5;
-
-
-        
-    };
-
-    public static class ShopEquipType
-    {
-        public static const  Weapon = 0;
-        public static readonly int Protector = 1;
-        public static readonly int Accessory = 2;
-        public static readonly int Good = 3;
-        public static readonly int Ash = 4;
-    };
-    */
     public enum EquipType
     {
         None,

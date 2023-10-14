@@ -245,7 +245,9 @@ tmp
 .factorypath
 .idea/
 .vs
-
+tmp/
+tmp
 
 ERParamEditor/mod-config.xml
 ERParamEditor/config.txt
+assets/Fonts

@@ -27,8 +27,8 @@ namespace ERParamEditor
 
         }
 
-        ContextMenuStrip menuCell;
-        ContextMenuStrip menuRow;
+        ContextMenuStrip? menuCell;
+        ContextMenuStrip? menuRow;
 
         void InitControls()
         {
@@ -49,15 +49,17 @@ namespace ERParamEditor
             Text = CurrentParam.ParamType;
 
             InitMenuRow();
+            InitMenuCell();
 
             InitRows();
-
 
         }
 
         void InitMenuRow() {
+            if (menuRow == null)
+                menuRow = new();
 
-            menuRow.Items.Add(new ToolStripMenuItem("FindRowName", null, findRowName_Handler));
+            menuRow.Items.Add(new ToolStripMenuItem("FindRowByName", null, findRowName_Handler));
             menuRow.Items.Add(new ToolStripSeparator());
             menuRow.Items.Add(new ToolStripMenuItem("CopyRow", null, copyRow_Handler));
             menuRow.Items.Add(new ToolStripSeparator());
@@ -69,24 +71,78 @@ namespace ERParamEditor
 
         }
 
+
+        void exportRow(RowWrapper row, string fn) {
+
+            var cells = ParamCellList.Build(CurrentParam, row.GetRow());
+            var lines = new List<string>();
+            foreach(var cell in cells) {
+
+                lines.Add(string.Format("{0},{1},{2},{3},{4}",
+                    cell.ColIndex,cell.DisplayName,cell.Key,cell.Value,cell.Comment));
+                    
+
+            }
+            File.WriteAllLines(fn, lines);
+        }
+
         private void exportRowButton_Click(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (dataGridViewRow.SelectedRows.Count < 1)
+                return;
+            string dir = GlobalConfig.GetCurrentProject().GetDir()+@"\exp";
+            Directory.CreateDirectory(dir);
+
+            for (int i = 0; i < dataGridViewRow.SelectedRows.Count; i++)
+            {
+                object obj = dataGridViewRow.SelectedRows[i].DataBoundItem;
+                RowWrapper row = (RowWrapper)obj;
+                string fn = dir + @"\" + CurrentParam.Name + "-" + row.ID + "-" + row.Name + ".txt";
+
+                exportRow(row,fn);
+                
+            }
+
+        }
+
+
+        private void copyRow(bool rowId, bool rowName) {
+
+            if (dataGridViewRow.SelectedRows.Count < 1)
+                return;
+            string text = "";
+            for (int i = 0; i < dataGridViewRow.SelectedRows.Count; i++)
+            {
+                object obj = dataGridViewRow.SelectedRows[i].DataBoundItem;
+                RowWrapper row = (RowWrapper)obj;
+                if ( rowId )
+                     text = text + row.ID;
+                if (rowName)
+                    text = text + row.Name;
+                text = text + " ";
+
+            }
+            Clipboard.SetData(DataFormats.Text, (Object)text);
+            ClipTextFile.Add(text); 
         }
 
         private void copyRowId_Handler(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            copyRow(true, false);
         }
 
         private void copyRowName_Handler(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            copyRow(false, true);
+
         }
 
         private void copyRow_Handler(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
+            if (dataGridViewRow.SelectedRows.Count < 1)
+                return;
+            copyRow(true, true);
         }
 
         private void findRowName_Handler(object? sender, EventArgs e)
@@ -102,15 +158,19 @@ namespace ERParamEditor
             {
                 if (row.Name.Length < 1)
                     continue;
-                if (!row.Name.Contains(text))
+
+                if (row.Name.Contains(text))
+                {
+                    rows.Add(row);
                     continue;
-                rows.Add(row);
+                }
+
             }
             bindingSourceRow.DataSource = rows;
             dataGridViewRow.DataSource = bindingSourceRow.DataSource;
         }
 
-        List<RowWrapper> CurrentRowWrappers;
+        List<RowWrapper>? CurrentRowWrappers;
         void InitRows()
         {
             if (CurrentParam == null)
@@ -137,11 +197,78 @@ namespace ERParamEditor
             }
         }
 
+        /*
+        void InitCellEditor(FSParam.Param.Row row,DataGridView dataGridView) {
+
+                for (int i = 0; i < dataGridView.RowCount; i++)
+                {
+
+                    ParamCellItem cell = (ParamCellItem)
+                    
+
+                    if (cell.InternalType.Length > 6)
+                    {
+                        Dictionary<object, string> dict = 
+                        ErValueDict.GetDict(cell1.Def.InternalType);
+
+                        if (dict == null)
+                            continue;
+                        var items = dict.ToArray();
+                        dataGridView.Rows[i].Cells[2] = new DataGridViewComboBoxCell
+                        {
+                            DataSource = items,
+                            DisplayMember = "Value",
+                            ValueMember = "Key",
+                            ValueType = cell.Value.GetType()
+                        };
+                    }
+                }
+
+            
+
+        } */
+
+        void InitMenuCell()
+        {
+            if (menuCell == null)
+                menuCell = new();
+            menuCell.Items.Add(new ToolStripMenuItem("CopyCell", null, copyCell_Handler));
+
+        }
+
+        private void copyCell_Handler(object? sender, EventArgs e)
+        {
+            if (dataGridViewCell.SelectedRows.Count < 1)
+                return;
+
+            //List<string> lines = new();
+            string text = "";
+            for (int i = 0; i < dataGridViewCell.SelectedRows.Count; i++)
+            {
+                ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[i].DataBoundItem;
+
+                string line = string.Format("{0};{1};{2};{3}", 
+                    currentParamRow.ID,
+                    currentParamRow.Name,
+                    cell.Key,
+                    cell.Value
+                    );
+
+                //lines.Add(line);
+                ClipTextFile.Add(line);
+                text = text + line + " ";
+            }
+            Clipboard.SetData(DataFormats.Text, (Object)text);
+
+        }
+
+        private FSParam.Param.Row currentParamRow;
         void FillCells(FSParam.Param.Row row)
         {
             if (CurrentParam == null)
                 return;
 
+            currentParamRow = row;
             var cells = ParamCellList.Build(CurrentParam, row);
 
             bindingSourceCell.DataSource = cells;

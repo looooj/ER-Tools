@@ -7,16 +7,19 @@ using System.Threading.Tasks;
 
 namespace ERParamUtils
 {
-    public class RowWrapper {
+    public class RowWrapper
+    {
         public int ID { get => Row.ID; }
-        public string Name { get => Row.Name==null?"":Row.Name; }
+        public string Name { get => Row.Name == null ? "" : Row.Name; }
 
-        public FSParam.Param.Row GetRow() {
+        public FSParam.Param.Row GetRow()
+        {
             return Row;
         }
         private FSParam.Param.Row Row;
 
-        public RowWrapper(FSParam.Param.Row row) {
+        public RowWrapper(FSParam.Param.Row row)
+        {
             this.Row = row;
         }
     }
@@ -57,8 +60,29 @@ namespace ERParamUtils
         }
 
 
+        public static void SetCellValue(FSParam.Param.Row? row, string keyName, int value)
+        {
+            SetCellValue(row, keyName, "" + value);
+        }
 
-        public static void SetRowValue(FSParam.Param.Row? row, string keyName, string value)
+        public static void SetCellValue(FSParam.Param.Row? row, int col, string value)
+        {
+
+            if (row == null)
+            {
+                return;
+            }
+            if (col >= row.Cells.Count)
+                return;
+
+            FSParam.Param.Cell cell = row.Cells[col];
+
+            cell.Value = ConvertValue(value, cell.Def.InternalType);
+
+
+        }
+
+        public static void SetCellValue(FSParam.Param.Row? row, string keyName, string value)
         {
 
 
@@ -150,15 +174,19 @@ namespace ERParamUtils
         }
 
 
-        public static List<RowWrapper> ConvertToRowWrapper(FSParam.Param param, RowFilter[] filters) {
+        public static List<RowWrapper> ConvertToRowWrapper(FSParam.Param param, RowFilter[] filters)
+        {
 
             List<RowWrapper> rows = new();
-            for (int i = 0; i < param.Rows.Count; i++) {
+            for (int i = 0; i < param.Rows.Count; i++)
+            {
                 FSParam.Param.Row row = param.Rows[i];
 
                 bool ok = true;
-                foreach (RowFilter filter in filters) {
-                    if (!filter.DoFilter(param,row)) {
+                foreach (RowFilter filter in filters)
+                {
+                    if (!filter.DoFilter(param, row))
+                    {
                         ok = false;
                         break;
                     }
