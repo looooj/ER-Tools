@@ -25,7 +25,7 @@ namespace ERParamEditor
 
         private void ParamUpdateForm_Load(object sender, EventArgs e)
         {
-
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             checkBoxRestore.Checked = true;
             checkBoxSelectAll.Checked = true;
 

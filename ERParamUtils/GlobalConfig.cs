@@ -53,5 +53,10 @@ namespace ERParamUtils
         public static void Save() { 
         
         }
+
+        internal static string GetTemplateDir()
+        {
+            return BaseDir + @"\templates";
+        }
     }
 }

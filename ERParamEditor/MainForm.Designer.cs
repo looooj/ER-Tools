@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
-            comboBoxProjectList = new ComboBox();
             buttonOpen = new Button();
             buttonCreate = new Button();
             panelClient = new Panel();
@@ -58,7 +57,6 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(comboBoxProjectList);
             panel1.Controls.Add(buttonOpen);
             panel1.Controls.Add(buttonCreate);
             panel1.Dock = DockStyle.Top;
@@ -67,18 +65,9 @@
             panel1.Size = new Size(1008, 47);
             panel1.TabIndex = 3;
             // 
-            // comboBoxProjectList
-            // 
-            comboBoxProjectList.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxProjectList.FormattingEnabled = true;
-            comboBoxProjectList.Location = new Point(93, 11);
-            comboBoxProjectList.Name = "comboBoxProjectList";
-            comboBoxProjectList.Size = new Size(334, 25);
-            comboBoxProjectList.TabIndex = 2;
-            // 
             // buttonOpen
             // 
-            buttonOpen.Location = new Point(433, 12);
+            buttonOpen.Location = new Point(105, 12);
             buttonOpen.Name = "buttonOpen";
             buttonOpen.Size = new Size(75, 23);
             buttonOpen.TabIndex = 1;
@@ -264,7 +253,6 @@
         private Panel panelBottom;
         private Button buttonTest;
         private Button buttonExec;
-        private ComboBox comboBoxProjectList;
         private Panel panelParamList;
         private ListView listViewParam;
         private Panel panel3;

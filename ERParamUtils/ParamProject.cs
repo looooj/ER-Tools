@@ -349,7 +349,7 @@ namespace ERParamUtils
 
         public void InitDirs() {
 
-            Directory.CreateDirectory(GetUpdateDir());
+            //Directory.CreateDirectory(GetUpdateDir());
         } 
 
         public void CheckConfig() { 
@@ -357,6 +357,25 @@ namespace ERParamUtils
 
         }
 
+        internal void Init()
+        {
+            
 
+            string updateDir = GetUpdateDir();
+            Directory.CreateDirectory(updateDir);
+
+            string templateDir = GlobalConfig.GetTemplateDir();
+
+            var files = Directory.GetFiles(templateDir, "*.txt");
+            foreach (var file in files) {
+
+                string newFile = updateDir + @"\" + Path.GetFileName(file);
+                if (File.Exists(newFile)) {
+                    continue;
+                }
+                File.Copy(file, newFile);
+            }
+
+        }
     }
 }

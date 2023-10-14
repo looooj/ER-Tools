@@ -15,6 +15,9 @@ xcopy /s /y /q ..\..\assets  assets\
 md docs 
 xcopy /s /y /q ..\..\docs  docs\
 
+md templates
+xcopy /s /y /q ..\..\templates  templates\
+
 md projects
 
 

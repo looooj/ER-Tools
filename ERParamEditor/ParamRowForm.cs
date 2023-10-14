@@ -19,7 +19,7 @@ namespace ERParamEditor
         }
 
 
-        public FSParam.Param? CurrentParam = null;
+        //public FSParam.Param? CurrentParam = null;
 
         private void ParamRowForm_Load(object sender, EventArgs e)
         {
@@ -43,10 +43,10 @@ namespace ERParamEditor
             dataGridViewCell.BringToFront();
             panelCell.BringToFront();
 
-            if (CurrentParam == null)
-                return;
+            //if (CurrentParam == null)
+            //    return;
 
-            Text = CurrentParam.ParamType;
+            //Text = CurrentParam.ParamType;
 
             InitMenuRow();
             InitMenuCell();
@@ -74,7 +74,7 @@ namespace ERParamEditor
 
         void exportRow(RowWrapper row, string fn) {
 
-            var cells = ParamCellList.Build(CurrentParam, row.GetRow());
+            var cells = ParamCellList.Build(row.GetParam(), row.GetRow());
             var lines = new List<string>();
             foreach(var cell in cells) {
 
@@ -97,7 +97,7 @@ namespace ERParamEditor
             {
                 object obj = dataGridViewRow.SelectedRows[i].DataBoundItem;
                 RowWrapper row = (RowWrapper)obj;
-                string fn = dir + @"\" + CurrentParam.Name + "-" + row.ID + "-" + row.Name + ".txt";
+                string fn = dir + @"\" + row.GetParam().Name + "-" + row.ID + "-" + row.Name + ".txt";
 
                 exportRow(row,fn);
                 
@@ -170,15 +170,13 @@ namespace ERParamEditor
             dataGridViewRow.DataSource = bindingSourceRow.DataSource;
         }
 
-        List<RowWrapper>? CurrentRowWrappers;
+        public List<RowWrapper>? CurrentRowWrappers;
         void InitRows()
         {
-            if (CurrentParam == null)
+            if (CurrentRowWrappers == null)
                 return;
 
 
-            RowFilter[] rowFilers = { new RowBlankNameFiler()  };
-            CurrentRowWrappers = ParamRowUtils.ConvertToRowWrapper(CurrentParam, rowFilers);
             bindingSourceRow.DataSource = CurrentRowWrappers;
 
             dataGridViewRow.AutoGenerateColumns = true;
@@ -262,14 +260,13 @@ namespace ERParamEditor
 
         }
 
-        private FSParam.Param.Row currentParamRow;
-        void FillCells(FSParam.Param.Row row)
+        private RowWrapper currentParamRow;
+        void FillCells(RowWrapper row)
         {
-            if (CurrentParam == null)
-                return;
+
 
             currentParamRow = row;
-            var cells = ParamCellList.Build(CurrentParam, row);
+            var cells = ParamCellList.Build(row.GetParam(), row.GetRow());
 
             bindingSourceCell.DataSource = cells;
 
@@ -293,7 +290,7 @@ namespace ERParamEditor
 
             RowWrapper selection = (RowWrapper)dataGridViewRow.SelectedRows[0].DataBoundItem;
 
-            FillCells(selection.GetRow());
+            FillCells(selection);
         }
 
         private void ParamRowForm_Shown(object sender, EventArgs e)

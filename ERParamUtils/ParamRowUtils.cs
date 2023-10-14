@@ -1,4 +1,4 @@
-﻿using FSParam;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,18 +9,23 @@ namespace ERParamUtils
 {
     public class RowWrapper
     {
-        public int ID { get => Row.ID; }
-        public string Name { get => Row.Name == null ? "" : Row.Name; }
+        public int ID { get => _row.ID; }
+        public string Name { get => _row.Name == null ? "" : _row.Name; }
 
+        public FSParam.Param GetParam() {
+            return _param;
+        }
         public FSParam.Param.Row GetRow()
         {
-            return Row;
+            return _row;
         }
-        private FSParam.Param.Row Row;
+        private FSParam.Param.Row _row;
+        private FSParam.Param _param;
 
-        public RowWrapper(FSParam.Param.Row row)
+        public RowWrapper(FSParam.Param.Row row, FSParam.Param param)
         {
-            this.Row = row;
+            _row = row;
+            _param = param;
         }
     }
 
@@ -144,9 +149,6 @@ namespace ERParamUtils
             return defVal;
         }
 
-
-
-
         public static string GetCellString(FSParam.Param.Row row, int col, string defVal)
         {
 
@@ -193,7 +195,7 @@ namespace ERParamUtils
                 }
                 if (!ok)
                     continue;
-                RowWrapper rowWrapper = new(row);
+                RowWrapper rowWrapper = new(row,param);
 
                 rows.Add(rowWrapper);
             }
@@ -209,7 +211,7 @@ namespace ERParamUtils
 
     public class RowBlankNameFiler : RowFilter
     {
-        public bool DoFilter(Param param, Param.Row row)
+        public bool DoFilter(FSParam.Param param, FSParam.Param.Row row)
         {
             if (row.Name == null || row.Name.Length < 1)
                 return false;

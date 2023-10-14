@@ -55,6 +55,7 @@ namespace ERParamUtils
             Directory.CreateDirectory(paramProject.GetDir());
             paramProject.SaveConfig();
             paramProject.LoadParams();
+            paramProject.Init();
             GlobalConfig.SetCurrentProject(paramProject);
             SaveLastProject();
 

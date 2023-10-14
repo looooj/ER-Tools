@@ -76,8 +76,8 @@ namespace ERParamEditor
 
         private void CreateProjectForm_Load(object sender, EventArgs e)
         {
-            textProjectName.Text = "proj";  
-            
+            textProjectName.Text = "proj";
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
     }
 }

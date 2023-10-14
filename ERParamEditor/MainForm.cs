@@ -107,6 +107,7 @@ namespace ERParamEditor
         void RefreshProject()
         {
 
+            /*
             comboBoxProjectList.Items.Clear();
 
             List<string> projectList = ParamProjectManager.GetProjectList();
@@ -117,6 +118,7 @@ namespace ERParamEditor
             }
             if (comboBoxProjectList.Items.Count > 0)
                 comboBoxProjectList.SelectedIndex = 0;
+            */
 
             listViewProject.Items.Clear();
             listViewParam.Items.Clear();
@@ -177,6 +179,20 @@ namespace ERParamEditor
 
         private void buttonOpen_Click(object sender, EventArgs e)
         {
+
+            OpenProjectForm form = new();
+            var ret = form.ShowDialog();
+            if (ret == DialogResult.OK)
+            {
+
+                var project = ParamProjectManager.OpenProject(form.ProjectName);
+                if (project != null)
+                {
+
+                    RefreshProject();
+                }
+            }
+            /*
             if (comboBoxProjectList.SelectedIndex >= 0)
             {
 
@@ -188,6 +204,7 @@ namespace ERParamEditor
                     RefreshProject();
                 }
             }
+            */
 
         }
 
@@ -252,7 +269,10 @@ namespace ERParamEditor
                 return;
 
             ParamRowForm paramRowForm = new();
-            paramRowForm.CurrentParam = param;
+
+            RowFilter[] rowFilers = { new RowBlankNameFiler() };
+            paramRowForm.CurrentRowWrappers = ParamRowUtils.ConvertToRowWrapper(param, rowFilers);
+            //paramRowForm.CurrentParam = param;
             paramRowForm.ShowDialog();
         }
 
