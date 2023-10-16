@@ -72,5 +72,58 @@ namespace ERParamUtils.UpateParam
 
     }
 
+    class RemoveWeight {
+
+
+        public static void ProcProtector(ParamProject? paramProject)
+        {
+
+            if (paramProject == null)
+                return;
+
+            FSParam.Param param = paramProject.FindParam(ParamNames.EquipParamProtector);
+
+            if (param == null)
+            {
+                return;
+            }
+
+            for (int i = 0; i < param.Rows.Count; i++)
+            {
+
+                FSParam.Param.Row row = param.Rows[i];
+                ParamRowUtils.SetCellValue(row, "weight", 1);
+
+            }
+        }
+
+        public static void ProcWeapon(ParamProject? paramProject)
+        {
+
+            if (paramProject == null)
+                return;
+
+            FSParam.Param param = paramProject.FindParam(ParamNames.EquipParamWeapon);
+
+            if (param == null)
+            {
+                return;
+            }
+
+            for (int i = 0; i < param.Rows.Count; i++)
+            {
+
+                FSParam.Param.Row row = param.Rows[i];
+                ParamRowUtils.SetCellValue(row, "weight", 1);
+
+            }
+        }
+
+        internal static void Exec(ParamProject project)
+        {
+            ProcWeapon(project);
+            ProcProtector(project);
+        }
+    }
 
 }

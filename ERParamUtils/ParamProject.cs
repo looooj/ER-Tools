@@ -121,8 +121,8 @@ namespace ERParamUtils
             string path = GetRegulationPath();
 
             if (!File.Exists(path)) {
-                File.Copy(GetModRegulationPath(), path);
-                File.Copy(GetModRegulationPath(), GetOrginalRegulationPath());
+                File.Copy(GetModRegulationPath(), path,true);
+                File.Copy(GetModRegulationPath(), GetOrginalRegulationPath(),true);
             }
 
             LoadParamdefs();
@@ -306,7 +306,7 @@ namespace ERParamUtils
 
                 logger.Info("===restore {0} -> {1}", source, target);
 
-                File.Copy(source, target);
+                File.Copy(source, target,true);
             }
             
         }
@@ -319,7 +319,7 @@ namespace ERParamUtils
             logger.Info("===publish {0} -> {1}",
                 source, target);
 
-            File.Copy(source,target);
+            File.Copy(source,target,true);
         }
 
         public static readonly string ConfigName="project.txt";

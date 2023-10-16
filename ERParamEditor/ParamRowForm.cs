@@ -56,6 +56,11 @@ namespace ERParamEditor
 
             menuRow.Items.Add(new ToolStripMenuItem("FindRowByName", null, findRowName_Handler));
             menuRow.Items.Add(new ToolStripSeparator());
+
+            menuRow.Items.Add(new ToolStripMenuItem("GotoRowId", null, gotoRowId_Handler));
+            menuRow.Items.Add(new ToolStripSeparator());
+
+
             menuRow.Items.Add(new ToolStripMenuItem("CopyRow", null, copyRow_Handler));
             menuRow.Items.Add(new ToolStripSeparator());
             menuRow.Items.Add(new ToolStripMenuItem("CopyRowName", null, copyRowName_Handler));
@@ -143,6 +148,47 @@ namespace ERParamEditor
             copyRow(true, true);
         }
 
+        private void scrollToRow(int index) {
+
+            dataGridViewRow.FirstDisplayedScrollingRowIndex = 0;
+            dataGridViewRow.FirstDisplayedScrollingRowIndex = index;
+
+            dataGridViewRow.ClearSelection();
+            dataGridViewRow.Rows[index].Selected = true;
+
+                //dataGridViewRow.DisplayedRowCount 
+            /*
+            while (index < dataGridViewRow.Rows.Count) {
+                if (dataGridViewRow.Rows[index].Visible)
+                    return;
+
+                if (dataGridViewRow.FirstDisplayedScrollingRowIndex < index) {
+                    dataGridViewRow.FirstDisplayedScrollingRowIndex++;
+                }
+            }*/
+        }
+        private void gotoRowId_Handler(object? sender, EventArgs e)
+        {
+            string text = "";
+            if (!InputDialog.InputBox("RowId", "RowId", ref text))
+            {
+                return;
+            }
+
+            text = text.Trim();
+            int rowId = int.Parse(text);
+            for (int i = 0; i < dataGridViewRow.Rows.Count; i++) {
+                var item = (RowWrapper)dataGridViewRow.Rows[i].DataBoundItem;
+                if (item.ID == rowId) {
+                    scrollToRow(i);
+                    return;
+                } 
+            }
+            
+            //dataGridViewRow.FirstDisplayedScrollingRowIndex = 0;
+        }
+
+
         private void findRowName_Handler(object? sender, EventArgs e)
         {
             string text = "";
@@ -213,12 +259,13 @@ namespace ERParamEditor
             string value = "";
             ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[0].DataBoundItem;
 
-            var ret = InputDialog.InputBox("ChangeValue " + cell.DisplayName + ","+cell.Key, "NewValue", ref value);
+            var ret = InputDialog.InputBox("ChangeValue " + cell.DisplayName + "," + cell.Key, "NewValue", ref value);
 
-            if (ret) {
+            if (ret)
+            {
 
                 ParamRowUtils.SetCellValue(currentParamRow.GetRow(), cell.Key, value);
-            }             
+            }
         }
 
 

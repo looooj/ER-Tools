@@ -1,4 +1,5 @@
-﻿namespace ERParamUtils.UpateParam
+﻿
+namespace ERParamUtils.UpateParam
 {
     public class UpdateParamOptions
     {
@@ -35,6 +36,7 @@
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
+            UpdateName = Description;
             UpdateShopLineupParam.ExecDefaultUpdate(project);
         }
 
@@ -50,7 +52,7 @@
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
-
+            UpdateName = Description;
             ItemLotParamMap.SetDefaultLot(project, updateCommand);
         }
     }
@@ -67,7 +69,26 @@
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
 
+            UpdateName = Description;
             UpdateRequire.Exec(project);
+
+        }
+    }
+
+    public class RemoveWeightTask : UpdateParamTask
+    {
+        public RemoveWeightTask()
+        {
+            OrderNo = 0;
+            Description = "Set Weapon, Protector weight => 1";
+        }
+
+        public override void Exec(ParamProject project, UpdateCommand updateCommand)
+        {
+
+            UpdateName = Description;
+
+            RemoveWeight.Exec(project);
 
         }
     }
@@ -84,6 +105,7 @@
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
+            UpdateName = Description;
 
             UpdateBuddyStone.Exec(project);
 
@@ -103,20 +125,23 @@
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
+            UpdateName = UpateFile.UpdateLotMapSpec;
             UpdateItemLot.LoadLotSpecUpdate(ParamNames.ItemLotParamMap,
                 UpateFile.UpdateLotMapSpec,
                 updateCommand);
 
+            UpdateName = UpateFile.UpdateLotMapBatch;
             UpateLotBatch.LoadLotBatchUpdate(ParamNames.ItemLotParamMap,
                 UpateFile.UpdateLotMapBatch,
                updateCommand);
 
 
-
+            UpdateName = UpateFile.UpdateLotEnemySpec;
             UpdateItemLot.LoadLotSpecUpdate(ParamNames.ItemLotParamEnemy,
                 UpateFile.UpdateLotEnemySpec,
                 updateCommand);
 
+            UpdateName = UpateFile.UpdateLotEnemyBatch;
             UpateLotBatch.LoadLotBatchUpdate(ParamNames.ItemLotParamEnemy,
                 UpateFile.UpdateLotEnemyBatch,
                 updateCommand);
@@ -213,19 +238,26 @@
                 project.Restore();
             }
 
+
             UpdateCommand updateCommand = new UpdateCommand(project);
             foreach (var task in options.UpdateTasks)
             {
-                UpdateLogger.InfoTime("Exec {0}", task.GetType().Name);
-                task.Exec(project, updateCommand);
+                try
+                {
+                    UpdateLogger.InfoTime("Exec {0}", task.GetType().Name);
+                    task.Exec(project, updateCommand);
+                }
+                catch (Exception ex)
+                {
+                    logger.Error(ex, ex.Message + " " + task.UpdateName);
+                    throw new Exception("Exec (" + task.UpdateName + ") Error " + ex.Message);
+                }
             }
-
 
             project.SaveParams();
 
             if (options.Publish)
             {
-
 
                 project.Publish();
             }

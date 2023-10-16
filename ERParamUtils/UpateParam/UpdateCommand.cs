@@ -76,18 +76,26 @@ namespace ERParamUtils.UpateParam
             _customParamName = paramName;
         }
 
-        static void ProcId(string line)
+        static bool ProcId(string line)
         {
-
-            string[] ss = line.Split(',');
-            foreach (string s in ss)
+            try
             {
-                int id = int.Parse(s);
-                if (id > 0)
+
+                string[] ss = line.Split(',');
+                foreach (string s in ss)
                 {
-                    _currentRowIds.Add(id);
+                    int id = int.Parse(s);
+                    if (id > 0)
+                    {
+                        _currentRowIds.Add(id);
+                    }
                 }
             }
+            catch (Exception) {
+                _currentRowIds.Clear();
+                return false;
+            }
+            return true;
         }
 
         public static void Proc(string line, UpdateCommand updateCommand)

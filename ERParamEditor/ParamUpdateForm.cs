@@ -32,6 +32,7 @@ namespace ERParamEditor
             updateParamTasks.Add(new DefaultShopParamTask());
             updateParamTasks.Add(new DefaultMapLotParamTask());
             updateParamTasks.Add(new RemoveRequireTask());
+            updateParamTasks.Add(new RemoveWeightTask());
             updateParamTasks.Add(new BuddyTask());            
             updateParamTasks.Add(new LotParamTask());
             updateParamTasks.Add(new CharInitParamTask());
@@ -78,7 +79,14 @@ namespace ERParamEditor
             options.Restore = checkBoxRestore.Checked;
             options.Publish = publish;
 
-            UpdateParamExector.Exec(_paramProject, options);
+            try
+            {
+                UpdateParamExector.Exec(_paramProject, options);
+            }
+            catch (Exception ex) {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
