@@ -41,8 +41,13 @@ namespace ERParamUtils
         {
 
             if (projectNameRegex.Match(name).Success)
+            {
+                if (CheckProject(name)) {
+                    return "Project Exists!";
+                }
                 return null;
-
+            }
+            
             return "Invalid Project Name, Only Include a-z,0-9 \nExamples abc, abc1, abcd ";
         }
 

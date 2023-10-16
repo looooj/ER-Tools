@@ -36,6 +36,7 @@
             fileDialogSelect = new OpenFileDialog();
             textProjectName = new TextBox();
             label2 = new Label();
+            checkBoxEldenRing = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -56,7 +57,7 @@
             // 
             // buttonOk
             // 
-            buttonOk.Location = new Point(116, 100);
+            buttonOk.Location = new Point(247, 100);
             buttonOk.Name = "buttonOk";
             buttonOk.Size = new Size(75, 23);
             buttonOk.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new Point(222, 100);
+            buttonCancel.Location = new Point(343, 100);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(75, 23);
             buttonCancel.TabIndex = 3;
@@ -104,11 +105,23 @@
             label2.TabIndex = 5;
             label2.Text = "ProjectName:";
             // 
+            // checkBoxEldenRing
+            // 
+            checkBoxEldenRing.AutoSize = true;
+            checkBoxEldenRing.Location = new Point(67, 101);
+            checkBoxEldenRing.Name = "checkBoxEldenRing";
+            checkBoxEldenRing.Size = new Size(136, 21);
+            checkBoxEldenRing.TabIndex = 7;
+            checkBoxEldenRing.Text = "Orignal Elden Ring";
+            checkBoxEldenRing.UseVisualStyleBackColor = true;
+            checkBoxEldenRing.CheckedChanged += checkBoxEldenRing_CheckedChanged;
+            // 
             // CreateProjectForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(950, 150);
+            Controls.Add(checkBoxEldenRing);
             Controls.Add(textProjectName);
             Controls.Add(label2);
             Controls.Add(buttonSelect);
@@ -134,5 +147,6 @@
         private OpenFileDialog fileDialogSelect;
         private TextBox textProjectName;
         private Label label2;
+        private CheckBox checkBoxEldenRing;
     }
 }

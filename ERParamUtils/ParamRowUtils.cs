@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SoulsFormats;
+using static SoulsFormats.PARAMDEF;
 
 namespace ERParamUtils
 {
@@ -33,7 +35,31 @@ namespace ERParamUtils
     {
 
 
-        public static object ConvertValue(string value, string valueType)
+        public static object ConvertValue(string value, DefType defType) {
+            switch (defType) {
+                case DefType.u8:
+                    return byte.Parse(value);
+                case DefType.s8:
+                    return sbyte.Parse(value);
+                case DefType.u16:
+                    return UInt16.Parse(value);
+                case DefType.s16:
+                    return Int16.Parse(value);
+                case DefType.u32:
+                    return UInt32.Parse(value);
+                case DefType.s32:         
+                    return Int32.Parse(value);
+                case DefType.b32:
+                    return bool.Parse(value);
+                case DefType.angle32:
+                case DefType.f32:
+                    return float.Parse(value);
+                case DefType.f64:
+                    return double.Parse(value);
+            }
+            return value;
+        }
+        public static object ConvertValueX(string value, string valueType)
         {
 
             switch (valueType)
@@ -60,6 +86,11 @@ namespace ERParamUtils
                 case "fixstr":
                 case "fixstrW":
                     return value;
+                default: {
+                        if (valueType.Length > 6)
+                            return byte.Parse(value);
+                        break;
+                    }
             }
             return value;
         }
@@ -82,7 +113,7 @@ namespace ERParamUtils
 
             FSParam.Param.Cell cell = row.Cells[col];
 
-            cell.Value = ConvertValue(value, cell.Def.InternalType);
+            cell.Value = ConvertValue(value, cell.Def.DisplayType);
 
 
         }
@@ -103,7 +134,7 @@ namespace ERParamUtils
                 if (cell.Def.InternalName == keyName)
                 {
 
-                    cell.Value = ConvertValue(value, cell.Def.InternalType);
+                    cell.Value = ConvertValue(value, cell.Def.DisplayType);
                     return;
                 }
             }

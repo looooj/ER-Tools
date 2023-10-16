@@ -1,6 +1,7 @@
 using ERParamUtils;
 using ERParamUtils.UpateParam;
 using NLog;
+using System.Globalization;
 
 namespace ERParamEditor
 {
@@ -77,6 +78,7 @@ namespace ERParamEditor
             listViewProject.Columns.Add("", -2);
             listViewProject.ContextMenuStrip = menuProject;
 
+
             menuProject.Items.Add(
                   new ToolStripMenuItem("OpenInExpoler", null, OpenInExplorerClick)
               );
@@ -96,6 +98,8 @@ namespace ERParamEditor
             GlobalConfig.Load();
 
             SpecEquipConfig.LoadConfig();
+
+            MultiLang.SwitchLanguage();
         }
 
         void EnabledPanels(bool enabled)
@@ -122,6 +126,9 @@ namespace ERParamEditor
 
             listViewProject.Items.Clear();
             listViewParam.Items.Clear();
+
+            ListViewUtils.AddItem(listViewProject, "CurrentCulture", CultureInfo.CurrentCulture.Name);
+
 
             ListViewUtils.AddItem(listViewProject, "GlobalConfig");
             ListViewUtils.AddItem(listViewProject, "BaseDir", GlobalConfig.BaseDir);
@@ -246,7 +253,7 @@ namespace ERParamEditor
         {
             Tests.Run();
 
-     
+           // buttonTest.Text = MultiLang.GetString("Test"); 
 
         }
 

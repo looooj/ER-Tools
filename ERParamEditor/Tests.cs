@@ -68,12 +68,17 @@ namespace ERParamEditor
             var dir = appObj.InstallDir;          
 
         }
-      
+
+        public static void TestFind() {
+
+            List<FindEquipLocation> result = new();
+            FindEquipUtils.Find(8384, 0, result);
+        }
 
 
         public static void Run() {
 
-            TestVdf();
+            TestFind();
         }
     }
 }

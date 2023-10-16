@@ -12,11 +12,37 @@ namespace ERParamUtils
     public class ParamCellItem
     {
         public int ColIndex { get; set; }
-        public string? DisplayName { get; set; }
-        public string? Key { get; set; }
+        public string? DisplayName { get => _cell.Def.DisplayName; }
+        public string? Key { get => _cell.Def.InternalName; }
         public string? Value { get; set; }
-        public string? InternalType { get; set; }
+        public string? ValueType { get => GetValueType(); }
         public string? Comment { get; set; }
+
+        private FSParam.Param.Cell _cell;
+
+        public FSParam.Param.Cell GetCell()
+        {
+            return _cell;
+        }
+
+        public void SetCell(FSParam.Param.Cell cell)
+        {
+            _cell = cell;
+        }
+
+        public string GetValueType()
+        {
+            if (IsEnumType())
+            {
+                return _cell.Def.InternalType + string.Format("({0})", _cell.Def.DisplayType);
+            }
+            return _cell.Def.InternalType;
+        }
+
+        public bool IsEnumType()
+        {
+            return (_cell.Def.InternalType.Contains("_"));
+        }
     }
 
     public interface IParamCellItemProc
@@ -26,9 +52,12 @@ namespace ERParamUtils
         List<ParamCellItem> End(FSParam.Param param, FSParam.Param.Row row, List<ParamCellItem> items);
     }
 
+
+
     public class ParamCellList
     {
 
+        
         public static List<ParamCellItem> Build(FSParam.Param param, FSParam.Param.Row? row)
         {
             List<ParamCellItem> items = new();
@@ -41,18 +70,19 @@ namespace ERParamUtils
 
                     FSParam.Param.Cell cell = row.Cells[i];
                     ParamCellItem item = new ParamCellItem();
+                    item.SetCell(cell);
                     item.ColIndex = i;
-                    item.DisplayName = cell.Def.DisplayName;
-                    item.Key = cell.Def.InternalName;
-                    item.InternalType = cell.Def.InternalType;
+
+
                     var v = cell.Value;
                     var str = v.ToString();
+                    var internalType = cell.Def.InternalType;
                     if (str != null)
                     {
                         item.Value = str;
-                        if (item.InternalType.Length > 6)
+                        if (item.IsEnumType())
                         {
-                            var valueText = ParamFieldMetaManager.FindEnumValueText(item.InternalType, str);
+                            var valueText = ParamFieldMetaManager.FindEnumValueText(internalType, str);
                             if (valueText != str)
                             {
                                 item.Value = string.Format("{0}({1})", valueText, str);
@@ -60,12 +90,10 @@ namespace ERParamUtils
                         }
                     }
 
-                    if (item.InternalType.StartsWith("dummy"))
+                    if (cell.Def.DisplayType == SoulsFormats.PARAMDEF.DefType.dummy8)
                         continue;
-                    if (item.Key.StartsWith("PAD"))
-                    {
+                    if (cell.Def.InternalName.StartsWith("PAD"))
                         continue;
-                    }
 
                     shopLineParamCellProc.Proc(param, row, item);
                     lotParamCellProc.Proc(param, row, item);

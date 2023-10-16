@@ -9,7 +9,7 @@ namespace ERParamEditor
     class InputDialog
     {
 
-        public static DialogResult InputBox(string title, string promptText, ref string value)
+        public static bool InputBox(string title, string promptText, ref string value)
         {
             Form form = new Form();
             Label label = new Label();
@@ -48,7 +48,7 @@ namespace ERParamEditor
 
             DialogResult dialogResult = form.ShowDialog();
             value = textBox.Text;
-            return dialogResult;
+            return (dialogResult == DialogResult.OK);
         }
     }
 }

@@ -346,6 +346,8 @@ namespace ERParamUtils.UpateParam
             if (param == null)
                 return;
 
+            UpdateLogger.Begin(paramName);
+
             foreach (var row in param.Rows) {
                 SetDefaultLot(row,updateCommand);
             }

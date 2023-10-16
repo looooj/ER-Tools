@@ -26,9 +26,9 @@ namespace ERParamEditor
             fileDialogSelect.DefaultExt = ".bin";
             var ret = fileDialogSelect.ShowDialog();
             if (ret == DialogResult.OK)
-            {     
+            {
                 textFilename.Text = fileDialogSelect.FileName;
-           
+
             }
 
         }
@@ -44,14 +44,20 @@ namespace ERParamEditor
             try
             {
                 string? errorMsg = ParamProjectManager.CheckProjectName(ProjectName);
-                if (errorMsg != null) {
+                if (errorMsg != null)
+                {
                     MessageBox.Show(errorMsg);
                     return;
-                }  
+                }
 
                 if (Path.GetFileName(RegulationPath) != GlobalConfig.RegulationFileName)
                 {
-                    MessageBox.Show("Invalid Regulation File");
+                    MessageBox.Show("Invalid Regulation File "+ RegulationPath);
+                    return;
+                }
+
+                if (!File.Exists(RegulationPath)) {
+                    MessageBox.Show("Regulation File not found " + RegulationPath);
                     return;
                 }
 
@@ -63,7 +69,7 @@ namespace ERParamEditor
             }
             catch (Exception)
             {
-                MessageBox.Show("Invalid Regulation File");                
+                MessageBox.Show("Invalid Regulation File");
             }
 
         }
@@ -78,6 +84,12 @@ namespace ERParamEditor
         {
             textProjectName.Text = "proj";
             FormBorderStyle = FormBorderStyle.FixedSingle;
+        }
+
+        private void checkBoxEldenRing_CheckedChanged(object sender, EventArgs e)
+        {
+            textFilename.Text = Path.GetDirectoryName(SteamAppPath.FindEldenRing())
+                + @"\"+ GlobalConfig.RegulationFileName;
         }
     }
 }
