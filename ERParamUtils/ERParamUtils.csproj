@@ -14,6 +14,7 @@
     <ProjectReference Include="..\FSParam\FSParam.csproj" />
     <ProjectReference Include="..\SoulsFormats\SoulsFormats.csproj" />
     <ProjectReference Include="..\StudioUtils\StudioUtils.csproj" />
-  </ItemGroup>
+    <ProjectReference Include="..\VdfFile\VdfFile.csproj" />
+    </ItemGroup>
 
 </Project>

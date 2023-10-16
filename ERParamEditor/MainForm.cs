@@ -244,7 +244,9 @@ namespace ERParamEditor
 
         private void buttonTest_Click_1(object sender, EventArgs e)
         {
-            //Tests.Run();
+            Tests.Run();
+
+     
 
         }
 

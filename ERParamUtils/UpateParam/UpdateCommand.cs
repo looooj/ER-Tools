@@ -182,33 +182,6 @@ namespace ERParamUtils.UpateParam
             _items.Add(item);
         }        
 
-        /*
-        public void AddFile(ParamProject project, string filename)
-        {
-
-            string path = project.GetUpdateFile(filename);
-            var lines = File.ReadAllLines(path);
-
-            foreach (string line in lines)
-                AddLine(line);
-        }
-
-        
-        public void AddLine(string line)
-        {
-            line = line.Trim();
-            if (line.StartsWith("#"))
-            {
-                return;
-            }
-            UpdateCommandItem item = UpdateCommandItem.Parse(line);
-            if (item == null)
-            {
-                return;
-            }
-            items.Add(item);
-        }
-        */
 
         public void Exec(ParamProject project)
         {

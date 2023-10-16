@@ -13,6 +13,8 @@
     <ProjectReference Include="..\FSParam\FSParam.csproj" />
     <ProjectReference Include="..\SoulsFormats\SoulsFormats.csproj" />
     <ProjectReference Include="..\StudioUtils\StudioUtils.csproj" />
+    <ProjectReference Include="..\ValveFileVDF\ValveFileVDF.vcxproj" />
+    <ProjectReference Include="..\VdfFile\VdfFile.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,5 +40,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(SolutionDir)\libs\*.dll $(OutDir)" />
+  </Target>
 
 </Project>

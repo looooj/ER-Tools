@@ -139,25 +139,6 @@ namespace ERParamUtils.UpateParam
         public void Proc(string line, UpdateCommand updateCommand)
         {
 
-            if (!startFlag)
-            {
-                if (line.StartsWith(startLabel))
-                {
-                    startFlag = true;
-                }
-                return;
-            }
-            if (endFlag)
-            {
-                return;
-            }
-            if (line.StartsWith("#@goto="))
-            {
-                startFlag = false;
-                string[] ss = line.Split('=');
-                startLabel = "#@label=" + ss[1];
-                return;
-            }
 
             if (line.StartsWith("#@index="))
             {
@@ -170,18 +151,6 @@ namespace ERParamUtils.UpateParam
             {
                 string[] ss = line.Split('=');
                 point = Int32.Parse(ss[1]);
-                return;
-            }
-            if (line.StartsWith("#@count="))
-            {
-                string[] ss = line.Split('=');
-                count = Int32.Parse(ss[1]);
-                return;
-            }
-
-            if (line.StartsWith("#@label") && !firstFlag)
-            {
-                endFlag = true;
                 return;
             }
 
@@ -209,9 +178,6 @@ namespace ERParamUtils.UpateParam
                 string lastEquip = equips[0];
                 for (int i = 0; i < enemys.Length; i++)
                 {
-
-                    //if (i >= equips.Length)
-                    //    break;
 
                     string rowId = enemys[i];
 
@@ -283,10 +249,8 @@ namespace ERParamUtils.UpateParam
         public static void LoadLotBatchUpdate(string paramName, string updateName, UpdateCommand updateCommand)
         {
 
-            //string path = updateCommand.GetUpdateFile(updateName);
 
             UpateLotBatch itemLot = new(paramName);
-            //string[] lines = File.ReadAllLines(path);
             var lines = UpateFile.Load(updateCommand.GetProject(), updateName);
 
             foreach (string line in lines)
@@ -373,7 +337,7 @@ namespace ERParamUtils.UpateParam
 
             updateCommand.AddItem(item);
 
-            //UpdateLogger.InfoUpdateCommandItem(item);
+            
         }
 
         public static void SetDefaultLot(ParamProject project, UpdateCommand updateCommand)
