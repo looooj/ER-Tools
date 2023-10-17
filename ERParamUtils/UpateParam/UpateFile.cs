@@ -51,10 +51,10 @@ namespace ERParamUtils.UpateParam
                 //
                 //  Examples 
                 //  lot-enemy-b.txt
-                //  #@include=arrow.txt  => lot-enemy-b-arrow.txt
+                //  @@include=arrow.txt  => lot-enemy-b-arrow.txt
                 //   
                 //
-                if (line.StartsWith("#@include="))
+                if (line.StartsWith("@@include="))
                 {
                     string[] ss = line.Split("=");
                     string includeName = Path.GetFileNameWithoutExtension(path) + "-" + ss[1];

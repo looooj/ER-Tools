@@ -153,7 +153,7 @@ namespace ERParamUtils.UpateParam
     public class UpdateRowParamTask : UpdateParamTask
     {
 
-        internal string? ParamName { get; set; }
+        internal string? ParamName { get => _paramName; set=>_paramName=value; }
         string? _paramName = null;
 
         public UpdateRowParamTask()
@@ -253,7 +253,7 @@ namespace ERParamUtils.UpateParam
                     throw new Exception("Exec (" + task.UpdateName + ") Error " + ex.Message);
                 }
             }
-
+            updateCommand.Exec(project);
             project.SaveParams();
 
             if (options.Publish)

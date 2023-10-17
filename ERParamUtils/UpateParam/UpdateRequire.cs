@@ -88,6 +88,8 @@ namespace ERParamUtils.UpateParam
                 return;
             }
 
+            UpdateLogger.Info("RemoveWeight ProcProtector");
+
             for (int i = 0; i < param.Rows.Count; i++)
             {
 
@@ -109,6 +111,7 @@ namespace ERParamUtils.UpateParam
             {
                 return;
             }
+            UpdateLogger.Info("RemoveWeight ProcWeapon");
 
             for (int i = 0; i < param.Rows.Count; i++)
             {

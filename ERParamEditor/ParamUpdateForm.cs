@@ -82,6 +82,7 @@ namespace ERParamEditor
             try
             {
                 UpdateParamExector.Exec(_paramProject, options);
+                Close();
             }
             catch (Exception ex) {
 

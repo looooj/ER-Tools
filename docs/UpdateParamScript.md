@@ -3,12 +3,12 @@
 
    ###  # comment
    
-   ### #@include=incName  
+   ### @@include=incName  
       include script file, load currentFileName+incName
-      not support #@include in incName file
+      not support @@include in incName file
 
       lot-enemy-b.txt 
-      #@include=arrow.txt => lot-enemy-b-arrow.txt
+      @@include=arrow.txt => lot-enemy-b-arrow.txt
 
       
 
@@ -56,15 +56,15 @@
 #### format
 
 
-       #@index=index(1-8)
-       #@point=point(1000=100%)
+       @@index=index(1-8)
+       @@point=point(1000=100%)
        rowId1,...|equipId1,...|equipType1,...|lotCount
 
 ##### example
 
        #[Godrick Soldier] Bolt -> 100% Arrow
-       #@index=1
-       #@point=1000
+       @@index=1
+       @@point=1000
 
        #50000000 Arrow
        431100000,431100010,431100020|50000000|2|20
@@ -79,12 +79,12 @@
 
 #### format
 
-      #@et=equipType 
+      @@et=equipType 
       rowId;equipId;lotIndex;lotCount
 
 #### example
 
-      #@et=2
+      @@et=2
       #942370070,[Troll Carriage - Gatefront Ruins] Lordsworn's Greatsword
       #3100000;Sacred Relic Sword
       942370070;3100000
@@ -93,13 +93,13 @@
 
 ## update-row.txt
 
-#### #@id=rowId1[,rowId2[,...]]
+#### @@id=rowId1[,rowId2[,...]]
    set rowId
 
 #### format
 
-        #@param=paramName;
-        #@id=rowId1,...
+        @@param=paramName;
+        @@id=rowId1,...
         key;value     
          
 ### sp-effect.txt 
@@ -107,7 +107,7 @@
 
 ##### example
        
-       #@id=310000,310010,310020
+       @@id=310000,310010,310020
        #310000,Crimson Amber Medallion 
        #310010,Crimson Amber Medallion +1
        #310020,Crimson Amber Medallion +2

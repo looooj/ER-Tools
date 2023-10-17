@@ -58,8 +58,8 @@ namespace ERParamUtils.UpateParam
 
     /*
      * 
-     * #@id=3007
-     * [#@param=]
+     * @@id=3007
+     * [@@param=]
      * fieldName;fieldValue
      * fieldName;fieldValue
      * ....
@@ -70,37 +70,29 @@ namespace ERParamUtils.UpateParam
         static string _currentParamName = "";
         static List<int> _currentRowIds = new();
 
-        
+
         public static void SetParamName(string paramName)
         {
             _customParamName = paramName;
         }
 
-        static bool ProcId(string line)
+        static void ProcId(string line)
         {
-            try
-            {
 
-                string[] ss = line.Split(',');
-                foreach (string s in ss)
+            string[] ss = line.Split(',');
+            foreach (string s in ss)
+            {
+                int id = int.Parse(s);
+                if (id > 0)
                 {
-                    int id = int.Parse(s);
-                    if (id > 0)
-                    {
-                        _currentRowIds.Add(id);
-                    }
+                    _currentRowIds.Add(id);
                 }
             }
-            catch (Exception) {
-                _currentRowIds.Clear();
-                return false;
-            }
-            return true;
         }
 
         public static void Proc(string line, UpdateCommand updateCommand)
         {
-            if (line.StartsWith("#@id="))
+            if (line.StartsWith("@@id="))
             {
                 _currentRowIds.Clear();
                 string[] ss = line.Split('=');
@@ -109,7 +101,7 @@ namespace ERParamUtils.UpateParam
                 return;
             }
 
-            if (line.StartsWith("#@param=") && _customParamName == null )
+            if (line.StartsWith("@@param=") && _customParamName == null)
             {
                 _currentRowIds.Clear();
                 string[] ss = line.Split('=');
@@ -127,7 +119,8 @@ namespace ERParamUtils.UpateParam
 
             string paramName = _customParamName == null ? _currentParamName : _customParamName;
 
-            if (!ParamNames.CheckValid(paramName)) {
+            if (!ParamNames.CheckValid(paramName))
+            {
                 return;
             }
 
@@ -139,7 +132,7 @@ namespace ERParamUtils.UpateParam
                     if (ss.Length < 2)
                         return;
                     string fieldName = ss[0];
-                    string value = ss[1];                  
+                    string value = ss[1];
 
                     UpdateCommandItem item = new();
                     item.ParamName = paramName;
@@ -152,10 +145,12 @@ namespace ERParamUtils.UpateParam
             }
         }
 
-        public static void LoadUpdateRow(string paramName,string updateName, UpdateCommand updateCommand) {
+        public static void LoadUpdateRow(string paramName, string updateName, UpdateCommand updateCommand)
+        {
 
             var lines = UpateFile.Load(updateCommand.GetProject(), updateName);
-            foreach (var line in lines) {
+            foreach (var line in lines)
+            {
                 SetParamName(paramName);
                 Proc(line, updateCommand);
             }
@@ -179,8 +174,9 @@ namespace ERParamUtils.UpateParam
         private List<UpdateCommandItem> _items = new();
         private ParamProject _paramProject;
 
-        
-        public UpdateCommand(ParamProject p) {
+
+        public UpdateCommand(ParamProject p)
+        {
             _paramProject = p;
         }
 
@@ -188,7 +184,7 @@ namespace ERParamUtils.UpateParam
         public void AddItem(UpdateCommandItem item)
         {
             _items.Add(item);
-        }        
+        }
 
 
         public void Exec(ParamProject project)
@@ -238,7 +234,7 @@ namespace ERParamUtils.UpateParam
         }
 
 
-      
+
         public ParamProject GetProject()
         {
             return _paramProject;

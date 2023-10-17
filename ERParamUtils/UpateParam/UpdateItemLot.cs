@@ -27,7 +27,7 @@ namespace ERParamUtils.UpateParam
         public void Proc(string line, UpdateCommand updateCommand)
         {
 
-            if (line.StartsWith("#@et="))
+            if (line.StartsWith("@@et="))
             {
                 string[] ss = line.Split('=');
 
@@ -140,14 +140,14 @@ namespace ERParamUtils.UpateParam
         {
 
 
-            if (line.StartsWith("#@index="))
+            if (line.StartsWith("@@index="))
             {
 
                 string[] ss = line.Split('=');
                 index = Int32.Parse(ss[1]);
                 return;
             }
-            if (line.StartsWith("#@point="))
+            if (line.StartsWith("@@point="))
             {
                 string[] ss = line.Split('=');
                 point = Int32.Parse(ss[1]);

@@ -36,6 +36,8 @@ namespace ERParamUtils.UpateParam
                 return;
             }
 
+            UpdateLogger.Info("UpdateBuddyStone ProcRemoveConsume");
+
             for (int i = 0; i < param.Rows.Count; i++)
             {
 
@@ -60,18 +62,20 @@ namespace ERParamUtils.UpateParam
             {
                 return;
             }
+            UpdateLogger.Info("UpdateBuddyStone ProcBuddyStone");
 
             for (int i = 0; i < param.Rows.Count; i++)
             {
 
                 FSParam.Param.Row row = param.Rows[i];
 
+                ParamRowUtils.SetCellValue(row, "activateRange", 9999);
                 ParamRowUtils.SetCellValue(row, "eliminateTargetEntityId", 0);
                 ParamRowUtils.SetCellValue(row, "summonedEventFlagId", 0);
-                ParamRowUtils.SetCellValue(row, "activateRange", 9999);
                 ParamRowUtils.SetCellValue(row, "overwriteActivateRegionEntityId", 0);
                 ParamRowUtils.SetCellValue(row, "warnRegionEntityId", 0);
-                ParamRowUtils.SetCellValue(row, "overwriteReturnRange", 0);
+                ParamRowUtils.SetCellValue(row, "dopingSpEffectId", -1);
+                ParamRowUtils.SetCellValue(row, "overwriteReturnRange", -1);
             }
         }
     }
