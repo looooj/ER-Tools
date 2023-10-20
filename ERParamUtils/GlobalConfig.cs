@@ -12,6 +12,7 @@ namespace ERParamUtils
         public static string BaseDir=@".";
         public static string AssetsDir = "assets";
         public static string RegulationFileName = "regulation.bin";
+        public static bool Debug = false;
         private static string ConfigFile="config.txt";
 
 

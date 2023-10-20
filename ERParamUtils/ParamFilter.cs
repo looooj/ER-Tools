@@ -17,6 +17,11 @@ namespace ERParamUtils
              "ShopLineupParam",
              "CharaInitParam",
              "WorldMapPointParam",
+             "WorldMapPlaceNameParam",
+             "WorldMapPieceParam",
+             "WorldMapLegacyConvParam",
+             "GameAreaParam",
+             "GameSystemCommonParam",
              "BuddyParam",
              "BuddyStoneParam",
              "EquipParamWeapon",
@@ -24,8 +29,12 @@ namespace ERParamUtils
              "EquipParamGem",
              "EquipParamGoods",
              "EquipParamProtector",
-             "Magic"
-
+             "Magic",
+             "NpcAiActionParam",
+             "NpcAiBehaviorProbability",
+             "NpcParam",
+             "NpcThinkParam",
+             "ObjActParam"
         };
 
 

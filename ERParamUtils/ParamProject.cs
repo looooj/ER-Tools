@@ -123,6 +123,8 @@ namespace ERParamUtils
             if (!File.Exists(path)) {
                 File.Copy(GetModRegulationPath(), path,true);
                 File.Copy(GetModRegulationPath(), GetOrginalRegulationPath(),true);
+                string timeId = DateTime.Now.ToString("_yyyyMMdd_HHmmss");
+                File.Copy(GetModRegulationPath(), GetOrginalRegulationPath()+timeId);
             }
 
             LoadParamdefs();

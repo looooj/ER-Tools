@@ -12,14 +12,21 @@ namespace ERParamUtils
         public static readonly string ItemLotParamMap = "ItemLotParam_map";
         public static readonly string ItemLotParamEnemy = "ItemLotParam_enemy";
         public static readonly string CharaInitParam = "CharaInitParam";
+
         public static readonly string SpEffectParam = "SpEffectParam";
+        public static readonly string SpEffectSetParam = "SpEffectSetParam";
+
         public static readonly string BuddyStoneParam = "BuddyStoneParam";
+        public static readonly string BuddyParam = "BuddyParam";
 
         public static readonly string MagicParam = "Magic";
         public static readonly string EquipParamProtector = "EquipParamProtector";
         public static readonly string EquipParamWeapon = "EquipParamWeapon";
         public static readonly string EquipParamGoods = "EquipParamGoods";
-      
+        public static readonly string EquipParamAccessory = "EquipParamAccessory";
+
+        public static readonly string NpcParam = "NpcParam";
+
 
         internal static bool CheckValid(string paramName)
         {

@@ -46,6 +46,7 @@
             buttonTest = new Button();
             buttonExec = new Button();
             errorProvider1 = new ErrorProvider(components);
+            buttonFind = new Button();
             panel1.SuspendLayout();
             panelClient.SuspendLayout();
             panelParamList.SuspendLayout();
@@ -171,6 +172,7 @@
             // 
             // panelBottom
             // 
+            panelBottom.Controls.Add(buttonFind);
             panelBottom.Controls.Add(buttonRestore);
             panelBottom.Controls.Add(buttonTest);
             panelBottom.Controls.Add(buttonExec);
@@ -214,6 +216,16 @@
             // errorProvider1
             // 
             errorProvider1.ContainerControl = this;
+            // 
+            // buttonFind
+            // 
+            buttonFind.Location = new Point(219, 12);
+            buttonFind.Name = "buttonFind";
+            buttonFind.Size = new Size(75, 23);
+            buttonFind.TabIndex = 4;
+            buttonFind.Text = "Find";
+            buttonFind.UseVisualStyleBackColor = true;
+            buttonFind.Click += buttonFind_Click;
             // 
             // MainForm
             // 
@@ -259,5 +271,6 @@
         private Button buttonOpenParam;
         private ErrorProvider errorProvider1;
         private Button buttonRestore;
+        private Button buttonFind;
     }
 }

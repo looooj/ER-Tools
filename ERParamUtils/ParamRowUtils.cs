@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +12,9 @@ namespace ERParamUtils
 {
     public class RowWrapper
     {
+        public string ParamName { get => _param.Name; }
         public int ID { get => _row.ID; }
-        public string Name { get => _row.Name == null ? "" : _row.Name; }
+        public string Name { get => _name; }
 
         public FSParam.Param GetParam() {
             return _param;
@@ -23,11 +25,16 @@ namespace ERParamUtils
         }
         private FSParam.Param.Row _row;
         private FSParam.Param _param;
-
+        private string _name;
         public RowWrapper(FSParam.Param.Row row, FSParam.Param param)
         {
             _row = row;
+            _name = row.Name == null ? "":row.Name;
             _param = param;
+        }
+
+        public void SetName(string name) {
+            _name = name;
         }
     }
 
@@ -47,7 +54,7 @@ namespace ERParamUtils
                     return Int16.Parse(value);
                 case DefType.u32:
                     return UInt32.Parse(value);
-                case DefType.s32:         
+                case DefType.s32:
                     return Int32.Parse(value);
                 case DefType.b32:
                     return bool.Parse(value);
@@ -155,6 +162,7 @@ namespace ERParamUtils
             return null;
         }
 
+
         public static int GetCellInt(FSParam.Param.Row row, int col, int defVal)
         {
 
@@ -207,7 +215,8 @@ namespace ERParamUtils
         }
 
 
-        public static List<RowWrapper> ConvertToRowWrapper(FSParam.Param param, RowFilter[] filters)
+        public static List<RowWrapper> ConvertToRowWrapper(FSParam.Param param, RowFilter[] filters,
+            RowBuilder[] builders)
         {
 
             List<RowWrapper> rows = new();
@@ -227,7 +236,10 @@ namespace ERParamUtils
                 if (!ok)
                     continue;
                 RowWrapper rowWrapper = new(row,param);
-
+                foreach (RowBuilder builder in builders)
+                {
+                    builder.Proc(rowWrapper);
+                }
                 rows.Add(rowWrapper);
             }
             return rows;
@@ -235,9 +247,44 @@ namespace ERParamUtils
 
 
     }
+
+
+    public interface RowBuilder {
+
+        void Proc(RowWrapper rowWrapper);
+    }
+
+    public class SpEffectSetParamRowBuilder : RowBuilder
+    {
+        public void Proc(RowWrapper rowWrapper)
+        {
+            if (rowWrapper.GetParam().Name != ParamNames.SpEffectSetParam)
+                return;
+
+            var param = GlobalConfig.GetCurrentProject().FindParam(ParamNames.SpEffectParam);
+            if (param == null)
+                return;
+
+            var text = "";
+            for (int i = 0; i < 3; i++) {
+
+                int spId = ParamRowUtils.GetCellInt(rowWrapper.GetRow(), i, 0);
+                if (spId > 0) {
+                    var row = ParamRowUtils.FindRow(param, spId);
+                    if (row == null)
+                        continue;
+                    if (row.Name != null ) {
+                        text = text + row.Name + " ";
+                    }
+                }
+            }
+            rowWrapper.SetName(text);
+        }
+    }
+
     public interface RowFilter
     {
-        bool DoFilter(FSParam.Param param, FSParam.Param.Row row);
+        bool DoFilter(FSParam.Param param, FSParam.Param.Row row);        
     }
 
     public class RowBlankNameFiler : RowFilter
@@ -249,4 +296,6 @@ namespace ERParamUtils
             return true;
         }
     }
+
+
 }

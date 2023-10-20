@@ -1,4 +1,5 @@
 ﻿using ERParamUtils;
+using NLog.Time;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,8 @@ using System.Windows.Forms;
 
 namespace ERParamEditor
 {
+
+
     public partial class ParamRowForm : Form
     {
         public ParamRowForm()
@@ -52,7 +55,12 @@ namespace ERParamEditor
         void InitMenuRow()
         {
             if (menuRow == null)
+            {
                 menuRow = new();
+            }
+            menuRow.Items.Add(new ToolStripMenuItem("GoBack", null, goBack_Handler));
+            menuRow.Items.Add(new ToolStripSeparator());
+
 
             menuRow.Items.Add(new ToolStripMenuItem("FindRowByName", null, findRowName_Handler));
             menuRow.Items.Add(new ToolStripSeparator());
@@ -69,6 +77,29 @@ namespace ERParamEditor
             menuRow.Items.Add(new ToolStripSeparator());
             menuRow.Items.Add(new ToolStripMenuItem("Export", null, exportRowButton_Click));
 
+
+        }
+
+        void changeViewMode()
+        {
+
+
+
+        }
+
+
+        private void goBack_Handler(object? sender, EventArgs e)
+        {
+
+            if (!RowListManager.GoBack()) {
+                return;
+            }
+
+            var item = RowListManager.GetCurrent();
+
+            changeGridViewRow(item.Mode, item.Rows, item.CurrentRow);
+            //bindingSourceRow.DataSource = item.Rows;
+            //dataGridViewRow.DataSource = bindingSourceRow.DataSource;
         }
 
 
@@ -148,7 +179,8 @@ namespace ERParamEditor
             copyRow(true, true);
         }
 
-        private void scrollToRow(int index) {
+        private void scrollToRow(int index)
+        {
 
             dataGridViewRow.FirstDisplayedScrollingRowIndex = 0;
             dataGridViewRow.FirstDisplayedScrollingRowIndex = index;
@@ -156,7 +188,7 @@ namespace ERParamEditor
             dataGridViewRow.ClearSelection();
             dataGridViewRow.Rows[index].Selected = true;
 
-                //dataGridViewRow.DisplayedRowCount 
+            //dataGridViewRow.DisplayedRowCount 
             /*
             while (index < dataGridViewRow.Rows.Count) {
                 if (dataGridViewRow.Rows[index].Visible)
@@ -167,6 +199,21 @@ namespace ERParamEditor
                 }
             }*/
         }
+
+        void gotoRowId(int rowId)
+        {
+
+            for (int i = 0; i < dataGridViewRow.Rows.Count; i++)
+            {
+                var item = (RowWrapper)dataGridViewRow.Rows[i].DataBoundItem;
+                if (item.ID == rowId)
+                {
+                    scrollToRow(i);
+                    return;
+                }
+            }
+        }
+
         private void gotoRowId_Handler(object? sender, EventArgs e)
         {
             string text = "";
@@ -177,16 +224,9 @@ namespace ERParamEditor
 
             text = text.Trim();
             int rowId = int.Parse(text);
-            for (int i = 0; i < dataGridViewRow.Rows.Count; i++) {
-                var item = (RowWrapper)dataGridViewRow.Rows[i].DataBoundItem;
-                if (item.ID == rowId) {
-                    scrollToRow(i);
-                    return;
-                } 
-            }
-            
-            //dataGridViewRow.FirstDisplayedScrollingRowIndex = 0;
+            gotoRowId(rowId);
         }
+
 
 
         private void findRowName_Handler(object? sender, EventArgs e)
@@ -197,8 +237,10 @@ namespace ERParamEditor
                 return;
             }
             text = text.Trim();
+            var item = RowListManager.GetCurrent();
+
             List<RowWrapper> rows = new();
-            foreach (RowWrapper row in CurrentRowWrappers)
+            foreach (RowWrapper row in item.Rows)
             {
                 if (row.Name.Length < 1)
                     continue;
@@ -214,14 +256,18 @@ namespace ERParamEditor
             dataGridViewRow.DataSource = bindingSourceRow.DataSource;
         }
 
-        public List<RowWrapper>? CurrentRowWrappers;
+        //public List<RowWrapper>? CurrentRowWrappers;
+        //public List<RowWrapper>? JumpRowWrappers;
+        //public int ViewMode = 0;
+        public string ParamName = "";
         void InitRows()
         {
-            if (CurrentRowWrappers == null)
+            var rowListItem = RowListManager.GetCurrent();
+            if (rowListItem == null)
                 return;
 
 
-            bindingSourceRow.DataSource = CurrentRowWrappers;
+            bindingSourceRow.DataSource = rowListItem.Rows;
 
             dataGridViewRow.AutoGenerateColumns = true;
             dataGridViewRow.DataSource = bindingSourceRow.DataSource;
@@ -233,9 +279,10 @@ namespace ERParamEditor
             dataGridViewRow.ContextMenuStrip = menuRow;
             dataGridViewRow.SelectionChanged += RowSelectionChanged;
 
-            if (CurrentRowWrappers.Count > 0)
+            if (rowListItem.Mode == 0)
             {
-                //FillCells(CurrentRowWrappers[0].)
+                dataGridViewRow.Columns[0].Visible = false;
+                Text = ParamName;
             }
         }
 
@@ -246,10 +293,16 @@ namespace ERParamEditor
             if (menuCell == null)
                 menuCell = new();
             menuCell.Items.Add(new ToolStripMenuItem("CopyCell", null, copyCell_Handler));
-#if DEBUG
-            menuCell.Items.Add(new ToolStripMenuItem("ChangValue", null, changeValue_Handler));
-#endif
+            menuCell.Items.Add(new ToolStripSeparator());
+            menuCell.Items.Add(new ToolStripMenuItem("CopyValue", null, copyCellValue_Handler));
+            menuCell.Items.Add(new ToolStripSeparator());
+            menuCell.Items.Add(new ToolStripMenuItem("JumpRef", null, jumpRef_Handler));
 
+            if (GlobalConfig.Debug)
+            {
+                menuCell.Items.Add(new ToolStripSeparator());
+                menuCell.Items.Add(new ToolStripMenuItem("ChangValue", null, changeValue_Handler));
+            }
         }
 
         private void changeValue_Handler(object? sender, EventArgs e)
@@ -263,8 +316,8 @@ namespace ERParamEditor
 
             if (ret)
             {
-
-                ParamRowUtils.SetCellValue(currentParamRow.GetRow(), cell.Key, value);
+                var row = RowListManager.GetCurrentRow();
+                ParamRowUtils.SetCellValue(row.GetRow(), cell.Key, value);
             }
         }
 
@@ -274,15 +327,16 @@ namespace ERParamEditor
             if (dataGridViewCell.SelectedRows.Count < 1)
                 return;
 
-            //List<string> lines = new();
+            var row = RowListManager.GetCurrentRow();
+
             string text = "";
             for (int i = 0; i < dataGridViewCell.SelectedRows.Count; i++)
             {
                 ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[i].DataBoundItem;
 
                 string line = string.Format("{0};{1};{2};{3}",
-                    currentParamRow.ID,
-                    currentParamRow.Name,
+                    row.ID,
+                    row.Name,
                     cell.Key,
                     cell.Value
                     );
@@ -295,12 +349,81 @@ namespace ERParamEditor
 
         }
 
-        private RowWrapper currentParamRow;
-        void FillCells(RowWrapper row)
+        private void copyCellValue_Handler(object? sender, EventArgs e)
+        {
+            if (dataGridViewCell.SelectedRows.Count < 1)
+                return;
+
+            string text = "";
+            for (int i = 0; i < dataGridViewCell.SelectedRows.Count; i++)
+            {
+                ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[i].DataBoundItem;
+
+                if (i > 0)
+                    text = text + " ";
+
+                string line = cell.Value == null ? "" : cell.Value;
+                ClipTextFile.Add(line);
+                text = text + line;
+            }
+            Clipboard.SetData(DataFormats.Text, (Object)text);
+
+        }
+
+        private void jumpRef_Handler(object? sender, EventArgs e)
+        {
+            if (dataGridViewCell.SelectedRows.Count < 1)
+                return;
+
+
+            ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[0].DataBoundItem;
+            var row = RowListManager.GetCurrentRow();
+            var refRows = ParamCellRefUtils.GetRowWrappers(row, cell);
+            if (refRows.Count > 0)
+            {
+                changeRows(1, refRows);
+            }
+        }
+
+        void changeRows(int mode, List<RowWrapper> rows)
+        {
+
+            if (rows.Count < 1)
+                return;
+            RowListManager.Add(mode, rows);
+            changeGridViewRow(mode, rows, null);
+        }
+
+        void changeGridViewRow(int mode, List<RowWrapper> rows, RowWrapper currentRow)
         {
 
 
-            currentParamRow = row;
+            bindingSourceRow.DataSource = rows;
+            dataGridViewRow.DataSource = bindingSourceRow.DataSource;
+            dataGridViewRow.Columns[0].Visible = true;
+            switch (mode)
+            {
+                case RowListViewMode.DEFAULT:
+                    dataGridViewRow.Columns[0].Visible = false;
+                    break;
+            }
+            if (currentRow == null)
+            {
+                FillCells(rows[0]);
+            }
+            else
+            {
+                FillCells(currentRow);
+                gotoRowId(currentRow.ID);
+            }
+        }
+
+
+        void FillCells(RowWrapper row)
+        {
+
+            RowListManager.SetCurrentRow(row);
+
             var cells = ParamCellList.Build(row.GetParam(), row.GetRow());
 
             bindingSourceCell.DataSource = cells;
@@ -337,6 +460,11 @@ namespace ERParamEditor
         {
             dataGridViewRow.Width = (Width / 2) - 30;
 
+        }
+
+        private void ParamRowForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            RowListManager.Clear();
         }
     }
 }

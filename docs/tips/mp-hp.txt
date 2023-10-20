@@ -1,0 +1,18 @@
+
+
+#SpEffectParam-361101-Ancestral Spirit's Horn [Kill]
+#祖灵角
+
+changeHpRate,0,
+changeHpPoint,0,
+changeMpRate,0,
+changeMpPoint,-3,
+
+#SpEffectParam-350301-Taker's Cameo [Kill]
+#掠夺浮雕坠饰
+
+changeHpRate,-3,
+changeHpPoint,-30,
+changeMpRate,0,
+changeMpPoint,0,
+

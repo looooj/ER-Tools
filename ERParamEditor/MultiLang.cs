@@ -15,8 +15,8 @@ namespace ERParamEditor
     {
 
         //Dictionary<string, CultureInfo> CultureInfo
-        static CultureInfo currentCultureInfo;
-        static ResourceManager resourceManager;
+        static CultureInfo? currentCultureInfo;
+        static ResourceManager? resourceManager;
         static string cultureName = "default";
         public static bool Need() {
             if (cultureName == "default")

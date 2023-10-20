@@ -57,7 +57,7 @@ namespace ERParamUtils
     public class ParamCellList
     {
 
-        
+
         public static List<ParamCellItem> Build(FSParam.Param param, FSParam.Param.Row? row)
         {
             List<ParamCellItem> items = new();
@@ -154,7 +154,7 @@ namespace ERParamUtils
     {
         public List<ParamCellItem> End(Param param, Param.Row row, List<ParamCellItem> items)
         {
-    
+
             return items;
         }
 
@@ -185,4 +185,7 @@ namespace ERParamUtils
             return true;
         }
     }
+
+
+
 }

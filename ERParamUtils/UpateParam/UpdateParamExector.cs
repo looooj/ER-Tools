@@ -47,13 +47,13 @@ namespace ERParamUtils.UpateParam
         public DefaultMapLotParamTask()
         {
             OrderNo = 0;
-            Description = "UpdateMapLotParam: Change Rune Stone Lot Count 20; Arrow Lot Count 99; ...";
+            Description = "UpdateLotParam: Change Rune Stone Lot Count 20; Arrow Lot Count 99; ...";
         }
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
             UpdateName = Description;
-            ItemLotParamMap.SetDefaultLot(project, updateCommand);
+            DefautItemLot.SetDefaultLotMap(project, updateCommand);
         }
     }
 

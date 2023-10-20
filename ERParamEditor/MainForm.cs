@@ -62,9 +62,11 @@ namespace ERParamEditor
 
         void InitControls()
         {
-#if DEBUG
-            buttonTest.Visible = true;
-#endif
+
+            if (GlobalConfig.Debug)
+            {
+                buttonTest.Visible = true;
+            }
 
             menuProject = new();
 
@@ -253,7 +255,7 @@ namespace ERParamEditor
         {
             Tests.Run();
 
-           // buttonTest.Text = MultiLang.GetString("Test"); 
+            // buttonTest.Text = MultiLang.GetString("Test"); 
 
         }
 
@@ -279,9 +281,15 @@ namespace ERParamEditor
 
             ParamRowForm paramRowForm = new();
 
-            RowFilter[] rowFilers = { new RowBlankNameFiler() };
-            paramRowForm.CurrentRowWrappers = ParamRowUtils.ConvertToRowWrapper(param, rowFilers);
-            //paramRowForm.CurrentParam = param;
+            RowFilter[] rowFilers = { };
+            RowBuilder[] rowBuilders = { new SpEffectSetParamRowBuilder() };
+            var rows = ParamRowUtils.ConvertToRowWrapper(param, rowFilers,rowBuilders);
+            RowListManager.Add(0, rows);
+            //var rowListItem = RowListManager.GetCurrent();
+            //if (rowListItem == null)
+            //    return;
+
+            paramRowForm.ParamName = param.Name;
             paramRowForm.ShowDialog();
         }
 
@@ -300,6 +308,12 @@ namespace ERParamEditor
 
             GlobalConfig.GetCurrentProject().Restore();
 
+        }
+
+        private void buttonFind_Click(object sender, EventArgs e)
+        {
+            SearchEquipForm form = new();
+            form.ShowDialog();
         }
     }
 }

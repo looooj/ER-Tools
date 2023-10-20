@@ -261,12 +261,12 @@ namespace ERParamUtils.UpateParam
 
     }
 
-    public class ItemLotParamMap
+    public class DefautItemLot
     {
 
-        static string paramName = ParamNames.ItemLotParamMap;
+        //static string paramName = ParamNames.ItemLotParamMap;
 
-        public static void SetDefaultLot(FSParam.Param.Row row, UpdateCommand updateCommand)
+        private static void SetDefaultLotMap(string paramName,FSParam.Param.Row row, UpdateCommand updateCommand)
         {
 
             int itemId = -1;
@@ -340,8 +340,9 @@ namespace ERParamUtils.UpateParam
             
         }
 
-        public static void SetDefaultLot(ParamProject project, UpdateCommand updateCommand)
+        public static void SetDefaultLotMap(ParamProject project, UpdateCommand updateCommand)
         {
+            string paramName = ParamNames.ItemLotParamMap;
             var param = project.FindParam(paramName);
             if (param == null)
                 return;
@@ -349,7 +350,7 @@ namespace ERParamUtils.UpateParam
             UpdateLogger.Begin(paramName);
 
             foreach (var row in param.Rows) {
-                SetDefaultLot(row,updateCommand);
+                SetDefaultLotMap(paramName, row,updateCommand);
             }
         }
     }

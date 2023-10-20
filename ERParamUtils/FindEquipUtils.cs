@@ -14,51 +14,129 @@ namespace ERParamUtils
         public string Key;
     }
 
+    public class FindEquipOptions {
+
+        public string Name="";
+        public int Id=0;
+        public int EquipType;
+    }
+
     public interface IFindEquipHandler
     {
 
-       void Find(int equipId, int equipType, List<FindEquipLocation> result);
+        void Find(FindEquipOptions findEquipOptions, List<FindEquipLocation> result);
 
 
     }
 
-    public class FindInLotMap : IFindEquipHandler
+    public class FindInLot : IFindEquipHandler
     {
-        void IFindEquipHandler.Find(int equipId, int equipType, List<FindEquipLocation> result)
+        protected string parmName="";
+
+        protected void SetParamName(string name) {
+            parmName = name;
+        } 
+
+        void IFindEquipHandler.Find(FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
         {
 
             var project = GlobalConfig.GetCurrentProject();
             if (project == null)
                 return;
 
-            var param = project.FindParam(ParamNames.ItemLotParamMap);
-            if (param == null) {
+            var param = project.FindParam(parmName);
+            if (param == null)
+            {
                 return;
             }
 
+            //if (findEquipOptions.Id > 0)
+            foreach (var row in param.Rows)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    string key = "lotItemId0" + (i + 1);
+                    int itemId = ParamRowUtils.GetCellInt(row, key, 0);
 
-            foreach (var row in param.Rows) {
-
-                //0,１：アイテムID,lotItemId01,190,
-                for (int i = 0; i < 3; i++) {
-                    int itemId = ParamRowUtils.GetCellInt(row, i, 0);
-                    if (itemId == equipId) {
-
+                    if (findEquipOptions.Id > 0)
+                    if (itemId == findEquipOptions.Id)
+                    {
                         FindEquipLocation loc = new();
                         loc.ParamName = param.Name;
                         loc.RowId = row.ID;
-                        loc.Key = "lotItemId0"+i;
+                        loc.Key = key;
                         result.Add(loc);
                         return;
                     }
+
+                    //todo fix 
+                    if (findEquipOptions.Name.Length > 0)
+                        if (row.Name.Contains(findEquipOptions.Name) )
+                        {
+                            FindEquipLocation loc = new();
+                            loc.ParamName = param.Name;
+                            loc.RowId = row.ID;
+                            loc.Key = "";
+                            result.Add(loc);
+                            return;
+                        }
+
                 }
 
             }
 
-
-
         }
     }
+
+    public class FindInLotMap : FindInLot {
+
+        public FindInLotMap() {
+            SetParamName(ParamNames.ItemLotParamMap);
+        }
+    }
+
+    public class FindInLotEnemy : FindInLot
+    {
+
+        public FindInLotEnemy()
+        {
+            SetParamName(ParamNames.ItemLotParamMap);
+        }
+    }
+
+    public class FindInShop : IFindEquipHandler
+    {
+        public void Find(FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
+        {
+            var project = GlobalConfig.GetCurrentProject();
+            if (project == null)
+                return;
+
+            var param = project.FindParam(ParamNames.ShopLineupParam);
+            if (param == null)
+            {
+                return;
+            }
+
+
+            foreach (var row in param.Rows)
+            {
+                int equipId = ParamRowUtils.GetCellInt(row, "equipId",0);
+                if (findEquipOptions.Id >0) {
+                    if (equipId == findEquipOptions.Id)
+                    {
+                        FindEquipLocation loc = new();
+                        loc.ParamName = param.Name;
+                        loc.RowId = row.ID;
+                        loc.Key = "equipId";
+                        result.Add(loc);
+                        return;
+                    }
+                }
+            }
+        }
+    }
+
 
     public class FindEquipUtils
     {
@@ -66,16 +144,23 @@ namespace ERParamUtils
 
         static List<IFindEquipHandler> findHandlers = new();
 
-        public static void Find(int equipId, int equipType, List<FindEquipLocation> result)
+        public static void Find(FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
         {
             findHandlers.Add(new FindInLotMap());
-            for (int i = 0; i < findHandlers.Count; i++) {
-                findHandlers[i].Find(equipId, equipType, result);
+            findHandlers.Add(new FindInLotEnemy());
+            findHandlers.Add(new FindInShop());
+
+            for (int i = 0; i < findHandlers.Count; i++)
+            {
+                findHandlers[i].Find(findEquipOptions, result);
             }
-            foreach (var loc in result) {
+            foreach (var loc in result)
+            {
 
                 logger.Info(" {0} {1} {2}", loc.ParamName, loc.RowId, loc.Key);
             }
+        }
+
+
     }
-}
 }

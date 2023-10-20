@@ -71,8 +71,8 @@ namespace ERParamEditor
 
         public static void TestFind() {
 
-            List<FindEquipLocation> result = new();
-            FindEquipUtils.Find(8384, 0, result);
+            //List<FindEquipLocation> result = new();
+            //FindEquipUtils.Find(8384, 0, result);
         }
 
 

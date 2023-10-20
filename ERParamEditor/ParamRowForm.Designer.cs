@@ -136,7 +136,9 @@
             Controls.Add(panelClient);
             Controls.Add(splitter1);
             Name = "ParamRowForm";
+            ShowInTaskbar = false;
             Text = "ParamRowForm";
+            FormClosed += ParamRowForm_FormClosed;
             Load += ParamRowForm_Load;
             Shown += ParamRowForm_Shown;
             ResizeEnd += ParamRowForm_ResizeEnd;
