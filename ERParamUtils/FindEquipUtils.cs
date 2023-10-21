@@ -100,7 +100,7 @@ namespace ERParamUtils
 
         public FindInLotEnemy()
         {
-            SetParamName(ParamNames.ItemLotParamMap);
+            SetParamName(ParamNames.ItemLotParamEnemy);
         }
     }
 
