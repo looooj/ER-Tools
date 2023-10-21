@@ -80,10 +80,13 @@ namespace ERParamUtils.UpateParam
 
                 if (ParamRowUtils.GetCellInt(row, key, 0) != 0)
                 {
-                    ParamRowUtils.SetCellValue(row, key, "0");
-
+                    ParamRowUtils.SetCellValue(row, key, 0);
                     UpdateLogger.InfoRow(row, key, 0);
                 }
+                key = "mtrlId";
+                ParamRowUtils.SetCellValue(row, key, -1);
+                UpdateLogger.InfoRow(row, key, -1);
+
             }
         }
 
