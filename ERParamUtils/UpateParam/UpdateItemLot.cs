@@ -119,10 +119,6 @@ namespace ERParamUtils.UpateParam
         int index = 1;
         int point = 1000;
         int count = 1;
-        bool endFlag = false;
-        bool firstFlag = true;
-        bool startFlag = true;
-        string startLabel = "";
         public UpateLotBatch(string paramName)
         {
             this.paramName = paramName;
@@ -173,7 +169,6 @@ namespace ERParamUtils.UpateParam
 
                 if (enemys.Length < 1 || equips.Length < 1 || types.Length < 1)
                     return;
-                firstFlag = false;
                 int lastCount = count;
                 string lastEquip = equips[0];
                 for (int i = 0; i < enemys.Length; i++)
@@ -264,35 +259,37 @@ namespace ERParamUtils.UpateParam
     public class DefautItemLot
     {
 
-        //static string paramName = ParamNames.ItemLotParamMap;
 
         private static void SetDefaultLotMap(string paramName,FSParam.Param.Row row, UpdateCommand updateCommand)
         {
 
-            int itemId = -1;
-            int itemType = -1;
-            int itemCount = 0;
-            int newItemCount = 20;
-            for (int i = 0; i < row.Cells.Count; i++)
+            for (int i = 1; i < 8; i++)
             {
-                if (row.Cells[i].Def.InternalName == "lotItemId01")
+                string key = "lotItemId0"+i;
+                int itemId = ParamRowUtils.GetCellInt(row,key, 0);
+                if (itemId < 1)
                 {
-                    itemId = ParamRowUtils.GetCellInt(row, i, itemId);
+                    if (i >= 2)
+                        return;
                     continue;
                 }
-                if (row.Cells[i].Def.InternalName == "lotItemCategory01")
-                {
-                    itemType = ParamRowUtils.GetCellInt(row, i,itemType);
-                    continue;
-                }
-                if (row.Cells[i].Def.InternalName == "lotItemNum01")
-                {
-                    itemCount = ParamRowUtils.GetCellInt(row, i, itemCount);
-                    continue;
-                }
+                key = "lotItemCategory0" + i;
+                int itemType = ParamRowUtils.GetCellInt(row, key, 0);
+                key = "lotItemNum01" + i;
+                int itemCount = ParamRowUtils.GetCellInt(row, key, 0);
+
+
+                SetItemLotCount(itemId, itemType, itemCount, paramName, row, updateCommand);
 
             }
 
+            
+        }
+
+        private static void SetItemLotCount(int itemId, int itemType, int itemCount,
+            string paramName, FSParam.Param.Row row, UpdateCommand updateCommand) {
+
+            int newItemCount = 20;
             if (itemType != 1 && !SpecEquipConfig.IsArrow(itemId))
             {
                 return;
@@ -332,25 +329,29 @@ namespace ERParamUtils.UpateParam
             UpdateCommandItem item = new();
             item.ParamName = paramName;
             item.RowId = row.ID;
-            item.Value = newItemCount+"";
+            item.Value = newItemCount + "";
             item.Key = "lotItemNum01";
 
             updateCommand.AddItem(item);
 
-            
         }
+
 
         public static void SetDefaultLotMap(ParamProject project, UpdateCommand updateCommand)
         {
-            string paramName = ParamNames.ItemLotParamMap;
-            var param = project.FindParam(paramName);
-            if (param == null)
-                return;
+            string[] paramNames = { ParamNames.ItemLotParamMap, ParamNames.ItemLotParamEnemy };
+            foreach (string paramName in paramNames)
+            {
+                var param = project.FindParam(paramName);
+                if (param == null)
+                    continue;                        
 
-            UpdateLogger.Begin(paramName);
+                UpdateLogger.Begin(paramName);
 
-            foreach (var row in param.Rows) {
-                SetDefaultLotMap(paramName, row,updateCommand);
+                foreach (var row in param.Rows)
+                {
+                    SetDefaultLotMap(paramName, row, updateCommand);
+                }
             }
         }
     }
