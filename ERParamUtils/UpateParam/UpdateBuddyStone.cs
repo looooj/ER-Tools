@@ -68,14 +68,18 @@ namespace ERParamUtils.UpateParam
             {
 
                 FSParam.Param.Row row = param.Rows[i];
-
-                ParamRowUtils.SetCellValue(row, "activateRange", 9999);
+                /*
+#new value BuddyStoneParam  10000100 Stormveil Castle eliminateTargetEntityId 10005100->0
+eliminateTargetEntityId;0
+#new value BuddyStoneParam  10000100 Stormveil Castle summonedEventFlagId 10002100->0
+summonedEventFlagId;0
+#new value BuddyStoneParam  10000100 Stormveil Castle activateRange 999->9999
+activateRange;9999
+#new value BuddyStoneParam  10000100 Stormveil Castle overwriteActivateRegionEntityId 10002150->0                 */
                 ParamRowUtils.SetCellValue(row, "eliminateTargetEntityId", 0);
                 ParamRowUtils.SetCellValue(row, "summonedEventFlagId", 0);
+                ParamRowUtils.SetCellValue(row, "activateRange", 9999);
                 ParamRowUtils.SetCellValue(row, "overwriteActivateRegionEntityId", 0);
-                ParamRowUtils.SetCellValue(row, "warnRegionEntityId", 0);
-                ParamRowUtils.SetCellValue(row, "dopingSpEffectId", -1);
-                ParamRowUtils.SetCellValue(row, "overwriteReturnRange", -1);
             }
         }
     }
