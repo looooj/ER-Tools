@@ -237,6 +237,23 @@ namespace ERParamUtils.UpateParam
 
     }
 
+    public class SmithingStoneTask : UpdateParamTask
+    {
+
+        public SmithingStoneTask()
+        {
+            Description = "Update SmithingStone Upgrade 2/4/6->1";
+
+        }
+
+        public override void Exec(ParamProject project, UpdateCommand updateCommand)
+        {
+            UpdateSmithingStone.Proc(project);
+        }
+    }
+
+    //UpdateSmithingStone
+
     public class UpdateParamExector
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();

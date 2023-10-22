@@ -11,10 +11,10 @@ namespace ERParamEditor
     public class RowListItem
     {
 
-        public List<RowWrapper> Rows;
+        public List<RowWrapper>? Rows;
         public int Mode;
         public int RowIndex;
-        public RowWrapper CurrentRow;
+        public RowWrapper? CurrentRow;
     }
 
     public class RowListViewMode {

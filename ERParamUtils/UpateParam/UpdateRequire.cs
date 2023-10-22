@@ -21,7 +21,7 @@ namespace ERParamUtils.UpateParam
             if (paramProject == null)
                 return;
 
-            FSParam.Param param = paramProject.FindParam(ParamNames.EquipParamWeapon);
+            FSParam.Param? param = paramProject.FindParam(ParamNames.EquipParamWeapon);
 
             if (param == null) {
                 return;

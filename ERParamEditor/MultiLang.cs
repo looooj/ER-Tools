@@ -39,6 +39,8 @@ namespace ERParamEditor
 
             if (!Need())
                 return text;
+            if (resourceManager == null || currentCultureInfo == null )
+                return text;
 
             return resourceManager.GetString(text, currentCultureInfo);
         }

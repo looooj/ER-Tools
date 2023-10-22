@@ -68,6 +68,8 @@ namespace ERParamUtils.UpateParam
             {
 
                 FSParam.Param.Row row = param.Rows[i];
+                if (row.ID < 2)
+                    continue;
                 /*
 #new value BuddyStoneParam  10000100 Stormveil Castle eliminateTargetEntityId 10005100->0
 eliminateTargetEntityId;0

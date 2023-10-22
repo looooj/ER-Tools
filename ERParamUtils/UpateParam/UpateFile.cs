@@ -45,7 +45,9 @@ namespace ERParamUtils.UpateParam
 
             UpdateLogger.InfoTime("load {0} {1}", updateName, path);
 
-            string baseDir = Path.GetDirectoryName(path);
+            string? baseDir = Path.GetDirectoryName(path);
+            if (baseDir == null)
+                baseDir = ".";
             foreach (string line in lines)
             {
                 //

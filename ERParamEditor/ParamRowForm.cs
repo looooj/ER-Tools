@@ -96,8 +96,8 @@ namespace ERParamEditor
             }
 
             var item = RowListManager.GetCurrent();
-
-            changeGridViewRow(item.Mode, item.Rows, item.CurrentRow);
+            if ( item != null )
+                changeGridViewRow(item.Mode, item.Rows, item.CurrentRow);
             //bindingSourceRow.DataSource = item.Rows;
             //dataGridViewRow.DataSource = bindingSourceRow.DataSource;
         }
@@ -126,7 +126,11 @@ namespace ERParamEditor
         {
             if (dataGridViewRow.SelectedRows.Count < 1)
                 return;
-            string dir = GlobalConfig.GetCurrentProject().GetDir() + @"\exp";
+            var project = GlobalConfig.GetCurrentProject();
+            if (project == null)
+                return;
+
+            string dir = project.GetDir() + @"\exp";
             Directory.CreateDirectory(dir);
 
             for (int i = 0; i < dataGridViewRow.SelectedRows.Count; i++)
@@ -321,7 +325,11 @@ namespace ERParamEditor
             if (ret)
             {
                 var row = RowListManager.GetCurrentRow();
-                ParamRowUtils.SetCellValue(row.GetRow(), cell.Key, value);
+                if (row != null)
+                {
+                    if ( cell.Key != null )
+                        ParamRowUtils.SetCellValue(row.GetRow(), cell.Key, value);
+                }
             }
         }
 
@@ -401,7 +409,7 @@ namespace ERParamEditor
             changeGridViewRow(mode, rows, null);
         }
 
-        void changeGridViewRow(int mode, List<RowWrapper> rows, RowWrapper currentRow)
+        void changeGridViewRow(int mode, List<RowWrapper> rows, RowWrapper? currentRow)
         {
 
 

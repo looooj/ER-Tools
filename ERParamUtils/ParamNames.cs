@@ -20,6 +20,8 @@ namespace ERParamUtils
         public static readonly string BuddyParam = "BuddyParam";
 
         public static readonly string MagicParam = "Magic";
+        //
+        public static readonly string EquipMtrlSetParam = "EquipMtrlSetParam";
         public static readonly string EquipParamProtector = "EquipParamProtector";
         public static readonly string EquipParamWeapon = "EquipParamWeapon";
         public static readonly string EquipParamGoods = "EquipParamGoods";

@@ -10,7 +10,7 @@ namespace VdfFile
     {
 
         Dictionary<string, List<string>> _dict = new();
-        JObject _folders;
+        JObject? _folders;
         public ICollection<string> GetPaths()
         {
             return _dict.Keys;
@@ -22,17 +22,22 @@ namespace VdfFile
             return _dict[path];
         }
 
-        void procApps(JObject apps, string path)
+        private void procApps(JObject apps, string path)
         {
 
             List<string> appIds = new();
             int count = apps.Children().Count();
 
-            var v = apps.First;
+            JToken? v = apps.First;
             for (int i = 0; i < count; i++)
             {
-                appIds.Add(((JProperty)v).Name);
-                v = v.Next;
+                if (v != null)
+                {
+                    appIds.Add(((JProperty)v).Name);
+                    if (v.Next == null)
+                        break;
+                    v = v.Next;
+                }
             }
 
             _dict.Add(path, appIds);
@@ -44,6 +49,9 @@ namespace VdfFile
             string jsonText = VdfConvert.FileToJson(vdfFile);
             JObject jobj = JObject.Parse(jsonText);
             _folders =(JObject)jobj["libraryfolders"];
+
+            if (_folders == null)
+                return;
 
             int count = _folders.Children().Count();
             for (int i = 0; i < count; i++)
@@ -67,7 +75,7 @@ namespace VdfFile
         }
     }
 
-    //D:\Program Files (x86)\Steam\steamapps\appmanifest_1245620.acf
+
     public class VdfAppManifest
     {
         public string AppId { get=>_appId; }

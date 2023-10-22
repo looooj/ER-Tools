@@ -1,0 +1,6 @@
+BaseDir=D:\docs\game\er\er-projs
+AssetsDir=D:\docs\game\er\er-projs\assets
+Debug=1
+
+
+

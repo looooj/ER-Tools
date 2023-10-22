@@ -25,8 +25,7 @@ namespace ERParamEditor
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            //Close();
-
+ 
             FindEquipOptions options = new FindEquipOptions();
 
 
@@ -61,7 +60,8 @@ namespace ERParamEditor
             {
 
                 var item = result[i];
-                FSParam.Param param = GlobalConfig.GetCurrentProject().FindParam(item.ParamName);
+
+                FSParam.Param param = project.FindParam(item.ParamName);
                 if (param == null)
                     continue;
                 var row = ParamRowUtils.FindRow(param, item.RowId);
@@ -76,8 +76,7 @@ namespace ERParamEditor
 
             ParamRowForm paramRowForm = new ParamRowForm();
             RowListManager.Add(1, rowMappers);
-            //paramRowForm.ViewMode = 1;
-            //paramRowForm.CurrentRowWrappers = rowMappers;
+
             paramRowForm.ShowDialog();
         }
 

@@ -33,7 +33,8 @@ namespace ERParamEditor
             updateParamTasks.Add(new DefaultMapLotParamTask());
             updateParamTasks.Add(new RemoveRequireTask());
             updateParamTasks.Add(new RemoveWeightTask());
-            updateParamTasks.Add(new BuddyTask());            
+            updateParamTasks.Add(new BuddyTask());
+            updateParamTasks.Add(new SmithingStoneTask());
             updateParamTasks.Add(new LotParamTask());
             updateParamTasks.Add(new SpecShopParamTask());
             updateParamTasks.Add(new CharInitParamTask());
