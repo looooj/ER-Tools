@@ -44,13 +44,13 @@ namespace ERParamUtils
             TextFile updateFile = new();
             int changeCount = 0;
             updateFile.Add("@@param={0}", param1.Name);
-            bool firstCellFlag = true;
             for (int rowIndex = 0; rowIndex < param2.Rows.Count; rowIndex++)
             {
 
                 var row2 = param2.Rows[rowIndex];
-                
-               
+
+                bool firstCellFlag = true;
+
 
                 if (!rowDict1.TryGetValue(row2.ID, out FSParam.Param.Row? row1))
                 {
