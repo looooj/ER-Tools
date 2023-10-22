@@ -102,6 +102,16 @@ namespace ERParamUtils
             return value;
         }
 
+        public static void SetCellValue(ParamProject paramProject,string paramName, int rowId, string keyName, int value) {
+
+            var param = paramProject.FindParam(paramName);
+            if (param == null)
+                return;
+            var row = FindRow(param, rowId);
+            if (row == null)
+                return;
+            SetCellValue(row, keyName, value);
+        }
 
         public static void SetCellValue(FSParam.Param.Row? row, string keyName, int value)
         {
@@ -215,7 +225,7 @@ namespace ERParamUtils
         }
 
 
-        public static List<RowWrapper> ConvertToRowWrapper(FSParam.Param param, RowFilter[] filters,
+        public static List<RowWrapper> ConvertToRowWrapper(ParamProject project,FSParam.Param param, RowFilter[] filters,
             RowBuilder[] builders)
         {
 
@@ -238,7 +248,7 @@ namespace ERParamUtils
                 RowWrapper rowWrapper = new(row,param);
                 foreach (RowBuilder builder in builders)
                 {
-                    builder.Proc(rowWrapper);
+                    builder.Proc(project,rowWrapper);
                 }
                 rows.Add(rowWrapper);
             }
@@ -251,17 +261,17 @@ namespace ERParamUtils
 
     public interface RowBuilder {
 
-        void Proc(RowWrapper rowWrapper);
+        void Proc(ParamProject paramProject,RowWrapper rowWrapper);
     }
 
     public class SpEffectSetParamRowBuilder : RowBuilder
     {
-        public void Proc(RowWrapper rowWrapper)
+        public void Proc(ParamProject paramProject, RowWrapper rowWrapper)
         {
             if (rowWrapper.GetParam().Name != ParamNames.SpEffectSetParam)
                 return;
 
-            var param = GlobalConfig.GetCurrentProject().FindParam(ParamNames.SpEffectParam);
+            var param = paramProject.FindParam(ParamNames.SpEffectParam);
             if (param == null)
                 return;
 

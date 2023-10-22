@@ -15,6 +15,7 @@ namespace ERParamUtils
              "SpEffectParam",
              "SpEffectSetParam",
              "ShopLineupParam",
+             "ShopLineupParam_Recipe",
              "CharaInitParam",
              "WorldMapPointParam",
              "WorldMapPlaceNameParam",
@@ -34,7 +35,14 @@ namespace ERParamUtils
              "NpcAiBehaviorProbability",
              "NpcParam",
              "NpcThinkParam",
-             "ObjActParam"
+             "ObjActParam",
+             "ActionButtonParam",
+             "CharMakeMenuListItemParam",
+             "CharMakeMenuTopParam",
+             "BehaviorParam",
+             "BehaviorParam_PC",
+             "TalkParam",
+             "EquipMtrlSetParam"
         };
 
 

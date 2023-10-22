@@ -9,13 +9,13 @@ namespace ERParamUtils
 
 
     public interface IParamCellRefProc  {
-        void Proc(RowWrapper sourceRow,
+        void Proc(ParamProject project, RowWrapper sourceRow,
             ParamCellItem paramCellItem, List<RowWrapper> rowWrappers);
     }
 
     public class ShopLineupParamCellRefProc : IParamCellRefProc
     {
-        public void Proc(RowWrapper sourceRow, ParamCellItem paramCellItem, List<RowWrapper> rowWrappers)
+        public void Proc(ParamProject project, RowWrapper sourceRow, ParamCellItem paramCellItem, List<RowWrapper> rowWrappers)
         {
             if (sourceRow.GetParam().Name != ParamNames.ShopLineupParam)
                 return;
@@ -27,7 +27,7 @@ namespace ERParamUtils
 
     public class EquipAccessoryParamCellRefProc : IParamCellRefProc
     {
-        public void Proc(RowWrapper sourceRow, ParamCellItem paramCellItem, List<RowWrapper> rowWrappers)
+        public void Proc(ParamProject project, RowWrapper sourceRow, ParamCellItem paramCellItem, List<RowWrapper> rowWrappers)
         {
             if (sourceRow.GetParam().Name != ParamNames.EquipParamAccessory)
                 return;
@@ -35,7 +35,7 @@ namespace ERParamUtils
             if (rowId < 1)
                 return;
 
-            var spParam = GlobalConfig.GetCurrentProject().FindParam(ParamNames.SpEffectParam);
+            var spParam = project.FindParam(ParamNames.SpEffectParam);
             var row = ParamRowUtils.FindRow(spParam, rowId);
 
             rowWrappers.Add(new RowWrapper(row, spParam));
@@ -51,7 +51,7 @@ namespace ERParamUtils
             new EquipAccessoryParamCellRefProc()
 
         };
-        public static List<RowWrapper> GetRowWrappers(RowWrapper sourceRow,
+        public static List<RowWrapper> GetRowWrappers(ParamProject project, RowWrapper sourceRow,
             ParamCellItem paramCellItem)
         {
 
@@ -59,7 +59,7 @@ namespace ERParamUtils
 
             foreach (var p in paramCellRefProcs) {
 
-                p.Proc(sourceRow, paramCellItem, rowWrappers);
+                p.Proc(project,sourceRow, paramCellItem, rowWrappers);
             }
             return rowWrappers;
         }

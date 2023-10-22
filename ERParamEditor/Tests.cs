@@ -15,6 +15,8 @@ namespace ERParamEditor
 {
     public class Tests
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
 
 
         public static void TestName() {
@@ -45,14 +47,43 @@ namespace ERParamEditor
 
             string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text";
 
-            var files = Directory.GetFiles(dir, "*.*");
+            var files = Directory.GetFiles(dir, "*.dcx");
             foreach (var file in files) {
+                try
+                {
+                    BinderFileUtils.ExtractDCX(file, targetDir);
+                }
+                catch (Exception ex) {
 
-                BinderFileUtils.ExtractDCX(file, targetDir );
+                    logger.Error(ex, file);
+                }
             }
 
         }
 
+        public static void TestDCX2() {
+
+            string dir = @"D:\docs\game\er\unpack-\unpack-files\map\m10\m10_00_00_00";
+          
+
+            string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text";
+
+            var files = Directory.GetFiles(dir, "*.*");
+            foreach (var file in files)
+            {
+
+                try
+                {
+                    BinderFileUtils.ExtractDCX(file, targetDir);
+                }
+                catch (Exception ex)
+                {
+
+                    logger.Error(ex, file);
+                }
+            }
+
+        }
 
         public static void TestVdf() {
 
@@ -76,9 +107,18 @@ namespace ERParamEditor
         }
 
 
+        public static void TestComp() {
+
+            //projects\merchant
+            //ParamProjectManager.CompareProject("org", "merchant");
+
+            ParamProjectCompare.CompareProject("org", "rand",new List<string>());
+
+        }
+
         public static void Run() {
 
-            TestFind();
+            TestComp();
         }
     }
 }

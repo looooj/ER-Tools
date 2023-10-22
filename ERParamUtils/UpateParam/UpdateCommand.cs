@@ -92,6 +92,13 @@ namespace ERParamUtils.UpateParam
 
         public static void Proc(string line, UpdateCommand updateCommand)
         {
+            line = line.Trim();
+
+            if (line.StartsWith("#"))
+            {
+                return;
+            }
+
             if (line.StartsWith("@@id="))
             {
                 _currentRowIds.Clear();
@@ -112,10 +119,7 @@ namespace ERParamUtils.UpateParam
                 return;
             }
 
-            if (line.StartsWith("#"))
-            {
-                return;
-            }
+
 
             string paramName = _customParamName == null ? _currentParamName : _customParamName;
 
@@ -134,11 +138,13 @@ namespace ERParamUtils.UpateParam
                     string fieldName = ss[0];
                     string value = ss[1];
 
-                    UpdateCommandItem item = new();
-                    item.ParamName = paramName;
-                    item.RowId = currentRowId;
-                    item.Key = fieldName;
-                    item.Value = value;
+                    UpdateCommandItem item = new()
+                    {
+                        ParamName = paramName,
+                        RowId = currentRowId,
+                        Key = fieldName,
+                        Value = value
+                    };
 
                     updateCommand.AddItem(item);
                 }

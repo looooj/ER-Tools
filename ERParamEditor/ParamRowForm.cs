@@ -111,11 +111,14 @@ namespace ERParamEditor
             foreach (var cell in cells)
             {
 
-                lines.Add(string.Format("{0},{1},{2},{3},{4}",
-                    cell.ColIndex, cell.DisplayName, cell.Key, cell.Value, cell.Comment));
+                lines.Add(string.Format("{0},{1},{2},{3},{4},{5}",
+                    cell.ColIndex, cell.DisplayName, cell.Key, cell.Value, 
+                    cell.GetValueType(),
+                    cell.Comment));
 
 
             }
+            
             File.WriteAllLines(fn, lines);
         }
 
@@ -130,8 +133,9 @@ namespace ERParamEditor
             {
                 object obj = dataGridViewRow.SelectedRows[i].DataBoundItem;
                 RowWrapper row = (RowWrapper)obj;
-                string fn = dir + @"\" + row.GetParam().Name + "-" + row.ID + "-" + row.Name + ".txt";
-
+                string fn = row.GetParam().Name + "-" + row.ID + "-" + row.Name + ".txt";
+                fn = PathNameUtils.ConvertName(fn);
+                fn = dir + @"\" + fn;
                 exportRow(row, fn);
 
             }
@@ -378,7 +382,10 @@ namespace ERParamEditor
 
             ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[0].DataBoundItem;
             var row = RowListManager.GetCurrentRow();
-            var refRows = ParamCellRefUtils.GetRowWrappers(row, cell);
+            var project = GlobalConfig.GetCurrentProject();
+            if (project == null)
+                return;
+            var refRows = ParamCellRefUtils.GetRowWrappers(project,row, cell);
             if (refRows.Count > 0)
             {
                 changeRows(1, refRows);

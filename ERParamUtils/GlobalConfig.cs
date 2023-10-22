@@ -48,7 +48,7 @@ namespace ERParamUtils
 
             BaseDir = config.GetString("BaseDir", BaseDir);
             AssetsDir = config.GetString("AssetsDir", AssetsDir);
-
+            Debug = (config.GetInt("Debug", 0) != 0);
         }
 
         public static void Save() { 

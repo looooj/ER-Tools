@@ -40,6 +40,9 @@ namespace ERParamUtils.UpateParam
          
             //1210 Exalted Flesh
             //20691 Arteria Leaf
+            //20651 Trina's Lily
+            //20652 Fulgurbloom
+            //20653 Miquella's Lily
             //1190 Silver - Pickled Fowl Foot
             //1200 Gold - Pickled Fowl Foot
             //190 Rune Arc
@@ -57,12 +60,15 @@ namespace ERParamUtils.UpateParam
             //8000 Stonesword Key
             //1290 Starlight Shards
             //10070 Lost Ashes of War        
-          
+            // 3350
+            // 20751
          */
         public static void AddDefault()
         {
 
-            AddSpec(99, new int[] {190, 1190, 1200, 1210, 1235, 1190, 20723, 20801 });
+            AddSpec(99, new int[] {190, 1190, 1200, 1210, 1235,
+                1190, 20723, 20801, 20691, 20651, 20652, 20653,20751,
+                3350 });
 
 
             AddSpec(20, new int[] { 8000, 10060, 1290 });

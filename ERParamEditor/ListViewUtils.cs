@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace ERParamEditor
 {
-    class ListViewUtils
+
+    public class ComboBoxUtils {
+
+        public static string? GetCurrentText(ComboBox comboBox) {
+
+            var item = comboBox.SelectedItem;
+            if (item != null)
+                return comboBox.GetItemText(item);
+            return null;
+        }
+    }
+
+    public class ListViewUtils
     {
         static public void AddItem(ListView lv, params object[] args)
         {

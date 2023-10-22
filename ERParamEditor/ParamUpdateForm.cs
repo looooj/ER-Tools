@@ -35,6 +35,7 @@ namespace ERParamEditor
             updateParamTasks.Add(new RemoveWeightTask());
             updateParamTasks.Add(new BuddyTask());            
             updateParamTasks.Add(new LotParamTask());
+            updateParamTasks.Add(new SpecShopParamTask());
             updateParamTasks.Add(new CharInitParamTask());
             updateParamTasks.Add(new SpEffectParamTask());
             updateParamTasks.Add(new UpdateRowParamTask());

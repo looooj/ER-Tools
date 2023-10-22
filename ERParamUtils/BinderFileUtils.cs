@@ -116,7 +116,14 @@ namespace ERParamUtils
                 File.WriteAllBytes(outPath, bytes);
                 progress.Report((float)i / bnd.Files.Count);
 
-                ProcFMGFile(false, outPath);
+                if ( outPath.EndsWith(".fmg"))
+                     ProcFMGFile(false, outPath);
+
+                //unpack-files-text\m10_00_00_00_low.ivinfobnd\map\m10_00_00_00\tex\Envmap\low\IvInfo\m10_00_00_00_GIIV0000_00.ivInfo
+                if (outPath.EndsWith(".ivInfo")) {
+
+                    TryProcFile(outPath);
+                }
             }
             xw.WriteEndElement();
         }
@@ -137,6 +144,36 @@ namespace ERParamUtils
             return name;
         }
 
+        public static void TryProcFile(string path) {
+
+            //var f = SoulsFile.Read(path);
+            //SFUtil.GetDecompressedBR()
+
+            using (FileStream stream = File.OpenRead(path))
+            {
+                BinaryReaderEx br = new BinaryReaderEx(false, stream);
+                //TFormat file = new TFormat();
+                br = SFUtil.GetDecompressedBR(br, out DCX.Type compression);
+
+                var xws = new XmlWriterSettings();
+                xws.Indent = true;
+
+                var name = path + ".xml";
+                var xw = XmlWriter.Create(name, xws);
+                xw.WriteStartElement("try");
+                xw.WriteElementString("compression", compression.ToString());
+                xw.WriteElementString("varintSize", br.VarintSize.ToString());
+                xw.WriteElementString("varintLong", br.VarintLong.ToString());
+                xw.WriteEndElement();
+                xw.Close();
+
+                
+                //file.Compression = compression;
+                //file.Read(br);
+                //return file;
+            }
+
+        }
         public static void ProcFMGFile(bool bigEndian, string path) {
 
 

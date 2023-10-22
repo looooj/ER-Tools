@@ -23,7 +23,7 @@ namespace ERParamUtils
         GameType gameType = GameType.EldenRing;
 
         private Dictionary<string, FSParam.Param> _params = new() ;
-        private Dictionary<string, ParamWrapper> _paramWrappers = new();
+        //private Dictionary<string, ParamWrapper> _paramWrappers = new();
         private ulong _paramVersion;
 
         private Dictionary<string, PARAMDEF> _paramdefs = new();
@@ -116,15 +116,25 @@ namespace ERParamUtils
         public void LoadParams() {
 
             _params.Clear();
-            _paramWrappers.Clear();
+            //_paramWrappers.Clear();
 
             string path = GetRegulationPath();
+            string orgPath = GetOrginalRegulationPath();
+            string modPath = GetModRegulationPath();
 
             if (!File.Exists(path)) {
-                File.Copy(GetModRegulationPath(), path,true);
-                File.Copy(GetModRegulationPath(), GetOrginalRegulationPath(),true);
-                string timeId = DateTime.Now.ToString("_yyyyMMdd_HHmmss");
-                File.Copy(GetModRegulationPath(), GetOrginalRegulationPath()+timeId);
+
+                if (!File.Exists(orgPath))
+                {
+
+                    File.Copy(modPath, orgPath, true);
+                    string timeId = DateTime.Now.ToString("_yyyyMMdd_HHmmss");
+                    File.Copy(orgPath, orgPath + timeId);
+                    File.Copy(orgPath, path);
+                }
+                else {
+                    File.Copy(orgPath, path);
+                }
             }
 
             LoadParamdefs();
@@ -138,7 +148,7 @@ namespace ERParamUtils
         private void LoadParamFromBinder(IBinder parambnd, out ulong version, bool checkVersion = false) //, ref Dictionary<string, FSParam.Param> paramBank, out ulong version, bool checkVersion = false)
         {
             _params.Clear();
-            _paramWrappers.Clear();
+            //_paramWrappers.Clear();
 
             bool success = ulong.TryParse(parambnd.Version, out version);
             if (checkVersion && !success)
@@ -213,7 +223,7 @@ namespace ERParamUtils
                     p.ApplyParamdef(def);
                     paramBank.Add(paramName, p);
 
-                    _paramWrappers.Add(paramName,new ParamWrapper(paramName, p));
+                    //_paramWrappers.Add(paramName,new ParamWrapper(paramName, p));
                 }
                 catch (Exception)
                 {
@@ -263,18 +273,23 @@ namespace ERParamUtils
             return null;
         }
 
-        public List<string> GetParamList() {
+        public List<string> GetParamNameList(bool filter) {
 
             List<string> paramList = new();
 
-            foreach(var k in _paramWrappers.Keys) {
+            foreach(var k in _params.Keys) {
 
-                if (ParamFilter.IncludesParam(k)) {
+                if (ParamFilter.IncludesParam(k) || !filter) {
                     paramList.Add(k);
                 }
             }
 
             return paramList;
+        }
+
+        public Dictionary<string,FSParam.Param> GetParamDict() {
+
+            return _params;
         }
         
 

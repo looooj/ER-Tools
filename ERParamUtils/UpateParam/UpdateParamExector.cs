@@ -39,7 +39,21 @@ namespace ERParamUtils.UpateParam
             UpdateName = Description;
             UpdateShopLineupParam.ExecDefaultUpdate(project);
         }
+    }
 
+    public class SpecShopParamTask : UpdateParamTask
+    {
+        public SpecShopParamTask()
+        {
+            OrderNo = 0;
+            Description = "Exec shop-spec.txt";
+        }
+
+        public override void Exec(ParamProject project, UpdateCommand updateCommand)
+        {
+            UpdateName = Description;
+            UpdateShopLineupParam.ExecSpec(project,updateCommand);
+        }
     }
 
     public class DefaultMapLotParamTask : UpdateParamTask
@@ -70,7 +84,7 @@ namespace ERParamUtils.UpateParam
         {
 
             UpdateName = Description;
-            UpdateRequire.Exec(project);
+            ParamUpdateRequire.Exec(project);
 
         }
     }
@@ -80,7 +94,7 @@ namespace ERParamUtils.UpateParam
         public RemoveWeightTask()
         {
             OrderNo = 0;
-            Description = "Set Weapon, Protector weight => 1";
+            Description = "Set Weapon, Protector weight = 1, price=10";
         }
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
@@ -88,7 +102,7 @@ namespace ERParamUtils.UpateParam
 
             UpdateName = Description;
 
-            RemoveWeight.Exec(project);
+            ParamRemoveWeight.Exec(project);
 
         }
     }

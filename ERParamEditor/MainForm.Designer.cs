@@ -42,11 +42,12 @@
             statusInfo = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             panelBottom = new Panel();
+            buttonFind = new Button();
             buttonRestore = new Button();
             buttonTest = new Button();
             buttonExec = new Button();
             errorProvider1 = new ErrorProvider(components);
-            buttonFind = new Button();
+            buttonCompare = new Button();
             panel1.SuspendLayout();
             panelClient.SuspendLayout();
             panelParamList.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(buttonCompare);
             panel1.Controls.Add(buttonOpen);
             panel1.Controls.Add(buttonCreate);
             panel1.Dock = DockStyle.Top;
@@ -68,7 +70,7 @@
             // 
             // buttonOpen
             // 
-            buttonOpen.Location = new Point(105, 12);
+            buttonOpen.Location = new Point(109, 12);
             buttonOpen.Name = "buttonOpen";
             buttonOpen.Size = new Size(75, 23);
             buttonOpen.TabIndex = 1;
@@ -182,6 +184,16 @@
             panelBottom.Size = new Size(1008, 45);
             panelBottom.TabIndex = 12;
             // 
+            // buttonFind
+            // 
+            buttonFind.Location = new Point(219, 12);
+            buttonFind.Name = "buttonFind";
+            buttonFind.Size = new Size(75, 23);
+            buttonFind.TabIndex = 4;
+            buttonFind.Text = "Find";
+            buttonFind.UseVisualStyleBackColor = true;
+            buttonFind.Click += buttonFind_Click;
+            // 
             // buttonRestore
             // 
             buttonRestore.Location = new Point(123, 12);
@@ -194,7 +206,7 @@
             // 
             // buttonTest
             // 
-            buttonTest.Location = new Point(326, 12);
+            buttonTest.Location = new Point(870, 13);
             buttonTest.Name = "buttonTest";
             buttonTest.Size = new Size(75, 23);
             buttonTest.TabIndex = 2;
@@ -217,15 +229,15 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
-            // buttonFind
+            // buttonCompare
             // 
-            buttonFind.Location = new Point(219, 12);
-            buttonFind.Name = "buttonFind";
-            buttonFind.Size = new Size(75, 23);
-            buttonFind.TabIndex = 4;
-            buttonFind.Text = "Find";
-            buttonFind.UseVisualStyleBackColor = true;
-            buttonFind.Click += buttonFind_Click;
+            buttonCompare.Location = new Point(206, 12);
+            buttonCompare.Name = "buttonCompare";
+            buttonCompare.Size = new Size(75, 23);
+            buttonCompare.TabIndex = 2;
+            buttonCompare.Text = "Compare";
+            buttonCompare.UseVisualStyleBackColor = true;
+            buttonCompare.Click += buttonCompare_Click;
             // 
             // MainForm
             // 
@@ -272,5 +284,6 @@
         private ErrorProvider errorProvider1;
         private Button buttonRestore;
         private Button buttonFind;
+        private Button buttonCompare;
     }
 }

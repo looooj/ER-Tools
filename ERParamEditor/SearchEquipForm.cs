@@ -40,7 +40,10 @@ namespace ERParamEditor
             options.Name = textBoxName.Text.Trim();
 
             List<FindEquipLocation> result = new();
-            FindEquipUtils.Find(options, result);
+            ParamProject? project = GlobalConfig.GetCurrentProject();
+            if (project == null)
+                return;
+            FindEquipUtils.Find(project,options, result);
 
             if (result.Count < 1)
             {

@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static SoulsFormats.FFXDLSE;
 
 namespace ERParamUtils
 {
     public class ParamProjectManager
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+
 
         public static bool CheckProject(string projectName)
         {
@@ -21,7 +25,8 @@ namespace ERParamUtils
 
         }
 
-        public static ParamProject? OpenProject(string projectName)
+
+        public static ParamProject? LoadProject(string projectName)
         {
             if (!CheckProject(projectName))
                 return null;
@@ -31,9 +36,38 @@ namespace ERParamUtils
             paramProject.LoadConfig();
             paramProject.LoadParams();
 
+            return paramProject;
+        }
+
+        public static ParamProject? OpenProject(string projectName)
+        {
+
+            ParamProject? paramProject = LoadProject(projectName);
+
+            if (paramProject == null)
+                return paramProject;
+
             GlobalConfig.SetCurrentProject(paramProject);
             SaveLastProject();
             return paramProject;
+        }
+
+        public static List<string> GetParamNames(string? projectName) {
+            var project = GlobalConfig.GetCurrentProject();
+            if (project != null ) {
+                return project.GetParamNameList(false);
+            }
+            if (projectName == null) {
+                var projectList = GetProjectList();
+                if (projectList.Count == 0)
+                    return new List<string>();
+                projectName = projectList[0];
+            }
+
+            project = LoadProject(projectName);
+            if ( project != null )
+                return project.GetParamNameList(false);
+            return new List<string>();
         }
 
         private static Regex projectNameRegex = new Regex("^[a-z]{3,}[0-9]?");
@@ -42,12 +76,13 @@ namespace ERParamUtils
 
             if (projectNameRegex.Match(name).Success)
             {
-                if (CheckProject(name)) {
+                if (CheckProject(name))
+                {
                     return "Project Exists!";
                 }
                 return null;
             }
-            
+
             return "Invalid Project Name, Only Include a-z,0-9 \nExamples abc, abc1, abcd ";
         }
 
@@ -101,7 +136,8 @@ namespace ERParamUtils
         {
 
             string fn = GlobalConfig.GetProjectsDir() + @"\lastproject.txt";
-            if (!File.Exists(fn)) {
+            if (!File.Exists(fn))
+            {
                 return "";
             }
             string lastProjectName = File.ReadAllText(fn);
@@ -120,6 +156,7 @@ namespace ERParamUtils
 
             File.WriteAllText(lastProjectName, project.GetName());
         }
+
 
     }
 }

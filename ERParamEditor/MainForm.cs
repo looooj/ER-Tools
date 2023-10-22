@@ -46,8 +46,8 @@ namespace ERParamEditor
 
             if (FirstShow)
             {
-                InitControls();
                 InitConfig();
+                InitControls();
 
                 await Task.Run(InitLoadTask);
 
@@ -153,8 +153,9 @@ namespace ERParamEditor
             ListViewUtils.AddItem(listViewProject, "RegulationPath", project.GetRegulationPath());
             ListViewUtils.AddItem(listViewProject, "ModRegulationPath", project.GetModRegulationPath());
 
-
-            foreach (var p in project.GetParamList())
+            bool nameFilter = true;
+            var paramList = project.GetParamNameList(nameFilter);
+            foreach (var p in paramList)
             {
 
                 ListViewUtils.AddItem(listViewParam, p);
@@ -255,8 +256,6 @@ namespace ERParamEditor
         {
             Tests.Run();
 
-            // buttonTest.Text = MultiLang.GetString("Test"); 
-
         }
 
         private void panelClient_Paint(object sender, PaintEventArgs e)
@@ -283,7 +282,7 @@ namespace ERParamEditor
 
             RowFilter[] rowFilers = { };
             RowBuilder[] rowBuilders = { new SpEffectSetParamRowBuilder() };
-            var rows = ParamRowUtils.ConvertToRowWrapper(param, rowFilers,rowBuilders);
+            var rows = ParamRowUtils.ConvertToRowWrapper(paramProject, param, rowFilers, rowBuilders);
             RowListManager.Add(0, rows);
             //var rowListItem = RowListManager.GetCurrent();
             //if (rowListItem == null)
@@ -313,6 +312,12 @@ namespace ERParamEditor
         private void buttonFind_Click(object sender, EventArgs e)
         {
             SearchEquipForm form = new();
+            form.ShowDialog();
+        }
+
+        private void buttonCompare_Click(object sender, EventArgs e)
+        {
+            CompareProjectForm form = new();
             form.ShowDialog();
         }
     }

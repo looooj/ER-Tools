@@ -24,7 +24,7 @@ namespace ERParamUtils
     public interface IFindEquipHandler
     {
 
-        void Find(FindEquipOptions findEquipOptions, List<FindEquipLocation> result);
+        void Find(ParamProject project, FindEquipOptions findEquipOptions, List<FindEquipLocation> result);
 
 
     }
@@ -37,10 +37,9 @@ namespace ERParamUtils
             parmName = name;
         } 
 
-        void IFindEquipHandler.Find(FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
+        void IFindEquipHandler.Find(ParamProject project,FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
         {
 
-            var project = GlobalConfig.GetCurrentProject();
             if (project == null)
                 return;
 
@@ -106,9 +105,8 @@ namespace ERParamUtils
 
     public class FindInShop : IFindEquipHandler
     {
-        public void Find(FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
+        public void Find(ParamProject project,FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
         {
-            var project = GlobalConfig.GetCurrentProject();
             if (project == null)
                 return;
 
@@ -144,7 +142,7 @@ namespace ERParamUtils
 
         static List<IFindEquipHandler> findHandlers = new();
 
-        public static void Find(FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
+        public static void Find(ParamProject project, FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
         {
             findHandlers.Add(new FindInLotMap());
             findHandlers.Add(new FindInLotEnemy());
@@ -152,7 +150,7 @@ namespace ERParamUtils
 
             for (int i = 0; i < findHandlers.Count; i++)
             {
-                findHandlers[i].Find(findEquipOptions, result);
+                findHandlers[i].Find(project,findEquipOptions, result);
             }
             foreach (var loc in result)
             {
