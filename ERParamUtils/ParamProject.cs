@@ -232,9 +232,8 @@ namespace ERParamUtils
                     }
                     p.Name = paramName;
                     p.ApplyParamdef(def);
+                    p.MakeCellIndex();
                     paramBank.Add(paramName, p);
-
-                    //_paramWrappers.Add(paramName,new ParamWrapper(paramName, p));
                 }
                 catch (Exception)
                 {

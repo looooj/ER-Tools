@@ -36,8 +36,30 @@ namespace SoulsParam
                 Row row = new();
                 row.Init(_param.Rows[i], this);
                 _rows.Add(row);
+                //if (i == 0)
+                //    MakeCellIndex(row);
             }
 
+        }
+        Dictionary<string, int> cellIndex = new();
+
+        public int GetCellIndex(string key) {
+            if (cellIndex.ContainsKey(key))
+                return cellIndex[key];
+            return -1;
+        }
+        public void MakeCellIndex() {
+            if (_rows.Count > 0)
+                MakeCellIndex(_rows[0]);
+        }
+        public void MakeCellIndex(Row row) {
+
+            cellIndex.Clear();
+            for (int i = 0; i < row.Cells.Count; i++)
+            {
+                var cell = row.Cells[i];
+                cellIndex.Add(cell.Def.InternalName, i);
+            }
         }
 
         public static Param Read(byte[] bytes)

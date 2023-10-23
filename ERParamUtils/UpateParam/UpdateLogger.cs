@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -129,6 +130,10 @@ namespace ERParamUtils.UpateParam
 
             GetLogger(currentParamName).Info("{0},{1} {2}={3}", row.ID, row.Name!=null? row.Name:"?", key, value);
 
+        }
+
+        public static void InfoRow(string format, params object[] args) {
+            GetLogger(currentParamName).Info(format, args);
         }
 
         public static void InfoUpdateCommandItem(UpdateCommandItem item) {

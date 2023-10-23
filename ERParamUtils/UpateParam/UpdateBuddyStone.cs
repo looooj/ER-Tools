@@ -11,13 +11,13 @@ namespace ERParamUtils.UpateParam
     {
 
 
-        public static void Exec(ParamProject paramProject)
+        public static void Exec(ParamProject paramProject,UpdateCommand updateCommand)
         {
-            ProcBuddyStone(paramProject);
-            ProcRemoveConsume(paramProject);
+            ProcBuddyStone(paramProject,updateCommand);
+            ProcRemoveConsume(paramProject,updateCommand);
         }
 
-        public static void ProcRemoveConsume(ParamProject? paramProject) {
+        public static void ProcRemoveConsume(ParamProject? paramProject, UpdateCommand updateCommand) {
 
             //200000 Black Knife Tiche
             //263010 Jarwight Puppet +10
@@ -29,14 +29,14 @@ namespace ERParamUtils.UpateParam
             if (paramProject == null)
                 return;
 
-            SoulsParam.Param param = paramProject.FindParam(ParamNames.EquipParamGoods);
+            SoulsParam.Param? param = paramProject.FindParam(ParamNames.EquipParamGoods);
 
             if (param == null)
             {
                 return;
             }
 
-            UpdateLogger.Info("UpdateBuddyStone ProcRemoveConsume");
+            UpdateLogger.InfoTime("UpdateBuddyStone ProcRemoveConsume");
 
             for (int i = 0; i < param.Rows.Count; i++)
             {
@@ -45,24 +45,24 @@ namespace ERParamUtils.UpateParam
                 if (row.ID < 200000 || row.ID > 300000)
                     continue;
 
-                ParamRowUtils.SetCellValue(row, "consumeMP", -1);
-                ParamRowUtils.SetCellValue(row, "consumeHP", -1);
+                updateCommand.AddItem(param, row, "consumeMP", "-1");
+                updateCommand.AddItem(param, row, "consumeHP", "-1");
             }
 
         }
-        public static void ProcBuddyStone(ParamProject? paramProject)
+        public static void ProcBuddyStone(ParamProject? paramProject,UpdateCommand updateCommand)
         {
 
             if (paramProject == null)
                 return;
 
-            SoulsParam.Param param = paramProject.FindParam(ParamNames.BuddyStoneParam);
+            SoulsParam.Param? param = paramProject.FindParam(ParamNames.BuddyStoneParam);
 
             if (param == null)
             {
                 return;
             }
-            UpdateLogger.Info("UpdateBuddyStone ProcBuddyStone");
+            UpdateLogger.InfoTime("UpdateBuddyStone ProcBuddyStone");
 
             for (int i = 0; i < param.Rows.Count; i++)
             {
@@ -70,18 +70,12 @@ namespace ERParamUtils.UpateParam
                 SoulsParam.Param.Row row = param.Rows[i];
                 if (row.ID < 2)
                     continue;
-                /*
-#new value BuddyStoneParam  10000100 Stormveil Castle eliminateTargetEntityId 10005100->0
-eliminateTargetEntityId;0
-#new value BuddyStoneParam  10000100 Stormveil Castle summonedEventFlagId 10002100->0
-summonedEventFlagId;0
-#new value BuddyStoneParam  10000100 Stormveil Castle activateRange 999->9999
-activateRange;9999
-#new value BuddyStoneParam  10000100 Stormveil Castle overwriteActivateRegionEntityId 10002150->0                 */
-                ParamRowUtils.SetCellValue(row, "eliminateTargetEntityId", 0);
-                ParamRowUtils.SetCellValue(row, "summonedEventFlagId", 0);
-                ParamRowUtils.SetCellValue(row, "activateRange", 9999);
-                ParamRowUtils.SetCellValue(row, "overwriteActivateRegionEntityId", 0);
+
+
+                updateCommand.AddItem(param, row, "eliminateTargetEntityId", "0");
+                updateCommand.AddItem(param, row, "summonedEventFlagId", "0");
+                updateCommand.AddItem(param, row, "activateRange", "9999");
+                updateCommand.AddItem(param, row, "overwriteActivateRegionEntityId", "0");
             }
         }
     }

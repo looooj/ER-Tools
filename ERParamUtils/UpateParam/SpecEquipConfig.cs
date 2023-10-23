@@ -62,11 +62,13 @@ namespace ERParamUtils.UpateParam
             //10070 Lost Ashes of War        
             // 3350
             // 20751
+            //15340
+            //15341
          */
         public static void AddDefault()
         {
 
-            AddSpec(99, new int[] {190, 1190, 1200, 1210, 1235,
+            AddSpec(99, new int[] {190, 1190, 1200, 1210, 1235,15341,15340,15430,
                 1190, 20723, 20801, 20691, 20651, 20652, 20653,20751,
                 3350 });
 

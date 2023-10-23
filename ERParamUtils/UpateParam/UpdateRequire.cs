@@ -9,14 +9,14 @@ namespace ERParamUtils.UpateParam
     public class ParamUpdateRequire
     {
 
-        public static void Exec(ParamProject paramProject) {
+        public static void Exec(ParamProject paramProject, UpdateCommand updateCommand) {
 
-            ProcWeapon(paramProject);
-            ProcMagic(paramProject);
+            ProcWeapon(paramProject,updateCommand);
+            ProcMagic(paramProject,updateCommand);
 
         }
 
-        public static void ProcWeapon(ParamProject? paramProject) {
+        public static void ProcWeapon(ParamProject? paramProject,UpdateCommand updateCommand) {
 
             if (paramProject == null)
                 return;
@@ -29,18 +29,29 @@ namespace ERParamUtils.UpateParam
 
             for (int i = 0; i < param.Rows.Count; i++) {
 
-                SoulsParam.Param.Row row = param.Rows[i];     
+                SoulsParam.Param.Row row = param.Rows[i];
 
-                ParamRowUtils.SetCellValue(row, "properStrength", 0);
-                ParamRowUtils.SetCellValue(row, "properAgility", 0);
-                ParamRowUtils.SetCellValue(row, "properMagic", 0);
-                ParamRowUtils.SetCellValue(row, "properFaith", 0);
+
+                string[] keys = { "properStrength", "properAgility",
+                    "properMagic", "properFaith","properLuck"};
+                foreach (var key in keys)
+                {
+                    UpdateCommandItem item = UpdateCommandItem.Create(param, row, key, "0"); 
+                    updateCommand.AddItem(item);
+                }
+
+                //ParamRowUtils.SetCellValue(row, "properStrength", 0);
+                //ParamRowUtils.SetCellValue(row, "properAgility", 0);
+                //ParamRowUtils.SetCellValue(row, "properMagic", 0);
+                //ParamRowUtils.SetCellValue(row, "properFaith", 0);
+                //ParamRowUtils.SetCellValue(row, "properLuck", 0);
+                //
             }
 
 
         }
 
-        public static void ProcMagic(ParamProject paramProject)
+        public static void ProcMagic(ParamProject paramProject, UpdateCommand updateCommand)
         {
             if (paramProject == null)
                 return;
@@ -58,9 +69,16 @@ namespace ERParamUtils.UpateParam
                 if (!SpecEquipConfig.IsMagic(row.ID)) {
                     continue;
                 }
+                string[] keys = { "requirementLuck", "requirementIntellect", "requirementFaith" };
+                foreach (var key in keys)
+                {
+                    UpdateCommandItem item = UpdateCommandItem.Create(param, row, key, "1");
+                    updateCommand.AddItem(item);
 
-                ParamRowUtils.SetCellValue(row, "requirementIntellect", 1);
-                ParamRowUtils.SetCellValue(row, "requirementFaith", 1);     
+                    //ParamRowUtils.SetCellValue(row, "requirementLuck", 1);
+                    //ParamRowUtils.SetCellValue(row, "requirementIntellect", 1);
+                    //ParamRowUtils.SetCellValue(row, "requirementFaith", 1);
+                }
             }
         }
 
@@ -70,25 +88,27 @@ namespace ERParamUtils.UpateParam
 
 
 
-        static void RemoveWeight(SoulsParam.Param? param) {
+        static void RemoveWeight(SoulsParam.Param? param, UpdateCommand updateCommand) {
 
             if (param == null)
             {
                 return;
             }
 
-            UpdateLogger.Info("RemoveWeight {0}",param.Name);
+            UpdateLogger.InfoTime("RemoveWeight {0}",param.Name);
 
             for (int i = 0; i < param.Rows.Count; i++)
             {
 
                 SoulsParam.Param.Row row = param.Rows[i];
-                ParamRowUtils.SetCellValue(row, "weight", 1);
-                ParamRowUtils.SetCellValue(row, "sellValue", 5);
+                UpdateCommandItem item = UpdateCommandItem.Create(param, row, "weight", "1");
+                updateCommand.AddItem(item);
+                //ParamRowUtils.SetCellValue(row, "weight", 1);
+                //ParamRowUtils.SetCellValue(row, "sellValue", 5);
             }
         }
 
-        public static void ProcProtector(ParamProject? paramProject)
+        public static void ProcProtector(ParamProject? paramProject, UpdateCommand updateCommand)
         {
 
             if (paramProject == null)
@@ -98,10 +118,10 @@ namespace ERParamUtils.UpateParam
 
             //UpdateLogger.Info("RemoveWeight ProcProtector");
 
-            RemoveWeight(param);
+            RemoveWeight(param,updateCommand);
         }
 
-        public static void ProcWeapon(ParamProject? paramProject)
+        public static void ProcWeapon(ParamProject? paramProject, UpdateCommand updateCommand)
         {
 
             if (paramProject == null)
@@ -110,14 +130,14 @@ namespace ERParamUtils.UpateParam
             SoulsParam.Param? param = paramProject.FindParam(ParamNames.EquipParamWeapon);
 
             //UpdateLogger.Info("RemoveWeight ProcWeapon");
-            RemoveWeight(param);
+            RemoveWeight(param,updateCommand);
 
         }
 
-        internal static void Exec(ParamProject project)
+        internal static void Exec(ParamProject project, UpdateCommand updateCommand)
         {
-            ProcWeapon(project);
-            ProcProtector(project);
+            ProcWeapon(project,updateCommand);
+            ProcProtector(project,updateCommand);
         }
     }
 

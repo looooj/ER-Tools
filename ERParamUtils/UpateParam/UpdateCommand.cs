@@ -44,6 +44,17 @@ namespace ERParamUtils.UpateParam
 
         }
 
+        public static UpdateCommandItem Create(SoulsParam.Param param, SoulsParam.Param.Row row,string key, string value) {
+
+            var item = new UpdateCommandItem
+            {
+                ParamName = param.Name,
+                RowId = row.ID,
+                Key = key,
+                Value = value
+            };
+            return item;
+        }
 
         public static void LoadUpdateItem(string updateName, UpdateCommand updateCommand)
         {
@@ -173,11 +184,38 @@ namespace ERParamUtils.UpateParam
         }
     }
 
+    class UpdateRowItemDict {
+
+        Dictionary<int, List<UpdateCommandItem>> _dict = new();
+
+        public void Add(UpdateCommandItem item) {
+
+            if (!_dict.TryGetValue(item.RowId, out List<UpdateCommandItem> items)) {
+                items = new();
+                _dict.Add(item.RowId, items);
+            }
+            items.Add(item);
+        }
+
+        public Dictionary<int, List<UpdateCommandItem>> GetDict() {
+            return _dict;
+        }
+
+
+        public int GetCount()
+        {
+            int count = 0;
+            foreach (var items in _dict.Values) {
+                count = count + items.Count;
+            }
+            return count;
+        }
+    }
 
     public class UpdateCommand
     {
 
-        private List<UpdateCommandItem> _items = new();
+        private Dictionary< string, UpdateRowItemDict > _itemDict = new();
         private ParamProject _paramProject;
 
 
@@ -189,54 +227,74 @@ namespace ERParamUtils.UpateParam
 
         public void AddItem(UpdateCommandItem item)
         {
-            _items.Add(item);
+            if (!_itemDict.TryGetValue(item.ParamName, out UpdateRowItemDict rowItemDict) ) {
+                rowItemDict = new();
+                _itemDict.Add(item.ParamName, rowItemDict);
+            }
+            rowItemDict.Add(item);
         }
 
+        public void AddItem(SoulsParam.Param param, SoulsParam.Param.Row row, string key, string value)
+        {
+            var item = UpdateCommandItem.Create(param, row, key, value);
+            AddItem(item);
+        }
+
+        /*
+                    if (item.RowName.Length > 1)
+                    {
+                        row.Name = item.RowName;
+                    }
+         
+         */
+
+        void Exec(SoulsParam.Param currentParam, UpdateRowItemDict rowDict) {
+
+            var dict = rowDict.GetDict();
+            for (int i = 0; i < currentParam.Rows.Count; i++) {
+                var row = currentParam.Rows[i];
+                if (dict.TryGetValue(row.ID, out List<UpdateCommandItem>? items)) {
+                    if (items != null) {
+
+                        foreach (var item in items) {
+
+                            int cellIndex = currentParam.GetCellIndex(item.Key);
+                            if (cellIndex < 0) {
+                                UpdateLogger.InfoRow("row {0} key {1} not found", row.ID, item.Key);
+                                continue;
+                            }
+                            row.Cells[cellIndex].SetValue(item.Value);
+                            UpdateLogger.InfoRow(row, item.Key, item.Value);
+
+                        }
+
+                    }
+                }
+            }            
+        }
 
         public void Exec(ParamProject project)
         {
             if (project == null)
                 return;
 
-            SoulsParam.Param? currentParam = null;
-            string currentParamName = "";
-
-            foreach (UpdateCommandItem item in _items)
+            UpdateLogger.InfoTime("===Begin");
+            foreach (var paramName in _itemDict.Keys)
             {
+                var rowDict = _itemDict[paramName];
 
-                if (item.ParamName != currentParamName)
-                {
-                    currentParam = project.FindParam(item.ParamName);
-                    if (currentParam != null)
-                    {
-                        currentParamName = item.ParamName;
-                        UpdateLogger.Begin(currentParamName);
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
+                SoulsParam.Param? currentParam = project.FindParam(paramName); ;
+                string currentParamName = paramName;
                 if (currentParam == null)
                     continue;
-
-                SoulsParam.Param.Row? row = ParamRowUtils.FindRow(currentParam, item.RowId);
-
-                if (row == null)
-                {
-                    continue;
-                }
-
-                if (item.RowName.Length > 1)
-                {
-                    row.Name = item.RowName;
-                }
-                ParamRowUtils.SetCellValue(row, item.Key, item.Value);
-
-                UpdateLogger.InfoRow(row, item.Key, item.Value);
+                currentParam.MakeCellIndex();
+                UpdateLogger.InfoTime("{0} {1}", currentParamName, rowDict.GetCount());
+                UpdateLogger.Begin(currentParamName);
+                Exec(currentParam, rowDict);
             }
+            _itemDict.Clear();
 
-            _items.Clear();
+            UpdateLogger.InfoTime("===End");
         }
 
 

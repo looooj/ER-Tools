@@ -171,33 +171,23 @@ namespace ERParamUtils
             if (col >= row.Cells.Count)
                 return;
 
-            SoulsParam.Param.Cell cell = row.Cells[col];
-
-            //cell.Value = ConvertValue(value, cell.Def.DisplayType);
+            SoulsParam.Param.Cell cell = row.Cells[col];             
             cell.SetValue(ConvertValue(value, cell.Def.DisplayType));
 
         }
 
         public static void SetCellValue(SoulsParam.Param.Row? row, string keyName, string value)
         {
-
-
             if (row == null)
             {
                 return;
             }
 
-            for (int i = 0; i < row.Cells.Count; i++)
-            {
+            var cell = FindCell(row, keyName);
+            if (cell == null)
+                return;
 
-                SoulsParam.Param.Cell cell = row.Cells[i];
-                if (cell.Def.InternalName == keyName)
-                {
-
-                    cell.SetValue(ConvertValue(value, cell.Def.DisplayType));
-                    return;
-                }
-            }
+            cell.SetValue(ConvertValue(value, cell.Def.DisplayType));
 
         }
 
@@ -217,13 +207,9 @@ namespace ERParamUtils
 
         public static SoulsParam.Param.Cell? FindCell(SoulsParam.Param.Row row, string key)
         {
-            for (int i = 0; i < row.Cells.Count; i++)
-            {
-                if (row.Cells[i].Def.InternalName == key)
-                {
-                    return row.Cells[i];
-                }
-            }
+            int cellIndex = row.GetParam().GetCellIndex(key);
+            if (cellIndex >= 0)
+                return row.Cells[cellIndex];
             return null;
         }
 
@@ -256,14 +242,10 @@ namespace ERParamUtils
 
         public static int GetCellInt(SoulsParam.Param.Row row, string key, int defVal)
         {
-            for (int i = 0; i < row.Cells.Count; i++)
-            {
-                if (row.Cells[i].Def.InternalName == key)
-                {
-                    return GetCellInt(row, i, defVal);
-                }
-            }
-            return defVal;
+            int cellIndex = row.GetParam().GetCellIndex(key);
+            if (cellIndex < 0)
+                return defVal;
+            return GetCellInt(row, cellIndex, defVal);
         }
 
         public static string GetCellString(SoulsParam.Param.Row row, int col, string defVal)
@@ -282,14 +264,10 @@ namespace ERParamUtils
 
         public static string GetCellString(SoulsParam.Param.Row row, string key, string defVal)
         {
-            for (int i = 0; i < row.Cells.Count; i++)
-            {
-                if (row.Cells[i].Def.InternalName == key)
-                {
-                    return GetCellString(row, i, defVal);
-                }
-            }
-            return defVal;
+            int cellIndex = row.GetParam().GetCellIndex(key);
+            if (cellIndex < 0)
+                return defVal;
+            return GetCellString(row, cellIndex, defVal);
         }
 
 

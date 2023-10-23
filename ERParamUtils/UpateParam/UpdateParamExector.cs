@@ -31,13 +31,13 @@ namespace ERParamUtils.UpateParam
         public DefaultShopParamTask()
         {
             OrderNo = 0;
-            Description = "UpdateShopParam: Change Stone Glovewort Price; Change A Visible; Change Sell Amount(Rune Arc,...) ";
+            Description = "UpdateShopParam: Change Stone Glovewort Price; Change All Visible; Change Sell Amount(Rune Arc,...) ";
         }
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
             UpdateName = Description;
-            UpdateShopLineupParam.ExecDefaultUpdate(project);
+            UpdateShopLineupParam.ExecDefaultUpdate(project,updateCommand);
         }
     }
 
@@ -84,7 +84,7 @@ namespace ERParamUtils.UpateParam
         {
 
             UpdateName = Description;
-            ParamUpdateRequire.Exec(project);
+            ParamUpdateRequire.Exec(project,updateCommand);
 
         }
     }
@@ -94,7 +94,7 @@ namespace ERParamUtils.UpateParam
         public RemoveWeightTask()
         {
             OrderNo = 0;
-            Description = "Set Weapon, Protector weight = 1, price=10";
+            Description = "Set Weapon, Protector weight = 1";
         }
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
@@ -102,7 +102,7 @@ namespace ERParamUtils.UpateParam
 
             UpdateName = Description;
 
-            ParamRemoveWeight.Exec(project);
+            ParamRemoveWeight.Exec(project,updateCommand);
 
         }
     }
@@ -121,7 +121,7 @@ namespace ERParamUtils.UpateParam
         {
             UpdateName = Description;
 
-            UpdateBuddyStone.Exec(project);
+            UpdateBuddyStone.Exec(project,updateCommand);
 
         }
     }
@@ -248,7 +248,7 @@ namespace ERParamUtils.UpateParam
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
-            UpdateSmithingStone.Proc(project);
+            UpdateSmithingStone.Proc(project,updateCommand);
         }
     }
 

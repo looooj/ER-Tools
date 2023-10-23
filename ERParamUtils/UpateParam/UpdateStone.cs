@@ -9,7 +9,8 @@ namespace ERParamUtils.UpateParam
     public class UpdateSmithingStone
     {
 
-        public static void Proc(ParamProject? paramProject) {
+        public static void Proc(ParamProject? paramProject, UpdateCommand updateCommand)
+        {
 
             if (paramProject == null)
                 return;
@@ -21,11 +22,13 @@ namespace ERParamUtils.UpateParam
                 return;
             }
 
-            for (int i = 1; i <= 24; i++) {
-               var  row = ParamRowUtils.FindRow(param, i);
+            for (int i = 1; i <= 24; i++)
+            {
+                var row = ParamRowUtils.FindRow(param, i);
                 if (row == null)
                     continue;
-                ParamRowUtils.SetCellValue(row, "itemNum01", 1);
+
+                updateCommand.AddItem(param, row, "itemNum01", "1");
             }
         }
 
