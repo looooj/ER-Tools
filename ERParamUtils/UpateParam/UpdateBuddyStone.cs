@@ -29,7 +29,7 @@ namespace ERParamUtils.UpateParam
             if (paramProject == null)
                 return;
 
-            FSParam.Param param = paramProject.FindParam(ParamNames.EquipParamGoods);
+            SoulsParam.Param param = paramProject.FindParam(ParamNames.EquipParamGoods);
 
             if (param == null)
             {
@@ -41,7 +41,7 @@ namespace ERParamUtils.UpateParam
             for (int i = 0; i < param.Rows.Count; i++)
             {
 
-                FSParam.Param.Row row = param.Rows[i];
+                SoulsParam.Param.Row row = param.Rows[i];
                 if (row.ID < 200000 || row.ID > 300000)
                     continue;
 
@@ -56,7 +56,7 @@ namespace ERParamUtils.UpateParam
             if (paramProject == null)
                 return;
 
-            FSParam.Param param = paramProject.FindParam(ParamNames.BuddyStoneParam);
+            SoulsParam.Param param = paramProject.FindParam(ParamNames.BuddyStoneParam);
 
             if (param == null)
             {
@@ -67,7 +67,7 @@ namespace ERParamUtils.UpateParam
             for (int i = 0; i < param.Rows.Count; i++)
             {
 
-                FSParam.Param.Row row = param.Rows[i];
+                SoulsParam.Param.Row row = param.Rows[i];
                 if (row.ID < 2)
                     continue;
                 /*

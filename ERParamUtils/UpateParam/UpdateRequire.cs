@@ -21,7 +21,7 @@ namespace ERParamUtils.UpateParam
             if (paramProject == null)
                 return;
 
-            FSParam.Param? param = paramProject.FindParam(ParamNames.EquipParamWeapon);
+            SoulsParam.Param? param = paramProject.FindParam(ParamNames.EquipParamWeapon);
 
             if (param == null) {
                 return;
@@ -29,7 +29,7 @@ namespace ERParamUtils.UpateParam
 
             for (int i = 0; i < param.Rows.Count; i++) {
 
-                FSParam.Param.Row row = param.Rows[i];     
+                SoulsParam.Param.Row row = param.Rows[i];     
 
                 ParamRowUtils.SetCellValue(row, "properStrength", 0);
                 ParamRowUtils.SetCellValue(row, "properAgility", 0);
@@ -45,7 +45,7 @@ namespace ERParamUtils.UpateParam
             if (paramProject == null)
                 return;
 
-            FSParam.Param? param = paramProject.FindParam(ParamNames.EquipParamWeapon);
+            SoulsParam.Param? param = paramProject.FindParam(ParamNames.EquipParamWeapon);
 
             if (param == null)
             {
@@ -54,7 +54,7 @@ namespace ERParamUtils.UpateParam
 
             for (int i = 0; i < param.Rows.Count; i++)
             {
-                FSParam.Param.Row row = param.Rows[i];
+                SoulsParam.Param.Row row = param.Rows[i];
 
                 ParamRowUtils.SetCellValue(row, "requirementIntellect", 0);
                 ParamRowUtils.SetCellValue(row, "requirementFaith", 0);     
@@ -67,19 +67,19 @@ namespace ERParamUtils.UpateParam
 
 
 
-        static void RemoveWeight(FSParam.Param? param) {
+        static void RemoveWeight(SoulsParam.Param? param) {
 
             if (param == null)
             {
                 return;
             }
 
-            UpdateLogger.Info("RemoveWeight ProcProtector");
+            UpdateLogger.Info("RemoveWeight {0}",param.Name);
 
             for (int i = 0; i < param.Rows.Count; i++)
             {
 
-                FSParam.Param.Row row = param.Rows[i];
+                SoulsParam.Param.Row row = param.Rows[i];
                 ParamRowUtils.SetCellValue(row, "weight", 1);
                 ParamRowUtils.SetCellValue(row, "sellValue", 5);
             }
@@ -91,9 +91,9 @@ namespace ERParamUtils.UpateParam
             if (paramProject == null)
                 return;
 
-            FSParam.Param? param = paramProject.FindParam(ParamNames.EquipParamProtector);
+            SoulsParam.Param? param = paramProject.FindParam(ParamNames.EquipParamProtector);
 
-            UpdateLogger.Info("RemoveWeight ProcProtector");
+            //UpdateLogger.Info("RemoveWeight ProcProtector");
 
             RemoveWeight(param);
         }
@@ -104,9 +104,9 @@ namespace ERParamUtils.UpateParam
             if (paramProject == null)
                 return;
 
-            FSParam.Param? param = paramProject.FindParam(ParamNames.EquipParamWeapon);
+            SoulsParam.Param? param = paramProject.FindParam(ParamNames.EquipParamWeapon);
 
-            UpdateLogger.Info("RemoveWeight ProcWeapon");
+            //UpdateLogger.Info("RemoveWeight ProcWeapon");
             RemoveWeight(param);
 
         }

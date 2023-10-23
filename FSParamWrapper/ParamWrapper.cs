@@ -1,12 +1,9 @@
-﻿using SoulsFormats;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Org.BouncyCastle.Cms;
+using SoulsFormats;
+
 namespace SoulsParam
 {
-    public class Param
+    public class Param 
     {
 
         private PARAM _param;
@@ -14,7 +11,7 @@ namespace SoulsParam
         public string Name { get; set; }
         public List<Row> _rows = new();
         public bool Changed = false;
-
+        
 
         public bool CheckParamdef(PARAMDEF def)
         {
@@ -26,15 +23,14 @@ namespace SoulsParam
             _param.ApplyParamdef(def);
         }
 
-        protected void Init()
-        {
+        protected void Init() {
 
-            ParamType = _param.ParamType;
+            ParamType = _param.ParamType;            
             _rows.Clear();
             for (int i = 0; i < _param.Rows.Count; i++)
             {
                 Row row = new();
-                row.Init(_param.Rows[i], this);
+                row.Init(_param.Rows[i],this);
                 _rows.Add(row);
             }
 
@@ -47,8 +43,8 @@ namespace SoulsParam
             p._param = _param;
 
             p.Init();
-
-            return p;
+        
+            return p;         
         }
 
         public byte[] Write()
@@ -60,11 +56,10 @@ namespace SoulsParam
         {
             private SoulsFormats.PARAM.Row _row;
             private Param _parent;
-            public string Name { get => _row.Name; set => _row.Name = value; }
+            public string Name  { get => _row.Name; set => _row.Name = value; }
             public int ID { get => _row.ID; }
 
-            public void Init(SoulsFormats.PARAM.Row row, Param param)
-            {
+            public void Init(SoulsFormats.PARAM.Row row, Param param) {
                 _row = row;
                 _parent = param;
             }
@@ -84,8 +79,7 @@ namespace SoulsParam
                 }
             }
 
-            public Param GetParam()
-            {
+            public Param GetParam() {
                 return _parent;
             }
 
@@ -100,14 +94,12 @@ namespace SoulsParam
             public object Value { get => _cell.Value; } // set => _cell.Value = value; }
             public PARAMDEF.Field Def => _cell.Def;
 
-            public Cell(Row row, SoulsFormats.PARAM.Cell cell)
-            {
+            public Cell(Row row, SoulsFormats.PARAM.Cell cell) {
                 _cell = cell;
                 _row = row;
             }
 
-            public void SetValue(object v)
-            {
+            public void SetValue(object v) {
 
                 _cell.Value = v;
                 _row.GetParam().Changed = true;

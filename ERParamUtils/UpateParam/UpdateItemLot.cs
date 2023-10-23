@@ -256,11 +256,14 @@ namespace ERParamUtils.UpateParam
 
     }
 
+    //
+    // change lot count only
+    //
     public class DefautItemLot
     {
 
 
-        private static void SetDefaultLotMap(string paramName,FSParam.Param.Row row, UpdateCommand updateCommand)
+        private static void SetDefaultLot(string paramName,SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
 
             for (int i = 1; i < 8; i++)
@@ -275,19 +278,19 @@ namespace ERParamUtils.UpateParam
                 }
                 key = "lotItemCategory0" + i;
                 int itemType = ParamRowUtils.GetCellInt(row, key, 0);
-                key = "lotItemNum01" + i;
+                key = "lotItemNum0" + i;
                 int itemCount = ParamRowUtils.GetCellInt(row, key, 0);
 
 
-                SetItemLotCount(itemId, itemType, itemCount, paramName, row, updateCommand);
+                SetItemLotCount(itemId, itemType, itemCount, i, paramName, row, updateCommand);
 
             }
 
             
         }
 
-        private static void SetItemLotCount(int itemId, int itemType, int itemCount,
-            string paramName, FSParam.Param.Row row, UpdateCommand updateCommand) {
+        private static void SetItemLotCount(int itemId, int itemType, int itemCount, int itemIndex,
+            string paramName, SoulsParam.Param.Row row, UpdateCommand updateCommand) {
 
             int newItemCount = 20;
             if (itemType != 1 && !SpecEquipConfig.IsArrow(itemId))
@@ -303,6 +306,8 @@ namespace ERParamUtils.UpateParam
                 || (specLotCount > 0)
                 || SpecEquipConfig.IsRemnant(itemId)
                 || SpecEquipConfig.IsArrow(itemId)
+                || SpecEquipConfig.IsBoluses(itemId)
+                || SpecEquipConfig.IsAromatic(itemId)
                 ))
             {
                 return;
@@ -312,7 +317,10 @@ namespace ERParamUtils.UpateParam
             {
                 newItemCount = 5;
             }
-            if (SpecEquipConfig.IsArrow(itemId))
+            if (SpecEquipConfig.IsArrow(itemId) 
+                || SpecEquipConfig.IsBoluses(itemId)
+                || SpecEquipConfig.IsAromatic(itemId)
+                )
             {
                 newItemCount = 99;
             }
@@ -330,14 +338,14 @@ namespace ERParamUtils.UpateParam
             item.ParamName = paramName;
             item.RowId = row.ID;
             item.Value = newItemCount + "";
-            item.Key = "lotItemNum01";
+            item.Key = "lotItemNum0"+itemIndex;
 
             updateCommand.AddItem(item);
 
         }
 
 
-        public static void SetDefaultLotMap(ParamProject project, UpdateCommand updateCommand)
+        public static void SetDefaultLot(ParamProject project, UpdateCommand updateCommand)
         {
             string[] paramNames = { ParamNames.ItemLotParamMap, ParamNames.ItemLotParamEnemy };
             foreach (string paramName in paramNames)
@@ -350,7 +358,7 @@ namespace ERParamUtils.UpateParam
 
                 foreach (var row in param.Rows)
                 {
-                    SetDefaultLotMap(paramName, row, updateCommand);
+                    SetDefaultLot(paramName, row, updateCommand);
                 }
             }
         }

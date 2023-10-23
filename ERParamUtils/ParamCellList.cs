@@ -1,4 +1,4 @@
-﻿using FSParam;
+﻿using SoulsParam;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,14 +18,14 @@ namespace ERParamUtils
         public string? ValueType { get => GetValueType(); }
         public string? Comment { get; set; }
 
-        private FSParam.Param.Cell _cell;
+        private SoulsParam.Param.Cell _cell;
 
-        public FSParam.Param.Cell GetCell()
+        public SoulsParam.Param.Cell GetCell()
         {
             return _cell;
         }
 
-        public void SetCell(FSParam.Param.Cell cell)
+        public void SetCell(SoulsParam.Param.Cell cell)
         {
             _cell = cell;
         }
@@ -48,8 +48,8 @@ namespace ERParamUtils
     public interface IParamCellItemProc
     {
 
-        bool Proc(FSParam.Param param, FSParam.Param.Row row, ParamCellItem item);
-        List<ParamCellItem> End(FSParam.Param param, FSParam.Param.Row row, List<ParamCellItem> items);
+        bool Proc(SoulsParam.Param param, SoulsParam.Param.Row row, ParamCellItem item);
+        List<ParamCellItem> End(SoulsParam.Param param, SoulsParam.Param.Row row, List<ParamCellItem> items);
     }
 
 
@@ -58,7 +58,7 @@ namespace ERParamUtils
     {
 
 
-        public static List<ParamCellItem> Build(FSParam.Param param, FSParam.Param.Row? row)
+        public static List<ParamCellItem> Build(SoulsParam.Param param, SoulsParam.Param.Row? row)
         {
             List<ParamCellItem> items = new();
             if (row != null)
@@ -68,7 +68,7 @@ namespace ERParamUtils
                 for (int i = 0; i < row.Cells.Count; i++)
                 {
 
-                    FSParam.Param.Cell cell = row.Cells[i];
+                    SoulsParam.Param.Cell cell = row.Cells[i];
                     ParamCellItem item = new ParamCellItem();
                     item.SetCell(cell);
                     item.ColIndex = i;
@@ -106,10 +106,10 @@ namespace ERParamUtils
 
 
 
-        public static List<ParamCellItem> Build(FSParam.Param param, int rowId)
+        public static List<ParamCellItem> Build(SoulsParam.Param param, int rowId)
         {
 
-            FSParam.Param.Row? row = ParamRowUtils.FindRow(param, rowId);
+            SoulsParam.Param.Row? row = ParamRowUtils.FindRow(param, rowId);
             return Build(param, row);
         }
     }
@@ -123,13 +123,13 @@ namespace ERParamUtils
 
     class ShopLineParamCellProc : IParamCellItemProc
     {
-        public List<ParamCellItem> End(Param param, Param.Row row, List<ParamCellItem> items)
+        public List<ParamCellItem> End(SoulsParam.Param param, SoulsParam.Param.Row row, List<ParamCellItem> items)
         {
 
             return items;
         }
 
-        public bool Proc(FSParam.Param param, Param.Row row, ParamCellItem item)
+        public bool Proc(SoulsParam.Param param, SoulsParam.Param.Row row, ParamCellItem item)
         {
             if (param.Name != ParamNames.ShopLineupParam)
                 return true;
@@ -152,13 +152,13 @@ namespace ERParamUtils
 
     class LotParamCellProc : IParamCellItemProc
     {
-        public List<ParamCellItem> End(Param param, Param.Row row, List<ParamCellItem> items)
+        public List<ParamCellItem> End(SoulsParam.Param param, SoulsParam.Param.Row row, List<ParamCellItem> items)
         {
 
             return items;
         }
 
-        public bool Proc(Param param, Param.Row row, ParamCellItem item)
+        public bool Proc(SoulsParam.Param param, SoulsParam.Param.Row row, ParamCellItem item)
         {
 
             if ((param.Name != ParamNames.ItemLotParamEnemy && param.Name != ParamNames.ItemLotParamMap))

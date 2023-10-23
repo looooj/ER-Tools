@@ -61,7 +61,7 @@ namespace ERParamEditor
 
                 var item = result[i];
 
-                FSParam.Param param = project.FindParam(item.ParamName);
+                SoulsParam.Param param = project.FindParam(item.ParamName);
                 if (param == null)
                     continue;
                 var row = ParamRowUtils.FindRow(param, item.RowId);

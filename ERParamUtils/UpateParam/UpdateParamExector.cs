@@ -67,7 +67,7 @@ namespace ERParamUtils.UpateParam
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
             UpdateName = Description;
-            DefautItemLot.SetDefaultLotMap(project, updateCommand);
+            DefautItemLot.SetDefaultLot(project, updateCommand);
         }
     }
 
@@ -264,8 +264,14 @@ namespace ERParamUtils.UpateParam
 
             UpdateLogger.SetDir(project.GetUpdateDir() + @"/logs");
 
+
+            UpdateLogger.InfoTime("");
+            UpdateLogger.InfoTime("===Begin");
+
+
             if (options.Restore)
             {
+                UpdateLogger.InfoTime("===Restore");
                 project.Restore();
             }
 
@@ -289,11 +295,13 @@ namespace ERParamUtils.UpateParam
 
             if (options.Publish)
             {
+                UpdateLogger.InfoTime("===Publish");
 
                 project.Publish();
             }
 
             UpdateLogger.Save();
+            UpdateLogger.InfoTime("===End");
         }
     }
 }

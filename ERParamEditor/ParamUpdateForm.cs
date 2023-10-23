@@ -30,13 +30,18 @@ namespace ERParamEditor
             checkBoxSelectAll.Checked = true;
 
             updateParamTasks.Add(new DefaultShopParamTask());
+            updateParamTasks.Add(new SpecShopParamTask());
+
+
             updateParamTasks.Add(new DefaultMapLotParamTask());
+            updateParamTasks.Add(new LotParamTask());
+
             updateParamTasks.Add(new RemoveRequireTask());
             updateParamTasks.Add(new RemoveWeightTask());
             updateParamTasks.Add(new BuddyTask());
             updateParamTasks.Add(new SmithingStoneTask());
-            updateParamTasks.Add(new LotParamTask());
-            updateParamTasks.Add(new SpecShopParamTask());
+
+
             updateParamTasks.Add(new CharInitParamTask());
             updateParamTasks.Add(new SpEffectParamTask());
             updateParamTasks.Add(new UpdateRowParamTask());

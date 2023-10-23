@@ -6,10 +6,27 @@ using System.Threading.Tasks;
 
 namespace ERParamUtils
 {
-    public class ParamFilter
+    public class ParamNameFilter
     {
 
         static string[] includeParamNames = new string[] {
+             "ItemLotParam_enemy",
+             "ItemLotParam_map",
+             "SpEffectParam",
+             "ShopLineupParam",
+             "BuddyParam",
+             "BuddyStoneParam",
+             "EquipParamWeapon",
+             "EquipParamAccessory",
+             "EquipParamGem",
+             "EquipParamGoods",
+             "EquipParamProtector",
+             "Magic",
+             "CharaInitParam"
+
+        };
+
+        static string[] includeParamNames1 = new string[] {
              "ItemLotParam_enemy",
              "ItemLotParam_map",
              "SpEffectParam",

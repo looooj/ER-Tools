@@ -14,7 +14,7 @@ namespace ERParamUtils.UpateParam
             if (paramProject == null)
                 return;
 
-            FSParam.Param? param = paramProject.FindParam(ParamNames.EquipMtrlSetParam);
+            SoulsParam.Param? param = paramProject.FindParam(ParamNames.EquipMtrlSetParam);
 
             if (param == null)
             {

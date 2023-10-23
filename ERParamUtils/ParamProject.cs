@@ -18,11 +18,11 @@ namespace ERParamUtils
         string Name ="";
         string ModRegulationPath="";
         string CreateTime="";
-     
-        IBinder? currentBinder=null;
+
+        BND4 currentBinder=null;
         GameType gameType = GameType.EldenRing;
 
-        private Dictionary<string, FSParam.Param> _params = new() ;
+        private Dictionary<string, SoulsParam.Param> _params = new() ;
         //private Dictionary<string, ParamWrapper> _paramWrappers = new();
         private ulong _paramVersion;
 
@@ -155,7 +155,7 @@ namespace ERParamUtils
             {
                 throw new Exception($@"Failed to get regulation version. Params might be corrupt.");
             }
-            Dictionary<string, FSParam.Param> paramBank = _params;
+            Dictionary<string, SoulsParam.Param> paramBank = _params;
 
             List<string> paramNames = new();
             foreach (var f in parambnd.Files)
@@ -168,7 +168,15 @@ namespace ERParamUtils
                 }
 
                 string paramName = Path.GetFileNameWithoutExtension(f.Name);
+
+
                 paramNames.Add(paramName);
+
+                if (!ParamNameFilter.IncludesParam(paramName))
+                {
+                    continue;
+                }
+
                 if (paramBank.ContainsKey(paramName))
                 {
                     continue;
@@ -180,7 +188,8 @@ namespace ERParamUtils
                     continue;
                 }
 
-                FSParam.Param p = FSParam.Param.Read(f.Bytes);
+                SoulsParam.Param p = SoulsParam.Param.Read(f.Bytes);
+                p.Name = paramName;
                 if (!_paramdefs.ContainsKey(p.ParamType) && !_patchParamdefs.ContainsKey(p.ParamType))
                 {
                     continue;
@@ -188,13 +197,15 @@ namespace ERParamUtils
 
                 // Try to fixup Elden Ring ChrModelParam for ER 1.06 because many have been saving botched params and
                 // it's an easy fixup
+                // todo 
+                /*
                 if (gameType == GameType.EldenRing &&
                     p.ParamType == "CHR_MODEL_PARAM_ST" &&
                     _paramVersion == 10601000)
                 {
                     p.FixupERChrModelParam();
                 }
-
+                */
                 // Lookup the correct paramdef based on the version
                 PARAMDEF? def = null;
                 if (_patchParamdefs.ContainsKey(p.ParamType))
@@ -249,9 +260,9 @@ namespace ERParamUtils
                 if (names.Count < 1)
                     continue;
 
-                FSParam.Param param = _params[paramName];
+                SoulsParam.Param param = _params[paramName];
 
-                foreach (FSParam.Param.Row row in param.Rows)
+                foreach (SoulsParam.Param.Row row in param.Rows)
                 {
                     if (names.ContainsKey(row.ID) && (row.Name == null || row.Name == ""))
                     {
@@ -263,7 +274,7 @@ namespace ERParamUtils
         }
 
 
-        public FSParam.Param? FindParam(string paramName) {
+        public SoulsParam.Param? FindParam(string paramName) {
 
 
             if (_params.ContainsKey(paramName) ) { 
@@ -279,7 +290,7 @@ namespace ERParamUtils
 
             foreach(var k in _params.Keys) {
 
-                if (ParamFilter.IncludesParam(k) || !filter) {
+                if (ParamNameFilter.IncludesParam(k) || !filter) {
                     paramList.Add(k);
                 }
             }
@@ -287,7 +298,7 @@ namespace ERParamUtils
             return paramList;
         }
 
-        public Dictionary<string,FSParam.Param> GetParamDict() {
+        public Dictionary<string,SoulsParam.Param> GetParamDict() {
 
             return _params;
         }
@@ -304,12 +315,16 @@ namespace ERParamUtils
                 if (!_params.ContainsKey(paramName)) {
                     continue;
                 }
+                var p = _params[paramName];
+                if (!p.Changed)
+                    continue;
+                logger.Info("===save change {0}", paramName);
                 file.Bytes = _params[paramName].Write();
             }
 
             string savePath = GetRegulationPath();
 
-            logger.Info("===save {0} -> {1}", savePath);
+            logger.Info("===save {0}", savePath);
 
             SFUtil.EncryptERRegulation(savePath, currentBinder as BND4);
         }
@@ -324,6 +339,7 @@ namespace ERParamUtils
                 logger.Info("===restore {0} -> {1}", source, target);
 
                 File.Copy(source, target,true);
+                LoadParams();
             }
             
         }

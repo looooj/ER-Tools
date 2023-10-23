@@ -198,7 +198,7 @@ namespace ERParamUtils.UpateParam
             if (project == null)
                 return;
 
-            FSParam.Param? currentParam = null;
+            SoulsParam.Param? currentParam = null;
             string currentParamName = "";
 
             foreach (UpdateCommandItem item in _items)
@@ -220,7 +220,7 @@ namespace ERParamUtils.UpateParam
                 if (currentParam == null)
                     continue;
 
-                FSParam.Param.Row? row = ParamRowUtils.FindRow(currentParam, item.RowId);
+                SoulsParam.Param.Row? row = ParamRowUtils.FindRow(currentParam, item.RowId);
 
                 if (row == null)
                 {

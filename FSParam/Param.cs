@@ -4,7 +4,7 @@ using System.Security;
 using SoulsFormats;
 using StudioUtils;
 
-namespace FSParam
+namespace SoulsParam
 {
     /// <summary>
     /// An alternative to the SoulsFormats param class that's designed to be faster to read/write and be

@@ -16,10 +16,10 @@ namespace ERParamUtils
         private static string outputDir="";
         private static string outputName = "";
 
-        static Dictionary<int, FSParam.Param.Row> MakeRowDict(FSParam.Param param)
+        static Dictionary<int, SoulsParam.Param.Row> MakeRowDict(SoulsParam.Param param)
         {
 
-            Dictionary<int, FSParam.Param.Row> dict = new();
+            Dictionary<int, SoulsParam.Param.Row> dict = new();
             for (int rowIndex = 0; rowIndex < param.Rows.Count; rowIndex++)
             {
                 var row = param.Rows[rowIndex];
@@ -35,7 +35,7 @@ namespace ERParamUtils
             return dict;
         }
 
-        static void CompareParam(FSParam.Param param1, FSParam.Param param2, List<string> result)
+        static void CompareParam(SoulsParam.Param param1, SoulsParam.Param param2, List<string> result)
         {
             logger.Info("CompareParam {0}", param1.Name);
 
@@ -52,7 +52,7 @@ namespace ERParamUtils
                 bool firstCellFlag = true;
 
 
-                if (!rowDict1.TryGetValue(row2.ID, out FSParam.Param.Row? row1))
+                if (!rowDict1.TryGetValue(row2.ID, out SoulsParam.Param.Row? row1))
                 {
 
                     if (firstCellFlag) {

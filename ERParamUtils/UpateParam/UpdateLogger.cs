@@ -125,7 +125,7 @@ namespace ERParamUtils.UpateParam
         }
 
 
-        public static void InfoRow(FSParam.Param.Row row, string key, object value) {
+        public static void InfoRow(SoulsParam.Param.Row row, string key, object value) {
 
             GetLogger(currentParamName).Info("{0},{1} {2}={3}", row.ID, row.Name!=null? row.Name:"?", key, value);
 

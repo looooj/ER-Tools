@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SoulsFormats;
 using static SoulsFormats.PARAMDEF;
+using static SoulsFormats.PMDCL;
 
 namespace ERParamUtils
 {
@@ -16,24 +17,26 @@ namespace ERParamUtils
         public int ID { get => _row.ID; }
         public string Name { get => _name; }
 
-        public FSParam.Param GetParam() {
+        public SoulsParam.Param GetParam()
+        {
             return _param;
         }
-        public FSParam.Param.Row GetRow()
+        public SoulsParam.Param.Row GetRow()
         {
             return _row;
         }
-        private FSParam.Param.Row _row;
-        private FSParam.Param _param;
+        private SoulsParam.Param.Row _row;
+        private SoulsParam.Param _param;
         private string _name;
-        public RowWrapper(FSParam.Param.Row row, FSParam.Param param)
+        public RowWrapper(SoulsParam.Param.Row row, SoulsParam.Param param)
         {
             _row = row;
-            _name = row.Name == null ? "":row.Name;
+            _name = row.Name == null ? "" : row.Name;
             _param = param;
         }
 
-        public void SetName(string name) {
+        public void SetName(string name)
+        {
             _name = name;
         }
     }
@@ -42,8 +45,10 @@ namespace ERParamUtils
     {
 
 
-        public static object ConvertValue(string value, DefType defType) {
-            switch (defType) {
+        public static object ConvertValue(string value, DefType defType)
+        {
+            switch (defType)
+            {
                 case DefType.u8:
                     return byte.Parse(value);
                 case DefType.s8:
@@ -93,7 +98,8 @@ namespace ERParamUtils
                 case "fixstr":
                 case "fixstrW":
                     return value;
-                default: {
+                default:
+                    {
                         if (valueType.Length > 6)
                             return byte.Parse(value);
                         break;
@@ -102,7 +108,42 @@ namespace ERParamUtils
             return value;
         }
 
-        public static void SetCellValue(ParamProject paramProject,string paramName, int rowId, string keyName, int value) {
+
+
+
+        public static object GetCellValue(ParamProject paramProject, string paramName, int rowId, string key, object defVal)
+        {
+            var param = paramProject.FindParam(paramName);
+            if (param == null)
+                return defVal;
+            var row = FindRow(param, rowId);
+            if (row == null)
+                return defVal;
+            var cell = FindCell(row, key);
+            if (cell == null)
+                return defVal;
+            return cell.Value;
+        }
+
+        public static int GetCellInt(ParamProject paramProject, string paramName, int rowId, string key, int defVal)
+        {
+            var cell = FindCell(paramProject, paramName, rowId, key);
+            return GetCellInt(cell,defVal);
+        }
+
+
+        public static int GetCellInt(SoulsParam.Param.Cell? cell, int defVal) {
+            if (cell == null)
+                return defVal;
+            if (cell.Value != null)
+            {
+                return int.Parse(cell.Value.ToString());
+            }
+            return defVal;
+        }
+
+        public static void SetCellValue(ParamProject paramProject, string paramName, int rowId, string keyName, int value)
+        {
 
             var param = paramProject.FindParam(paramName);
             if (param == null)
@@ -113,12 +154,14 @@ namespace ERParamUtils
             SetCellValue(row, keyName, value);
         }
 
-        public static void SetCellValue(FSParam.Param.Row? row, string keyName, int value)
+
+
+        public static void SetCellValue(SoulsParam.Param.Row? row, string keyName, int value)
         {
             SetCellValue(row, keyName, "" + value);
         }
 
-        public static void SetCellValue(FSParam.Param.Row? row, int col, string value)
+        public static void SetCellValue(SoulsParam.Param.Row? row, int col, string value)
         {
 
             if (row == null)
@@ -128,14 +171,14 @@ namespace ERParamUtils
             if (col >= row.Cells.Count)
                 return;
 
-            FSParam.Param.Cell cell = row.Cells[col];
+            SoulsParam.Param.Cell cell = row.Cells[col];
 
-            cell.Value = ConvertValue(value, cell.Def.DisplayType);
-
+            //cell.Value = ConvertValue(value, cell.Def.DisplayType);
+            cell.SetValue(ConvertValue(value, cell.Def.DisplayType));
 
         }
 
-        public static void SetCellValue(FSParam.Param.Row? row, string keyName, string value)
+        public static void SetCellValue(SoulsParam.Param.Row? row, string keyName, string value)
         {
 
 
@@ -147,19 +190,44 @@ namespace ERParamUtils
             for (int i = 0; i < row.Cells.Count; i++)
             {
 
-                FSParam.Param.Cell cell = row.Cells[i];
+                SoulsParam.Param.Cell cell = row.Cells[i];
                 if (cell.Def.InternalName == keyName)
                 {
 
-                    cell.Value = ConvertValue(value, cell.Def.DisplayType);
+                    cell.SetValue(ConvertValue(value, cell.Def.DisplayType));
                     return;
                 }
             }
 
         }
 
+     
+        public static SoulsParam.Param.Cell? FindCell(ParamProject paramProject, string paramName, int rowId, string key)
+        {
+            var param = paramProject.FindParam(paramName);
+            if (param == null)
+                return null;
+            var row = FindRow(param, rowId);
+            if (row == null)
+                return null;
+            var cell = FindCell(row, key);
+            return cell;
+        }
 
-        public static FSParam.Param.Row? FindRow(FSParam.Param param, int rowId)
+
+        public static SoulsParam.Param.Cell? FindCell(SoulsParam.Param.Row row, string key)
+        {
+            for (int i = 0; i < row.Cells.Count; i++)
+            {
+                if (row.Cells[i].Def.InternalName == key)
+                {
+                    return row.Cells[i];
+                }
+            }
+            return null;
+        }
+
+        public static SoulsParam.Param.Row? FindRow(SoulsParam.Param param, int rowId)
         {
 
             for (int i = 0; i < param.Rows.Count; i++)
@@ -173,7 +241,7 @@ namespace ERParamUtils
         }
 
 
-        public static int GetCellInt(FSParam.Param.Row row, int col, int defVal)
+        public static int GetCellInt(SoulsParam.Param.Row row, int col, int defVal)
         {
 
             var v = row.Cells[col].Value;
@@ -186,7 +254,7 @@ namespace ERParamUtils
             return int.Parse(str);
         }
 
-        public static int GetCellInt(FSParam.Param.Row row, string key, int defVal)
+        public static int GetCellInt(SoulsParam.Param.Row row, string key, int defVal)
         {
             for (int i = 0; i < row.Cells.Count; i++)
             {
@@ -198,7 +266,7 @@ namespace ERParamUtils
             return defVal;
         }
 
-        public static string GetCellString(FSParam.Param.Row row, int col, string defVal)
+        public static string GetCellString(SoulsParam.Param.Row row, int col, string defVal)
         {
 
             var v = row.Cells[col].Value;
@@ -212,7 +280,7 @@ namespace ERParamUtils
             return str;
         }
 
-        public static string GetCellString(FSParam.Param.Row row, string key, string defVal)
+        public static string GetCellString(SoulsParam.Param.Row row, string key, string defVal)
         {
             for (int i = 0; i < row.Cells.Count; i++)
             {
@@ -225,14 +293,14 @@ namespace ERParamUtils
         }
 
 
-        public static List<RowWrapper> ConvertToRowWrapper(ParamProject project,FSParam.Param param, RowFilter[] filters,
+        public static List<RowWrapper> ConvertToRowWrapper(ParamProject project, SoulsParam.Param param, RowFilter[] filters,
             RowBuilder[] builders)
         {
 
             List<RowWrapper> rows = new();
             for (int i = 0; i < param.Rows.Count; i++)
             {
-                FSParam.Param.Row row = param.Rows[i];
+                SoulsParam.Param.Row row = param.Rows[i];
 
                 bool ok = true;
                 foreach (RowFilter filter in filters)
@@ -245,10 +313,10 @@ namespace ERParamUtils
                 }
                 if (!ok)
                     continue;
-                RowWrapper rowWrapper = new(row,param);
+                RowWrapper rowWrapper = new(row, param);
                 foreach (RowBuilder builder in builders)
                 {
-                    builder.Proc(project,rowWrapper);
+                    builder.Proc(project, rowWrapper);
                 }
                 rows.Add(rowWrapper);
             }
@@ -259,9 +327,10 @@ namespace ERParamUtils
     }
 
 
-    public interface RowBuilder {
+    public interface RowBuilder
+    {
 
-        void Proc(ParamProject paramProject,RowWrapper rowWrapper);
+        void Proc(ParamProject paramProject, RowWrapper rowWrapper);
     }
 
     public class SpEffectSetParamRowBuilder : RowBuilder
@@ -276,14 +345,17 @@ namespace ERParamUtils
                 return;
 
             var text = "";
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 3; i++)
+            {
 
                 int spId = ParamRowUtils.GetCellInt(rowWrapper.GetRow(), i, 0);
-                if (spId > 0) {
+                if (spId > 0)
+                {
                     var row = ParamRowUtils.FindRow(param, spId);
                     if (row == null)
                         continue;
-                    if (row.Name != null ) {
+                    if (row.Name != null)
+                    {
                         text = text + row.Name + " ";
                     }
                 }
@@ -294,12 +366,12 @@ namespace ERParamUtils
 
     public interface RowFilter
     {
-        bool DoFilter(FSParam.Param param, FSParam.Param.Row row);        
+        bool DoFilter(SoulsParam.Param param, SoulsParam.Param.Row row);
     }
 
     public class RowBlankNameFiler : RowFilter
     {
-        public bool DoFilter(FSParam.Param param, FSParam.Param.Row row)
+        public bool DoFilter(SoulsParam.Param param, SoulsParam.Param.Row row)
         {
             if (row.Name == null || row.Name.Length < 1)
                 return false;
