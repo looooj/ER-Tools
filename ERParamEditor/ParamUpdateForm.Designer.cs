@@ -95,7 +95,11 @@
             Controls.Add(buttonUpdatePublish);
             Controls.Add(buttonUpdate);
             Controls.Add(checkBoxListTask);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "ParamUpdateForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ParamUpdateForm";
             Load += ParamUpdateForm_Load;
             ResumeLayout(false);

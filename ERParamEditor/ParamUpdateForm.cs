@@ -23,6 +23,29 @@ namespace ERParamEditor
 
         public ParamProject _paramProject;
 
+
+        const string optionsFile = "update-opt.txt";
+
+        List<string>? loadOptions()
+        {
+
+            List<string> lines = new();
+            if (!File.Exists(optionsFile))
+            {
+                return null;
+            }
+
+            lines.AddRange(File.ReadLines(optionsFile));
+            return lines;
+        }
+
+        void saveOptions(List<string> lines)
+        {
+
+            File.WriteAllLines("update-opt.txt", lines);
+
+        }
+
         private void ParamUpdateForm_Load(object sender, EventArgs e)
         {
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -49,11 +72,15 @@ namespace ERParamEditor
 
             checkBoxListTask.Items.Clear();
 
+
+            var saveOptions = loadOptions();
+
             for (int i = 0; i < updateParamTasks.Count; i++)
             {
 
                 checkBoxListTask.Items.Add(updateParamTasks[i].Description);
-                checkBoxListTask.SetItemChecked(i, true);
+                if (saveOptions == null || saveOptions.Contains(updateParamTasks[i].GetType().Name))
+                    checkBoxListTask.SetItemChecked(i, true);
             }
         }
 
@@ -72,16 +99,18 @@ namespace ERParamEditor
             }
 
             var options = new UpdateParamOptions();
-
+            List<string> lines = new();
             for (int i = 0; i < updateParamTasks.Count; i++)
             {
 
                 if (checkBoxListTask.GetItemChecked(i))
                 {
                     options.Add(updateParamTasks[i]);
+                    lines.Add(updateParamTasks[i].GetType().Name);
                 }
             }
 
+            saveOptions(lines);
 
             options.Restore = checkBoxRestore.Checked;
             options.Publish = publish;
@@ -89,9 +118,12 @@ namespace ERParamEditor
             try
             {
                 UpdateParamExector.Exec(_paramProject, options);
+
+
                 Close();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
 
                 MessageBox.Show(ex.Message);
             }

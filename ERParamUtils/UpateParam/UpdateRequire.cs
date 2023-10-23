@@ -45,7 +45,7 @@ namespace ERParamUtils.UpateParam
             if (paramProject == null)
                 return;
 
-            SoulsParam.Param? param = paramProject.FindParam(ParamNames.EquipParamWeapon);
+            SoulsParam.Param? param = paramProject.FindParam(ParamNames.MagicParam);
 
             if (param == null)
             {
@@ -55,9 +55,12 @@ namespace ERParamUtils.UpateParam
             for (int i = 0; i < param.Rows.Count; i++)
             {
                 SoulsParam.Param.Row row = param.Rows[i];
+                if (!SpecEquipConfig.IsMagic(row.ID)) {
+                    continue;
+                }
 
-                ParamRowUtils.SetCellValue(row, "requirementIntellect", 0);
-                ParamRowUtils.SetCellValue(row, "requirementFaith", 0);     
+                ParamRowUtils.SetCellValue(row, "requirementIntellect", 1);
+                ParamRowUtils.SetCellValue(row, "requirementFaith", 1);     
             }
         }
 

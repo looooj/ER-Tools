@@ -151,10 +151,13 @@ namespace ERParamUtils.UpateParam
                     || SpecEquipConfig.IsGlovewort(equipId)
                     || SpecEquipConfig.IsAromatic(equipId)
                     || SpecEquipConfig.IsBoluses(equipId)
+                    || SpecEquipConfig.IsMagic(equipId)
                     || SpecEquipConfig.GetSpec(equipId) > 0
                     )
                 {
-                    ChangeSellAmount(row, -1);
+
+                    if ( !SpecEquipConfig.IsMagic(equipId))
+                        ChangeSellAmount(row, "sellQuantity", -1);
                     ChangeSpecPrice(paramProject, row, equipId, (ShopEquipType)equipType);
 
                 }
@@ -193,6 +196,25 @@ namespace ERParamUtils.UpateParam
 
             switch (equipType)
             {
+                case ShopEquipType.Ash:
+                    {
+
+                        int maxValue = ParamRowUtils.GetCellInt(paramProject, ParamNames.EquipParamGem, equipId, "sellValue", -10);
+
+                        if (maxValue == -10)
+                            return;
+                        if (maxValue <= 0)
+                            maxValue = 200;
+
+                        string price = "value";
+                        int value = ParamRowUtils.GetCellInt(row, price, 0);
+                        if (value > maxValue)
+                        {
+                            ParamRowUtils.SetCellValue(row, price, maxValue);
+                            UpdateLogger.InfoRow(row, price, maxValue);
+                        }
+                    }
+                    break;
 
                 case ShopEquipType.Good:
                     {
@@ -249,9 +271,9 @@ namespace ERParamUtils.UpateParam
         }
 
 
-        static void ChangeSellAmount(SoulsParam.Param.Row row, int amount)
+        static void ChangeSellAmount(SoulsParam.Param.Row row, string key,int amount)
         {
-            string key = "sellQuantity";
+      
             ParamRowUtils.SetCellValue(row, key, amount);
             UpdateLogger.InfoRow(row, key, amount);
 

@@ -25,6 +25,7 @@ namespace ERParamUtils
         public static readonly string EquipParamProtector = "EquipParamProtector";
         public static readonly string EquipParamWeapon = "EquipParamWeapon";
         public static readonly string EquipParamGoods = "EquipParamGoods";
+        public static readonly string EquipParamGem = "EquipParamGem";
         public static readonly string EquipParamAccessory = "EquipParamAccessory";
 
         public static readonly string NpcParam = "NpcParam";

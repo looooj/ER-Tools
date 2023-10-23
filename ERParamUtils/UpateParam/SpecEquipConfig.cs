@@ -144,6 +144,16 @@ namespace ERParamUtils.UpateParam
             return false;
         }
 
+        public static bool IsMagic(int itemId)
+        {
+
+            if (itemId >= 4000 && itemId <= 8001)
+            {
+                return true;
+            }
+            return false;
+        }
+
         //for mod cer
         public static bool IsRemnant(int itemId)
         {
@@ -153,6 +163,8 @@ namespace ERParamUtils.UpateParam
             return false;
 
         }
+
+        //4000
 
 
         public static void LoadConfig()
