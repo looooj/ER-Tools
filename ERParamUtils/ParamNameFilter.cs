@@ -22,7 +22,8 @@ namespace ERParamUtils
              "EquipParamGoods",
              "EquipParamProtector",
              "Magic",
-             "CharaInitParam"
+             "CharaInitParam",
+             "EquipMtrlSetParam"
 
         };
 

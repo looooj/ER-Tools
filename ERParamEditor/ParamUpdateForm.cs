@@ -62,7 +62,7 @@ namespace ERParamEditor
             updateParamTasks.Add(new RemoveRequireTask());
             updateParamTasks.Add(new RemoveWeightTask());
             updateParamTasks.Add(new BuddyTask());
-            updateParamTasks.Add(new SmithingStoneTask());
+            //updateParamTasks.Add(new SmithingStoneTask());
 
 
             updateParamTasks.Add(new CharInitParamTask());

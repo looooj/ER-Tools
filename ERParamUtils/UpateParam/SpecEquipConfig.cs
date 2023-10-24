@@ -64,11 +64,12 @@ namespace ERParamUtils.UpateParam
             // 20751
             //15340
             //15341
+            //15060
          */
         public static void AddDefault()
         {
 
-            AddSpec(99, new int[] {190, 1190, 1200, 1210, 1235,15341,15340,15430,
+            AddSpec(99, new int[] {190, 1190, 1200, 1210, 1235,15341,15340,15430,15060,
                 1190, 20723, 20801, 20691, 20651, 20652, 20653,20751,
                 3350 });
 
@@ -165,8 +166,18 @@ namespace ERParamUtils.UpateParam
             return false;
 
         }
+        public static bool IsPhysickRemnant(int itemId)
+        {
 
-        //4000
+            if (itemId >= 20900 && itemId <= 20954)
+                return true;
+            return false;
+
+        }
+
+
+        //Enduring Physick Remnant 20900
+        //
 
 
         public static void LoadConfig()

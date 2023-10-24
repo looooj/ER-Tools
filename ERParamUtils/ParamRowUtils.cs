@@ -108,9 +108,6 @@ namespace ERParamUtils
             return value;
         }
 
-
-
-
         public static object GetCellValue(ParamProject paramProject, string paramName, int rowId, string key, object defVal)
         {
             var param = paramProject.FindParam(paramName);
@@ -128,17 +125,17 @@ namespace ERParamUtils
         public static int GetCellInt(ParamProject paramProject, string paramName, int rowId, string key, int defVal)
         {
             var cell = FindCell(paramProject, paramName, rowId, key);
-            return GetCellInt(cell,defVal);
+            return GetCellInt(cell, defVal);
         }
 
 
-        public static int GetCellInt(SoulsParam.Param.Cell? cell, int defVal) {
+        public static int GetCellInt(SoulsParam.Param.Cell? cell, int defVal)
+        {
             if (cell == null)
                 return defVal;
-            if (cell.Value != null)
-            {
-                return int.Parse(cell.Value.ToString());
-            }
+            var s = cell.Value.ToString();
+            if (s != null)
+                return int.Parse(s);
             return defVal;
         }
 
@@ -171,7 +168,7 @@ namespace ERParamUtils
             if (col >= row.Cells.Count)
                 return;
 
-            SoulsParam.Param.Cell cell = row.Cells[col];             
+            SoulsParam.Param.Cell cell = row.Cells[col];
             cell.SetValue(ConvertValue(value, cell.Def.DisplayType));
 
         }
@@ -191,7 +188,7 @@ namespace ERParamUtils
 
         }
 
-     
+
         public static SoulsParam.Param.Cell? FindCell(ParamProject paramProject, string paramName, int rowId, string key)
         {
             var param = paramProject.FindParam(paramName);

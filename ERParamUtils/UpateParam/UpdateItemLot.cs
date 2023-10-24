@@ -305,6 +305,7 @@ namespace ERParamUtils.UpateParam
                 || SpecEquipConfig.IsSmithingStone(itemId)
                 || (specLotCount > 0)
                 || SpecEquipConfig.IsRemnant(itemId)
+                || SpecEquipConfig.IsPhysickRemnant(itemId)
                 || SpecEquipConfig.IsArrow(itemId)
                 || SpecEquipConfig.IsBoluses(itemId)
                 || SpecEquipConfig.IsAromatic(itemId)
@@ -313,7 +314,8 @@ namespace ERParamUtils.UpateParam
                 return;
             }
 
-            if (SpecEquipConfig.IsRemnant(itemId))
+            if (SpecEquipConfig.IsRemnant(itemId) 
+                || SpecEquipConfig.IsPhysickRemnant(itemId))
             {
                 newItemCount = 5;
             }
