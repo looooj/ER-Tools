@@ -8,14 +8,14 @@
       WEAPON=0, ARMOR=1, RING=2, Others set GOOD=4
    
 ####  value(price)
-      
-      set price can't too low  
+      value >= sellValue in EquipParamGoods, EquipParamProtector,EquipParamWeapon    
+  
 
 #### equipType
     
       replace equip best use WEAPON  ARMOR
 
 #### eventFlag_forRelease
-        0 Visibility   !0 not Visibility
+      0 Visibility   !0 not Visibility
 
 

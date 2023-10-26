@@ -22,31 +22,33 @@
      None=0, Good=1, Weapon=2, Protector=3, Accessory=4, Gem=5
 
 
-   ###  ShopuplineParam EquipType
+   ### ShopLineupParam EquipType
 
       WEAPON=0, ARMOR=1, RING=2, GOOD=3, ASH=4
    
 
 
-## shop-spec.txt(ShopUplineParam)
+## shop-spec.txt(ShopLineupParam)
 
     
 ##### format
-      rowId;newEquipId;newName;equipType;price
-
+      rowId;newEquipId;newName;equipType;price[;sellQuantity]
+      
 ##### examples
 
        #100515,[Merchant Kale] Chain Coif
-       100515;201000;Banished Knight Helm;1;200
+       100515;201000;Banished Knight Helm;1;200;1
 
        #100516,[Merchant Kale] Chain Armor
-       100516;201100;Banished Knight Armor;1;200
+       100516;201100;Banished Knight Armor;1;200;1
 
        #100517,[Merchant Kale] Chain Gauntlets
-       100517;200200;Banished Knight Gauntlets;1;200
+       100517;200200;Banished Knight Gauntlets;1;200;1
 
        #100518,[Merchant Kale] Chain Leggings
-       100518;200300;Banished Knight Greaves;1;200  
+       100518;200300;Banished Knight Greaves;1;200;1  
+
+
 
 
 
@@ -117,7 +119,8 @@
 
      
 ### chara-init.txt 
-     same update-row.txt always param=CharaInitParam  
+    same update-row.txt   
+    always param=CharaInitParam  
 
 
 
@@ -125,6 +128,6 @@
 
 #### format
 
-      paramName;rowId;key;value    
+     paramName;rowId;key;value    
 
 
