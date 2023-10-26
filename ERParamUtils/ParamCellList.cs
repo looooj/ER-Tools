@@ -87,6 +87,8 @@ namespace ERParamUtils
                             {
                                 item.Value = string.Format("{0}({1})", valueText, str);
                             }
+
+                            item.Comment = ParamFieldMetaManager.GetEnumText(internalType);
                         }
                     }
 

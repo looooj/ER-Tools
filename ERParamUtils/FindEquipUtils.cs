@@ -52,9 +52,9 @@ namespace ERParamUtils
             //if (findEquipOptions.Id > 0)
             foreach (var row in param.Rows)
             {
-                for (int i = 0; i < 8; i++)
+                for (int i = 1; i <= 8; i++)
                 {
-                    string key = "lotItemId0" + (i + 1);
+                    string key = "lotItemId0" + i;
                     int itemId = ParamRowUtils.GetCellInt(row, key, 0);
 
                     if (findEquipOptions.Id > 0)
@@ -144,6 +144,7 @@ namespace ERParamUtils
 
         public static void Find(ParamProject project, FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
         {
+            findHandlers.Clear();
             findHandlers.Add(new FindInLotMap());
             findHandlers.Add(new FindInLotEnemy());
             findHandlers.Add(new FindInShop());

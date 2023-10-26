@@ -39,10 +39,13 @@
             panelBottom = new Panel();
             bindingSourceRow = new BindingSource(components);
             bindingSourceCell = new BindingSource(components);
+            toolTip1 = new ToolTip(components);
+            buttonReload = new Button();
             panelClient.SuspendLayout();
             panelCell.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCell).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewRow).BeginInit();
+            panelBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSourceRow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingSourceCell).BeginInit();
             SuspendLayout();
@@ -85,6 +88,8 @@
             dataGridViewCell.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewCell.Size = new Size(99, 329);
             dataGridViewCell.TabIndex = 0;
+            dataGridViewCell.CellMouseMove += dataGridViewCell_CellMouseMove;
+            dataGridViewCell.CellToolTipTextNeeded += dataGridViewCell_CellToolTipTextNeeded;
             // 
             // splitter2
             // 
@@ -120,11 +125,26 @@
             // 
             // panelBottom
             // 
+            panelBottom.Controls.Add(buttonReload);
             panelBottom.Dock = DockStyle.Bottom;
-            panelBottom.Location = new Point(3, 392);
+            panelBottom.Location = new Point(3, 386);
             panelBottom.Name = "panelBottom";
-            panelBottom.Size = new Size(797, 36);
+            panelBottom.Size = new Size(797, 42);
             panelBottom.TabIndex = 5;
+            // 
+            // toolTip1
+            // 
+            toolTip1.Active = false;
+            // 
+            // buttonReload
+            // 
+            buttonReload.Location = new Point(9, 10);
+            buttonReload.Name = "buttonReload";
+            buttonReload.Size = new Size(75, 23);
+            buttonReload.TabIndex = 0;
+            buttonReload.Text = "Reload";
+            buttonReload.UseVisualStyleBackColor = true;
+            buttonReload.Click += buttonReload_Click;
             // 
             // ParamRowForm
             // 
@@ -146,6 +166,7 @@
             panelCell.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewCell).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewRow).EndInit();
+            panelBottom.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)bindingSourceRow).EndInit();
             ((System.ComponentModel.ISupportInitialize)bindingSourceCell).EndInit();
             ResumeLayout(false);
@@ -164,5 +185,7 @@
         private DataGridView dataGridViewRow;
         private BindingSource bindingSourceRow;
         private BindingSource bindingSourceCell;
+        private ToolTip toolTip1;
+        private Button buttonReload;
     }
 }

@@ -19,7 +19,7 @@ namespace ERParamUtils
         public string Name = "";
         public string ValueType = "";
         public Dictionary<string, string> ValueNameDict = new();
-
+        public List<string> Values = new();
 
 
         public static List<ParamFieldEnum> ParseEnums(XmlDocument doc, string filename)
@@ -87,6 +87,7 @@ namespace ERParamUtils
                 var name = optionEle.GetAttribute("Name");
                 var value = optionEle.GetAttribute("Value");
                 paramFieldEnum.ValueNameDict.Add(value,name);
+                paramFieldEnum.Values.Add(value);
             }
             return paramFieldEnum;
         }
@@ -203,14 +204,20 @@ namespace ERParamUtils
             }          
 
         }
-        /*
-        public static Dictionary<Object, string>? FindDict(string valueType) {
 
 
-            return null;
-        } 
-        */
-        //ParamFieldMetaManager
+        public static string GetEnumText(string valueType) {
+
+            string text = "";
+            if (EnumsDict.ContainsKey(valueType))
+            {
+                var e = EnumsDict[valueType];
+                foreach (var v in e.Values) {
+                    text = text + string.Format("{0}={1};", v, e.ValueNameDict[v]);
+                }
+            }
+            return text;
+        }
         public static string FindEnumValueText(string valueType, string value) {
 
             if (EnumsDict.ContainsKey(valueType)) {
