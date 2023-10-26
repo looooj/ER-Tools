@@ -34,7 +34,7 @@ namespace ERParamUtils.UpateParam
             if (items.Length < 4)
                 return false;
             Price = 0;
-            SellQuantity = 0;
+            SellQuantity = 1;
             RowId = Int32.Parse(items[0]);
             NewEquipId = Int32.Parse(items[1]);
             EquipType = Int32.Parse(items[3]);
@@ -152,6 +152,8 @@ namespace ERParamUtils.UpateParam
                     || SpecEquipConfig.IsAromatic(equipId)
                     || SpecEquipConfig.IsBoluses(equipId)
                     || SpecEquipConfig.IsMagic(equipId)
+                    || SpecEquipConfig.IsMaterial(equipId)
+                    || SpecEquipConfig.IsMeat(equipId)
                     || SpecEquipConfig.GetSpec(equipId) > 0
                     )
                 {

@@ -78,7 +78,7 @@ namespace ERParamUtils.UpateParam
 
 
             AddSpec(20,
-                new int[] { 9500, 9501, 9510,820,830});
+                new int[] { 9500, 9501, 9510, 820, 830 });
 
             AddSpec(10, new int[] { 10010, 10020, 10070 });
 
@@ -111,7 +111,8 @@ namespace ERParamUtils.UpateParam
             return false;
         }
 
-        public static bool IsBoluses(int itemId) {
+        public static bool IsBoluses(int itemId)
+        {
             if (itemId >= 900 && itemId <= 960)
                 return true;
             return false;
@@ -126,6 +127,25 @@ namespace ERParamUtils.UpateParam
 
         }
 
+        //1100
+        //2030
+        public static bool IsMeat(int itemId) {
+            if (itemId >= 1100 && itemId <= 2030)
+                return true;
+            return false;
+        } 
+
+
+        public static bool IsMaterial(int itemId) {
+
+            //15000 
+            //20855
+            if (itemId >= 15000 && itemId <= 20855)
+                return true;
+
+            return false;
+
+        }
 
         public static bool IsArrow(int itemId)
         {

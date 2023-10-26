@@ -263,13 +263,13 @@ namespace ERParamUtils.UpateParam
     {
 
 
-        private static void SetDefaultLot(string paramName,SoulsParam.Param.Row row, UpdateCommand updateCommand)
+        private static void SetDefaultLot(string paramName, SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
 
             for (int i = 1; i < 8; i++)
             {
-                string key = "lotItemId0"+i;
-                int itemId = ParamRowUtils.GetCellInt(row,key, 0);
+                string key = "lotItemId0" + i;
+                int itemId = ParamRowUtils.GetCellInt(row, key, 0);
                 if (itemId < 1)
                 {
                     if (i >= 2)
@@ -286,7 +286,7 @@ namespace ERParamUtils.UpateParam
 
             }
 
-            
+
         }
 
         private static void SetItemLotCount(int itemId, int itemType, int itemCount, int itemIndex,
@@ -308,7 +308,10 @@ namespace ERParamUtils.UpateParam
                 || SpecEquipConfig.IsPhysickRemnant(itemId)
                 || SpecEquipConfig.IsArrow(itemId)
                 || SpecEquipConfig.IsBoluses(itemId)
+                || SpecEquipConfig.IsPot(itemId)
                 || SpecEquipConfig.IsAromatic(itemId)
+                || SpecEquipConfig.IsMaterial(itemId)
+                || SpecEquipConfig.IsMeat(itemId)
                 ))
             {
                 return;
@@ -334,7 +337,6 @@ namespace ERParamUtils.UpateParam
             {
                 return;
             }
-
 
             UpdateCommandItem item = new();
             item.ParamName = paramName;
