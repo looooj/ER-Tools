@@ -37,7 +37,8 @@ namespace ERParamUtils.UpateParam
         }
 
         /*
-         
+          
+
             //1210 Exalted Flesh
             //20691 Arteria Leaf
             //20651 Trina's Lily
@@ -73,17 +74,16 @@ namespace ERParamUtils.UpateParam
                 1190, 20723, 20801, 20691, 20651, 20652, 20653,20751,
                 3350 });
 
-
             AddSpec(20, new int[] { 8000, 10060, 1290 });
 
 
             AddSpec(20,
                 new int[] { 9500, 9501, 9510, 820, 830 });
 
-            AddSpec(10, new int[] { 10010, 10020, 10070 });
+            AddSpec(10, new int[] { 10010, 10070,8185,8193,2090 });
 
 
-            AddSpec(4, new int[] { 10030, 10040 });
+            AddSpec(4, new int[] { 10030, 10040, 8186, 10020 });
 
         }
 
@@ -170,7 +170,7 @@ namespace ERParamUtils.UpateParam
         public static bool IsMagic(int itemId)
         {
 
-            if (itemId >= 4000 && itemId <= 8001)
+            if (itemId >= 4000 && itemId < 8000)
             {
                 return true;
             }

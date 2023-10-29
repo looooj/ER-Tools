@@ -65,7 +65,7 @@ namespace ERParamUtils
                         loc.RowId = row.ID;
                         loc.Key = key;
                         result.Add(loc);
-                        return;
+                        break;
                     }
 
                     //todo fix 
@@ -77,7 +77,7 @@ namespace ERParamUtils
                             loc.RowId = row.ID;
                             loc.Key = "";
                             result.Add(loc);
-                            return;
+                            break;
                         }
 
                 }
@@ -128,7 +128,20 @@ namespace ERParamUtils
                         loc.RowId = row.ID;
                         loc.Key = "equipId";
                         result.Add(loc);
-                        return;
+                        continue;
+                    }
+                }
+
+                if (findEquipOptions.Name.Length > 0)
+                {
+                    if (row.Name.Contains(findEquipOptions.Name))
+                    {
+                        FindEquipLocation loc = new();
+                        loc.ParamName = param.Name;
+                        loc.RowId = row.ID;
+                        loc.Key = "";
+                        result.Add(loc);
+                        continue;
                     }
                 }
             }

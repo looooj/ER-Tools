@@ -45,8 +45,8 @@ namespace ERParamUtils.UpateParam
                 if (row.ID < 200000 || row.ID > 300000)
                     continue;
 
-                updateCommand.AddItem(param, row, "consumeMP", "-1");
-                updateCommand.AddItem(param, row, "consumeHP", "-1");
+                updateCommand.AddItem(row, "consumeMP", "-1");
+                updateCommand.AddItem(row, "consumeHP", "-1");
             }
 
         }
@@ -72,10 +72,10 @@ namespace ERParamUtils.UpateParam
                     continue;
 
 
-                updateCommand.AddItem(param, row, "eliminateTargetEntityId", "0");
-                updateCommand.AddItem(param, row, "summonedEventFlagId", "0");
-                updateCommand.AddItem(param, row, "activateRange", "9999");
-                updateCommand.AddItem(param, row, "overwriteActivateRegionEntityId", "0");
+                updateCommand.AddItem(row, "eliminateTargetEntityId", "0");
+                updateCommand.AddItem(row, "summonedEventFlagId", "0");
+                updateCommand.AddItem(row, "activateRange", "9999");
+                updateCommand.AddItem(row, "overwriteActivateRegionEntityId", "0");
             }
         }
     }

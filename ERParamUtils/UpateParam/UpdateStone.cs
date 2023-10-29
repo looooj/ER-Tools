@@ -28,7 +28,7 @@ namespace ERParamUtils.UpateParam
                 if (row == null)
                     continue;
 
-                updateCommand.AddItem(param, row, "itemNum01", "1");
+                updateCommand.AddItem(row, "itemNum01", "1");
             }
         }
 

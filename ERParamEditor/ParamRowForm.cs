@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -78,6 +79,8 @@ namespace ERParamEditor
             menuRow.Items.Add(new ToolStripSeparator());
             menuRow.Items.Add(new ToolStripMenuItem("Export", null, exportRowButton_Click));
 
+            menuRow.Items.Add(new ToolStripSeparator());
+            menuRow.Items.Add(new ToolStripMenuItem("Compare", null, compareRow_Handler));
 
         }
 
@@ -197,17 +200,6 @@ namespace ERParamEditor
 
             dataGridViewRow.ClearSelection();
             dataGridViewRow.Rows[index].Selected = true;
-
-            //dataGridViewRow.DisplayedRowCount 
-            /*
-            while (index < dataGridViewRow.Rows.Count) {
-                if (dataGridViewRow.Rows[index].Visible)
-                    return;
-
-                if (dataGridViewRow.FirstDisplayedScrollingRowIndex < index) {
-                    dataGridViewRow.FirstDisplayedScrollingRowIndex++;
-                }
-            }*/
         }
 
         void gotoRowId(int rowId)
@@ -266,13 +258,45 @@ namespace ERParamEditor
             }
 
             changeRows(RowListViewMode.FIND, rows);
-            //bindingSourceRow.DataSource = rows;
-            //dataGridViewRow.DataSource = bindingSourceRow.DataSource;
+
         }
 
-        //public List<RowWrapper>? CurrentRowWrappers;
-        //public List<RowWrapper>? JumpRowWrappers;
-        //public int ViewMode = 0;
+
+        private void compareRow_Handler(object? sender, EventArgs e)
+        {
+
+            var project = GlobalConfig.GetCurrentProject();
+            if (project == null)
+                return;
+
+            string dir = project.GetDir() + @"\exp";
+            Directory.CreateDirectory(dir);
+
+            if (dataGridViewRow.SelectedRows.Count !=2 )
+                return;
+
+
+            RowWrapper row1 = (RowWrapper)dataGridViewRow.SelectedRows[0].DataBoundItem;
+            RowWrapper row2 = (RowWrapper)dataGridViewRow.SelectedRows[1].DataBoundItem;
+            List<string> result = new();
+            for (int i = 0; i < row1.GetRow().Cells.Count; i++) {
+                var cell1 = row1.GetRow().Cells[i];
+                var cell2 = row2.GetRow().Cells[i];
+                if (cell1.Value.Equals(cell2.Value)) {
+                    continue;
+                }
+                result.Add(
+                    string.Format("{0}_{1} {2} {3}", i, cell1.Def.InternalName, cell1.Value, cell2.Value)
+                    );
+            }
+            string name = dir + @"\" + string.Format("row-cmp-{0}-{1}-{2}", row1.GetParam().Name,
+                row1.ID, row2.ID);
+            File.WriteAllLines(name, result);
+
+        }
+
+
+
         public string ParamName = "";
         void InitRows()
         {
@@ -299,6 +323,8 @@ namespace ERParamEditor
                 Text = ParamName;
             }
         }
+
+
 
 
 
@@ -352,9 +378,10 @@ namespace ERParamEditor
             {
                 ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[i].DataBoundItem;
 
-                string line = string.Format("{0};{1};{2};{3};{4}",
+                string line = string.Format("{0};{1};{2}-{3};{4};{5}",
                     row.ID,
                     row.Name,
+                    cell.ColIndex,
                     cell.Key,
                     cell.Value,
                     cell.Comment

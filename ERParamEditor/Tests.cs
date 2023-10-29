@@ -3,6 +3,7 @@ using Org.BouncyCastle.Utilities;
 using SoulsFormats;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -116,9 +117,76 @@ namespace ERParamEditor
 
         }
 
+
+
+
+        public static SortedDictionary<int, string> GetMsgIdName(XmlElement root) {
+
+            SortedDictionary<int, string> dict = new();
+            var msgs = root.GetElementsByTagName("msg");
+
+            for (int i = 0; i < msgs.Count; i++) {
+
+                XmlElement item =(XmlElement)msgs[i];
+                XmlElement idNode = (XmlElement)item.SelectSingleNode("ID");
+                XmlElement textNode = (XmlElement)item.SelectSingleNode("Text");
+                int id = int.Parse(idNode.InnerText);
+                string text = textNode.InnerText;
+                text = text.Trim();
+                if (text.ToUpper().Contains("[ERROR]") || text.Length < 1)
+                    continue;
+                dict.Add(id, text);
+            }
+
+            return dict;
+        }
+
+        public static void TestGenChNames() {
+
+            //assets\msg\item.msgbnd\msg\engUS\AccessoryName.fmg.xml
+            //assets\msg\item.msgbnd\msg\zhoCN
+            string[] names = { "AccessoryName","GoodsName",
+                "ProtectorName","WeaponName","NpcName","PlaceName","GemName" };
+
+            string baseDir = GlobalConfig.AssetsDir+ @"\msg\item.msgbnd\msg";
+            string outDir = GlobalConfig.AssetsDir + @"\msg\item-msg-text";
+            foreach (string name in names) {
+
+                string engFileName = string.Format("{0}\\engUS\\{1}.fmg.xml",baseDir,name);
+                string zhoFileName = string.Format("{0}\\zhoCN\\{1}.fmg.xml", baseDir, name);
+
+                XmlDocument engDoc = new();
+                XmlDocument zhoDoc = new();
+                engDoc.Load(engFileName);
+                zhoDoc.Load(zhoFileName);
+
+                var engDict = GetMsgIdName(engDoc.DocumentElement);
+                var choDict = GetMsgIdName(zhoDoc.DocumentElement);
+                var keys = engDict.Keys;
+
+                
+                List<string> outLines = new();
+                foreach (int id in keys)
+                {
+                    string ename = engDict[id];
+                    if (!choDict.TryGetValue(id, out string cname)) {
+                        continue;
+                    }
+
+                    outLines.Add(string.Format("{0};{1};{2}",id,ename,cname));
+
+                }
+
+                string outName = outDir + @"\" + name + ".txt";
+                Directory.CreateDirectory(outDir);
+                File.WriteAllLines(outName, outLines,Encoding.UTF8);
+            }
+
+        }
+
         public static void Run() {
 
-            TestComp();
+            TestGenChNames();
         }
     }
 }

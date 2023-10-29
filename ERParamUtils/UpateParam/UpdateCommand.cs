@@ -44,19 +44,25 @@ namespace ERParamUtils.UpateParam
 
         }
 
-        public static UpdateCommandItem Create(SoulsParam.Param param, SoulsParam.Param.Row row,string key, string value) {
+        public static UpdateCommandItem Create(string paramName,int rowId,string key, string value) {
 
             var item = new UpdateCommandItem
             {
-                ParamName = param.Name,
-                RowId = row.ID,
+                ParamName = paramName,
+                RowId = rowId,
                 Key = key,
                 Value = value
             };
             return item;
         }
+        public static UpdateCommandItem Create(SoulsParam.Param.Row row, string key, string value)
+        {
+            return Create(row.GetParam().Name, row.ID, key, value);
+        }
 
-        public static void LoadUpdateItem(string updateName, UpdateCommand updateCommand)
+
+
+            public static void LoadUpdateItem(string updateName, UpdateCommand updateCommand)
         {
 
             var lines = UpateFile.Load(updateCommand.GetProject(), updateName);
@@ -234,19 +240,16 @@ namespace ERParamUtils.UpateParam
             rowItemDict.Add(item);
         }
 
-        public void AddItem(SoulsParam.Param param, SoulsParam.Param.Row row, string key, string value)
+        public void AddItem(SoulsParam.Param.Row row, string key, int value) {
+            AddItem(row, key, value + "");
+        }
+
+        public void AddItem(SoulsParam.Param.Row row, string key, string value)
         {
-            var item = UpdateCommandItem.Create(param, row, key, value);
+            var item = UpdateCommandItem.Create(row, key, value);
             AddItem(item);
         }
 
-        /*
-                    if (item.RowName.Length > 1)
-                    {
-                        row.Name = item.RowName;
-                    }
-         
-         */
 
         void Exec(SoulsParam.Param currentParam, UpdateRowItemDict rowDict) {
 

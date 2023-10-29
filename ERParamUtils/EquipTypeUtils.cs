@@ -47,5 +47,22 @@ namespace ERParamUtils
             }
             return EquipType.None;
         }
+
+        public static string? ShopTypeParamName(ShopEquipType shopEquipType) {
+
+            switch (shopEquipType) {
+                case ShopEquipType.Weapon:
+                    return ParamNames.EquipParamWeapon;
+                case ShopEquipType.Protector:
+                    return ParamNames.EquipParamProtector;
+                case ShopEquipType.Good:
+                    return ParamNames.EquipParamGoods;
+                case ShopEquipType.Accessory:
+                    return ParamNames.EquipParamAccessory;
+                case ShopEquipType.Ash:
+                    return ParamNames.EquipParamGem;
+            }
+            return null;
+        }
     }
 }

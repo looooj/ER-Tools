@@ -36,16 +36,9 @@ namespace ERParamUtils.UpateParam
                     "properMagic", "properFaith","properLuck"};
                 foreach (var key in keys)
                 {
-                    UpdateCommandItem item = UpdateCommandItem.Create(param, row, key, "0"); 
+                    UpdateCommandItem item = UpdateCommandItem.Create(row, key, "0"); 
                     updateCommand.AddItem(item);
                 }
-
-                //ParamRowUtils.SetCellValue(row, "properStrength", 0);
-                //ParamRowUtils.SetCellValue(row, "properAgility", 0);
-                //ParamRowUtils.SetCellValue(row, "properMagic", 0);
-                //ParamRowUtils.SetCellValue(row, "properFaith", 0);
-                //ParamRowUtils.SetCellValue(row, "properLuck", 0);
-                //
             }
 
 
@@ -72,12 +65,8 @@ namespace ERParamUtils.UpateParam
                 string[] keys = { "requirementLuck", "requirementIntellect", "requirementFaith" };
                 foreach (var key in keys)
                 {
-                    UpdateCommandItem item = UpdateCommandItem.Create(param, row, key, "1");
+                    UpdateCommandItem item = UpdateCommandItem.Create(row, key, "1");
                     updateCommand.AddItem(item);
-
-                    //ParamRowUtils.SetCellValue(row, "requirementLuck", 1);
-                    //ParamRowUtils.SetCellValue(row, "requirementIntellect", 1);
-                    //ParamRowUtils.SetCellValue(row, "requirementFaith", 1);
                 }
             }
         }
@@ -101,7 +90,7 @@ namespace ERParamUtils.UpateParam
             {
 
                 SoulsParam.Param.Row row = param.Rows[i];
-                UpdateCommandItem item = UpdateCommandItem.Create(param, row, "weight", "1");
+                UpdateCommandItem item = UpdateCommandItem.Create(row, "weight", "1");
                 updateCommand.AddItem(item);
                 //ParamRowUtils.SetCellValue(row, "weight", 1);
                 //ParamRowUtils.SetCellValue(row, "sellValue", 5);

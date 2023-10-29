@@ -1,6 +1,7 @@
 ﻿using Org.BouncyCastle.Asn1.Mozilla;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,7 +56,7 @@ namespace ERParamUtils.UpateParam
             return item;
         }
 
-        public static void Proc(ShopUpdateItem shopUpdateItem, UpdateCommand updateCommand)
+        public static void Proc(ShopUpdateItem shopUpdateItem, SoulsParam.Param param, ParamProject paramProject, UpdateCommand updateCommand)
         {
 
             UpdateCommandItem item = Create(shopUpdateItem);
@@ -71,10 +72,8 @@ namespace ERParamUtils.UpateParam
 
             if (shopUpdateItem.Price > 0)
             {
-                item = Create(shopUpdateItem);
-                item.Key = "value";
-                item.Value = shopUpdateItem.Price + "";
-                updateCommand.AddItem(item);
+
+                ChangePrice(paramProject, param, shopUpdateItem, updateCommand);
             }
 
             if (shopUpdateItem.SellQuantity != 0)
@@ -97,6 +96,24 @@ namespace ERParamUtils.UpateParam
             } */
         }
 
+
+        public static void ChangePrice(ParamProject paramProject,
+            SoulsParam.Param param, ShopUpdateItem shopUpdateItem, UpdateCommand updateCommand)
+        {
+
+            var row = ParamRowUtils.FindRow(param, shopUpdateItem.RowId);
+            if (row == null)
+                return;
+
+            string? paramName = EquipTypeUtils.ShopTypeParamName((ShopEquipType)shopUpdateItem.EquipType);
+            if (paramName == null)
+                return;
+
+            int minPrice = ParamRowUtils.GetCellInt(paramProject, paramName, shopUpdateItem.NewEquipId, "sellValue", 2000);
+            int price = shopUpdateItem.Price < minPrice ? minPrice : shopUpdateItem.Price;
+
+            updateCommand.AddItem(row, "value", price);
+        }
     }
 
 
@@ -122,7 +139,7 @@ namespace ERParamUtils.UpateParam
                 if (item.Parse(line))
                 {
 
-                    ShopUpdateItem.Proc(item, updateCommand);
+                    ShopUpdateItem.Proc(item, param, paramProject, updateCommand);
                 }
             }
 
@@ -138,7 +155,7 @@ namespace ERParamUtils.UpateParam
 
             foreach (var row in param.Rows)
             {
-                ChangeVisibility(row,updateCommand);
+                ChangeVisibility(row, updateCommand);
 
 
                 int equipId = GetEquipId(row);
@@ -158,24 +175,57 @@ namespace ERParamUtils.UpateParam
                     )
                 {
 
-                    if ( !SpecEquipConfig.IsMagic(equipId))
-                        ChangeSellAmount(row, "sellQuantity", -1,updateCommand);
-                    ChangeSpecPrice(paramProject, row, equipId, (ShopEquipType)equipType,updateCommand);
+                    if (!SpecEquipConfig.IsMagic(equipId))
+                        ChangeSellAmount(row, "sellQuantity", -1, updateCommand);
+                    //ChangeSpecPrice(paramProject, row, equipId, (ShopEquipType)equipType,updateCommand);
 
                 }
-                ChangeWeaponPrice(paramProject, row, equipId, (ShopEquipType)equipType,updateCommand);
+                //ChangeWeaponPrice(paramProject, row, equipId, (ShopEquipType)equipType,updateCommand);
+                ChangeToMinPrice(paramProject, row, equipId, (ShopEquipType)equipType, updateCommand);
 
             }
         }
 
-        static void ChangeWeaponPrice(ParamProject paramProject, 
+
+        public static void ChangeToMinPrice(ParamProject paramProject,
+            SoulsParam.Param.Row row, int equipId, ShopEquipType equipType, UpdateCommand updateCommand)
+        {
+
+
+            string? paramName = EquipTypeUtils.ShopTypeParamName(equipType);
+            if (paramName == null)
+                return;
+
+            int minPrice = ParamRowUtils.GetCellInt(paramProject, paramName, equipId, "sellValue", -1);
+            if (minPrice < 0) {
+                return;
+            }
+
+            if (minPrice == 0)
+                minPrice = 200;
+
+            if (SpecEquipConfig.IsArrow(equipId) && equipType == ShopEquipType.Weapon)
+                minPrice = 20;
+
+            int price = ParamRowUtils.GetCellInt(row, "value", 0);
+            if (price > minPrice)
+            {
+                updateCommand.AddItem(row, "value", minPrice);
+            }
+
+        }
+
+        /*
+        public static void ChangeWeaponPrice(ParamProject paramProject, 
             SoulsParam.Param.Row row, int equipId, ShopEquipType equipType, UpdateCommand updateCommand)
         {
             switch (equipType)
             {
                 case ShopEquipType.Weapon:
+                case ShopEquipType.Protector:
                     {
-                        int maxValue = ParamRowUtils.GetCellInt(paramProject, ParamNames.EquipParamWeapon, equipId, "sellValue", 2000);
+                        string paramName = (equipType == ShopEquipType.Weapon) ? ParamNames.EquipParamWeapon : ParamNames.EquipParamProtector;
+                        int maxValue = ParamRowUtils.GetCellInt(paramProject, paramName, equipId, "sellValue", 2000);
                         if (maxValue <= 0)
                             maxValue = 2000;
 
@@ -186,7 +236,7 @@ namespace ERParamUtils.UpateParam
 
                         if (value > maxValue)
                         {
-                            updateCommand.AddItem(row.GetParam(), row, price, maxValue + "");
+                            updateCommand.AddItem(row, price, maxValue + "");
                             //UpdateLogger.InfoRow(row, price, maxValue);
                         }
                     }
@@ -213,14 +263,15 @@ namespace ERParamUtils.UpateParam
                         int value = ParamRowUtils.GetCellInt(row, price, 0);
                         if (value > maxValue)
                         {
-                            updateCommand.AddItem(row.GetParam(), row, price, maxValue + "");
+                            updateCommand.AddItem(row, price, maxValue);
                             //UpdateLogger.InfoRow(row, price, maxValue);
                         }
                     }
                     break;
 
                 case ShopEquipType.Good:
-                    {
+                case ShopEquipType.Accessory:
+                {
 
                         int maxValue = ParamRowUtils.GetCellInt(paramProject, ParamNames.EquipParamGoods, equipId, "sellValue", 2000);
                         if (maxValue <= 0)
@@ -230,7 +281,7 @@ namespace ERParamUtils.UpateParam
                         int value = ParamRowUtils.GetCellInt(row, price, 0);
                         if (value > maxValue)
                         {
-                            updateCommand.AddItem(row.GetParam(), row, price, maxValue + "");
+                            updateCommand.AddItem( row, price, maxValue);
 
                             //UpdateLogger.InfoRow(row, price, maxValue);
                         }
@@ -256,15 +307,12 @@ namespace ERParamUtils.UpateParam
                 int value = ParamRowUtils.GetCellInt(row, price, 0);
                 if (value > maxValue)
                 {
-                    updateCommand.AddItem(row.GetParam(), row, price, maxValue + "");
-
-                    //ParamRowUtils.SetCellValue(row, price, maxValue);
-                    //UpdateLogger.InfoRow(row, price, maxValue);
+                    updateCommand.AddItem( row, price, maxValue);
                 }
             }
         }
 
-
+        */
 
         static int GetEquipId(SoulsParam.Param.Row row)
         {
@@ -277,13 +325,11 @@ namespace ERParamUtils.UpateParam
         }
 
 
-        static void ChangeSellAmount(SoulsParam.Param.Row row, string key,int amount, UpdateCommand updateCommand)
+        static void ChangeSellAmount(SoulsParam.Param.Row row, string key, int amount, UpdateCommand updateCommand)
         {
 
-            updateCommand.AddItem(row.GetParam(), row, key, amount + "");
+            updateCommand.AddItem(row, key, amount);
 
-            //ParamRowUtils.SetCellValue(row, key, amount);
-            //UpdateLogger.InfoRow(row, key, amount);
 
         }
 
@@ -299,14 +345,13 @@ namespace ERParamUtils.UpateParam
 
                 if (ParamRowUtils.GetCellInt(row, key, 0) != 0)
                 {
-                    updateCommand.AddItem(row.GetParam(), row, key,  "0");
-
-                    //ParamRowUtils.SetCellValue(row, key, 0);
-                    //UpdateLogger.InfoRow(row, key, 0);
+                    updateCommand.AddItem(row, key, "0");
                 }
-                // key = "mtrlId";
-                //  ParamRowUtils.SetCellValue(row, key, -1);
-                // UpdateLogger.InfoRow(row, key, -1);
+
+                key = "mtrlId";
+                updateCommand.AddItem(row, key, "-1");
+
+
 
             }
         }
