@@ -208,7 +208,7 @@ namespace ERParamUtils.UpateParam
                 minPrice = 20;
 
             int price = ParamRowUtils.GetCellInt(row, "value", 0);
-            if (price > minPrice)
+            if (price > minPrice || price < 1 )
             {
                 updateCommand.AddItem(row, "value", minPrice);
             }
@@ -348,11 +348,8 @@ namespace ERParamUtils.UpateParam
                     updateCommand.AddItem(row, key, "0");
                 }
 
-                key = "mtrlId";
-                updateCommand.AddItem(row, key, "-1");
-
-
-
+                //key = "mtrlId";
+                //updateCommand.AddItem(row, key, "-1");
             }
         }
 

@@ -70,8 +70,9 @@ namespace ERParamUtils.UpateParam
         public static void AddDefault()
         {
 
-            AddSpec(99, new int[] {190, 1190, 1200, 1210, 1235,15341,15340,15430,15060,
-                1190, 20723, 20801, 20691, 20651, 20652, 20653,20751,
+            AddSpec(99, new int[] {190, 1190, 1200, 1210, 1235,
+                15341,15340,15430,15060,
+                20723, 20801, 20691, 20651, 20652, 20653,20751,
                 3350 });
 
             AddSpec(20, new int[] { 8000, 10060, 1290 });
@@ -84,6 +85,8 @@ namespace ERParamUtils.UpateParam
 
 
             AddSpec(4, new int[] { 10030, 10040, 8186, 10020 });
+
+            AddSpec(2, new int[] { 20720 });
 
         }
 

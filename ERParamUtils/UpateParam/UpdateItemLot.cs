@@ -282,6 +282,18 @@ namespace ERParamUtils.UpateParam
                 int itemCount = ParamRowUtils.GetCellInt(row, key, 0);
 
 
+                //52000000;Bolt;弩箭
+                //50000000;Arrow;箭矢
+                if (itemId == 52000000 && itemType == (int)EquipType.Weapon ) {
+                    updateCommand.AddItem(row, "lotItemId0"+i, 50000000);
+                }
+
+                //150;Furlcalling Finger Remedy;唤勾指药
+                //2909;Golden Rune [10];黄金卢恩【１０】
+                if (itemId == 150 && itemType == (int)EquipType.Good) {
+                    updateCommand.AddItem(row, "lotItemId0" + i, 2909);
+                }
+
                 SetItemLotCount(itemId, itemType, itemCount, i, paramName, row, updateCommand);
 
             }
