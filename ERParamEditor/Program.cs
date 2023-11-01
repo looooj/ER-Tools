@@ -27,7 +27,7 @@ namespace ERParamEditor
             var config = new NLog.Config.LoggingConfiguration();
 
             // Targets where to log to: File and Console
-            var logfile = new NLog.Targets.FileTarget("logfile") { FileName = "ERParam-log.txt" };
+            var logfile = new NLog.Targets.FileTarget("logfile") { FileName = ".\\logs\\ERParam-log.txt" };
             
             // Rules for mapping loggers to targets            
             config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);

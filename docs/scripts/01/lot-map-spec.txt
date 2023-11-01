@@ -1,0 +1,16 @@
+#equipType  None=0, Good=1, Weapon=2, Protector=3, Accessory=4, Gem=5
+
+
+# @@et=equipType 
+# rowId;equipId;lotIndex;lotCount
+
+
+@@et=2
+#942370070,[Troll Carriage - Gatefront Ruins] Lordsworn's Greatsword
+#3100000;Sacred Relic Sword
+942370070;3100000;1;1
+
+
+#942370060[Troll Carriage - Gatefront Ruins] Flail 
+#12160000;Envoy's Long Horn;众使者的长笛子
+942370060;12160000;1;1

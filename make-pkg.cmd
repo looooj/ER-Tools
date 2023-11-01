@@ -7,6 +7,7 @@ rd /s /q ER-Tools
 md ER-Tools
 cd ER-Tools
 copy ..\..\*.md 
+copy ..\..\ERBackup\bin\Release\net6.0-windows\*.* 
 copy ..\..\ERParamEditor\bin\Release\net6.0-windows\*.* 
 del *.txt
 del *.pdb

@@ -70,7 +70,7 @@ namespace ERParamUtils.UpateParam
         public static void AddDefault()
         {
 
-            AddSpec(99, new int[] {190, 1190, 1200, 1210, 1235,
+            AddSpec(50, new int[] {190, 1190, 1200, 1210, 1235,
                 15341,15340,15430,15060,
                 20723, 20801, 20691, 20651, 20652, 20653,20751,
                 3350 });
@@ -81,7 +81,7 @@ namespace ERParamUtils.UpateParam
             AddSpec(20,
                 new int[] { 9500, 9501, 9510, 820, 830 });
 
-            AddSpec(10, new int[] { 10010, 10070,8185,8193,2090 });
+            AddSpec(10, new int[] { 10010, 10070, 8185, 8193, 2090 });
 
 
             AddSpec(4, new int[] { 10030, 10040, 8186, 10020 });
@@ -132,14 +132,16 @@ namespace ERParamUtils.UpateParam
 
         //1100
         //2030
-        public static bool IsMeat(int itemId) {
+        public static bool IsMeat(int itemId)
+        {
             if (itemId >= 1100 && itemId <= 2030)
                 return true;
             return false;
-        } 
+        }
 
 
-        public static bool IsMaterial(int itemId) {
+        public static bool IsMaterial(int itemId)
+        {
 
             //15000 
             //20855

@@ -1,0 +1,92 @@
+#
+# equipType WEAPON=0, ARMOR=1, RING=2, GOOD=3, ASH=4
+#rowId;newEquipId;newName;equipType;price;sellQuantity
+#
+
+
+#
+#[Merchant Kale] 
+#
+
+#8176;Haligtree Secret Medallion (Right);圣树秘密符节（右）
+#100505[Merchant Kale] Furlcalling Finger Remedy 
+100505;8176;Haligtree Secret Medallion (Right);3;1000
+
+
+#100510[Merchant Kale] Torch 
+100510;2070;Lantern;3;200
+
+#100515,[Merchant Kale] Chain Coif
+100515;42000000;Lion Greatbow;0;500
+
+#14080000;Icerind Hatchet;冻壳斧
+#100516,[Merchant Kale] Chain Armor
+100516;14080000;Icerind Hatchet;0;200
+
+#100517,[Merchant Kale] Chain Gauntlets
+100517;253010;Radahn Soldier Ashes;3;200;1
+
+
+
+#
+#[Twin Maiden Husks] 
+#
+
+#50000000 Arrow
+#50010000 Fire Arrow
+#50020000 Serpent Arrow
+
+#101873[Twin Maiden Husks] Heater Shield 
+101873;50000000;Arrow;0;20;-1
+
+#101874[Twin Maiden Husks] Knight Helm 
+101874;50010000;Fire Arrow;0;20;-1
+
+#101875[Twin Maiden Husks] Knight Armor 
+101875;50020000;Serpent Arrow;0;20;-1
+
+
+#10140;Ancient Dragon Smithing Stone;古龙岩锻造石
+#101876[Twin Maiden Husks] Knight Gauntlets 
+101876;10140;SAncient Dragon Smithing Stone;3;2000;-1
+
+#10168;Somber Ancient Dragon Smithing Stone;古龙岩失色锻造石
+#101877[Twin Maiden Husks] Knight Greaves 
+101877;10168;Somber Ancient Dragon Smithing Stone;3;2000;-1
+
+
+#101868[Twin Maiden Husks] Mace 
+101868;51010000;Golem's Great Arrow;0;20;-1
+
+#51040000;Radahn's Spear;拉塔恩的矛
+#101869[Twin Maiden Husks] Short Spear 
+101869;51040000;Radahn's Spear;0;20;-1
+
+#101867[Twin Maiden Husks] Battle Axe 
+101867;51000000;Great Arrow;0;20;-1
+
+
+
+#
+#[Merchant - Coastal Cave]
+#
+
+
+#4003;Dragoncrest Greatshield Talisman;龙徽大盾护符
+#100591[Merchant - Coastal Cave] Bolt
+100591;4003;Dragoncrest Greatshield Talisman;2;1000;1
+
+#1231;Shard of Alexander;亚历山大的碎片
+#100590[Merchant - Coastal Cave] Arrow 
+100590;1231;RShard of Alexander;2;1000;1
+
+#4052;Pearldrake Talisman +2;珍珠龙徽护符＋２
+#100589[Merchant - Coastal Cave] Shortbow 
+100589;4052;R;2;1000;1
+
+#1201;Mottled Necklace +1;斑斓项链＋１
+#100587[Merchant - Coastal Cave] Broadsword 
+100587;1201;Mottled Necklace +1;2;1000;1
+
+
+
