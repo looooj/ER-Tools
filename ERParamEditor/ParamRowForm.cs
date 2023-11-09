@@ -279,6 +279,8 @@ namespace ERParamEditor
             RowWrapper row1 = (RowWrapper)dataGridViewRow.SelectedRows[0].DataBoundItem;
             RowWrapper row2 = (RowWrapper)dataGridViewRow.SelectedRows[1].DataBoundItem;
             List<string> result = new();
+            result.Add(string.Format("{0} {1}  {2} {3}", 
+                row1.ID,row1.Name,row2.ID,row2.Name));
             for (int i = 0; i < row1.GetRow().Cells.Count; i++) {
                 var cell1 = row1.GetRow().Cells[i];
                 var cell2 = row2.GetRow().Cells[i];
@@ -424,6 +426,8 @@ namespace ERParamEditor
 
             ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[0].DataBoundItem;
             var row = RowListManager.GetCurrentRow();
+            if (row == null)
+                return;
             var project = GlobalConfig.GetCurrentProject();
             if (project == null)
                 return;
@@ -449,6 +453,7 @@ namespace ERParamEditor
         void changeGridViewRow(int mode, List<RowWrapper> rows, RowWrapper? currentRow)
         {
 
+            ClearCells();
 
             bindingSourceRow.DataSource = rows;
             dataGridViewRow.DataSource = bindingSourceRow.DataSource;
@@ -461,7 +466,8 @@ namespace ERParamEditor
             }
             if (currentRow == null)
             {
-                FillCells(rows[0]);
+                if (rows.Count > 0)
+                    FillCells(rows[0]);
             }
             else
             {
@@ -470,7 +476,11 @@ namespace ERParamEditor
             }
         }
 
-
+        void ClearCells() {
+            var cells = new List<ParamCellItem>();
+            bindingSourceCell.DataSource = cells;
+            dataGridViewCell.DataSource = bindingSourceCell.DataSource;
+        }
         void FillCells(RowWrapper row)
         {
 
@@ -478,10 +488,11 @@ namespace ERParamEditor
 
             var cells = ParamCellList.Build(row.GetParam(), row.GetRow());
 
-            bindingSourceCell.DataSource = cells;
-
             dataGridViewCell.AutoGenerateColumns = true;
+
+            bindingSourceCell.DataSource = cells;
             dataGridViewCell.DataSource = bindingSourceCell.DataSource;
+
             dataGridViewCell.RowHeadersVisible = false;
             dataGridViewCell.AllowUserToResizeRows = false;
             dataGridViewCell.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
