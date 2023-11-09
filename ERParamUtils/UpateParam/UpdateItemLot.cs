@@ -288,55 +288,56 @@ namespace ERParamUtils.UpateParam
                     updateCommand.AddItem(row, "lotItemId0"+i, 50000000);
                 }
 
-                //150;Furlcalling Finger Remedy;唤勾指药
-                //2909;Golden Rune [10];黄金卢恩【１０】
-                if (itemId == 150 && itemType == (int)EquipType.Good) {
+
+                if (SpecEquipConfig.IsFinger(itemId,(EquipType)itemType) )
+                {
                     updateCommand.AddItem(row, "lotItemId0" + i, 2909);
                 }
+
+                //
+                //10010;Golden Seed;黄金种子
+                //10020; Sacred Tear; 圣杯露滴
+                if ((itemId == 10010 || itemId==10020) && itemType == (int)EquipType.Good)
+                {
+                    updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                }
+
 
                 SetItemLotCount(itemId, itemType, itemCount, i, paramName, row, updateCommand);
 
             }
-
-
         }
 
         private static void SetItemLotCount(int itemId, int itemType, int itemCount, int itemIndex,
             string paramName, SoulsParam.Param.Row row, UpdateCommand updateCommand) {
 
             int newItemCount = 20;
-            if (itemType != 1 && !SpecEquipConfig.IsArrow(itemId))
-            {
-                return;
-            }
+            int specLotCount = SpecEquipConfig.GetSpec(itemId, (EquipType)itemType);
 
-            int specLotCount = SpecEquipConfig.GetSpec(itemId);
-
-
-            if (!(SpecEquipConfig.IsRune(itemId)
-                || SpecEquipConfig.IsSmithingStone(itemId)
+            if (!(SpecEquipConfig.IsRune(itemId,(EquipType)itemType)
+                || SpecEquipConfig.IsSmithingStone(itemId, (EquipType)itemType)
                 || (specLotCount > 0)
-                || SpecEquipConfig.IsRemnant(itemId)
-                || SpecEquipConfig.IsPhysickRemnant(itemId)
-                || SpecEquipConfig.IsArrow(itemId)
-                || SpecEquipConfig.IsBoluses(itemId)
-                || SpecEquipConfig.IsPot(itemId)
-                || SpecEquipConfig.IsAromatic(itemId)
-                || SpecEquipConfig.IsMaterial(itemId)
-                || SpecEquipConfig.IsMeat(itemId)
+                || SpecEquipConfig.IsRemnant(itemId, (EquipType)itemType)
+                || SpecEquipConfig.IsPhysickRemnant(itemId, (EquipType)itemType)
+                || SpecEquipConfig.IsArrow(itemId, (EquipType)itemType)
+                || SpecEquipConfig.IsBoluses(itemId, (EquipType)itemType)
+                || SpecEquipConfig.IsPot(itemId, (EquipType)itemType)
+                || SpecEquipConfig.IsAromatic(itemId, (EquipType)itemType)
+                || SpecEquipConfig.IsMaterial(itemId, (EquipType)itemType)
+                || SpecEquipConfig.IsMeat(itemId, (EquipType)itemType)
                 ))
             {
                 return;
             }
 
-            if (SpecEquipConfig.IsRemnant(itemId) 
-                || SpecEquipConfig.IsPhysickRemnant(itemId))
+            if (SpecEquipConfig.IsRemnant(itemId, (EquipType)itemType) 
+                || SpecEquipConfig.IsPhysickRemnant(itemId, (EquipType)itemType))
             {
-                newItemCount = 5;
+                newItemCount = 2;
             }
-            if (SpecEquipConfig.IsArrow(itemId) 
-                || SpecEquipConfig.IsBoluses(itemId)
-                || SpecEquipConfig.IsAromatic(itemId)
+
+            if (SpecEquipConfig.IsArrow(itemId, (EquipType)itemType) 
+                || SpecEquipConfig.IsAromatic(itemId, (EquipType)itemType)
                 )
             {
                 newItemCount = 99;

@@ -13,8 +13,8 @@ namespace ERParamUtils
         Weapon,
         Protector,
         Accessory,
-        Gem
-
+        Gem,
+        U1
     };
 
     public enum ShopEquipType

@@ -62,7 +62,7 @@ namespace ERParamUtils.UpateParam
 
 
 
-            public static void LoadUpdateItem(string updateName, UpdateCommand updateCommand)
+        public static void LoadUpdateItem(string updateName, UpdateCommand updateCommand)
         {
 
             var lines = UpateFile.Load(updateCommand.GetProject(), updateName);
@@ -223,6 +223,7 @@ namespace ERParamUtils.UpateParam
 
         private Dictionary< string, UpdateRowItemDict > _itemDict = new();
         private ParamProject _paramProject;
+        private Dictionary< string, int > _updateConfig = new();
 
 
         public UpdateCommand(ParamProject p)
@@ -230,6 +231,9 @@ namespace ERParamUtils.UpateParam
             _paramProject = p;
         }
 
+        public void SetConfig(string key, int value) {
+            _updateConfig[key] = value;
+        }
 
         public void AddItem(UpdateCommandItem item)
         {

@@ -59,7 +59,7 @@ namespace ERParamUtils.UpateParam
             for (int i = 0; i < param.Rows.Count; i++)
             {
                 SoulsParam.Param.Row row = param.Rows[i];
-                if (!SpecEquipConfig.IsMagic(row.ID)) {
+                if (!SpecEquipConfig.IsMagic(row.ID,EquipType.Good)) {
                     continue;
                 }
                 string[] keys = { "requirementLuck", "requirementIntellect", "requirementFaith" };

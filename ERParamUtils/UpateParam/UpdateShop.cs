@@ -159,52 +159,50 @@ namespace ERParamUtils.UpateParam
 
 
                 int equipId = GetEquipId(row);
-                int equipType = GetEquipType(row);
+                ShopEquipType shopEquipType = (ShopEquipType)GetEquipType(row);
+                EquipType equipType = EquipTypeUtils.ConvertShopEquipType((ShopEquipType)shopEquipType);
 
-                if (SpecEquipConfig.IsArrow(equipId)
-                    || SpecEquipConfig.IsPot(equipId)
-                    || SpecEquipConfig.IsRemnant(equipId)
-                    || SpecEquipConfig.IsSmithingStone(equipId)
-                    || SpecEquipConfig.IsGlovewort(equipId)
-                    || SpecEquipConfig.IsAromatic(equipId)
-                    || SpecEquipConfig.IsBoluses(equipId)
-                    || SpecEquipConfig.IsMagic(equipId)
-                    || SpecEquipConfig.IsMaterial(equipId)
-                    || SpecEquipConfig.IsMeat(equipId)
-                    || SpecEquipConfig.GetSpec(equipId) > 0
+                if (SpecEquipConfig.IsArrow(equipId,equipType)
+                    || SpecEquipConfig.IsPot(equipId, equipType)
+                    || SpecEquipConfig.IsRemnant(equipId, equipType)
+                    || SpecEquipConfig.IsSmithingStone(equipId, equipType)
+                    || SpecEquipConfig.IsGlovewort(equipId, equipType)
+                    || SpecEquipConfig.IsAromatic(equipId, equipType)
+                    || SpecEquipConfig.IsBoluses(equipId, equipType)
+                    || SpecEquipConfig.IsMagic(equipId, equipType)
+                    || SpecEquipConfig.IsMaterial(equipId, equipType)
+                    || SpecEquipConfig.IsMeat(equipId, equipType)
+                    || SpecEquipConfig.IsRemembrance(equipId, equipType)
+                    || SpecEquipConfig.GetSpec(equipId, equipType) > 0
                     )
                 {
 
-                    if (!SpecEquipConfig.IsMagic(equipId))
+                    if (!SpecEquipConfig.IsMagic(equipId,equipType))
                         ChangeSellAmount(row, "sellQuantity", -1, updateCommand);
-                    //ChangeSpecPrice(paramProject, row, equipId, (ShopEquipType)equipType,updateCommand);
 
                 }
-                //ChangeWeaponPrice(paramProject, row, equipId, (ShopEquipType)equipType,updateCommand);
-                ChangeToMinPrice(paramProject, row, equipId, (ShopEquipType)equipType, updateCommand);
+                ChangeToMinPrice(paramProject, row, equipId, shopEquipType, updateCommand);
 
             }
         }
 
 
         public static void ChangeToMinPrice(ParamProject paramProject,
-            SoulsParam.Param.Row row, int equipId, ShopEquipType equipType, UpdateCommand updateCommand)
+            SoulsParam.Param.Row row, int equipId, ShopEquipType shopEquipType, UpdateCommand updateCommand)
         {
 
+            EquipType equipType = EquipTypeUtils.ConvertShopEquipType(shopEquipType);
 
-            string? paramName = EquipTypeUtils.ShopTypeParamName(equipType);
+            string? paramName = EquipTypeUtils.ShopTypeParamName(shopEquipType);
             if (paramName == null)
                 return;
 
             int minPrice = ParamRowUtils.GetCellInt(paramProject, paramName, equipId, "sellValue", -1);
-            if (minPrice < 0) {
-                return;
+            if (minPrice <= 0) {
+                minPrice = 100;
             }
 
-            if (minPrice == 0)
-                minPrice = 200;
-
-            if (SpecEquipConfig.IsArrow(equipId) && equipType == ShopEquipType.Weapon)
+            if (SpecEquipConfig.IsArrow(equipId,equipType))
                 minPrice = 20;
 
             int price = ParamRowUtils.GetCellInt(row, "value", 0);
@@ -215,104 +213,7 @@ namespace ERParamUtils.UpateParam
 
         }
 
-        /*
-        public static void ChangeWeaponPrice(ParamProject paramProject, 
-            SoulsParam.Param.Row row, int equipId, ShopEquipType equipType, UpdateCommand updateCommand)
-        {
-            switch (equipType)
-            {
-                case ShopEquipType.Weapon:
-                case ShopEquipType.Protector:
-                    {
-                        string paramName = (equipType == ShopEquipType.Weapon) ? ParamNames.EquipParamWeapon : ParamNames.EquipParamProtector;
-                        int maxValue = ParamRowUtils.GetCellInt(paramProject, paramName, equipId, "sellValue", 2000);
-                        if (maxValue <= 0)
-                            maxValue = 2000;
 
-                        string price = "value";
-                        int value = ParamRowUtils.GetCellInt(row, price, 0);
-                        if (SpecEquipConfig.IsArrow(equipId))
-                            maxValue = 20;
-
-                        if (value > maxValue)
-                        {
-                            updateCommand.AddItem(row, price, maxValue + "");
-                            //UpdateLogger.InfoRow(row, price, maxValue);
-                        }
-                    }
-                    break;
-            }
-
-        }
-        static void ChangeSpecPrice(ParamProject paramProject, SoulsParam.Param.Row row, int equipId, ShopEquipType equipType, UpdateCommand updateCommand)
-        {
-
-            switch (equipType)
-            {
-                case ShopEquipType.Ash:
-                    {
-
-                        int maxValue = ParamRowUtils.GetCellInt(paramProject, ParamNames.EquipParamGem, equipId, "sellValue", -10);
-
-                        if (maxValue == -10)
-                            return;
-                        if (maxValue <= 0)
-                            maxValue = 200;
-
-                        string price = "value";
-                        int value = ParamRowUtils.GetCellInt(row, price, 0);
-                        if (value > maxValue)
-                        {
-                            updateCommand.AddItem(row, price, maxValue);
-                            //UpdateLogger.InfoRow(row, price, maxValue);
-                        }
-                    }
-                    break;
-
-                case ShopEquipType.Good:
-                case ShopEquipType.Accessory:
-                {
-
-                        int maxValue = ParamRowUtils.GetCellInt(paramProject, ParamNames.EquipParamGoods, equipId, "sellValue", 2000);
-                        if (maxValue <= 0)
-                            maxValue = 200;
-
-                        string price = "value";
-                        int value = ParamRowUtils.GetCellInt(row, price, 0);
-                        if (value > maxValue)
-                        {
-                            updateCommand.AddItem( row, price, maxValue);
-
-                            //UpdateLogger.InfoRow(row, price, maxValue);
-                        }
-                    }
-                    break;
-            }
-
-
-
-        }
-
-        static void ChangeStoneGlovewortPriceX(ParamProject paramProject, SoulsParam.Param.Row row, int equipId, UpdateCommand updateCommand)
-        {
-            if (SpecEquipConfig.IsSmithingStone(equipId) || SpecEquipConfig.IsGlovewort(equipId))
-
-            {
-
-                int maxValue = ParamRowUtils.GetCellInt(paramProject, ParamNames.EquipParamGoods, equipId, "sellValue", 2000);
-
-                //ParamRowUtils.SetCellValue(paramProject, ParamNames.EquipParamGoods, equipId, "sellValue", 5);
-
-                string price = "value";
-                int value = ParamRowUtils.GetCellInt(row, price, 0);
-                if (value > maxValue)
-                {
-                    updateCommand.AddItem( row, price, maxValue);
-                }
-            }
-        }
-
-        */
 
         static int GetEquipId(SoulsParam.Param.Row row)
         {
@@ -335,10 +236,11 @@ namespace ERParamUtils.UpateParam
 
         static void ChangeVisibility(SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
-            if (row.Name == null)
-                return;
+            //if (row.Name == null)
+            //    return;
 
-            if (row.Name.Contains("[") && row.Name.Contains("]"))
+            //if (row.Name.Contains("[") && row.Name.Contains("]"))
+            if ( row.ID < 110000 && row.ID >= 100000)
             {
 
                 string key = "eventFlag_forRelease";
