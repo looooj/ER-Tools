@@ -33,6 +33,7 @@
             buttonUpdatePublish = new Button();
             checkBoxSelectAll = new CheckBox();
             checkBoxRestore = new CheckBox();
+            checkeBoxUpdateCommandOption = new CheckedListBox();
             SuspendLayout();
             // 
             // checkBoxListTask
@@ -41,12 +42,12 @@
             checkBoxListTask.FormattingEnabled = true;
             checkBoxListTask.Location = new Point(12, 12);
             checkBoxListTask.Name = "checkBoxListTask";
-            checkBoxListTask.Size = new Size(830, 310);
+            checkBoxListTask.Size = new Size(830, 220);
             checkBoxListTask.TabIndex = 0;
             // 
             // buttonUpdate
             // 
-            buttonUpdate.Location = new Point(527, 332);
+            buttonUpdate.Location = new Point(533, 454);
             buttonUpdate.Name = "buttonUpdate";
             buttonUpdate.Size = new Size(145, 23);
             buttonUpdate.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // buttonUpdatePublish
             // 
-            buttonUpdatePublish.Location = new Point(678, 332);
+            buttonUpdatePublish.Location = new Point(684, 454);
             buttonUpdatePublish.Name = "buttonUpdatePublish";
             buttonUpdatePublish.Size = new Size(145, 23);
             buttonUpdatePublish.TabIndex = 2;
@@ -67,7 +68,7 @@
             // checkBoxSelectAll
             // 
             checkBoxSelectAll.AutoSize = true;
-            checkBoxSelectAll.Location = new Point(32, 333);
+            checkBoxSelectAll.Location = new Point(13, 249);
             checkBoxSelectAll.Name = "checkBoxSelectAll";
             checkBoxSelectAll.Size = new Size(75, 21);
             checkBoxSelectAll.TabIndex = 3;
@@ -78,18 +79,28 @@
             // checkBoxRestore
             // 
             checkBoxRestore.AutoSize = true;
-            checkBoxRestore.Location = new Point(156, 333);
+            checkBoxRestore.Location = new Point(412, 456);
             checkBoxRestore.Name = "checkBoxRestore";
             checkBoxRestore.Size = new Size(72, 21);
             checkBoxRestore.TabIndex = 4;
             checkBoxRestore.Text = "Restore";
             checkBoxRestore.UseVisualStyleBackColor = true;
+            checkBoxRestore.Visible = false;
+            // 
+            // checkeBoxUpdateCommandConfig
+            // 
+            checkeBoxUpdateCommandOption.FormattingEnabled = true;
+            checkeBoxUpdateCommandOption.Location = new Point(13, 288);
+            checkeBoxUpdateCommandOption.Name = "checkeBoxUpdateCommandConfig";
+            checkeBoxUpdateCommandOption.Size = new Size(829, 148);
+            checkeBoxUpdateCommandOption.TabIndex = 5;
             // 
             // ParamUpdateForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(853, 369);
+            ClientSize = new Size(853, 489);
+            Controls.Add(checkeBoxUpdateCommandOption);
             Controls.Add(checkBoxRestore);
             Controls.Add(checkBoxSelectAll);
             Controls.Add(buttonUpdatePublish);
@@ -113,5 +124,6 @@
         private Button buttonUpdatePublish;
         private CheckBox checkBoxSelectAll;
         private CheckBox checkBoxRestore;
+        private CheckedListBox checkeBoxUpdateCommandOption;
     }
 }

@@ -18,7 +18,8 @@ namespace ERParamUtils.UpateParam
             this.paramName = paramName;
         }
 
-        public UpdateCommandItem CreateItem() {
+        public UpdateCommandItem CreateItem()
+        {
             UpdateCommandItem item = new();
             item.ParamName = paramName;
             return item;
@@ -56,20 +57,21 @@ namespace ERParamUtils.UpateParam
 
                 if (ss.Length >= 3)
                     lotIndex = Int32.Parse(ss[2]);
-        
+
                 UpdateCommandItem item;
-                if (equipId > 0) {
+                if (equipId > 0)
+                {
                     item = CreateItem();
                     item.RowId = int.Parse(rowId);
                     item.Key = string.Format("lotItemId0{0}", lotIndex);
-                    item.Value = equipId+"";
+                    item.Value = equipId + "";
                     updateCommand.AddItem(item);
                 }
 
-                item = CreateItem();                
+                item = CreateItem();
                 item.RowId = int.Parse(rowId);
                 item.Key = string.Format("lotItemCategory0{0}", lotIndex);
-                item.Value = currentEquipType+"";
+                item.Value = currentEquipType + "";
 
                 int lotCount = 1;
 
@@ -105,7 +107,7 @@ namespace ERParamUtils.UpateParam
             foreach (string line in lines)
             {
                 itemLot.Proc(line, updateCommand);
-            }            
+            }
         }
     }
 
@@ -215,7 +217,7 @@ namespace ERParamUtils.UpateParam
 
                     item = CreateItem(rowId);
                     item.Key = string.Format("lotItemNum0{0}", index);
-                    item.Value = lastCount+"";
+                    item.Value = lastCount + "";
                     updateCommand.AddItem(item);
 
                     //newLines.Add(
@@ -284,23 +286,32 @@ namespace ERParamUtils.UpateParam
 
                 //52000000;Bolt;弩箭
                 //50000000;Arrow;箭矢
-                if (itemId == 52000000 && itemType == (int)EquipType.Weapon ) {
-                    updateCommand.AddItem(row, "lotItemId0"+i, 50000000);
-                }
-
-
-                if (SpecEquipConfig.IsFinger(itemId,(EquipType)itemType) )
+                if (itemId == 52000000 && itemType == (int)EquipType.Weapon)
                 {
-                    updateCommand.AddItem(row, "lotItemId0" + i, 2909);
+                    updateCommand.AddItem(row, "lotItemId0" + i, 50000000);
                 }
+
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceFinger))
+                    if (SpecEquipConfig.IsFinger(itemId, (EquipType)itemType))
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2909);
+                    }
 
                 //
                 //10010;Golden Seed;黄金种子
                 //10020; Sacred Tear; 圣杯露滴
-                if ((itemId == 10010 || itemId==10020) && itemType == (int)EquipType.Good)
-                {
-                    updateCommand.AddItem(row, "lotItemId0" + i, 2919);
-                }
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceGoldenSeedSacredTear))
+                    if ((itemId == 10010 || itemId == 10020) && itemType == (int)EquipType.Good)
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
+
+                //10040; Talisman Pouch; 护符皮袋  
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceTalismanPouch))
+                    if ((itemId == 10040) && itemType == (int)EquipType.Good)
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
 
 
                 SetItemLotCount(itemId, itemType, itemCount, i, paramName, row, updateCommand);
@@ -309,12 +320,13 @@ namespace ERParamUtils.UpateParam
         }
 
         private static void SetItemLotCount(int itemId, int itemType, int itemCount, int itemIndex,
-            string paramName, SoulsParam.Param.Row row, UpdateCommand updateCommand) {
+            string paramName, SoulsParam.Param.Row row, UpdateCommand updateCommand)
+        {
 
             int newItemCount = 20;
             int specLotCount = SpecEquipConfig.GetSpec(itemId, (EquipType)itemType);
 
-            if (!(SpecEquipConfig.IsRune(itemId,(EquipType)itemType)
+            if (!(SpecEquipConfig.IsRune(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsSmithingStone(itemId, (EquipType)itemType)
                 || (specLotCount > 0)
                 || SpecEquipConfig.IsRemnant(itemId, (EquipType)itemType)
@@ -330,13 +342,13 @@ namespace ERParamUtils.UpateParam
                 return;
             }
 
-            if (SpecEquipConfig.IsRemnant(itemId, (EquipType)itemType) 
+            if (SpecEquipConfig.IsRemnant(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsPhysickRemnant(itemId, (EquipType)itemType))
             {
                 newItemCount = 2;
             }
 
-            if (SpecEquipConfig.IsArrow(itemId, (EquipType)itemType) 
+            if (SpecEquipConfig.IsArrow(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsAromatic(itemId, (EquipType)itemType)
                 )
             {
@@ -355,7 +367,7 @@ namespace ERParamUtils.UpateParam
             item.ParamName = paramName;
             item.RowId = row.ID;
             item.Value = newItemCount + "";
-            item.Key = "lotItemNum0"+itemIndex;
+            item.Key = "lotItemNum0" + itemIndex;
 
             updateCommand.AddItem(item);
 
@@ -369,7 +381,7 @@ namespace ERParamUtils.UpateParam
             {
                 var param = project.FindParam(paramName);
                 if (param == null)
-                    continue;                        
+                    continue;
 
                 UpdateLogger.Begin(paramName);
 

@@ -111,7 +111,6 @@ namespace ERParamUtils.UpateParam
                 || itemId == 101
                 || itemId == 170
                 || itemId == 171
-                || itemId == 111
                 )
             {
                 return true;

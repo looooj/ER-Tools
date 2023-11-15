@@ -121,7 +121,7 @@ namespace ERParamUtils
             string path = GetRegulationPath();
             string orgPath = GetOrginalRegulationPath();
             string modPath = GetModRegulationPath();
-
+            bool useFilter = GlobalConfig.UseParamNameFilter;
             if (!File.Exists(path)) {
 
                 if (!File.Exists(orgPath))
@@ -139,13 +139,13 @@ namespace ERParamUtils
 
             LoadParamdefs();
             currentBinder = SFUtil.DecryptERRegulation(path);
-            LoadParamFromBinder(currentBinder,out _paramVersion, true);
+            LoadParamFromBinder(currentBinder, useFilter,out _paramVersion, true);
             ImpRowNames();
 
 
         }
 
-        private void LoadParamFromBinder(IBinder parambnd, out ulong version, bool checkVersion = false) //, ref Dictionary<string, FSParam.Param> paramBank, out ulong version, bool checkVersion = false)
+        private void LoadParamFromBinder(IBinder parambnd, bool useFilter,out ulong version, bool checkVersion = false) //, ref Dictionary<string, FSParam.Param> paramBank, out ulong version, bool checkVersion = false)
         {
             _params.Clear();
             //_paramWrappers.Clear();
@@ -172,7 +172,7 @@ namespace ERParamUtils
 
                 paramNames.Add(paramName);
 
-                if (!ParamNameFilter.IncludesParam(paramName))
+                if (!ParamNameFilter.IncludesParam(paramName) && useFilter )
                 {
                     continue;
                 }

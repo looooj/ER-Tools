@@ -9,7 +9,7 @@ namespace ERParamUtils
     public class ParamNameFilter
     {
 
-        static string[] includeParamNames = new string[] {
+        static string[] includeParamNames1 = new string[] {
              "ItemLotParam_enemy",
              "ItemLotParam_map",
              "SpEffectParam",
@@ -23,13 +23,15 @@ namespace ERParamUtils
              "EquipParamProtector",
              "Magic",
              "CharaInitParam",
-             "EquipMtrlSetParam",
-             "NpcParam"
-
-
+             //"EquipMtrlSetParam",
+             "NpcParam",
+             "WorldMapPointParam",
+             "WorldMapPlaceNameParam",
+             "WorldMapPieceParam",
+             "GameAreaParam",
         };
 
-        static string[] includeParamNames1 = new string[] {
+        static string[] includeParamNames = new string[] {
              "ItemLotParam_enemy",
              "ItemLotParam_map",
              "SpEffectParam",
@@ -62,7 +64,8 @@ namespace ERParamUtils
              "BehaviorParam",
              "BehaviorParam_PC",
              "TalkParam",
-             "EquipMtrlSetParam"
+             "EquipMtrlSetParam",
+             "PlayerCommonParam"
         };
 
 

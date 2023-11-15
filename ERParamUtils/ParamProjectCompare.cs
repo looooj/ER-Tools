@@ -53,15 +53,8 @@ namespace ERParamUtils
 
 
                 if (!rowDict1.TryGetValue(row2.ID, out SoulsParam.Param.Row? row1))
-                {
-
-                    if (firstCellFlag) {
-                        firstCellFlag = false;
-                        updateFile.Add("@@id={0}", row2.ID);
-                    }
-                    //result.Add(string.Format("#new row {0}  {1} {2}",
-                    //    param2.Name,
-                    //    row2.ID, row2.Name));
+                {         
+                    updateFile.Add("@@id={0}", row2.ID);
                     changeCount++;
                     updateFile.Add("#new row {0}  {1} {2}", param2.Name, row2.ID, row2.Name);
                     continue;
@@ -88,7 +81,7 @@ namespace ERParamUtils
                         firstCellFlag = false;
                         updateFile.Add("@@id={0}", row2.ID);
                     }
-                    updateFile.Add("#new value {0}  {1} {2} {3} {4}->{5}",
+                    updateFile.Add("#diff {0}  {1} {2} {3} {4}->{5}",
                         param2.Name,
                         row2.ID,
                         row2.Name,

@@ -218,12 +218,23 @@ namespace ERParamUtils.UpateParam
         }
     }
 
+    public class UpdateCommandOption
+    {
+
+
+        public static readonly string ReplaceGoldenSeedSacredTear= "ReplaceGoldenSeedSacredTear";
+        public static readonly string ReplaceTalismanPouch = "ReplaceTalismanPouch";
+        public static readonly string ReplaceFinger = "ReplaceFinger";
+
+
+    }
+
     public class UpdateCommand
     {
 
         private Dictionary< string, UpdateRowItemDict > _itemDict = new();
         private ParamProject _paramProject;
-        private Dictionary< string, int > _updateConfig = new();
+        private Dictionary< string, int > _updateOptions = new();
 
 
         public UpdateCommand(ParamProject p)
@@ -231,8 +242,14 @@ namespace ERParamUtils.UpateParam
             _paramProject = p;
         }
 
-        public void SetConfig(string key, int value) {
-            _updateConfig[key] = value;
+        public void SetOption(string key, int value) {
+            _updateOptions[key] = value;
+        }
+
+        public void AddOption(List<string> options) {
+            foreach (string key in options) {
+                SetOption(key, 1);
+            }
         }
 
         public void AddItem(UpdateCommandItem item)
@@ -309,6 +326,11 @@ namespace ERParamUtils.UpateParam
         public ParamProject GetProject()
         {
             return _paramProject;
+        }
+
+        internal bool HaveOption(string configName)
+        {
+            return _updateOptions.ContainsKey(configName);
         }
     }
 

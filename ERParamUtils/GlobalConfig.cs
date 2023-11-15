@@ -18,6 +18,8 @@ namespace ERParamUtils
 
         private static ParamProject? CurrentProject=null;
 
+        public static bool UseParamNameFilter { get; internal set; }
+
         public static ParamProject? GetCurrentProject() {
             return CurrentProject;
         }
@@ -49,6 +51,7 @@ namespace ERParamUtils
             BaseDir = config.GetString("BaseDir", BaseDir);
             AssetsDir = config.GetString("AssetsDir", AssetsDir);
             Debug = (config.GetInt("Debug", 0) != 0);
+            UseParamNameFilter = (config.GetInt("UseParamNameFilter", 1) != 0);
         }
 
         public static void Save() { 

@@ -8,10 +8,16 @@ namespace ERParamUtils.UpateParam
         public bool Publish = true;
 
         public List<UpdateParamTask> UpdateTasks = new();
+        public List<string> UpdateCommandOptions = new();
 
-        public void Add(UpdateParamTask task)
+        public void AddTask(UpdateParamTask task)
         {
             UpdateTasks.Add(task);
+        }
+
+        public void AddUpdateCommandOption(string name) {
+
+            UpdateCommandOptions.Add(name);
         }
     }
 
@@ -277,6 +283,8 @@ namespace ERParamUtils.UpateParam
 
 
             UpdateCommand updateCommand = new UpdateCommand(project);
+            updateCommand.AddOption(options.UpdateCommandOptions);
+
             foreach (var task in options.UpdateTasks)
             {
                 try
@@ -290,6 +298,13 @@ namespace ERParamUtils.UpateParam
                     throw new Exception("Exec (" + task.UpdateName + ") Error " + ex.Message);
                 }
             }
+
+            updateCommand.AddItem(UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "8"));
+            if (updateCommand.HaveOption(UpdateCommandOption.ReplaceTalismanPouch)) {
+                updateCommand.AddItem(
+                    UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));
+                    
+            }
             updateCommand.Exec(project);
             project.SaveParams();
 
@@ -302,6 +317,7 @@ namespace ERParamUtils.UpateParam
 
             UpdateLogger.Save();
             UpdateLogger.InfoTime("===End");
+            UpdateLogger.Clear();
         }
     }
 }

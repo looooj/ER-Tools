@@ -20,6 +20,7 @@ namespace ERParamEditor
         }
 
         List<UpdateParamTask> updateParamTasks = new();
+        List<string> updateCommandOptions = new();
 
         public ParamProject _paramProject;
 
@@ -28,21 +29,23 @@ namespace ERParamEditor
 
         List<string>? loadOptions()
         {
+            string fn = _paramProject.GetDir() + @"\" + optionsFile;
 
             List<string> lines = new();
-            if (!File.Exists(optionsFile))
+            if (!File.Exists(fn))
             {
                 return null;
             }
 
-            lines.AddRange(File.ReadLines(optionsFile));
+            lines.AddRange(File.ReadLines(fn));
             return lines;
         }
 
         void saveOptions(List<string> lines)
         {
 
-            File.WriteAllLines("update-opt.txt", lines);
+            string fn = _paramProject.GetDir() + @"\" + optionsFile;
+            File.WriteAllLines(fn, lines);
 
         }
 
@@ -70,7 +73,14 @@ namespace ERParamEditor
             updateParamTasks.Add(new UpdateRowParamTask());
             updateParamTasks.Add(new UpdateItemParamTask());
 
+
+
+            updateCommandOptions.Add(UpdateCommandOption.ReplaceGoldenSeedSacredTear);
+            updateCommandOptions.Add(UpdateCommandOption.ReplaceTalismanPouch);
+            updateCommandOptions.Add(UpdateCommandOption.ReplaceFinger);
+
             checkBoxListTask.Items.Clear();
+            checkeBoxUpdateCommandOption.Items.Clear();
 
 
             var saveOptions = loadOptions();
@@ -82,6 +92,17 @@ namespace ERParamEditor
                 if (saveOptions == null || saveOptions.Contains(updateParamTasks[i].GetType().Name))
                     checkBoxListTask.SetItemChecked(i, true);
             }
+
+            for (int i = 0; i < updateCommandOptions.Count; i++)
+            {
+                var optionName = updateCommandOptions[i];
+                checkeBoxUpdateCommandOption.Items.Add(optionName);
+                if (saveOptions == null || saveOptions.Contains(optionName)) {
+                    checkeBoxUpdateCommandOption.SetItemChecked(i, true);
+                }
+
+            }
+
         }
 
 
@@ -98,26 +119,36 @@ namespace ERParamEditor
                 }
             }
 
-            var options = new UpdateParamOptions();
-            List<string> lines = new();
+            var updateParamOptions = new UpdateParamOptions();
+            List<string> optionLines = new();
             for (int i = 0; i < updateParamTasks.Count; i++)
             {
 
                 if (checkBoxListTask.GetItemChecked(i))
                 {
-                    options.Add(updateParamTasks[i]);
-                    lines.Add(updateParamTasks[i].GetType().Name);
+                    updateParamOptions.AddTask(updateParamTasks[i]);
+                    optionLines.Add(updateParamTasks[i].GetType().Name);
                 }
             }
 
-            saveOptions(lines);
+            for (int i = 0; i < updateCommandOptions.Count; i++)
+            {
 
-            options.Restore = checkBoxRestore.Checked;
-            options.Publish = publish;
+                if (checkeBoxUpdateCommandOption.GetItemChecked(i))
+                {
+                    string name = updateCommandOptions[i];
+                    updateParamOptions.AddUpdateCommandOption(name);
+                    optionLines.Add(name);
+                }
+            }
 
+            saveOptions(optionLines);
+
+            updateParamOptions.Restore = checkBoxRestore.Checked;
+            updateParamOptions.Publish = publish;
             try
             {
-                UpdateParamExector.Exec(_paramProject, options);
+                UpdateParamExector.Exec(_paramProject, updateParamOptions);
 
 
                 Close();
