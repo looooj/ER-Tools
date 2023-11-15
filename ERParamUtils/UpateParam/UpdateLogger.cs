@@ -143,5 +143,13 @@ namespace ERParamUtils.UpateParam
 
         }
 
+        internal static void Clear()
+        {
+            foreach (string loggerName in LoggerDict.Keys)
+            {
+                UpdateLoggerItem item = LoggerDict[loggerName];
+                item.Lines.Clear();
+            }
+        }
     }
 }
