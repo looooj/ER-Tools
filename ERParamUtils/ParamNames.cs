@@ -9,6 +9,7 @@ namespace ERParamUtils
     public class ParamNames
     {
         public static readonly string ShopLineupParam = "ShopLineupParam";
+        public static readonly string ShopLineupParamRecipe = "ShopLineupParam_Recipe";
         public static readonly string ItemLotParamMap = "ItemLotParam_map";
         public static readonly string ItemLotParamEnemy = "ItemLotParam_enemy";
         public static readonly string CharaInitParam = "CharaInitParam";

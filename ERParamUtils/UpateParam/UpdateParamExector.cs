@@ -258,6 +258,37 @@ namespace ERParamUtils.UpateParam
         }
     }
 
+
+    public class UnlockCraftingTask : UpdateParamTask
+
+    {
+        public UnlockCraftingTask() {
+
+            Description = "UnlockCrafting";
+
+        }
+
+        public override void Exec(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+
+            for (int i = 0; i < param.Rows.Count; i++) {
+
+                var row = param.Rows[i];
+
+                string key = "eventFlag_forRelease";
+
+                if (ParamRowUtils.GetCellInt(row, key, 0) != 0)
+                {
+                    updateCommand.AddItem(row, key, "0");
+                }
+            }
+
+        }
+    }
+
     //UpdateSmithingStone
 
     public class UpdateParamExector
