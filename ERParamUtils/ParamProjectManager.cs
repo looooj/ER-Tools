@@ -54,8 +54,9 @@ namespace ERParamUtils
 
         public static List<string> GetParamNames(string? projectName) {
             var project = GlobalConfig.GetCurrentProject();
+            var filter = GlobalConfig.UseParamNameFilter;
             if (project != null ) {
-                return project.GetParamNameList(false);
+                return project.GetParamNameList(filter);
             }
             if (projectName == null) {
                 var projectList = GetProjectList();
@@ -66,7 +67,7 @@ namespace ERParamUtils
 
             project = LoadProject(projectName);
             if ( project != null )
-                return project.GetParamNameList(false);
+                return project.GetParamNameList(filter);
             return new List<string>();
         }
 

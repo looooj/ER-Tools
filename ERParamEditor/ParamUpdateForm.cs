@@ -56,6 +56,7 @@ namespace ERParamEditor
             checkBoxSelectAll.Checked = true;
 
             updateParamTasks.Add(new UnlockCraftingTask());
+            updateParamTasks.Add(new UnlockGraceTask());
             updateParamTasks.Add(new DefaultShopParamTask());
             updateParamTasks.Add(new SpecShopParamTask());
 

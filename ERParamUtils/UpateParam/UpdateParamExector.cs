@@ -260,7 +260,6 @@ namespace ERParamUtils.UpateParam
 
 
     public class UnlockCraftingTask : UpdateParamTask
-
     {
         public UnlockCraftingTask() {
 
@@ -288,7 +287,33 @@ namespace ERParamUtils.UpateParam
 
         }
     }
+    public class UnlockGraceTask : UpdateParamTask
+    {
+        public UnlockGraceTask()
+        {
 
+            Description = "UnlockGrace";
+
+        }
+
+        public override void Exec(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+            var param = paramProject.FindParam(ParamNames.BonfireWarpParam);
+            if (param == null)
+                return;
+
+            for (int i = 0; i < param.Rows.Count; i++)
+            {
+
+                var row = param.Rows[i];
+
+                string key = "eventflagId";
+                updateCommand.AddItem(row, key, "71801");
+                
+            }
+
+        }
+    }
     //UpdateSmithingStone
 
     public class UpdateParamExector
@@ -330,7 +355,9 @@ namespace ERParamUtils.UpateParam
                 }
             }
 
-            updateCommand.AddItem(UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "8"));
+            DefautItemLot.SetLotReplace(project, updateCommand);
+
+            updateCommand.AddItem(UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
             if (updateCommand.HaveOption(UpdateCommandOption.ReplaceTalismanPouch)) {
                 updateCommand.AddItem(
                     UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));

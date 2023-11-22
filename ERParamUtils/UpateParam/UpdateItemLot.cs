@@ -265,7 +265,7 @@ namespace ERParamUtils.UpateParam
     {
 
 
-        private static void SetDefaultLot(string paramName, SoulsParam.Param.Row row, UpdateCommand updateCommand)
+        private static void SetDefaultLot(SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
 
             for (int i = 1; i < 8; i++)
@@ -284,43 +284,13 @@ namespace ERParamUtils.UpateParam
                 int itemCount = ParamRowUtils.GetCellInt(row, key, 0);
 
 
-                //52000000;Bolt;弩箭
-                //50000000;Arrow;箭矢
-                if (itemId == 52000000 && itemType == (int)EquipType.Weapon)
-                {
-                    updateCommand.AddItem(row, "lotItemId0" + i, 50000000);
-                }
-
-                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceFinger))
-                    if (SpecEquipConfig.IsFinger(itemId, (EquipType)itemType))
-                    {
-                        updateCommand.AddItem(row, "lotItemId0" + i, 2909);
-                    }
-
-                //
-                //10010;Golden Seed;黄金种子
-                //10020; Sacred Tear; 圣杯露滴
-                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceGoldenSeedSacredTear))
-                    if ((itemId == 10010 || itemId == 10020) && itemType == (int)EquipType.Good)
-                    {
-                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
-                    }
-
-                //10040; Talisman Pouch; 护符皮袋  
-                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceTalismanPouch))
-                    if ((itemId == 10040) && itemType == (int)EquipType.Good)
-                    {
-                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
-                    }
-
-
-                SetItemLotCount(itemId, itemType, itemCount, i, paramName, row, updateCommand);
+                SetItemLotCount(itemId, itemType, itemCount, i, row, updateCommand);
 
             }
         }
 
         private static void SetItemLotCount(int itemId, int itemType, int itemCount, int itemIndex,
-            string paramName, SoulsParam.Param.Row row, UpdateCommand updateCommand)
+            SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
 
             int newItemCount = 20;
@@ -363,16 +333,65 @@ namespace ERParamUtils.UpateParam
                 return;
             }
 
-            UpdateCommandItem item = new();
-            item.ParamName = paramName;
-            item.RowId = row.ID;
-            item.Value = newItemCount + "";
-            item.Key = "lotItemNum0" + itemIndex;
-
-            updateCommand.AddItem(item);
+            var value = newItemCount + "";            
+            var key = "lotItemNum0" + itemIndex;            
+            updateCommand.AddItem(row,key,value);
 
         }
 
+
+        static void SetLotReplace(SoulsParam.Param.Row row, UpdateCommand updateCommand)
+        {
+
+            for (int i = 1; i < 8; i++)
+            {
+                string key = "lotItemId0" + i;
+                int itemId = ParamRowUtils.GetCellInt(row, key, 0);
+                if (itemId < 1)
+                {
+                    if (i >= 2)
+                        return;
+                    continue;
+                }
+                key = "lotItemCategory0" + i;
+                int itemType = ParamRowUtils.GetCellInt(row, key, 0);
+
+
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceFinger))
+                    if (SpecEquipConfig.IsFinger(itemId, (EquipType)itemType))
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2909);
+                    }
+                //52000000;Bolt;弩箭
+                //50000000;Arrow;箭矢
+                if (itemId == 52000000 && itemType == (int)EquipType.Weapon)
+                {
+                    updateCommand.AddItem(row, "lotItemId0" + i, 50000000);
+                }
+                //
+                //10010;Golden Seed;黄金种子
+                //10020; Sacred Tear; 圣杯露滴
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceGoldenSeedSacredTear))
+                    if ((itemId == 10010 || itemId == 10020) && itemType == (int)EquipType.Good)
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
+
+                //10030;Memory Stone;记忆石
+                if ((itemId == 10030) && itemType == (int)EquipType.Good)
+                {
+                    updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                }
+
+                //10040; Talisman Pouch; 护符皮袋  
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceTalismanPouch))
+                    if ((itemId == 10040) && itemType == (int)EquipType.Good)
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
+
+            }
+        }
 
         public static void SetDefaultLot(ParamProject project, UpdateCommand updateCommand)
         {
@@ -387,7 +406,25 @@ namespace ERParamUtils.UpateParam
 
                 foreach (var row in param.Rows)
                 {
-                    SetDefaultLot(paramName, row, updateCommand);
+                    SetDefaultLot(row, updateCommand);
+                }
+            }
+        }
+
+        public static void SetLotReplace(ParamProject project, UpdateCommand updateCommand)
+        {
+            string[] paramNames = { ParamNames.ItemLotParamMap, ParamNames.ItemLotParamEnemy };
+            foreach (string paramName in paramNames)
+            {
+                var param = project.FindParam(paramName);
+                if (param == null)
+                    continue;
+
+                UpdateLogger.Begin(paramName);
+
+                foreach (var row in param.Rows)
+                {
+                    SetLotReplace(row, updateCommand);
                 }
             }
         }

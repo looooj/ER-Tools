@@ -131,8 +131,11 @@ namespace ERParamUtils
                 {
                     //result.Add(string.Format("#{0}", key));
                     var param1 = paramDict1[key];
-                    var param2 = paramDict2[key];
-                    CompareParam(param1, param2, result);
+                    if (paramDict2.ContainsKey(key))
+                    {
+                        var param2 = paramDict2[key];
+                        CompareParam(param1, param2, result);
+                    }
                 }
 
             }
