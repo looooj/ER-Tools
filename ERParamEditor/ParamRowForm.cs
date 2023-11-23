@@ -66,6 +66,9 @@ namespace ERParamEditor
 
             menuRow.Items.Add(new ToolStripMenuItem("FindRowByName", null, findRowName_Handler));
             menuRow.Items.Add(new ToolStripSeparator());
+            menuRow.Items.Add(new ToolStripMenuItem("GotoRowName", null, gotoRowName_Handler));
+            menuRow.Items.Add(new ToolStripMenuItem("NextRow", null, nextRowName_Handler, Keys.F3));
+            menuRow.Items.Add(new ToolStripSeparator());
 
             menuRow.Items.Add(new ToolStripMenuItem("GotoRowId", null, gotoRowId_Handler));
             menuRow.Items.Add(new ToolStripSeparator());
@@ -231,6 +234,44 @@ namespace ERParamEditor
             gotoRowId(rowId);
         }
 
+        string gotoRowNameText = "";
+        int gotoRowNameIndex = 0;
+
+        void gotoRowName(string rowName)
+        {
+
+            
+            for (int i = gotoRowNameIndex; i < dataGridViewRow.Rows.Count; i++)
+            {
+                var item = (RowWrapper)dataGridViewRow.Rows[i].DataBoundItem;
+                if (item.Name != null && item.Name.Contains(rowName))
+                {
+                    scrollToRow(i);
+                    gotoRowNameIndex = i+1;
+                    return;
+                }
+            }
+            gotoRowNameIndex = 0;
+        }
+
+        private void gotoRowName_Handler(object? sender, EventArgs e) {
+            string text = "";
+            if (!InputDialog.InputBox("RowName", "RowName", ref text))
+            {
+                return;
+            }
+
+            text = text.Trim();
+            gotoRowNameText = text;
+            gotoRowNameIndex = 0;
+            gotoRowName(gotoRowNameText);
+        }
+
+        private void nextRowName_Handler(object? sender, EventArgs e)
+        {
+            gotoRowName(gotoRowNameText);
+
+        }
 
 
         private void findRowName_Handler(object? sender, EventArgs e)
