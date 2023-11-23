@@ -333,9 +333,9 @@ namespace ERParamUtils.UpateParam
                 return;
             }
 
-            var value = newItemCount + "";            
-            var key = "lotItemNum0" + itemIndex;            
-            updateCommand.AddItem(row,key,value);
+            var value = newItemCount + "";
+            var key = "lotItemNum0" + itemIndex;
+            updateCommand.AddItem(row, key, value);
 
         }
 
@@ -360,15 +360,22 @@ namespace ERParamUtils.UpateParam
                 if (updateCommand.HaveOption(UpdateCommandOption.ReplaceFinger))
                     if (SpecEquipConfig.IsFinger(itemId, (EquipType)itemType))
                     {
-                        updateCommand.AddItem(row, "lotItemId0" + i, 2909);
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
-                //52000000;Bolt;弩箭
-                //50000000;Arrow;箭矢
-                if (itemId == 52000000 && itemType == (int)EquipType.Weapon)
-                {
-                    updateCommand.AddItem(row, "lotItemId0" + i, 50000000);
-                }
-                //
+
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceCookbook))
+                    if (SpecEquipConfig.IsCookBook(itemId, (EquipType)itemType))
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
+
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceRune))
+                    if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
+                    {
+                        if (itemId < 2909)
+                            updateCommand.AddItem(row, "lotItemId0" + i, 2909);
+                    }
+
                 //10010;Golden Seed;黄金种子
                 //10020; Sacred Tear; 圣杯露滴
                 if (updateCommand.HaveOption(UpdateCommandOption.ReplaceGoldenSeedSacredTear))
@@ -378,14 +385,35 @@ namespace ERParamUtils.UpateParam
                     }
 
                 //10030;Memory Stone;记忆石
-                if ((itemId == 10030) && itemType == (int)EquipType.Good)
-                {
-                    updateCommand.AddItem(row, "lotItemId0" + i, 2919);
-                }
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceMemoryStone))
+                    if ((itemId == 10030) && itemType == (int)EquipType.Good)
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
+
+
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceStoneswordKey))
+                    //8000; Stonesword Key; 石剑钥匙
+                    if ((itemId == 8000) && itemType == (int)EquipType.Good)
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
 
                 //10040; Talisman Pouch; 护符皮袋  
                 if (updateCommand.HaveOption(UpdateCommandOption.ReplaceTalismanPouch))
                     if ((itemId == 10040) && itemType == (int)EquipType.Good)
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
+                //2090;Deathroot;死根
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceDeathroot))
+                    if ((itemId == 2090) && itemType == (int)EquipType.Good)
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
+                //190;Rune Arc;卢恩弯弧
+                if (updateCommand.HaveOption(UpdateCommandOption.ReplaceRuneArc))
+                    if ((itemId == 190) && itemType == (int)EquipType.Good)
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }

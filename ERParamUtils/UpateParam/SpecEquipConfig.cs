@@ -258,6 +258,16 @@ namespace ERParamUtils.UpateParam
             return false;
         }
 
+        public static bool IsCookBook(int itemId, EquipType equipType) {
+            if (equipType != EquipType.Good)
+                return false;
+
+            if (itemId >= 9300 && itemId <= 9441)
+                return true;
+
+            return false;
+        }
+
         public static void LoadConfig()
         {
             AddDefault();

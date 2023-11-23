@@ -109,8 +109,11 @@ namespace ERParamUtils.UpateParam
             if (paramName == null)
                 return;
 
-            int minPrice = ParamRowUtils.GetCellInt(paramProject, paramName, shopUpdateItem.NewEquipId, "sellValue", 2000);
-            int price = shopUpdateItem.Price < minPrice ? minPrice : shopUpdateItem.Price;
+            int minPrice = ParamRowUtils.GetCellInt(paramProject, paramName, shopUpdateItem.NewEquipId, "sellValue", -1);
+            if (minPrice <= 0)
+                minPrice = 100;
+
+            int price = minPrice;//shopUpdateItem.Price > minPrice ? minPrice : shopUpdateItem.Price;
 
             updateCommand.AddItem(row, "value", price);
         }

@@ -75,11 +75,15 @@ namespace ERParamEditor
             updateParamTasks.Add(new UpdateRowParamTask());
             updateParamTasks.Add(new UpdateItemParamTask());
 
-
-
             updateCommandOptions.Add(UpdateCommandOption.ReplaceGoldenSeedSacredTear);
             updateCommandOptions.Add(UpdateCommandOption.ReplaceTalismanPouch);
+            updateCommandOptions.Add(UpdateCommandOption.ReplaceRune);
+            updateCommandOptions.Add(UpdateCommandOption.ReplaceStoneswordKey);
+            updateCommandOptions.Add(UpdateCommandOption.ReplaceMemoryStone);
             updateCommandOptions.Add(UpdateCommandOption.ReplaceFinger);
+            updateCommandOptions.Add(UpdateCommandOption.ReplaceDeathroot);
+            updateCommandOptions.Add(UpdateCommandOption.ReplaceCookbook);
+
 
             checkBoxListTask.Items.Clear();
             checkeBoxUpdateCommandOption.Items.Clear();

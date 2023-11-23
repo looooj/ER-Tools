@@ -66,7 +66,8 @@ namespace ERParamUtils
              "BehaviorParam_PC",
              "TalkParam",
              "EquipMtrlSetParam",
-             "PlayerCommonParam"
+             "PlayerCommonParam",
+             "MapDefaultInfoParam"
         };
 
 

@@ -31,7 +31,9 @@ namespace ERParamUtils
         public static readonly string EquipParamAccessory = "EquipParamAccessory";
         public static readonly string PlayerCommonParam = "PlayerCommonParam";
         public static readonly string NpcParam = "NpcParam";
-
+        //
+        public static readonly string WorldMapPointParam = "WorldMapPointParam";
+        public static readonly string MapDefaultInfoParam = "MapDefaultInfoParam";
 
         internal static bool CheckValid(string paramName)
         {

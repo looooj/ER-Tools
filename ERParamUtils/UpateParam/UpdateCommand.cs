@@ -225,7 +225,13 @@ namespace ERParamUtils.UpateParam
         public static readonly string ReplaceGoldenSeedSacredTear= "ReplaceGoldenSeedSacredTear";
         public static readonly string ReplaceTalismanPouch = "ReplaceTalismanPouch";
         public static readonly string ReplaceFinger = "ReplaceFinger";
+        public static readonly string ReplaceCookbook = "ReplaceCookbook";
+        public static readonly string ReplaceDeathroot = "ReplaceDeathroot";
+        public static readonly string ReplaceRune = "ReplaceRune";
+        public static readonly string ReplaceRuneArc = "ReplaceRuneArc";
 
+        public static readonly string ReplaceStoneswordKey = "ReplaceStoneswordKey";
+        public static readonly string ReplaceMemoryStone = "ReplaceMemoryStone";
 
     }
 

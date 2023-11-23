@@ -1,4 +1,7 @@
 ﻿
+using SoulsFormats;
+using System.Reflection.Metadata.Ecma335;
+
 namespace ERParamUtils.UpateParam
 {
     public class UpdateParamOptions
@@ -15,7 +18,8 @@ namespace ERParamUtils.UpateParam
             UpdateTasks.Add(task);
         }
 
-        public void AddUpdateCommandOption(string name) {
+        public void AddUpdateCommandOption(string name)
+        {
 
             UpdateCommandOptions.Add(name);
         }
@@ -43,7 +47,7 @@ namespace ERParamUtils.UpateParam
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
             UpdateName = Description;
-            UpdateShopLineupParam.ExecDefaultUpdate(project,updateCommand);
+            UpdateShopLineupParam.ExecDefaultUpdate(project, updateCommand);
         }
     }
 
@@ -58,7 +62,7 @@ namespace ERParamUtils.UpateParam
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
             UpdateName = Description;
-            UpdateShopLineupParam.ExecSpec(project,updateCommand);
+            UpdateShopLineupParam.ExecSpec(project, updateCommand);
         }
     }
 
@@ -90,7 +94,7 @@ namespace ERParamUtils.UpateParam
         {
 
             UpdateName = Description;
-            ParamUpdateRequire.Exec(project,updateCommand);
+            ParamUpdateRequire.Exec(project, updateCommand);
 
         }
     }
@@ -108,7 +112,7 @@ namespace ERParamUtils.UpateParam
 
             UpdateName = Description;
 
-            ParamRemoveWeight.Exec(project,updateCommand);
+            ParamRemoveWeight.Exec(project, updateCommand);
 
         }
     }
@@ -127,7 +131,7 @@ namespace ERParamUtils.UpateParam
         {
             UpdateName = Description;
 
-            UpdateBuddyStone.Exec(project,updateCommand);
+            UpdateBuddyStone.Exec(project, updateCommand);
 
         }
     }
@@ -173,7 +177,7 @@ namespace ERParamUtils.UpateParam
     public class UpdateRowParamTask : UpdateParamTask
     {
 
-        internal string? ParamName { get => _paramName; set=>_paramName=value; }
+        internal string? ParamName { get => _paramName; set => _paramName = value; }
         string? _paramName = null;
 
         public UpdateRowParamTask()
@@ -254,14 +258,15 @@ namespace ERParamUtils.UpateParam
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
-            UpdateSmithingStone.Proc(project,updateCommand);
+            UpdateSmithingStone.Proc(project, updateCommand);
         }
     }
 
 
     public class UnlockCraftingTask : UpdateParamTask
     {
-        public UnlockCraftingTask() {
+        public UnlockCraftingTask()
+        {
 
             Description = "UnlockCrafting";
 
@@ -273,7 +278,8 @@ namespace ERParamUtils.UpateParam
             if (param == null)
                 return;
 
-            for (int i = 0; i < param.Rows.Count; i++) {
+            for (int i = 0; i < param.Rows.Count; i++)
+            {
 
                 var row = param.Rows[i];
 
@@ -298,21 +304,14 @@ namespace ERParamUtils.UpateParam
 
         public override void Exec(ParamProject paramProject, UpdateCommand updateCommand)
         {
-            var param = paramProject.FindParam(ParamNames.BonfireWarpParam);
-            if (param == null)
-                return;
 
-            for (int i = 0; i < param.Rows.Count; i++)
-            {
-
-                var row = param.Rows[i];
-
-                string key = "eventflagId";
-                updateCommand.AddItem(row, key, "71801");
-                
-            }
-
+            UpdateGrace.UnlockGrace(paramProject, updateCommand);
+            UpdateGrace.SetMapInfoParam(paramProject, updateCommand);
         }
+
+
+
+
     }
     //UpdateSmithingStone
 
@@ -358,10 +357,11 @@ namespace ERParamUtils.UpateParam
             DefautItemLot.SetLotReplace(project, updateCommand);
 
             updateCommand.AddItem(UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
-            if (updateCommand.HaveOption(UpdateCommandOption.ReplaceTalismanPouch)) {
+            if (updateCommand.HaveOption(UpdateCommandOption.ReplaceTalismanPouch))
+            {
                 updateCommand.AddItem(
                     UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));
-                    
+
             }
             updateCommand.Exec(project);
             project.SaveParams();
