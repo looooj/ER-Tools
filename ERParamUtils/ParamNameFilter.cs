@@ -32,6 +32,7 @@ namespace ERParamUtils
         };
 
         static string[] includeParamNames = new string[] {
+             "Bullet",
              "BonfireWarpParam",
              "ItemLotParam_enemy",
              "ItemLotParam_map",

@@ -20,7 +20,7 @@ namespace ERParamEditor
         }
 
         List<UpdateParamTask> updateParamTasks = new();
-        List<string> updateCommandOptions = new();
+        List<UpdateCommandOption> updateCommandOptions = new();
 
         public ParamProject _paramProject;
 
@@ -75,14 +75,14 @@ namespace ERParamEditor
             updateParamTasks.Add(new UpdateRowParamTask());
             updateParamTasks.Add(new UpdateItemParamTask());
 
-            updateCommandOptions.Add(UpdateCommandOption.ReplaceGoldenSeedSacredTear);
-            updateCommandOptions.Add(UpdateCommandOption.ReplaceTalismanPouch);
-            updateCommandOptions.Add(UpdateCommandOption.ReplaceRune);
-            updateCommandOptions.Add(UpdateCommandOption.ReplaceStoneswordKey);
-            updateCommandOptions.Add(UpdateCommandOption.ReplaceMemoryStone);
-            updateCommandOptions.Add(UpdateCommandOption.ReplaceFinger);
-            updateCommandOptions.Add(UpdateCommandOption.ReplaceDeathroot);
-            updateCommandOptions.Add(UpdateCommandOption.ReplaceCookbook);
+            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceGoldenSeedSacredTear));
+            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceTalismanPouch));
+            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceRune));
+            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceStoneswordKey));
+            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceMemoryStone));
+            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceFinger));
+            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceDeathroot));
+            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceCookbook));
 
 
             checkBoxListTask.Items.Clear();
@@ -101,9 +101,9 @@ namespace ERParamEditor
 
             for (int i = 0; i < updateCommandOptions.Count; i++)
             {
-                var optionName = updateCommandOptions[i];
-                checkeBoxUpdateCommandOption.Items.Add(optionName);
-                if (saveOptions == null || saveOptions.Contains(optionName)) {
+                var option = updateCommandOptions[i];
+                checkeBoxUpdateCommandOption.Items.Add(option.Description);
+                if (saveOptions == null || saveOptions.Contains(option.Name)) {
                     checkeBoxUpdateCommandOption.SetItemChecked(i, true);
                 }
 
@@ -142,9 +142,9 @@ namespace ERParamEditor
 
                 if (checkeBoxUpdateCommandOption.GetItemChecked(i))
                 {
-                    string name = updateCommandOptions[i];
-                    updateParamOptions.AddUpdateCommandOption(name);
-                    optionLines.Add(name);
+                    var option = updateCommandOptions[i];
+                    updateParamOptions.AddUpdateCommandOption(option.Name);
+                    optionLines.Add(option.Name);
                 }
             }
 

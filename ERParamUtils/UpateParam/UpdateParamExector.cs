@@ -313,7 +313,23 @@ namespace ERParamUtils.UpateParam
 
 
     }
-    //UpdateSmithingStone
+
+
+    public class ReplaceParamTask : UpdateParamTask
+    {
+
+
+        public ReplaceParamTask() { 
+
+        }
+
+        public override void Exec(ParamProject project, UpdateCommand updateCommand)
+        {
+            DefautItemLot.SetLotReplace(project, updateCommand);
+
+        }
+    }
+
 
     public class UpdateParamExector
     {
@@ -340,6 +356,17 @@ namespace ERParamUtils.UpateParam
             UpdateCommand updateCommand = new UpdateCommand(project);
             updateCommand.AddOption(options.UpdateCommandOptions);
 
+
+            updateCommand.AddItem(UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
+            if (updateCommand.HaveOption(UpdateCommandOption.ReplaceTalismanPouch))
+            {
+                updateCommand.AddItem(
+                    UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));
+
+            }
+
+            options.UpdateTasks.Insert(0, new ReplaceParamTask());
+
             foreach (var task in options.UpdateTasks)
             {
                 try
@@ -354,15 +381,7 @@ namespace ERParamUtils.UpateParam
                 }
             }
 
-            DefautItemLot.SetLotReplace(project, updateCommand);
 
-            updateCommand.AddItem(UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
-            if (updateCommand.HaveOption(UpdateCommandOption.ReplaceTalismanPouch))
-            {
-                updateCommand.AddItem(
-                    UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));
-
-            }
             updateCommand.Exec(project);
             project.SaveParams();
 

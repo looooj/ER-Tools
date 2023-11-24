@@ -221,6 +221,19 @@ namespace ERParamUtils.UpateParam
     public class UpdateCommandOption
     {
 
+        public string Name;
+        public string Description;
+
+        public UpdateCommandOption(string name)
+        {
+            Name = name;
+            Description = name;
+        }
+
+        public UpdateCommandOption(string name, string description) {
+            Name = name;
+            Description = description;
+        }
 
         public static readonly string ReplaceGoldenSeedSacredTear= "ReplaceGoldenSeedSacredTear";
         public static readonly string ReplaceTalismanPouch = "ReplaceTalismanPouch";
