@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERParamUtils", "ERParamUtil
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoulsFormats", "SoulsFormats\SoulsFormats.csproj", "{5EC4C378-1D39-4872-9246-1AFEBC590963}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudioUtils", "StudioUtils\StudioUtils.csproj", "{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VdfFile", "VdfFile\VdfFile.csproj", "{A2C8C25E-5CDE-4A16-A6CA-E191B51DB33B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1E0A6C7-D73D-4A5F-8078-161C139CA60C}"
@@ -18,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERBackup", "ERBackup\ERBackup.csproj", "{57E410B9-C5AB-40FC-B855-59C9D0147E8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERBackup", "ERBackup\ERBackup.csproj", "{57E410B9-C5AB-40FC-B855-59C9D0147E8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,18 +64,6 @@ Global
 		{5EC4C378-1D39-4872-9246-1AFEBC590963}.Release|x64.Build.0 = Release|Any CPU
 		{5EC4C378-1D39-4872-9246-1AFEBC590963}.Release|x86.ActiveCfg = Release|Any CPU
 		{5EC4C378-1D39-4872-9246-1AFEBC590963}.Release|x86.Build.0 = Release|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Debug|x64.Build.0 = Debug|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Debug|x86.Build.0 = Debug|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Release|x64.ActiveCfg = Release|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Release|x64.Build.0 = Release|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Release|x86.ActiveCfg = Release|Any CPU
-		{9CE88B7C-420A-4537-A1D5-CFB54102ACD9}.Release|x86.Build.0 = Release|Any CPU
 		{A2C8C25E-5CDE-4A16-A6CA-E191B51DB33B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2C8C25E-5CDE-4A16-A6CA-E191B51DB33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2C8C25E-5CDE-4A16-A6CA-E191B51DB33B}.Debug|x64.ActiveCfg = Debug|Any CPU
