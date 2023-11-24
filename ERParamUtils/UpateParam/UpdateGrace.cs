@@ -57,6 +57,7 @@ namespace ERParamUtils.UpateParam
 
             //650054;Castle Sol Rooftop;索尔城（屋顶）
             //610018;Waypoint Ruins Cellar;驿站街遗迹的地下室
+            
 
 
             //120400;Astel, Naturalborn of the Void;“黑暗弃子”艾丝缇
@@ -84,10 +85,16 @@ namespace ERParamUtils.UpateParam
             {
 
                 var row = param.Rows[i];
+
+                //if (row.ID >= 6100300)
+                //    continue;
+
                 if (row.ID >= 110500 && row.ID <= 110505)
                     continue;
 
-                if (skipRowIds.Contains(row.ID))
+             
+                int textId = ParamRowUtils.GetCellInt(row, "textId1", 0);                
+                if (skipRowIds.Contains(row.ID) || skipRowIds.Contains(textId) )
                     continue;
 
 
