@@ -158,8 +158,11 @@ namespace ERParamUtils.UpateParam
 
             foreach (var row in param.Rows)
             {
-                ChangeVisibility(row, updateCommand);
 
+                if (row.ID >= 110000 || row.ID < 100000)
+                    continue;
+
+                ChangeVisibility(row, updateCommand);
 
                 int equipId = GetEquipId(row);
                 ShopEquipType shopEquipType = (ShopEquipType)GetEquipType(row);
@@ -205,10 +208,16 @@ namespace ERParamUtils.UpateParam
                 minPrice = 100;
             }
 
+            int price = ParamRowUtils.GetCellInt(row, "value", 0);
+            int costType = ParamRowUtils.GetCellInt(row, "costType", 0);
+            if (costType != 0) {
+                updateCommand.AddItem(row, "costType", 0);
+                price = -1;
+            }
+
             if (SpecEquipConfig.IsArrow(equipId,equipType))
                 minPrice = 20;
 
-            int price = ParamRowUtils.GetCellInt(row, "value", 0);
             if (price > minPrice || price < 1 )
             {
                 updateCommand.AddItem(row, "value", minPrice);
