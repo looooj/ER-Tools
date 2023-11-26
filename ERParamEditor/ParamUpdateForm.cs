@@ -20,7 +20,7 @@ namespace ERParamEditor
         }
 
         List<UpdateParamTask> updateParamTasks = new();
-        List<UpdateCommandOption> updateCommandOptions = new();
+        List<UpdateParamOption> updateParamOptions = new();
 
         public ParamProject _paramProject;
 
@@ -75,19 +75,22 @@ namespace ERParamEditor
             updateParamTasks.Add(new UpdateRowParamTask());
             updateParamTasks.Add(new UpdateItemParamTask());
 
-            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceGoldenSeedSacredTear));
-            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceTalismanPouch));
-            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceRune));
-            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceStoneswordKey));
-            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceMemoryStone));
-            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceFinger));
-            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceDeathroot));
-            updateCommandOptions.Add(new UpdateCommandOption(UpdateCommandOption.ReplaceCookbook));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGoldenSeedSacredTear));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceTalismanPouch));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRune));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceStoneswordKey));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceMemoryStone));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceFinger));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDeathroot));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
 
 
             checkBoxListTask.Items.Clear();
             checkeBoxUpdateCommandOption.Items.Clear();
 
+
+            MultiLang.ApplyMessage(updateParamTasks);
+            MultiLang.ApplyMessage(updateParamOptions);
 
             var saveOptions = loadOptions();
 
@@ -99,9 +102,9 @@ namespace ERParamEditor
                     checkBoxListTask.SetItemChecked(i, true);
             }
 
-            for (int i = 0; i < updateCommandOptions.Count; i++)
+            for (int i = 0; i < updateParamOptions.Count; i++)
             {
-                var option = updateCommandOptions[i];
+                var option = updateParamOptions[i];
                 checkeBoxUpdateCommandOption.Items.Add(option.Description);
                 if (saveOptions == null || saveOptions.Contains(option.Name)) {
                     checkeBoxUpdateCommandOption.SetItemChecked(i, true);
@@ -137,12 +140,12 @@ namespace ERParamEditor
                 }
             }
 
-            for (int i = 0; i < updateCommandOptions.Count; i++)
+            for (int i = 0; i < this.updateParamOptions.Count; i++)
             {
 
                 if (checkeBoxUpdateCommandOption.GetItemChecked(i))
                 {
-                    var option = updateCommandOptions[i];
+                    var option = this.updateParamOptions[i];
                     updateParamOptions.AddUpdateCommandOption(option.Name);
                     optionLines.Add(option.Name);
                 }

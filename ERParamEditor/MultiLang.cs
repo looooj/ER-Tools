@@ -8,41 +8,119 @@ using System.Globalization;
 using System.Resources;
 using SoulsFormats.KF4;
 using System.Runtime.InteropServices;
+using ERParamUtils;
+using static SoulsFormats.MSB.Shape.Composite;
+using ERParamUtils.UpateParam;
 
 namespace ERParamEditor
 {
+    
+
     public class MultiLang
     {
 
-        //Dictionary<string, CultureInfo> CultureInfo
-        static CultureInfo? currentCultureInfo;
-        static ResourceManager? resourceManager;
-        static string cultureName = "default";
-        public static bool Need() {
-            if (cultureName == "default")
-                return false;
-            return true;
+        static Dictionary<string, Dictionary<string, string>> MessageDict = new();
+
+        static string CurrentLangId = "eng";
+
+        public static void SwitchLanguage(string langId) {
+
+
+
+            if (CurrentLangId == langId)
+                return;
+
+            MessageDict.Clear();
+
+            CurrentLangId = langId;
+
+
+
+            var dirs = Directory.GetDirectories(".\\locales","*.*");
+            foreach (string d in dirs) {
+
+                LoadDir(d);
+               
+            }           
+
         }
-        public static void SwitchLanguage() {
 
-            if (CultureInfo.CurrentCulture.Name == "zh-CN")
-                cultureName = "zho";
+        public static void LoadDir(string dir) {
 
-            currentCultureInfo = new CultureInfo(cultureName);
+            var files = Directory.GetFiles(dir);
+            foreach (string file in files) {
 
-
-            resourceManager = new ResourceManager("ERParamEditor.Resource.lang.zho",
-                typeof(MultiLang).Assembly);
+                var dict = ConfigUtils.LoadDict(file);
+                var id = Path.GetFileNameWithoutExtension(file);
+                MessageDict.Add(id, dict);
+            }
         }
 
-        public static string GetString(string text) {
+        public static void ApplyForm(Control control, string id) {
+            if (!MessageDict.ContainsKey(id))
+                return;
 
-            if (!Need())
-                return text;
-            if (resourceManager == null || currentCultureInfo == null )
-                return text;
+            var dict = MessageDict[id];
+            foreach (var key in dict.Keys) {
 
-            return resourceManager.GetString(text, currentCultureInfo);
+                ApplyControl(control, key, dict[key]);
+            }
+        }
+
+        public static void ApplyControl(Control? control, string id, string text)
+        {
+            if (control == null)
+                return;
+
+            if (control.Name == id) {
+
+                control.Text = text;
+                return;
+            }
+            if (!control.HasChildren)
+                return;
+
+            foreach (Control child in control.Controls) {
+                ApplyControl(child, id, text);
+            }
+        }
+
+
+        public static void Default() {
+
+            string langId = CultureInfo.CurrentCulture.ThreeLetterISOLanguageName;
+            SwitchLanguage(langId);
+        }
+
+        public static void ApplyMessage(List<UpdateParamOption> updateParamOptions)
+        {
+            var id = "UpdateParamTask";
+            if (!MessageDict.ContainsKey(id))
+                return;
+            var dict = MessageDict[id];
+
+            foreach(UpdateParamOption option in updateParamOptions) {
+                if (dict.TryGetValue(option.Name, out string? text)) {
+
+                    option.Description = text;
+                }
+            }
+        }
+
+        public static void ApplyMessage(List<UpdateParamTask> updateParamTasks)
+        {
+            var id = "UpdateParamTask";
+            if (!MessageDict.ContainsKey(id))
+                return;
+            var dict = MessageDict[id];
+            
+            foreach (UpdateParamTask task in updateParamTasks) {
+
+                var name = task.GetType().Name;
+                if (dict.TryGetValue(name, out string? text)) {
+                    task.Description = text;
+                }
+            }
         }
     }
 }

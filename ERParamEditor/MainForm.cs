@@ -101,7 +101,8 @@ namespace ERParamEditor
 
             SpecEquipConfig.LoadConfig();
 
-            MultiLang.SwitchLanguage();
+            MultiLang.Default();
+            MultiLang.ApplyForm(this, "MainForm");
         }
 
         void EnabledPanels(bool enabled)
@@ -129,7 +130,7 @@ namespace ERParamEditor
             listViewProject.Items.Clear();
             listViewParam.Items.Clear();
 
-            ListViewUtils.AddItem(listViewProject, "CurrentCulture", CultureInfo.CurrentCulture.Name);
+            ListViewUtils.AddItem(listViewProject, "CurrentCulture", CultureInfo.CurrentCulture.ThreeLetterISOLanguageName);
 
 
             ListViewUtils.AddItem(listViewProject, "GlobalConfig");

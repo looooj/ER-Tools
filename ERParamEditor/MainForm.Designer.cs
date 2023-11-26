@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
+            buttonCompare = new Button();
             buttonOpen = new Button();
             buttonCreate = new Button();
             panelClient = new Panel();
@@ -47,7 +48,6 @@
             buttonTest = new Button();
             buttonExec = new Button();
             errorProvider1 = new ErrorProvider(components);
-            buttonCompare = new Button();
             panel1.SuspendLayout();
             panelClient.SuspendLayout();
             panelParamList.SuspendLayout();
@@ -67,6 +67,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1008, 47);
             panel1.TabIndex = 3;
+            // 
+            // buttonCompare
+            // 
+            buttonCompare.Location = new Point(206, 12);
+            buttonCompare.Name = "buttonCompare";
+            buttonCompare.Size = new Size(75, 23);
+            buttonCompare.TabIndex = 2;
+            buttonCompare.Text = "Compare";
+            buttonCompare.UseVisualStyleBackColor = true;
+            buttonCompare.Click += buttonCompare_Click;
             // 
             // buttonOpen
             // 
@@ -228,16 +238,6 @@
             // errorProvider1
             // 
             errorProvider1.ContainerControl = this;
-            // 
-            // buttonCompare
-            // 
-            buttonCompare.Location = new Point(206, 12);
-            buttonCompare.Name = "buttonCompare";
-            buttonCompare.Size = new Size(75, 23);
-            buttonCompare.TabIndex = 2;
-            buttonCompare.Text = "Compare";
-            buttonCompare.UseVisualStyleBackColor = true;
-            buttonCompare.Click += buttonCompare_Click;
             // 
             // MainForm
             // 
