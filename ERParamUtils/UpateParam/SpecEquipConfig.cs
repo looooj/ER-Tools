@@ -27,7 +27,10 @@ namespace ERParamUtils.UpateParam
             }
             return 0;
         }
-
+        //6070;Sacrificial Twig;牺牲细枝
+        public static bool IsSacrificialTwig(int equipId, EquipType equipType) {
+            return (equipId == 6070 && equipType == EquipType.Accessory);
+        }
 
         public static void AddSpec(int lotCount, params int[] equipIds)
         {

@@ -358,7 +358,7 @@ namespace ERParamUtils.UpateParam
 
 
             updateCommand.AddItem(UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
-            if (updateCommand.HaveOption(UpdateCommandOption.ReplaceTalismanPouch))
+            if (updateCommand.HaveOption(UpdateParamOption.ReplaceTalismanPouch))
             {
                 updateCommand.AddItem(
                     UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));

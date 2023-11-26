@@ -218,19 +218,19 @@ namespace ERParamUtils.UpateParam
         }
     }
 
-    public class UpdateCommandOption
+    public class UpdateParamOption
     {
 
         public string Name;
         public string Description;
 
-        public UpdateCommandOption(string name)
+        public UpdateParamOption(string name)
         {
             Name = name;
             Description = name;
         }
 
-        public UpdateCommandOption(string name, string description) {
+        public UpdateParamOption(string name, string description) {
             Name = name;
             Description = description;
         }

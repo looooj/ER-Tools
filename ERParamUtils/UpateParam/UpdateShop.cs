@@ -175,17 +175,14 @@ namespace ERParamUtils.UpateParam
                     || SpecEquipConfig.IsGlovewort(equipId, equipType)
                     || SpecEquipConfig.IsAromatic(equipId, equipType)
                     || SpecEquipConfig.IsBoluses(equipId, equipType)
-                    || SpecEquipConfig.IsMagic(equipId, equipType)
                     || SpecEquipConfig.IsMaterial(equipId, equipType)
                     || SpecEquipConfig.IsMeat(equipId, equipType)
                     || SpecEquipConfig.IsRemembrance(equipId, equipType)
+                    || SpecEquipConfig.IsSacrificialTwig(equipId, equipType)
                     || SpecEquipConfig.GetSpec(equipId, equipType) > 0
                     )
                 {
-
-                    if (!SpecEquipConfig.IsMagic(equipId,equipType))
-                        ChangeSellAmount(row, "sellQuantity", -1, updateCommand);
-
+                    ChangeSellAmount(row, "sellQuantity", -1, updateCommand);
                 }
                 ChangeToMinPrice(paramProject, row, equipId, shopEquipType, updateCommand);
 
