@@ -61,7 +61,7 @@ namespace ERParamEditor
 
                 var item = result[i];
 
-                SoulsParam.Param param = project.FindParam(item.ParamName);
+                SoulsParam.Param? param = project.FindParam(item.ParamName);
                 if (param == null)
                     continue;
                 var row = ParamRowUtils.FindRow(param, item.RowId);
@@ -74,7 +74,7 @@ namespace ERParamEditor
 
             }
 
-            ParamRowForm paramRowForm = new ParamRowForm();
+            ParamRowForm paramRowForm = new ();
             RowListManager.Add(1, rowMappers);
 
             paramRowForm.ShowDialog();

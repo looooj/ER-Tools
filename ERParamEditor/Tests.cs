@@ -52,7 +52,7 @@ namespace ERParamEditor
             foreach (var file in files) {
                 try
                 {
-                    BinderFileUtils.ExtractDCX(file, targetDir);
+                    SoulsFileUtils.ExtractDCX(file, targetDir);
                 }
                 catch (Exception ex) {
 
@@ -60,6 +60,55 @@ namespace ERParamEditor
                 }
             }
 
+        }
+
+        public static void ExtractMsg() {
+
+            string[] langs = { "engus","zhocn" };
+            foreach (string lang in langs)
+            {
+                string dir = @"D:\docs\game\er\unpack-\unpack-files\msg\"+lang;
+                string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text";
+                var files = Directory.GetFiles(dir, "*.dcx");
+                foreach (var file in files)
+                {
+                    try
+                    {
+                        SoulsFileUtils.ExtractDCX(file, targetDir);
+                    }
+                    catch (Exception ex)
+                    {
+
+                        logger.Error(ex, file);
+                    }
+                }
+            }
+
+
+        }
+
+        public static void TestEvent() {
+
+
+            string dir = @"D:\docs\game\er\unpack-\unpack-files\event";
+            string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text\event";
+            var files = Directory.GetFiles(dir, "*.dcx");
+            int testCount = 0;
+            foreach (var file in files)
+            {
+                try
+                {
+                    testCount++;
+                    if (testCount > 10)
+                        break;
+                    SoulsFileUtils.ExtractDCX(file, targetDir);
+                }
+                catch (Exception ex)
+                {
+
+                    logger.Error(ex, file);
+                }
+            }
         }
 
         public static void TestDCX2() {
@@ -75,7 +124,7 @@ namespace ERParamEditor
 
                 try
                 {
-                    BinderFileUtils.ExtractDCX(file, targetDir);
+                    SoulsFileUtils.ExtractDCX(file, targetDir);
                 }
                 catch (Exception ex)
                 {
@@ -184,9 +233,52 @@ namespace ERParamEditor
 
         }
 
+
+        public static void TestMaps() {
+
+            /*
+             			FMG fMG = game.ItemFMGs["NpcName"];
+			merchantNames = new HashSet<int>(from e in fMG.Entries
+				where e.Text != null && e.Text.Contains("Merchant")
+				select e.ID);
+			foreach (PARAM.Row row10 in game.Params["WorldMapPointParam"].Rows)
+			{
+				if ((int)row10["textId1"].Value > 0)
+				{
+					row10["eventFlagId"].Value = (uint)mapUnlockFlag;
+				}
+				rewriteMerchantIcons(row10);
+			}
+			foreach (PARAM.Row row11 in game.Params["BonfireWarpParam"].Rows)
+			{
+				rewriteMerchantIcons(row11);
+			}
+            
+
+            		void rewriteMerchantIcons(PARAM.Row row)
+		{
+			for (int m = 1; m <= 8; m++)
+			{
+				int num8 = (int)row[$"textId{m}"].Value;
+				if (merchantNames.Contains(num8))
+				{
+					row[$"textEnableFlagId{m}"].Value = (uint)mapUnlockFlag;
+					int value5 = 0;
+					if (result != null && result.MerchantGiftFlags.TryGetValue(num8, out value5) && value5 != 400049)
+					{
+						row[$"textDisableFlagId{m}"].Value = (uint)value5;
+					}
+				}
+			}
+		}
+
+             */
+
+        }
+
         public static void Run() {
 
-            TestGenChNames();
+            TestEvent();
         }
     }
 }

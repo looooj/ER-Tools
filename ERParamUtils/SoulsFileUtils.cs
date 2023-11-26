@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace ERParamUtils
 {
@@ -18,26 +19,42 @@ namespace ERParamUtils
         }
     }
 
-    public class BinderFileUtils
+    public class SoulsFileUtils
     {
+
 
         public static void ExtractDCX(string dcxName, string targetDir) {
 
             Directory.CreateDirectory(targetDir);
 
+            if (dcxName.Contains("bnd"))
+            {
+
+                ProcBnd(dcxName, targetDir);
+                return;
+            }
+
+            if (dcxName.Contains("emevd")) {
+
+                ProcEMEVD(dcxName,targetDir);
+            }
+        }
+
+        public static void ProcBnd(string dcxName, string targetDir) {
+
             var bytes = DCX.Decompress(dcxName, out DCX.Type dcxType);
-            string outPath = targetDir + @"/"+ 
-                Path.GetFileNameWithoutExtension(dcxName)
-                + dcxType.ToString();
+            string outPath = string.Format(@"{0}/{1}.{2}",
+                targetDir,
+                Path.GetFileNameWithoutExtension(dcxName),
+                 dcxType.ToString());
 
             File.WriteAllBytes(outPath, bytes);
-
-            BND4Reader bnd = new BND4Reader(outPath);
+            BND4Reader bnd = new BND4Reader(dcxName);
 
 
             var xws = new XmlWriterSettings();
             xws.Indent = true;
-            var xw = XmlWriter.Create( targetDir +@"\"+Path.GetFileNameWithoutExtension(dcxName)+".xml", xws);
+            var xw = XmlWriter.Create(targetDir + @"\" + Path.GetFileNameWithoutExtension(dcxName) + ".xml", xws);
             xw.WriteStartElement("bnd4");
             xw.WriteElementString("filename", dcxName);
             xw.WriteElementString("compression", bnd.Compression.ToString());
@@ -53,10 +70,11 @@ namespace ERParamUtils
             NullProgress testProgress = new();
 
             string tag = Path.GetFileNameWithoutExtension(dcxName);
-            BinderFileUtils.WriteBinderFiles(bnd, xw, targetDir+"/"+tag, testProgress);
+            SoulsFileUtils.WriteBinderFiles(bnd, xw, targetDir + "/" + tag, testProgress);
 
             xw.WriteEndElement();
             xw.Close();
+            bnd.Dispose();
         }
 
         public static void WriteBinderFiles(BinderReader bnd, XmlWriter xw, string targetDir, IProgress<float> progress)
@@ -118,7 +136,7 @@ namespace ERParamUtils
 
                 if ( outPath.EndsWith(".fmg"))
                      ProcFMGFile(false, outPath);
-
+                
                 //unpack-files-text\m10_00_00_00_low.ivinfobnd\map\m10_00_00_00\tex\Envmap\low\IvInfo\m10_00_00_00_GIIV0000_00.ivInfo
                 if (outPath.EndsWith(".ivInfo")) {
 
@@ -167,13 +185,75 @@ namespace ERParamUtils
                 xw.WriteEndElement();
                 xw.Close();
 
-                
+
                 //file.Compression = compression;
                 //file.Read(br);
                 //return file;
+                stream.Dispose();
             }
-
+            
         }
+
+        //emevd
+        static void ProcEMEVDParam(XmlWriter xw, EMEVD.Event ev) {
+            xw.WriteStartElement("Parameters");
+
+            for (int i = 0; i < ev.Parameters.Count; i++) {
+                xw.WriteStartElement("Param");
+                var p = ev.Parameters[i];
+                xw.WriteElementString("InstructionIndex", p.InstructionIndex+"");
+
+                xw.WriteEndElement();
+            }
+            xw.WriteEndElement();
+        }
+        static void ProcEMEVDInstructions(XmlWriter xw, EMEVD.Event ev)
+        {
+            xw.WriteStartElement("Instructions");
+
+            for (int i = 0; i < ev.Instructions.Count; i++)
+            {
+                xw.WriteStartElement("Instruction");
+                var instruction = ev.Instructions[i];
+
+                xw.WriteElementString("ID", instruction.ID+"");
+                xw.WriteElementString("Bank", instruction.Bank + "");
+                xw.WriteElementString("ArgData", instruction.ArgData + "");
+                xw.WriteEndElement();
+            }
+            xw.WriteEndElement();
+        }
+
+        public static void ProcEMEVD(string path,string targetDir) {
+
+            string outPath = string.Format(@"{0}/{1}",
+                     targetDir,
+            Path.GetFileNameWithoutExtension(path));
+
+            EMEVD emevd = EMEVD.Read(path);
+
+
+            var xws = new XmlWriterSettings();
+            xws.Indent = true;
+
+            var name = outPath + ".xml";
+            var xw = XmlWriter.Create(name, xws);
+            xw.WriteStartElement("events");
+
+            for (int i = 0; i < emevd.Events.Count; i++) {
+
+                var ev = emevd.Events[i];
+                xw.WriteStartElement("event");
+                xw.WriteElementString("ID", ev.ID+"" );
+                xw.WriteElementString("Name", ev.Name);
+                ProcEMEVDInstructions(xw, ev);
+                xw.WriteEndElement();
+
+            }
+            xw.WriteEndElement();
+            xw.Close();
+        }
+
         public static void ProcFMGFile(bool bigEndian, string path) {
 
 
@@ -203,7 +283,6 @@ namespace ERParamUtils
             xw.Close();
             //File.WriteAllLines(path + ".txt",lines);
 
-            
 
         }
     }

@@ -8,38 +8,58 @@ namespace ERParamUtils
 {
     public class ConfigUtils
     {
-        public static void LineToDict(string s, Dictionary<string, string> dict, bool keyNameToLower)
+        public static void LineToDict(string s, Dictionary<string, string> dict)
         {
             s = s.Trim();
             if (s.StartsWith("#"))
                 return;
             s = s.Replace("\x0d", string.Empty);
             s = s.Replace("\x0a", string.Empty);
-            var items = s.Split('=');
-            if (items.Length == 2)
+            int pos = s.IndexOf("=");
+            if (pos < 1)
+                return;
+
+            
             {
-                string key = items[0];
-                if (keyNameToLower)
-                    key = items[0].ToLower();
-                dict[key] = items[1];
+                string key = s.Substring(0, pos);
+                string v = s.Substring(pos+1, (s.Length - pos-1));
+
+                v = ReplaceVar(v, dict);
+                dict[key] = v;
+                dict[key.ToLower()] = v;
             }
         }
 
-    }
+        static string ReplaceVar(string val, Dictionary<string, string> dict) {
 
-    public class DictConfig
-    {
+            foreach (string key in dict.Keys) {
+                var v = "${" + key + "}";
 
-        protected Dictionary<string, string> Dict = new Dictionary<string, string>();
+                val = val.Replace(v, dict[key]);
+            }
+            return val;
+        }
 
-        public void Load(string filename)
+        public static Dictionary<string, string> LoadDict(string filename)
         {
+            Dictionary<string, string> dict = new();
             string[] lines = File.ReadAllLines(filename);
             for (int i = 0; i < lines.Length; i++)
             {
-                ConfigUtils.LineToDict(lines[i], Dict, true);
+                LineToDict(lines[i], dict);
             }
+            return dict;
+        }
+    }
+    public class DictConfig
+    {
 
+        protected Dictionary<string, string> Dict = new();
+
+
+        public void Load(string filename)
+        {
+            Dict = ConfigUtils.LoadDict(filename);
         }
 
         public void Save(string filename) {
@@ -55,14 +75,20 @@ namespace ERParamUtils
         public void SetString(string key, string value)
         {
             Dict[key] = value;
+            //Dict[key.ToLower()] = value;
         }
 
         public string GetString(string key, string def)
         {
-            if (Dict.TryGetValue(key.ToLower(), out string? v))
+            if (Dict.TryGetValue(key, out string? v1))
             {
-                return v;
+                return v1;
             }
+            if (Dict.TryGetValue(key.ToLower(), out string? v2))
+            {
+                return v2;
+            }
+
             return def;
         }
         public int GetInt(string key, int def)
