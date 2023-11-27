@@ -83,10 +83,12 @@ namespace ERParamEditor
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceFinger));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDeathroot));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
 
 
-            checkBoxListTask.Items.Clear();
-            checkeBoxUpdateCommandOption.Items.Clear();
+            checkListBoxTask.Items.Clear();
+            checkListBoxUpdateCommandOption.Items.Clear();
 
 
             MultiLang.ApplyMessage(updateParamTasks);
@@ -97,17 +99,17 @@ namespace ERParamEditor
             for (int i = 0; i < updateParamTasks.Count; i++)
             {
 
-                checkBoxListTask.Items.Add(updateParamTasks[i].Description);
+                checkListBoxTask.Items.Add(updateParamTasks[i].Description);
                 if (saveOptions == null || saveOptions.Contains(updateParamTasks[i].GetType().Name))
-                    checkBoxListTask.SetItemChecked(i, true);
+                    checkListBoxTask.SetItemChecked(i, true);
             }
 
             for (int i = 0; i < updateParamOptions.Count; i++)
             {
                 var option = updateParamOptions[i];
-                checkeBoxUpdateCommandOption.Items.Add(option.Description);
+                checkListBoxUpdateCommandOption.Items.Add(option.Description);
                 if (saveOptions == null || saveOptions.Contains(option.Name)) {
-                    checkeBoxUpdateCommandOption.SetItemChecked(i, true);
+                    checkListBoxUpdateCommandOption.SetItemChecked(i, true);
                 }
 
             }
@@ -133,7 +135,7 @@ namespace ERParamEditor
             for (int i = 0; i < updateParamTasks.Count; i++)
             {
 
-                if (checkBoxListTask.GetItemChecked(i))
+                if (checkListBoxTask.GetItemChecked(i))
                 {
                     updateParamOptions.AddTask(updateParamTasks[i]);
                     optionLines.Add(updateParamTasks[i].GetType().Name);
@@ -143,7 +145,7 @@ namespace ERParamEditor
             for (int i = 0; i < this.updateParamOptions.Count; i++)
             {
 
-                if (checkeBoxUpdateCommandOption.GetItemChecked(i))
+                if (checkListBoxUpdateCommandOption.GetItemChecked(i))
                 {
                     var option = this.updateParamOptions[i];
                     updateParamOptions.AddUpdateCommandOption(option.Name);
@@ -189,10 +191,16 @@ namespace ERParamEditor
 
         private void checkBoxSelectAll_CheckedChanged(object? sender, EventArgs e)
         {
-            for (int i = 0; i < checkBoxListTask.Items.Count; i++)
+            for (int i = 0; i < checkListBoxTask.Items.Count; i++)
             {
-                checkBoxListTask.SetItemChecked(i, checkBoxSelectAll.Checked);
+                checkListBoxTask.SetItemChecked(i, checkBoxSelectAll.Checked);
             }
+
+            for (int i = 0; i < checkListBoxUpdateCommandOption.Items.Count; i++)
+            {
+                checkListBoxUpdateCommandOption.SetItemChecked(i, checkBoxSelectAll.Checked);
+            }
+
         }
     }
 }

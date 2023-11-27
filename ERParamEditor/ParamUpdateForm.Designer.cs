@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            checkBoxListTask = new CheckedListBox();
+            checkListBoxTask = new CheckedListBox();
             buttonUpdate = new Button();
             buttonUpdatePublish = new Button();
             checkBoxSelectAll = new CheckBox();
             checkBoxRestore = new CheckBox();
-            checkeBoxUpdateCommandOption = new CheckedListBox();
+            checkListBoxUpdateCommandOption = new CheckedListBox();
             SuspendLayout();
             // 
-            // checkBoxListTask
+            // checkListBoxTask
             // 
-            checkBoxListTask.Font = new Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBoxListTask.FormattingEnabled = true;
-            checkBoxListTask.Location = new Point(12, 12);
-            checkBoxListTask.Name = "checkBoxListTask";
-            checkBoxListTask.Size = new Size(830, 220);
-            checkBoxListTask.TabIndex = 0;
+            checkListBoxTask.Font = new Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkListBoxTask.FormattingEnabled = true;
+            checkListBoxTask.Location = new Point(12, 12);
+            checkListBoxTask.Name = "checkListBoxTask";
+            checkListBoxTask.Size = new Size(830, 220);
+            checkListBoxTask.TabIndex = 0;
             // 
             // buttonUpdate
             // 
-            buttonUpdate.Location = new Point(533, 454);
+            buttonUpdate.Location = new Point(546, 531);
             buttonUpdate.Name = "buttonUpdate";
             buttonUpdate.Size = new Size(145, 23);
             buttonUpdate.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // buttonUpdatePublish
             // 
-            buttonUpdatePublish.Location = new Point(684, 454);
+            buttonUpdatePublish.Location = new Point(697, 531);
             buttonUpdatePublish.Name = "buttonUpdatePublish";
             buttonUpdatePublish.Size = new Size(145, 23);
             buttonUpdatePublish.TabIndex = 2;
@@ -79,7 +79,7 @@
             // checkBoxRestore
             // 
             checkBoxRestore.AutoSize = true;
-            checkBoxRestore.Location = new Point(412, 456);
+            checkBoxRestore.Location = new Point(425, 533);
             checkBoxRestore.Name = "checkBoxRestore";
             checkBoxRestore.Size = new Size(72, 21);
             checkBoxRestore.TabIndex = 4;
@@ -87,25 +87,25 @@
             checkBoxRestore.UseVisualStyleBackColor = true;
             checkBoxRestore.Visible = false;
             // 
-            // checkeBoxUpdateCommandConfig
+            // checkListBoxUpdateCommandOption
             // 
-            checkeBoxUpdateCommandOption.FormattingEnabled = true;
-            checkeBoxUpdateCommandOption.Location = new Point(13, 288);
-            checkeBoxUpdateCommandOption.Name = "checkeBoxUpdateCommandConfig";
-            checkeBoxUpdateCommandOption.Size = new Size(829, 148);
-            checkeBoxUpdateCommandOption.TabIndex = 5;
+            checkListBoxUpdateCommandOption.FormattingEnabled = true;
+            checkListBoxUpdateCommandOption.Location = new Point(13, 288);
+            checkListBoxUpdateCommandOption.Name = "checkListBoxUpdateCommandOption";
+            checkListBoxUpdateCommandOption.Size = new Size(829, 220);
+            checkListBoxUpdateCommandOption.TabIndex = 5;
             // 
             // ParamUpdateForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(853, 489);
-            Controls.Add(checkeBoxUpdateCommandOption);
+            ClientSize = new Size(853, 566);
+            Controls.Add(checkListBoxUpdateCommandOption);
             Controls.Add(checkBoxRestore);
             Controls.Add(checkBoxSelectAll);
             Controls.Add(buttonUpdatePublish);
             Controls.Add(buttonUpdate);
-            Controls.Add(checkBoxListTask);
+            Controls.Add(checkListBoxTask);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
@@ -119,11 +119,11 @@
 
         #endregion
 
-        private CheckedListBox checkBoxListTask;
+        private CheckedListBox checkListBoxTask;
         private Button buttonUpdate;
         private Button buttonUpdatePublish;
         private CheckBox checkBoxSelectAll;
         private CheckBox checkBoxRestore;
-        private CheckedListBox checkeBoxUpdateCommandOption;
+        private CheckedListBox checkListBoxUpdateCommandOption;
     }
 }

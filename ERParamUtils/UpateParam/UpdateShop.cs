@@ -1,11 +1,14 @@
 ﻿using Org.BouncyCastle.Asn1.Mozilla;
+using Org.BouncyCastle.Asn1.Ocsp;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static SoulsFormats.MSBE.Event;
+using static SoulsFormats.PARAM;
 
 namespace ERParamUtils.UpateParam
 {
@@ -120,8 +123,91 @@ namespace ERParamUtils.UpateParam
     }
 
 
+    public class UpdateShopLineupParamRecipe
+    {
 
 
+        public static void UnlockCrafting(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+
+            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+
+            for (int i = 0; i < param.Rows.Count; i++)
+            {
+
+                var row = param.Rows[i];
+
+                string key = "eventFlag_forRelease";
+
+                if (ParamRowUtils.GetCellInt(row, key, 0) != 0)
+                {
+                    updateCommand.AddItem(row, key, "0");
+                }
+            }
+            //AddTest(paramProject, updateCommand);
+        }
+
+        //Whetblade
+
+        public static void AddGood(UpdateCommand updateCommand,
+            SoulsParam.Param param, int beginEquipId, int endEquipId, string name, int beginRowId, int beginStockId)
+        {
+
+            for (int equipId = beginEquipId; equipId <= endEquipId; equipId++)
+            {
+
+                int offset = equipId - beginEquipId;
+                int rowId = beginRowId + offset;
+                int eventFlag_forStock = beginStockId + offset;
+                var row = param.InsertRow(rowId, name + "-" + equipId);
+                if (row == null)
+                    continue;
+                var keyValues =
+                    "value,0," +
+                    "mtrlId,-1," +
+                    "eventFlag_forRelease,0," +
+                    "eventFlag_forStock,0," +
+                    "sellQuantity,-1," +
+                    "equipType,3," +
+                    "costType,0," +
+                    "setNum,1," +
+                    "value_Add,0," +
+                    "value_Magnification,1," +
+                    "iconId,-1," +
+                    "nameMsgId,-1," +
+                    "menuTitleMsgId,-1," +
+                    "menuIconId,-1";
+
+                ParamRowUtils.SetCellValue(row, keyValues);
+                //ParamRowUtils.SetCellValue(row, "equipId", equipId);
+                ParamRowUtils.SetCellValue(row, "eventFlag_forStock", eventFlag_forStock);
+                updateCommand.AddItem(row, "equipId", equipId);
+            }
+        }
+
+
+        public static void AddWhetblade(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+            AddGood(updateCommand, param, 8970, 8974, "Whetblade", 30151, 65610);
+
+        }
+
+        public static void AddMapPiece(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+
+            AddGood(updateCommand, param, 8600, 8618, "Map", 30132, 62010);
+        }
+    }
+
+       
     public class UpdateShopLineupParam
     {
 
@@ -168,7 +254,7 @@ namespace ERParamUtils.UpateParam
                 ShopEquipType shopEquipType = (ShopEquipType)GetEquipType(row);
                 EquipType equipType = EquipTypeUtils.ConvertShopEquipType((ShopEquipType)shopEquipType);
 
-                if (SpecEquipConfig.IsArrow(equipId,equipType)
+                if (SpecEquipConfig.IsArrow(equipId, equipType)
                     || SpecEquipConfig.IsPot(equipId, equipType)
                     || SpecEquipConfig.IsRemnant(equipId, equipType)
                     || SpecEquipConfig.IsSmithingStone(equipId, equipType)
@@ -201,21 +287,23 @@ namespace ERParamUtils.UpateParam
                 return;
 
             int minPrice = ParamRowUtils.GetCellInt(paramProject, paramName, equipId, "sellValue", -1);
-            if (minPrice <= 0) {
+            if (minPrice <= 0)
+            {
                 minPrice = 100;
             }
 
             int price = ParamRowUtils.GetCellInt(row, "value", 0);
             int costType = ParamRowUtils.GetCellInt(row, "costType", 0);
-            if (costType != 0) {
+            if (costType != 0)
+            {
                 updateCommand.AddItem(row, "costType", 0);
                 price = -1;
             }
 
-            if (SpecEquipConfig.IsArrow(equipId,equipType))
+            if (SpecEquipConfig.IsArrow(equipId, equipType))
                 minPrice = 20;
 
-            if (price > minPrice || price < 1 )
+            if (price > minPrice || price < 1)
             {
                 updateCommand.AddItem(row, "value", minPrice);
             }
@@ -249,7 +337,7 @@ namespace ERParamUtils.UpateParam
             //    return;
 
             //if (row.Name.Contains("[") && row.Name.Contains("]"))
-            if ( row.ID < 110000 && row.ID >= 100000)
+            if (row.ID < 110000 && row.ID >= 100000)
             {
 
                 string key = "eventFlag_forRelease";

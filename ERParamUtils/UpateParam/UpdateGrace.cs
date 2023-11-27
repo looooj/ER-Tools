@@ -9,6 +9,7 @@ namespace ERParamUtils.UpateParam
     class UpdateGrace
     {
 
+        static string eventflagIdKey = "eventflagId";
 
         public static void UnlockGrace(ParamProject paramProject, UpdateCommand updateCommand)
         {
@@ -79,18 +80,11 @@ namespace ERParamUtils.UpateParam
                 140000,140001,
                 120400,120300,120201,120200,120500,120100
                };
-            string key = "eventflagId";
 
             for (int i = 0; i < param.Rows.Count; i++)
             {
 
                 var row = param.Rows[i];
-
-                //if (row.ID >= 6100300)
-                //    continue;
-
-                if (row.ID >= 110500 && row.ID <= 110505)
-                    continue;
 
              
                 int textId = ParamRowUtils.GetCellInt(row, "textId1", 0);                
@@ -98,10 +92,19 @@ namespace ERParamUtils.UpateParam
                     continue;
 
 
-                updateCommand.AddItem(row, key, "71801");
+                updateCommand.AddItem(row, eventflagIdKey, "71801");
             }
-
         }
+    
+        public static void UnlockGlaceDefault(UpdateCommand updateCommand) {
+
+            //111000;Table of Lost Grace;大赐福
+            int[] defaultIds = { 111000 };
+            foreach (int rowId in defaultIds) {
+                updateCommand.AddItem(ParamNames.BonfireWarpParam, rowId, eventflagIdKey, 71801);
+            }
+        }
+
 
         //MapDefaultInfoParam
         public static void SetMapInfoParam(ParamProject paramProject, UpdateCommand updateCommand) {

@@ -1,4 +1,5 @@
-﻿using SoulsFormats;
+﻿using ERParamUtils;
+using SoulsFormats;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace SoulsParam
         public string ParamType;
         public string Name { get; set; }
         public List<Row> _rows = new();
+        public Dictionary<int, Row> _rowDict = new();
         public bool Changed = false;
 
 
@@ -31,13 +33,14 @@ namespace SoulsParam
 
             ParamType = _param.ParamType;
             _rows.Clear();
+            _rowDict.Clear();
             for (int i = 0; i < _param.Rows.Count; i++)
             {
                 Row row = new();
                 row.Init(_param.Rows[i], this);
                 _rows.Add(row);
-                //if (i == 0)
-                //    MakeCellIndex(row);
+                
+                _rowDict.TryAdd(row.ID, row);
             }
 
         }
@@ -73,6 +76,45 @@ namespace SoulsParam
             return p;
         }
 
+        public Row? FindRow(int rowId) {
+
+            _rowDict.TryGetValue(rowId, out Row? row);
+            return row;
+        }
+        
+        public Row? InsertRow(int id,string name) {
+
+            if (_param.Rows.Count < 0)
+                return null;
+            if (_rowDict.ContainsKey(id))
+                return null;
+
+            var newRow = new PARAM.Row(_param.Rows[0]);
+            newRow.ID = id;
+            newRow.Name = name;
+            bool insert = false;
+            var row = new Row();
+            row.Init(newRow, this);
+
+            for (int i = 0; i < _param.Rows.Count; i++) {
+
+                var tmp = _param.Rows[i];
+                if (id < tmp.ID) {
+                    _param.Rows.Insert(i, newRow);
+                    _rows.Insert(i, row);
+                    insert = true;
+                    break;
+                }
+
+            }
+            if (!insert)
+            {
+                _param.Rows.Add(newRow);
+                _rows.Add(row);
+            }
+            return row;
+        }
+
         public byte[] Write()
         {
             return _param.Write();
@@ -82,7 +124,7 @@ namespace SoulsParam
         {
             private SoulsFormats.PARAM.Row _row;
             private Param _parent;
-            public string Name { get => _row.Name; set => _row.Name = value; }
+            public string? Name { get => _row.Name; set => _row.Name = value; }
             public int ID { get => _row.ID; }
 
             public void Init(SoulsFormats.PARAM.Row row, Param param)
@@ -101,7 +143,6 @@ namespace SoulsParam
                     {
                         cells.Add(new Cell(this, cell));
                     }
-
                     return cells;
                 }
             }

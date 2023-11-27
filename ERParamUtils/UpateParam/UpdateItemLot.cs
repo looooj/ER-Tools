@@ -376,6 +376,13 @@ namespace ERParamUtils.UpateParam
                             updateCommand.AddItem(row, "lotItemId0" + i, 2909);
                     }
 
+                if (updateCommand.HaveOption(UpdateParamOption.ReplaceRune))
+                    if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
+                    {
+                        if (itemId < 2909)
+                            updateCommand.AddItem(row, "lotItemId0" + i, 2909);
+                    }
+
                 //10010;Golden Seed;黄金种子
                 //10020; Sacred Tear; 圣杯露滴
                 if (updateCommand.HaveOption(UpdateParamOption.ReplaceGoldenSeedSacredTear))

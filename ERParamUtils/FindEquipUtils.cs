@@ -105,22 +105,16 @@ namespace ERParamUtils
 
     public class FindInShop : IFindEquipHandler
     {
-        public void Find(ParamProject project,FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
-        {
-            if (project == null)
-                return;
 
-            var param = project.FindParam(ParamNames.ShopLineupParam);
-            if (param == null)
-            {
-                return;
-            }
+        void FindShop(SoulsParam.Param param, FindEquipOptions findEquipOptions, List<FindEquipLocation> result) {
+
 
 
             foreach (var row in param.Rows)
             {
-                int equipId = ParamRowUtils.GetCellInt(row, "equipId",0);
-                if (findEquipOptions.Id >0) {
+                int equipId = ParamRowUtils.GetCellInt(row, "equipId", 0);
+                if (findEquipOptions.Id > 0)
+                {
                     if (equipId == findEquipOptions.Id)
                     {
                         FindEquipLocation loc = new();
@@ -145,6 +139,27 @@ namespace ERParamUtils
                     }
                 }
             }
+
+
+        }
+        public void Find(ParamProject project,FindEquipOptions findEquipOptions, List<FindEquipLocation> result)
+        {
+            if (project == null)
+                return;
+
+
+            string[] paramNames = { ParamNames.ShopLineupParam,ParamNames.ShopLineupParamRecipe};
+            foreach (string name in paramNames)
+            {
+                var param = project.FindParam(name);
+                if (param == null)
+                {
+                    continue;
+                }
+                FindShop(param,findEquipOptions,result);
+            }          
+
+
         }
     }
 

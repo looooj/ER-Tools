@@ -41,12 +41,14 @@ namespace ERParamUtils
 
 
             var rowDict1 = MakeRowDict(param1);
+            //var rowDict2 = MakeRowDict(param2);
             TextFile updateFile = new();
             int changeCount = 0;
             updateFile.Add("@@param={0}", param1.Name);
-            for (int rowIndex = 0; rowIndex < param2.Rows.Count; rowIndex++)
+            int rowCount = param2.Rows.Count;//> param2.Rows.Count ? param1.Rows.Count : param2.Rows.Count;
+            for (int rowIndex = 0; rowIndex < rowCount; rowIndex++)
             {
-
+                
                 var row2 = param2.Rows[rowIndex];
 
                 bool firstCellFlag = true;

@@ -158,6 +158,21 @@ namespace ERParamUtils
             SetCellValue(row, keyName, "" + value);
         }
 
+        public static void SetCellValue(SoulsParam.Param.Row? row, string keyValues)
+        {
+
+            var a = keyValues.Split(",");
+            for (int i = 0; i < a.Length;) {
+                string key = a[i];
+                i++;
+                if (i >= a.Length)
+                    break;
+                string value = a[i];
+                i++;
+                SetCellValue(row, key, value);
+            }            
+        }
+
         public static void SetCellValue(SoulsParam.Param.Row? row, int col, string value)
         {
 
@@ -213,6 +228,9 @@ namespace ERParamUtils
         public static SoulsParam.Param.Row? FindRow(SoulsParam.Param param, int rowId)
         {
 
+            var row = param.FindRow(rowId);
+            return row;
+            /*
             for (int i = 0; i < param.Rows.Count; i++)
             {
                 if (param.Rows[i].ID == rowId)
@@ -221,6 +239,7 @@ namespace ERParamUtils
                 }
             }
             return null;
+            */
         }
 
 

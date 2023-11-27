@@ -274,23 +274,7 @@ namespace ERParamUtils.UpateParam
 
         public override void Exec(ParamProject paramProject, UpdateCommand updateCommand)
         {
-            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
-            if (param == null)
-                return;
-
-            for (int i = 0; i < param.Rows.Count; i++)
-            {
-
-                var row = param.Rows[i];
-
-                string key = "eventFlag_forRelease";
-
-                if (ParamRowUtils.GetCellInt(row, key, 0) != 0)
-                {
-                    updateCommand.AddItem(row, key, "0");
-                }
-            }
-
+            UpdateShopLineupParamRecipe.UnlockCrafting(paramProject, updateCommand);
         }
     }
     public class UnlockGraceTask : UpdateParamTask
@@ -336,10 +320,10 @@ namespace ERParamUtils.UpateParam
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
 
-        public static void Exec(ParamProject project, UpdateParamOptions options)
+        public static void Exec(ParamProject paramProject, UpdateParamOptions options)
         {
 
-            UpdateLogger.SetDir(project.GetUpdateDir() + @"/logs");
+            UpdateLogger.SetDir(paramProject.GetUpdateDir() + @"/logs");
 
 
             UpdateLogger.InfoTime("");
@@ -349,11 +333,11 @@ namespace ERParamUtils.UpateParam
             if (options.Restore)
             {
                 UpdateLogger.InfoTime("===Restore");
-                project.Restore();
+                paramProject.Restore();
             }
 
 
-            UpdateCommand updateCommand = new UpdateCommand(project);
+            UpdateCommand updateCommand = new UpdateCommand(paramProject);
             updateCommand.AddOption(options.UpdateCommandOptions);
 
 
@@ -364,7 +348,17 @@ namespace ERParamUtils.UpateParam
                     UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));
 
             }
+            if (updateCommand.HaveOption(UpdateParamOption.AddMapPiece)) {
+                UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
+            }
 
+            if (updateCommand.HaveOption(UpdateParamOption.AddWhetblade))
+            {
+                UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
+            }
+
+            UpdateGrace.UnlockGlaceDefault(updateCommand);
+            UpdateCharaInit.Add(paramProject,updateCommand);
             options.UpdateTasks.Insert(0, new ReplaceParamTask());
 
             foreach (var task in options.UpdateTasks)
@@ -372,7 +366,7 @@ namespace ERParamUtils.UpateParam
                 try
                 {
                     UpdateLogger.InfoTime("Exec {0}", task.GetType().Name);
-                    task.Exec(project, updateCommand);
+                    task.Exec(paramProject, updateCommand);
                 }
                 catch (Exception ex)
                 {
@@ -382,14 +376,14 @@ namespace ERParamUtils.UpateParam
             }
 
 
-            updateCommand.Exec(project);
-            project.SaveParams();
+            updateCommand.Exec(paramProject);
+            paramProject.SaveParams();
 
             if (options.Publish)
             {
                 UpdateLogger.InfoTime("===Publish");
 
-                project.Publish();
+                paramProject.Publish();
             }
 
             UpdateLogger.Save();
