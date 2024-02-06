@@ -1,5 +1,6 @@
 using ERParamUtils;
 using ERParamUtils.UpateParam;
+using MultiLangLib;
 using NLog;
 using System.Globalization;
 
@@ -46,6 +47,9 @@ namespace ERParamEditor
 
             if (FirstShow)
             {
+                var current = Cursor;
+                Cursor = Cursors.WaitCursor;
+
                 InitConfig();
                 InitControls();
 
@@ -54,6 +58,7 @@ namespace ERParamEditor
                 logger.Info("===InitRefreshProject 1");
                 RefreshProject();
                 logger.Info("===InitRefreshProject 2");
+                Cursor = current;
             }
             FirstShow = false;
         }
@@ -275,14 +280,20 @@ namespace ERParamEditor
                 return;
 
             var selection = listViewParam.SelectedItems[0];
-            var param = paramProject.FindParam(selection.Text);
+            var selectionText = selection.Text;
+            var items = selectionText.Split("|");
+            var param = paramProject.FindParam(items[0]);
             if (param == null)
                 return;
 
             ParamRowForm paramRowForm = new();
 
-            RowFilter[] rowFilers = { };
-            RowBuilder[] rowBuilders = { new SpEffectSetParamRowBuilder() };
+            List<RowFilter> rowFilers = new();
+
+            List<RowBuilder> rowBuilders = new();
+
+            rowBuilders.Add(new SpEffectSetParamRowBuilder());
+            rowFilers.Add(new CharaInitFilter());
             var rows = ParamRowUtils.ConvertToRowWrapper(paramProject, param, rowFilers, rowBuilders);
             RowListManager.Add(0, rows);
             //var rowListItem = RowListManager.GetCurrent();

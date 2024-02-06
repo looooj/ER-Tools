@@ -11,6 +11,7 @@ namespace ERParamUtils.UpateParam
     public class UpateFile
     {
         public static string UpdateShopSpec = "shop-spec.txt";
+        public static string UpdateRecipeSpec = "recipe-spec.txt";
 
         public static string UpdateLotMapSpec = "lot-map-spec.txt";
         public static string UpdateLotMapBatch = "lot-map-b.txt";

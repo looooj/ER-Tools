@@ -43,6 +43,11 @@ namespace ERParamUtils
         public static Dictionary<string, string> LoadDict(string filename)
         {
             Dictionary<string, string> dict = new();
+            return LoadDict(filename,dict);
+        }
+
+        public static Dictionary<string, string> LoadDict(string filename, Dictionary<string, string> dict)
+        {
             string[] lines = File.ReadAllLines(filename);
             for (int i = 0; i < lines.Length; i++)
             {
@@ -59,7 +64,7 @@ namespace ERParamUtils
 
         public void Load(string filename)
         {
-            Dict = ConfigUtils.LoadDict(filename);
+            Dict = ConfigUtils.LoadDict(filename,Dict);
         }
 
         public void Save(string filename) {

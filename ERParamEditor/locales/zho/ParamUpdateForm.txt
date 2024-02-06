@@ -1,0 +1,2 @@
+﻿buttonUpdate=更新
+buttonUpdatePublish=更新&发布

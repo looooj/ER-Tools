@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.X509;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -385,9 +386,24 @@ namespace ERParamUtils.UpateParam
 
                 //10010;Golden Seed;黄金种子
                 //10020; Sacred Tear; 圣杯露滴
+                //
+                //1046380100 [Limgrave - Third Church of Marika] Sacred Tear 
+                //1041380100 [Stormhill - Stormhill Shack] Golden Seed
                 if (updateCommand.HaveOption(UpdateParamOption.ReplaceGoldenSeedSacredTear))
                     if ((itemId == 10010 || itemId == 10020) && itemType == (int)EquipType.Good)
                     {
+                        if (row.ID == 1041380100) {
+                            //1041380100;Golden Seed
+                            updateCommand.AddItem(row, "lotItemNum01", 30);
+                            continue;
+                        }
+                        if (row.ID == 1046380100)
+                        {
+                            //1041380100;Sacred Tear 
+                            updateCommand.AddItem(row, "lotItemNum01", 12);
+                            continue;
+                        }
+
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
 

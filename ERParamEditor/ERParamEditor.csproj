@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ERParamUtils\ERParamUtils.csproj" />
+    <ProjectReference Include="..\MultiLangLib\MultiLangLib.csproj" />
     <ProjectReference Include="..\SoulsFormats\SoulsFormats.csproj" />
     <ProjectReference Include="..\VdfFile\VdfFile.csproj" />
   </ItemGroup>

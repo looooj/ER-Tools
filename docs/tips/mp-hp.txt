@@ -16,3 +16,5 @@ changeHpPoint,-30,
 changeMpRate,0,
 changeMpPoint,0,
 
+1046380100 [Limgrave - Third Church of Marika] Sacred Tear 
+1041380100 [Stormhill - Stormhill Shack] Golden Seed 

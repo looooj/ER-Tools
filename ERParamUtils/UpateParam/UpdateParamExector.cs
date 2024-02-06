@@ -66,6 +66,20 @@ namespace ERParamUtils.UpateParam
         }
     }
 
+    public class SpecRecipeParamTask : UpdateParamTask
+    {
+
+        public SpecRecipeParamTask() {
+            OrderNo = 0;
+            Description = "Exec recipe-spec.txt";
+        }
+
+        public override void Exec(ParamProject project, UpdateCommand updateCommand)
+        {
+            UpdateShopLineupParamRecipe.ExecSpec(project, updateCommand);
+        }
+    }
+
     public class DefaultMapLotParamTask : UpdateParamTask
     {
         public DefaultMapLotParamTask()
@@ -277,6 +291,10 @@ namespace ERParamUtils.UpateParam
             UpdateShopLineupParamRecipe.UnlockCrafting(paramProject, updateCommand);
         }
     }
+
+
+
+
     public class UnlockGraceTask : UpdateParamTask
     {
         public UnlockGraceTask()
@@ -352,10 +370,10 @@ namespace ERParamUtils.UpateParam
                 UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
             }
 
-            if (updateCommand.HaveOption(UpdateParamOption.AddWhetblade))
-            {
-                UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
-            }
+            //if (updateCommand.HaveOption(UpdateParamOption.AddWhetblade))
+            //{
+            //    UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
+            //}
 
             UpdateGrace.UnlockGlaceDefault(updateCommand);
             UpdateCharaInit.Add(paramProject,updateCommand);

@@ -1,5 +1,6 @@
 ﻿using ERParamUtils;
 using ERParamUtils.UpateParam;
+using MultiLangLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,6 +57,8 @@ namespace ERParamEditor
             checkBoxSelectAll.Checked = true;
 
             updateParamTasks.Add(new UnlockCraftingTask());
+            updateParamTasks.Add(new SpecRecipeParamTask());
+
             updateParamTasks.Add(new UnlockGraceTask());
             updateParamTasks.Add(new DefaultShopParamTask());
             updateParamTasks.Add(new SpecShopParamTask());
@@ -67,7 +70,6 @@ namespace ERParamEditor
             updateParamTasks.Add(new RemoveRequireTask());
             updateParamTasks.Add(new RemoveWeightTask());
             updateParamTasks.Add(new BuddyTask());
-            //updateParamTasks.Add(new SmithingStoneTask());
 
 
             updateParamTasks.Add(new CharInitParamTask());
@@ -83,7 +85,7 @@ namespace ERParamEditor
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceFinger));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDeathroot));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
-            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
 
 
@@ -93,6 +95,7 @@ namespace ERParamEditor
 
             MultiLang.ApplyMessage(updateParamTasks);
             MultiLang.ApplyMessage(updateParamOptions);
+            MultiLang.ApplyForm(this, "ParamUpdateForm");
 
             var saveOptions = loadOptions();
 

@@ -9,6 +9,7 @@ namespace ERParamUtils
 
 
     public interface IParamCellRefProc  {
+
         void Proc(ParamProject project, RowWrapper sourceRow,
             ParamCellItem paramCellItem, List<RowWrapper> rowWrappers);
     }

@@ -287,8 +287,8 @@ namespace ERParamUtils
         }
 
 
-        public static List<RowWrapper> ConvertToRowWrapper(ParamProject project, SoulsParam.Param param, RowFilter[] filters,
-            RowBuilder[] builders)
+        public static List<RowWrapper> ConvertToRowWrapper(ParamProject project, SoulsParam.Param param, List<RowFilter> filters,
+            List<RowBuilder> builders)
         {
 
             List<RowWrapper> rows = new();
@@ -373,5 +373,14 @@ namespace ERParamUtils
         }
     }
 
-
+    public class CharaInitFilter : RowFilter
+    {
+        public bool DoFilter(SoulsParam.Param param, SoulsParam.Param.Row row)
+        {
+            if ( param.Name == ParamNames.CharaInitParam)
+               if (row.Name == null || row.Name.Length < 1)
+                   return false;
+            return true;
+        }
+    }
 }

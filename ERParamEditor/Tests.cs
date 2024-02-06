@@ -22,14 +22,14 @@ namespace ERParamEditor
 
         public static void TestName() {
 
-            string[] names = { "a", "abc", "abc123","123" };
+            string[] names = { "a", "abc", "abc123", "123" };
 
             var regx = new Regex("^[a-z]{3,}[0-9]?");
-            foreach(string name in names)
-            if (!regx.Match(name).Success)
-            {
-                MessageBox.Show("Not Match " + name);
-            }
+            foreach (string name in names)
+                if (!regx.Match(name).Success)
+                {
+                    MessageBox.Show("Not Match " + name);
+                }
 
         }
 
@@ -64,10 +64,10 @@ namespace ERParamEditor
 
         public static void ExtractMsg() {
 
-            string[] langs = { "engus","zhocn" };
+            string[] langs = { "engus", "zhocn" };
             foreach (string lang in langs)
             {
-                string dir = @"D:\docs\game\er\unpack-\unpack-files\msg\"+lang;
+                string dir = @"D:\docs\game\er\unpack-\unpack-files\msg\" + lang;
                 string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text";
                 var files = Directory.GetFiles(dir, "*.dcx");
                 foreach (var file in files)
@@ -114,7 +114,7 @@ namespace ERParamEditor
         public static void TestDCX2() {
 
             string dir = @"D:\docs\game\er\unpack-\unpack-files\map\m10\m10_00_00_00";
-          
+
 
             string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text";
 
@@ -146,7 +146,7 @@ namespace ERParamEditor
             string path1 = @"D:\Program Files (x86)\Steam\steamapps\appmanifest_1245620.acf";
             appObj.Parse(path1);
 
-            var dir = appObj.InstallDir;          
+            var dir = appObj.InstallDir;
 
         }
 
@@ -162,7 +162,7 @@ namespace ERParamEditor
             //projects\merchant
             //ParamProjectManager.CompareProject("org", "merchant");
 
-            ParamProjectCompare.CompareProject("org", "rand",new List<string>());
+            ParamProjectCompare.CompareProject("org", "rand", new List<string>());
 
         }
 
@@ -176,7 +176,7 @@ namespace ERParamEditor
 
             for (int i = 0; i < msgs.Count; i++) {
 
-                XmlElement item =(XmlElement)msgs[i];
+                XmlElement item = (XmlElement)msgs[i];
                 XmlElement idNode = (XmlElement)item.SelectSingleNode("ID");
                 XmlElement textNode = (XmlElement)item.SelectSingleNode("Text");
                 int id = int.Parse(idNode.InnerText);
@@ -197,11 +197,11 @@ namespace ERParamEditor
             string[] names = { "AccessoryName","GoodsName",
                 "ProtectorName","WeaponName","NpcName","PlaceName","GemName" };
 
-            string baseDir = GlobalConfig.AssetsDir+ @"\msg\item.msgbnd\msg";
+            string baseDir = GlobalConfig.AssetsDir + @"\msg\item.msgbnd\msg";
             string outDir = GlobalConfig.AssetsDir + @"\msg\item-msg-text";
             foreach (string name in names) {
 
-                string engFileName = string.Format("{0}\\engUS\\{1}.fmg.xml",baseDir,name);
+                string engFileName = string.Format("{0}\\engUS\\{1}.fmg.xml", baseDir, name);
                 string zhoFileName = string.Format("{0}\\zhoCN\\{1}.fmg.xml", baseDir, name);
 
                 XmlDocument engDoc = new();
@@ -213,7 +213,7 @@ namespace ERParamEditor
                 var choDict = GetMsgIdName(zhoDoc.DocumentElement);
                 var keys = engDict.Keys;
 
-                
+
                 List<string> outLines = new();
                 foreach (int id in keys)
                 {
@@ -222,13 +222,13 @@ namespace ERParamEditor
                         continue;
                     }
 
-                    outLines.Add(string.Format("{0};{1};{2}",id,ename,cname));
+                    outLines.Add(string.Format("{0};{1};{2}", id, ename, cname));
 
                 }
 
                 string outName = outDir + @"\" + name + ".txt";
                 Directory.CreateDirectory(outDir);
-                File.WriteAllLines(outName, outLines,Encoding.UTF8);
+                File.WriteAllLines(outName, outLines, Encoding.UTF8);
             }
 
         }
@@ -276,9 +276,44 @@ namespace ERParamEditor
 
         }
 
+        static void checkShopLineupParamRecipe() {
+
+            var proj = GlobalConfig.GetCurrentProject();
+            if (proj == null)
+                return;
+
+            var param = proj.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+
+            List<string> items = new();
+            foreach (var row in param.Rows) {
+
+                var v = ParamRowUtils.GetCellInt(row, "eventFlag_forStock",0);
+
+                if (v <= 0) {
+                    continue;
+                }
+
+                var equipId = ParamRowUtils.GetCellInt(row, "equipId", 0);
+                if (equipId <= 0)
+                    continue;
+                var equipType = ParamRowUtils.GetCellInt(row, "equipType", 0);
+
+                var line = string.Format("{0},{1},{2},{3}", 
+                    row.ID,v,equipId,equipType);
+                items.Add(line);
+                
+            }
+
+
+            File.WriteAllLines("forStockList.txt", items);
+
+
+        }
         public static void Run() {
 
-            TestEvent();
+            checkShopLineupParamRecipe();
         }
     }
 }

@@ -50,7 +50,17 @@
 
 
 
+## recipe-spec.txt
 
+#### format
+equipType use shop equipType
+
+     equipId;equipType
+
+#### examples
+
+     
+       
 
 ## lot-enemy-b.txt(ItemLotParam_enemy) lot-map-b.txt(ItemLotParam_map)
 

@@ -373,8 +373,8 @@ namespace ERParamUtils
 
             DictConfig config = new DictConfig();
             string path = GlobalConfig.GetProjectDir(Name) + @"\" + ConfigName;
+            config.SetString("BaseDir", GlobalConfig.BaseDir);
             config.Load(path);
-
             ModRegulationPath = config.GetString("ModRegulationPath","?");
             CreateTime = config.GetString("CreateTime", "?");
         }

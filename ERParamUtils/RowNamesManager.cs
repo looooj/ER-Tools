@@ -122,22 +122,22 @@ namespace ERParamUtils
           
             var equipType = EquipTypeUtils.ConvertShopEquipType((ShopEquipType)shopEquipType);
 
-            List<int> equipTyes = new();
+            List<int> equipTypes = new();
             switch (equipType) {
 
                 case EquipType.Good:
                     {
-                        equipTyes.Add((int)EquipType.Good);
-                        equipTyes.Add((int)EquipType.Weapon);
-                        equipTyes.Add((int)EquipType.Accessory);
+                        equipTypes.Add((int)EquipType.Good);
+                        equipTypes.Add((int)EquipType.Weapon);
+                        equipTypes.Add((int)EquipType.Accessory);
                         break;
                     }
                 default: {
-                        equipTyes.Add((int)equipType);
+                        equipTypes.Add((int)equipType);
                     } break;
             }
 
-            string name = FindEquipName(id, equipTyes.ToArray());
+            string name = FindEquipName(id, equipTypes.ToArray());
             return name;
         }
     }
