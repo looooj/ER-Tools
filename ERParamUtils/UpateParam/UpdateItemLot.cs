@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 
-namespace ERParamUtils.UpateParam
+namespace ERParamUtils.UpdateParam
 {
     public class UpdateItemLot
     {
@@ -104,7 +104,7 @@ namespace ERParamUtils.UpateParam
         {
 
             UpdateItemLot itemLot = new(paramName);
-            var lines = UpateFile.Load(updateCommand.GetProject(), updateName);
+            var lines = UpdateFile.Load(updateCommand.GetProject(), updateName);
             foreach (string line in lines)
             {
                 itemLot.Proc(line, updateCommand);
@@ -230,10 +230,12 @@ namespace ERParamUtils.UpateParam
                     item.Value = point + "";
                     updateCommand.AddItem(item);
 
-                    //newLines.Add(
-                    //   string.Format("{0};{1};lotItemBasePoint0{2};{3};u16",
-                    //      paramName, rowId, index, point)
-                    //    );
+                    if (point > 0) {
+                        item = CreateItem(rowId);
+                        item.Key = string.Format("enableLuck0{0}", index);
+                        item.Value = "1";
+                        updateCommand.AddItem(item);
+                    }
 
 
                 }
@@ -249,7 +251,7 @@ namespace ERParamUtils.UpateParam
 
 
             UpateLotBatch itemLot = new(paramName);
-            var lines = UpateFile.Load(updateCommand.GetProject(), updateName);
+            var lines = UpdateFile.Load(updateCommand.GetProject(), updateName);
 
             foreach (string line in lines)
             {

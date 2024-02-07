@@ -2,7 +2,7 @@
 using SoulsFormats;
 using System.Reflection.Metadata.Ecma335;
 
-namespace ERParamUtils.UpateParam
+namespace ERParamUtils.UpdateParam
 {
     public class UpdateParamOptions
     {
@@ -163,25 +163,25 @@ namespace ERParamUtils.UpateParam
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
-            UpdateName = UpateFile.UpdateLotMapSpec;
+            UpdateName = UpdateFile.UpdateLotMapSpec;
             UpdateItemLot.LoadLotSpecUpdate(ParamNames.ItemLotParamMap,
-                UpateFile.UpdateLotMapSpec,
+                UpdateFile.UpdateLotMapSpec,
                 updateCommand);
 
-            UpdateName = UpateFile.UpdateLotMapBatch;
+            UpdateName = UpdateFile.UpdateLotMapBatch;
             UpateLotBatch.LoadLotBatchUpdate(ParamNames.ItemLotParamMap,
-                UpateFile.UpdateLotMapBatch,
+                UpdateFile.UpdateLotMapBatch,
                updateCommand);
 
 
-            UpdateName = UpateFile.UpdateLotEnemySpec;
+            UpdateName = UpdateFile.UpdateLotEnemySpec;
             UpdateItemLot.LoadLotSpecUpdate(ParamNames.ItemLotParamEnemy,
-                UpateFile.UpdateLotEnemySpec,
+                UpdateFile.UpdateLotEnemySpec,
                 updateCommand);
 
-            UpdateName = UpateFile.UpdateLotEnemyBatch;
+            UpdateName = UpdateFile.UpdateLotEnemyBatch;
             UpateLotBatch.LoadLotBatchUpdate(ParamNames.ItemLotParamEnemy,
-                UpateFile.UpdateLotEnemyBatch,
+                UpdateFile.UpdateLotEnemyBatch,
                 updateCommand);
         }
 
@@ -199,7 +199,7 @@ namespace ERParamUtils.UpateParam
 
             Description = "Exec update-row.txt";
 
-            UpdateName = UpateFile.UpdateRowFile;
+            UpdateName = UpdateFile.UpdateRowFile;
         }
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
@@ -242,7 +242,7 @@ namespace ERParamUtils.UpateParam
         {
             Description = "Exec char-init.txt Update " + ParamNames.CharaInitParam;
             ParamName = ParamNames.CharaInitParam;
-            UpdateName = UpateFile.UpdateCharaInit;
+            UpdateName = UpdateFile.UpdateCharaInit;
         }
 
 
@@ -256,7 +256,7 @@ namespace ERParamUtils.UpateParam
         {
             Description = "Exec sp-effect.txt Update " + ParamNames.SpEffectParam;
             ParamName = ParamNames.SpEffectParam;
-            UpdateName = UpateFile.UpdateSpEffect;
+            UpdateName = UpdateFile.UpdateSpEffect;
         }
 
     }
@@ -354,6 +354,7 @@ namespace ERParamUtils.UpateParam
                 paramProject.Restore();
             }
 
+            UpdateShopLineupParamRecipe.Init();
 
             UpdateCommand updateCommand = new UpdateCommand(paramProject);
             updateCommand.AddOption(options.UpdateCommandOptions);
@@ -366,6 +367,7 @@ namespace ERParamUtils.UpateParam
                     UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));
 
             }
+
             if (updateCommand.HaveOption(UpdateParamOption.AddMapPiece)) {
                 UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
             }
@@ -376,7 +378,7 @@ namespace ERParamUtils.UpateParam
             //}
 
             UpdateGrace.UnlockGlaceDefault(updateCommand);
-            UpdateCharaInit.Add(paramProject,updateCommand);
+            UpdateCharaInit.AddDefault(paramProject,updateCommand);
             options.UpdateTasks.Insert(0, new ReplaceParamTask());
 
             foreach (var task in options.UpdateTasks)

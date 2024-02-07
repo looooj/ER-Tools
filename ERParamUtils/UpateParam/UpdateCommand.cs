@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERParamUtils.UpateParam
+namespace ERParamUtils.UpdateParam
 {
     public class UpdateCommandItem
     {
@@ -65,7 +65,7 @@ namespace ERParamUtils.UpateParam
         public static void LoadUpdateItem(string updateName, UpdateCommand updateCommand)
         {
 
-            var lines = UpateFile.Load(updateCommand.GetProject(), updateName);
+            var lines = UpdateFile.Load(updateCommand.GetProject(), updateName);
             foreach (var line in lines)
             {
                 Proc(line, updateCommand);
@@ -93,23 +93,45 @@ namespace ERParamUtils.UpateParam
             _customParamName = paramName;
         }
 
-        static void ProcId(string line)
+        /*
+        static void ProcIdRange(string idRange, List<int> ids) {
+            string[] items = idRange.Split('-');
+            if (items.Length < 2) {
+                return;
+            }
+            if (!int.TryParse(items[0], out int beginId)) {
+                return;
+            }
+            if (!int.TryParse(items[1], out int endId))
+            {
+                return;
+            }
+            for (int id = beginId; id <= endId; id++)
+                ids.Add(id);
+        }
+
+        static void ProcId(string line, List<int> ids)
         {
 
             string[] ss = line.Split(',');
             foreach (string s in ss)
             {
+                if (s.Contains("-")) { 
+
+                }
                 int id = int.Parse(s);
                 if (id > 0)
                 {
                     _currentRowIds.Add(id);
                 }
             }
-        }
+        } */
 
         public static void Proc(string line, UpdateCommand updateCommand)
         {
             line = line.Trim();
+            if (line.Length < 1)
+                return;
 
             if (line.StartsWith("#"))
             {
@@ -121,7 +143,7 @@ namespace ERParamUtils.UpateParam
                 _currentRowIds.Clear();
                 string[] ss = line.Split('=');
                 if (ss.Length >= 2)
-                    ProcId(ss[1]);
+                    UpdateFile.ProcId(ss[1],_currentRowIds);
                 return;
             }
 
@@ -151,7 +173,13 @@ namespace ERParamUtils.UpateParam
                 {
                     string[] ss = line.Split(';');
                     if (ss.Length < 2)
+                    {
+                        //
+                        //ss = line.Split('=');
+                    }
+                    if (ss.Length < 2)
                         return;
+
                     string fieldName = ss[0];
                     string value = ss[1];
 
@@ -171,7 +199,7 @@ namespace ERParamUtils.UpateParam
         public static void LoadUpdateRow(string paramName, string updateName, UpdateCommand updateCommand)
         {
 
-            var lines = UpateFile.Load(updateCommand.GetProject(), updateName);
+            var lines = UpdateFile.Load(updateCommand.GetProject(), updateName);
             foreach (var line in lines)
             {
                 SetParamName(paramName);
@@ -182,7 +210,7 @@ namespace ERParamUtils.UpateParam
         public static void LoadUpdateRow(string updateName, UpdateCommand updateCommand)
         {
 
-            var lines = UpateFile.Load(updateCommand.GetProject(), updateName);
+            var lines = UpdateFile.Load(updateCommand.GetProject(), updateName);
             foreach (var line in lines)
             {
                 Proc(line, updateCommand);
@@ -196,7 +224,7 @@ namespace ERParamUtils.UpateParam
 
         public void Add(UpdateCommandItem item) {
 
-            if (!_dict.TryGetValue(item.RowId, out List<UpdateCommandItem> items)) {
+            if (!_dict.TryGetValue(item.RowId, out List<UpdateCommandItem>? items)) {
                 items = new();
                 _dict.Add(item.RowId, items);
             }

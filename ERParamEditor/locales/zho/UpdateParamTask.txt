@@ -20,5 +20,5 @@ ReplaceDeathroot=替换死根
 ReplaceRuneArc=替换卢恩弯弧
 ReplaceStoneswordKey=替换石剑钥匙
 ReplaceMemoryStone=替换记忆石
-AddMapPiece=添加制造地图碎片
+AddMapPiece=添加制作地图碎片
 AddWhetblade=添加砥石刀

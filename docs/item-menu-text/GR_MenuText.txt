@@ -1,0 +1,1255 @@
+﻿3010;<?null?>;<?null?>
+3011;<?null?>;<?null?>
+3500;Choose revival location;请选择复活的地点
+3501;Stake of Marika;玛莉卡楔石
+3502;Last site of grace visited;最后停留的赐福
+4100;Use;使用
+4101;Leave;放置原地
+4102;Discard;丢弃
+4110;Use selected number;大量使用
+4111;Leave selected number;大量放置
+4112;Discard selected number;大量丢弃
+5100;Use how many?;请选择使用的数量
+5101;Leave how many?;请选择放置的数量
+5102;Discard how many?;请选择丢弃的数量
+5104;Purchase how many?;请选择购买的数量
+5105;Sell how many?;请选择卖出的数量
+5106;Store how many?;请选择收纳的数量
+5107;Take how many?;请选择取出的数量
+5108;Make how many?;请选择制作的数量
+5109;Receive how many?;请选择获得的数量
+5501;Explanation;项目说明
+5502;View Controls;控制说明
+5600;Menu Explanation;选单说明
+5700;Toggle multiplayer status display;切换多人联机游玩的显示状态
+5710;Toggle multiplayer status display;切换多人联机游玩的显示状态
+6100;Default Order;默认排序
+6105;Item Type;道具类别
+6110;Number Held;持有数
+6111;Weight;重量
+6120;FP Cost;消耗专注值
+6121;Slots Used;使用空格
+6130;Attack Power;攻击力
+6140;Guarded Damage Negation;防御时减伤率
+6170;Damage Negation;减伤率
+6180;Resistance;抵抗力
+6190;Order of Acquisition;取得时间
+10100;Name;名字
+10101;Body Type;体型
+10102;Origin;出身
+10103;Keepsake;遗物
+10200;Level;等级
+10201;Runes Held;持有卢恩
+10202;Runes Needed;所需卢恩
+10204;Great Runes;大卢恩
+10301;Age;年龄段
+10400;Vigor;生命力
+10401;Endurance;耐力
+10402;Mind;集中力
+10403;Strength;力气
+10404;Dexterity;灵巧
+10406;Intelligence;智力
+10407;Faith;信仰
+10409;Arcane;感应
+10502;Stamina;精力
+10510;Equip Load;装备重量
+10512;Max Equip Load;装备重量上限
+10513;Light Load;（轻）
+10514;Med. Load;（中）
+10515;Heavy Load;（重）
+10516;Overloaded;（过重）
+10520;R Armament 1;右手武器１
+10521;R Armament 2;右手武器２
+10522;R Armament 3;右手武器３
+10523;L Armament 1;左手武器１
+10524;L Armament 2;左手武器２
+10525;L Armament 3;左手武器３
+10530;Physical;物理
+10531;VS Strike;抗打击
+10532;VS Slash;抗斩击
+10533;VS Pierce;抗突刺
+10534;Magic;魔力
+10535;Fire;火
+10536;Lightning;雷
+10537;Holy;圣
+10540;Immunity;免疫力
+10541;Robustness;健壮度
+10542;Focus;理智度
+10543;Vitality;抗死度
+10561;Memory Slots;记忆空格
+10562;Discovery;观察力
+10570;Poise;强韧度
+11001;Armament Type;武器类别
+11002;Spell Type;类别
+11003;Attack Affinity;攻击属性
+11004;No. Held;持有数
+11005;Stored;收纳数
+11006;Skill;战技
+11007;Held;持有数
+11009;Containers;剩余容器数量
+11010;Physical;物理
+11011;Magic;魔力
+11012;Fire;火
+11013;Lightning;雷
+11014;Holy;圣
+11020;Physical;物理
+11021;Magic;魔力
+11022;Fire;火
+11023;Lightning;雷
+11024;Holy;圣
+11030;Critical;致命一击
+11031;Guard Boost;防御强度
+11032;Range;射程距离
+11034;FP Cost;消耗专注值
+11035;Sorcery Scaling;魔法加成
+11036;Incant Scaling;祷告加成
+11040;Slots Used;使用空格
+11041;FP Cost;消耗专注值
+11042;FP Cost;消耗专注值
+11043;HP Cost;消耗血量
+11180;Physical;物理
+11181;VS Strike;抗打击
+11182;VS Slash;抗斩击
+11183;VS Pierce;抗突刺
+11184;Magic;魔力
+11185;Fire;火
+11186;Lightning;雷
+11187;Holy;圣
+11190;Immunity;免疫力
+11191;Robustness;健壮度
+11192;Focus;理智度
+11193;Vitality;抗死度
+11200;Poise;强韧度
+11300;Str;力气
+11301;Dex;灵巧
+11302;Int;智力
+11303;Fai;信仰
+11304;Arc;感应
+11310;Str;力气
+11311;Dex;灵巧
+11312;Int;智力
+11313;Fai;信仰
+11314;Str;力气
+11315;Dex;灵巧
+11316;Int;智力
+11317;Fai;信仰
+11318;Arc;感应
+11319;Arc;感应
+11330;Consumable;消耗品
+11331;Reusable;无限次
+11351;Weight;重量
+11360;Item Type;使用类型
+11400;Containers Held;容器持有数
+12000;Runes Required;所需卢恩
+12010;Runes Offered;获得卢恩
+20000;Attack Power;攻击力
+20001;Guarded Damage Negation;防御时减伤率
+20002;Attributes Required;必需能力值
+20003;Attribute Scaling;能力加成
+20004;Passive Effects;附加效果
+20006;Item Effect;道具效用
+20007;Obtained;获得途径
+20008;Attribute Points;能力值
+20009;Base Stats;基本能力
+20010;Defense/Dmg Negation;防御力／减伤率
+20011;Defense Power;防御力
+20012;Damage Negation;减伤率
+20013;Protection;防具
+20014;Body;身体
+20015;Lineage;本身
+20016;Equipment;装备
+20017;Resistance;抵抗力（身体／防具）
+20050;Damage Negation;减伤率
+20051;Resistance;抵抗力
+20100;Mixing Status;调配状态
+20200;Necessary Stats;必需能力值
+30100;This character's name;这名角色的名字。
+30101;This character's body type;这名角色的体型。
+30204;The number of Great Runes in your possession;持有的大卢恩数量。
+30301;Character's apparent age;这名角色外表给人的年龄印象。
+30402;Attribute that determines FP. Also affects focus.;决定专注值高低的能力值。 也会影响理智度。
+30534;The body's capacity to endure magical damage;身体受到魔力属性攻击时的防御力。
+30535;The body's capacity to endure fire damage;身体受到火属性攻击时的防御力。
+30536;The body's capacity to endure lightning damage;身体受到雷属性攻击时的防御力。
+30537;The body's capacity to endure holy damage;身体受到圣属性攻击时的防御力。
+31002;Sorceries and incantations;包括魔法、祷告等等。
+31007;Number of containers currently held;持有的容器道具数量。
+31009;Number of containers remaining to use in crafting;可用于制作的容器道具，剩余的数量。
+31010;Physical attack power;物理攻击力。
+31011;Magic attack power;魔力属性攻击力。
+31012;Fire attack power;火属性攻击力。
+31013;Lightning attack power;雷属性攻击力。
+31014;Holy attack power;圣属性攻击力。
+31032;Distance of ranged weapons;射击时的有效攻击距离。
+31034;The amount of FP required to perform this skill;使用战技时必需的专注值。
+31035;The degree to which sorceries increase in power;魔法威力的增强度。
+31036;The degree to which incantations increase in power;祷告威力的增强度。
+31041;The amount of FP required to cast this spell;使用魔法、祷告时必需的专注值。
+31042;The amount of FP required to use this item;使用道具时必需的专注值。
+31043;The amount of HP required to use this item;使用道具时必需的血量。
+31351;Weight of this equipment;装备重量。
+31500;This armament's innate effects;武器本身拥有的效果。
+31511;Skill granted by these Ashes of War;此战灰能赋予的战技。
+31512;Armament types that these Ashes of War can alter;此战灰能赋予战技、属性的武器类别。
+32000;Number of runes required to buy;购买所需的卢恩。
+32001;Number of runes required to upgrade;强化所需的卢恩。
+32002;Number of runes required to grant;赋予所需的卢恩。
+32010;Number of runes gained when sold;卖出后获得的卢恩。
+40110;Confirm;确定
+40120;None entered;尚未输入
+40301;Off;关闭
+40302;Mild;和缓
+40303;Auto;自动
+40310;Normal;一般
+40311;Reversed;颠倒
+40320;Allowed;使用
+40321;Restricted;不使用
+40330;Defaults;恢复默认
+40331;Next;下一步
+40340;Perform Matchmaking;匹配
+40341;No Matchmaking;不匹配
+40350;No Password;无配置
+40360;Play Online;联机游玩
+40361;Play Offline;脱机游玩
+40370;Disable;限制
+40371;Enable;不限制
+40375;Agree;同意
+40376;Decline;不同意
+40377;Prioritize Quality;画质优先
+40378;Prioritize Frame Rate;帧率优先
+40380;Game Pad;控制器
+40381;Keyboard and Mouse;键盘、鼠标
+40400;Fullscreen;全屏幕
+40401;Windowed;窗口化
+40402;Borderless Windowed;无边框窗口化
+40420;Custom;自定义
+40421;Low;低
+40422;Medium;中
+40423;High;高
+40424;Maximum;最高
+40441;Off;关闭
+40500;Tools;道具
+40501;Melee Armaments;近战武器
+40504;Shields;盾牌
+40505;Head;头盔
+40506;Chest;铠甲
+40507;Arms;臂甲
+40508;Legs;腿甲
+40509;Talismans;护符
+40510;Sorceries/Incantations;魔法／祷告
+40511;Arrows/Bolts;箭／弩箭
+40512;Bolstering Materials;强化用材料
+40513;Key Items;贵重物品
+40516;Crafting Materials;制作道具的材料
+40517;Info;情报
+40518;Crystal Tears;结晶露滴
+40519;Ranged Weapons / Catalysts;远战武器
+40520;Ashes;骨灰
+40521;Sorceries;魔法
+40522;Incantations;祷告
+40523;Ashes of War;战灰
+40530;Equipped Armaments;装备中的武器
+40531;Equipped Ashes;装备中的骨灰
+40532;Equipped Armaments;装备中的武器
+40550;Armaments;武器
+40551;Armor;防具
+40560;All Items;全部道具
+40562;Consumables;消耗道具
+40571;Throwing Pots;投掷壶
+40572;Perfume Arts;调香术
+40580;Ashes;骨灰
+40581;Special Ashes;特殊骨灰
+40590;Sorceries/Incantations;全部的魔法、祷告
+40591;Offensive Sorceries;攻击魔法
+40592;Support Sorceries;辅助魔法
+40593;Offensive Incantations;攻击祷告
+40594;Support Incantations;辅助祷告
+40602;Character Status;角色数据
+50000;None;无
+50005;Standard;普通
+50050;Strike;打击
+50055;Standard/Strike;普通／打击
+50500;Slash;斩击
+50505;Standard/Slash;普通／斩击
+50550;Strike/Slash;打击／斩击
+50555;Standard/Strike/Slash;普通／打击／斩击
+55000;Pierce;突刺
+55005;Standard/Pierce;普通／突刺
+55050;Strike/Pierce;打击／突刺
+55055;Standard/Strike/Pierce;普通／打击／突刺
+55500;Slash/Pierce;斩击／突刺
+55505;Standard/Slash/Pierce;普通／斩击／突刺
+55550;Strike/Slash/Pierce;打击／斩击／突刺
+55555;Standard/Strike/Slash/Pierce;普通／打击／斩击／突刺
+60000;All Armaments;所有武器
+60010;Dagger;短剑
+60015;Straight Sword;直剑
+60020;Greatsword;大剑
+60025;Colossal Sword;特大剑
+60030;Curved Sword;曲剑
+60035;Curved Greatsword;大曲剑
+60040;Katana;刀
+60043;Twinblade;双头剑
+60045;Thrusting Sword;刺剑
+60046;Heavy Thrusting Sword;重刺剑
+60050;Axe;斧
+60055;Greataxe;大斧
+60060;Hammer;槌
+60065;Great Hammer;大槌
+60067;Flail;连枷
+60070;Spear;矛
+60077;Great Spear;大矛
+60080;Halberd;戟
+60085;Reaper;镰刀
+60090;Fist;拳头
+60100;Claw;钩爪
+60102;Colossal Weapon;特大武器
+60104;Light Bow;小弓
+60105;Bow;长弓
+60110;Greatbow;大弓
+60115;Crossbow;弩
+60117;Ballista;弩炮
+60120;Glintstone Staff;手杖
+60130;Sacred Seal;圣印记
+60140;Small Shield;小盾
+60145;Medium Shield;中盾
+60150;Greatshield;大盾
+60155;Whip;软鞭
+60160;Arrow;箭
+60165;Greatarrow;大箭
+60170;Bolt;弩箭
+60171;Greatbolt;大弩箭
+60175;Torch;火把
+61000;Sorcery;魔法
+61002;Incantation;祷告
+62000;Standard;普通
+62001;Heavy;厚重
+62002;Keen;锋利
+62003;Quality;优质
+62004;Fire;火焰
+62005;Flame Art;焰术
+62006;Lightning;雷电
+62007;Sacred;神圣
+62008;Magic;魔力
+62009;Occult;神秘
+62010;Cold;寒冷
+62011;Poison;毒
+62012;Blood;血
+63007;Usable on large and colossal axes and hammers;能在大型、特大型的 斧、槌类武器使用
+63008;Usable on katana;能在刀类武器使用
+63009;Usable on straight swords;能在直剑类武器使用
+63017;Usable on fists and claws;能在拳头、钩爪类武器使用
+63018;Usable on axes and hammers;能在斧、槌类武器使用
+63021;Usable on swords, axes, and hammers;能在剑、斧、槌类武器使用
+63022;Usable on swords (colossal weapons excepted);能在剑类武器使用 （不含特大型武器）
+63024;Usable on polearms and twinblades;能在长柄武器、双头剑类武器使用
+63025;Usable on polearms (great spears excepted);能在长柄武器使用 （不含大矛类武器）
+63026;Usable on small and medium swords;能在小型、中型的剑类武器使用
+63028;Usable on polearms (reapers excepted);能在长柄武器使用 （不含镰刀类武器）
+63029;Usable on small melee armaments and curved swords;能在小型的近战武器 以及曲剑类武器使用
+63030;Usable on small and medium shields;能在小盾、中盾类武器使用
+63031;Usable on shields and torches;能在盾、火把类武器使用
+63032;Usable on greatbows;能在大弓类武器使用
+63033;Usable on light bows and longbows;能在小弓、长弓类武器使用
+63034;Usable on all bows;能在所有的弓类武器使用
+63038;Usable on melee armaments (whips excepted);能在近战武器使用 （不含软鞭类武器）
+63041;Usable on all shields;能在所有的盾类武器使用
+63042;Usable on all melee armaments;能在所有的近战武器使用
+63048;Usable on light bows;能在小弓类武器使用
+63049;Usable on swords and axes (colossal axes excepted);能在剑、斧类武器使用 （不含特大型斧类武器）
+63900;Usable on large thrusting weapons;能在非小型、可突刺的武器使用
+63901;Usable on all thrusting weapons;能在所有可突刺的武器使用
+63902;Usable on standard slashing weapons;能在所有普通属性、 斩击属性的武器使用
+63903;Usable on all melee weapons;能在所有近战的武器使用
+63904;Usable on large melee weapons;能在非小型、近战的武器使用
+63905;Usable on all swords;能在所有剑类武器使用
+63906;Usable on all shields;能在所有盾牌类武器使用
+80000;Cracked Pot;龟裂壶
+80001;Perfume Bottle;调香瓶
+80010;Ritual Pot;仪式壶
+90000;Morning;早上
+90001;Early Day;中午
+90002;Late Day;下午
+90003;Evening;傍晚
+90004;Night;晚上
+90005;Late Night;深夜
+101000;Equipment;装备
+101001;Inventory;置物包
+101002;Status;状态
+101003;System;系统
+101004;Messages;讯息
+101005;Pouch;随身包包
+101007;Gestures;肢体动作
+101008;Multiplayer;多人联机游玩
+101009;Item Crafting;制作道具
+103000;Right Hand Armament 1;右手武器１
+103001;Right Hand Armament 2;右手武器２
+103002;Right Hand Armament 3;右手武器３
+103011;Left Hand Armament 1;左手武器１
+103012;Left Hand Armament 2;左手武器２
+103013;Left Hand Armament 3;左手武器３
+103020;Arrows 1;箭１
+103021;Arrows 2;箭２
+103030;Bolts 1;弩箭１
+103031;Bolts 2;弩箭２
+103040;Quick Item 1;使用道具１
+103041;Quick Item 2;使用道具２
+103042;Quick Item 3;使用道具３
+103043;Quick Item 4;使用道具４
+103044;Quick Item 5;使用道具５
+103045;Quick Item 6;使用道具６
+103046;Quick Item 7;使用道具７
+103047;Quick Item 8;使用道具８
+103048;Quick Item 9;使用道具９
+103049;Quick Item 10;使用道具１０
+103050;Talisman 1;护符１
+103051;Talisman 2;护符２
+103052;Talisman 3;护符３
+103053;Talisman 4;护符４
+103060;Pouch 1;随身包包１
+103061;Pouch 2;随身包包２
+103062;Pouch 3;随身包包３
+103063;Pouch 4;随身包包４
+103064;Pouch 5;随身包包５
+103065;Pouch 6;随身包包６
+103070;Gesture 1;肢体动作１
+103071;Gesture 2;肢体动作２
+103072;Gesture 3;肢体动作３
+103073;Gesture 4;肢体动作４
+103074;Gesture 5;肢体动作５
+103075;Gesture 6;肢体动作６
+110000;Game Options;游戏选项
+110001;Camera Options;镜头选项
+110010;Camera Y-Axis;镜头上下移动
+110011;Camera X-Axis;镜头左右移动
+110012;Reset Camera Y-Axis;镜头上下角度重置
+110013;Camera Speed;镜头运镜速度
+110014;Toggle Auto Lock-On;自动切换锁定目标
+110015;Auto-Target;自动锁定攻击目标
+110016;Camera Auto Wall Recovery;镜头回避配置
+110018;Jump Controls;跳跃操作配置
+110019;Manual Attack Aiming;手动变更攻击方向
+110020;Performance Settings;画面品质配置
+110021;Ray Tracing;光线追踪
+110100;Sound and Display;显示及声音配置
+110110;Display Blood;流血表现
+110111;Subtitles;字幕显示
+110112;HUD;量表显示配置
+110113;Cinematic Effects;运镜表现
+110114;Music;音乐音量
+110115;Sound Effects;音效音量
+110116;Voice;语音音量
+110117;Master Volume;音量配置
+110118;Camera Auto Rotation;镜头自转配置
+110200;Brightness;亮度配置
+110202;Adjust brightness to your liking;请调整至偏好的亮度
+110203;Adjust TV brightness to the highest setting;请将电视调整至最大亮度
+110204;Adjust saturation to your liking;请调整至偏好的鲜艳度
+110209;HDR;高动态范围成像
+110210;Adjust Brightness;亮度调整
+110211;Adjust Image Quality;画质调整
+110212;Maximum Brightness;最大亮度
+110213;Adjust Saturation;彩度调整
+110214;Adjust Brightness;亮度调整
+110300;Network;联机相关配置
+110310;Voice Chat;语音聊天
+110311;Cross-Region Play;跨区域联机匹配
+110313;Display Player Names;其他玩家名称显示配置
+110314;Launch Setting;联机模式启动配置
+110315;Send Summon Sign;召唤记号可见度
+110316;Data Usage Agreement;游戏分析
+110500;Quit Game;结束游戏
+110502;Level;等级
+110510;Quit Game;结束游戏
+110511;Return to Desktop;返回桌面
+111001;Controls;操作方式
+111005;Keyboard/Mouse Settings;键盘与鼠标配置
+111006;Controls;操作方式
+111010;Device for On-Screen Prompts;使用的操作装置
+111011;Show Tutorials;显示教学
+111020;Mouse Sensitivity;鼠标操作灵敏度
+111022;Mouse X-Axis;鼠标左右操作
+111023;Mouse Y-Axis;鼠标上下操作
+111031;Key Bindings;键盘配置
+111100;Graphics;画面配置
+111105;Changes applied from title screen;必须在返回标题画面后才会套用
+111110;Screen Mode;屏幕方式
+111111;Resolution;屏幕分辨率
+111112;Auto-Detect Best Rendering Settings;自动调整渲染效果
+111113;Quality Settings;品质配置
+111114;Advanced Settings;详细配置
+111210;Texture Quality;贴图材质品质
+111211;Antialiasing Quality;反锯齿品质
+111212;SSAO;屏幕空间环境光遮蔽
+111213;Depth of Field;景深
+111214;Motion Blur;动态模糊
+111215;Shadow Quality;阴影品质
+111216;Lighting Quality;光线品质
+111217;Effects Quality;特效品质
+111218;Volumetric Quality;光影细部呈现品质
+111219;Reflection Quality;反射呈现品质
+111220;Water Surface Quality;水面品质
+111221;Shader Quality;造型品质
+111222;Ray Tracing Quality;光线追踪品质
+111223;Global Illumination Quality;全面照明品质
+111224;Grass Quality;草地品质
+121000;Multiplayer Password Setting;配置多人联机游玩的暗号
+121001;Group Password Setting;配置群组暗号
+121107;Cancel invasion of other world;放弃入侵其他世界
+121111;Stop beckoning invaders to your world;解除吸引入侵者的状态
+121113;Stop accepting summons requests;撤回接受召唤的承诺
+121115;Cancel summons request;撤回召唤请求
+121117;Remove co-op summon sign from summoning pool;抹除送往记号聚集处的协力记号
+121119;Remove hostile summon sign from summoning pool;抹除送往记号聚集处的敌对记号
+121121;Stop invading another world;放弃入侵其他世界
+121123;Stop invading another world;放弃入侵其他世界
+122010;Furled Finger Rank;勾指排行榜
+122011;1.0;１
+122012;2.0;２
+122013;3.0;３
+122020;Duelist Rank;斗士排行榜
+122021;1.0;１
+122022;2.0;２
+122023;3.0;３
+122030;Bloody Finger Rank;血指排行榜
+122031;1.0;１
+122032;2.0;２
+122033;3.0;３
+122040;Recusant Rank;叛律者排行榜
+122041;1.0;１
+122042;2.0;２
+122043;3.0;３
+122050;Hunter Rank;猎人排行榜
+122051;1.0;１
+122052;2.0;２
+122053;3.0;３
+122110;Contribution;贡献度
+123000;Multiplayer Password;多人联机游玩暗号
+123001;Group Password;群组暗号
+123010;None set;无配置
+123011;None set;无配置
+123020;Please set multiplayer password;请输入多人联机游玩的暗号
+123021;Please set group password;请输入群组的暗号
+123030;Password;暗号
+212000;Level Up;升级
+212750;Rebirth;重新诞生
+213000;Blacksmith;铁匠
+213001;Required Items;强化材料
+213010;Smithing Table;锻造台
+214000;Ashes of War;战灰
+214020;To be Enhanced;赋予对象
+214030;Affinity Granted;赋予属性
+214110;Undo Enhancement;移除战灰
+215000;Great Runes;大卢恩
+216000;Spirit Tuning;调灵
+216001;Required Items;强化材料
+225000;Dragon Communion;龙飨
+225010;Offerings;供品
+225020;No. Required (No. Held);所需数量（持有数）
+226000;Puppet;傀儡
+226010;Exchange;交换品
+227000;Ash of War Duplication;复制战灰
+227010;Consumable Material;消耗材料
+230000;Puppet;傀儡
+230100;Remembrance Duplication;复制追忆
+231000;Purchase Item;交易（购买）
+231001;Runes Required;所需卢恩
+231003;Limit;限定数量
+231010;Sorcery Instruction;学习魔法
+231020;Incantation Instruction;学习祷告
+231030;Skill Instruction;学习战技
+231500;Equipment of Champions;英雄的防具
+232000;Sell Item;交易（卖出）
+232001;Runes Offered;获得卢恩
+233000;Memorize Spells;记忆
+233101;Memory Slots;记忆空格
+233102;Empty Slots;可用空格
+234020;----;----
+235000;Please allocate your flask uses;请分配圣杯瓶的使用次数
+236000;Item Crafting;制作道具
+236001;Required Items;所需材料
+236002;No. Required (No. Held);所需数量（持有数）
+236003;Created Items;制作道具
+236200;Power of Remembrance;追忆力量
+236210;Usable Remembrances;可使用的追忆
+236211;Received Power;获得的力量
+236400;Alter Garments;修改服装
+236410;Before Alterations;修改前
+236411;After Alterations;修改后
+238000;Wondrous Physick Mix;调配灵药
+241000;Map;地图
+241100;Markers;标记
+241110;Remove All Markers;移除所有标记
+241200;Sites of Grace;赐福一览
+241210;Marked Sites of Grace;标记的赐福一览
+241300;Stormveil Castle;史东薇尔城
+241301;Chapel of Anticipation;候王礼拜堂
+241302;Leyndell, Royal Capital;王城罗德尔
+241303;Leyndell, Ashen Capital;灰城罗德尔
+241304;Roundtable Hold;圆桌厅堂
+241305;Ainsel River Main;安瑟尔河主流
+241306;Lake of Rot;腐败湖
+241307;Ainsel River;安瑟尔河
+241308;Nokron, Eternal City;“永恒之城”诺克隆恩
+241309;Siofra River;希芙拉河
+241310;Deeproot Depths;深根底层
+241311;Mohgwyn Palace;蒙格温王朝
+241312;Crumbling Farum Azula;逐渐崩毁的法姆·亚兹拉
+241313;Academy of Raya Lucaria;魔法学院雷亚卢卡利亚
+241314;Miquella's Haligtree;米凯拉的圣树
+241315;Elphael, Brace of the Haligtree;“圣树分枝”艾布雷菲尔
+241316;Volcano Manor;火山官邸
+241317;Stranded Graveyard;漂流墓地
+241318;Stone Platform;石舞台
+241319;Subterranean Shunning-Grounds;弃置恶兆的地底
+241320;Ruin-Strewn Precipice;古遗迹断崖
+241321;Limgrave;宁姆格福
+241322;Stormhill;风暴山丘
+241323;Weeping Peninsula;啜泣半岛
+241324;Liurnia of the Lakes;湖之利耶尼亚
+241325;Bellum Highway;彼鲁姆大道
+241326;Moonlight Altar;月光祭坛
+241327;Altus Plateau;亚坛高原
+241328;Mt. Gelmir;格密尔火山
+241329;Capital Outskirts;王城外围
+241330;Forbidden Lands;禁域
+241331;Caelid;盖利德
+241332;Greyoll's Dragonbarrow;桂奥尔龙墓
+241333;Mountaintops of the Giants;巨人山顶
+241334;Flame Peak;火焰之巅
+241335;Consecrated Snowfield;化圣雪原
+241336;Swamp of Aeonia;艾奥尼亚沼泽
+241400;Roundtable Hold;圆桌厅堂
+241401;Stormveil Castle;史东薇尔城
+241402;Leyndell, Royal Capital;王城罗德尔
+241403;Crumbling Farum Azula;逐渐崩毁的法姆·亚兹拉
+241404;Academy of Raya Lucaria;魔法学院雷亚卢卡利亚
+241405;Miquella's Haligtree;米凯拉的圣树
+241406;Volcano Manor;火山官邸
+241407;Ainsel River;安瑟尔河
+241408;Siofra River;希芙拉河
+241409;Deeproot Depths;深根底层
+241410;Limgrave;宁姆格福
+241411;Liurnia of the Lakes;湖之利耶尼亚
+241412;Altus Plateau;亚坛高原
+241413;Caelid;盖利德
+241414;Mountaintops of the Giants;巨人山顶
+241415;Giants' Peak;巨人之巅
+241416;Consecrated Snowfield;化圣雪原
+251000;Sort Chest;整理木箱
+251001;Inventory;置物包
+251002;Chest;木箱
+280001;Key Bindings;按键配置
+280005;Keyboard;键盘
+280006;Mouse;鼠标
+280010;Move;移动
+280020;Camera Controls;操作镜头
+280030;Switch Armament;切换武器
+280040;Attack;攻击
+280099;No Key Binding;未配置
+280100;Movement Control;移动速度配置
+280101;Move Forwards;移动（向前）
+280102;Move Backwards;移动（向后）
+280103;Move Left;移动（向左）
+280104;Move Right;移动（向右）
+280105;Backstep, Dodge Roll, Dash;后跃、翻滚、冲刺
+280106;Jump;跳跃
+280107;Crouch / Stand Up;蹲下／站起
+280110;Movement;移动
+280199;Move Camera / Change Target;操作镜头、切换锁定目标
+280200;Move Camera / Change Target (Up);操作镜头、切换锁定目标（向上）
+280201;Move Camera / Change Target (Down);操作镜头、切换锁定目标（向下）
+280202;Move Camera / Change Target (Left);操作镜头、切换锁定目标（向左）
+280203;Move Camera / Change Target (Right);操作镜头、切换锁定目标（向右）
+280204;Reset Camera, Lock-On/Remove Target;重置镜头、锁定／解除锁定目标
+280300;Switch Item;切换道具
+280301;Switch Right-Hand Armament;切换右手武器
+280302;Switch Left-Hand Armament;切换左手武器
+280303;Switch Sorcery/Incantation;切换魔法／祷告
+280400;Attack (RH & Two-Handed Armament);轻攻击（右手武器、双手共持武器）
+280401;Strong Attack (RH & 2H Armament);重攻击（右手武器、双手共持武器）
+280402;Guard (LH Armament);防御（左手武器）
+280403;Skill;战技
+280404;Event Action (Examine, Open, etc.);触发剧情的行动（调查、开启等等）
+280405;Use Item;使用道具
+280406;Two-Hand Current Armament;双手共持武器
+280500;Main Menu;主选单
+280501;Map;地图
+288000;Character Selection;选择角色
+288001;Select Character Base;选择角色雏形
+288050;Knight;剑士
+288051;Enchanted Knight;魔法骑士
+288052;Prophet;预言家
+288053;Champion;勇者
+288054;Bloody Wolf;白狼战鬼
+288060;Knight;Knight
+288061;Enchanted Knight;Enchanted Knight
+288062;Prophet;Prophet
+288063;Champion;Champion
+288064;Bloody Wolf;Bloody Wolf
+288100;Vagabond;流浪骑士
+288101;Warrior;剑士
+288102;Hero;勇者
+288103;Bandit;盗贼
+288104;Astrologer;观星者
+288105;Prophet;预言家
+288106;Confessor;密使
+288107;Samurai;武士
+288108;Prisoner;囚犯
+288109;Wretch;一贫如洗
+288500;Please choose a body type;请选择体型
+288501;Type A;类型Ａ
+288502;Type B;类型Ｂ
+290000;Create Character;创建新角色
+290001;Cosmetics;化妆
+290002;Cosmetics;化妆
+290990;Enter name;请输入名字
+291000;Name;名字
+291001;Body Type;体型
+291002;Age;年龄段
+291003;Voice;声音
+291010;Origin;出身
+291011;Keepsake;遗物
+291020;Choose Base Template;外貌
+291021;Alter Face & Hair;脸部／头发
+291022;Alter Body;身体
+291023;Alter Skin Color;肤色
+291025;Detailed Appearance;外貌细节
+291030;Save to Favorites;保存外貌配置
+291031;Load Favorite;读取外貌配置
+291050;Finish;创建完成
+291051;Finish Cosmetics;结束化妆
+291052;Finish Cosmetics;结束化妆
+292000;Adjust Face Template;调整基础脸型
+292001;Face Structure;各部位的轮廓
+292010;Hair;头发
+292011;Eyebrows;眉毛
+292012;Facial Hair;胡子
+292013;Eyelashes;睫毛
+292020;Eyes;眼睛
+292025;Skin Features;皮肤特色
+292030;Cosmetics;化妆
+292040;Tattoo/Mark/Eyepatch;刺青／痣／眼罩
+292050;Similar Face;相似的脸
+292060;Head;头部
+292061;Chest;胸部
+292062;Abdomen;腹部
+292063;Arms;腕部
+292064;Legs;腿部
+292070;Body Hair;体毛量
+292071;Body Hair Color;体毛颜色
+292072;Musculature;肌肉量
+292080;Burn Marks;烫伤伤痕显示配置
+293000;Bone Structure;骨胳形状
+293001;Form Emphasis;轮廓深度
+293002;Apparent Age;年龄印象
+293003;Facial Aesthetic;外貌印象
+293010;Facial Balance;脸部平衡
+293011;Forehead/Glabella;额头／眉心
+293012;Brow Ridge;眉骨
+293013;Eyes;眼睛
+293014;Nose Ridge;鼻梁
+293015;Nostrils;鼻翼
+293016;Cheeks;脸颊
+293017;Lips;嘴唇
+293018;Mouth;嘴巴
+293019;Chin;下巴
+293020;Jaw;下颚
+293100;Hair;头发
+293101;Hair Color;发色
+293102;Luster;头发光泽
+293103;Root Darkness;发根漆黑度
+293104;White Hairs;白发多寡
+293110;Brow;眉毛
+293111;Brow Color;眉色
+293112;Luster;眉毛光泽
+293113;Root Darkness;眉毛根部漆黑度
+293114;White Hairs;白眉多寡
+293120;Beard;胡子
+293121;Beard Color;胡子颜色
+293122;Luster;胡子光泽
+293123;Root Darkness;胡子根部漆黑度
+293124;White Hairs;白胡多寡
+293125;Stubble;胡渣
+293130;Eyelashes;睫毛
+293131;Eyelash Color;睫毛颜色
+293140;Right Iris Size;右眼虹膜大小
+293141;Right Iris Color;右眼虹膜颜色
+293142;R Eye Clouding;右眼水晶体混浊度
+293143;R Clouding Color;右眼水晶体混浊部颜色
+293144;R Eye White Color;右眼白颜色
+293145;R Eye Position;右眼虹膜位置
+293150;Left Iris Size;左眼虹膜大小
+293151;Left Iris Color;左眼虹膜颜色
+293152;L Eye Clouding;左眼水晶体混浊度
+293153;L Clouding Color;左眼水晶体混浊部颜色
+293154;L Eye White Color;左眼白颜色
+293155;L Eye Position;左眼虹膜位置
+293156;Eye Alteration;眼睛变化配置
+293160;Pores;毛孔
+293161;Skin Luster;皮肤光泽
+293162;Dark Circles;眼窝
+293163;Dark Circle Color;眼窝颜色
+293164;Cheeks;腮红
+293165;Cheek Color;腮红颜色
+293166;Eyeliner;眼线
+293167;Eyeliner Color;眼线颜色
+293168;Eyeshadow (Upper);眼影（上）
+293169;Eyeshadow Color (Upper);眼影颜色（上）
+293170;Eyeshadow (Lower);眼影（下）
+293171;Eyeshadow Color (Lower);眼影颜色（下）
+293172;Lipstick;口红
+293173;Lipstick Color;口红颜色
+293180;Tattoo/Mark;刺青／痣
+293181;Tattoo/Mark Color;刺青／痣颜色
+293182;Tweak Tattoo/Mark;刺青／痣细节
+293190;Eyepatch;眼罩
+293191;Eyepatch Color;眼罩颜色
+294050;Nose Size;鼻子所占比例
+294051;Nose/Forehead Ratio;鼻子与额头的比例
+294052;Face Protrusion;脸的凹凸
+294053;Vert. Face Ratio;脸部五官上下间隔
+294054;Facial Feature Slant;脸部五官倾斜度
+294055;Horiz. Face Ratio;脸部五官左右间隔
+294060;Forehead Depth;额头高度
+294061;Forehead Protrusion;额头的凹凸
+294062;Nose Bridge Height;鼻梁上端高度
+294063;Bridge Protrusion 1;鼻梁上端凹凸１
+294064;Bridge Protrusion 2;鼻梁上端凹凸２
+294065;Nose Bridge Width;鼻梁上端宽度
+294070;Brow Ridge Height;眉骨高度
+294071;Inner Brow Ridge;眉骨内侧高度
+294072;Outer Brow Ridge;眉骨外侧高度
+294080;Eye Position;眼睛位置
+294081;Eye Size;眼睛大小
+294082;Eye Slant;眼睛倾斜度
+294083;Eye Spacing;双眼间隔
+294090;Nose Ridge Depth;鼻梁深度
+294091;Nose Ridge Length;鼻梁长度
+294092;Nose Position;鼻子位置
+294093;Nose Tip Height;鼻尖高度
+294094;Nose Protrusion;鼻的凹凸
+294095;Nose Height;鼻子高度
+294096;Nose Slant;鼻子倾斜度
+294100;Nostril Slant;鼻翼倾斜度
+294101;Nostril Size;鼻翼大小
+294102;Nostril Width;鼻翼宽度
+294110;Cheekbone Height;颧骨高度
+294111;Cheekbone Depth;颧骨深度
+294112;Cheekbone Width;颧骨宽度
+294113;Cheekbone Protrusion;脸颊凹凸
+294114;Cheeks;脸颊
+294120;Lip Shape;唇形
+294121;Mouth Expression;嘴部表情
+294122;Lip Fullness;嘴唇丰厚度
+294123;Lip Size;嘴唇大小
+294124;Lip Protrusion;嘴唇凹凸
+294125;Lip Thickness;嘴唇厚度
+294130;Mouth Protrusion;嘴巴凹凸
+294131;Mouth Slant;嘴形倾斜度
+294132;Occlusion;咬合位置
+294133;Mouth Position;嘴部位置
+294134;Mouth Width;嘴部宽度
+294135;Mouth-Chin Distance;嘴部到下巴的距离
+294140;Chin Tip Position;下巴位置
+294141;Chin Length;下巴长度
+294142;Chin Protrusion;下巴突出度
+294143;Chin Depth;下巴深度
+294144;Chin Size;下巴大小
+294145;Chin Height;下巴高度
+294146;Chin Width;下巴宽度
+294150;Jaw Protrusion;下颚突出度
+294151;Jaw Width;下颚宽度
+294152;Lower Jaw;下颚下侧
+294153;Jaw Contour;下颚轮廓
+294160;Position (Vert.);位置　上下
+294161;Position (Horiz.);位置　左右
+294162;Angle;角度
+294163;Expansion;扩展度
+294164;Flip;翻转
+296009;Change Value;更动数值
+296010;Match Right Eye;套用右眼虹膜配置
+296011;Match Left Eye;套用左眼虹膜配置
+296100;Small;小
+296101;Large;大
+296102;Small;小
+296103;Large;大
+296104;Small;小
+296105;Large;大
+296106;Small;小
+296107;Large;大
+296108;Small;小
+296109;Large;大
+296110;Sparse;稀疏
+296111;Abundant;浓密
+296112;Weak;浅
+296113;Strong;深
+296114;Young;年轻
+296115;Aged;年迈
+296116;Masculine;锐利
+296117;Feminine;柔和
+296118;Gentle;暗
+296119;Strong;亮
+296120;Light;浅
+296121;Dark;深
+296122;Sparse;少
+296123;Abundant;多
+296124;Gentle;暗
+296125;Strong;亮
+296126;Light;浅
+296127;Dark;深
+296128;Sparse;少
+296129;Abundant;多
+296130;Gentle;暗
+296131;Strong;亮
+296132;Light;浅
+296133;Dark;深
+296134;Sparse;少
+296135;Abundant;多
+296136;Thin;稀疏
+296137;Thick;浓密
+296138;Small;小
+296139;Large;大
+296140;Clear;低
+296141;Opaque;高
+296142;Close;近
+296143;Far;远
+296144;Small;小
+296145;Large;大
+296146;Clear;低
+296147;Opaque;高
+296148;Close;近
+296149;Far;远
+296150;Closed;紧致
+296151;Open;粗大
+296152;Plain;无
+296153;Lustrous;有
+296154;Light;淡
+296155;Dark;浓
+296156;Light;淡
+296157;Dark;浓
+296158;Light;淡
+296159;Dark;浓
+296160;Light;淡
+296161;Dark;浓
+296162;Light;淡
+296163;Dark;浓
+296164;Subtle;淡
+296165;Vibrant;浓
+296166;Narrow;窄
+296167;Wide;宽
+296168;Nose;鼻子
+296169;Forehead;额头
+296170;Concave;凹
+296171;Convex;凸
+296172;Narrow;窄
+296173;Wide;宽
+296174;Down;下
+296176;Narrow;窄
+296177;Wide;宽
+296178;Slight;浅
+296179;Deep;深
+296180;Concave;凹
+296181;Convex;凸
+296182;Low;低
+296183;High;高
+296184;Concave;凹
+296185;Convex;凸
+296186;Concave;凹
+296187;Convex;凸
+296188;Narrow;窄
+296189;Wide;宽
+296190;Low;低
+296191;High;高
+296192;Low;低
+296193;High;高
+296194;Low;低
+296195;High;高
+296196;Down;下
+296198;Small;小
+296199;Large;大
+296201;Out;向外
+296202;Narrow;窄
+296203;Wide;宽
+296204;Slight;浅
+296205;Deep;深
+296206;Short;短
+296207;Long;长
+296208;Down;下
+296210;Low;低
+296211;High;高
+296212;Concave;凹
+296213;Convex;凸
+296214;Low;低
+296215;High;高
+296216;Down;下
+296218;Down;下
+296220;Small;小
+296221;Large;大
+296222;Narrow;窄
+296223;Wide;宽
+296224;Small;小
+296225;Large;大
+296226;Low;低
+296227;High;高
+296228;Slight;浅
+296229;Deep;深
+296230;Narrow;窄
+296231;Wide;宽
+296232;Concave;凹
+296233;Convex;凸
+296234;Thin;干瘦
+296235;Thick;丰满
+296236;Purse;收拢
+296237;Open;拉宽
+296238;Sad;悲
+296239;Happy;喜
+296240;Small;小
+296241;Large;大
+296242;Small;小
+296243;Large;大
+296244;Concave;凹
+296245;Convex;凸
+296246;Thin;薄
+296247;Thick;厚
+296248;Concave;凹
+296249;Convex;凸
+296250;Down;下
+296252;Down;下
+296254;Down;下
+296256;Narrow;窄
+296257;Wide;宽
+296258;Short;短
+296259;Long;长
+296260;Front;往前
+296261;Back;往后
+296262;Short;短
+296263;Long;长
+296264;Small;小
+296265;Large;大
+296266;Slight;浅
+296267;Deep;深
+296268;Small;小
+296269;Large;大
+296270;Low;低
+296271;High;高
+296272;Narrow;窄
+296273;Wide;宽
+296274;Small;小
+296275;Large;大
+296276;Narrow;窄
+296277;Wide;宽
+296278;Low;低
+296279;High;高
+296280;Thin;纤细
+296281;Thick;丰满
+296282;Down;下
+296284;Left;左
+296285;Right;右
+296286;Rotate Left;左转
+296287;Rotate Right;右转
+296288;Small;小
+296289;Large;大
+297100;Type A;类型Ａ
+297101;Type B;类型Ｂ
+297110;Young;年轻
+297111;Mature;壮年
+297112;Aged;年迈
+297120;Young Voice 1;年轻的声音１
+297121;Mature Voice 1;壮年的声音１
+297122;Aged Voice 1;年迈的声音１
+297125;Young Voice 2;年轻的声音２
+297126;Mature Voice 2;壮年的声音２
+297127;Aged Voice 2;年迈的声音２
+297130;Vagabond;流浪骑士
+297131;Warrior;剑士
+297132;Hero;勇者
+297133;Bandit;盗贼
+297134;Astrologer;观星者
+297135;Prophet;预言家
+297136;Samurai;武士
+297137;Prisoner;囚犯
+297138;Confessor;密使
+297139;Wretch;一贫如洗
+297150;None;无
+297151;Crimson Amber Medallion;红琥珀链坠
+297152;Lands Between Rune;交界地卢恩
+297153;Golden Seed;黄金种子
+297154;Fanged Imp Ashes;尖牙小恶魔的骨灰
+297156;Cracked Pot;龟裂壶
+297157;Stonesword Key;石剑钥匙
+297158;Bewitching Branch;魅惑树枝
+297159;Boiled Prawn;煮熟虾子
+297160;Shabriri's Woe;夏玻利利之祸
+297170;Standard;普通
+297171;Muscular;肌肉发达
+297181;OFF;不翻转
+297186;OFF;不套用
+297188;OFF;不显示
+297200;Warrior;战士长相
+297201;Truth-Seeker;求道长相
+297202;Aristocrat;权贵长相
+297203;Loner;遗世独立长相
+297204;Northerner;北方长相
+297205;Seafarer;水手长相
+297206;Reedlander;芦苇之地长相
+297207;Draconian;龙长相
+297208;Nightfolk;夜人长相
+297209;Numen;稀人长相
+297220;Warrior;战士长相
+297221;Truth-Seeker;求道长相
+297222;Aristocrat;权贵长相
+297223;Loner;遗世独立长相
+297224;Northerner;北方长相
+297225;Seafarer;水手长相
+297226;Reedlander;芦苇之地长相
+297227;Draconian;龙长相
+297228;Nightfolk;夜人长相
+297229;Numen;稀人长相
+299005;Temporary Colors;暂存颜色
+299006;Preset Colors;默认颜色
+299009;Change Color;改变颜色
+299010;Match Right Eye;套用右眼虹膜配置
+299011;Match Left Eye;套用左眼虹膜配置
+299020;Match Hair;套用头发配置
+299050;Color Adjustment;调整颜色
+301000;Gestures;肢体动作
+303000;NEW;新获得
+310000;Write Message;写下讯息
+310001;Messages Written;写下的讯息
+310002;Messages Discovered;已读讯息
+311000;Appraisals;总评价数
+311001;Good;好评
+311002;Poor;恶评
+311011;Rated Good;已给好评
+311012;Rated Poor;已给恶评
+321000;Templates;范本
+321001;Words;单字
+321002;Conjunctions;连接词
+321003;Templates (2nd Line);范本２
+321004;Words (2nd Line);单字２
+321005;Gestures;肢体动作
+321006;Finish;完成
+322001;Good;好评
+322002;Poor;恶评
+324001;Appraisals;总评价数
+331100;Host of Fingers;勾指主人
+331101;Furled Finger;勾指
+331102;Bloody Finger;血指
+331103;Duelist;斗士
+331104;Recusant;叛律者
+331111;Hunter;猎人
+331122;Furled Finger;勾指
+331123;Furled Finger;勾指
+331132;Duelist;斗士
+331133;Duelist;斗士
+331142;Bloody Finger;血指
+331143;Bloody Finger;血指
+331152;Recusant;叛律者
+331153;Recusant;叛律者
+331162;Hunter;猎人
+331163;Hunter;猎人
+331170;Combatant;斗士
+331171;Combatant;斗士
+331172;Combatant;斗士
+331173;Combatant;斗士
+331174;Golden Combatant;黄金斗士
+331180;Eliminations;击倒人数
+331200;FROSTBITE;冻伤
+331201;BLOOD LOSS;出血
+331202;POISON;中毒
+331203;SCARLET ROT;猩红腐败
+331204;SLEEP;催眠
+331205;MADNESS;发狂
+331207;DEATH BLIGHTED;骤死
+331208;! WEAPON BROKEN !;! WEAPON BROKEN !
+331209;! ARMOR AT RISK !;! ARMOR AT RISK !
+331210;! ARMOR BROKEN !;! ARMOR BROKEN !
+331301;DEMIGOD FELLED;DEMIGOD FELLED
+331302;LEGEND FELLED;LEGEND FELLED
+331303;GREAT ENEMY FELLED;GREAT ENEMY FELLED
+331304;ENEMY FELLED;ENEMY FELLED
+331305;YOU DIED;YOU DIED
+331307;HOST VANQUISHED;HOST VANQUISHED
+331308;BLOODY FINGER VANQUISHED;BLOODY FINGER VANQUISHED
+331309;DUTY FULFILLED;DUTY FULFILLED
+331311;LOST GRACE DISCOVERED;LOST GRACE DISCOVERED
+331313;COMMENCE;COMMENCE
+331314;VICTORY;VICTORY
+331315;STALEMATE;DRAW
+331316;DEFEAT;DEFEAT
+331317;MAP FOUND;MAP FOUND
+331318;REDEEMER DIED;代理人死亡
+331321;GREAT RUNE RESTORED;GREAT RUNE RESTORED
+331322;GOD SLAIN;GOD SLAIN
+331323;DUELIST VANQUISHED;DUELIST VANQUISHED
+331324;RECUSANT VANQUISHED;RECUSANT VANQUISHED
+331325;INVADER VANQUISHED;INVADER VANQUISHED
+331330;FURLED FINGER RANK ADVANCED;FURLED FINGER RANK ADVANCED
+331331;FURLED FINGER RANK ADVANCED;FURLED FINGER RANK ADVANCED
+331332;DUELIST RANK ADVANCED;DUELIST RANK ADVANCED
+331333;DUELIST RANK ADVANCED;DUELIST RANK ADVANCED
+331334;BLOODY FINGER RANK ADVANCED;BLOODY FINGER RANK ADVANCED
+331335;BLOODY FINGER RANK ADVANCED;BLOODY FINGER RANK ADVANCED
+331336;RECUSANT RANK ADVANCED;RECUSANT RANK ADVANCED
+331337;RECUSANT RANK ADVANCED;RECUSANT RANK ADVANCED
+331338;HUNTER RANK ADVANCED;HUNTER RANK ADVANCED
+331339;HUNTER RANK ADVANCED;HUNTER RANK ADVANCED
+401301;CONTINUE;继续游戏
+401302;LOAD GAME;加载游戏
+401303;NEW GAME;开始新游戏
+401304;SYSTEM;系统配置
+401305;INFORMATION;信息
+401306;LOG IN;登录
+401307;SWITCH PROFILE;切换档案
+401309;QUIT GAME;结束游戏
+401310;ONLINE;联机模式
+401311;OFFLINE;脱机模式
+401312;PRE-ORDER;预购游戏
+401313;CONVERT SAVE DATA;转换保存数据
+401320;App Ver.;应用版本
+401321;Server Ver.;服务器版本
+401322;Calibrations Ver.;规则
+401400;INFORMATION;信息
+401401;There is no new information;没有新版本的信息。
+401510;Accept;同意
+401511;Decline;不同意
+401900;Network Test;网络测试版
+401901;This game is still under development;游戏尚在开发中
+406000;LOAD GAME;加载游戏
+406001;NEW GAME;开始新游戏
+502000;Send selected player back home;将选择的人物遣返至原本的世界
+506000;Colosseum;竞技场
+506100;Format;规则
+506101;Combat Format;竞技方式
+506102;Number of Players;人数
+506103;Spirit Ashes;骨灰
+506104;Venue;竞技场
+506105;Colosseum Password;竞技场暗号
+506106;Enter Combat;参战
+506107;Cancel;停止
+506108;Desired Team;参战队伍
+506109;Restrictions;有效范围
+506120;Duel;决斗
+506121;United Combat / Combat Ordeal;组队战、乱战
+506122;Spirit Ashes Allowed;使用骨灰
+506200;Duel;决斗
+506201;Combat Ordeal;乱战
+506202;United Combat;组队战
+506300;Any location;随机
+506301;Royal Colosseum;王城竞技场
+506302;Limgrave Colosseum;宁姆格福竞技场
+506303;Caelid Colosseum;盖利德竞技场
+506400;2 combatants;２人
+506401;4 combatants;４人
+506402;6 combatants;６人
+506403;Any number of combatants;不限人数
+506500;Prohibited;不能使用骨灰
+506501;Allowed;能使用骨灰
+506600;No preference;不指定
+506601;Team A;Ａ队
+506602;Team B;Ｂ队
+506800;All players;双方队伍
+506801;Allied team only;仅限我方队伍
+507000;Supreme Combatant: <?mvpName?>;最强斗士：<?mvpName?>
+507100;Set Colosseum Password;请输入竞技场的暗号

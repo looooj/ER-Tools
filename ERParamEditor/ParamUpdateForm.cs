@@ -1,5 +1,5 @@
 ﻿using ERParamUtils;
-using ERParamUtils.UpateParam;
+using ERParamUtils.UpdateParam;
 using MultiLangLib;
 using System;
 using System.Collections.Generic;
@@ -120,7 +120,7 @@ namespace ERParamEditor
         }
 
 
-        private void exec(string? msg, bool publish)
+        private void ExecUpdatePublish(string? msg, bool publish)
         {
 
 
@@ -162,6 +162,7 @@ namespace ERParamEditor
             updateParamOptions.Publish = publish;
             try
             {
+                Cursor = Cursors.WaitCursor;
                 UpdateParamExector.Exec(_paramProject, updateParamOptions);
 
 
@@ -172,16 +173,18 @@ namespace ERParamEditor
 
                 MessageBox.Show(ex.Message);
             }
+            Cursor = Cursors.Default;
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            exec(null, false);
+            ExecUpdatePublish(null, false);
         }
 
         private void buttonUpdatePublish_Click(object sender, EventArgs e)
         {
-            exec("Are you sure", true);
+            string msg = MultiLang.GetText("Are you sure exec publish?");
+            ExecUpdatePublish(msg, true);
         }
 
 

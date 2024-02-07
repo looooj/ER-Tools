@@ -1,11 +1,13 @@
-﻿using SoulsParam;
+﻿using NLog.LayoutRenderers.Wrappers;
+using SoulsParam;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERParamUtils.UpateParam
+namespace ERParamUtils.UpdateParam
 {
     class RecipeUpdateItem
     {
@@ -52,8 +54,28 @@ namespace ERParamUtils.UpateParam
     {
 
         static int recipeBaseRowId = 31000;
+        static Dictionary<string, int> eventFlagForStockMap = new();
         public static void Init() {
             recipeBaseRowId = 31000;
+
+            string fn = GlobalConfig.BaseDir + "\\docs\\recipe-param\\eventFlag_forStock.txt";
+            string[] lines = File.ReadAllLines(fn);
+            foreach (string line in lines) {
+
+                var tmp = line.Trim();
+                var items = tmp.Split(",");
+                //31602,62010,8600,3
+                if (items.Length == 4) {
+                    var key = items[2] + "_" + items[3];
+                    var val = items[1].Trim();
+                    if (val.Length < 1)
+                        continue;
+                    eventFlagForStockMap.TryAdd(key, int.Parse(val));
+                }
+            }
+
+
+
         }
 
         public static void UnlockCrafting(ParamProject paramProject, UpdateCommand updateCommand)
@@ -74,18 +96,44 @@ namespace ERParamUtils.UpateParam
                 {
                     updateCommand.AddItem(row, key, "0");
                 }
+            }            
+        }
+
+        public static void RemoveRequire(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+
+            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+
+            for (int i = 0; i < param.Rows.Count; i++)
+            {
+
+                var row = param.Rows[i];
+
+                string key = "mtrlId";
+
+                if (ParamRowUtils.GetCellInt(row, key, 0) > 0)
+                {
+                    updateCommand.AddItem(row, key, "0");
+                }
             }
-            //AddTest(paramProject, updateCommand);
         }
 
 
-
         public static bool AddEquip(UpdateCommand updateCommand, int rowId,
-             SoulsParam.Param param, int equipId, int equipType, string name, int eventFlagForStock)
+             SoulsParam.Param param, int equipId, int equipType, string name, int eventFlagForStock1)
 
         {
             if (name.Length < 1)
                 name = "_" + equipId;
+
+            var key = equipId + "_" + equipType;
+            int eventFlagForStock = eventFlagForStock1;
+            if (eventFlagForStock == 0 )
+               if (eventFlagForStockMap.TryGetValue(key, out int eventFlagForStock2)) {
+                    eventFlagForStock = eventFlagForStock2;
+            }
 
             var row = param.InsertRow(rowId, name);
             if (row == null)
@@ -158,18 +206,17 @@ namespace ERParamUtils.UpateParam
 
         }
 */
+
         public static void AddMapPiece(ParamProject paramProject, UpdateCommand updateCommand)
         {
             var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
             if (param == null)
                 return;
-            int eventFlagForStock = 62010;
+
             for (int equipId = 8600; equipId <= 8618; equipId++) {
                 recipeBaseRowId++;
+                AddEquip(updateCommand, recipeBaseRowId, param, equipId, (int)ShopEquipType.Good, "", 0);
 
-                AddEquip(updateCommand, recipeBaseRowId, param, equipId, (int)ShopEquipType.Good, "", eventFlagForStock);
-                    eventFlagForStock++;
-                //AddGood(updateCommand, param, 8600, 8618, "Map", 30132, 62010);
             }
         }
 
@@ -182,7 +229,7 @@ namespace ERParamUtils.UpateParam
             if (param == null)
                 return;
 
-            var lines = UpateFile.Load(paramProject, UpateFile.UpdateRecipeSpec);
+            var lines = UpdateFile.Load(paramProject, UpdateFile.UpdateRecipeSpec);
 
             foreach (string line in lines)
             {

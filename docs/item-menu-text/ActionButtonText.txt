@@ -1,0 +1,160 @@
+﻿1000;Examine;调查
+1800;Touch grace;触碰赐福
+1810;Rest at site of grace;在赐福休息
+1830;Rest at table of lost grace;在大赐福休息
+2000;Pick up item;捡拾道具
+2010;Pillage corpse;搜刮尸体
+2020;Pillage remains;搜刮尸体
+2030;Search treasure chest;搜刮宝箱
+2800;Acquire materials;采集材料
+2810;Acquire materials;采集材料
+2811;Acquire materials;采集材料
+2812;Acquire materials;采集材料
+2813;Acquire materials;采集材料
+2814;Acquire materials;采集材料
+2815;Acquire materials;采集材料
+2816;Acquire materials;采集材料
+2817;Acquire materials;采集材料
+2818;Acquire materials;采集材料
+2819;Acquire materials;采集材料
+2820;Acquire materials;采集材料
+2821;Acquire materials;采集材料
+2822;Acquire materials;采集材料
+2823;Acquire materials;采集材料
+2824;Acquire materials;采集材料
+2825;Acquire materials;采集材料
+2826;Acquire materials;采集材料
+2827;Acquire materials;采集材料
+2828;Acquire materials;采集材料
+3000;Pull lever;拉起拉杆
+3010;Push lever;推动拉杆
+3100;Open;打开
+3101;Close;关上
+3200;Traverse the mist;进入雾中
+3300;Climb;爬上
+3301;Descend;爬下
+3310;Kick ladder;踢落梯子
+4000;Contraption does not move;机关不能动。
+4010;Does not open from this side;不能从这一侧打开。
+4020;Locked;锁上了。
+4070;You are not destined to open this;没有打开此物的命运。
+4072;Opens only to those carrying a finger;身上没有指头的，门不敞开。
+4073;The door is blocked shut;门扉紧闭。
+4080;The door is blocked shut;门扉紧闭。
+4081;It's tightly blocked shut;紧闭不开。
+4082;It's tightly blocked shut;紧闭不开。
+4083;It's tightly blocked shut;紧闭不开。
+4084;It's tightly blocked shut;紧闭不开。
+4085;It's tightly blocked shut;紧闭不开。
+4086;It's tightly blocked shut;紧闭不开。
+7000;Talk;交谈
+7010;Kneel;跪下
+7020;Steal;偷窃
+7030;Use smithing table;使用锻造台
+7040;Examine altar;调查祭坛
+7050;Touch Fractured Marika;触碰濒毁玛莉卡
+7060;Hand over Deathroot;交出死根
+7080;Examine;调查
+7090;Accept primal glintstone;收下源辉石
+7100;Transplant primal glintstone;移植源辉石
+7110;Be held;接受拥抱
+7111;Touch Fia;触碰菲雅
+7120;Touch the Two Fingers;触碰双指
+7130;Summon Latenna;召唤勒缇娜
+7140;Examine;调查
+7150;Touch Hyetta;触碰海妲
+7160;Offer finger;伸出指头
+7161;Dye cloth with maiden's blood;用立誓布沾上女巫的血
+7162;Dye cloth with maiden's blood;用立誓布沾上女巫的血
+7170;Atone;赎罪
+7180;Talk;交谈
+7190;Use mirror;使用化妆台
+7200;Speak the truth about Radagon;告知关于拉达冈的真相
+7210;Where did the body go?;那副身体在哪里？
+7211;Administer draught;让人喝下药水
+7220;Examine;调查
+7230;Examine remains;调查尸体
+7240;Receive mending rune;获得修复卢恩
+7241;Receive mending rune;获得修复卢恩
+7242;Receive mending rune;获得修复卢恩
+7250;Return Unalloyed Gold Needle;归还纯净金针
+7270;Examine altar;调查祭坛
+7280;Examine grave;调查坟墓
+7500;Enter Colosseum combat;参加竞技
+7501;Enter Colosseum combat;参加竞技
+7502;Enter Colosseum combat;参加竞技
+7503;Enter Colosseum combat;参加竞技
+8100;Ride;骑上
+9051;Invade White Mask Varré's world;入侵“白面具”梵雷的世界
+9052;Invade Old Knight Istvan's world;入侵“古老骑士”伊修托邦的世界
+9053;Invade Rileigh the Idle's world;入侵“黄昏将尽”莱利的世界
+9054;Invade Juno Hoslow, Knight of Blood's world;入侵“血言骑士”尤诺·霍斯劳的世界
+9055;Invade Vargram the Raging Wolf's world;入侵“白狼战鬼”巴格莱姆的世界
+9056;Invade Great Horned Tragoth's world;入侵“大角”忒拉格斯的世界
+9058;Be summoned to assist Sorceress Sellen;作为魔法师瑟濂的协助者，接受召唤
+9059;Be summoned to challenge Sorceress Sellen;作为魔法师瑟濂的敌对者，接受召唤
+9060;Be summoned to assist Millicent;作为米莉森的协助者，接受召唤
+9061;Be summoned to challenge Millicent;作为米莉森的敌对者，接受召唤
+9070;Touch cooperative sign;触碰要求协助的记号
+9071;Touch invasion sign;触碰敌对入侵的记号
+9080;Restore the power of the Great Rune;获得大卢恩的力量
+9081;Restore the power of the Great Rune;获得大卢恩的力量
+9082;Restore the power of the Great Rune;获得大卢恩的力量
+9083;Restore the power of the Great Rune;获得大卢恩的力量
+9084;Restore the power of the Great Rune;获得大卢恩的力量
+9085;Restore the power of the Great Rune;获得大卢恩的力量
+9100;Touch;触碰
+9210;Examine;调查
+9240;Stargaze;开始观星
+9260;Examine;调查
+9270;Use Birdseye Telescope;使用鸟瞰镜
+9290;Return to entrance;返回入口
+9300;Touch;触碰
+9310;Examine;调查
+9320;Examine;调查
+9330;Examine;调查
+9500;Touch wall of thorns;触碰荆棘墙
+9501;Touch golden light;触碰黄金光芒
+9503;Examine seal;调查封印
+9505;Examine seal;调查封印
+9506;Examine seal;调查封印
+9520;Light flame;点燃火焰
+9521;Touch phantom;触碰幻影
+9522;Examine seal;调查封印
+9524;Light flame;点燃火焰
+9525;Touch horned remains;触碰角骸
+9526;Go back;回到原本的地方
+9527;Examine;调查
+9528;Light flame;点燃火焰
+9529;Examine seal;调查封印
+9530;Examine seal;调查封印
+9540;Summon Castellan Jerren;召唤城主杰廉
+9541;Summon Blaidd the Half-Wolf;召唤“半狼”布莱泽
+9542;Summon Alexander, Warrior Jar;召唤“战士壶”亚历山大
+9543;Summon Great Horned Tragoth;召唤“大角”忒拉格斯
+9544;Summon Okina;召唤老翁
+9545;Summon Finger Maiden Therolina;召唤指头女巫瑟萝莉娜
+9546;Summon Lionel the Lionhearted;召唤“无畏”莱恩尼尔
+9547;Summon Patches;召唤帕奇
+9600;Become the Elden Lord;成为艾尔登之王
+9610;Summon Ranni;召唤菈妮
+9620;Become the Lord of Frenzied Flame;成为癫火之王
+9630;Put on ring;戴上戒指
+9640;Open door;开门
+9700;Hoist medallion;高举符节
+9701;Hoist secret medallion;高举秘密符节
+9710;Rest in coffin;进入石棺
+9720;Examine pedestal;调查基座
+9721;Remove inverted statue;卸下颠倒像
+9730;Open door;开门
+9740;Lie down;躺下
+50000000;Touch gold summon sign;触碰金色召唤记号
+50000001;Touch red summon sign;触碰红色召唤记号
+50000100;Touch bloodstain;触碰血迹
+50000102;Touch <?codenameIcon?>'s bloodstain;触碰<?codenameIcon?>的血迹
+50000200;Retrieve lost runes;取回卢恩
+50000210;Read message;阅读讯息
+50000211;Read <?codenameIcon?><?codenamePCName?>'s message;阅读<?codenameIcon?><?codenamePCName?>的讯息
+50000212;Read <?codenameIcon?>'s message;阅读<?codenameIcon?>的讯息
+50000400;Check your summon sign;确认自己的召唤记号
+50000500;Check your message;确认自己的讯息

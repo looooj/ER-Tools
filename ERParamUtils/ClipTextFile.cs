@@ -1,4 +1,4 @@
-﻿using ERParamUtils.UpateParam;
+﻿using ERParamUtils.UpdateParam;
 using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;

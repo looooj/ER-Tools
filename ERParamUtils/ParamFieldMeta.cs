@@ -104,7 +104,7 @@ namespace ERParamUtils
             this.fieldNameDict = fieldNameDict;
         }
 
-        public string GetDisplayName(string internalName)
+        public string GetDisplayName(string internalName,string displayName)
         {
 
             //string value = "";
@@ -113,7 +113,7 @@ namespace ERParamUtils
                 return value;
             }
 
-            return internalName;
+            return displayName;
         }
 
         //string internalName;
@@ -176,6 +176,8 @@ namespace ERParamUtils
 
         static Dictionary<string, ParamFieldEnum> EnumsDict = new();
 
+        static Dictionary<string, ParamFieldMeta> MetaDict = new();
+
         public static void Load()
         {
             EnumsDict.Clear();
@@ -200,6 +202,11 @@ namespace ERParamUtils
                         EnumsDict.Add(v.Name, v);
                     }
                 }
+
+
+                var meta = ParamFieldMeta.Parse(doc);
+                var metaKey = Path.GetFileNameWithoutExtension(file);
+                MetaDict.TryAdd(metaKey, meta);
 
             }          
 
@@ -228,6 +235,36 @@ namespace ERParamUtils
                 }
             }
             return value;
+        }
+
+
+        public static ParamFieldMeta? FindFieldMeta(string paramName) {
+
+            if ( paramName.StartsWith("ItemLotParam"))
+            {
+                paramName = "ItemLotParam";
+            }
+
+            if (paramName.StartsWith("ItemLotParam"))
+            {
+                paramName = "ItemLotParam";
+            }
+
+            if (paramName.StartsWith("BehaviorParam"))
+            {
+                paramName = "BehaviorParam";
+            }
+
+            if (paramName == "Bullet") {
+
+                paramName = "BulletParam";
+            }
+
+
+            if (MetaDict.ContainsKey(paramName)) {
+                return MetaDict[paramName];
+            }
+            return null;
         }
     }
 

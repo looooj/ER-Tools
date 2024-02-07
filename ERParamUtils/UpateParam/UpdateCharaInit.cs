@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERParamUtils.UpateParam
+namespace ERParamUtils.UpdateParam
 {
     class UpdateCharaInit
     {
@@ -33,7 +33,7 @@ namespace ERParamUtils.UpateParam
         }
 
         //1000
-        public static void Add(ParamProject paramProject, UpdateCommand updateCommand) {
+        public static void AddDefault(ParamProject paramProject, UpdateCommand updateCommand) {
 
             var param = paramProject.FindParam(ParamNames.CharaInitParam);
             if (param == null)
@@ -45,11 +45,11 @@ namespace ERParamUtils.UpateParam
                     continue;
 
                 //1000;Crimson Amber Medallion;红琥珀链坠
-                updateCommand.AddItem(row, "equip_Accessory01", 1000);
-                AddSecondaryItem(updateCommand, row, 2, 130, 1);
-                AddItem(updateCommand, row, 7, 2990, 1);
-                AddItem(updateCommand, row, 8, 8590, 1);
-                AddItem(updateCommand, row, 9, 2919, 1);
+                //updateCommand.AddItem(row, "equip_Accessory01", 1000);
+                //AddSecondaryItem(updateCommand, row, 2, 130, 1);
+                //AddItem(updateCommand, row, 7, 2990, 1);
+                //AddItem(updateCommand, row, 8, 8590, 1);
+                //AddItem(updateCommand, row, 9, 2919, 1);
             }
         }
 

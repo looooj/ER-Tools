@@ -1,5 +1,5 @@
 using ERParamUtils;
-using ERParamUtils.UpateParam;
+using ERParamUtils.UpdateParam;
 using MultiLangLib;
 using NLog;
 using System.Globalization;
@@ -33,11 +33,19 @@ namespace ERParamEditor
         private static async Task<int> InitLoadTask()
         {
 
+            try
+            {
 
-
-            RowNamesManager.Load();
-            ParamFieldMetaManager.Load();
-            ParamProjectManager.OpenLastProject();
+                RowNamesManager.Load();
+                ParamFieldMetaManager.Load();
+                ParamNames.LoadDesc(MultiLang.GetLangId());
+                ParamProjectManager.OpenLastProject();
+            }
+            catch (Exception e)
+            {
+                logger.Info("===InitLoadTask {}",e);
+                return 0;
+            }
 
             return 1;
         }
@@ -47,18 +55,17 @@ namespace ERParamEditor
 
             if (FirstShow)
             {
-                var current = Cursor;
                 Cursor = Cursors.WaitCursor;
 
                 InitConfig();
                 InitControls();
 
-                await Task.Run(InitLoadTask);
+                int r = await Task.Run(InitLoadTask);
 
                 logger.Info("===InitRefreshProject 1");
                 RefreshProject();
                 logger.Info("===InitRefreshProject 2");
-                Cursor = current;
+                Cursor = Cursors.Default;
             }
             FirstShow = false;
         }
@@ -93,7 +100,7 @@ namespace ERParamEditor
 
 
             listViewParam.Dock = DockStyle.Fill;
-            listViewParam.Columns.Add("ParamName", 240);
+            listViewParam.Columns.Add("ParamName", 440);
             listViewParam.Columns.Add("", -2);
 
 
@@ -135,7 +142,7 @@ namespace ERParamEditor
             listViewProject.Items.Clear();
             listViewParam.Items.Clear();
 
-            ListViewUtils.AddItem(listViewProject, "CurrentCulture", CultureInfo.CurrentCulture.ThreeLetterISOLanguageName);
+            //ListViewUtils.AddItem(listViewProject, "CurrentCulture", CultureInfo.CurrentCulture.ThreeLetterISOLanguageName);
 
 
             ListViewUtils.AddItem(listViewProject, "GlobalConfig");
@@ -163,8 +170,16 @@ namespace ERParamEditor
             var paramList = project.GetParamNameList(nameFilter);
             foreach (var p in paramList)
             {
+                string? desc = ParamNames.GetDesc(p);
+                //var  fieldMeta = ParamFieldMetaManager.FindFieldMeta(p);
+                //if (fieldMeta == null) {
+                //    MessageBox.Show(p);
+                //}
 
-                ListViewUtils.AddItem(listViewParam, p);
+                if ( desc != null )
+                    ListViewUtils.AddItem(listViewParam, p+ "|"+desc);
+                else
+                    ListViewUtils.AddItem(listViewParam, p);
             }
 
 
@@ -260,8 +275,15 @@ namespace ERParamEditor
 
         private void buttonTest_Click_1(object sender, EventArgs e)
         {
-            Tests.Run();
-
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+                Tests.Run();
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.ToString());
+            }
+            Cursor = Cursors.Default;
         }
 
         private void panelClient_Paint(object sender, PaintEventArgs e)
@@ -311,7 +333,8 @@ namespace ERParamEditor
 
         private void buttonRestore_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Are you sure", "", MessageBoxButtons.YesNo);
+            string msg = MultiLang.GetText("Are you sure exec restore?");
+            DialogResult r = MessageBox.Show(msg, "", MessageBoxButtons.YesNo);
             if (r != DialogResult.Yes)
             {
                 return;

@@ -10,7 +10,7 @@ using SoulsFormats.KF4;
 using System.Runtime.InteropServices;
 using ERParamUtils;
 using static SoulsFormats.MSB.Shape.Composite;
-using ERParamUtils.UpateParam;
+using ERParamUtils.UpdateParam;
 
 namespace MultiLangLib
 {
@@ -43,6 +43,10 @@ namespace MultiLangLib
                
             }           
 
+        }
+
+        public static string GetLangId() {
+            return CurrentLangId;
         }
 
         public static void LoadDir(string dir) {
@@ -121,6 +125,22 @@ namespace MultiLangLib
                     task.Description = text;
                 }
             }
+        }
+
+        public static string GetText(string id, string text) {
+
+            if (!MessageDict.ContainsKey(id))
+                return text;
+            var dict = MessageDict[id];
+            if (dict.TryGetValue(text, out string? newText)) {
+                return newText;
+            }
+            return text;
+        }
+
+        public static string GetText(string text)
+        {
+            return GetText("Default", text);
         }
     }
 }

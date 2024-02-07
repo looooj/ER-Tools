@@ -43,5 +43,37 @@ namespace ERParamUtils
                 return false;
             return true;
         }
+
+        static Dictionary<string, string> paramNameDescMap = new();
+
+        public static string? GetDesc(string paramName) {
+            if (paramNameDescMap.ContainsKey(paramName))
+                return paramNameDescMap[paramName];
+            return null;
+        } 
+        public static void LoadDesc(string lang) {
+
+            paramNameDescMap.Clear();
+            //docs\param - define\param - names - zho.txt
+            //docs\params-info\param-name-desc-zho.txt
+            string fn = GlobalConfig.BaseDir + @"\docs\params-info\param-name-desc-" + lang + ".txt";
+            if (!File.Exists(fn)) {
+                return;
+            }
+
+            var lines = File.ReadAllLines(fn);
+            foreach (string line in lines) {
+
+                var items = line.Trim().Split(";");
+                if (items.Length < 2)
+                    continue;
+                var key = items[0].Trim();
+                var val = items[1].Trim();
+                if (key.Length < 1 || val.Length < 1)
+                    continue;
+                paramNameDescMap.TryAdd(key, val);
+            }
+
+        }
     }
 }

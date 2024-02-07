@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using static SoulsFormats.GRASS;
 
-namespace ERParamUtils.UpateParam
+namespace ERParamUtils.UpdateParam
 {
 
     public class UpdateLoggerItem {

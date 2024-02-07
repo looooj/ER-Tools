@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using static SoulsFormats.MSBE.Event;
 using static SoulsFormats.PARAM;
 
-namespace ERParamUtils.UpateParam
+namespace ERParamUtils.UpdateParam
 {
 
     class ShopUpdateItem
@@ -137,7 +137,7 @@ namespace ERParamUtils.UpateParam
             if (param == null)
                 return;
 
-            var lines = UpateFile.Load(paramProject, UpateFile.UpdateShopSpec);
+            var lines = UpdateFile.Load(paramProject, UpdateFile.UpdateShopSpec);
 
             foreach (string line in lines)
             {

@@ -1,0 +1,15 @@
+BonfireWarpParam;赐福点参数
+CharaInitParam;人物初始参数
+EquipParamAccessory;饰品参数
+EquipParamGem;战灰参数
+EquipParamGoods;物品参数(骨灰)
+EquipParamProtector;护甲参数(重量)
+EquipParamWeapon;武器参数(重量,需求)
+ShopLineupParam;商店参数(价格数量隐藏)
+ShopLineupParam_Recipe;制作物品参数
+MagicParam;魔法祷告参数(设置魔法消耗...)
+SpEffectParam;效果参数(设置饰品回血...)
+BuddyStoneParam;骨灰参数(设置骨灰出现的区域...)
+ItemLotParam_enemy;敌人掉落参数(调整掉落率物品类型数量)
+ItemLotParam_map;物品拾取参数(替换特定位置的物品类型数量)
+PlayerCommonParam;人物公共参数(设置初始饰品栏和魔法栏位)

@@ -12,8 +12,9 @@ namespace ERParamUtils
     public class ParamCellItem
     {
         public int ColIndex { get; set; }
-        public string? DisplayName { get => _cell.Def.DisplayName; }
-        public string? Key { get => _cell.Def.InternalName; }
+        public string? DisplayName { get; set; }
+        //get => _cell.Def.DisplayName; }
+        public string Key { get => _cell.Def.InternalName; }
         public string? Value { get; set; }
         public string? ValueType { get => GetValueType(); }
         public string? Comment { get; set; }
@@ -58,7 +59,8 @@ namespace ERParamUtils
     {
 
 
-        public static List<ParamCellItem> Build(SoulsParam.Param param, SoulsParam.Param.Row? row)
+        public static List<ParamCellItem> Build(SoulsParam.Param param, SoulsParam.Param.Row? row, ParamFieldMeta? fieldMeta)
+
         {
             List<ParamCellItem> items = new();
             if (row != null)
@@ -71,9 +73,11 @@ namespace ERParamUtils
                     SoulsParam.Param.Cell cell = row.Cells[i];
                     ParamCellItem item = new ParamCellItem();
                     item.SetCell(cell);
+                    if ( fieldMeta != null)
+                        item.DisplayName = fieldMeta.GetDisplayName(item.Key, cell.Def.DisplayName);
+                    else
+                        item.DisplayName = cell.Def.DisplayName;
                     item.ColIndex = i;
-
-
                     var v = cell.Value;
                     var str = v.ToString();
                     var internalType = cell.Def.InternalType;
@@ -108,11 +112,11 @@ namespace ERParamUtils
 
 
 
-        public static List<ParamCellItem> Build(SoulsParam.Param param, int rowId)
+        public static List<ParamCellItem> Build(SoulsParam.Param param, int rowId, ParamFieldMeta fieldMeta)
         {
 
             SoulsParam.Param.Row? row = ParamRowUtils.FindRow(param, rowId);
-            return Build(param, row);
+            return Build(param, row, fieldMeta);
         }
     }
 

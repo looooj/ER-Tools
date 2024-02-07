@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 using VdfFile;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ERParamEditor
 {
@@ -83,8 +84,6 @@ namespace ERParamEditor
                     }
                 }
             }
-
-
         }
 
         public static void TestEvent() {
@@ -190,15 +189,25 @@ namespace ERParamEditor
             return dict;
         }
 
-        public static void TestGenChNames() {
+
+        static string clearLineEnd(string s) {
+            s = s.Trim();
+            s = s.Replace("\x0d\x0a", " ");
+            s = s.Replace("\x0d", " ");
+            s = s.Replace("\x0a", " ");
+            return s;
+        }
+        public static void TestGenChNames(string baseDir, string outDir, string[] names) {
 
             //assets\msg\item.msgbnd\msg\engUS\AccessoryName.fmg.xml
             //assets\msg\item.msgbnd\msg\zhoCN
+            /*
             string[] names = { "AccessoryName","GoodsName",
                 "ProtectorName","WeaponName","NpcName","PlaceName","GemName" };
 
             string baseDir = GlobalConfig.AssetsDir + @"\msg\item.msgbnd\msg";
             string outDir = GlobalConfig.AssetsDir + @"\msg\item-msg-text";
+            */
             foreach (string name in names) {
 
                 string engFileName = string.Format("{0}\\engUS\\{1}.fmg.xml", baseDir, name);
@@ -221,6 +230,14 @@ namespace ERParamEditor
                     if (!choDict.TryGetValue(id, out string cname)) {
                         continue;
                     }
+
+                    ename = clearLineEnd(ename);
+                    cname = clearLineEnd(cname);
+
+                    if (ename.Contains(";") || cname.Contains(";"))
+                        continue;
+                    if (ename.Length < 3 || cname.Length < 1 || ename.Length > 50 )
+                        continue;
 
                     outLines.Add(string.Format("{0};{1};{2}", id, ename, cname));
 
@@ -308,12 +325,15 @@ namespace ERParamEditor
 
 
             File.WriteAllLines("forStockList.txt", items);
-
-
         }
         public static void Run() {
 
-            checkShopLineupParamRecipe();
+            //D:\myprojects\game - tools\ER - Tools\docs\item - menu - text
+            string[] names = { "GR_MenuText", "ActionButtonText", "BloodMsg" };
+            string outDir = "D:\\myprojects\\game-tools\\ER-Tools\\docs\\item-menu-text";
+            string baseDir = "D:\\docs\\game\\er\\unpack-\\unpack-files-text\\menu.msgbnd\\msg";
+            TestGenChNames(baseDir, outDir, names);
+            //checkShopLineupParamRecipe();
         }
     }
 }

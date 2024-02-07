@@ -1,6 +1,6 @@
 #equipType  None=0, Good=1, Weapon=2, Protector=3, Accessory=4, Gem=5
 
-# @@index=index(1-8)
-# @@point=point(1000=100%)
-# rowId1,...|equipId1,...|equipType1,...|lotCount
+#@@index=index(1-8)
+#@@point=point(1000=100%)
+#rowId1,...|equipId1,...|equipType1,...|lotCount
 

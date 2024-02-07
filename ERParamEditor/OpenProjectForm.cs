@@ -39,6 +39,10 @@ namespace ERParamEditor
         public string ProjectName = "";
         private void buttonOk_Click(object sender, EventArgs e)
         {
+            
+            if (listBoxProject.SelectedItem == null)
+                return;
+
             ProjectName = listBoxProject.SelectedItem.ToString();
             DialogResult = DialogResult.OK;
             Close();

@@ -124,6 +124,9 @@
             Controls.Add(buttonOk);
             Controls.Add(comboBoxProject2);
             Controls.Add(comboBoxProject1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "CompareProjectForm";
             Text = "CompareProjectForm";
             Load += CompareProjectForm_Load;

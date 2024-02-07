@@ -113,8 +113,8 @@ namespace ERParamEditor
 
         void exportRow(RowWrapper row, string fn)
         {
-
-            var cells = ParamCellList.Build(row.GetParam(), row.GetRow());
+            var fieldMeta = ParamFieldMetaManager.FindFieldMeta(row.ParamName);
+            var cells = ParamCellList.Build(row.GetParam(), row.GetRow(),fieldMeta);
             var lines = new List<string>();
             foreach (var cell in cells)
             {
@@ -169,7 +169,7 @@ namespace ERParamEditor
                     text = text + row.ID;
                 if (rowName)
                     text = text + row.Name;
-                text = text + " ";
+                text = text + ",";
 
             }
             Clipboard.SetData(DataFormats.Text, (Object)text);
@@ -379,6 +379,8 @@ namespace ERParamEditor
             menuCell.Items.Add(new ToolStripSeparator());
             menuCell.Items.Add(new ToolStripMenuItem("CopyValue", null, copyCellValue_Handler));
             menuCell.Items.Add(new ToolStripSeparator());
+            menuCell.Items.Add(new ToolStripMenuItem("CopyKey", null, copyCellKey_Handler));
+            menuCell.Items.Add(new ToolStripSeparator());
             menuCell.Items.Add(new ToolStripMenuItem("JumpRef", null, jumpRef_Handler));
 
             if (GlobalConfig.Debug)
@@ -436,6 +438,26 @@ namespace ERParamEditor
             }
             Clipboard.SetData(DataFormats.Text, (Object)text);
 
+        }
+
+        private void copyCellKey_Handler(object? sender, EventArgs e) {
+
+            if (dataGridViewCell.SelectedRows.Count < 1)
+                return;
+
+            string text = "";
+            for (int i = 0; i < dataGridViewCell.SelectedRows.Count; i++)
+            {
+                ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[i].DataBoundItem;
+
+                if (i > 0)
+                    text = text + " ";
+
+                string line = cell.Key == null ? "" : cell.Key;
+                ClipTextFile.Add(line);
+                text = text + line;
+            }
+            Clipboard.SetData(DataFormats.Text, (Object)text);
         }
 
         private void copyCellValue_Handler(object? sender, EventArgs e)
@@ -526,8 +548,8 @@ namespace ERParamEditor
         {
 
             RowListManager.SetCurrentRow(row);
-
-            var cells = ParamCellList.Build(row.GetParam(), row.GetRow());
+            var fieldMeta = ParamFieldMetaManager.FindFieldMeta(row.ParamName);
+            var cells = ParamCellList.Build(row.GetParam(), row.GetRow(),fieldMeta);
 
             dataGridViewCell.AutoGenerateColumns = true;
 
@@ -538,7 +560,7 @@ namespace ERParamEditor
             dataGridViewCell.AllowUserToResizeRows = false;
             dataGridViewCell.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCell.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewCell.MultiSelect = false;
+            dataGridViewCell.MultiSelect = true;
             dataGridViewCell.ContextMenuStrip = menuCell;
 
 
