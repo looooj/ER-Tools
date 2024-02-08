@@ -53,17 +53,21 @@ namespace ERBackup
             return d;
         }
 
-        public void ExecAutoBak() {
+        public void ExecAutoBak()
+        {
             ExecBak(autoTag);
         }
 
-        List<string> GetBakNames() {
+        List<string> GetBakNames()
+        {
 
             List<string> bakNames = new();
             string[] files = Directory.GetFiles(GetSaveDir());
-            foreach (var file in files) {
+            foreach (var file in files)
+            {
 
-                if (file.Contains("ER0000")) {
+                if (file.Contains("ER0000"))
+                {
                     bakNames.Add(Path.GetFileName(file));
                 }
             }
@@ -112,7 +116,7 @@ namespace ERBackup
             }
         }
 
-        public List<string> GetZipList(bool includeAutoBackup=false)
+        public List<string> GetZipList(bool includeAutoBackup = false)
         {
 
             List<string> zipList = new();
@@ -121,23 +125,23 @@ namespace ERBackup
             {
                 if (!includeAutoBackup && n.Contains(autoTag))
                     continue;
-                if (n.EndsWith(".zip")) 
+                if (n.EndsWith(".zip"))
                     zipList.Add(n);
             }
             return zipList;
         }
 
-        public void ExecRestore(string zipName,bool testFlag=false)
+        public void ExecRestore(string zipName, bool testFlag = false)
         {
 
 
             ZipArchive zip = ZipFile.Open(zipName, ZipArchiveMode.Read);
 
             string destDir = GetSaveDir();
-            if ( testFlag)
-               destDir = GlobalConfig.BaseDir + @"\tmp";
+            if (testFlag)
+                destDir = GlobalConfig.BaseDir + @"\tmp";
 
-            zip.ExtractToDirectory(destDir,true);
+            zip.ExtractToDirectory(destDir, true);
             zip.Dispose();
         }
 

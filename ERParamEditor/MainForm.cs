@@ -29,7 +29,6 @@ namespace ERParamEditor
 
         }
         private bool FirstShow = true;
-
         private static async Task<int> InitLoadTask()
         {
 
@@ -94,7 +93,7 @@ namespace ERParamEditor
 
 
             menuProject.Items.Add(
-                  new ToolStripMenuItem("OpenInExpoler", null, OpenInExplorerClick)
+                  new ToolStripMenuItem("OpenInExplorer", null, OpenInExplorerClick)
               );
 
 
@@ -113,7 +112,7 @@ namespace ERParamEditor
 
             SpecEquipConfig.LoadConfig();
 
-            MultiLang.Default();
+            MultiLang.InitDefault("ERParamEditor");
             MultiLang.ApplyForm(this, "MainForm");
         }
 

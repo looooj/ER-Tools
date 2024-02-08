@@ -15,14 +15,15 @@ namespace ERParamUtils
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
 
-        string Name ="";
-        string ModRegulationPath="";
-        string CreateTime="";
+        string Name = "";
+        string ModRegulationPath = "";
+        string CreateTime = "";
+        string templateType = "empty";
 
-        BND4 currentBinder=null;
+        BND4 currentBinder = null;
         GameType gameType = GameType.EldenRing;
 
-        private Dictionary<string, SoulsParam.Param> _params = new() ;
+        private Dictionary<string, SoulsParam.Param> _params = new();
         //private Dictionary<string, ParamWrapper> _paramWrappers = new();
         private ulong _paramVersion;
 
@@ -31,13 +32,20 @@ namespace ERParamUtils
         private Dictionary<string, Dictionary<ulong, PARAMDEF>> _patchParamdefs = new();
 
 
-        public ParamProject(string name) {
+        public ParamProject(string name)
+        {
             Name = name;
         }
 
-        public void Create(string modRegulationPath) {
+        public void Create(string modRegulationPath)
+        {
+
             ModRegulationPath = modRegulationPath;
             CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        }
+
+        public void SetTemplateType(string type) {
+            templateType = type;
         }
 
         public string GetName()
@@ -45,17 +53,20 @@ namespace ERParamUtils
             return Name;
         }
 
-        public string GetDir() {
+        public string GetDir()
+        {
 
             return GlobalConfig.GetProjectDir(Name);
-        } 
+        }
 
-        public string GetRegulationPath() {
+        public string GetRegulationPath()
+        {
 
             return GetDir() + @"\regulation.bin";
         }
 
-        public string GetOrginalRegulationPath() {
+        public string GetOrginalRegulationPath()
+        {
             return GetRegulationPath() + ".org";
         }
 
@@ -72,7 +83,7 @@ namespace ERParamUtils
 
         public string GetUpdateFile(string filename)
         {
-            return  GetUpdateDir() + @"\" + filename;
+            return GetUpdateDir() + @"\" + filename;
         }
 
 
@@ -113,16 +124,17 @@ namespace ERParamUtils
 
 
 
-        public void LoadParams() {
+        public void LoadParams()
+        {
 
             _params.Clear();
-            //_paramWrappers.Clear();
 
             string path = GetRegulationPath();
             string orgPath = GetOrginalRegulationPath();
             string modPath = GetModRegulationPath();
             bool useFilter = GlobalConfig.UseParamNameFilter;
-            if (!File.Exists(path)) {
+            if (!File.Exists(path))
+            {
 
                 if (!File.Exists(orgPath))
                 {
@@ -132,23 +144,23 @@ namespace ERParamUtils
                     File.Copy(orgPath, orgPath + timeId);
                     File.Copy(orgPath, path);
                 }
-                else {
+                else
+                {
                     File.Copy(orgPath, path);
                 }
             }
 
             LoadParamdefs();
             currentBinder = SFUtil.DecryptERRegulation(path);
-            LoadParamFromBinder(currentBinder, useFilter,out _paramVersion, true);
+            LoadParamFromBinder(currentBinder, useFilter, out _paramVersion, true);
             ImpRowNames();
 
 
         }
 
-        private void LoadParamFromBinder(IBinder parambnd, bool useFilter,out ulong version, bool checkVersion = false) //, ref Dictionary<string, FSParam.Param> paramBank, out ulong version, bool checkVersion = false)
+        private void LoadParamFromBinder(IBinder parambnd, bool useFilter, out ulong version, bool checkVersion = false) //, ref Dictionary<string, FSParam.Param> paramBank, out ulong version, bool checkVersion = false)
         {
             _params.Clear();
-            //_paramWrappers.Clear();
 
             bool success = ulong.TryParse(parambnd.Version, out version);
             if (checkVersion && !success)
@@ -160,7 +172,6 @@ namespace ERParamUtils
             List<string> paramNames = new();
             foreach (var f in parambnd.Files)
             {
-                //paramNames.Add(f.Name);
 
                 if (!f.Name.ToUpper().EndsWith(".PARAM"))
                 {
@@ -172,7 +183,7 @@ namespace ERParamUtils
 
                 paramNames.Add(paramName);
 
-                if (!ParamNameFilter.IncludesParam(paramName) && useFilter )
+                if (!ParamNameFilter.IncludesParam(paramName) && useFilter)
                 {
                     continue;
                 }
@@ -182,7 +193,7 @@ namespace ERParamUtils
                     continue;
                 }
 
-                
+
                 if (f.Name.EndsWith("LoadBalancerParam.param") && ParamdexConfig.Get().Type != GameType.EldenRing)
                 {
                     continue;
@@ -227,7 +238,8 @@ namespace ERParamUtils
 
                 try
                 {
-                    if (p.CheckParamdef(def)) { 
+                    if (p.CheckParamdef(def))
+                    {
 
                     }
                     p.Name = paramName;
@@ -255,8 +267,8 @@ namespace ERParamUtils
 
             foreach (string paramName in _params.Keys)
             {
-       
-    
+
+
                 var names = RowNamesManager.LoadNames(paramName);
                 if (names.Count < 1)
                     continue;
@@ -275,23 +287,28 @@ namespace ERParamUtils
         }
 
 
-        public SoulsParam.Param? FindParam(string paramName) {
+        public SoulsParam.Param? FindParam(string paramName)
+        {
 
 
-            if (_params.ContainsKey(paramName) ) { 
-               
+            if (_params.ContainsKey(paramName))
+            {
+
                 return _params[paramName];
             }
             return null;
         }
 
-        public List<string> GetParamNameList(bool filter) {
+        public List<string> GetParamNameList(bool filter)
+        {
 
             List<string> paramList = new();
 
-            foreach(var k in _params.Keys) {
+            foreach (var k in _params.Keys)
+            {
 
-                if (ParamNameFilter.IncludesParam(k) || !filter) {
+                if (ParamNameFilter.IncludesParam(k) || !filter)
+                {
                     paramList.Add(k);
                 }
             }
@@ -299,13 +316,15 @@ namespace ERParamUtils
             return paramList;
         }
 
-        public Dictionary<string,SoulsParam.Param> GetParamDict() {
+        public Dictionary<string, SoulsParam.Param> GetParamDict()
+        {
 
             return _params;
         }
-        
 
-        public void SaveParams() {
+
+        public void SaveParams()
+        {
 
             if (currentBinder == null)
                 return;
@@ -313,7 +332,8 @@ namespace ERParamUtils
             foreach (BinderFile file in currentBinder.Files)
             {
                 string paramName = Path.GetFileNameWithoutExtension(file.Name);
-                if (!_params.ContainsKey(paramName)) {
+                if (!_params.ContainsKey(paramName))
+                {
                     continue;
                 }
                 var p = _params[paramName];
@@ -330,22 +350,25 @@ namespace ERParamUtils
             SFUtil.EncryptERRegulation(savePath, currentBinder as BND4);
         }
 
-        public void Restore() {
+        public void Restore()
+        {
 
             string source = GetOrginalRegulationPath();
             string target = GetRegulationPath();
 
-            if (File.Exists(source)) {
+            if (File.Exists(source))
+            {
 
                 logger.Info("===restore {0} -> {1}", source, target);
 
-                File.Copy(source, target,true);
+                File.Copy(source, target, true);
                 LoadParams();
             }
-            
+
         }
 
-        public void Publish() {
+        public void Publish()
+        {
 
             string source = GetRegulationPath();
             string target = GetModRegulationPath();
@@ -353,62 +376,76 @@ namespace ERParamUtils
             logger.Info("===publish {0} -> {1}",
                 source, target);
 
-            File.Copy(source,target,true);
+            File.Copy(source, target, true);
         }
 
-        public static readonly string ConfigName="project.txt";
+        public static readonly string ConfigName = "project.txt";
 
-        public void SaveConfig() {
+        public void SaveConfig()
+        {
 
 
             DictConfig config = new();
 
             string path = GlobalConfig.GetProjectDir(Name) + @"\" + ConfigName;
 
-            config.SetString("ModRegulationPath", GetModRegulationPath());
+            string modRegulationPath = GetModRegulationPath();
+            if (modRegulationPath.StartsWith(GlobalConfig.BaseDir, StringComparison.CurrentCultureIgnoreCase))
+            {
+                modRegulationPath = modRegulationPath.Replace(GlobalConfig.BaseDir, "${BaseDir}", StringComparison.CurrentCultureIgnoreCase);
+            }
+            config.SetString("ModRegulationPath", modRegulationPath);
             config.SetString("CreateTime", CreateTime);
             config.Save(path);
 
         }
 
-        public void LoadConfig() {
+        public void LoadConfig()
+        {
 
             DictConfig config = new DictConfig();
             string path = GlobalConfig.GetProjectDir(Name) + @"\" + ConfigName;
             config.SetString("BaseDir", GlobalConfig.BaseDir);
             config.Load(path);
-            ModRegulationPath = config.GetString("ModRegulationPath","?");
+            ModRegulationPath = config.GetString("ModRegulationPath", "?");
             CreateTime = config.GetString("CreateTime", "?");
         }
 
-        public void InitDirs() {
+        public void InitDirs()
+        {
 
             //Directory.CreateDirectory(GetUpdateDir());
-        } 
+        }
 
-        public void CheckConfig() { 
-        
+        public void CheckConfig()
+        {
+
 
         }
 
         internal void Init()
         {
-            
+
 
             string updateDir = GetUpdateDir();
             Directory.CreateDirectory(updateDir);
+            string templateDir = GlobalConfig.GetTemplateDir() + "\\" + templateType;
 
-            string templateDir = GlobalConfig.GetTemplateDir();
-
-            var files = Directory.GetFiles(templateDir, "*.txt");
-            foreach (var file in files) {
+            var files = Directory.GetFiles(templateDir + "\\update", "*.txt");
+            foreach (var file in files)
+            {
 
                 string newFile = updateDir + @"\" + Path.GetFileName(file);
-                if (File.Exists(newFile)) {
+                if (File.Exists(newFile))
+                {
                     continue;
                 }
                 File.Copy(file, newFile);
             }
+            string updateOpt1 = templateDir + "\\update-opt.txt";
+            string updateOpt2 = GetDir() + "\\update-opt.txt";
+            if (File.Exists(updateOpt1))
+                File.Copy(updateOpt1, updateOpt2);
 
         }
     }

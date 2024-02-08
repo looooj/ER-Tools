@@ -40,6 +40,7 @@ namespace ERParamUtils
 
         public static void Load() {
 
+            UseParamNameFilter = true;
             DictConfig config = new();
 
             if (!File.Exists(ConfigFile)) {

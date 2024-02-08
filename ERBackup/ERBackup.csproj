@@ -43,4 +43,8 @@
     </None>
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /s /i /q /y $(ProjectDir)\locales $(OutDir)\locales " />
+  </Target>  
+  
 </Project>

@@ -35,7 +35,7 @@
     <None Update="config.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="locales\zho\MainForm.txt">
+    <None Update="locales\ERParamEditor\zho\MainForm.txt">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="mod-config.xml">
@@ -43,13 +43,9 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="locales\eng\" />
-  </ItemGroup>
-
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="copy $(SolutionDir)\libs\*.dll $(OutDir)" />
-    <Exec Command="xcopy $(ProjectDir)\locales $(OutDir)\locales /i /s /y " />
+    <Exec Command="xcopy /s /i /q /y $(ProjectDir)\locales $(OutDir)\locales " />
   </Target>
 
 </Project>

@@ -23,7 +23,7 @@ namespace MultiLangLib
 
         static string CurrentLangId = "eng";
 
-        public static void SwitchLanguage(string langId) {
+        public static void SwitchLanguage(string langId,string appName) {
 
 
 
@@ -32,16 +32,25 @@ namespace MultiLangLib
 
             MessageDict.Clear();
 
-            CurrentLangId = langId;
 
 
+            string localesPath = ".\\locales\\" + appName;
+            //ERParamEditor\bin\Debug\net6.0-windows\locales\ERParamEditor
+            //string s = ".\\locales\\ERParamEditor";
+            //Directory.Exists(s);
+            
+           if (!Directory.Exists(localesPath)) {
+                return;
+            }
 
-            var dirs = Directory.GetDirectories(".\\locales","*.*");
+            var dirs = Directory.GetDirectories(localesPath, "*.*");
             foreach (string d in dirs) {
 
-                LoadDir(d);
-               
-            }           
+                LoadDir(d);               
+            }
+
+            CurrentLangId = langId;
+
 
         }
 
@@ -56,7 +65,7 @@ namespace MultiLangLib
 
                 var dict = ConfigUtils.LoadDict(file);
                 var id = Path.GetFileNameWithoutExtension(file);
-                MessageDict.Add(id, dict);
+                MessageDict.TryAdd(id, dict);
             }
         }
 
@@ -90,10 +99,10 @@ namespace MultiLangLib
         }
 
 
-        public static void Default() {
+        public static void InitDefault(string appName) {
 
             string langId = CultureInfo.CurrentCulture.ThreeLetterISOLanguageName;
-            SwitchLanguage(langId);
+            SwitchLanguage(langId,appName);
         }
 
         public static void ApplyMessage(List<UpdateParamOption> updateParamOptions)

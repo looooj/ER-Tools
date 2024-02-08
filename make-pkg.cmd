@@ -9,16 +9,16 @@ md ER-Tools
 cd ER-Tools
 copy ..\..\*.md 
 copy ..\..\ERBackup\bin\Release\net6.0-windows\*.* 
-copy ..\..\ERParamEditor\bin\Release\net6.0-windows\*.* 
+xcopy /s /y /i /q ..\..\ERParamEditor\bin\Release\net6.0-windows\*.* 
 del *.txt
 del *.pdb
 md assets
-xcopy /s /y /q ..\..\assets  assets\
+xcopy /s /y /i /q ..\..\assets  assets\
 md docs 
-xcopy /s /y /q ..\..\docs  docs\
-
+xcopy /s /y /i /q ..\..\docs  docs\
+copy docs\default-config.txt config.txt
 md templates
-xcopy /s /y /q ..\..\templates  templates\
+xcopy /s /y /i /q ..\..\templates  templates\
 
 md projects
 

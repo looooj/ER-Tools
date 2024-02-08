@@ -1,0 +1,3 @@
+BaseDir=.
+AssetsDir=assets
+UseParamNameFilter=1
