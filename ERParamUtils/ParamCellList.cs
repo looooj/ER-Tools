@@ -1,6 +1,7 @@
 ﻿using SoulsParam;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
@@ -11,9 +12,12 @@ namespace ERParamUtils
 {
     public class ParamCellItem
     {
+        private int displayNameType = 0;
+        private string metaDisplayName = "";
+        private string cellDisplayName = "";
+
         public int ColIndex { get; set; }
-        public string? DisplayName { get; set; }
-        //get => _cell.Def.DisplayName; }
+        public string? DisplayName { get => GetDisplayName(); }
         public string Key { get => _cell.Def.InternalName; }
         public string? Value { get; set; }
         public string? ValueType { get => GetValueType(); }
@@ -44,6 +48,25 @@ namespace ERParamUtils
         {
             return (_cell.Def.InternalType.Contains("_"));
         }
+
+        public void SetCellDisplayName(string name)
+        {
+            cellDisplayName = name;
+        }
+        public void SetMetaDisplayName(string name)
+        {
+            metaDisplayName = name;
+        }
+        public string GetDisplayName()
+        {
+
+            string name = displayNameType == 0 ? metaDisplayName : cellDisplayName;
+            if (name == "")
+            {
+                name = cellDisplayName;
+            }
+            return name;
+        }
     }
 
     public interface IParamCellItemProc
@@ -73,10 +96,9 @@ namespace ERParamUtils
                     SoulsParam.Param.Cell cell = row.Cells[i];
                     ParamCellItem item = new ParamCellItem();
                     item.SetCell(cell);
-                    if ( fieldMeta != null)
-                        item.DisplayName = fieldMeta.GetDisplayName(item.Key, cell.Def.DisplayName);
-                    else
-                        item.DisplayName = cell.Def.DisplayName;
+                    if (fieldMeta != null)
+                        item.SetMetaDisplayName(fieldMeta.GetDisplayName(item.Key, cell.Def.DisplayName));
+                    item.SetCellDisplayName(cell.Def.DisplayName);
                     item.ColIndex = i;
                     var v = cell.Value;
                     var str = v.ToString();

@@ -245,19 +245,14 @@ namespace ERParamUtils
                 paramName = "ItemLotParam";
             }
 
-            if (paramName.StartsWith("ItemLotParam"))
-            {
-                paramName = "ItemLotParam";
-            }
-
             if (paramName.StartsWith("BehaviorParam"))
             {
                 paramName = "BehaviorParam";
             }
 
-            if (paramName == "Bullet") {
+            if (paramName == "Bullet" || paramName == "Magic") {
 
-                paramName = "BulletParam";
+                paramName = paramName + "Param";
             }
 
 

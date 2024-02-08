@@ -171,11 +171,6 @@ namespace ERParamEditor
             foreach (var p in paramList)
             {
                 string? desc = ParamNames.GetDesc(p);
-                //var  fieldMeta = ParamFieldMetaManager.FindFieldMeta(p);
-                //if (fieldMeta == null) {
-                //    MessageBox.Show(p);
-                //}
-
                 if ( desc != null )
                     ListViewUtils.AddItem(listViewParam, p+ "|"+desc);
                 else

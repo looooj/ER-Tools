@@ -113,7 +113,7 @@ namespace ERParamEditor
 
         void exportRow(RowWrapper row, string fn)
         {
-            var fieldMeta = ParamFieldMetaManager.FindFieldMeta(row.ParamName);
+            var fieldMeta = row.GetParam().FieldMeta;
             var cells = ParamCellList.Build(row.GetParam(), row.GetRow(),fieldMeta);
             var lines = new List<string>();
             foreach (var cell in cells)
@@ -548,7 +548,7 @@ namespace ERParamEditor
         {
 
             RowListManager.SetCurrentRow(row);
-            var fieldMeta = ParamFieldMetaManager.FindFieldMeta(row.ParamName);
+            var fieldMeta = row.GetParam().FieldMeta;
             var cells = ParamCellList.Build(row.GetParam(), row.GetRow(),fieldMeta);
 
             dataGridViewCell.AutoGenerateColumns = true;

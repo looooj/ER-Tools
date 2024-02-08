@@ -234,6 +234,8 @@ namespace ERParamUtils
                     p.ApplyParamdef(def);
                     p.MakeCellIndex();
                     paramBank.Add(paramName, p);
+
+                    p.FieldMeta = ParamFieldMetaManager.FindFieldMeta(p.Name);
                 }
                 catch (Exception)
                 {

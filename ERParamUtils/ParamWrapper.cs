@@ -16,7 +16,7 @@ namespace SoulsParam
         public List<Row> _rows = new();
         public Dictionary<int, Row> _rowDict = new();
         public bool Changed = false;
-
+        public ParamFieldMeta? FieldMeta=null;
 
         public bool CheckParamdef(PARAMDEF def)
         {
