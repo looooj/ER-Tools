@@ -48,7 +48,7 @@
 
 #10140;Ancient Dragon Smithing Stone;古龙岩锻造石
 #101876[Twin Maiden Husks] Knight Gauntlets 
-101876;10140;SAncient Dragon Smithing Stone;3;2000;-1
+101876;10140;Ancient Dragon Smithing Stone;3;2000;-1
 
 #10168;Somber Ancient Dragon Smithing Stone;古龙岩失色锻造石
 #101877[Twin Maiden Husks] Knight Greaves 
