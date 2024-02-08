@@ -31,22 +31,22 @@ namespace ERParamUtils
              "GameAreaParam",
         };
 
-        static string[] includeParamNames = new string[] {
-             "Bullet",
+        static string[] defaultIncludeParamNames = new string[] {
+             //"Bullet",
              "BonfireWarpParam",
              "ItemLotParam_enemy",
              "ItemLotParam_map",
              "SpEffectParam",
-             "SpEffectSetParam",
+             //"SpEffectSetParam",
              "ShopLineupParam",
              "ShopLineupParam_Recipe",
              "CharaInitParam",
              "WorldMapPointParam",
              "WorldMapPlaceNameParam",
              "WorldMapPieceParam",
-             "WorldMapLegacyConvParam",
-             "GameAreaParam",
-             "GameSystemCommonParam",
+             //"WorldMapLegacyConvParam",
+             //"GameAreaParam",
+             //"GameSystemCommonParam",
              "BuddyParam",
              "BuddyStoneParam",
              "EquipParamWeapon",
@@ -55,23 +55,35 @@ namespace ERParamUtils
              "EquipParamGoods",
              "EquipParamProtector",
              "Magic",
-             "NpcAiActionParam",
-             "NpcAiBehaviorProbability",
+             //"NpcAiActionParam",
+             //"NpcAiBehaviorProbability",
              "NpcParam",
              "NpcThinkParam",
              "ObjActParam",
              "ActionButtonParam",
-             "CharMakeMenuListItemParam",
-             "CharMakeMenuTopParam",
+             //"CharMakeMenuListItemParam",
+             //"CharMakeMenuTopParam",
              "BehaviorParam",
              "BehaviorParam_PC",
-             "TalkParam",
+             //"TalkParam",
              "EquipMtrlSetParam",
              "PlayerCommonParam",
-             "MapDefaultInfoParam"
+             //"MapDefaultInfoParam"
         };
 
+        static string[] includeParamNames = null;
 
+
+        static public void LoadParamNames() {
+
+            string fn = GlobalConfig.BaseDir + "\\param-names.txt";
+            var result = File.ReadAllLines(fn);
+            if ( result.Length > 1) {
+                includeParamNames = result;
+                return;
+            }
+            includeParamNames = defaultIncludeParamNames;
+        }
         static public bool IncludesParam(string paramName)
         {
 

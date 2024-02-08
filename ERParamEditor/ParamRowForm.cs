@@ -119,10 +119,12 @@ namespace ERParamEditor
             foreach (var cell in cells)
             {
 
-                lines.Add(string.Format("{0},{1},{2},{3},{4},{5}",
-                    cell.ColIndex, cell.DisplayName, cell.Key, cell.Value,
+                lines.Add(string.Format("{0},{1}={2}  {3}({4}) {5} {6} {7}",
+                    cell.ColIndex, cell.Key, cell.Value, 
+                    cell.DisplayName, cell.GetCell().Def.DisplayName,
                     cell.GetValueType(),
-                    cell.Comment));
+                    cell.Comment
+                    ));
 
 
             }
@@ -165,11 +167,13 @@ namespace ERParamEditor
             {
                 object obj = dataGridViewRow.SelectedRows[i].DataBoundItem;
                 RowWrapper row = (RowWrapper)obj;
+                if ( i > 0 )
+                    text = text + ",";
+
                 if (rowId)
                     text = text + row.ID;
                 if (rowName)
                     text = text + row.Name;
-                text = text + ",";
 
             }
             Clipboard.SetData(DataFormats.Text, (Object)text);

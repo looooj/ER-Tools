@@ -111,7 +111,7 @@ namespace ERParamEditor
             GlobalConfig.Load();
 
             SpecEquipConfig.LoadConfig();
-
+            ParamNameFilter.LoadParamNames();
             MultiLang.InitDefault("ERParamEditor");
             MultiLang.ApplyForm(this, "MainForm");
         }
@@ -125,18 +125,6 @@ namespace ERParamEditor
         void RefreshProject()
         {
 
-            /*
-            comboBoxProjectList.Items.Clear();
-
-            List<string> projectList = ParamProjectManager.GetProjectList();
-            foreach (string name in projectList)
-            {
-                comboBoxProjectList.Items.Add(name);
-
-            }
-            if (comboBoxProjectList.Items.Count > 0)
-                comboBoxProjectList.SelectedIndex = 0;
-            */
 
             listViewProject.Items.Clear();
             listViewParam.Items.Clear();
@@ -171,7 +159,7 @@ namespace ERParamEditor
             {
                 string? desc = ParamNames.GetDesc(p);
                 if ( desc != null )
-                    ListViewUtils.AddItem(listViewParam, p+ "|"+desc);
+                    ListViewUtils.AddItem(listViewParam, p+ " | "+desc);
                 else
                     ListViewUtils.AddItem(listViewParam, p);
             }
@@ -196,6 +184,7 @@ namespace ERParamEditor
                 {
 
                     RefreshProject();
+
                 }
             }
 
@@ -213,24 +202,19 @@ namespace ERParamEditor
                 var project = ParamProjectManager.OpenProject(form.ProjectName);
                 if (project != null)
                 {
+                    bool changeCursor = false;
+                    if (Cursor != Cursors.WaitCursor)
+                    {
+                        Cursor = Cursors.WaitCursor;
+                        changeCursor = true;
+                    }
 
                     RefreshProject();
+
+                    if (changeCursor)
+                        Cursor = Cursors.Default;
                 }
             }
-            /*
-            if (comboBoxProjectList.SelectedIndex >= 0)
-            {
-
-                string? projectName = comboBoxProjectList.Items[comboBoxProjectList.SelectedIndex].ToString();
-                if (projectName != null)
-                {
-                    ParamProjectManager.OpenProject(projectName);
-
-                    RefreshProject();
-                }
-            }
-            */
-
         }
 
         private bool resizeFirst = true;
@@ -250,15 +234,6 @@ namespace ERParamEditor
             ParamUpdateForm form = new();
 
             form.Exec(paramProject);
-            /*
-            DialogResult r = MessageBox.Show("Are you sure update Regulation.bin", "", MessageBoxButtons.YesNo);
-            if (r != DialogResult.Yes)
-            {
-                return;
-            }
-
-            UpdateParamExector.Exec(paramProject, new UpdateParamOptions());
-            */
 
         }
 
@@ -297,7 +272,7 @@ namespace ERParamEditor
 
             var selection = listViewParam.SelectedItems[0];
             var selectionText = selection.Text;
-            var items = selectionText.Split("|");
+            var items = selectionText.Split(" | ");
             var param = paramProject.FindParam(items[0]);
             if (param == null)
                 return;

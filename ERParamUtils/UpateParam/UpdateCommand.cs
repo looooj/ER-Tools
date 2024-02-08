@@ -277,6 +277,8 @@ namespace ERParamUtils.UpdateParam
 
         public static readonly string AddMapPiece = "AddMapPiece";
         public static readonly string AddWhetblade = "AddWhetblade";
+        //public static readonly string RemoveRecipe = "AddWhetblade";
+
 
 
     }

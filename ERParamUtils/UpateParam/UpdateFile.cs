@@ -54,6 +54,19 @@ namespace ERParamUtils.UpdateParam
             return false;
         }
 
+        static string GetIncludePath(string baseDir, string includeName) {
+
+            string includePath = Path.Combine(baseDir, includeName);
+
+            if (File.Exists(includePath))
+                return includePath;
+
+            includePath = Path.Combine(GlobalConfig.GetTemplateDir() + "\\commons", includeName);
+            if (File.Exists(includePath))
+                return includePath;
+
+            return "";
+        }
 
         public static List<string> Load(ParamProject project, string updateName) {
 
@@ -86,9 +99,9 @@ namespace ERParamUtils.UpdateParam
                 {
                     string[] ss = line.Split("=");
                     string includeName = Path.GetFileNameWithoutExtension(path) + "-" + ss[1];
-                    string includePath = Path.Combine(baseDir, includeName);
+                    string includePath = GetIncludePath(baseDir, includeName);
 
-                    if (!File.Exists(includePath))
+                    if (includePath.Length < 1 || !File.Exists(includePath))
                     {
                         UpdateLogger.Info("include {0} {1} {2} not found", 
                             updateName, includeName,

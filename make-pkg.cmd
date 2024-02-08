@@ -17,6 +17,7 @@ xcopy /s /y /i /q ..\..\assets  assets\
 md docs 
 xcopy /s /y /i /q ..\..\docs  docs\
 copy docs\default-config.txt config.txt
+copy docs\default-param-names.txt  param-names.txt
 md templates
 xcopy /s /y /i /q ..\..\templates  templates\
 

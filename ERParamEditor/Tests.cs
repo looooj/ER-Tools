@@ -326,14 +326,28 @@ namespace ERParamEditor
 
             File.WriteAllLines("forStockList.txt", items);
         }
-        public static void Run() {
 
+        static void gen_menu_text() {
             //D:\myprojects\game - tools\ER - Tools\docs\item - menu - text
             string[] names = { "GR_MenuText", "ActionButtonText", "BloodMsg" };
             string outDir = "D:\\myprojects\\game-tools\\ER-Tools\\docs\\item-menu-text";
             string baseDir = "D:\\docs\\game\\er\\unpack-\\unpack-files-text\\menu.msgbnd\\msg";
             TestGenChNames(baseDir, outDir, names);
             //checkShopLineupParamRecipe();
+        }
+
+        static void WriteParamNames() {
+
+            //
+            string fn = "D:\\myprojects\\game-tools\\ER-Tools\\docs\\default-param-names.txt";
+
+            bool nameFilter = GlobalConfig.UseParamNameFilter;
+            var paramList = GlobalConfig.GetCurrentProject().GetParamNameList(nameFilter);
+            File.WriteAllLines(fn, paramList);
+        }
+        public static void Run() {
+
+            WriteParamNames();
         }
     }
 }

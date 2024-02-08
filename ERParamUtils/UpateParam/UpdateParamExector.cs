@@ -31,7 +31,8 @@ namespace ERParamUtils.UpdateParam
         public string Description = "";
         public int OrderNo = 999;
         public string UpdateName = "";
-
+        public virtual void ExecBefore(ParamProject project, UpdateCommand updateCommand) { 
+        }
         public abstract void Exec(ParamProject project, UpdateCommand updateCommand);
     };
 
@@ -66,6 +67,7 @@ namespace ERParamUtils.UpdateParam
         }
     }
 
+    /*
     public class SpecRecipeParamTask : UpdateParamTask
     {
 
@@ -79,10 +81,13 @@ namespace ERParamUtils.UpdateParam
             UpdateShopLineupParamRecipe.ExecSpec(project, updateCommand);
         }
     }
+    */
 
-    public class DefaultMapLotParamTask : UpdateParamTask
+
+    
+    public class ItemLotCountParamTask : UpdateParamTask
     {
-        public DefaultMapLotParamTask()
+        public ItemLotCountParamTask()
         {
             OrderNo = 0;
             Description = "UpdateLotParam: Change Rune Stone Lot Count 20; Arrow Lot Count 99; ...";
@@ -91,10 +96,11 @@ namespace ERParamUtils.UpdateParam
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
             UpdateName = Description;
-            DefautItemLot.SetDefaultLot(project, updateCommand);
+            ItemLotChangeReplace.SetItemLotCount(project, updateCommand);
         }
     }
 
+    
 
     public class RemoveRequireTask : UpdateParamTask
     {
@@ -286,6 +292,11 @@ namespace ERParamUtils.UpdateParam
 
         }
 
+        public override void ExecBefore(ParamProject paramProject, UpdateCommand updateCommand) {
+
+            updateCommand.SetOption(UpdateParamOption.ReplaceCookbook, 1);
+
+        }
         public override void Exec(ParamProject paramProject, UpdateCommand updateCommand)
         {
             UpdateShopLineupParamRecipe.UnlockCrafting(paramProject, updateCommand);
@@ -327,7 +338,7 @@ namespace ERParamUtils.UpdateParam
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
-            DefautItemLot.SetLotReplace(project, updateCommand);
+            ItemLotChangeReplace.SetLotReplace(project, updateCommand);
 
         }
     }
@@ -360,7 +371,25 @@ namespace ERParamUtils.UpdateParam
             updateCommand.AddOption(options.UpdateCommandOptions);
 
 
+            foreach (var task in options.UpdateTasks)
+            {
+                try
+                {
+                    UpdateLogger.InfoTime("ExecBefore {0}", task.GetType().Name);
+                    task.ExecBefore(paramProject, updateCommand);
+                }
+                catch (Exception ex)
+                {
+                    logger.Error(ex, ex.Message + " " + task.UpdateName);
+                    throw new Exception("ExecBefore (" + task.UpdateName + ") Error " + ex.Message);
+                }
+            }
+
+
+
             updateCommand.AddItem(UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
+            updateCommand.SetOption(UpdateParamOption.ReplaceTalismanPouch, 1);
+
             if (updateCommand.HaveOption(UpdateParamOption.ReplaceTalismanPouch))
             {
                 updateCommand.AddItem(
@@ -376,6 +405,7 @@ namespace ERParamUtils.UpdateParam
             //{
             //    UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
             //}
+
 
             UpdateGrace.UnlockGlaceDefault(updateCommand);
             UpdateCharaInit.AddDefault(paramProject,updateCommand);

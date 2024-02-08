@@ -1,6 +1,7 @@
 ﻿using ERParamUtils;
 using ERParamUtils.UpdateParam;
 using MultiLangLib;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,8 @@ namespace ERParamEditor
         {
             InitializeComponent();
         }
+
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         List<UpdateParamTask> updateParamTasks = new();
         List<UpdateParamOption> updateParamOptions = new();
@@ -57,14 +60,14 @@ namespace ERParamEditor
             checkBoxSelectAll.Checked = true;
 
             updateParamTasks.Add(new UnlockCraftingTask());
-            updateParamTasks.Add(new SpecRecipeParamTask());
+            //updateParamTasks.Add(new SpecRecipeParamTask());
 
             updateParamTasks.Add(new UnlockGraceTask());
             updateParamTasks.Add(new DefaultShopParamTask());
             updateParamTasks.Add(new SpecShopParamTask());
 
 
-            updateParamTasks.Add(new DefaultMapLotParamTask());
+            updateParamTasks.Add(new ItemLotCountParamTask());
             updateParamTasks.Add(new LotParamTask());
 
             updateParamTasks.Add(new RemoveRequireTask());
@@ -78,13 +81,13 @@ namespace ERParamEditor
             updateParamTasks.Add(new UpdateItemParamTask());
 
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGoldenSeedSacredTear));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceTalismanPouch));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceTalismanPouch));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRune));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceStoneswordKey));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceMemoryStone));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceFinger));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDeathroot));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
 
@@ -116,6 +119,8 @@ namespace ERParamEditor
                 }
 
             }
+
+            Text = Text + " - " + GlobalConfig.GetCurrentProject().GetName();
 
         }
 
@@ -170,7 +175,7 @@ namespace ERParamEditor
             }
             catch (Exception ex)
             {
-
+                logger.Error(ex);
                 MessageBox.Show(ex.Message);
             }
             Cursor = Cursors.Default;

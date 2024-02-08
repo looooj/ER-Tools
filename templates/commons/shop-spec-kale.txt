@@ -1,0 +1,7 @@
+#10010;Golden Seed;黄金种子
+#100516,[Merchant Kale] Chain Armor
+100516;10010;Golden Seed;3;200;-1
+
+#10020;Sacred Tear;圣杯露滴
+#100517,[Merchant Kale] Chain Gauntlets
+100517;10020;Sacred Tear;3;200;-1

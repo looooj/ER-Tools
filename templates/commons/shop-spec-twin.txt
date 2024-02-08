@@ -1,0 +1,30 @@
+#50000000 Arrow
+#50010000 Fire Arrow
+#50020000 Serpent Arrow
+
+#101873[Twin Maiden Husks] Heater Shield 
+101873;50000000;Arrow;0;20;-1
+
+#101874[Twin Maiden Husks] Knight Helm 
+101874;50010000;Fire Arrow;0;20;-1
+
+#101875[Twin Maiden Husks] Knight Armor 
+101875;50020000;Serpent Arrow;0;20;-1
+
+#10140;Ancient Dragon Smithing Stone;古龙岩锻造石
+#101876[Twin Maiden Husks] Knight Gauntlets 
+101876;10140;SAncient Dragon Smithing Stone;3;2000;-1
+
+#10168;Somber Ancient Dragon Smithing Stone;古龙岩失色锻造石
+#101877[Twin Maiden Husks] Knight Greaves 
+101877;10168;Somber Ancient Dragon Smithing Stone;3;2000;-1
+
+#101868[Twin Maiden Husks] Mace 
+101868;51010000;Golem's Great Arrow;0;20;-1
+
+#51040000;Radahn's Spear;拉塔恩的矛
+#101869[Twin Maiden Husks] Short Spear 
+101869;51040000;Radahn's Spear;0;20;-1
+
+#101867[Twin Maiden Husks] Battle Axe 
+101867;51000000;Great Arrow;0;20;-1

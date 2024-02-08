@@ -262,36 +262,16 @@ namespace ERParamUtils.UpdateParam
     }
 
     //
-    // change lot count only
-    //
-    public class DefautItemLot
+    //  change lot count and replace equip type
+    // 
+    public class ItemLotChangeReplace
     {
 
 
-        private static void SetDefaultLot(SoulsParam.Param.Row row, UpdateCommand updateCommand)
-        {
 
-            for (int i = 1; i < 8; i++)
-            {
-                string key = "lotItemId0" + i;
-                int itemId = ParamRowUtils.GetCellInt(row, key, 0);
-                if (itemId < 1)
-                {
-                    if (i >= 2)
-                        return;
-                    continue;
-                }
-                key = "lotItemCategory0" + i;
-                int itemType = ParamRowUtils.GetCellInt(row, key, 0);
-                key = "lotItemNum0" + i;
-                int itemCount = ParamRowUtils.GetCellInt(row, key, 0);
-
-
-                SetItemLotCount(itemId, itemType, itemCount, i, row, updateCommand);
-
-            }
-        }
-
+        //
+        // change lot count only
+        //
         private static void SetItemLotCount(int itemId, int itemType, int itemCount, int itemIndex,
             SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
@@ -342,8 +322,53 @@ namespace ERParamUtils.UpdateParam
 
         }
 
+        private static void SetLotCountRow(SoulsParam.Param.Row row, UpdateCommand updateCommand)
+        {
 
-        static void SetLotReplace(SoulsParam.Param.Row row, UpdateCommand updateCommand)
+            for (int i = 1; i < 8; i++)
+            {
+                string key = "lotItemId0" + i;
+                int itemId = ParamRowUtils.GetCellInt(row, key, 0);
+                if (itemId < 1)
+                {
+                    if (i >= 2)
+                        return;
+                    continue;
+                }
+                key = "lotItemCategory0" + i;
+                int itemType = ParamRowUtils.GetCellInt(row, key, 0);
+                key = "lotItemNum0" + i;
+                int itemCount = ParamRowUtils.GetCellInt(row, key, 0);
+
+
+                SetItemLotCount(itemId, itemType, itemCount, i, row, updateCommand);
+
+            }
+        }
+
+        public static void SetItemLotCount(ParamProject project, UpdateCommand updateCommand)
+        {
+            string[] paramNames = { ParamNames.ItemLotParamMap, ParamNames.ItemLotParamEnemy };
+            foreach (string paramName in paramNames)
+            {
+                var param = project.FindParam(paramName);
+                if (param == null)
+                    continue;
+
+                UpdateLogger.Begin(paramName);
+
+                foreach (var row in param.Rows)
+                {
+                    SetLotCountRow(row, updateCommand);
+                }
+            }
+        }
+
+
+        //
+        // replace by options
+        //
+        private static void SetLotReplace(SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
 
             for (int i = 1; i < 8; i++)
@@ -388,12 +413,15 @@ namespace ERParamUtils.UpdateParam
 
                 //10010;Golden Seed;黄金种子
                 //10020; Sacred Tear; 圣杯露滴
-                //
-                //1046380100 [Limgrave - Third Church of Marika] Sacred Tear 
-                //1041380100 [Stormhill - Stormhill Shack] Golden Seed
+
+                
                 if (updateCommand.HaveOption(UpdateParamOption.ReplaceGoldenSeedSacredTear))
                     if ((itemId == 10010 || itemId == 10020) && itemType == (int)EquipType.Good)
                     {
+                        /*
+                        //row id not correct 
+                        //1046380100 [Limgrave - Third Church of Marika] Sacred Tear 
+                        //1041380100 [Stormhill - Stormhill Shack] Golden Seed 
                         if (row.ID == 1041380100) {
                             //1041380100;Golden Seed
                             updateCommand.AddItem(row, "lotItemNum01", 30);
@@ -404,11 +432,11 @@ namespace ERParamUtils.UpdateParam
                             //1041380100;Sacred Tear 
                             updateCommand.AddItem(row, "lotItemNum01", 12);
                             continue;
-                        }
+                        } */
 
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
-
+                
                 //10030;Memory Stone;记忆石
                 if (updateCommand.HaveOption(UpdateParamOption.ReplaceMemoryStone))
                     if ((itemId == 10030) && itemType == (int)EquipType.Good)
@@ -446,23 +474,7 @@ namespace ERParamUtils.UpdateParam
             }
         }
 
-        public static void SetDefaultLot(ParamProject project, UpdateCommand updateCommand)
-        {
-            string[] paramNames = { ParamNames.ItemLotParamMap, ParamNames.ItemLotParamEnemy };
-            foreach (string paramName in paramNames)
-            {
-                var param = project.FindParam(paramName);
-                if (param == null)
-                    continue;
 
-                UpdateLogger.Begin(paramName);
-
-                foreach (var row in param.Rows)
-                {
-                    SetDefaultLot(row, updateCommand);
-                }
-            }
-        }
 
         public static void SetLotReplace(ParamProject project, UpdateCommand updateCommand)
         {

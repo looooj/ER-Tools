@@ -95,6 +95,13 @@ namespace ERParamUtils.UpdateParam
                 if (ParamRowUtils.GetCellInt(row, key, 0) != 0)
                 {
                     updateCommand.AddItem(row, key, "0");
+                    //if ( updateCommand.HaveOption())
+                }
+                key = "mtrlId";
+                if (ParamRowUtils.GetCellInt(row, key, 0) != 0)
+                {
+                    updateCommand.AddItem(row, key, "-1");
+                    //if ( updateCommand.HaveOption())
                 }
             }            
         }
@@ -120,11 +127,28 @@ namespace ERParamUtils.UpdateParam
             }
         }
 
+        /*
+        static int equipIdCol = 0;
+        static int equipTypeCol = 7;
+        static bool FindEquip(SoulsParam.Param param, int equipId, int equipType) {
+
+            foreach (var row in param.Rows) { 
+                
+                ParamRowUtils.GetCellInt(row,)
+            }
+            return false;
+        } */
 
         public static bool AddEquip(UpdateCommand updateCommand, int rowId,
              SoulsParam.Param param, int equipId, int equipType, string name, int eventFlagForStock1)
 
         {
+            if (rowId >= 32000)
+            {
+                //updateCommand.
+                UpdateLogger.InfoRow("{0} rowId {1} over", param.Name,rowId);
+                return false;
+            }
             if (name.Length < 1)
                 name = "_" + equipId;
 
@@ -158,6 +182,7 @@ namespace ERParamUtils.UpdateParam
 
             ParamRowUtils.SetCellValue(row, keyValues);
             updateCommand.AddItem(row, "equipId", equipId);
+            UpdateLogger.InfoRow("add {0} {1} {2}", rowId, equipId, equipType);
             return true;
         }
 /*

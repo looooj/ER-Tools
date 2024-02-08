@@ -1,9 +1,9 @@
-﻿UnlockCraftingTask=解锁制作笔记
+﻿UnlockCraftingTask=解锁制作笔记,无条件制作,替换制作笔记为王之卢恩
 UnlockGraceTask=解锁赐福点
 BuddyTask=增加骨灰的召唤范围;移除骨灰召唤消耗;无限召唤次数
 DefaultShopParamTask=全部商品可见;物品类无限数量;设置最小价格
 SpecShopParamTask=执行商店脚本(shop-spec)
-DefaultMapLotParamTask=设置默认拾取掉落数量(黄金卢恩20;弓箭90;...)
+ItemLotCountParamTask=设置特定物品拾取掉落数量(黄金卢恩20;弓箭90;...)
 LotParamTask=执行拾取掉落脚本(lot-enemy*,lot-map*)
 SpEffectParamTask=执行效果脚本(sp-effect)
 RemoveRequireTask=移除武器魔法祷告需求
@@ -11,7 +11,7 @@ RemoveWeightTask=移除武器盔甲重量
 CharInitParamTask=执行角色初始脚本(chara-init)
 SpecRecipeParamTask=执行配方脚本(recipe-spec)
 
-ReplaceGoldenSeedSacredTear=替换黄金种子和圣杯露滴(风暴山丘和玛莉卡第三教堂拾取全部)
+ReplaceGoldenSeedSacredTear=替换黄金种子和圣杯露滴(如果有其他途径获取)
 ReplaceTalismanPouch=替换护符皮袋
 ReplaceFinger=替换勾指
 ReplaceCookbook=替换制作笔记

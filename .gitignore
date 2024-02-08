@@ -250,6 +250,7 @@ tmp
 
 ERParamEditor/mod-config.xml
 ERParamEditor/config.txt
+ERParamEditor/param-names.txt
 assets/Fonts
 copy-local.cmd
 

@@ -237,24 +237,31 @@ namespace ERParamUtils
             return value;
         }
 
-
-        public static ParamFieldMeta? FindFieldMeta(string paramName) {
-
-            if ( paramName.StartsWith("ItemLotParam"))
+        static string ConvertParamName(string paramName) {
+            if (paramName.StartsWith("ItemLotParam"))
             {
-                paramName = "ItemLotParam";
+                return "ItemLotParam";
             }
 
+            if (paramName.StartsWith("ShopLineupParam"))
+            {
+                return "ShopLineupParam";
+            }
             if (paramName.StartsWith("BehaviorParam"))
             {
-                paramName = "BehaviorParam";
+                return "BehaviorParam";
             }
 
-            if (paramName == "Bullet" || paramName == "Magic") {
-
-                paramName = paramName + "Param";
+            if (paramName == "Bullet" || paramName == "Magic")
+            {
+                return paramName + "Param";
             }
+            return paramName;
+        }
+        public static ParamFieldMeta? FindFieldMeta(string paramName) {
 
+
+            paramName = ConvertParamName(paramName);
 
             if (MetaDict.ContainsKey(paramName)) {
                 return MetaDict[paramName];
