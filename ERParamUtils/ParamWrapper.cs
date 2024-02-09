@@ -124,13 +124,24 @@ namespace SoulsParam
         {
             private SoulsFormats.PARAM.Row _row;
             private Param _parent;
-            public string? Name { get => _row.Name; set => _row.Name = value; }
+            public string? Name { get => GetRowName();  }
+            //set => _row.Name = value;
             public int ID { get => _row.ID; }
-
+            string impRowName = "";
             public void Init(SoulsFormats.PARAM.Row row, Param param)
             {
                 _row = row;
                 _parent = param;
+            }
+
+            string GetRowName() {
+                if (impRowName.Length > 0)
+                    return impRowName;
+                return _row.Name;
+            }
+
+            public void SetImpName(string name) {
+                impRowName = name;
             }
 
             public IReadOnlyList<Cell> Cells

@@ -167,7 +167,8 @@ namespace ERParamUtils
             {
                 throw new Exception($@"Failed to get regulation version. Params might be corrupt.");
             }
-            Dictionary<string, SoulsParam.Param> paramBank = _params;
+            //
+            //Dictionary<string, SoulsParam.Param> paramBank = _params;
 
             List<string> paramNames = new();
             foreach (var f in parambnd.Files)
@@ -188,7 +189,7 @@ namespace ERParamUtils
                     continue;
                 }
 
-                if (paramBank.ContainsKey(paramName))
+                if (_params.ContainsKey(paramName))
                 {
                     continue;
                 }
@@ -245,7 +246,7 @@ namespace ERParamUtils
                     p.Name = paramName;
                     p.ApplyParamdef(def);
                     p.MakeCellIndex();
-                    paramBank.Add(paramName, p);
+                    _params.Add(paramName, p);
 
                     p.FieldMeta = ParamFieldMetaManager.FindFieldMeta(p.Name);
                 }
@@ -279,7 +280,7 @@ namespace ERParamUtils
                 {
                     if (names.ContainsKey(row.ID) && (row.Name == null || row.Name == ""))
                     {
-                        row.Name = names[row.ID];
+                        row.SetImpName(names[row.ID]);
                     }
                 }
             }
