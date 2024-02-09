@@ -18,7 +18,7 @@ namespace ERParamUtils
         string Name = "";
         string ModRegulationPath = "";
         string CreateTime = "";
-        string templateType = "empty";
+        string templateName = "";
 
         BND4 currentBinder = null;
         GameType gameType = GameType.EldenRing;
@@ -44,8 +44,10 @@ namespace ERParamUtils
             CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
-        public void SetTemplateType(string type) {
-            templateType = type;
+        public void SetTemplateName(string name) {
+            if (name == null || name == "")
+                name = ParamProjectTemplate.GetDefault();
+            templateName = name;
         }
 
         public string GetName()
@@ -430,7 +432,9 @@ namespace ERParamUtils
 
             string updateDir = GetUpdateDir();
             Directory.CreateDirectory(updateDir);
-            string templateDir = GlobalConfig.GetTemplateDir() + "\\" + templateType;
+
+
+            string templateDir = GlobalConfig.GetTemplateDir() + "\\" + templateName;
 
             var files = Directory.GetFiles(templateDir + "\\update", "*.txt");
             foreach (var file in files)

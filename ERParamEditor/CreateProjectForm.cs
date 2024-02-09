@@ -35,12 +35,14 @@ namespace ERParamEditor
 
         public string RegulationPath = "";
         public string ProjectName = "";
+        public string TemplateName = "";
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
 
             RegulationPath = textFilename.Text.Trim();
             ProjectName = textProjectName.Text.Trim();
+            TemplateName = comboBoxTemplate.Text;
             try
             {
                 string? errorMsg = ParamProjectManager.CheckProjectName(ProjectName);
@@ -84,6 +86,13 @@ namespace ERParamEditor
         {
             textProjectName.Text = "proj";
             FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            ParamProjectTemplate.Init();
+            var items = ParamProjectTemplate.GetList();
+            foreach(var item in items)
+               comboBoxTemplate.Items.Add(item);
+            if (items.Count > 0 )
+                comboBoxTemplate.SelectedIndex = 0;
         }
 
         private void checkBoxEldenRing_CheckedChanged(object sender, EventArgs e)

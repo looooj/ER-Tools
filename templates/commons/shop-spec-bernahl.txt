@@ -1,0 +1,5 @@
+### Knight Bernahl
+
+#80100;Ash of War: Bloodhound's Step;战灰：猎犬步法
+#100077[Knight Bernahl] Ash of War: Quickstep 
+100077;80100;Ash of War: Bloodhound's Step;4;500

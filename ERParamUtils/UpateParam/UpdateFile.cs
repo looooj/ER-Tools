@@ -54,14 +54,25 @@ namespace ERParamUtils.UpdateParam
             return false;
         }
 
-        static string GetIncludePath(string baseDir, string includeName) {
+        static string GetIncludePath(string baseDir, string currentName, string includeName) {
+            if (!includeName.EndsWith(".txt"))
+                includeName = includeName + ".txt";
 
             string includePath = Path.Combine(baseDir, includeName);
 
             if (File.Exists(includePath))
                 return includePath;
 
+            includePath = Path.Combine(baseDir, currentName + "-"+ includeName);
+
+            if (File.Exists(includePath))
+                return includePath;
+
             includePath = Path.Combine(GlobalConfig.GetTemplateDir() + "\\commons", includeName);
+            if (File.Exists(includePath))
+                return includePath;
+
+            includePath = Path.Combine(GlobalConfig.GetTemplateDir() + "\\commons", currentName + "-" + includeName);
             if (File.Exists(includePath))
                 return includePath;
 
@@ -91,22 +102,30 @@ namespace ERParamUtils.UpdateParam
                 //
                 //  Examples 
                 //  lot-enemy-b.txt
-                //  @@include=arrow.txt  => lot-enemy-b-arrow.txt
+                //                      
+                //  @@include=arrow.txt  =>  arrow.txt | lot-enemy-b-arrow.txt | commons/arrow.txt
                 //   
                 //
                 string line = lineTmp.Trim();
                 if (line.StartsWith("@@include="))
                 {
                     string[] ss = line.Split("=");
-                    string includeName = Path.GetFileNameWithoutExtension(path) + "-" + ss[1];
-                    string includePath = GetIncludePath(baseDir, includeName);
+                    string currentName = Path.GetFileNameWithoutExtension(path);
+                    string includeName = ss[1];
+
+                    string includePath = GetIncludePath(baseDir, currentName, includeName);
 
                     if (includePath.Length < 1 || !File.Exists(includePath))
                     {
-                        UpdateLogger.Info("include {0} {1} {2} not found", 
+                        UpdateLogger.Info("include {0} {1} {2} not found",
                             updateName, includeName,
                             includePath);
                         continue;
+                    }
+                    else {
+                        UpdateLogger.Info("include {0} {1} {2} found",
+                            updateName, includeName,
+                            includePath);
                     }
 
                     var includeLines = File.ReadLines(includePath);

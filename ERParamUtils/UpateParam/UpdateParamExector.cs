@@ -37,9 +37,9 @@ namespace ERParamUtils.UpdateParam
     };
 
 
-    public class DefaultShopParamTask : UpdateParamTask
+    public class UpdateShopParamTask : UpdateParamTask
     {
-        public DefaultShopParamTask()
+        public UpdateShopParamTask()
         {
             OrderNo = 0;
             Description = "UpdateShopParam: Change Stone Glovewort Price; Change All Visible; Change Sell Amount(Rune Arc,...) ";
@@ -348,6 +348,46 @@ namespace ERParamUtils.UpdateParam
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
+
+        public static void CreateTaskList(List<UpdateParamTask> updateParamTasks) {
+
+            updateParamTasks.Add(new UnlockCraftingTask());
+            //updateParamTasks.Add(new SpecRecipeParamTask());
+
+            updateParamTasks.Add(new UnlockGraceTask());
+            updateParamTasks.Add(new UpdateShopParamTask());
+            updateParamTasks.Add(new SpecShopParamTask());
+
+
+            updateParamTasks.Add(new ItemLotCountParamTask());
+            updateParamTasks.Add(new LotParamTask());
+
+            updateParamTasks.Add(new RemoveRequireTask());
+            updateParamTasks.Add(new RemoveWeightTask());
+            updateParamTasks.Add(new BuddyTask());
+
+
+            updateParamTasks.Add(new CharInitParamTask());
+            updateParamTasks.Add(new SpEffectParamTask());
+            updateParamTasks.Add(new UpdateRowParamTask());
+            updateParamTasks.Add(new UpdateItemParamTask());
+
+        }
+
+        public static void CreateOptionList(List<UpdateParamOption> updateParamOptions)
+        {
+
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGoldenSeedSacredTear));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceTalismanPouch));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRune));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceStoneswordKey));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceMemoryStone));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceFinger));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDeathroot));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
+        }
 
         public static void Exec(ParamProject paramProject, UpdateParamOptions options)
         {

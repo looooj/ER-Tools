@@ -8,11 +8,20 @@
       not support @@include in incName file
 
       lot-enemy-b.txt 
-      @@include=arrow.txt => lot-enemy-b-arrow.txt
-
+     @@include=arrow.txt  =>  
+      .\arrow.txt 
+      .\lot-enemy-b-arrow.txt 
+       templates\commons\arrow.txt
+       
       
 
-   
+
+   ### @@var@@varName=varValue
+
+     @@var@@aa=12221,13331
+       
+     
+     {{aa}}...
 
    
 

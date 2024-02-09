@@ -1,0 +1,10 @@
+
+UpdateShopParamTask
+SpecShopParamTask
+ItemLotCountParamTask
+ReplaceRune
+ReplaceStoneswordKey
+ReplaceMemoryStone
+ReplaceFinger
+ReplaceGoldenSeedSacredTear
+

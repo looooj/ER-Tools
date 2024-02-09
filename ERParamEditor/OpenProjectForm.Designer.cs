@@ -31,20 +31,21 @@
             listBoxProject = new ListBox();
             buttonOk = new Button();
             buttonCancel = new Button();
+            buttonDelete = new Button();
             SuspendLayout();
             // 
             // listBoxProject
             // 
             listBoxProject.FormattingEnabled = true;
             listBoxProject.ItemHeight = 17;
-            listBoxProject.Location = new Point(22, 12);
+            listBoxProject.Location = new Point(12, 12);
             listBoxProject.Name = "listBoxProject";
-            listBoxProject.Size = new Size(366, 327);
+            listBoxProject.Size = new Size(666, 327);
             listBoxProject.TabIndex = 0;
             // 
             // buttonOk
             // 
-            buttonOk.Location = new Point(102, 358);
+            buttonOk.Location = new Point(213, 356);
             buttonOk.Name = "buttonOk";
             buttonOk.Size = new Size(75, 23);
             buttonOk.TabIndex = 1;
@@ -54,7 +55,7 @@
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new Point(211, 358);
+            buttonCancel.Location = new Point(309, 356);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(75, 23);
             buttonCancel.TabIndex = 2;
@@ -62,14 +63,27 @@
             buttonCancel.UseVisualStyleBackColor = true;
             buttonCancel.Click += buttonCancel_Click;
             // 
+            // buttonDelete
+            // 
+            buttonDelete.Location = new Point(404, 356);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(75, 23);
+            buttonDelete.TabIndex = 3;
+            buttonDelete.Text = "Delete";
+            buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
+            // 
             // OpenProjectForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(413, 397);
+            ClientSize = new Size(689, 391);
+            Controls.Add(buttonDelete);
             Controls.Add(buttonCancel);
             Controls.Add(buttonOk);
             Controls.Add(listBoxProject);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "OpenProjectForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "OpenProjectForm";
@@ -82,5 +96,6 @@
         private ListBox listBoxProject;
         private Button buttonOk;
         private Button buttonCancel;
+        private Button buttonDelete;
     }
 }

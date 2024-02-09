@@ -59,12 +59,16 @@ namespace ERParamUtils.UpdateParam
             recipeBaseRowId = 31000;
 
             string fn = GlobalConfig.BaseDir + "\\docs\\recipe-param\\eventFlag_forStock.txt";
+            if (!File.Exists(fn)) {
+                return;
+            }
             string[] lines = File.ReadAllLines(fn);
             foreach (string line in lines) {
 
                 var tmp = line.Trim();
                 var items = tmp.Split(",");
                 //31602,62010,8600,3
+                //rowId,eventFlag_forStock,equipId,equipType
                 if (items.Length == 4) {
                     var key = items[2] + "_" + items[3];
                     var val = items[1].Trim();
@@ -95,13 +99,11 @@ namespace ERParamUtils.UpdateParam
                 if (ParamRowUtils.GetCellInt(row, key, 0) != 0)
                 {
                     updateCommand.AddItem(row, key, "0");
-                    //if ( updateCommand.HaveOption())
                 }
                 key = "mtrlId";
                 if (ParamRowUtils.GetCellInt(row, key, 0) != 0)
                 {
                     updateCommand.AddItem(row, key, "-1");
-                    //if ( updateCommand.HaveOption())
                 }
             }            
         }

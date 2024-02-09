@@ -59,6 +59,7 @@ namespace ERParamEditor
             checkBoxRestore.Checked = true;
             checkBoxSelectAll.Checked = true;
 
+            /*
             updateParamTasks.Add(new UnlockCraftingTask());
             //updateParamTasks.Add(new SpecRecipeParamTask());
 
@@ -90,6 +91,11 @@ namespace ERParamEditor
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
+
+            */
+
+            UpdateParamExector.CreateTaskList(updateParamTasks);
+            UpdateParamExector.CreateOptionList(updateParamOptions);
 
 
             checkListBoxTask.Items.Clear();

@@ -39,7 +39,7 @@ namespace ERParamEditor
         public string ProjectName = "";
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            
+
             if (listBoxProject.SelectedItem == null)
                 return;
 
@@ -50,6 +50,31 @@ namespace ERParamEditor
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
+            Close();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
+            if (listBoxProject.SelectedItem == null)
+                return;
+
+
+            ProjectName = listBoxProject.SelectedItem.ToString();
+            var qmsg = "Are you sure delete " + ProjectName;
+
+            var ret = MessageBox.Show(qmsg, "", MessageBoxButtons.YesNo);
+            if (ret == DialogResult.No) { 
+                return;
+            }
+
+            string msg = ParamProjectManager.DeleteProject(ProjectName);
+            if (msg != "") {
+
+                MessageBox.Show(msg);
+                return;
+            }
             DialogResult = DialogResult.Cancel;
             Close();
         }

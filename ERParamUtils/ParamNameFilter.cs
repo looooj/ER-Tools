@@ -71,7 +71,7 @@ namespace ERParamUtils
              //"MapDefaultInfoParam"
         };
 
-        static string[] includeParamNames = null;
+        static string[]? includeParamNames = null;
 
 
         static public void LoadParamNames() {
@@ -86,6 +86,8 @@ namespace ERParamUtils
         }
         static public bool IncludesParam(string paramName)
         {
+            if (includeParamNames == null)
+                includeParamNames = defaultIncludeParamNames;
 
             foreach (string s in includeParamNames)
             {

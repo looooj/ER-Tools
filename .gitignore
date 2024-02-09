@@ -253,4 +253,5 @@ ERParamEditor/config.txt
 ERParamEditor/param-names.txt
 assets/Fonts
 copy-local.cmd
+test-local.cmd
 

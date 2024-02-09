@@ -12,6 +12,7 @@ namespace ERParamUtils
         public static string BaseDir=@".";
         public static string AssetsDir = "assets";
         public static string RegulationFileName = "regulation.bin";
+        public static string TemplateDir = "templates";
         public static bool Debug = false;
         private static string ConfigFile="config.txt";
 
@@ -50,7 +51,8 @@ namespace ERParamUtils
             config.Load(ConfigFile);
 
             BaseDir = config.GetString("BaseDir", BaseDir);
-            AssetsDir = config.GetString("AssetsDir", AssetsDir);
+            AssetsDir = config.GetString("AssetsDir", BaseDir + "\\assets");
+            TemplateDir = config.GetString("TemplateDir", BaseDir + "\\templates" );
             Debug = (config.GetInt("Debug", 0) != 0);
             UseParamNameFilter = (config.GetInt("UseParamNameFilter", 1) != 0);
         }
@@ -61,7 +63,7 @@ namespace ERParamUtils
 
         internal static string GetTemplateDir()
         {
-            return BaseDir + @"\templates";
+            return TemplateDir;
         }
     }
 }

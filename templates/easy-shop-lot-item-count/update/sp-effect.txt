@@ -1,0 +1,5 @@
+#
+#@@id=rowId1,...
+#key1;value2
+#key2;value2
+@@include=sp-effect-cam-start.txt

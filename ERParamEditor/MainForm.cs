@@ -179,7 +179,7 @@ namespace ERParamEditor
             if (ret == DialogResult.OK)
             {
 
-                var project = ParamProjectManager.CreateProject(form.ProjectName, form.RegulationPath);
+                var project = ParamProjectManager.CreateProject(form.ProjectName, form.RegulationPath, form.TemplateName);
                 if (project != null)
                 {
 

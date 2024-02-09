@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ERParamCmd": {
+      "commandName": "Project",
+      "commandLineArgs": "--project demo publish"
+    }
+  }
+}

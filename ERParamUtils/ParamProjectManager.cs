@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ERParamUtils.UpdateParam;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,13 @@ namespace ERParamUtils
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
 
+        public static void InitConfig() {
+
+            ParamNameFilter.LoadParamNames();
+            SpecEquipConfig.LoadConfig();
+            RowNamesManager.Load();
+            ParamFieldMetaManager.Load();
+        }
 
         public static bool CheckProject(string projectName)
         {
@@ -87,11 +95,12 @@ namespace ERParamUtils
             return "Invalid Project Name, Only Include a-z,0-9 \nExamples abc, abc1, abcd ";
         }
 
-        public static ParamProject CreateProject(string name, string modRegulationPath)
+        public static ParamProject CreateProject(string name, string modRegulationPath, string templateName)
         {
 
             ParamProject paramProject = new(name);
 
+            paramProject.SetTemplateName(templateName);
             paramProject.Create(modRegulationPath);
             Directory.CreateDirectory(paramProject.GetDir());
             paramProject.SaveConfig();
@@ -116,7 +125,12 @@ namespace ERParamUtils
             foreach (string d in dirs)
             {
 
+                if (Path.GetFileName(d).StartsWith("_")) {
+                    continue;
+                }
+
                 string fn = d + @"\" + ParamProject.ConfigName;
+
                 if (File.Exists(fn))
                 {
 
@@ -158,6 +172,17 @@ namespace ERParamUtils
             File.WriteAllText(lastProjectName, project.GetName());
         }
 
-
+        public static string DeleteProject(string projectName)
+        {
+            if (GlobalConfig.GetCurrentProject().GetName() == projectName) {
+                return "Can not delete current project";
+            }
+            string oldDir = GlobalConfig.GetProjectsDir() + "\\" + projectName;
+            string timeId = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+            
+            string newDir = GlobalConfig.GetProjectsDir() + "\\_" + projectName +"_"+timeId;
+            Directory.Move(oldDir, newDir);
+            return "";
+        }
     }
 }

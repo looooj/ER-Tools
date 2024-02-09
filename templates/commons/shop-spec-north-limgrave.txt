@@ -1,0 +1,11 @@
+#
+#Merchant - North Limgrave
+#
+
+#3500;Uplifting Aromatic;振奋香
+#100542[Merchant - North Limgrave] Short Sword 
+100542;3500;Uplifting Aromatic;3;100;-1
+
+#2090;Deathroot;死根
+#100543[Merchant - North Limgrave] Halberd 
+100543;2090;Deathroot;3;100;8

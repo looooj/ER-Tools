@@ -1,0 +1,6 @@
+#
+# equipType WEAPON=0, ARMOR=1, RING=2, GOOD=3, ASH=4
+#rowId;newEquipId;newName;equipType;price
+#
+@@include=shop-spec-kale.txt
+@@include=shop-spec-twin.txt
