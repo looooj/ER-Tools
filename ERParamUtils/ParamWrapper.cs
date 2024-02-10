@@ -89,18 +89,22 @@ namespace SoulsParam
             if (_rowDict.ContainsKey(id))
                 return null;
 
-            var newRow = new PARAM.Row(_param.Rows[0]);
-            newRow.ID = id;
-            newRow.Name = name;
+            //PARAM.Row
+            var newPARAMRow = new PARAM.Row(_param.Rows[0]);
+
+            newPARAMRow.ID = id;
+            newPARAMRow.Name = name;
             bool insert = false;
+
+            //rowWrapper
             var row = new Row();
-            row.Init(newRow, this);
+            row.Init(newPARAMRow, this);
 
             for (int i = 0; i < _param.Rows.Count; i++) {
 
                 var tmp = _param.Rows[i];
                 if (id < tmp.ID) {
-                    _param.Rows.Insert(i, newRow);
+                    _param.Rows.Insert(i, newPARAMRow);
                     _rows.Insert(i, row);
                     insert = true;
                     break;
@@ -109,7 +113,7 @@ namespace SoulsParam
             }
             if (!insert)
             {
-                _param.Rows.Add(newRow);
+                _param.Rows.Add(newPARAMRow);
                 _rows.Add(row);
             }
             return row;

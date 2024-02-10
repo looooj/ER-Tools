@@ -116,6 +116,8 @@ namespace ERParamEditor
             var fieldMeta = row.GetParam().FieldMeta;
             var cells = ParamCellList.Build(row.GetParam(), row.GetRow(),fieldMeta);
             var lines = new List<string>();
+            lines.Add("#" + row.GetParam().Name);
+            lines.Add("#" + row.ID);
             foreach (var cell in cells)
             {
 
@@ -287,6 +289,8 @@ namespace ERParamEditor
             }
             text = text.Trim();
             var item = RowListManager.GetCurrent();
+            if (item == null)
+                return;
 
             List<RowWrapper> rows = new();
             foreach (RowWrapper row in item.Rows)
@@ -324,6 +328,7 @@ namespace ERParamEditor
             RowWrapper row1 = (RowWrapper)dataGridViewRow.SelectedRows[0].DataBoundItem;
             RowWrapper row2 = (RowWrapper)dataGridViewRow.SelectedRows[1].DataBoundItem;
             List<string> result = new();
+            result.Add("#" + row1.ParamName + ","+ row1.ParamName);
             result.Add(string.Format("{0} {1}  {2} {3}", 
                 row1.ID,row1.Name,row2.ID,row2.Name));
             for (int i = 0; i < row1.GetRow().Cells.Count; i++) {

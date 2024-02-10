@@ -1,0 +1,60 @@
+#equipType  None=0, Good=1, Weapon=2, Protector=3, Accessory=4, Gem=5
+
+#@@index=index(1-8)
+#@@point=point(1000=100%)
+#rowId1,...|equipId1,...|equipType1,...|lotCount
+
+
+
+@@var@@GodrickSoldierId=431100125,431100126,431100127,431100115,431100116,431100117,431100106,431100107,431100108,431100056,431100055,431100057,431100037,431100038,431100039,431100026,431100027,431100028,431100015,431100016,431100017,431100008,431100007,431100006
+
+#[Godrick Soldier] Bolt 
+#[Godrick Soldier] Lordsworn's Bolt,
+#[Godrick Soldier] Smithing Stone [1]
+
+@@index=1
+@@point=200
+{{GodrickSoldierId}}|50010000|2|20
+
+@@index=2
+@@point=200
+{{GodrickSoldierId}}|50020000|2|20
+
+@@index=3
+@@point=200
+{{GodrickSoldierId}}|50090000|2|20
+
+@@index=4
+@@point=200
+{{GodrickSoldierId}}|50000000|2|20
+
+@@index=5
+@@point=200
+{{GodrickSoldierId}}|51040000|2|20
+
+#50000000 Arrow
+#50010000 Fire Arrow
+#50020000 Serpent Arrow
+#50090000 Golden Arrow
+#50000000 Arrow
+#51000000 Great Arrow
+#51010000 Golem's Great Arrow
+#51040000 Radahn's Spear
+
+
+@@index=6
+@@point=0
+{{GodrickSoldierId}}|0|0|0
+
+
+
+@@var@@Demi_Human_String_Id=410000000,410000010,410000100,410000110,410000200,410000210
+
+#410000000,[Demi-Human] String
+@@index=1
+@@point=1000
+{{Demi_Human_String_Id}}|50000000|2|20
+
+@@index=2
+@@point=0
+{{Demi_Human_String_Id}}|0|0|0

@@ -1,0 +1,17 @@
+#
+#@@id=rowId1,...
+#key1;value1
+#key2;value2
+
+@@id=3000-3009
+
+item_10;2919
+itemNum_10;99
+
+secondaryItem_02;130
+secondaryItemNum_02;1
+
+
+@@id=3000
+lotItemId01;2919;ItemLotParam_map;100000
+

@@ -7,4 +7,5 @@ ReplaceStoneswordKey
 ReplaceMemoryStone
 ReplaceFinger
 ReplaceGoldenSeedSacredTear
-
+CharInitParamTask
+SpEffectParamTask

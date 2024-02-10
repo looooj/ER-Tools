@@ -2,3 +2,5 @@
 #@@id=rowId1,...
 #key1;value1
 #key2;value2
+
+@@inclue=chara-init-rune.txt

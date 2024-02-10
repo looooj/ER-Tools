@@ -91,41 +91,7 @@ namespace ERParamUtils.UpdateParam
         public static void SetParamName(string paramName)
         {
             _customParamName = paramName;
-        }
-
-        /*
-        static void ProcIdRange(string idRange, List<int> ids) {
-            string[] items = idRange.Split('-');
-            if (items.Length < 2) {
-                return;
-            }
-            if (!int.TryParse(items[0], out int beginId)) {
-                return;
-            }
-            if (!int.TryParse(items[1], out int endId))
-            {
-                return;
-            }
-            for (int id = beginId; id <= endId; id++)
-                ids.Add(id);
-        }
-
-        static void ProcId(string line, List<int> ids)
-        {
-
-            string[] ss = line.Split(',');
-            foreach (string s in ss)
-            {
-                if (s.Contains("-")) { 
-
-                }
-                int id = int.Parse(s);
-                if (id > 0)
-                {
-                    _currentRowIds.Add(id);
-                }
-            }
-        } */
+        }  
 
         public static void Proc(string line, UpdateCommand updateCommand)
         {
@@ -182,11 +148,18 @@ namespace ERParamUtils.UpdateParam
 
                     string fieldName = ss[0];
                     string value = ss[1];
+                    int rowId = currentRowId;
+
+                    if (ss.Length == 4) {
+
+                        paramName = ss[2];
+                        rowId = int.Parse(ss[3]);
+                    }
 
                     UpdateCommandItem item = new()
                     {
                         ParamName = paramName,
-                        RowId = currentRowId,
+                        RowId = rowId,
                         Key = fieldName,
                         Value = value
                     };
@@ -308,7 +281,7 @@ namespace ERParamUtils.UpdateParam
 
         public void AddItem(UpdateCommandItem item)
         {
-            if (!_itemDict.TryGetValue(item.ParamName, out UpdateRowItemDict rowItemDict) ) {
+            if (!_itemDict.TryGetValue(item.ParamName, out UpdateRowItemDict? rowItemDict) ) {
                 rowItemDict = new();
                 _itemDict.Add(item.ParamName, rowItemDict);
             }
