@@ -96,7 +96,7 @@ namespace ERParamUtils.UpdateParam
 
             AddSpec(2, new int[] { 20720 });
 
-            //AddSpec(1, new int[] { 10010,10020 });
+            AddSpec(1, new int[] { 10010,10020 });
 
         }
 
