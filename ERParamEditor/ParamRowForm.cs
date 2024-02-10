@@ -119,11 +119,11 @@ namespace ERParamEditor
             foreach (var cell in cells)
             {
 
-                lines.Add(string.Format("{0},{1}={2}  {3}({4}) {5} {6} {7}",
-                    cell.ColIndex, cell.Key, cell.Value, 
+                lines.Add(string.Format("{0},{1}={2}  {3}({4}) {5} {6}",
+                    cell.ColIndex, 
+                    cell.Key, cell.Value, 
                     cell.DisplayName, cell.GetCell().Def.DisplayName,
-                    cell.GetValueType(),
-                    cell.Comment
+                    cell.GetValueType(), cell.Comment
                     ));
 
 
