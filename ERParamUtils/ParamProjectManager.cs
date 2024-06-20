@@ -34,23 +34,27 @@ namespace ERParamUtils
         }
 
 
-        public static ParamProject? LoadProject(string projectName)
+        public static ParamProject? LoadProject(string projectName, bool initCopy)
         {
             if (!CheckProject(projectName))
                 return null;
 
             ParamProject paramProject = new(projectName);
 
+
             paramProject.LoadConfig();
+
+            paramProject.InitCopy(initCopy);
+
             paramProject.LoadParams();
 
             return paramProject;
         }
 
-        public static ParamProject? OpenProject(string projectName)
+        public static ParamProject? OpenProject(string projectName, bool initCopy)
         {
 
-            ParamProject? paramProject = LoadProject(projectName);
+            ParamProject? paramProject = LoadProject(projectName, initCopy);
 
             if (paramProject == null)
                 return paramProject;
@@ -73,7 +77,7 @@ namespace ERParamUtils
                 projectName = projectList[0];
             }
 
-            project = LoadProject(projectName);
+            project = LoadProject(projectName,false);
             if ( project != null )
                 return project.GetParamNameList(filter);
             return new List<string>();
@@ -144,7 +148,7 @@ namespace ERParamUtils
         public static void OpenLastProject()
         {
 
-            OpenProject(GetLastProject());
+            OpenProject(GetLastProject(),false);
         }
 
         public static string GetLastProject()
