@@ -199,7 +199,7 @@ namespace ERParamEditor
             if (ret == DialogResult.OK)
             {
 
-                var project = ParamProjectManager.OpenProject(form.ProjectName);
+                var project = ParamProjectManager.OpenProject(form.ProjectName,form.initCopy());
                 if (project != null)
                 {
                     bool changeCursor = false;

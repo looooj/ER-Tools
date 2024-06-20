@@ -59,40 +59,7 @@ namespace ERParamEditor
             checkBoxRestore.Checked = true;
             checkBoxSelectAll.Checked = true;
 
-            /*
-            updateParamTasks.Add(new UnlockCraftingTask());
-            //updateParamTasks.Add(new SpecRecipeParamTask());
 
-            updateParamTasks.Add(new UnlockGraceTask());
-            updateParamTasks.Add(new DefaultShopParamTask());
-            updateParamTasks.Add(new SpecShopParamTask());
-
-
-            updateParamTasks.Add(new ItemLotCountParamTask());
-            updateParamTasks.Add(new LotParamTask());
-
-            updateParamTasks.Add(new RemoveRequireTask());
-            updateParamTasks.Add(new RemoveWeightTask());
-            updateParamTasks.Add(new BuddyTask());
-
-
-            updateParamTasks.Add(new CharInitParamTask());
-            updateParamTasks.Add(new SpEffectParamTask());
-            updateParamTasks.Add(new UpdateRowParamTask());
-            updateParamTasks.Add(new UpdateItemParamTask());
-
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGoldenSeedSacredTear));
-            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceTalismanPouch));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRune));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceStoneswordKey));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceMemoryStone));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceFinger));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDeathroot));
-            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
-            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
-
-            */
 
             UpdateParamExector.CreateTaskList(updateParamTasks);
             UpdateParamExector.CreateOptionList(updateParamOptions);

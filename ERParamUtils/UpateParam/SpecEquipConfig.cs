@@ -65,6 +65,8 @@ namespace ERParamUtils.UpdateParam
             //3350;Bewitching Branch;魅惑树枝
             //20751;Rimed Crystal Bud;冰结晶木芽
             //20825;Silver Tear Husk;银色泪滴空壳
+            //8186;Imbued Sword Key;魔石剑钥匙
+
 
          */
         public static void AddDefault()
@@ -94,17 +96,25 @@ namespace ERParamUtils.UpdateParam
             AddSpec(4, new int[] { 10030, 10040, 8186, 1290 });
 
 
-            AddSpec(2, new int[] { 20720 });
+            AddSpec(10, new int[] { 20720 });
 
-            AddSpec(1, new int[] { 10010,10020 });
+
+            AddSpec(2, new int[] { 10010,10020 });
+
+
+            //Great Glovewort
+            AddSpec(20, new int[] { 10909, 10919 });
+
+            //Ancient Dragon Stone
+            AddSpec(50, new int[] { 10168, 10140 });
 
         }
 
-       //150;Furlcalling Finger Remedy;唤勾指药
-       //100;Tarnished's Furled Finger;褪色者勾指
-       //101; Duelist's Furled Finger;斗士勾指
-       //170;Tarnished's Furled Finger;褪色者勾指
-       //171;Duelist's Furled Finger;斗士勾指
+        //150;Furlcalling Finger Remedy;唤勾指药
+        //100;Tarnished's Furled Finger;褪色者勾指
+        //101; Duelist's Furled Finger;斗士勾指
+        //170;Tarnished's Furled Finger;褪色者勾指
+        //171;Duelist's Furled Finger;斗士勾指
         public static bool IsFinger(int itemId, EquipType equipType) {
             if (equipType != EquipType.Good)
                 return false;
@@ -126,6 +136,15 @@ namespace ERParamUtils.UpdateParam
             if (equipType != EquipType.Good)
                 return false;
             if (itemId >= 2900 && itemId <= 2919)
+                return true;
+            return false;
+        }
+
+        public static bool IsAncientDragonStone(int itemId, EquipType equipType) {
+            if (equipType != EquipType.Good)
+                return false;
+
+            if (itemId == 10140 && itemId == 10168)
                 return true;
             return false;
         }

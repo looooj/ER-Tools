@@ -145,7 +145,7 @@ namespace ERParamCmd
 
             ParamProjectManager.InitConfig();
 
-            var paramProj = ParamProjectManager.LoadProject(projectName);
+            var paramProj = ParamProjectManager.LoadProject(projectName,false);
 
             if (paramProj == null) {
                 Console.WriteLine("load project [{0}] fail", projectName);

@@ -344,6 +344,7 @@ namespace ERParamUtils.UpdateParam
     }
 
 
+
     public class UpdateParamExector
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
@@ -384,6 +385,10 @@ namespace ERParamUtils.UpdateParam
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceMemoryStone));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceFinger));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDeathroot));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDragonHeart));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceBolt));
+
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGiantCrowSoul));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
@@ -425,12 +430,10 @@ namespace ERParamUtils.UpdateParam
                 }
             }
 
-
-
             updateCommand.AddItem(UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
-            updateCommand.SetOption(UpdateParamOption.ReplaceTalismanPouch, 1);
+            //updateCommand.SetOption(UpdateParamOption.ReplaceTalismanPouch, 1);
 
-            if (updateCommand.HaveOption(UpdateParamOption.ReplaceTalismanPouch))
+            //if (updateCommand.HaveOption(UpdateParamOption.ReplaceTalismanPouch))
             {
                 updateCommand.AddItem(
                     UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));
@@ -441,14 +444,22 @@ namespace ERParamUtils.UpdateParam
                 UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
             }
 
+            if (updateCommand.HaveOption(UpdateParamOption.ReplaceGiantCrowSoul)) {
+
+                //45610068,Bloodbane Giant Crow,11038,0
+                updateCommand.AddItem(
+                    UpdateCommandItem.Create(ParamNames.NpcParam, 45610068, "getSoul", "1000000"));
+
+            }
             //if (updateCommand.HaveOption(UpdateParamOption.AddWhetblade))
             //{
             //    UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
             //}
 
 
-            UpdateGrace.UnlockGlaceDefault(updateCommand);
-            UpdateCharaInit.AddDefault(paramProject,updateCommand);
+            //UpdateGrace.UnlockGlaceDefault(updateCommand);
+            //UpdateCharaInit.AddDefault(paramProject,updateCommand);
+
             options.UpdateTasks.Insert(0, new ReplaceParamTask());
 
             foreach (var task in options.UpdateTasks)

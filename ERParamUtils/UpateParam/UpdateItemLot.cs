@@ -118,7 +118,7 @@ namespace ERParamUtils.UpdateParam
     {
 
         string paramName;
-        string currentType;
+        string currentType="";
         int index = 1;
         int point = 1000;
         int count = 1;
@@ -279,9 +279,9 @@ namespace ERParamUtils.UpdateParam
             int newItemCount = 20;
             int specLotCount = SpecEquipConfig.GetSpec(itemId, (EquipType)itemType);
 
-            if (!(SpecEquipConfig.IsRune(itemId, (EquipType)itemType)
+            if (!( specLotCount > 0
+                || SpecEquipConfig.IsRune(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsSmithingStone(itemId, (EquipType)itemType)
-                || (specLotCount > 0)
                 || SpecEquipConfig.IsRemnant(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsPhysickRemnant(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsArrow(itemId, (EquipType)itemType)
@@ -298,7 +298,7 @@ namespace ERParamUtils.UpdateParam
             if (SpecEquipConfig.IsRemnant(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsPhysickRemnant(itemId, (EquipType)itemType))
             {
-                newItemCount = 2;
+                newItemCount = 3;
             }
 
             if (SpecEquipConfig.IsArrow(itemId, (EquipType)itemType)
@@ -404,11 +404,14 @@ namespace ERParamUtils.UpdateParam
                             updateCommand.AddItem(row, "lotItemId0" + i, 2909);
                     }
 
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceRune))
-                    if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
+                if (updateCommand.HaveOption(UpdateParamOption.ReplaceBolt))
+                    if (SpecEquipConfig.IsArrow(itemId, (EquipType)itemType))
                     {
-                        if (itemId < 2909)
-                            updateCommand.AddItem(row, "lotItemId0" + i, 2909);
+                        //52000000;Bolt;弩箭
+                        //52080000;Lordsworn's Bolt;君王军弩箭
+                        //50000000;Arrow;箭矢
+                        if (itemId == 52000000 || itemId == 52080000)
+                            updateCommand.AddItem(row, "lotItemId0" + i, 50000000);
                     }
 
                 //10010;Golden Seed;黄金种子
@@ -464,6 +467,13 @@ namespace ERParamUtils.UpdateParam
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
+                //10060; Dragon Heart; 龙心脏
+                if (updateCommand.HaveOption(UpdateParamOption.ReplaceDragonHeart))
+                    if ((itemId == 10060) && itemType == (int)EquipType.Good)
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
+
                 //190;Rune Arc;卢恩弯弧
                 if (updateCommand.HaveOption(UpdateParamOption.ReplaceRuneArc))
                     if ((itemId == 190) && itemType == (int)EquipType.Good)

@@ -345,9 +345,38 @@ namespace ERParamEditor
             var paramList = GlobalConfig.GetCurrentProject().GetParamNameList(nameFilter);
             File.WriteAllLines(fn, paramList);
         }
+
+        static void findSoul() {
+            var proj = GlobalConfig.GetCurrentProject();
+            if (proj == null)
+                return;
+
+            var param = proj.FindParam(ParamNames.NpcParam);
+            if (param == null)
+                return;
+
+            List<string> items = new();
+            foreach (var row in param.Rows)
+            {
+
+                var v = ParamRowUtils.GetCellInt(row, "getSoul", 0);
+
+                if (v < 1000)
+                {
+                    continue;
+                }
+                var isBoss = ParamRowUtils.GetCellInt(row, "isSoulGetByBoss", 0);//
+                var line = string.Format("{0},{1},{2},{3}",
+                    row.ID,row.Name, v, isBoss);
+                items.Add(line);
+
+            }
+            File.WriteAllLines( proj.GetDir() + "\\findSoul.txt", items);
+
+        }
         public static void Run() {
 
-            WriteParamNames();
+            findSoul();
         }
     }
 }

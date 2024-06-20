@@ -242,11 +242,18 @@ namespace ERParamUtils.UpdateParam
         public static readonly string ReplaceCookbook = "ReplaceCookbook";
         public static readonly string ReplaceDeathroot = "ReplaceDeathroot";
         public static readonly string ReplaceRune = "ReplaceRune";
-        public static readonly string ReplaceRuneArc = "ReplaceRuneArc";
- 
+        public static readonly string ReplaceRuneArc = "ReplaceRuneArc";        
+        public static readonly string ReplaceBolt = "ReplaceBolt";
+
         public static readonly string ReplaceBellBearing = "ReplaceBellBearing";
         public static readonly string ReplaceStoneswordKey = "ReplaceStoneswordKey";
         public static readonly string ReplaceMemoryStone = "ReplaceMemoryStone";
+        public static readonly string ReplaceDragonHeart = "ReplaceDragonHeart";
+
+
+        public static readonly string ReplaceGiantCrowSoul = "ReplaceGiantCrowSoul";
+
+
 
         public static readonly string AddMapPiece = "AddMapPiece";
         public static readonly string AddWhetblade = "AddWhetblade";

@@ -111,8 +111,8 @@ namespace ERParamUtils
         {
 
 
-            var proj1 = ParamProjectManager.LoadProject(name1);
-            var proj2 = ParamProjectManager.LoadProject(name2);
+            var proj1 = ParamProjectManager.LoadProject(name1,false);
+            var proj2 = ParamProjectManager.LoadProject(name2,false);
 
             if (proj1 == null || proj2 == null)
             {
