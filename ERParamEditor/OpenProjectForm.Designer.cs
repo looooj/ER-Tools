@@ -32,6 +32,7 @@
             buttonOk = new Button();
             buttonCancel = new Button();
             buttonDelete = new Button();
+            initCopyCheckBox = new CheckBox();
             SuspendLayout();
             // 
             // listBoxProject
@@ -73,11 +74,22 @@
             buttonDelete.UseVisualStyleBackColor = true;
             buttonDelete.Click += buttonDelete_Click;
             // 
+            // initCopyCheckBox
+            // 
+            initCopyCheckBox.AutoSize = true;
+            initCopyCheckBox.Location = new Point(507, 358);
+            initCopyCheckBox.Name = "initCopyCheckBox";
+            initCopyCheckBox.Size = new Size(75, 21);
+            initCopyCheckBox.TabIndex = 4;
+            initCopyCheckBox.Text = "InitCopy";
+            initCopyCheckBox.UseVisualStyleBackColor = true;
+            // 
             // OpenProjectForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(689, 391);
+            Controls.Add(initCopyCheckBox);
             Controls.Add(buttonDelete);
             Controls.Add(buttonCancel);
             Controls.Add(buttonOk);
@@ -89,6 +101,7 @@
             Text = "OpenProjectForm";
             Load += OpenProjectForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -97,5 +110,6 @@
         private Button buttonOk;
         private Button buttonCancel;
         private Button buttonDelete;
+        private CheckBox initCopyCheckBox;
     }
 }

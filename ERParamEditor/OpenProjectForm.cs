@@ -17,7 +17,9 @@ namespace ERParamEditor
         {
             InitializeComponent();
         }
-
+        public bool initCopy() {
+            return initCopyCheckBox.Checked;
+        }
         private void OpenProjectForm_Load(object sender, EventArgs e)
         {
             FormBorderStyle = FormBorderStyle.FixedSingle;

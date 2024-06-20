@@ -124,17 +124,16 @@ namespace ERParamUtils
             return defPairs;
         }
 
-
-
-        public void LoadParams()
-        {
-
-            _params.Clear();
-
+        public void InitCopy(bool force) {
             string path = GetRegulationPath();
             string orgPath = GetOrginalRegulationPath();
             string modPath = GetModRegulationPath();
-            bool useFilter = GlobalConfig.UseParamNameFilter;
+            if (force)
+            {
+                File.Delete(path);
+                File.Delete(orgPath);
+            }
+
             if (!File.Exists(path))
             {
 
@@ -151,6 +150,20 @@ namespace ERParamUtils
                     File.Copy(orgPath, path);
                 }
             }
+
+        }
+
+        public void LoadParams()
+        {
+
+            _params.Clear();
+
+            string path = GetRegulationPath();
+            InitCopy(false);
+            //string orgPath = GetOrginalRegulationPath();
+            //string modPath = GetModRegulationPath();
+            bool useFilter = GlobalConfig.UseParamNameFilter;
+
 
             LoadParamdefs();
             currentBinder = SFUtil.DecryptERRegulation(path);
@@ -202,7 +215,7 @@ namespace ERParamUtils
                     continue;
                 }
 
-                SoulsParam.Param p = SoulsParam.Param.Read(f.Bytes);
+                SoulsParam.Param p = SoulsParam.Param.Read(f.Bytes.ToArray());
                 p.Name = paramName;
                 if (!_paramdefs.ContainsKey(p.ParamType) && !_patchParamdefs.ContainsKey(p.ParamType))
                 {
