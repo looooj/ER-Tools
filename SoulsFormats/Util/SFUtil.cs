@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using ZstdNet;
 
 namespace SoulsFormats
 {
@@ -325,6 +326,38 @@ namespace SoulsFormats
             }
         }
 
+        public static byte[] ReadZstd(BinaryReaderEx br, int compressedSize)
+        {
+            byte[] compressed = br.ReadBytes(compressedSize);
+
+            using (var decompressedStream = new MemoryStream())
+            {
+                using (var compressedStream = new MemoryStream(compressed))
+                using (var deflateStream = new DecompressionStream(compressedStream))
+                {
+                    deflateStream.CopyTo(decompressedStream);
+                }
+                return decompressedStream.ToArray();
+            }
+        }
+
+        public static int WriteZstd(BinaryWriterEx bw, byte compressionLevel, Span<byte> input)
+        {
+            long start = bw.Position;
+
+            //using var compressor = new Compressor(new CompressionOptions(compressionLevel));
+            //var compressedData = compressor.Wrap(input);
+
+            var data = input.ToArray();
+            //CompressionStream 
+            using (var deflateStream = new CompressionStream(bw.Stream))
+            {
+                deflateStream.Write(data, 0, input.Length);
+            }
+
+            return (int)(bw.Position - start);
+        }
+
         /// <summary>
         /// Computes an Adler32 checksum used by Zlib.
         /// </summary>
@@ -526,6 +559,8 @@ namespace SoulsFormats
             if (BND4.IsRead(bytes, out BND4 bnd4)) 
                 return bnd4; 
             bytes = DecryptByteArray(erRegulationKey, bytes);
+            var bnd4Size = bytes.Length;
+            File.WriteAllBytes(path + ".bnd4", bytes);
             return BND4.Read(bytes);
         }
 

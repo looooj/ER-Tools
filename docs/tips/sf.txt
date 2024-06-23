@@ -1,0 +1,8 @@
+src\Andre\SoulsFormats\SoulsFormats\Formats\PARAM\PARAMDEF\XmlSerializer.cs
+            private static Field DeserializeField(PARAMDEF def, XmlNode node, bool versionAware)
+
+
+SoulsFormats\Formats\DCX.cs
+        private static byte[] DecompressDCXDFLT(BinaryReaderEx br, Type type)
+
+
