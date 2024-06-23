@@ -76,7 +76,7 @@ namespace ERParamUtils.UpdateParam
             //15430;Stormhawk Feather;风暴鹰羽毛
             //15340; Thin Beast Bones; 细小兽骨
             //15341; Hefty Beast Bone; 粗大兽骨
-            AddSpec(90, new int[] { 15060, 15430, 15340, 15341 });
+            AddSpec(90, new int[] { 15060, 15430, 15340, 15341, 1290 });
 
 
             AddSpec(50, new int[] { 190, 1200, 1210, 
@@ -93,14 +93,15 @@ namespace ERParamUtils.UpdateParam
             AddSpec(10, new int[] { 9501,10070, 8185, 8193, 2090 });
 
 
-            AddSpec(4, new int[] { 10030, 10040, 8186, 1290 });
+            AddSpec(4, new int[] { 10030, 10040, 8186 });
 
 
             AddSpec(10, new int[] { 20720 });
 
 
-            AddSpec(2, new int[] { 10010,10020 });
+            AddSpec(2, new int[] { 10020 });
 
+            AddSpec(5, new int[] { 10010 });
 
             //Great Glovewort
             AddSpec(20, new int[] { 10909, 10919 });
@@ -285,6 +286,18 @@ namespace ERParamUtils.UpdateParam
                 return false;
 
             if (itemId >= 9300 && itemId <= 9441)
+                return true;
+
+            return false;
+        }
+
+        //8600
+        public static bool IsMapPiece(int itemId, EquipType equipType) {
+
+            if (equipType != EquipType.Good)
+                return false;
+
+            if (itemId >= 8600 && itemId <= 8618)
                 return true;
 
             return false;

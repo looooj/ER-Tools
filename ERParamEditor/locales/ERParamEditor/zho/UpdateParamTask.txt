@@ -11,11 +11,13 @@ RemoveWeightTask=移除武器盔甲重量
 CharInitParamTask=执行角色初始脚本(chara-init)
 SpecRecipeParamTask=执行配方脚本(recipe-spec)
 
+InitMagicSlotAccSlot=初始化护符和记忆槽
 ReplaceGoldenSeedSacredTear=替换黄金种子和圣杯露滴(如果有其他途径获取)
 ReplaceTalismanPouch=替换护符皮袋
 ReplaceFinger=替换勾指
 ReplaceCookbook=替换制作笔记
 ReplaceRune=替换黄金卢恩最小为黄金卢恩10
+ReplaceLordRune=替换黄金卢恩王之卢恩
 ReplaceBolt=替换弩箭->箭矢
 ReplaceDeathroot=替换死根
 ReplaceRuneArc=替换卢恩弯弧

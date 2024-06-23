@@ -197,6 +197,14 @@ namespace ERParamUtils.UpdateParam
                         lastCount = Int32.Parse(counts[i]);
                     }
 
+                    if (index == 0) {
+                        procOneItem(updateCommand, rowId, 1, equip, currentType, lastCount, 1000);
+                        procOneItem(updateCommand, rowId, 2, "0", currentType, 0, 0);
+                        break;
+                    }
+                    procOneItem(updateCommand, rowId, index, equip, currentType,lastCount, point);
+
+                    /*
                     UpdateCommandItem item = CreateItem(rowId);
                     item.Key = string.Format("lotItemId0{0}", index);
                     item.Value = equip;
@@ -236,12 +244,55 @@ namespace ERParamUtils.UpdateParam
                         item.Value = "1";
                         updateCommand.AddItem(item);
                     }
-
-
+                    */
                 }
                 index = 2;
                 count = 1;
                 point = 1000;
+            }
+        }
+
+        public void procOneItem(UpdateCommand updateCommand, string rowId, int index, string equipId, string equipType, int count, int point)
+        {
+            UpdateCommandItem item = CreateItem(rowId);
+            item.Key = string.Format("lotItemId0{0}", index);
+            item.Value = equipId;
+            updateCommand.AddItem(item);
+
+            //newLines.Add(
+            //string.Format("{0};{1};lotItemId0{2};{3};s32",
+            //  paramName, rowId, index, equip)
+            //);
+            item = CreateItem(rowId);
+            item.Key = string.Format("lotItemCategory0{0}", index);
+            item.Value = equipType;
+            updateCommand.AddItem(item);
+
+            //newLines.Add(
+            //    string.Format("{0};{1};lotItemCategory0{2};{3};s32",
+            //      paramName, rowId, index, currentType)
+            //    );
+
+            item = CreateItem(rowId);
+            item.Key = string.Format("lotItemNum0{0}", index);
+            item.Value = count + "";
+            updateCommand.AddItem(item);
+
+            //newLines.Add(
+            //    string.Format("{0};{1};lotItemNum0{2};{3};u8",
+            //     paramName, rowId, index, lastCount)
+            //    );
+            item = CreateItem(rowId);
+            item.Key = string.Format("lotItemBasePoint0{0}", index);
+            item.Value = point + "";
+            updateCommand.AddItem(item);
+
+            if (point > 0)
+            {
+                item = CreateItem(rowId);
+                item.Key = string.Format("enableLuck0{0}", index);
+                item.Value = "1";
+                updateCommand.AddItem(item);
             }
         }
 
@@ -397,13 +448,30 @@ namespace ERParamUtils.UpdateParam
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
 
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceRune))
-                    if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
+                if (updateCommand.HaveOption(UpdateParamOption.AddMapPiece))
+                    if (SpecEquipConfig.IsMapPiece(itemId, (EquipType)itemType))
                     {
-                        if (itemId < 2909)
-                            updateCommand.AddItem(row, "lotItemId0" + i, 2909);
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
 
+
+
+                if (updateCommand.HaveOption(UpdateParamOption.ReplaceLordRune))
+                {
+                    if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
+                    {
+                        if (itemId < 2919)
+                            updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
+                }
+                else {
+                    if (updateCommand.HaveOption(UpdateParamOption.ReplaceRune))
+                        if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
+                        {
+                            if (itemId < 2909)
+                                updateCommand.AddItem(row, "lotItemId0" + i, 2909);
+                        }
+                }
                 if (updateCommand.HaveOption(UpdateParamOption.ReplaceBolt))
                     if (SpecEquipConfig.IsArrow(itemId, (EquipType)itemType))
                     {

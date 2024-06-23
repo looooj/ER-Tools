@@ -252,7 +252,9 @@ namespace ERParamUtils.UpdateParam
 
 
         public static readonly string ReplaceGiantCrowSoul = "ReplaceGiantCrowSoul";
+        public static readonly string ReplaceLordRune = "ReplaceLordRune";
 
+        public static readonly string InitMagicSlotAccSlot = "InitMagicSlotAccSlot";
 
 
         public static readonly string AddMapPiece = "AddMapPiece";

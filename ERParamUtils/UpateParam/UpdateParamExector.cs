@@ -31,7 +31,8 @@ namespace ERParamUtils.UpdateParam
         public string Description = "";
         public int OrderNo = 999;
         public string UpdateName = "";
-        public virtual void ExecBefore(ParamProject project, UpdateCommand updateCommand) { 
+        public virtual void ExecBefore(ParamProject project, UpdateCommand updateCommand)
+        {
         }
         public abstract void Exec(ParamProject project, UpdateCommand updateCommand);
     };
@@ -84,7 +85,7 @@ namespace ERParamUtils.UpdateParam
     */
 
 
-    
+
     public class ItemLotCountParamTask : UpdateParamTask
     {
         public ItemLotCountParamTask()
@@ -100,7 +101,7 @@ namespace ERParamUtils.UpdateParam
         }
     }
 
-    
+
 
     public class RemoveRequireTask : UpdateParamTask
     {
@@ -292,7 +293,8 @@ namespace ERParamUtils.UpdateParam
 
         }
 
-        public override void ExecBefore(ParamProject paramProject, UpdateCommand updateCommand) {
+        public override void ExecBefore(ParamProject paramProject, UpdateCommand updateCommand)
+        {
 
             updateCommand.SetOption(UpdateParamOption.ReplaceCookbook, 1);
 
@@ -332,7 +334,8 @@ namespace ERParamUtils.UpdateParam
     {
 
 
-        public ReplaceParamTask() { 
+        public ReplaceParamTask()
+        {
 
         }
 
@@ -350,7 +353,8 @@ namespace ERParamUtils.UpdateParam
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
 
-        public static void CreateTaskList(List<UpdateParamTask> updateParamTasks) {
+        public static void CreateTaskList(List<UpdateParamTask> updateParamTasks)
+        {
 
             updateParamTasks.Add(new UnlockCraftingTask());
             //updateParamTasks.Add(new SpecRecipeParamTask());
@@ -378,6 +382,7 @@ namespace ERParamUtils.UpdateParam
         public static void CreateOptionList(List<UpdateParamOption> updateParamOptions)
         {
 
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.InitMagicSlotAccSlot));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGoldenSeedSacredTear));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceTalismanPouch));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRune));
@@ -389,6 +394,7 @@ namespace ERParamUtils.UpdateParam
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceBolt));
 
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGiantCrowSoul));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceLordRune));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
@@ -430,21 +436,26 @@ namespace ERParamUtils.UpdateParam
                 }
             }
 
-            updateCommand.AddItem(UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
             //updateCommand.SetOption(UpdateParamOption.ReplaceTalismanPouch, 1);
 
-            //if (updateCommand.HaveOption(UpdateParamOption.ReplaceTalismanPouch))
+            if (updateCommand.HaveOption(UpdateParamOption.InitMagicSlotAccSlot))
             {
+                updateCommand.AddItem(
+                    UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
                 updateCommand.AddItem(
                     UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));
 
+                updateCommand.SetOption(UpdateParamOption.ReplaceTalismanPouch, 1);
+                updateCommand.SetOption(UpdateParamOption.ReplaceMemoryStone, 1);
             }
 
-            if (updateCommand.HaveOption(UpdateParamOption.AddMapPiece)) {
+            if (updateCommand.HaveOption(UpdateParamOption.AddMapPiece))
+            {
                 UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
             }
 
-            if (updateCommand.HaveOption(UpdateParamOption.ReplaceGiantCrowSoul)) {
+            if (updateCommand.HaveOption(UpdateParamOption.ReplaceGiantCrowSoul))
+            {
 
                 //45610068,Bloodbane Giant Crow,11038,0
                 updateCommand.AddItem(
