@@ -198,10 +198,22 @@ namespace ERParamEditor
             var ret = form.ShowDialog();
             if (ret == DialogResult.OK)
             {
+                ParamProject? project = null;
 
-                var project = ParamProjectManager.OpenProject(form.ProjectName,form.initCopy());
+                try
+                {
+                    project = ParamProjectManager.OpenProject(form.ProjectName, form.initCopy());
+
+                    
+                }
+                catch (Exception ex) {
+
+                    MessageBox.Show(ex.Message);
+                }
+
                 if (project != null)
                 {
+
                     bool changeCursor = false;
                     if (Cursor != Cursors.WaitCursor)
                     {
@@ -210,6 +222,12 @@ namespace ERParamEditor
                     }
 
                     RefreshProject();
+
+                    string pe = project.GetParamErrors();
+                    if (pe.Length > 1)
+                    {
+                        MessageBox.Show(pe);
+                    }
 
                     if (changeCursor)
                         Cursor = Cursors.Default;

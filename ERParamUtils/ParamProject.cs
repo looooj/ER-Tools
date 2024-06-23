@@ -19,7 +19,7 @@ namespace ERParamUtils
         string ModRegulationPath = "";
         string CreateTime = "";
         string templateName = "";
-
+        string paramErrors = "";
         BND4 currentBinder = null;
         GameType gameType = GameType.EldenRing;
 
@@ -89,6 +89,10 @@ namespace ERParamUtils
         }
 
 
+        public string GetParamErrors() {
+            return paramErrors;
+        }
+
         private List<(string, PARAMDEF)> LoadParamdefs()
         {
             _paramdefs = new Dictionary<string, PARAMDEF>();
@@ -155,7 +159,7 @@ namespace ERParamUtils
 
         public void LoadParams()
         {
-
+            paramErrors = "";
             _params.Clear();
 
             string path = GetRegulationPath();
@@ -265,8 +269,11 @@ namespace ERParamUtils
 
                     p.FieldMeta = ParamFieldMetaManager.FindFieldMeta(p.Name);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    paramErrors = paramErrors + paramName + ", " + ex.Message + "\n";
+                    //paramName = paramName;
+                    //MessageBox
                     //var name = f.Name.Split("\\").Last();
                     //TaskManager.warningList.TryAdd($"{name} DefFail", $"Could not apply ParamDef for {name}");
                 }
