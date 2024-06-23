@@ -245,6 +245,13 @@ namespace ERParamUtils.UpdateParam
                 AddEquip(updateCommand, recipeBaseRowId, param, equipId, (int)ShopEquipType.Good, "", 0);
 
             }
+            //dlc
+            for (int equipId = 2008600; equipId <= 2008604; equipId++)
+            {
+                recipeBaseRowId++;
+                AddEquip(updateCommand, recipeBaseRowId, param, equipId, (int)ShopEquipType.Good, "", 0);
+
+            }
         }
 
         public static void ExecSpec(ParamProject paramProject, UpdateCommand updateCommand)

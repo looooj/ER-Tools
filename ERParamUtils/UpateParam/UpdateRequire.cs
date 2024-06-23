@@ -88,12 +88,14 @@ namespace ERParamUtils.UpdateParam
 
             for (int i = 0; i < param.Rows.Count; i++)
             {
+                
 
                 SoulsParam.Param.Row row = param.Rows[i];
+                if (row.ID < 4000)
+                    continue;
                 UpdateCommandItem item = UpdateCommandItem.Create(row, "weight", "1");
                 updateCommand.AddItem(item);
-                //ParamRowUtils.SetCellValue(row, "weight", 1);
-                //ParamRowUtils.SetCellValue(row, "sellValue", 5);
+
             }
         }
 
