@@ -68,8 +68,11 @@ namespace ERParamEditor
             string[] langs = { "engus", "zhocn" };
             foreach (string lang in langs)
             {
-                string dir = @"D:\docs\game\er\unpack-\unpack-files\msg\" + lang;
-                string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text";
+                //string dir = @"D:\docs\game\er\unpack-\unpack-files\msg\" + lang;
+                string dir = "F:\\docs\\games\\ER\\Game\\msg\\" + lang;
+                //string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text";
+                string targetDir = @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text";
+                Directory.CreateDirectory(targetDir);
                 var files = Directory.GetFiles(dir, "*.dcx");
                 foreach (var file in files)
                 {
@@ -197,7 +200,7 @@ namespace ERParamEditor
             s = s.Replace("\x0a", " ");
             return s;
         }
-        public static void TestGenChNames(string baseDir, string outDir, string[] names) {
+        public static void GenChNames(string baseDir, string outDir, string[] names, string subName) {
 
             //assets\msg\item.msgbnd\msg\engUS\AccessoryName.fmg.xml
             //assets\msg\item.msgbnd\msg\zhoCN
@@ -208,11 +211,16 @@ namespace ERParamEditor
             string baseDir = GlobalConfig.AssetsDir + @"\msg\item.msgbnd\msg";
             string outDir = GlobalConfig.AssetsDir + @"\msg\item-msg-text";
             */
+            string tmp = "D:\\myprojects\\game-tools\\ER-Tools\\tmp\\msg-text\\item_dlc01.msgbnd\\msg\\engUS\\AccessoryName.fmg.xml";
             foreach (string name in names) {
 
-                string engFileName = string.Format("{0}\\engUS\\{1}.fmg.xml", baseDir, name);
-                string zhoFileName = string.Format("{0}\\zhoCN\\{1}.fmg.xml", baseDir, name);
+                string engFileName = string.Format("{0}\\{1}.msgbnd\\msg\\engUS\\{2}.fmg.xml", baseDir, subName, name);
+                string zhoFileName = string.Format("{0}\\{1}.msgbnd\\msg\\zhoCN\\{2}.fmg.xml", baseDir, subName, name);
 
+                if (!File.Exists(engFileName))
+                {
+                    continue;
+                }
                 XmlDocument engDoc = new();
                 XmlDocument zhoDoc = new();
                 engDoc.Load(engFileName);
@@ -243,7 +251,7 @@ namespace ERParamEditor
 
                 }
 
-                string outName = outDir + @"\" + name + ".txt";
+                string outName = outDir + @"\" + subName + name + ".txt";
                 Directory.CreateDirectory(outDir);
                 File.WriteAllLines(outName, outLines, Encoding.UTF8);
             }
@@ -332,8 +340,39 @@ namespace ERParamEditor
             string[] names = { "GR_MenuText", "ActionButtonText", "BloodMsg" };
             string outDir = "D:\\myprojects\\game-tools\\ER-Tools\\docs\\item-menu-text";
             string baseDir = "D:\\docs\\game\\er\\unpack-\\unpack-files-text\\menu.msgbnd\\msg";
-            TestGenChNames(baseDir, outDir, names);
+            GenChNames(baseDir, outDir, names,"");
             //checkShopLineupParamRecipe();
+        }
+
+        static void GenDlcText() {
+
+            /* 
+tmp\msg-text\item.msgbnd
+tmp\msg-text\item_dlc02.msgbnd
+tmp\msg-text\item_dlc01.msgbnd             
+             */
+            string[] names = { "AccessoryName","GoodsName",
+                "ProtectorName","WeaponName","NpcName","PlaceName","GemName" };
+
+            List<string> tmpNames = new List<string>();
+            foreach (string name in names)
+            {
+                tmpNames.Add(name);
+                tmpNames.Add(name + "_dlc01");
+                tmpNames.Add(name + "_dlc02");
+            }
+
+            string[] subNames = { "item", "item_dlc01", "item_dlc02"};
+
+            string baseDir = @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text";
+            string outDir = @"D:\myprojects\game-tools\ER-Tools\docs\dlc-item-text";
+            Directory.CreateDirectory(outDir);
+            for (int i = 0; i < subNames.Length; i++)
+            {
+                GenChNames(baseDir, outDir, tmpNames.ToArray(), subNames[i]);
+            }
+
+
         }
 
         static void WriteParamNames() {
@@ -376,7 +415,8 @@ namespace ERParamEditor
         }
         public static void Run() {
 
-            findSoul();
+            //ExtractMsg();
+            GenDlcText();
         }
     }
 }
