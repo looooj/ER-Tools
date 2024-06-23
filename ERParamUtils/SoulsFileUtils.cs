@@ -1,7 +1,9 @@
-﻿using SoulsFormats;
+﻿using DotNext.IO.MemoryMappedFiles;
+using SoulsFormats;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,7 +50,7 @@ namespace ERParamUtils
                 Path.GetFileNameWithoutExtension(dcxName),
                  dcxType.ToString());
 
-            File.WriteAllBytes(outPath, bytes);
+            File.WriteAllBytes(outPath, bytes.ToArray());
             BND4Reader bnd = new BND4Reader(dcxName);
 
 
@@ -128,10 +130,10 @@ namespace ERParamUtils
 
                 xw.WriteEndElement();
 
-                byte[] bytes = bnd.ReadFile(file);
+                var bytes = bnd.ReadFile(file);
                 string outPath = $@"{targetDir}\{Path.GetDirectoryName(path)}\{Path.GetFileNameWithoutExtension(path)}{suffix}{Path.GetExtension(path)}";
                 Directory.CreateDirectory(Path.GetDirectoryName(outPath));
-                File.WriteAllBytes(outPath, bytes);
+                File.WriteAllBytes(outPath, bytes.ToArray());
                 progress.Report((float)i / bnd.Files.Count);
 
                 if ( outPath.EndsWith(".fmg"))
@@ -164,12 +166,13 @@ namespace ERParamUtils
 
         public static void TryProcFile(string path) {
 
-            //var f = SoulsFile.Read(path);
-            //SFUtil.GetDecompressedBR()
 
-            using (FileStream stream = File.OpenRead(path))
+
+            using var file = MemoryMappedFile.CreateFromFile(path, FileMode.Open, null, 0, MemoryMappedFileAccess.Read);
+            using var accessor = file.CreateMemoryAccessor(0, 0, MemoryMappedFileAccess.Read);
+            //using (FileStream stream = File.OpenRead(path))
             {
-                BinaryReaderEx br = new BinaryReaderEx(false, stream);
+                BinaryReaderEx br = new BinaryReaderEx(false, accessor.Memory);
                 //TFormat file = new TFormat();
                 br = SFUtil.GetDecompressedBR(br, out DCX.Type compression);
 
@@ -189,7 +192,8 @@ namespace ERParamUtils
                 //file.Compression = compression;
                 //file.Read(br);
                 //return file;
-                stream.Dispose();
+                //stream.Dispose();
+                file.Dispose();
             }
             
         }

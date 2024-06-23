@@ -58,6 +58,11 @@ namespace SoulsFormats
         public int Unk68 { get; set; }
 
         /// <summary>
+        /// Unknown
+        /// </summary>
+        public int Unk74 { get; set; }
+
+        /// <summary>
         /// Creates a FLVERHeader with default values.
         /// </summary>
         public FLVER2Header()
@@ -65,6 +70,11 @@ namespace SoulsFormats
             BigEndian = false;
             Version = 0x20014;
             Unicode = true;
+        }
+
+        public FLVER2Header Clone()
+        {
+            return (FLVER2Header)MemberwiseClone();
         }
     }
 }

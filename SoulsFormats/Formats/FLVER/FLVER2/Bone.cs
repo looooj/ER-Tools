@@ -12,6 +12,7 @@ namespace SoulsFormats
             /// <summary>
             /// Corresponds to the name of a bone in the parent skeleton. May also have a dummy name.
             /// </summary>
+
             public string Name { get; set; }
 
             /// <summary>
@@ -37,17 +38,20 @@ namespace SoulsFormats
             /// <summary>
             /// Translation of this bone.
             /// </summary>
+            [PositionProperty]
             public Vector3 Position { get; set; }
 
             /// <summary>
             /// Rotation of this bone; euler radians.
             /// </summary>
             [RotationRadians]
+            [RotationProperty]
             public Vector3 Rotation { get; set; }
 
             /// <summary>
             /// Scale of this bone.
             /// </summary>
+            [ScaleProperty]
             public Vector3 Scale { get; set; }
 
             /// <summary>
@@ -76,6 +80,11 @@ namespace SoulsFormats
                 NextSiblingIndex = -1;
                 PreviousSiblingIndex = -1;
                 Scale = Vector3.One;
+            }
+
+            public FLVER2.Bone Clone()
+            {
+                return (FLVER2.Bone)MemberwiseClone();
             }
 
             internal Bone(BinaryReaderEx br, FLVER2Header header)

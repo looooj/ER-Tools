@@ -1,4 +1,5 @@
-﻿using SoulsFormats.Util;
+﻿using Org.BouncyCastle.Asn1.Cms;
+using SoulsFormats.Util;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,7 +20,7 @@ namespace SoulsFormats
         /// <summary>
         /// Guesses the extension of a file based on its contents.
         /// </summary>
-        public static string GuessExtension(byte[] bytes, bool bigEndian = false)
+        public static string GuessExtension(Memory<byte> bytes, bool bigEndian = false)
         {
             bool dcx = false;
             if (DCX.Is(bytes))
@@ -71,80 +72,81 @@ namespace SoulsFormats
                         return i < br.Length - 2 && br.GetASCII(i + 1, 2) == "\r\n";
                     }
                 }
+
                 return false;
             }
 
             string ext = "";
-            using (var ms = new MemoryStream(bytes))
-            {
-                var br = new BinaryReaderEx(bigEndian, ms);
-                string magic = null;
-                if (br.Length >= 4)
-                    magic = br.ReadASCII(4);
 
-                if (magic == "AISD")
-                    ext = ".aisd";
-                else if (magic == "BDF3" || magic == "BDF4")
-                    ext = ".bdt";
-                else if (magic == "BHF3" || magic == "BHF4")
-                    ext = ".bhd";
-                else if (magic == "BND3" || magic == "BND4")
-                    ext = ".bnd";
-                else if (magic == "DDS ")
-                    ext = ".dds";
-                // ESD or FFX
-                else if (magic != null && magic.ToUpper() == "DLSE")
-                    ext = ".dlse";
-                else if (bigEndian && magic == "\0BRD" || !bigEndian && magic == "DRB\0")
-                    ext = ".drb";
-                else if (magic == "EDF\0")
-                    ext = ".edf";
-                else if (magic == "ELD\0")
-                    ext = ".eld";
-                else if (magic == "ENFL")
-                    ext = ".entryfilelist";
-                else if (magic != null && magic.ToUpper() == "FSSL")
-                    ext = ".esd";
-                else if (magic == "EVD\0")
-                    ext = ".evd";
-                else if (br.Length >= 3 && br.GetASCII(0, 3) == "FEV" || br.Length >= 0x10 && br.GetASCII(8, 8) == "FEV FMT ")
-                    ext = ".fev";
-                else if (br.Length >= 6 && br.GetASCII(0, 6) == "FLVER\0")
-                    ext = ".flver";
-                else if (br.Length >= 3 && br.GetASCII(0, 3) == "FSB")
-                    ext = ".fsb";
-                else if (br.Length >= 3 && br.GetASCII(0, 3) == "GFX")
-                    ext = ".gfx";
-                else if (br.Length >= 0x19 && br.GetASCII(0xC, 0xE) == "ITLIMITER_INFO")
-                    ext = ".itl";
-                else if (br.Length >= 4 && br.GetASCII(1, 3) == "Lua")
-                    ext = ".lua";
-                else if (checkMsb(br))
-                    ext = ".msb";
-                else if (br.Length >= 0x30 && br.GetASCII(0x2C, 4) == "MTD ")
-                    ext = ".mtd";
-                else if (magic == "DFPN")
-                    ext = ".nfd";
-                else if (checkParam(br))
-                    ext = ".param";
-                else if (br.Length >= 4 && br.GetASCII(1, 3) == "PNG")
-                    ext = ".png";
-                else if (br.Length >= 0x2C && br.GetASCII(0x28, 4) == "SIB ")
-                    ext = ".sib";
-                else if (magic == "TAE ")
-                    ext = ".tae";
-                else if (checkTdf(br))
-                    ext = ".tdf";
-                else if (magic == "TPF\0")
-                    ext = ".tpf";
-                else if (magic == "#BOM")
-                    ext = ".txt";
-                else if (br.Length >= 5 && br.GetASCII(0, 5) == "<?xml")
-                    ext = ".xml";
-                // This is pretty sketchy
-                else if (br.Length >= 0xC && br.GetByte(0) == 0 && br.GetByte(3) == 0 && br.GetInt32(4) == br.Length && br.GetInt16(0xA) == 0)
-                    ext = ".fmg";
-            }
+            var br = new BinaryReaderEx(bigEndian, bytes);
+            string magic = null;
+            if (br.Length >= 4)
+                magic = br.ReadASCII(4);
+
+            if (magic == "AISD")
+                ext = ".aisd";
+            else if (magic == "BDF3" || magic == "BDF4")
+                ext = ".bdt";
+            else if (magic == "BHF3" || magic == "BHF4")
+                ext = ".bhd";
+            else if (magic == "BND3" || magic == "BND4")
+                ext = ".bnd";
+            else if (magic == "DDS ")
+                ext = ".dds";
+            // ESD or FFX
+            else if (magic != null && magic.ToUpper() == "DLSE")
+                ext = ".dlse";
+            else if (bigEndian && magic == "\0BRD" || !bigEndian && magic == "DRB\0")
+                ext = ".drb";
+            else if (magic == "EDF\0")
+                ext = ".edf";
+            else if (magic == "ELD\0")
+                ext = ".eld";
+            else if (magic == "ENFL")
+                ext = ".entryfilelist";
+            else if (magic != null && magic.ToUpper() == "FSSL")
+                ext = ".esd";
+            else if (magic == "EVD\0")
+                ext = ".evd";
+            else if (br.Length >= 3 && br.GetASCII(0, 3) == "FEV" ||
+                     br.Length >= 0x10 && br.GetASCII(8, 8) == "FEV FMT ")
+                ext = ".fev";
+            else if (br.Length >= 6 && br.GetASCII(0, 6) == "FLVER\0")
+                ext = ".flver";
+            else if (br.Length >= 3 && br.GetASCII(0, 3) == "FSB")
+                ext = ".fsb";
+            else if (br.Length >= 3 && br.GetASCII(0, 3) == "GFX")
+                ext = ".gfx";
+            else if (br.Length >= 0x19 && br.GetASCII(0xC, 0xE) == "ITLIMITER_INFO")
+                ext = ".itl";
+            else if (br.Length >= 4 && br.GetASCII(1, 3) == "Lua")
+                ext = ".lua";
+            else if (checkMsb(br))
+                ext = ".msb";
+            else if (br.Length >= 0x30 && br.GetASCII(0x2C, 4) == "MTD ")
+                ext = ".mtd";
+            else if (magic == "DFPN")
+                ext = ".nfd";
+            else if (checkParam(br))
+                ext = ".param";
+            else if (br.Length >= 4 && br.GetASCII(1, 3) == "PNG")
+                ext = ".png";
+            else if (br.Length >= 0x2C && br.GetASCII(0x28, 4) == "SIB ")
+                ext = ".sib";
+            else if (magic == "TAE ")
+                ext = ".tae";
+            else if (checkTdf(br))
+                ext = ".tdf";
+            else if (magic == "TPF\0")
+                ext = ".tpf";
+            else if (magic == "#BOM")
+                ext = ".txt";
+            else if (br.Length >= 5 && br.GetASCII(0, 5) == "<?xml")
+                ext = ".xml";
+            // This is pretty sketchy
+            else if (br.Length >= 0xC && br.GetByte(0) == 0 && br.GetByte(3) == 0 && br.GetInt32(4) == br.Length &&
+                     br.GetInt16(0xA) == 0)
+                ext = ".fmg";
 
             if (dcx)
                 return ext + ".dcx";
@@ -209,7 +211,7 @@ namespace SoulsFormats
         {
             if (DCX.Is(br))
             {
-                byte[] bytes = DCX.Decompress(br, out compression);
+                Memory<byte> bytes = DCX.Decompress(br, out compression);
                 return new BinaryReaderEx(false, bytes);
             }
             else
@@ -291,18 +293,19 @@ namespace SoulsFormats
         /// <summary>
         /// Compresses data and writes it to a BinaryWriterEx with Zlib wrapper.
         /// </summary>
-        public static int WriteZlib(BinaryWriterEx bw, byte formatByte, byte[] input)
+        public static int WriteZlib(BinaryWriterEx bw, byte formatByte, Span<byte> input)
         {
             long start = bw.Position;
             bw.WriteByte(0x78);
             bw.WriteByte(formatByte);
 
+            var data = input.ToArray();
             using (var deflateStream = new DeflateStream(bw.Stream, CompressionMode.Compress, true))
             {
-                deflateStream.Write(input, 0, input.Length);
+                deflateStream.Write(data, 0, input.Length);
             }
 
-            bw.WriteUInt32(Adler32(input));
+            bw.WriteUInt32(Adler32(data));
             return (int)(bw.Position - start);
         }
 
@@ -312,7 +315,7 @@ namespace SoulsFormats
         public static byte[] ReadZlib(BinaryReaderEx br, int compressedSize)
         {
             br.AssertByte(0x78);
-            br.AssertByte(0x01, 0x5E, 0x9C, 0xDA);
+            br.AssertByte([0x01, 0x5E, 0x9C, 0xDA]);
             byte[] compressed = br.ReadBytes(compressedSize - 2);
 
             using (var decompressedStream = new MemoryStream())
@@ -326,6 +329,24 @@ namespace SoulsFormats
             }
         }
 
+        // TODO: actually implement this properly
+        public static int WriteZstd(BinaryWriterEx bw, byte compressionLevel, Span<byte> input)
+        {
+            long start = bw.Position;
+
+            using var compressor = new Compressor(new CompressionOptions(compressionLevel));
+            var compressedData = compressor.Wrap(input);
+
+            var data = input.ToArray();
+            using (var deflateStream = new DeflateStream(bw.Stream, CompressionMode.Compress, true))
+            {
+                deflateStream.Write(data, 0, input.Length);
+            }
+
+            return (int)(bw.Position - start);
+        }
+
+        // TODO: actually implement this properly
         public static byte[] ReadZstd(BinaryReaderEx br, int compressedSize)
         {
             byte[] compressed = br.ReadBytes(compressedSize);
@@ -339,23 +360,6 @@ namespace SoulsFormats
                 }
                 return decompressedStream.ToArray();
             }
-        }
-
-        public static int WriteZstd(BinaryWriterEx bw, byte compressionLevel, Span<byte> input)
-        {
-            long start = bw.Position;
-
-            //using var compressor = new Compressor(new CompressionOptions(compressionLevel));
-            //var compressedData = compressor.Wrap(input);
-
-            var data = input.ToArray();
-            //CompressionStream 
-            using (var deflateStream = new CompressionStream(bw.Stream))
-            {
-                deflateStream.Write(data, 0, input.Length);
-            }
-
-            return (int)(bw.Position - start);
         }
 
         /// <summary>
@@ -559,8 +563,20 @@ namespace SoulsFormats
             if (BND4.IsRead(bytes, out BND4 bnd4)) 
                 return bnd4; 
             bytes = DecryptByteArray(erRegulationKey, bytes);
-            var bnd4Size = bytes.Length;
-            File.WriteAllBytes(path + ".bnd4", bytes);
+            return BND4.Read(bytes);
+        }
+
+        private static readonly byte[] ac6RegulationKey = ParseHexString("10 CE ED 47 7B 7C D9 D7 E6 93 8E 11 47 13 E7 87 D5 39 13 B1 D 31 8E C1 35 E4 BE 50 50 4E E 10");
+
+        /// <summary>
+        /// Decrypts and unpacks ER's regulation BND4 from the specified path.
+        /// </summary>
+        public static BND4 DecryptAC6Regulation(string path)
+        {
+            byte[] bytes = File.ReadAllBytes(path);
+            if (BND4.IsRead(bytes, out BND4 bnd4)) 
+                return bnd4; 
+            bytes = DecryptByteArray(ac6RegulationKey, bytes);
             return BND4.Read(bytes);
         }
 
@@ -575,31 +591,40 @@ namespace SoulsFormats
             File.WriteAllBytes(path, bytes);
         }
 
+        /// <summary>
+        /// Repacks and encrypts ER's regulation BND4 to the specified path.
+        /// </summary>
+        public static void EncryptAC6Regulation(string path, BND4 bnd)
+        {
+            byte[] bytes = bnd.Write();
+            bytes = EncryptByteArray(ac6RegulationKey, bytes);
+            Directory.CreateDirectory(Path.GetDirectoryName(path));
+            File.WriteAllBytes(path, bytes);
+        }
+
         private static byte[] EncryptByteArray(byte[] key, byte[] secret)
         {
-            using (MemoryStream ms = new MemoryStream())
-            using (AesManaged cryptor = new AesManaged())
+            using MemoryStream ms = new MemoryStream();
+            using var cryptor = Aes.Create();
+            cryptor.Mode = CipherMode.CBC;
+            cryptor.Padding = PaddingMode.PKCS7;
+            cryptor.KeySize = 256;
+            cryptor.BlockSize = 128;
+
+            byte[] iv = cryptor.IV;
+
+            using (CryptoStream cs = new CryptoStream(ms, cryptor.CreateEncryptor(key, iv), CryptoStreamMode.Write))
             {
-                cryptor.Mode = CipherMode.CBC;
-                cryptor.Padding = PaddingMode.PKCS7;
-                cryptor.KeySize = 256;
-                cryptor.BlockSize = 128;
-
-                byte[] iv = cryptor.IV;
-
-                using (CryptoStream cs = new CryptoStream(ms, cryptor.CreateEncryptor(key, iv), CryptoStreamMode.Write))
-                {
-                    cs.Write(secret, 0, secret.Length);
-                }
-                byte[] encryptedContent = ms.ToArray();
-
-                byte[] result = new byte[iv.Length + encryptedContent.Length];
-
-                Buffer.BlockCopy(iv, 0, result, 0, iv.Length);
-                Buffer.BlockCopy(encryptedContent, 0, result, iv.Length, encryptedContent.Length);
-
-                return result;
+                cs.Write(secret, 0, secret.Length);
             }
+            byte[] encryptedContent = ms.ToArray();
+
+            byte[] result = new byte[iv.Length + encryptedContent.Length];
+
+            Buffer.BlockCopy(iv, 0, result, 0, iv.Length);
+            Buffer.BlockCopy(encryptedContent, 0, result, iv.Length, encryptedContent.Length);
+
+            return result;
         }
 
         private static byte[] DecryptByteArray(byte[] key, byte[] secret)
@@ -610,20 +635,18 @@ namespace SoulsFormats
             Buffer.BlockCopy(secret, 0, iv, 0, iv.Length);
             Buffer.BlockCopy(secret, iv.Length, encryptedContent, 0, encryptedContent.Length);
 
-            using (MemoryStream ms = new MemoryStream())
-            using (AesManaged cryptor = new AesManaged())
-            {
-                cryptor.Mode = CipherMode.CBC;
-                cryptor.Padding = PaddingMode.None;
-                cryptor.KeySize = 256;
-                cryptor.BlockSize = 128;
+            using MemoryStream ms = new MemoryStream();
+            using var cryptor = Aes.Create();
+            cryptor.Mode = CipherMode.CBC;
+            cryptor.Padding = PaddingMode.None;
+            cryptor.KeySize = 256;
+            cryptor.BlockSize = 128;
 
-                using (CryptoStream cs = new CryptoStream(ms, cryptor.CreateDecryptor(key, iv), CryptoStreamMode.Write))
-                {
-                    cs.Write(encryptedContent, 0, encryptedContent.Length);
-                }
-                return ms.ToArray();
+            using (CryptoStream cs = new CryptoStream(ms, cryptor.CreateDecryptor(key, iv), CryptoStreamMode.Write))
+            {
+                cs.Write(encryptedContent, 0, encryptedContent.Length);
             }
+            return ms.ToArray();
         }
     }
 }

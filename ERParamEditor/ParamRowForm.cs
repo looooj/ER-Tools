@@ -118,6 +118,7 @@ namespace ERParamEditor
             var lines = new List<string>();
             lines.Add("#" + row.GetParam().Name);
             lines.Add("#" + row.ID);
+            lines.Add("#" + row.Name);
             foreach (var cell in cells)
             {
 

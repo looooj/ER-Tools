@@ -20,6 +20,7 @@ namespace SoulsFormats
             /// <summary>
             /// Index of the material used by all triangles in this mesh.
             /// </summary>
+            /// 
             public int MaterialIndex { get; set; }
 
             /// <summary>
@@ -45,7 +46,6 @@ namespace SoulsFormats
             /// <summary>
             /// Vertices in this mesh.
             /// </summary>
-            [HideProperty]
             public FLVER.Vertex[] Vertices { get; set; }
             IReadOnlyList<FLVER.Vertex> IFlverMesh.Vertices => Vertices;
 
@@ -54,7 +54,6 @@ namespace SoulsFormats
             /// <summary>
             /// Optional bounding box struct; may be null.
             /// </summary>
-            [HideProperty]
             public BoundingBoxes BoundingBox { get; set; }
 
             private int[] faceSetIndices, vertexBufferIndices;
@@ -70,10 +69,13 @@ namespace SoulsFormats
                 VertexBuffers = new List<VertexBuffer>();
                 Vertices = null;
             }
-
+            public Mesh Clone()
+            {
+                return (Mesh)MemberwiseClone();
+            }
             internal Mesh(BinaryReaderEx br, FLVER2Header header)
             {
-                Dynamic = br.AssertByte(0, 1);
+                Dynamic = br.AssertByte([0, 1]);
                 br.AssertByte(0);
                 br.AssertByte(0);
                 br.AssertByte(0);
@@ -87,7 +89,7 @@ namespace SoulsFormats
                 int boneOffset = br.ReadInt32();
                 int faceSetCount = br.ReadInt32();
                 int faceSetOffset = br.ReadInt32();
-                int vertexBufferCount = br.AssertInt32(1, 2, 3);
+                int vertexBufferCount = br.AssertInt32([1, 2, 3]);
                 int vertexBufferOffset = br.ReadInt32();
 
                 if (boundingBoxOffset != 0)
