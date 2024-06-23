@@ -182,7 +182,7 @@ namespace ERParamUtils.UpdateParam
 
         public static void LoadUpdateRow(string updateName, UpdateCommand updateCommand)
         {
-
+            _customParamName = null;
             var lines = UpdateFile.Load(updateCommand.GetProject(), updateName);
             foreach (var line in lines)
             {
