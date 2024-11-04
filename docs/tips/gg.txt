@@ -1,0 +1,24 @@
+@@name=gg
+@@et=1
+@@count=30
+
+10900;Grave Glovewort [1];墓地铃兰【１】
+10901;Grave Glovewort [2];墓地铃兰【２】
+10902;Grave Glovewort [3];墓地铃兰【３】
+10903;Grave Glovewort [4];墓地铃兰【４】
+10904;Grave Glovewort [5];墓地铃兰【５】
+10905;Grave Glovewort [6];墓地铃兰【６】
+10906;Grave Glovewort [7];墓地铃兰【７】
+10907;Grave Glovewort [8];墓地铃兰【８】
+10908;Grave Glovewort [9];墓地铃兰【９】
+10909;Great Grave Glovewort;大朵墓地铃兰
+10910;Ghost Glovewort [1];灵依墓地铃兰【１】
+10911;Ghost Glovewort [2];灵依墓地铃兰【２】
+10912;Ghost Glovewort [3];灵依墓地铃兰【３】
+10913;Ghost Glovewort [4];灵依墓地铃兰【４】
+10914;Ghost Glovewort [5];灵依墓地铃兰【５】
+10915;Ghost Glovewort [6];灵依墓地铃兰【６】
+10916;Ghost Glovewort [7];灵依墓地铃兰【７】
+10917;Ghost Glovewort [8];灵依墓地铃兰【８】
+10918;Ghost Glovewort [9];灵依墓地铃兰【９】
+10919;Great Ghost Glovewort;大朵灵依墓地铃兰

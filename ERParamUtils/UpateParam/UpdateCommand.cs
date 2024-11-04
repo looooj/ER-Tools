@@ -17,7 +17,7 @@ namespace ERParamUtils.UpdateParam
         public string RowName = "";
         public string Key = "";
         public string Value = "";
-
+        
         public static void Proc(string line, UpdateCommand updateCommand)
         {
 
@@ -243,12 +243,13 @@ namespace ERParamUtils.UpdateParam
         public static readonly string ReplaceDeathroot = "ReplaceDeathroot";
         public static readonly string ReplaceRune = "ReplaceRune";
         public static readonly string ReplaceRuneArc = "ReplaceRuneArc";        
-        public static readonly string ReplaceBolt = "ReplaceBolt";
+        //public static readonly string ReplaceBolt = "ReplaceBolt";
 
         public static readonly string ReplaceBellBearing = "ReplaceBellBearing";
         public static readonly string ReplaceStoneswordKey = "ReplaceStoneswordKey";
         public static readonly string ReplaceMemoryStone = "ReplaceMemoryStone";
         public static readonly string ReplaceDragonHeart = "ReplaceDragonHeart";
+        public static readonly string IncRemnant = "IncRemnant";
 
 
         public static readonly string ReplaceGiantCrowSoul = "ReplaceGiantCrowSoul";
@@ -259,6 +260,7 @@ namespace ERParamUtils.UpdateParam
 
         public static readonly string AddMapPiece = "AddMapPiece";
         public static readonly string AddWhetblade = "AddWhetblade";
+        //public static readonly string RemoveRemembranceRequire = "RemoveRemembranceRequire";
         //public static readonly string RemoveRecipe = "AddWhetblade";
 
 

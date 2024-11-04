@@ -1,0 +1,33 @@
+#equipType  None=0, Good=1, Weapon=2, Protector=3, Accessory=4, Gem=5
+
+#@@index=index(1-8)
+#@@point=point(1000=100%)
+#rowId1,...|equipId1,...|equipType1,...|lotCount
+
+
+#黄金树立誓
+#435110100[Godrick Knight] Partisan
+#435110105[Godrick Knight] Godrick Knight Greaves
+#435110104[Godrick Knight] Godrick Knight Gauntlets
+#435110103[Godrick Knight] Godrick Knight Armor
+#435110102[Godrick Knight] Godrick Knight Helm
+#435110101[Godrick Knight] Gilded Greatshield
+
+
+#风暴山丘营地
+#435100005[Godrick Knight] Godrick Knight Greaves
+#435100004[Godrick Knight] Godrick Knight Gauntlets
+#435100003[Godrick Knight] Godrick Knight Armor
+#435100002[Godrick Knight] Godrick Knight Helm 
+#435100001[Godrick Knight] Gilded Greatshield
+#435100000[Godrick Knight] Knight's Greatsword
+
+
+
+#关卡前方
+#435100100[Godrick Knight] Partisan
+#435100101[Godrick Knight] Gilded Greatshield
+#435100102[Godrick Knight] Godrick Knight Helm
+#435100103[Godrick Knight] Godrick Knight Armor
+#435100104[Godrick Knight] Godrick Knight Gauntlets
+#435100105[Godrick Knight] Godrick Knight Greaves

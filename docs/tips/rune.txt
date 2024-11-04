@@ -1,0 +1,10 @@
+@@name=rune
+@@et=1
+@@count=90
+
+2914;Hero's Rune [1];英雄卢恩【１】
+2915;Hero's Rune [2];英雄卢恩【２】
+2916;Hero's Rune [3];英雄卢恩【３】
+2917;Hero's Rune [4];英雄卢恩【４】
+2918;Hero's Rune [5];英雄卢恩【５】
+2919;Lord's Rune;王之卢恩

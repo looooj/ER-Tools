@@ -1,0 +1,10 @@
+
+
+431100010[Godrick Soldier] Lordsworn's Straight Sword
+431100011[Godrick Soldier] Godrick Soldier Helm
+431100012[Godrick Soldier] Tree-and-Beast Surcoat
+431100013[Godrick Soldier] Godrick Soldier Gauntlets
+431100014[Godrick Soldier] Godrick Soldier Greaves
+431100015[Godrick Soldier] Bolt
+431100016[Godrick Soldier] Lordsworn's Bolt
+431100017[Godrick Soldier] Smithing Stone [1]

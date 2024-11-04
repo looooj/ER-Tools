@@ -66,7 +66,9 @@ namespace ERParamUtils.UpdateParam
             //20751;Rimed Crystal Bud;冰结晶木芽
             //20825;Silver Tear Husk;银色泪滴空壳
             //8186;Imbued Sword Key;魔石剑钥匙
-
+           //3030;Cuckoo Glintstone;杜鹃辉石
+           // 3050;Glintstone Scrap;崩裂辉石
+          //3051;Large Glintstone Scrap;大块崩裂辉石
 
          */
         public static void AddDefault()
@@ -76,21 +78,21 @@ namespace ERParamUtils.UpdateParam
             //15430;Stormhawk Feather;风暴鹰羽毛
             //15340; Thin Beast Bones; 细小兽骨
             //15341; Hefty Beast Bone; 粗大兽骨
-            AddSpec(90, new int[] { 15060, 15430, 15340, 15341, 1290 });
+            AddSpec(90, new int[] { 15060, 15430, 15340, 15341, 1290,3030,3050,3051 });
 
 
-            AddSpec(50, new int[] { 190, 1200, 1210, 
+            AddSpec(50, new int[] { 190, 1200, 1210,
                 20723, 20801, 20691, 20651, 20652, 20653,20751,20825,20775,20750,
                 3350 });
 
-            AddSpec(20, new int[] { 8000, 10060 });
+            AddSpec(20, new int[] { 8000, 10060,2100 });
 
 
             AddSpec(20,
                 new int[] { 9500, 9510, 820, 830 });
 
 
-            AddSpec(10, new int[] { 9501,10070, 8185, 8193, 2090 });
+            AddSpec(10, new int[] { 9501, 10070, 8185, 8193, 2090 });
 
 
             AddSpec(4, new int[] { 10030, 10040, 8186 });
@@ -101,7 +103,12 @@ namespace ERParamUtils.UpdateParam
 
             AddSpec(2, new int[] { 10020 });
 
-            AddSpec(5, new int[] { 10010 });
+            AddSpec(5, new int[] { 10010, 2009500, 2010000, 2010100 });
+
+//2009500; Hefty Cracked Pot; 大龟裂壶
+//            2010000; Scadutree Fragment; 幽影树碎片
+//2010100; Revered Spirit Ash; 灵灰
+
 
             //Great Glovewort
             AddSpec(20, new int[] { 10909, 10919 });
@@ -132,12 +139,23 @@ namespace ERParamUtils.UpdateParam
             return false;
         }
 
+        public static bool isBellBearing(int itemId, EquipType equipType) {
+            if (equipType != EquipType.Good)
+                return false;
+            if (itemId >= 8945 && itemId <= 8965)
+                return true;
+            return false;
+        }
+
         public static bool IsRune(int itemId, EquipType equipType)
         {
             if (equipType != EquipType.Good)
                 return false;
             if (itemId >= 2900 && itemId <= 2919)
                 return true;
+            if (itemId >= 2002951 && itemId <= 2002960)
+                return true;
+
             return false;
         }
 
@@ -212,9 +230,18 @@ namespace ERParamUtils.UpdateParam
             if (itemId >= 15000 && itemId <= 20855)
                 return true;
 
-            return false;
+            if ( itemId >= 1100 && itemId <= 1841)
+                return true;
 
+            if (itemId >= 2011000 && itemId <= 2020035)
+                return true;
+
+            if (itemId >= 2000300 && itemId <= 2002020)
+                return true;
+            return false;
         }
+
+
 
         public static bool IsArrow(int itemId, EquipType equipType)
         {
@@ -246,6 +273,12 @@ namespace ERParamUtils.UpdateParam
             {
                 return true;
             }
+            //2004300
+            //2007820
+            if (itemId >= 2004300 && itemId < 2008000)
+            {
+                return true;
+            }
             return false;
         }
 
@@ -255,8 +288,10 @@ namespace ERParamUtils.UpdateParam
             if (equipType != EquipType.Good)
                 return false;
 
-            if (itemId >= 20950 && itemId <= 20956)
+            if (itemId >= 20950 && itemId <= 20957)
                 return true;
+
+
             return false;
 
         }
@@ -264,7 +299,7 @@ namespace ERParamUtils.UpdateParam
         {
             if (equipType != EquipType.Good)
                 return false;
-            if (itemId >= 20900 && itemId <= 20954)
+            if (itemId >= 20900 && itemId <= 20904)
                 return true;
             return false;
 

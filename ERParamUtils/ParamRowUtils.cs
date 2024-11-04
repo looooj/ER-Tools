@@ -128,6 +128,11 @@ namespace ERParamUtils
             return GetCellInt(cell, defVal);
         }
 
+        public static int GetCellInt(SoulsParam.Param.Row row, string keyName, string key, int defVal)
+        {
+            var cell = FindCell(row, key);
+            return GetCellInt(cell, defVal);
+        }
 
         public static int GetCellInt(SoulsParam.Param.Cell? cell, int defVal)
         {

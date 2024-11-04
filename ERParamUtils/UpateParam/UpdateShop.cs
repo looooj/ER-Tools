@@ -155,6 +155,8 @@ namespace ERParamUtils.UpdateParam
 
             UpdateLogger.Begin(ParamNames.ShopLineupParam);
 
+
+
             var param = paramProject.FindParam(ParamNames.ShopLineupParam);
             if (param == null)
                 return;
@@ -264,8 +266,11 @@ namespace ERParamUtils.UpdateParam
                     updateCommand.AddItem(row, key, "0");
                 }
 
-                //key = "mtrlId";
-                //updateCommand.AddItem(row, key, "-1");
+                /*
+                if (updateCommand.HaveOption(UpdateParamOption.RemoveRemembranceRequire) ) {
+                    key = "mtrlId";
+                    updateCommand.AddItem(row, key, "-1");
+                }*/
             }
         }
 

@@ -1,0 +1,691 @@
+﻿10011952;Last site of grace visited;最后停留的赐福
+13040100;No Flask of Crimson Tears in inventory;您未持有红露滴圣杯瓶。
+13040110;No Flask of Cerulean Tears in inventory;您未持有蓝露滴圣杯瓶。
+13040120;Flask charges already at maximum;圣杯瓶的使用次数已增加到上限。
+13040130;No Golden Seed in inventory;您未持有黄金种子。
+13040140;Added a charge to Flask of Crimson Tears;已增加红露滴圣杯瓶的使用次数。
+13040150;No Flask of Crimson Tears in inventory;您未持有红露滴圣杯瓶。
+13040160;No Flask of Cerulean Tears in inventory;您未持有蓝露滴圣杯瓶。
+15000370;Add charge to flask;增加使用次数
+15000371;Flasks;圣杯瓶
+15000372;Cancel;离开
+15000380;Increase amount replenished by flasks;提升恢复量
+15000385;Allocate flask charges;分配使用次数
+15000390;Memorize spell;记忆
+15000395;Sort chest;整理木箱
+15000420;Pass time;消磨时间
+15000430;Until morning;到早上
+15000440;Until noon;到中午
+15000450;Until nightfall;到晚上
+15000460;Cancel;离开
+15000510;Mix Wondrous Physick;调配灵药
+15000520;Great Runes;大卢恩
+15000530;Ashes of War;战灰
+15000540;Level Up;升级
+15000700;Purchase;购买
+15000710;Sell;卖出
+15000720;Leave;离去
+20000000;Talk;交谈
+20000009;Leave;离去
+20000010;Purchase;购买
+20000011;Sell;卖出
+20010080;Begin Journey <?nextLoopCount?>;开始第<?nextLoopCount?>次的世界
+20010101;Listen to the sounds of flame;倾听火焰熏烧的声音
+20011000;No Sacred Tear in inventory;您未持有圣杯露滴。
+20011010;Not enough Golden Seeds;黄金种子的数量不足。
+20011020;Cannot rest at sites of grace right now;现在不能在赐福休息。
+20011030;Cannot select while entering combat;参加竞技时，无法选取。
+20011031;Cannot select while entering combat;参加竞技时，无法选取。
+20011032;Cannot select while entering combat;参加竞技时，无法选取。
+20011080;Begin Journey <?nextLoopCount?>?;要进入第<?nextLoopCount?>次的世界吗？
+21000001;Talk to Melina;和梅琳娜交谈
+21000002;Talk to Melina;和梅琳娜交谈
+21000003;Talk to Melina;和梅琳娜交谈
+21000004;Talk to Melina;和梅琳娜交谈
+21000005;Talk to Melina;和梅琳娜交谈
+21000006;Talk to Melina;和梅琳娜交谈
+21000007;Talk to Melina;和梅琳娜交谈
+21000008;Talk to Melina;和梅琳娜交谈
+21000009;Talk to Melina;和梅琳娜交谈
+21000010;Talk to Melina;和梅琳娜交谈
+21000011;Talk to Melina;和梅琳娜交谈
+21000012;Talk to Melina;和梅琳娜交谈
+21000013;Talk to Melina;和梅琳娜交谈
+21000014;Talk to Melina;和梅琳娜交谈
+21000015;Talk to Melina;和梅琳娜交谈
+21000016;Talk to Melina;和梅琳娜交谈
+21000017;Talk to Melina;和梅琳娜交谈
+21000018;Talk to Melina;和梅琳娜交谈
+21000020;Talk to Melina;和梅琳娜交谈
+21000021;Talk to Melina;和梅琳娜交谈
+21000022;Talk to Melina;和梅琳娜交谈
+21000023;Talk to Melina;和梅琳娜交谈
+21000024;Talk to Melina;和梅琳娜交谈
+21000025;Talk to Melina;和梅琳娜交谈
+21000026;Talk to Melina;和梅琳娜交谈
+21000027;Talk to Melina;和梅琳娜交谈
+21000028;Talk to Melina;和梅琳娜交谈
+21000029;Talk to Melina;和梅琳娜交谈
+21000030;Talk to Melina;和梅琳娜交谈
+21000031;Talk to Melina;和梅琳娜交谈
+21000050;Tell her you're off to Roundtable Hold;告诉梅琳娜想去圆桌厅堂
+21001000;Accept;接受条件
+21001001;Refuse;拒绝
+21001002;I'm interested;我想听
+21001003;I'm not interested;我不想听
+21001004;Go to the Roundtable Hold;我要去圆桌厅堂
+21001005;I'm ready;我准备好了
+21001006;I'd like you to wait;等我一下
+21011002;Show hands;让她看自己的手
+21011003;Show hands;让她看自己的手
+21020000;Receive power from remembrance;从追忆获得力量
+21020001;About Great Runes;关于大卢恩
+21020002;About Queen Marika;关于玛莉卡女王
+21020003;How to burn thorns;燃烧刺的方法
+21020004;I want to burn the impenetrable thorns;我想烧掉拒绝的刺
+21020005;Receive equipment of champions;获得英雄的防具
+21060900;Talk to miniature Ranni;对娇小菈妮说话
+21060901;Talk to miniature Ranni;对娇小菈妮说话
+21060902;Talk to miniature Ranni;对娇小菈妮说话
+21060903;Talk to Ranni;和菈妮交谈
+21060910;Talk to Ranni;和菈妮交谈
+21060911;Talk to Ranni;和菈妮交谈
+21060912;Talk to Ranni;和菈妮交谈
+21060920;Talk to Ranni;和菈妮交谈
+21060921;Talk to Ranni;和菈妮交谈
+21060930;Talk to miniature Ranni;对娇小菈妮说话
+21060931;Talk to Ranni;和菈妮交谈
+21061000;I can call the spectral steed;我能召唤灵马
+21061001;I cannot call the spectral steed;我不能
+21061002;I can call the spectral steed;我能召唤灵马
+21061003;I cannot call the spectral steed;我不能
+21061005;I wish to serve you;我想要帮忙
+21061006;No particular reason;没事
+21061007;Serve Ranni the Witch;愿意替魔女菈妮做事
+21061008;Do not serve;不愿意
+21061009;Administer Amber Draught?;要让她喝“琥珀色药水”吗？
+21121000;Tell him that Radagon is Marika;告诉他“拉达冈就是玛莉卡”
+22000000;Rebirth;重新诞生
+22000001;Cosmetics;化妆
+22000002;Leave;离开
+22001000;Use a Larval Tear to accept rebirth?;要使用“泪滴幼体”，重新诞生吗？
+22001002;A Larval Tear is required for rebirth;重新诞生必须要有“泪滴幼体”。
+22021003;Choose how many to hand over;请选择交出的数量
+22130001;Strengthen armament;强化武器
+22130003;Ashes of War;战灰
+22130004;About prayer;关于祈祷
+22130005;About Roderika;关于罗德莉卡
+22130006;About Roderika;关于罗德莉卡
+22130007;About Roderika;关于罗德莉卡
+22130008;About Roderika;关于罗德莉卡
+22130009;Let's talk a while;“听我说个几句吧”
+22130010;About the chains on your legs;关于脚边的锁链
+22130011;You're a prisoner?;什么俘虏？
+22130012;About the god-slaying weapon;关于弒神武器
+22130013;About the god-slaying weapon;关于弒神武器
+22130014;Why are you still making weapons?;你为什么还在锻造武器？
+22130015;What happened to her?;她怎么了？
+22130016;About yourself;“你……”
+22130017;What's that little knife for?;那边的小刀是什么？
+22130018;Ash of War duplication;复制战灰
+22131000;Would you watch over Roderika?;你能照顾罗德莉卡吗？
+22131001;Nothing;没事
+22131002;It's what she wants;这也是出自她的意愿
+22131003;Understood;好吧
+22131010;Cannot select while entering combat;参加竞技时，无法选取。
+22161000;I still don't understand;还没有情报
+22161001;Tell Sellen's story;告诉他瑟濂说出的情报
+22161002;Don't say anything;不告诉他
+22161003;Tell Iji's story;告诉他伊吉说出的情报
+22161004;Open the evergaol;打开封印监牢
+22161005;Don't open it;不打开
+22201000;Help him out;帮忙他脱困
+22201001;Don't help;不帮忙
+22230000;Alter garments;修改服装
+22230001;Don't tell me...;“我其实在想……”
+22230002;I'm sorry...;“很抱歉……”
+22230003;Give the Gold Sewing Needle;交出“黄金缝衣针”
+22230004;Surely she'd be happy for you?;“会不会替我高兴呢？”
+22230005;Have you ever thought so?;“您有想过吗？”
+22230006;Give a Larval Tear;交出“泪滴幼体”
+22230007;Please wait;“请您稍待”
+22230008;What do you really think?;“您是怎么想的呢？”
+22230009;I heard a voice;“我听到了声音”
+22230010;The voice was mine;我的想法就是那样
+22230011;I have a favor to ask;“我有一个请求”
+22230012;You may call me lord;愿意让他称自己为“吾王”
+22230013;Did you see it?;“您有看见吗？”
+22231000;Give the Sewing Needle;交出“缝衣针”
+22231001;Don't give it;不交出
+22231002;You may call me lord;愿意让他称自己为“吾王”
+22231003;Don't call me that;不愿意
+22231004;That's right;是
+22231005;Not at all;不是
+22240000;Strengthen armaments;强化武器
+22240001;Talk;交谈
+22240002;Please take care;“请你当心”
+22240003;About Nokron;关于诺克隆恩
+22240005;About Blaidd;关于布莱泽
+22240006;About Jerren;关于杰廉
+22240007;Please go to the festival grounds;“请前往祭典的举办地”
+22240008;Talk;交谈
+22240009;About Blaidd;关于布莱泽
+22240010;About Jerren;关于杰廉
+22240011;Why is Blaidd in the Evergaol?;为什么把布莱泽关进封印监牢？
+22240012;Blaidd's death;布莱泽临终之际
+22240013;About advice;关于忠告
+22240014;Blaidd sent me;布莱泽介绍我来的
+22240015;Talk;交谈
+22240016;About Jerren;关于杰廉
+22240017;Talk;交谈
+22240018;Talk;交谈
+22240020;Purchase;购买
+22241010;Cannot do this during multiplayer;多人联机游玩时，无法选取。
+22261000;I'll be your Potentate;想当维壶师
+22261001;I'm no Potentate;不是
+22261002;Give Alexander's Insides;交出“亚历山大的内容物”
+22261003;Don't give;不交出
+22281000;Show the secret medallion;让她看秘密符节
+22281001;Don't show it;不给她看
+22281002;Hear her request;答应她的请求
+22281003;Refuse;拒绝
+22281004;Hear her request after all;还是答应她的请求
+22281005;Leave;离开
+23001000;Join Volcano Manor;加入成为火山官邸的一员
+23001001;Don't join;不加入
+23001004;See the Lord;愿意觐见王
+23001005;Don't see the Lord;不愿意
+23001006;Leave;离开
+23001007;Zorayas's form;关于泽菈雅丝的外表
+23001008;Zorayas's troubles;提及泽菈雅丝的烦恼
+23001009;Zorayas's absence;泽菈雅丝不见身影
+23001010;I gave her the potion;我让她喝下药了
+23001011;Zorayas is dead;泽菈雅丝死了
+23001012;Give the Dancer's Castanets;交出“舞娘的打击乐器”
+23001013;Don't give them;不交出
+23011000;I'll fly straight and true!;想成为真正的一员
+23011001;I don't need a seat;不要
+23011002;They didn't seem right;我觉得不对劲
+23011003;They were magnificent;我觉得很感动
+23011004;Anoint me;愿意成为骑士
+23011005;I refuse;不愿意
+23011006;Two Fingers seemed off;我觉得双指不对劲
+23011007;They were magnificent;我觉得很感动
+23021000;No, I'll use the main gate;不要，我要从正门进去
+23021001;Very well;我知道了
+23021002;I want to use the main gate;我想从正门进去
+23021003;Leave;离开
+23021010;Locked by some contraption;被机关锁住，无法开启。
+23070006;Study sorcery;学习魔法
+23070007;Obtain a puppet;取得傀儡
+23070008;About your chambers;询问关于地下室
+23070009;About Nokron;询问关于诺克隆恩
+23070010;I want a new puppet;我想要新的傀儡
+23070011;About the scheme;关于秘密
+23070012;Give Amber Starlight;交出“琥珀星光”
+23070013;About the draught;关于药水
+23070014;About the draught;关于药水
+23070015;About your scheme;询问关于秘密
+23070016;About Nepheli;关于涅斐丽
+23070017;Talk;交谈
+23070018;About Amber Starlight;关于“琥珀星光”
+23070019;Hand over the scroll;交出卷轴
+23070020;Purchase;购买
+23071001;Accept the task;愿意帮忙办事
+23071002;Don't accept;不愿意
+23071009;I'm interested;有兴趣听
+23071010;I'm not interested;没有
+23071014;Ask about Nokron;询问关于诺克隆恩
+23071015;Leave;离开
+23090000;About the bandits;询问关于强盗团
+23090001;That chest...;那边那个宝箱……
+23090002;Talk;交谈
+23090003;What you spoke of before;关于刚才的话题
+23090004;Speaking of...;“话说回来……”
+23090006;Talk;交谈
+23090007;What you spoke of before;关于刚才的话题
+23090008;About the previous request;刚才那笔委托
+23090009;About the previous request;刚才那笔委托
+23090010;The request is done;委托完成了
+23090011;About Patches;询问关于帕奇
+23090012;What about my reward?;委托的报酬呢？
+23091000;Forgive and forget;当作没发生
+23091001;Some things can't be forgiven;不原谅你
+23101000;Deliver the letter;帮忙转交信
+23101001;Refuse;拒绝
+23101002;They're human eyes;那是人的眼球
+23101003;Don't say anything;保持沉默
+23101004;Give a Shabriri Grape;交出“夏玻利利葡萄”
+23101005;Don't give a grape;不交出
+23101006;Give a Fingerprint Grape;交出“指痕葡萄”
+23101009;She's dead;已经回天乏术。
+23111000;Deliver Irina's Letter;交出“伊蕾娜的信”
+23111001;Don't give the letter;不交出
+23121000;I love a good festival;我喜欢祭典
+23121001;I'm not the festive type;我不喜欢
+23121003;About Iji;询问关于伊吉
+23121004;Ready as I'll ever be;准备好了
+23121005;Not yet;还没
+23131000;Hear the request;答应帮忙
+23131001;Refuse;拒绝
+23131002;Take Rya's hand;牵住菈雅的手
+23131003;Refuse Rya's hand;不牵手
+23131004;Tell her of the dark side of Volcano Manor;告诉她火山官邸的内幕
+23131005;Don't tell her;不告诉她
+23131006;Give Serpent's Amnion;交出“蛇的羊膜”
+23131007;Don't give it;不交出
+23131009;Give Tonic of Forgetfulness;交出“遗忘秘药”
+23131010;Give Rya's Necklace;交出“菈雅的项链”
+23131011;Don't give it;不交出
+23131012;Don't give it;不交出
+23141000;You defended them;有保护到他们
+23141001;I'm afraid not;没有保护到
+23160003;Study sorcery;学习魔法
+23160006;I need to speak with you later;“好好聊一聊吧”
+23160007;About the request;关于需要帮忙的内容
+23160008;About the request;需要帮忙的内容
+23160009;Show letter of introduction;拿出介绍信给她看
+23160010;Show Azur's sorcery;施展亚兹勒的魔法
+23160011;Tell me your story;有什么事？
+23160012;I'll help restore the primeval current;还是想帮忙复兴起源
+23160013;I have a favor to ask;“有事需要你的帮助”
+23160014;Lusat's location;告诉她卢瑟特的所在地
+23160015;About glintstone sorcery;关于辉石魔法
+23160016;Talk;交谈
+23160017;Talk;交谈
+23160018;About Lusat;关于卢瑟特
+23160019;Lusat's location;告诉她卢瑟特的所在地
+23160020;Give a scroll;交出卷轴
+23160021;Give the Conspectus Scroll;交出“教室卷轴”
+23160022;Give the Royal House Scroll;交出“王室卷轴”
+23160023;Give Ranni's Scroll;交出菈妮卷轴
+23160024;Give Sellian Scroll;交出瑟利亚卷轴
+23160025;Give Gelmirian Scroll;交出格密尔卷轴
+23160026;Don't give a scroll;不交出
+23160027;Lead on Lusat;关于卢瑟特的线索
+23160028;Give the Academy Scroll;交出“学院卷轴”
+23161000;I want to learn sorcery;我想学习魔法
+23161001;Never mind;没事
+23161002;I still want to learn;我还是想拜师
+23161003;Let me reconsider;让我考虑一下
+23161006;Let us journey together;愿意共同努力
+23161007;Let me think about it;让我考虑一下
+23161008;Show letter of introduction;拿出介绍信给她看
+23161009;Don't show it;不给她看
+23161010;I still want to learn sorcery;我还是想拜师学习
+23161011;I need a bit more time to think;再让我考虑一下
+23161012;You can now learn new sorcery;已能学习新的魔法。
+23190000;Study incantations;学习祷告
+23190001;About D;关于Ｄ
+23190002;About Rogier;关于罗杰尔
+23190003;Give the Weathered Dagger;交出“侵蚀短剑”
+23191002;Accept introduction;愿意被推荐
+23191003;Refuse;拒绝
+23191004;Show Deathroot;让他看“死根”
+23191005;Don't show it;不给他看
+23191006;Give the Weathered Dagger;交出“侵蚀短剑”
+23191007;Don't give it;不交出
+23191008;Give the Twinned Armor set;交出整套“孪生”系列盔甲
+23191009;Don't give it;不交出
+23191010;Hand over the Twinned Armor set?;要交出整套“孪生”系列盔甲吗？
+23191011;A red mark was made on the map;地图已被画上红色标记。
+23200000;Spirit Tuning;调灵
+23200001;Talk;交谈
+23200002;About Hewg;关于修古
+23200003;What's happened to Hewg;询问修古的异状
+23200004;There's something you should know;“有件事情，我想和你说一声”
+23200005;There's something you should know;“有件事情，我想和你说一声”
+23200006;About the spirits' voices;关于灵魂发出的声音
+23200007;Please take care;“请多加小心”
+23200008;About the spirits' voices;关于灵魂发出的声音
+23200009;Please;请求
+23200010;Talk;交谈
+23200011;Talk;交谈
+23201002;Give Chrysalids' Memento;交出“蛹群的遗物”
+23201003;Tell her what the blacksmith said;转达铁匠的话
+23201004;Don't tell her;不转达
+23201010;Cannot select while entering combat;参加竞技时，无法选取。
+23211000;Pledge service;愿意为肯尼斯·海德工作
+23211001;Do not pledge service;不愿意
+23220000;Talk in secret;说悄悄话
+23220001;May I ask a favor?;“你愿意听听我的请求吗？”
+23220002;About the dagger;询问关于收下的短剑
+23220003;Do you know...?;“你知道吗？”
+23220004;About the Black Knifeprint;关于黑刀烙印
+23220005;About the Black Knifeprint;关于黑刀烙印
+23220006;About Rogier;关于罗杰尔
+23220007;Talk in secret;说悄悄话
+23220008;Talk in secret;说悄悄话
+23220009;Talk in secret;说悄悄话
+23220010;Talk in secret;说悄悄话
+23220011;Talk in secret;说悄悄话
+23220012;Give Cursemark of Death;交出“死亡的咒痕”
+23220014;Talk in secret;说悄悄话
+23221000;Let her hold you;接受拥抱
+23221001;Refuse;拒绝
+23221002;That's right;没错
+23221003;No, I want to be held;没有，我想接受你的拥抱
+23221004;Enter the Deathbed Dream;进入死眠梦境
+23221005;Don't enter;放弃
+23221006;Enter the Deathbed Dream?;要进入死眠梦境吗？
+23221007;You found a simple map. Check in inventory.;获得了简易地图。 请从置物包确认。
+23231000;Leave your gaol!;出来吧
+23231001;Say nothing;保持沉默
+23231002;Administer Seluvis's Potion;灌下“赛尔维斯的药水”
+23231003;Use the Seedbed Curse;使用“温床的诅咒”
+23231004;Leave;离开
+23240007;About Nepheli;关于涅斐丽
+23240008;Nepheli's despair;询问涅斐丽沮丧的原因
+23240009;About Ensha;关于恩夏
+23240010;About Ensha;关于恩夏
+23240012;About Godrick;关于葛瑞克
+23240013;About Radahn;关于拉塔恩
+23240014;About Rykard;关于拉卡德
+23240015;About Morgott;关于蒙葛特
+23240016;About Rennala;关于蕾娜菈
+23240017;Unlocated demigods;所在地毫无线索的半神
+23240018;About Radahn;关于拉塔恩
+23240019;About Rykard;关于拉卡德
+23240020;About Rennala;关于蕾娜菈
+23240021;About the secret medallions;秘密符节的情报
+23240022;The secret medallions are reunited;凑齐了秘密符节
+23240023;Talk;交谈
+23240024;Where should I go?;该前往的地方
+23240025;Talk;交谈
+23240026;Talk;交谈
+23240027;Using the secret medallions;使用秘密符节后抵达的地方
+23240028;About the Haligtree roots;关于圣树的根
+23240029;Mohgwyn Palace;蒙格温王朝
+23240030;About the Lord of Blood's cocoon;关于鲜血君王的茧
+23240031;Show him Seluvis's Potion;让他看“赛尔维斯的药水”
+23240032;Give Gideon Seluvis's Potion;把“赛尔维斯的药水”交给基甸
+23240033;About Ensha;关于恩夏
+23240034;About the secret medallions;秘密符节的情报
+23240035;About the Lord of Blood's cocoon;关于鲜血君王的茧
+23241000;What do you mean, a house guest?;过客是什么意思？
+23241001;Say nothing;保持沉默
+23241002;Hand over Seluvis's Potion;交出“赛尔维斯的药水”
+23241003;Don't hand it over;不交出
+23241004;A red mark was made on the map;地图已被画上红色标记。
+23250000;Learn skills;学习战技
+23250001;Talk;交谈
+23250002;I've defeated Godrick;我打倒葛瑞克了
+23250003;About the corpse under Stormveil;关于史东薇尔地底的尸体
+23250004;Give the Black Knifeprint;交出“黑刀烙印”
+23250005;Ranni cast off her cursemark;菈妮抛弃了咒痕
+23250007;About D;关于Ｄ
+23250008;Why do you want a cursemark?;你为什么要找咒痕？
+23250009;About D;关于Ｄ
+23250010;Rogier's proposition;罗杰尔的提议
+23250011;About D;关于Ｄ
+23250012;About the corpse under Stormveil;关于史东薇尔地底的尸体
+23250013;Ranni's whereabouts;菈妮的所在地
+23250014;Ranni's whereabouts;菈妮的所在地
+23250015;Talk;交谈
+23251000;I'm here to defeat Godrick;为了挑战城主
+23251001;I can't tell you;不回答
+23251004;Handed over the Black Knifeprint;已交出“黑刀烙印”。
+23260000;Learn skills;学习战技
+23260001;Talk;交谈
+23260002;Talk;交谈
+23261000;My faith holds firm;还是会相信
+23261001;I'm not sure;我不知道
+23261002;I understand;我懂
+23261003;I don't understand;我不懂
+23300000;Study sorcery;学习魔法
+23300001;Atone;赎罪
+23300002;Show Celestial Dew;让他看“星星泪滴”
+23300003;Talk;交谈
+23300005;About the miracle;关于奇迹
+23300006;About absolution;关于赎罪
+23300007;About Radagon;关于拉达冈
+23300008;About Radagon;关于拉达冈
+23300009;About Rennala;关于蕾娜菈
+23300010;About Rennala;关于蕾娜菈
+23300011;Give a scroll;交出卷轴
+23300012;Give a prayerbook;交出祷告书
+23300013;Study incantations;学习祷告
+23301000;I don't know;没有听过
+23301001;You don't need absolution;您没有赎罪的必要。
+23301002;No Celestial Dew in inventory;您未持有“星星泪滴”。
+23301003;Use Celestial Dew to receive absolution?;要使用“星星泪滴”，进行赎罪吗？
+23301004;Your sins are absolved;您的罪已受到饶恕。
+23310000;About Rya;关于菈雅
+23310001;Talk;交谈
+23310002;You should probably know...;“……还是说一下好了”
+23310003;About the Dung Eater;关于食粪者
+23310004;About the Dung Eater;关于食粪者
+23311000;Give me the necklace;给我项链吧
+23311001;Leave;离开
+23311002;Deal;好吧
+23311003;Refuse;我不要
+23330000;Study sorcery;学习魔法
+23330001;Talk;交谈
+23330002;About the glintstone key;关于辉石钥匙
+23330004;Talk;交谈
+23330005;Give the Academy Glintstone Key;交出“学院辉石钥匙”
+23330006;About Sellen;关于瑟濂
+23330008;About the glintstone key;关于辉石钥匙
+23330009;Give a scroll;交出卷轴
+23330010;Don't give the scroll;不交出
+23331000;Donate <?evntAcquittalPrice?> runes;分给他<?evntAcquittalPrice?>卢恩
+23331001;Don't donate runes;不分给他
+23331003;Not enough runes to donate;卢恩不足，无法分给他。
+23341000;Give Seluvis's Potion;交出“赛尔维斯的药水”
+23341001;Give the Stormhawk King;交出“风暴鹰古王”
+23341002;I heard from Gideon;前因后果我听基甸说了
+23341003;Leave;离开
+23481000;Give an Unalloyed Gold Needle;交出“纯净金针”
+23481001;Don't give it;不交出
+23481002;Give the Valkyrie's Prosthesis;交出“女武神的义手”
+23490000;Study sorcery;学习魔法
+23490001;Millicent paid a visit;米莉森来过了
+23490002;I gave Millicent the prosthesis;我把义手交给米莉森了
+23490003;About Millicent;关于米莉森
+23490004;About Malenia;关于玛莲妮亚
+23490005;What Millicent said;转述米莉森的话
+23490006;Why are you crying?;哭泣的原因
+23490009;Become a flower?;幻化成花？
+23490010;Become a flower?;幻化成花？
+23490011;Study incantations;学习祷告
+23491000;Hear the request;答应请求
+23491001;Refuse;拒绝
+23510000;Study incantations;学习祷告
+23510001;Talk;交谈
+23510002;About the noble Goldmask;关于金面具先生
+23510003;Tell the noble Goldmask's whereabouts;告诉他金面具的所在地
+23510004;About the noble Goldmask;关于金面具先生
+23510005;About the noble Goldmask;关于金面具先生
+23510006;About the noble Goldmask;关于金面具先生
+23510007;About the noble Goldmask;关于金面具先生
+23510008;About the noble Goldmask;关于金面具先生
+23510009;Give Tonic of Forgetfulness;交出“遗忘秘药”
+23510010;Give a prayerbook;交出祷告书
+23510011;Give the Fire Monks' Prayerbook;交出“火焰习武修士祷告书”
+23510012;Give the Giant's Prayerbook;交出“巨人祷告书”
+23510013;Give the Godskin Prayerbook;交出“神皮祷告书”
+23510014;Give the Two Fingers' Prayerbook;交出“双指祷告书”
+23510015;Give the Assassin's Prayerbook;交出“刺客祷告书”
+23510016;Give the Erdtree Prayerbook;交出黄金树祷告书
+23510017;Give the Erdtree Codex;交出黄金树古文书
+23510018;Give the Golden Order Principia;交出“黄金律法原本”
+23510019;Give the Golden Order Canon;交出黄金律法原本
+23510020;Give the Dragon Cult Prayerbook;交出“龙信仰祷告书”
+23510021;Give the Ancient Dragon Prayerbook;交出“古龙祷告书”
+23510022;Don't give a prayerbook;不交出
+23511000;I see it;我看得见
+23511001;I don't see it;看不见
+26000000;Offer a bell bearing;献上铃珠
+26000001;Cancel;放弃
+26000004;Go back;返回
+26000010;Purchase;购买
+26000011;Bell Bearing Shop 1;铃珠交易１
+26000012;Bell Bearing Shop 2;铃珠交易２
+26000013;Bell Bearing Shop 3;铃珠交易３
+26000014;Bell Bearing Shop 4;铃珠交易４
+26000020;Sellen's Bell Bearing;瑟濂的铃珠
+26000021;Seluvis's Bell Bearing;赛尔维斯的铃珠
+26000022;Seluvis's Bell Bearing;赛尔维斯的铃珠
+26000023;Thops's Bell Bearing;托普斯的铃珠
+26000024;Corhyn's Bell Bearing;柯林的铃珠
+26000025;Miriel's Bell Bearing (Sorcery);米利耶的铃珠（魔法）
+26000026;D's Bell Bearing;Ｄ的铃珠
+26000027;Gowry's Bell Bearing (Sorcery);格威的铃珠（魔法）
+26000028;Rogier's Bell Bearing;罗杰尔的铃珠
+26000029;Bernahl's Bell Bearing;贝纳尔的铃珠
+26000030;Iji's Bell Bearing;伊吉的铃珠
+26000031;Miriel's Bell Bearing (Incantations);米利耶的铃珠（祷告）
+26000032;Gowry's Bell Bearing (Incantations);格威的铃珠（祷告）
+26000040;Gostoc's Bell Bearing;葛托克的铃珠
+26000041;Pidia's Bell Bearing;毕迪的铃珠
+26000042;Patches' Bell Bearing;帕奇的铃珠
+26000043;Blackguard's Bell Bearing;流氓的铃珠
+26000050;Nomadic Merchant's Bell Bearing [1];流浪商人的铃珠【１】
+26000051;Nomadic Merchant's Bell Bearing [2];流浪商人的铃珠【２】
+26000052;Nomadic Merchant's Bell Bearing [3];流浪商人的铃珠【３】
+26000053;Nomadic Merchant's Bell Bearing [4];流浪商人的铃珠【４】
+26000054;Nomadic Merchant's Bell Bearing [5];流浪商人的铃珠【５】
+26000055;Nomadic Merchant's Bell Bearing [6];流浪商人的铃珠【６】
+26000056;Nomadic Merchant's Bell Bearing [7];流浪商人的铃珠【７】
+26000057;Nomadic Merchant's Bell Bearing [8];流浪商人的铃珠【８】
+26000058;Nomadic Merchant's Bell Bearing [9];流浪商人的铃珠【９】
+26000059;Nomadic Merchant's Bell Bearing [10];流浪商人的铃珠【１０】
+26000060;Nomadic Merchant's Bell Bearing [11];流浪商人的铃珠【１１】
+26000070;Kalé's Bell Bearing;咖列的铃珠
+26000071;Isolated Merchant's Bell Bearing [1];隐居商人的铃珠【１】
+26000072;Isolated Merchant's Bell Bearing [2];隐居商人的铃珠【２】
+26000073;Hermit Merchant's Bell Bearing [1];遁世商人的铃珠【１】
+26000074;Isolated Merchant's Bell Bearing [3];隐居商人的铃珠【３】
+26000075;Hermit Merchant's Bell Bearing [2];遁世商人的铃珠【２】
+26000076;Abandoned Merchant's Bell Bearing;见弃商人的铃珠
+26000077;Hermit Merchant's Bell Bearing [3];遁世商人的铃珠【３】
+26000078;Imprisoned Merchant's Bell Bearing;受囚商人的铃珠
+26000110;Offer Pidia's Bell Bearing;献上毕迪的铃珠
+26000111;Offer Seluvis's Bell Bearing;献上赛尔维斯的铃珠
+26000112;Offer Patches' Bell Bearing;献上帕奇的铃珠
+26000113;Offer Sellen's Bell Bearing;献上瑟濂的铃珠
+26000115;Offer D's Bell Bearing;献上Ｄ的铃珠
+26000116;Offer Bernahl's Bell Bearing;献上贝纳尔的铃珠
+26000117;Offer Miriel's Bell Bearing;献上米利耶的铃珠
+26000118;Offer Gostoc's Bell Bearing;献上葛托克的铃珠
+26000119;Offer Thops's Bell Bearing;献上托普斯的铃珠
+26000120;Offer Kalé's Bell Bearing;献上咖列的铃珠
+26000121;Offer Nomadic Merchant's Bell Bearing [1];献上流浪商人的铃珠【１】
+26000122;Offer Nomadic Merchant's Bell Bearing [2];献上流浪商人的铃珠【２】
+26000123;Offer Nomadic Merchant's Bell Bearing [3];献上流浪商人的铃珠【３】
+26000124;Offer Nomadic Merchant's Bell Bearing [4];献上流浪商人的铃珠【４】
+26000125;Offer Nomadic Merchant's Bell Bearing [5];献上流浪商人的铃珠【５】
+26000126;Offer Isolated Merchant's Bell Bearing [1];献上隐居商人的铃珠【１】
+26000127;Offer Isolated Merchant's Bell Bearing [2];献上隐居商人的铃珠【２】
+26000128;Offer Nomadic Merchant's Bell Bearing [6];献上流浪商人的铃珠【６】
+26000129;Offer Hermit Merchant's Bell Bearing [1];献上遁世商人的铃珠【１】
+26000130;Offer Nomadic Merchant's Bell Bearing [7];献上流浪商人的铃珠【７】
+26000131;Offer Nomadic Merchant's Bell Bearing [8];献上流浪商人的铃珠【８】
+26000132;Offer Nomadic Merchant's Bell Bearing [9];献上流浪商人的铃珠【９】
+26000133;Offer Nomadic Merchant's Bell Bearing [10];献上流浪商人的铃珠【１０】
+26000134;Offer Nomadic Merchant's Bell Bearing [11];献上流浪商人的铃珠【１１】
+26000135;Offer Isolated Merchant's Bell Bearing [3];献上隐居商人的铃珠【３】
+26000136;Offer Hermit Merchant's Bell Bearing [2];献上遁世商人的铃珠【２】
+26000137;Offer Abandoned Merchant's Bell Bearing;献上见弃商人的铃珠
+26000138;Offer Hermit Merchant's Bell Bearing [3];献上遁世商人的铃珠【３】
+26000139;Offer Imprisoned Merchant's Bell Bearing;献上受囚商人的铃珠
+26000140;Offer Iji's Bell Bearing;献上伊吉的铃珠
+26000141;Offer Rogier's Bell Bearing;献上罗杰尔的铃珠
+26000142;Offer Blackguard's Bell Bearing;献上流氓的铃珠
+26000143;Offer Corhyn's Bell Bearing;献上柯林的铃珠
+26000144;Offer Gowry's Bell Bearing;献上格威的铃珠
+26000145;Offer Bone Peddler's Bell Bearing;献上兽骨贩子的铃珠
+26000146;Offer Meat Peddler's Bell Bearing;献上兽肉贩子的铃珠
+26000147;Offer Medicine Peddler's Bell Bearing;献上苔药贩子的铃珠
+26000148;Offer Gravity Stone Peddler's Bell Bearing;献上重力贩子的铃珠
+26000151;Offer Smithing Miner's Bell Bearing [1];献上锻造石矿工的铃珠【１】
+26000152;Offer Smithing Miner's Bell Bearing [2];献上锻造石矿工的铃珠【２】
+26000153;Offer Smithing Miner's Bell Bearing [3];献上锻造石矿工的铃珠【３】
+26000154;Offer Smithing Miner's Bell Bearing [4];献上锻造石矿工的铃珠【４】
+26000155;Offer Somber Miner's Bell Bearing [1];献上失色石矿工的铃珠【１】
+26000156;Offer Somber Miner's Bell Bearing [2];献上失色石矿工的铃珠【２】
+26000157;Offer Somber Miner's Bell Bearing [3];献上失色石矿工的铃珠【３】
+26000158;Offer Somber Miner's Bell Bearing [4];献上失色石矿工的铃珠【４】
+26000159;Offer Somber Miner's Bell Bearing [5];献上失色石矿工的铃珠【５】
+26000160;Offer Glovewort Picker's Bell Bearing [1];献上铃兰摘采工的铃珠【１】
+26000161;Offer Glovewort Picker's Bell Bearing [2];献上铃兰摘采工的铃珠【２】
+26000162;Offer Glovewort Picker's Bell Bearing [3];献上铃兰摘采工的铃珠【３】
+26000163;Offer Ghostform Picker's Bell Bearing [1];献上灵依摘采工的铃珠【１】
+26000164;Offer Ghostform Picker's Bell Bearing [2];献上灵依摘采工的铃珠【２】
+26000165;Offer Ghostform Picker's Bell Bearing [3];献上灵依摘采工的铃珠【３】
+26001000;No bell bearings offered;尚未献上铃珠。
+26001001;No bell bearing to offer;没有可献上的铃珠。
+26001110;Offered Pidia's Bell Bearing;已献上毕迪的铃珠。
+26001111;Offered Seluvis's Bell Bearing;已献上赛尔维斯的铃珠。
+26001112;Offered Patches' Bell Bearing;已献上帕奇的铃珠。
+26001113;Offered Sellen's Bell Bearing;已献上瑟濂的铃珠。
+26001114;Offered Monk Jiko's Ashes;已献上里可的铃珠。
+26001115;Offered D's Bell Bearing;已献上Ｄ的铃珠。
+26001116;Offered Bernahl's Bell Bearing;已献上贝纳尔的铃珠。
+26001117;Offered Miriel's Bell Bearing;已献上米利耶的铃珠。
+26001118;Offered Gostoc's Bell Bearing;已献上葛托克的铃珠。
+26001119;Offered Thops's Bell Bearing;已献上托普斯的铃珠。
+26001120;Offered Kalé's Bell Bearing;已献上咖列的铃珠。
+26001121;Offered Nomadic Merchant's Bell Bearing [1];已献上流浪商人的铃珠【１】。
+26001122;Offered Nomadic Merchant's Bell Bearing [2];已献上流浪商人的铃珠【２】。
+26001123;Offered Nomadic Merchant's Bell Bearing [3];已献上流浪商人的铃珠【３】。
+26001124;Offered Nomadic Merchant's Bell Bearing [4];已献上流浪商人的铃珠【４】。
+26001125;Offered Nomadic Merchant's Bell Bearing [5];已献上流浪商人的铃珠【５】。
+26001126;Offered Isolated Merchant's Bell Bearing [1];已献上隐居商人的铃珠【１】。
+26001127;Offered Isolated Merchant's Bell Bearing [2];已献上隐居商人的铃珠【２】。
+26001128;Offered Nomadic Merchant's Bell Bearing [6];已献上流浪商人的铃珠【６】。
+26001129;Offered Hermit Merchant's Bell Bearing [1];已献上遁世商人的铃珠【１】。
+26001130;Offered Nomadic Merchant's Bell Bearing [7];已献上流浪商人的铃珠【７】。
+26001131;Offered Nomadic Merchant's Bell Bearing [8];已献上流浪商人的铃珠【８】。
+26001132;Offered Nomadic Merchant's Bell Bearing [9];已献上流浪商人的铃珠【９】。
+26001133;Offered Nomadic Merchant's Bell Bearing [10];已献上流浪商人的铃珠【１０】。
+26001134;Offered Nomadic Merchant's Bell Bearing [11];已献上流浪商人的铃珠【１１】。
+26001135;Offered Isolated Merchant's Bell Bearing [3];已献上隐居商人的铃珠【３】。
+26001136;Offered Hermit Merchant's Bell Bearing [2];已献上遁世商人的铃珠【２】。
+26001137;Offered Abandoned Merchant's Bell Bearing;已献上见弃商人的铃珠。
+26001138;Offered Hermit Merchant's Bell Bearing [3];已献上遁世商人的铃珠【３】。
+26001139;Offered Imprisoned Merchant's Bell Bearing;已献上受囚商人的铃珠。
+26001140;Offered Iji's Bell Bearing;已献上伊吉的铃珠。
+26001141;Offered Rogier's Bell Bearing;已献上罗杰尔的铃珠。
+26001142;Offered Blackguard's Bell Bearing;已献上流氓的铃珠。
+26001143;Offered Corhyn's Bell Bearing;已献上柯林的铃珠。
+26001144;Offered Gowry's Bell Bearing;已献上格威的铃珠。
+26001145;Offered Bone Peddler's Bell Bearing;已献上兽骨贩子的铃珠。
+26001146;Offered Meat Peddler's Bell Bearing;已献上兽肉贩子的铃珠。
+26001147;Offered Medicine Peddler's Bell Bearing;已献上苔药贩子的铃珠。
+26001148;Offered Gravity Stone Peddler's Bell Bearing;已献上重力贩子的铃珠。
+26001151;Offered Smithing Miner's Bell Bearing [1];已献上锻造石矿工的铃珠【１】。
+26001152;Offered Smithing Miner's Bell Bearing [2];已献上锻造石矿工的铃珠【２】。
+26001153;Offered Smithing Miner's Bell Bearing [3];已献上锻造石矿工的铃珠【３】。
+26001154;Offered Smithing Miner's Bell Bearing [4];已献上锻造石矿工的铃珠【４】。
+26001155;Offered Somber Miner's Bell Bearing [1];已献上失色石矿工的铃珠【１】。
+26001156;Offered Somber Miner's Bell Bearing [2];已献上失色石矿工的铃珠【２】。
+26001157;Offered Somber Miner's Bell Bearing [3];已献上失色石矿工的铃珠【３】。
+26001158;Offered Somber Miner's Bell Bearing [4];已献上失色石矿工的铃珠【４】。
+26001159;Offered Somber Miner's Bell Bearing [5];已献上失色石矿工的铃珠【５】。
+26001160;Offered Glovewort Picker's Bell Bearing [1];已献上铃兰摘采工的铃珠【１】。
+26001161;Offered Glovewort Picker's Bell Bearing [2];已献上铃兰摘采工的铃珠【２】。
+26001162;Offered Glovewort Picker's Bell Bearing [3];已献上铃兰摘采工的铃珠【３】。
+26001163;Offered Ghostform Picker's Bell Bearing [1];已献上灵依摘采工的铃珠【１】。
+26001164;Offered Ghostform Picker's Bell Bearing [2];已献上灵依摘采工的铃珠【２】。
+26001165;Offered Ghostform Picker's Bell Bearing [3];已献上灵依摘采工的铃珠【３】。
+26010000;Ritual of Dragon Communion;龙飨仪式
+26020000;Strengthen armament;强化武器
+26071000;Mend the Elden Ring;修复艾尔登法环
+26071001;Use Mending Rune of Perfect Order;用完美律法的卢恩修复艾尔登法环
+26071002;Use Mending Rune of the Death-Prince;用死王子的卢恩修复艾尔登法环
+26071003;Use Mending Rune of the Fell Curse;用忌讳诅咒的卢恩修复艾尔登法环
+26080000;Apply cosmetics;化妆
+26080001;Leave;离开
+26081000;Cannot use while entering combat;参加竞技时，无法使用。
+26201000;Colosseums are only available online;竞技场只能以联机游玩。
+26211000;Colosseums are only available online;竞技场只能以联机游玩。
+26221000;Colosseums are only available online;竞技场只能以联机游玩。
+26231000;Colosseums are only available online;竞技场只能以联机游玩。
+26231001;No Colosseum rules available for selection;没有可选择的竞技场规则。
+28000002;About Kalé;关于咖列
+28000003;Recommendation;推荐商品
+28000004;Talk;交谈
+28000005;Talk;交谈
+28000014;About the howling in Mistwood;询问关于雾林里的狼嚎声
+28000015;About Blaidd;关于布莱泽

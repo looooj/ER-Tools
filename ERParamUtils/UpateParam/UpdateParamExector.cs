@@ -51,6 +51,14 @@ namespace ERParamUtils.UpdateParam
             UpdateName = Description;
             UpdateShopLineupParam.ExecDefaultUpdate(project, updateCommand);
         }
+
+        public override void ExecBefore(ParamProject project, UpdateCommand updateCommand)
+        {
+            base.ExecBefore(project, updateCommand);
+
+            updateCommand.SetOption(UpdateParamOption.ReplaceBellBearing,1);
+
+        }
     }
 
     public class SpecShopParamTask : UpdateParamTask
@@ -387,17 +395,19 @@ namespace ERParamUtils.UpdateParam
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceTalismanPouch));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRune));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceStoneswordKey));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRuneArc));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceMemoryStone));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceFinger));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDeathroot));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDragonHeart));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceBolt));
 
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGiantCrowSoul));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceLordRune));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.IncRemnant));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.RemoveRemembranceRequire));
         }
 
         public static void Exec(ParamProject paramProject, UpdateParamOptions options)
@@ -459,7 +469,7 @@ namespace ERParamUtils.UpdateParam
 
                 //45610068,Bloodbane Giant Crow,11038,0
                 updateCommand.AddItem(
-                    UpdateCommandItem.Create(ParamNames.NpcParam, 45610068, "getSoul", "1000000"));
+                    UpdateCommandItem.Create(ParamNames.NpcParam, 45610068, "getSoul", "10000000"));
 
             }
             //if (updateCommand.HaveOption(UpdateParamOption.AddWhetblade))

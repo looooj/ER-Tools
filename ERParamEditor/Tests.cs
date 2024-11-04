@@ -1,4 +1,5 @@
 ﻿using ERParamUtils;
+using ERParamUtils.UpateParam;
 using Org.BouncyCastle.Utilities;
 using SoulsFormats;
 using System;
@@ -21,7 +22,8 @@ namespace ERParamEditor
 
 
 
-        public static void TestName() {
+        public static void TestName()
+        {
 
             string[] names = { "a", "abc", "abc123", "123" };
 
@@ -42,7 +44,8 @@ namespace ERParamEditor
             }
         }
 
-        public static void TestDCX() {
+        public static void TestDCX()
+        {
 
             string dir = @"D:\docs\game\er\unpack-\unpack-files\msg\engus";
             //@"D:\docs\game\er\unpack-\unpack-files\msg\zhocn";
@@ -50,12 +53,14 @@ namespace ERParamEditor
             string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text";
 
             var files = Directory.GetFiles(dir, "*.dcx");
-            foreach (var file in files) {
+            foreach (var file in files)
+            {
                 try
                 {
                     SoulsFileUtils.ExtractDCX(file, targetDir);
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
 
                     logger.Error(ex, file);
                 }
@@ -63,7 +68,8 @@ namespace ERParamEditor
 
         }
 
-        public static void ExtractMsg() {
+        public static void ExtractMsg()
+        {
 
             string[] langs = { "engus", "zhocn" };
             foreach (string lang in langs)
@@ -89,7 +95,8 @@ namespace ERParamEditor
             }
         }
 
-        public static void TestEvent() {
+        public static void TestEvent()
+        {
 
 
             string dir = @"D:\docs\game\er\unpack-\unpack-files\event";
@@ -113,7 +120,8 @@ namespace ERParamEditor
             }
         }
 
-        public static void TestDCX2() {
+        public static void TestDCX2()
+        {
 
             string dir = @"D:\docs\game\er\unpack-\unpack-files\map\m10\m10_00_00_00";
 
@@ -137,7 +145,8 @@ namespace ERParamEditor
 
         }
 
-        public static void TestVdf() {
+        public static void TestVdf()
+        {
 
             string path = @"D:\Program Files (x86)\Steam\steamapps\libraryfolders.vdf";
 
@@ -152,14 +161,16 @@ namespace ERParamEditor
 
         }
 
-        public static void TestFind() {
+        public static void TestFind()
+        {
 
             //List<FindEquipLocation> result = new();
             //FindEquipUtils.Find(8384, 0, result);
         }
 
 
-        public static void TestComp() {
+        public static void TestComp()
+        {
 
             //projects\merchant
             //ParamProjectManager.CompareProject("org", "merchant");
@@ -171,12 +182,14 @@ namespace ERParamEditor
 
 
 
-        public static SortedDictionary<int, string> GetMsgIdName(XmlElement root) {
+        public static SortedDictionary<int, string> GetMsgIdName(XmlElement root)
+        {
 
             SortedDictionary<int, string> dict = new();
             var msgs = root.GetElementsByTagName("msg");
 
-            for (int i = 0; i < msgs.Count; i++) {
+            for (int i = 0; i < msgs.Count; i++)
+            {
 
                 XmlElement item = (XmlElement)msgs[i];
                 XmlElement idNode = (XmlElement)item.SelectSingleNode("ID");
@@ -193,14 +206,16 @@ namespace ERParamEditor
         }
 
 
-        static string clearLineEnd(string s) {
+        static string clearLineEnd(string s)
+        {
             s = s.Trim();
             s = s.Replace("\x0d\x0a", " ");
             s = s.Replace("\x0d", " ");
             s = s.Replace("\x0a", " ");
             return s;
         }
-        public static void GenChNames(string baseDir, string outDir, string[] names, string subName) {
+        public static void GenChNames(string baseDir, string outDir, string[] names, string subName)
+        {
 
             //assets\msg\item.msgbnd\msg\engUS\AccessoryName.fmg.xml
             //assets\msg\item.msgbnd\msg\zhoCN
@@ -212,7 +227,8 @@ namespace ERParamEditor
             string outDir = GlobalConfig.AssetsDir + @"\msg\item-msg-text";
             */
             string tmp = "D:\\myprojects\\game-tools\\ER-Tools\\tmp\\msg-text\\item_dlc01.msgbnd\\msg\\engUS\\AccessoryName.fmg.xml";
-            foreach (string name in names) {
+            foreach (string name in names)
+            {
 
                 string engFileName = string.Format("{0}\\{1}.msgbnd\\msg\\engUS\\{2}.fmg.xml", baseDir, subName, name);
                 string zhoFileName = string.Format("{0}\\{1}.msgbnd\\msg\\zhoCN\\{2}.fmg.xml", baseDir, subName, name);
@@ -235,7 +251,8 @@ namespace ERParamEditor
                 foreach (int id in keys)
                 {
                     string ename = engDict[id];
-                    if (!choDict.TryGetValue(id, out string cname)) {
+                    if (!choDict.TryGetValue(id, out string cname))
+                    {
                         continue;
                     }
 
@@ -244,7 +261,7 @@ namespace ERParamEditor
 
                     if (ename.Contains(";") || cname.Contains(";"))
                         continue;
-                    if (ename.Length < 3 || cname.Length < 1 || ename.Length > 50 )
+                    if (ename.Length < 3 || cname.Length < 1 || ename.Length > 50)
                         continue;
 
                     outLines.Add(string.Format("{0};{1};{2}", id, ename, cname));
@@ -259,7 +276,8 @@ namespace ERParamEditor
         }
 
 
-        public static void TestMaps() {
+        public static void TestMaps()
+        {
 
             /*
              			FMG fMG = game.ItemFMGs["NpcName"];
@@ -301,7 +319,8 @@ namespace ERParamEditor
 
         }
 
-        static void checkShopLineupParamRecipe() {
+        static void checkShopLineupParamRecipe()
+        {
 
             var proj = GlobalConfig.GetCurrentProject();
             if (proj == null)
@@ -312,11 +331,13 @@ namespace ERParamEditor
                 return;
 
             List<string> items = new();
-            foreach (var row in param.Rows) {
+            foreach (var row in param.Rows)
+            {
 
-                var v = ParamRowUtils.GetCellInt(row, "eventFlag_forStock",0);
+                var v = ParamRowUtils.GetCellInt(row, "eventFlag_forStock", 0);
 
-                if (v <= 0) {
+                if (v <= 0)
+                {
                     continue;
                 }
 
@@ -325,57 +346,76 @@ namespace ERParamEditor
                     continue;
                 var equipType = ParamRowUtils.GetCellInt(row, "equipType", 0);
 
-                var line = string.Format("{0},{1},{2},{3}", 
-                    row.ID,v,equipId,equipType);
+                var line = string.Format("{0},{1},{2},{3}",
+                    row.ID, v, equipId, equipType);
                 items.Add(line);
-                
+
             }
 
 
             File.WriteAllLines("forStockList.txt", items);
         }
 
-        static void gen_menu_text() {
+        static void gen_menu_text()
+        {
             //D:\myprojects\game - tools\ER - Tools\docs\item - menu - text
             string[] names = { "GR_MenuText", "ActionButtonText", "BloodMsg" };
             string outDir = "D:\\myprojects\\game-tools\\ER-Tools\\docs\\item-menu-text";
             string baseDir = "D:\\docs\\game\\er\\unpack-\\unpack-files-text\\menu.msgbnd\\msg";
-            GenChNames(baseDir, outDir, names,"");
+            GenChNames(baseDir, outDir, names, "");
             //checkShopLineupParamRecipe();
         }
 
-        static void GenDlcText() {
 
-            /* 
-tmp\msg-text\item.msgbnd
-tmp\msg-text\item_dlc02.msgbnd
-tmp\msg-text\item_dlc01.msgbnd             
-             */
-            string[] names = { "AccessoryName","GoodsName",
-                "ProtectorName","WeaponName","NpcName","PlaceName","GemName" };
+
+        static void GenDlcText(string baseDir, string outDir, string[] names, string[] subNames)
+        {
+
+
+            //string[] names = { "AccessoryName","GoodsName",
+            //    "ProtectorName","WeaponName","NpcName","PlaceName","GemName" };
 
             List<string> tmpNames = new List<string>();
             foreach (string name in names)
             {
                 tmpNames.Add(name);
                 tmpNames.Add(name + "_dlc01");
-                tmpNames.Add(name + "_dlc02");
+                //tmpNames.Add(name + "_dlc02");
             }
 
-            string[] subNames = { "item", "item_dlc01", "item_dlc02"};
+            //string[] subNames = { "item", "item_dlc01", "item_dlc02"};
 
-            string baseDir = @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text";
-            string outDir = @"D:\myprojects\game-tools\ER-Tools\docs\dlc-item-text";
+            //string baseDir = @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text";
+            //string outDir = @"D:\myprojects\game-tools\ER-Tools\docs\dlc-item-text";
             Directory.CreateDirectory(outDir);
             for (int i = 0; i < subNames.Length; i++)
             {
                 GenChNames(baseDir, outDir, tmpNames.ToArray(), subNames[i]);
             }
+        }
 
+        static void GenItemText() {
+
+            string[] names = { "AccessoryName","GoodsName",
+                "ProtectorName","WeaponName","NpcName","PlaceName","GemName" };
+            string[] subNames = { "item", "item_dlc01" };
+
+            GenDlcText(@"D:\myprojects\game-tools\ER-Tools\tmp\msg-text", @"D:\myprojects\game-tools\ER-Tools\docs\dlc-item-text",
+               names, subNames);
 
         }
 
-        static void WriteParamNames() {
+        static void GenMenuText()
+        {
+            string[] names = { "GR_MenuText", "ActionButtonText", "BloodMsg", "EventTextForTalk" };
+            string[] subNames = { "menu","menu_dlc01" };
+
+            GenDlcText(@"D:\myprojects\game-tools\ER-Tools\tmp\msg-text", @"D:\myprojects\game-tools\ER-Tools\docs\dlc-menu-text",
+               names, subNames);
+        }
+
+        static void WriteParamNames()
+        {
 
             //
             string fn = "D:\\myprojects\\game-tools\\ER-Tools\\docs\\default-param-names.txt";
@@ -385,7 +425,8 @@ tmp\msg-text\item_dlc01.msgbnd
             File.WriteAllLines(fn, paramList);
         }
 
-        static void findSoul() {
+        static void findSoul()
+        {
             var proj = GlobalConfig.GetCurrentProject();
             if (proj == null)
                 return;
@@ -406,17 +447,82 @@ tmp\msg-text\item_dlc01.msgbnd
                 }
                 var isBoss = ParamRowUtils.GetCellInt(row, "isSoulGetByBoss", 0);//
                 var line = string.Format("{0},{1},{2},{3}",
-                    row.ID,row.Name, v, isBoss);
+                    row.ID, row.Name, v, isBoss);
                 items.Add(line);
 
             }
-            File.WriteAllLines( proj.GetDir() + "\\findSoul.txt", items);
+            File.WriteAllLines(proj.GetDir() + "\\findSoul.txt", items);
 
         }
-        public static void Run() {
 
-            //ExtractMsg();
-            GenDlcText();
+        static void GenAutoLot(string[] eqIdFiles, string[] lotIdFile)
+        {
+
+            //string[] eqIdFiles = { "bell-bearing-a.txt", "smithing-stone.txt", "rune.txt", "gg.txt","tear.txt","pt.txt","prepare01.txt" };
+            string baseDir = @"D:\myprojects\game-tools\ER-Tools\docs\tips\";
+            foreach (var eqIdFile in eqIdFiles)
+            {
+                string fn = baseDir + eqIdFile;
+                //string[] lotIdFile = { "auto-id-01.txt" };
+                
+                UpdateHelper.ExecLotAutoId(fn, lotIdFile);
+            }
+
+        }
+
+        static void GenAutoLot()
+        {
+
+            string[] eqIdFiles1 = { "bell-bearing-a.txt", "smithing-stone.txt", "rune.txt", "gg.txt", "tear.txt", "pt.txt", "prepare02.txt", "wh.txt","tmp.txt" };
+            string[] lotIdFile1 = { "auto-id-01.txt" };
+
+            string[] eqIdFiles2 = { "test-lot.txt" };
+            string[] lotIdFile2 = { "auto-id-02.txt" };
+
+
+            GenAutoLot(eqIdFiles1, lotIdFile1);
+
+        }
+        //docs\item-msg-text\AccessoryName.txt
+        static void GenAccessoryId()
+        {
+
+            var proj = GlobalConfig.GetCurrentProject();
+            if (proj == null)
+                return;
+
+            var param = proj.FindParam(ParamNames.EquipParamAccessory);
+            if (param == null)
+                return;
+
+            List<string> items = new();
+            foreach (var row in param.Rows)
+            {
+                if (row.ID >= 1000 && row.ID <= 8240)
+                {
+
+                    var refId = ParamRowUtils.GetCellString(row, "refId", "");
+                    if (refId == null || refId == "")
+                        continue;
+
+                    items.Add(refId);
+                }
+            }
+
+            var r = string.Join(",", items);
+            r = "@@var@@AccessoryId=" + r;
+            string path = GlobalConfig.GetCurrentProject().GetUpdateDir() + "\\AccessoryId.txt";
+            File.WriteAllText(path, r);
+        }
+
+        public static void Run()
+        {
+
+            //GenAccessoryId();
+            //GenAutoLot();
+            //GenItemText();
+            //GenMenuText();
+            //Tools.CleanUpdateLog(5);
         }
     }
 }

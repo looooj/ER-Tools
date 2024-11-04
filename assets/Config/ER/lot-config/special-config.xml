@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <comment>
+        <![CDATA[   
+        equipType  None=0, Good=1, Weapon=2, Protector=3, Accessory=4, Gem=5
+        count default is 20
+        type default is 1
+        ]]>
+    </comment>
+    <item count="90" >
+        <id>15060,15430,15340,15341,1290</id>
+        <comment><![CDATA[ 
+            
+            //15060;Flight Pinion;拨风羽毛
+            //15430;Stormhawk Feather;风暴鹰羽毛
+            //15340; Thin Beast Bones; 细小兽骨
+            //15341; Hefty Beast Bone; 粗大兽骨
+            AddSpec(90, new int[] { 15060, 15430, 15340, 15341, 1290 });            
+            ]]></comment>
+    </item>
+    <item count="20">
+        <id-range begin="2000300" end="2000760" />
+        <comment><![CDATA[ 
+            
+            2000300;Hefty Fire Pot;大火焰壶
+            2000310;Hefty Rock Pot;大岩石壶
+            2000320;Hefty Lightning Pot;大雷电壶
+            2000330;Hefty Fetid Pot;大粪便壶
+            2000340;Hefty Fly Pot;大苍蝇壶
+            2000360;Hefty Freezing Pot;大结冰壶
+            2000370;Hefty Poison Pot;大毒壶
+            2000380;Hefty Oil Pot;大油壶
+            2000600;Hefty Volcano Pot;大火山壶
+            2000620;Hefty Frenzied Flame Pot;大癫火壶
+            2000650;Hefty Rancor Pot;大怨魂壶
+            2000660;Hefty Magic Pot;大魔力壶
+            2000670;Hefty Rot Pot;大腐败壶
+            2000680;Hefty Furnace Pot;大燃炉壶
+            2000690;Hefty Red Lightning Pot;大红雷壶
+            2000700;Red Lightning Pot;红雷壶
+            2000710;Frenzied Flame Pot;癫火壶
+            2000740;Eternal Sleep Pot;永眠壶
+            2000760;Roped Frenzied Flame Pot;附绳癫火壶
+            ]]>           
+        </comment>
+    </item>
+    <item count="5">
+        <id>2010000,2010100</id>
+        <comment><![CDATA[ 
+            2010000;Scadutree Fragment;幽影树碎片
+            2010100;Revered Spirit Ash;灵灰          
+            
+            ]]></comment>
+    </item>
+    <item count="5">
+        <id>2002120,2002120</id>
+        <comment><![CDATA[ 
+            2002120;Iris of Grace;赐福覆眼膜
+            2002130;Iris of Occultation;黑暗覆眼膜
+            ]]></comment>
+    </item>    
+    <item count="90">
+        <id-range begin="2015000" end="2015010"/>
+        <comment><![CDATA[ 
+            
+            2015000;Beast Horn;野兽角
+            2015010;Spirit Calculus;灵性结石
+            2015020;Pearlescent Scale;珍珠色鳞片
+            2015030;Scorpion Liver;蝎子肝
+            2015040;Fly Mold;苍蝇霉
+            2020001;Rada Fruit;拉答果实
+            2020002;Redflesh Mushroom;红肉蘑菇
+            2020003;Whiteflesh Mushroom;白肉蘑菇
+            2020004;Knot Resin;瘤脂
+            2020005;Dewgem;玉露
+            2020006;Black Pyrefly;黑火蝶
+            2020007;Glintslab Firefly;辉石块萤火虫
+            2020008;Yellow Fulgurbloom;黄雷电花
+            2020009;Shadow Sunflower;影轮草
+            2020010;Toxic Mossling;毒苔藓虫
+            2020011;Scarlet Bud;猩红花蕾
+            2020012;Sanguine Amaryllis;鲜血孤挺花
+            2020013;Frozen Maggot;结冻蛆虫
+            2020014;Deep-Purple Lily;深紫睡莲
+            2020015;Nectarblood Burgeon;蜜血木芽
+            2020016;Winter-Lantern Fly;灯笼虫
+            2020017;Swollen Grape;膨胀葡萄
+            2020018;Grave Keeper's Brainpan;守墓者头盖骨
+            2020019;Horn-Strewn Excrement;和角排泄物
+            2020020;Gas Stone;燃气石
+            2020021;Ghostflame Bloom;灵火花
+            2020022;Grave Cricket;墓地铃虫
+            2020023;Dragon's Calorbloom;龙热花
+            2020024;Finger Mimic;拟态指头
+            2020025;Empyrean-Blood Burgeon;神血木芽
+            2020026;Congealed Putrescence;凝固融泥
+            2020027;Roundrock;浑圆岩石
+            2020028;Spiritgrave Stone;灵墓碑石
+            2020029;Rauh Burrow;劳弗巢穴
+            2020030;Ember of Messmer;梅瑟莫的余火
+            2020031;Blessed Bone Shard;赐福骨片
+            2020032;Red Fulgurbloom;红雷花
+            2020033;Nailstone;指甲石
+            2020034;Sharp Gravel Stone;尖锐碎石
+            2020035;Furnace Visage;燃炉面具
+
+            ]]></comment>
+
+    </item>
+</config>

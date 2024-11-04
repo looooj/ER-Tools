@@ -38,7 +38,7 @@
             // 
             // checkListBoxTask
             // 
-            checkListBoxTask.Font = new Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            checkListBoxTask.Font = new Font("Microsoft YaHei UI", 9F);
             checkListBoxTask.FormattingEnabled = true;
             checkListBoxTask.Location = new Point(12, 12);
             checkListBoxTask.Name = "checkListBoxTask";
@@ -47,7 +47,7 @@
             // 
             // buttonUpdate
             // 
-            buttonUpdate.Location = new Point(546, 593);
+            buttonUpdate.Location = new Point(544, 653);
             buttonUpdate.Name = "buttonUpdate";
             buttonUpdate.Size = new Size(145, 23);
             buttonUpdate.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // buttonUpdatePublish
             // 
-            buttonUpdatePublish.Location = new Point(697, 593);
+            buttonUpdatePublish.Location = new Point(695, 653);
             buttonUpdatePublish.Name = "buttonUpdatePublish";
             buttonUpdatePublish.Size = new Size(145, 23);
             buttonUpdatePublish.TabIndex = 2;
@@ -79,7 +79,7 @@
             // checkBoxRestore
             // 
             checkBoxRestore.AutoSize = true;
-            checkBoxRestore.Location = new Point(425, 595);
+            checkBoxRestore.Location = new Point(423, 655);
             checkBoxRestore.Name = "checkBoxRestore";
             checkBoxRestore.Size = new Size(72, 21);
             checkBoxRestore.TabIndex = 4;
@@ -92,14 +92,14 @@
             checkListBoxUpdateCommandOption.FormattingEnabled = true;
             checkListBoxUpdateCommandOption.Location = new Point(12, 350);
             checkListBoxUpdateCommandOption.Name = "checkListBoxUpdateCommandOption";
-            checkListBoxUpdateCommandOption.Size = new Size(830, 220);
+            checkListBoxUpdateCommandOption.Size = new Size(830, 292);
             checkListBoxUpdateCommandOption.TabIndex = 5;
             // 
             // ParamUpdateForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(852, 629);
+            ClientSize = new Size(852, 690);
             Controls.Add(checkListBoxUpdateCommandOption);
             Controls.Add(checkBoxRestore);
             Controls.Add(checkBoxSelectAll);

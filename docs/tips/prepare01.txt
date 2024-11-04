@@ -1,0 +1,46 @@
+#equipType  None=0, Good=1, Weapon=2, Protector=3, Accessory=4, Gem=5
+@@et=4
+2160;Lord of Blood's Exultation;鲜血君王的欢愉
+2170;Kindred of Rot's Exultation;腐败眷属的欢愉
+2180;Claw Talisman;钩爪护符
+3001;Graven-Mass Talisman;魔法师块护符
+1042;Erdtree's Favor +2;黄金树的恩惠＋２
+2081;Rotten Winged Sword Insignia;腐败翼剑徽章
+4012;Spelldrake Talisman +2;魔力龙徽护符＋２
+4032;Boltdrake Talisman +2;雷龙徽护符＋２
+4022;Flamedrake Talisman +2;火龙徽护符＋２
+4042;Haligdrake Talisman +2;圣龙徽护符＋２
+4052;Pearldrake Talisman +2;珍珠龙徽护符＋２
+5030;Taker's Cameo;掠夺浮雕坠饰
+5040;Godskin Swaddling Cloth;神皮襁褓
+3050;Flock's Canvas Talisman;群聚信徒的立誓布
+6110;Ancestral Spirit's Horn;祖灵角
+1231;Shard of Alexander;亚历山大的碎片
+4003;Dragoncrest Greatshield Talisman;龙徽大盾护符
+
+@@et=1
+6320;Bloodflame Blade;血焰刀刃
+6040;Flame, Cleanse Me;火焰的疗愈啊
+6050;Flame, Grant Me Strength;火焰啊，赐予我力量！
+2160;Pureblood Knight's Medal;纯血骑士勋章
+
+
+@@et=2
+#5040000;Antspur Rapier;蚁刺细剑
+3100000;Sacred Relic Sword;神躯化剑
+2090000;Inseparable Sword;紧密孪生剑
+#2070000;Golden Epitaph;黄金墓碑
+9020000;Hand of Malenia;玛莲妮亚的义手刀
+#9060000;Moonveil;名刀月隐
+9010000;Nagakiba;长牙
+#6010000;Godskin Stitcher;神皮缝针
+34080000;Dragon Communion Seal;龙飨印记
+32130000;Fingerprint Stone Shield;指纹石盾
+18030000;Banished Knight's Halberd;失乡骑士戟
+
+
+@@et=5
+#30500;Ash of War: Carian Retaliation;战灰：卡利亚式奉还
+10000;Ash of War: Lion's Claw;战灰：狮子斩
+50500;Ash of War: Flame of the Redmanes;战灰：红狮子火焰
+60100;Ash of War: Royal Knight's Resolve;战灰：侍王骑士的决心

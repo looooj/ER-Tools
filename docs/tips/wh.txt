@@ -1,0 +1,18 @@
+@@et=1
+@@name=wh
+
+
+@@getItemFlagId=65610
+8970;Iron Whetblade;铁制砥石刀
+
+@@getItemFlagId=65640
+8971;Red-Hot Whetblade;灼热砥石刀
+
+@@getItemFlagId=65660
+8972;Sanctified Whetblade;神圣砥石刀
+
+@@getItemFlagId=65680
+8973;Glintstone Whetblade;辉石砥石刀
+
+@@getItemFlagId=65720
+8974;Black Whetblade;漆黑砥石刀

@@ -1,0 +1,22 @@
+@@name=bb
+@@et=1
+
+8910;Pidia's Bell Bearing;毕迪的铃珠
+8911;Seluvis's Bell Bearing;赛尔维斯的铃珠
+8912;Patches' Bell Bearing;帕奇的铃珠
+8913;Sellen's Bell Bearing;瑟濂的铃珠
+8917;Miriel's Bell Bearing;米利耶的铃珠
+8918;Gostoc's Bell Bearing;葛托克的铃珠
+8921;Nomadic Merchant's Bell Bearing [1];流浪商人的铃珠【１】
+8923;Nomadic Merchant's Bell Bearing [3];流浪商人的铃珠【３】
+8926;Isolated Merchant's Bell Bearing [1];隐居商人的铃珠【１】
+8927;Isolated Merchant's Bell Bearing [2];隐居商人的铃珠【２】
+8929;Hermit Merchant's Bell Bearing [1];遁世商人的铃珠【１】
+8932;Nomadic Merchant's Bell Bearing [9];流浪商人的铃珠【９】
+8935;Isolated Merchant's Bell Bearing [3];隐居商人的铃珠【３】
+8936;Hermit Merchant's Bell Bearing [2];遁世商人的铃珠【２】
+8937;Abandoned Merchant's Bell Bearing;见弃商人的铃珠
+8938;Hermit Merchant's Bell Bearing [3];遁世商人的铃珠【３】
+8939;Imprisoned Merchant's Bell Bearing;受囚商人的铃珠
+8942;Blackguard's Bell Bearing;流氓的铃珠
+8944;Gowry's Bell Bearing;格威的铃珠

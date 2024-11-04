@@ -1,0 +1,62 @@
+﻿10410;Scadutree Blessing;幽影树庇佑
+10411;Revered Spirit Ash Blessing;灵灰庇佑
+40382;Keyboard Only;键盘
+40383;Keyboard and Mouse;键盘与鼠标
+40524;Recent Items;最近获得的道具
+60180;Hand-to-Hand;格斗术
+60181;Perfume Bottle;调香瓶
+60182;Thrusting Shield;突刺盾
+60183;Throwing Blade;投掷剑
+60184;Backhand Blade;反手剑
+60185;Light Greatsword;轻大剑
+60186;Great Katana;大刀
+60187;Beast Claw;兽爪
+63051;Usable on hand-to-hand weapons;能在格斗术类武器使用
+63052;Usable on perfume bottles;能在调香瓶类武器使用
+63053;Usable on thrusting shields;能在突刺盾类武器使用
+63054;Usable on throwing blades;能在投掷剑类武器使用
+63055;Usable on backhand blades;能在反手剑类武器使用
+63056;Usable on light greatswords;能在轻大剑类武器使用
+63057;Usable on great katana;能在大刀类武器使用
+63058;Usable on beast claws;能在兽爪类武器使用
+63060;Usable on large and colossal swords;能在大型、特大型的剑类武器使用
+80020;Hefty Cracked Pot;大龟裂壶
+110600;Display;显示配置
+110601;Mark New Items;初次获得道具的标示
+110603;Show Recent Items Tab;最近获得道具的标签
+110700;Sound;声音配置
+111024;Map Menu Cursor Movement;地图选单的游标移动方式
+111025;Target Changing Sensitivity;切换锁定目标的阈值
+225001;Dragon Communion: Bayle;贝勒的龙飨
+225011;Offerings;供品
+241337;Scadu Altus;幽影亚坛
+241338;Cerulean Coast;青蓝海岸
+241339;Foot of the Jagged Peak;尖刺山的山脚
+241340;Jagged Peak;尖刺山
+241341;Charo's Hidden Grave;卡罗隐藏墓地
+241342;Ancient Ruins of Rauh;劳弗古遗迹
+241343;Scaduview;望影露台
+241344;Abyssal Woods;谷底森林
+241345;Belurat, Tower Settlement;“塔之镇”贝瑞特
+241346;Enir-Ilim;艾尼尔·伊利姆
+241347;Shadow Keep;幽影城
+241348;Shadow Keep, Church District;幽影城（教区）
+241349;Specimen Storehouse;物种保藏库
+241350;Stone Coffin Fissure;石棺大洞
+241351;Midra's Manse;米德拉府邸
+241352;Castle Ensis;恩希斯城
+241353;Gravesite Plain;墓地平原
+241354;Rauh Base;劳弗下方
+241417;Gravesite Plain;墓地平原
+241418;Scadu Altus;幽影亚坛
+241419;Land of the Tower;塔之地
+241420;Shadow Keep;幽影城
+241500;Map Functions Menu;地图功能选单
+241501;Multiplayer Status Display;多人联机游玩状态
+241502;Summoning Pool List;记号聚集处一览
+241503;View Controls;控制说明
+241504;Menu Explanation;选单说明
+241600;Summoning Pool List;记号聚集处一览
+280060;Menu;选单
+280600;Map;地图
+331340;HEART STOLEN;HEART STOLEN

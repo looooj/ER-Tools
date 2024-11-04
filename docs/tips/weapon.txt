@@ -1,1 +1,4 @@
+@@name=wp
+@@et=2
+
 3100000;Sacred Relic Sword;神躯化剑

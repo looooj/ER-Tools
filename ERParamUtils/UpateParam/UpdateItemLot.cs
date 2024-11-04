@@ -13,7 +13,9 @@ namespace ERParamUtils.UpdateParam
 
         string paramName = "";
         int currentEquipType = -1;
-
+        int currentLotIndex = -1;
+        int currentLotCount = 1;
+        int currentGetItemFlagId = -1;
         public UpdateItemLot(string paramName)
         {
             this.paramName = paramName;
@@ -26,6 +28,14 @@ namespace ERParamUtils.UpdateParam
             return item;
         }
 
+        public UpdateCommandItem CreateItem(string rowId)
+        {
+            UpdateCommandItem item = new();
+            item.ParamName = paramName;
+            item.RowId = int.Parse(rowId); ;
+            return item;
+        }
+
         public void Proc(string line, UpdateCommand updateCommand)
         {
 
@@ -34,8 +44,31 @@ namespace ERParamUtils.UpdateParam
                 string[] ss = line.Split('=');
 
                 currentEquipType = Int32.Parse(ss[1]);
+                currentLotCount = 1;
                 return;
             }
+
+            if (line.StartsWith("@@index="))
+            {
+                string[] ss = line.Split('=');
+                currentLotCount = 1;
+                currentLotIndex = Int32.Parse(ss[1]);
+                return;
+            }
+
+            if (line.StartsWith("@@count="))
+            {
+                string[] ss = line.Split('=');
+                currentLotCount = Int32.Parse(ss[1]);
+                return;
+            }
+
+            if (line.StartsWith("@@getItemFlagId")) {
+                string[] ss = line.Split('=');
+                currentGetItemFlagId = Int32.Parse(ss[1]);
+                return;
+            }
+
 
             if (line.StartsWith("#"))
             {
@@ -59,31 +92,12 @@ namespace ERParamUtils.UpdateParam
                 if (ss.Length >= 3)
                     lotIndex = Int32.Parse(ss[2]);
 
-                UpdateCommandItem item;
-                if (equipId > 0)
-                {
-                    item = CreateItem();
-                    item.RowId = int.Parse(rowId);
-                    item.Key = string.Format("lotItemId0{0}", lotIndex);
-                    item.Value = equipId + "";
-                    updateCommand.AddItem(item);
-                }
-
-                item = CreateItem();
-                item.RowId = int.Parse(rowId);
-                item.Key = string.Format("lotItemCategory0{0}", lotIndex);
-                item.Value = currentEquipType + "";
-
-                int lotCount = 1;
+                int lotCount = currentLotCount;
 
                 if (ss.Length >= 4)
                 {
                     lotCount = Int32.Parse(ss[3]);
                 }
-                item = CreateItem();
-                item.RowId = int.Parse(rowId);
-                item.Key = string.Format("lotItemNum0{0}", lotIndex);
-                item.Value = lotCount + "";
 
                 int lotPoint = 1000;
 
@@ -91,11 +105,52 @@ namespace ERParamUtils.UpdateParam
                 {
                     lotPoint = Int32.Parse(ss[4]);
                 }
-                item = CreateItem();
-                item.RowId = int.Parse(rowId);
-                item.Key = string.Format("lotItemBasePoint0{0}", lotIndex);
-                item.Value = lotPoint + "";
 
+                if (currentLotIndex == 0)
+                {
+                    procOneItem(updateCommand, rowId, 1, equipId + "", currentEquipType + "", lotCount, 1000);
+                    procOneItem(updateCommand, rowId, 2,  "0",  "0", 0, 0);
+
+                }
+                else
+                {
+                    procOneItem(updateCommand, rowId, lotIndex, equipId + "", currentEquipType + "", lotCount, lotPoint);
+                }
+
+
+
+
+            }
+        }
+
+        public void procOneItem(UpdateCommand updateCommand, string rowId, int index, string equipId, string equipType, int count, int point) {
+            UpdateCommandItem item = CreateItem(rowId);
+            item.Key = string.Format("lotItemId0{0}", index);
+            item.Value = equipId;
+            updateCommand.AddItem(item);
+
+            item = CreateItem(rowId);
+            item.Key = string.Format("lotItemCategory0{0}", index);
+            item.Value = equipType;
+            updateCommand.AddItem(item);
+
+
+            item = CreateItem(rowId);
+            item.Key = string.Format("lotItemNum0{0}", index);
+            item.Value = count + "";
+            updateCommand.AddItem(item);
+
+            item = CreateItem(rowId);
+            item.Key = string.Format("lotItemBasePoint0{0}", index);
+            item.Value = point + "";
+            updateCommand.AddItem(item);
+
+            if (currentGetItemFlagId > 0) {
+                item = CreateItem(rowId);
+                item.Key = string.Format("getItemFlagId");
+                item.Value = currentGetItemFlagId + "";
+                updateCommand.AddItem(item);
+                currentGetItemFlagId = -1;
             }
         }
 
@@ -428,12 +483,21 @@ namespace ERParamUtils.UpdateParam
                 int itemId = ParamRowUtils.GetCellInt(row, key, 0);
                 if (itemId < 1)
                 {
-                    if (i >= 2)
+                    if (i >= 3)
                         return;
                     continue;
                 }
                 key = "lotItemCategory0" + i;
                 int itemType = ParamRowUtils.GetCellInt(row, key, 0);
+                if (itemType < 1) {
+                    continue;
+                }
+
+                if (updateCommand.HaveOption(UpdateParamOption.ReplaceBellBearing))
+                    if (SpecEquipConfig.isBellBearing(itemId, (EquipType)itemType))
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
 
 
                 if (updateCommand.HaveOption(UpdateParamOption.ReplaceFinger))
@@ -454,33 +518,49 @@ namespace ERParamUtils.UpdateParam
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
 
+                //for cer mod
+                if (updateCommand.HaveOption(UpdateParamOption.IncRemnant))
+                {
+                    if (SpecEquipConfig.IsRemnant(itemId, (EquipType)itemType))
+                    {
+                        updateCommand.AddItem(row, "lotItemNum0" + i, 5);
+                    }
+                    if (SpecEquipConfig.IsPhysickRemnant(itemId, (EquipType)itemType))
+                    {
+                        updateCommand.AddItem(row, "lotItemNum0" + i, 5);
+                    }
 
+                }
 
                 if (updateCommand.HaveOption(UpdateParamOption.ReplaceLordRune))
                 {
                     if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
                     {
                         if (itemId < 2919)
+                        {
                             updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        }
+
+                        if (itemId >= 2002951)
+                        {
+                            updateCommand.AddItem(row, "lotItemId0" + i, 2002960);
+                        }
                     }
                 }
                 else {
                     if (updateCommand.HaveOption(UpdateParamOption.ReplaceRune))
                         if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
                         {
-                            if (itemId < 2909)
-                                updateCommand.AddItem(row, "lotItemId0" + i, 2909);
+                            if (itemId < 2912) {
+                                updateCommand.AddItem(row, "lotItemId0" + i, 2912);
+                            }
+                            if (itemId >= 2002951)
+                            {
+                                updateCommand.AddItem(row, "lotItemId0" + i, 2002958);
+                            }
                         }
                 }
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceBolt))
-                    if (SpecEquipConfig.IsArrow(itemId, (EquipType)itemType))
-                    {
-                        //52000000;Bolt;弩箭
-                        //52080000;Lordsworn's Bolt;君王军弩箭
-                        //50000000;Arrow;箭矢
-                        if (itemId == 52000000 || itemId == 52080000)
-                            updateCommand.AddItem(row, "lotItemId0" + i, 50000000);
-                    }
+
 
                 //10010;Golden Seed;黄金种子
                 //10020; Sacred Tear; 圣杯露滴
@@ -488,22 +568,7 @@ namespace ERParamUtils.UpdateParam
                 
                 if (updateCommand.HaveOption(UpdateParamOption.ReplaceGoldenSeedSacredTear))
                     if ((itemId == 10010 || itemId == 10020) && itemType == (int)EquipType.Good)
-                    {
-                        /*
-                        //row id not correct 
-                        //1046380100 [Limgrave - Third Church of Marika] Sacred Tear 
-                        //1041380100 [Stormhill - Stormhill Shack] Golden Seed 
-                        if (row.ID == 1041380100) {
-                            //1041380100;Golden Seed
-                            updateCommand.AddItem(row, "lotItemNum01", 30);
-                            continue;
-                        }
-                        if (row.ID == 1046380100)
-                        {
-                            //1041380100;Sacred Tear 
-                            updateCommand.AddItem(row, "lotItemNum01", 12);
-                            continue;
-                        } */
+                    {                       
 
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }

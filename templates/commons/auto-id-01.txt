@@ -1,0 +1,32 @@
+435100100[Godrick Knight] Partisan
+435100101[Godrick Knight] Gilded Greatshield
+435100102[Godrick Knight] Godrick Knight Helm
+435100103[Godrick Knight] Godrick Knight Armor
+435100104[Godrick Knight] Godrick Knight Gauntlets
+435100105[Godrick Knight] Godrick Knight Greaves
+
+431100305[Godrick Soldier] Smithing Stone [1]
+431100304[Godrick Soldier] Godrick Soldier Greaves
+431100303[Godrick Soldier] Godrick Soldier Gauntlets
+431100302[Godrick Soldier] Tree-and-Beast Surcoat
+431100301[Godrick Soldier] Godrick Soldier Helm
+431100300[Godrick Soldier] Lordsworn's Shield
+
+431100010[Godrick Soldier] Lordsworn's Straight Sword
+431100011[Godrick Soldier] Godrick Soldier Helm
+431100012[Godrick Soldier] Tree-and-Beast Surcoat
+431100013[Godrick Soldier] Godrick Soldier Gauntlets
+431100014[Godrick Soldier] Godrick Soldier Greaves
+431100015[Godrick Soldier] Bolt
+431100016[Godrick Soldier] Lordsworn's Bolt
+431100017[Godrick Soldier] Smithing Stone [1]
+
+
+405000000[Kaiden Sellsword] Dismounter
+405000001[Kaiden Sellsword] Kaiden Helm
+405000002[Kaiden Sellsword] Kaiden Armor
+405000003[Kaiden Sellsword] Kaiden Gauntlets
+405000004[Kaiden Sellsword] Kaiden Trousers
+405000005[Kaiden Sellsword] Rowa Raisin
+405000006[Kaiden Sellsword] Sweet Raisin
+405000007[Kaiden Sellsword] Frozen Raisin

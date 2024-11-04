@@ -1,0 +1,13 @@
+﻿3000;Be brave. Show no fear.;展现无所畏惧的勇气吧。
+3010;Hit them where they're weakest;瞄准弱点。
+3050;Have mercy. For the spirited-away shamans.;怜悯那些被掳走的巫者吧。
+8100;It awaits inside;前有那家伙。
+8110;Turn back. While you are yet able;折返吧，折返吧。
+8120;Don't let it see you;别被那家伙发现。
+8130;Once you are seen, there is no escape;被发现之后，就逃不掉了。
+8140;It cannot even be touched;没办法触碰到那家伙。
+8150;Hide yourself. Make not a sound;躲起来，不要出声。
+8160;Quietly await your chance;静静等那家伙走开。
+8170;Combat is not an option;别妄想一战。
+8180;Crouch in the undergrowth;蹲进草丛里。
+8500;I shall find my center under the cascading waters;……去冲一下瀑布吧。

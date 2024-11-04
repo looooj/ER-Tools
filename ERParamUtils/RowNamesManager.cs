@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace ERParamUtils
 {
@@ -18,6 +19,16 @@ namespace ERParamUtils
             Id = id;
             Name = name;
         }
+    }
+
+    public class ShopLineupNameItem
+    {
+
+        public int BeginId = 0;
+        public int EndId = 0;
+        public string Prefix = "";
+
+
     }
 
 
@@ -50,6 +61,32 @@ namespace ERParamUtils
             }
             return names;
         }
+
+        public static List<ShopLineupNameItem> LoadShopLineupNames() {
+
+            List<ShopLineupNameItem> items = new List<ShopLineupNameItem>();
+
+            string fn = GlobalConfig.AssetsDir + @"\Config\ER\dlc-names\ShopLineupParam.xml";
+            XmlDocument doc = new XmlDocument();
+            doc.Load(fn);
+            var root = doc.DocumentElement;
+            if (root == null)
+                return items;
+
+            var nameEleList = root.GetElementsByTagName("name");
+            foreach (var ele in nameEleList) {
+
+                var xmlEle = ele as XmlElement;
+                ShopLineupNameItem item = new ShopLineupNameItem();
+                item.Prefix = xmlEle.GetAttribute("prefix");
+                item.BeginId = Int32.Parse(xmlEle.GetAttribute("begin"));
+                item.EndId = Int32.Parse(xmlEle.GetAttribute("end"));
+
+                items.Add(item);
+            }
+            return items;
+        }
+
 
 
         static void LoadEquipNames() {

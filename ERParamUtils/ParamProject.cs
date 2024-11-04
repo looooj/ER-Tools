@@ -44,7 +44,8 @@ namespace ERParamUtils
             CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
-        public void SetTemplateName(string name) {
+        public void SetTemplateName(string name)
+        {
             if (name == null || name == "")
                 name = ParamProjectTemplate.GetDefault();
             templateName = name;
@@ -89,7 +90,8 @@ namespace ERParamUtils
         }
 
 
-        public string GetParamErrors() {
+        public string GetParamErrors()
+        {
             return paramErrors;
         }
 
@@ -128,7 +130,8 @@ namespace ERParamUtils
             return defPairs;
         }
 
-        public void InitCopy(bool force) {
+        public void InitCopy(bool force)
+        {
             string path = GetRegulationPath();
             string orgPath = GetOrginalRegulationPath();
             string modPath = GetModRegulationPath();
@@ -305,7 +308,33 @@ namespace ERParamUtils
                         row.SetImpName(names[row.ID]);
                     }
                 }
+
+                ImpDlcNames(param);
             }
+
+        }
+
+        void ImpDlcNames(SoulsParam.Param param)
+        {
+
+            if (param.Name != ParamNames.ShopLineupParam)
+            {
+                return;
+            }
+
+            var items = RowNamesManager.LoadShopLineupNames();
+            foreach (SoulsParam.Param.Row row in param.Rows)
+            {
+                foreach (var item in items)
+                {
+
+                    if (row.ID >= item.BeginId && row.ID <= item.EndId)
+                    {
+                        row.SetImpName(item.Prefix);
+                    }
+                }
+            }
+
 
         }
 

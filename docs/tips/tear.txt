@@ -1,0 +1,24 @@
+#equipType  None=0, Good=1, Weapon=2, Protector=3, Accessory=4, Gem=5
+@@name=tear
+@@et=1
+
+11006;Speckled Hardtear;斑斓硬露滴
+11007;Crimson Bubbletear;红泡状露滴
+11008;Opaline Bubbletear;珍珠泡状露滴
+11010;Greenburst Crystal Tear;涌绿结晶露滴
+11011;Opaline Hardtear;珍珠硬露滴
+11013;Thorny Cracked Tear;连刺破露滴
+11018;Leaden Hardtear;铅化硬露滴
+11020;Crimsonwhorl Bubbletear;红漩泡状露滴
+11025;Cerulean Hidden Tear;蓝秘密露滴
+11026;Stonebarb Cracked Tear;岩刺破露滴
+11027;Purifying Crystal Tear;净血结晶露滴
+11028;Flame-Shrouding Cracked Tear;带火破露滴
+11029;Magic-Shrouding Cracked Tear;带魔力破露滴
+11030;Lightning-Shrouding Cracked Tear;带雷破露滴
+11031;Holy-Shrouding Cracked Tear;带圣破露滴
+
+#11021;Strength-knot Crystal Tear;力气瘤结晶露滴
+#11022;Dexterity-knot Crystal Tear;灵巧瘤结晶露滴
+11023;Intelligence-knot Crystal Tear;智力瘤结晶露滴
+11024;Faith-knot Crystal Tear;信仰瘤结晶露滴

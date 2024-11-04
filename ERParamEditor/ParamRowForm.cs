@@ -67,11 +67,16 @@ namespace ERParamEditor
             menuRow.Items.Add(new ToolStripMenuItem("FindRowByName", null, findRowName_Handler));
             menuRow.Items.Add(new ToolStripSeparator());
             menuRow.Items.Add(new ToolStripMenuItem("GotoRowName", null, gotoRowName_Handler));
-            menuRow.Items.Add(new ToolStripMenuItem("NextRow", null, nextRowName_Handler, Keys.F3));
+            menuRow.Items.Add(new ToolStripMenuItem("NextRow", null, nextRow_Handler, Keys.F3));
             menuRow.Items.Add(new ToolStripSeparator());
 
             menuRow.Items.Add(new ToolStripMenuItem("GotoRowId", null, gotoRowId_Handler));
             menuRow.Items.Add(new ToolStripSeparator());
+
+            menuRow.Items.Add(new ToolStripMenuItem("GotoEquipId", null, gotoEquipId_Handler));
+            menuRow.Items.Add(new ToolStripMenuItem("NextEquipId", null, nextRow_Handler, Keys.F3));
+            menuRow.Items.Add(new ToolStripSeparator());
+
 
 
             menuRow.Items.Add(new ToolStripMenuItem("CopyRow", null, copyRow_Handler));
@@ -212,6 +217,82 @@ namespace ERParamEditor
             dataGridViewRow.Rows[index].Selected = true;
         }
 
+        int startEquipIdIndex = 0;
+        int currentEquipId = -1;
+        int nextRowType = 0;
+
+        void nextRow_Handler(object? sender, EventArgs e) {
+
+            switch (nextRowType) {
+                case 1:
+                    nextEquipId_Handler(sender, e);
+                    return;
+                case 2:
+                    nextRowName_Handler(sender, e);
+                    return;
+
+            }
+        }
+
+
+        void gotoEquipId(int equipId)
+        {
+            if (startEquipIdIndex >= dataGridViewRow.Rows.Count)
+                startEquipIdIndex = 0;
+
+            for (int i = startEquipIdIndex; i < dataGridViewRow.Rows.Count; i++)
+            {
+                var row = (RowWrapper)dataGridViewRow.Rows[i].DataBoundItem;
+                var eqId = ParamRowUtils.GetCellInt(row.GetRow(), "equipId",-1);
+                if (eqId == equipId)
+                {
+                    scrollToRow(i);
+                    startEquipIdIndex = i + 1;
+                    return;
+                }
+                eqId = ParamRowUtils.GetCellInt(row.GetRow(), "lotItemId01", -1);
+                if (eqId == equipId)
+                {
+                    scrollToRow(i);
+                    startEquipIdIndex = i + 1;
+                    return;
+                }
+                eqId = ParamRowUtils.GetCellInt(row.GetRow(), "lotItemId02", -1);
+                if (eqId == equipId)
+                {
+                    scrollToRow(i);
+                    startEquipIdIndex = i + 1;
+                    return;
+                }
+                startEquipIdIndex = i;
+            }
+        }
+
+        private void gotoEquipId_Handler(object? sender, EventArgs e)
+        {
+            string text = "";
+            if (!InputDialog.InputBox("GotoEquipId", "EquipId", ref text))
+            {
+                return;
+            }
+
+            text = text.Trim();
+            //int rowId = 
+            if (!int.TryParse(text, out int equipId))
+                return;
+            currentEquipId = equipId;
+            startEquipIdIndex = 0;
+            nextRowType = 1;
+            gotoEquipId(equipId);
+        }
+
+        private void nextEquipId_Handler(object? sender, EventArgs e) {
+
+            gotoEquipId(currentEquipId);
+
+        }
+
+
         void gotoRowId(int rowId)
         {
 
@@ -225,6 +306,8 @@ namespace ERParamEditor
                 }
             }
         }
+
+
 
         private void gotoRowId_Handler(object? sender, EventArgs e)
         {
@@ -271,6 +354,7 @@ namespace ERParamEditor
             text = text.Trim();
             gotoRowNameText = text;
             gotoRowNameIndex = 0;
+            nextRowType = 2;
             gotoRowName(gotoRowNameText);
         }
 
@@ -280,6 +364,35 @@ namespace ERParamEditor
 
         }
 
+
+        private void findByEquipId(object? sender, EventArgs e) {
+            string text = "";
+            if (!InputDialog.InputBox("Find", "FindEquip", ref text))
+            {
+                return;
+            }
+            text = text.Trim();
+            var item = RowListManager.GetCurrent();
+            if (item == null)
+                return;
+
+            List<RowWrapper> rows = new();
+            foreach (RowWrapper row in item.Rows)
+            {
+                if (row.Name.Length < 1)
+                    continue;
+
+                if (row.Name.Contains(text))
+                {
+                    rows.Add(row);
+                    continue;
+                }
+
+            }
+
+            changeRows(RowListViewMode.FIND, rows);
+
+        }
 
         private void findRowName_Handler(object? sender, EventArgs e)
         {

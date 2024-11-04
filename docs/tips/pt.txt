@@ -1,0 +1,23 @@
+#equipType  None=0, Good=1, Weapon=2, Protector=3, Accessory=4, Gem=5
+@@name=pt
+@@et=3
+
+140000;Bull-Goat Helm;大山羊头盔
+140100;Bull-Goat Armor;大山羊铠甲
+140200;Bull-Goat Gauntlets;大山羊臂甲
+140300;Bull-Goat Greaves;大山羊腿甲
+
+180000;Black Knife Hood;黑刀风帽
+180100;Black Knife Armor;黑刀铠甲
+180200;Black Knife Gauntlets;黑刀臂甲
+180300;Black Knife Greaves;黑刀腿甲
+
+270000;Tree Sentinel Helm;大树守卫头盔
+270100;Tree Sentinel Armor;大树守卫铠甲
+270200;Tree Sentinel Gauntlets;大树守卫臂甲
+270300;Tree Sentinel Greaves;大树守卫腿甲
+
+360000;Fire Prelate Helm;火焰主教头盔
+360100;Fire Prelate Armor;火焰主教铠甲
+360200;Fire Prelate Gauntlets;火焰主教臂甲
+360300;Fire Prelate Greaves;火焰主教腿甲

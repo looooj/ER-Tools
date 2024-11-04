@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1;
+using SoulsFormats;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,7 +60,7 @@ namespace ERParamUtils.UpdateParam
 
             //650054;Castle Sol Rooftop;索尔城（屋顶）
             //610018;Waypoint Ruins Cellar;驿站街遗迹的地下室
-            
+
 
 
             //120400;Astel, Naturalborn of the Void;“黑暗弃子”艾丝缇
@@ -68,8 +70,23 @@ namespace ERParamUtils.UpdateParam
             //120500;Cocoon of the Empyrean;神人坠眠之茧
             //120100;Dragonkin Soldier of Nokstella;诺克史黛拉的龙人士兵
 
+            //200000; Theatre of the Divine Beast; 神兽舞台
+            //694005;Church of the Bud;花蕾教堂
+            //280000;Discussion Chamber;对谈室
+            //685003;Rest of the Dread Dragon;狂龙之席
+            //682002;Ensis Moongazing Grounds;恩希斯赏月地
+            //210001;Main Gate Plaza;正门广场
+            //210100;Messmer's Dark Chamber;梅瑟莫的暗室
+            //210007; Sunken Chapel; 沉水礼拜堂
+
+            //692000;Scaduview;望影露台
+            //220000;Garden of Deep Purple;深紫花园
+            //694005; Church of the Bud; 花蕾教堂
+            //696000; Scadutree Base; 幽影树的树脚
+            //200100;Gate of Divinity;神之门
 
             int[] skipRowIds = {
+                111000,
                 100001,100000,
                 110000,110001,350000,190000,
                 150000,150005,160000,160001,160006,
@@ -78,7 +95,9 @@ namespace ERParamUtils.UpdateParam
                 640014,640010,640007,
                 620047,620062,620043,
                 140000,140001,
-                120400,120300,120201,120200,120500,120100
+                120400,120300,120201,120200,120500,120100,
+                200000,694005,280000,685003,682002,210001,210100,210007,
+                692000,220000,694005,696000,200100
                };
 
             for (int i = 0; i < param.Rows.Count; i++)
@@ -96,6 +115,7 @@ namespace ERParamUtils.UpdateParam
             }
         }
     
+        /* 
         public static void UnlockGlaceDefault(UpdateCommand updateCommand) {
 
             //111000;Table of Lost Grace;大赐福
@@ -103,7 +123,7 @@ namespace ERParamUtils.UpdateParam
             foreach (int rowId in defaultIds) {
                 updateCommand.AddItem(ParamNames.BonfireWarpParam, rowId, eventflagIdKey, 71801);
             }
-        }
+        }*/
 
 
         //MapDefaultInfoParam

@@ -1,0 +1,15 @@
+
+@@et=1
+@@name=test
+@@count=1
+
+10160;Somber Smithing Stone [1];失色锻造石【１】
+10161;Somber Smithing Stone [2];失色锻造石【２】
+10162;Somber Smithing Stone [3];失色锻造石【３】
+10163;Somber Smithing Stone [4];失色锻造石【４】
+10164;Somber Smithing Stone [5];失色锻造石【５】
+10165;Somber Smithing Stone [6];失色锻造石【６】
+10166;Somber Smithing Stone [7];失色锻造石【７】
+10167;Somber Smithing Stone [8];失色锻造石【８】
+
+#10200;Somber Smithing Stone [9];失色锻造石【９】

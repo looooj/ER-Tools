@@ -1,0 +1,47 @@
+@@name=ss
+@@et=1
+@@count=360
+10100;Smithing Stone [1];锻造石【１】
+10101;Smithing Stone [2];锻造石【２】
+10102;Smithing Stone [3];锻造石【３】
+10103;Smithing Stone [4];锻造石【４】
+10104;Smithing Stone [5];锻造石【５】
+10105;Smithing Stone [6];锻造石【６】
+10106;Smithing Stone [7];锻造石【７】
+10107;Smithing Stone [8];锻造石【８】
+
+@@count=30
+10160;Somber Smithing Stone [1];失色锻造石【１】
+10161;Somber Smithing Stone [2];失色锻造石【２】
+10162;Somber Smithing Stone [3];失色锻造石【３】
+10163;Somber Smithing Stone [4];失色锻造石【４】
+10164;Somber Smithing Stone [5];失色锻造石【５】
+10165;Somber Smithing Stone [6];失色锻造石【６】
+10166;Somber Smithing Stone [7];失色锻造石【７】
+10167;Somber Smithing Stone [8];失色锻造石【８】
+10200;Somber Smithing Stone [9];失色锻造石【９】
+
+@@count=30
+
+
+#10909;Great Grave Glovewort;大朵墓地铃兰
+
+10910;Ghost Glovewort [1];灵依墓地铃兰【１】
+10911;Ghost Glovewort [2];灵依墓地铃兰【２】
+10912;Ghost Glovewort [3];灵依墓地铃兰【３】
+10913;Ghost Glovewort [4];灵依墓地铃兰【４】
+10914;Ghost Glovewort [5];灵依墓地铃兰【５】
+10915;Ghost Glovewort [6];灵依墓地铃兰【６】
+10916;Ghost Glovewort [7];灵依墓地铃兰【７】
+10917;Ghost Glovewort [8];灵依墓地铃兰【８】
+10918;Ghost Glovewort [9];灵依墓地铃兰【９】
+10919;Great Ghost Glovewort;大朵灵依墓地铃兰
+
+
+#10140;Ancient Dragon Smithing Stone;古龙岩锻造石
+#10168;Somber Ancient Dragon Smithing Stone;古龙岩失色锻造石
+
+@@count=90
+2919;Lord's Rune;王之卢恩
+
+

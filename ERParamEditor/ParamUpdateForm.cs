@@ -101,6 +101,7 @@ namespace ERParamEditor
         private void ExecUpdatePublish(string? msg, bool publish)
         {
 
+            Tools.CleanUpdateLog(30);
 
             if (msg != null)
             {
