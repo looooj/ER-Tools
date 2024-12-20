@@ -16,6 +16,10 @@ namespace ERParamUtils
             }
             var d = proj.GetUpdateDir() + "\\logs";
 
+            if (!Directory.Exists(d)) {
+                return;
+            }
+
             var logDirList = Directory.GetDirectories(d);
 
             var now = DateTime.Now;
