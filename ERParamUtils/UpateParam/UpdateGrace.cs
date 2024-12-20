@@ -85,6 +85,8 @@ namespace ERParamUtils.UpdateParam
             //696000; Scadutree Base; 幽影树的树脚
             //200100;Gate of Divinity;神之门
 
+            //111000;Roundtable Hold;圆桌厅堂
+
             int[] skipRowIds = {
                 111000,
                 100001,100000,

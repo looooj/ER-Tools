@@ -545,6 +545,7 @@ namespace ERParamUtils.UpdateParam
                         {
                             updateCommand.AddItem(row, "lotItemId0" + i, 2002960);
                         }
+                        updateCommand.AddItem(row, "lotItemNum0" + i, 10);
                     }
                 }
                 else {
@@ -558,6 +559,7 @@ namespace ERParamUtils.UpdateParam
                             {
                                 updateCommand.AddItem(row, "lotItemId0" + i, 2002958);
                             }
+                            updateCommand.AddItem(row, "lotItemNum0" + i, 10);
                         }
                 }
 

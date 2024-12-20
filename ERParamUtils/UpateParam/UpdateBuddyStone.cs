@@ -42,11 +42,14 @@ namespace ERParamUtils.UpdateParam
             {
 
                 SoulsParam.Param.Row row = param.Rows[i];
-                if (row.ID < 200000 || row.ID > 300000)
-                    continue;
 
-                updateCommand.AddItem(row, "consumeMP", "-1");
-                updateCommand.AddItem(row, "consumeHP", "-1");
+                if ( (row.ID >= 200000 && row.ID <= 300000)
+                   || (row.ID >= 2200000 && row.ID <= 2220010) )
+                {
+
+                    updateCommand.AddItem(row, "consumeMP", "-1");
+                    updateCommand.AddItem(row, "consumeHP", "-1");
+                }
             }
 
         }
