@@ -118,6 +118,39 @@ namespace ERParamUtils
 
 
 
+        public static List<ParamProject> GetProjectList2() {
+
+            List<ParamProject> list = new();
+
+
+            var dirs = Directory.GetDirectories(GlobalConfig.GetProjectsDir(), "*.*");
+
+            foreach (string d in dirs)
+            {
+
+                if (Path.GetFileName(d).StartsWith("_"))
+                {
+                    continue;
+                }
+
+                string fn = d + @"\" + ParamProject.ConfigName;
+
+                if (File.Exists(fn))
+                {
+                    string name = Path.GetFileName(d);
+                    var proj = new ParamProject(name);
+                    if (proj == null)
+                        continue;
+
+                    proj.LoadConfig();
+                    list.Add(proj);
+                }
+            }
+
+            return list;
+
+
+        }
         public static List<string> GetProjectList()
         {
 

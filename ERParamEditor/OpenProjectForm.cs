@@ -20,14 +20,17 @@ namespace ERParamEditor
         public bool initCopy() {
             return initCopyCheckBox.Checked;
         }
+        List<ParamProject> paramProjects = new List<ParamProject>();
+
         private void OpenProjectForm_Load(object sender, EventArgs e)
         {
             FormBorderStyle = FormBorderStyle.FixedSingle;
 
-            List<string> projectList = ParamProjectManager.GetProjectList();
-            foreach (string name in projectList)
+            paramProjects = ParamProjectManager.GetProjectList2();
+            foreach (var proj in paramProjects)
             {
-                listBoxProject.Items.Add(name);
+                var s = proj.GetName() + " (" + proj.GetModRegulationPath() + ")";
+                 listBoxProject.Items.Add(s);
 
             }
             buttonOk.Enabled = false;
@@ -44,8 +47,9 @@ namespace ERParamEditor
 
             if (listBoxProject.SelectedItem == null)
                 return;
+            int itemIndex = listBoxProject.SelectedIndex;
 
-            ProjectName = listBoxProject.SelectedItem.ToString();
+            ProjectName =  paramProjects[itemIndex].GetName();
             DialogResult = DialogResult.OK;
             Close();
         }
@@ -62,8 +66,11 @@ namespace ERParamEditor
             if (listBoxProject.SelectedItem == null)
                 return;
 
+            int itemIndex = listBoxProject.SelectedIndex;
 
-            ProjectName = listBoxProject.SelectedItem.ToString();
+            ProjectName = paramProjects[itemIndex].GetName();
+
+            //ProjectName = listBoxProject.SelectedItem.ToString();
             var qmsg = "Are you sure delete " + ProjectName;
 
             var ret = MessageBox.Show(qmsg, "", MessageBoxButtons.YesNo);
