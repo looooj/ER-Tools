@@ -1,7 +1,30 @@
+#WEAPON=0, ARMOR=1, RING=2, GOOD=3, ASH=4
+#rowId;equipId;equipName;equipType;price;amount
+
+#2160;Pureblood Knight's Medal;纯血骑士勋章
+#100515[Merchant Kale] Chain Coif
+100515;2160;Pureblood Knight's Medal;3;1000;1
+
 #10010;Golden Seed;黄金种子
-#100516,[Merchant Kale] Chain Armor
+#100516[Merchant Kale] Chain Armor
 100516;10010;Golden Seed;3;200;-1
 
 #10020;Sacred Tear;圣杯露滴
-#100517,[Merchant Kale] Chain Gauntlets
+#100517[Merchant Kale] Chain Gauntlets
 100517;10020;Sacred Tear;3;200;-1
+
+
+#100518[Merchant Kale] Chain Leggings
+
+
+
+
+#9020000;Hand of Malenia;玛莲妮亚的义手刀
+#100519[Merchant Kale] Arrow
+100519;9020000;Hand of Malenia;0;2000;1
+
+#3100000;Sacred Relic Sword;神躯化剑
+#100520[Merchant Kale] Bolt
+100520;3100000;Sacred Relic Sword;0;2000;1
+
+

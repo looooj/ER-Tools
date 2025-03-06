@@ -1,0 +1,3 @@
+#Arsenal Charm
+@@id=310300,310320
+equipWeightChangeRate;1.19

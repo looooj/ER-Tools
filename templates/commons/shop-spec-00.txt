@@ -1,0 +1,162 @@
+#WEAPON=0, ARMOR=1, RING=2, GOOD=3, ASH=4
+#rowId;equipId;equipName;equipType;price;amount
+
+#Merchant Kale
+
+#2160;Pureblood Knight's Medal;纯血骑士勋章
+#100515[Merchant Kale] Chain Coif
+100515;2160;Pureblood Knight's Medal;3;1000;1
+
+#10010;Golden Seed;黄金种子
+#100516[Merchant Kale] Chain Armor
+100516;10010;Golden Seed;3;200;-1
+
+#10020;Sacred Tear;圣杯露滴
+#100517[Merchant Kale] Chain Gauntlets
+100517;10020;Sacred Tear;3;200;-1
+
+
+#100518[Merchant Kale] Chain Leggings
+
+
+
+#9020000;Hand of Malenia;玛莲妮亚的义手刀
+#100519[Merchant Kale] Arrow
+100519;9020000;Hand of Malenia;0;2000;1
+
+#3100000;Sacred Relic Sword;神躯化剑
+#100520[Merchant Kale] Bolt
+100520;3100000;Sacred Relic Sword;0;2000;1
+
+
+
+##Merchant - Coastal Cave
+
+#1231;Shard of Alexander;亚历山大的碎片
+#100586[Merchant - Coastal Cave] Club
+100586;1231;Shard of Alexander;2;2000;1
+
+#4003;Dragoncrest Greatshield Talisman;龙徽大盾护符
+#100587[Merchant - Coastal Cave] Broadsword
+100587;4003;Dragoncrest Greatshield Talisman;2;2000;1
+
+#32130000;Fingerprint Stone Shield;指纹石盾
+#100588[Merchant - Coastal Cave] Iron Roundshield
+100588;32130000;Fingerprint Stone Shield;0;2000;1
+
+
+#100589[Merchant - Coastal Cave] Shortbow
+#100590[Merchant - Coastal Cave] Arrow
+#100591[Merchant - Coastal Cave] Bolt
+
+
+
+
+#Merchant - North Limgrave
+
+
+
+#2090;Deathroot;死根
+#100543[Merchant - North Limgrave] Halberd 
+100543;2090;Deathroot;3;100;10
+
+#1235;Raw Meat Dumpling;生肉丸
+#100544[Merchant - North Limgrave] Arrow
+100544;1235;Deathroot;3;100;-1
+
+#9501;Ritual Pot;仪式壶
+#100545[Merchant - North Limgrave] Bolt
+100545;9501;Deathroot;3;100;20
+
+#9510;Perfume Bottle;调香瓶
+#100546[Merchant - North Limgrave] Bandit Mask
+100546;9510;Deathroot;3;100;20
+
+#1290;Starlight Shards;星光碎片
+#100547[Merchant - North Limgrave] Smithing Stone [1]
+100547;1290;Starlight Shards;3;100;-1
+
+
+
+#Twin Maiden Husks
+
+#101859[Twin Maiden Husks] Memory Stone
+
+
+
+#101865[Twin Maiden Husks] Longsword
+#101866[Twin Maiden Husks] Scimitar
+#101867[Twin Maiden Husks] Battle Axe
+#101868[Twin Maiden Husks] Mace
+#101869[Twin Maiden Husks] Short Spear
+#101870[Twin Maiden Husks] Rapier
+
+
+#41060000;Pulley Bow;滑轮弓
+#101872[Twin Maiden Husks] Longbow
+101872;41060000;Pulley Bow;0;2000;1
+
+#42000000;Lion Greatbow;狮子大弓
+#101873[Twin Maiden Husks] Heater Shield
+101873;42000000;Lion Greatbow;0;2000;1
+
+#41070000;Black Bow;黑弓
+#101874[Twin Maiden Husks] Knight Helm
+101874;41070000;Black Bow;0;2000;1
+
+#12160000;Envoy's Long Horn;众使者的长笛子
+#101875[Twin Maiden Husks] Knight Armor
+101875;12160000;Envoy's Long Horn;0;2000;1
+
+
+#10140;Ancient Dragon Smithing Stone;古龙岩锻造石
+#101876[Twin Maiden Husks] Knight Gauntlets 
+101876;10140;SAncient Dragon Smithing Stone;3;2000;-1
+
+#10168;Somber Ancient Dragon Smithing Stone;古龙岩失色锻造石
+#101877[Twin Maiden Husks] Knight Greaves 
+101877;10168;Somber Ancient Dragon Smithing Stone;3;2000;-1
+
+
+
+
+
+
+
+##dlc
+
+
+
+
+#2010000;Scadutree Fragment;幽影树碎片
+#2010100;Revered Spirit Ash;灵灰
+#2009500;Hefty Cracked Pot;大龟裂壶
+
+#102250 Moore's Bell Bearing
+102250;2010000;Scadutree Fragment;3;2000;-1
+#102251 Moore's Bell Bearing
+102251;2010100;Revered Spirit Ash;3;2000;-1
+
+#102252 Moore's Bell Bearing
+
+
+
+
+#Merchant - Academy of Raya Lucaria
+
+
+#140000;Bull-Goat Helm;大山羊头盔
+#100691[Merchant - Academy of Raya Lucaria] Blue Cloth Cowl
+100691;140000;Bull-Goat Helm;1;2000;1
+
+#140100;Bull-Goat Armor;大山羊铠甲
+#100692[Merchant - Academy of Raya Lucaria] Blue Cloth Vest
+100692;140100;Bull-Goat Armor;1;2000;1
+
+#140200;Bull-Goat Gauntlets;大山羊臂甲
+#100693[Merchant - Academy of Raya Lucaria] Warrior Gauntlets
+100693;140200;Bull-Goat Gauntlets;1;2000;1
+
+#140300;Bull-Goat Greaves;大山羊腿甲
+#100694[Merchant - Academy of Raya Lucaria] Warrior Greaves
+100694;140300;Bull-Goat Greaves;1;2000;1

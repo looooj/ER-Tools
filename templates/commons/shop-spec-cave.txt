@@ -1,0 +1,15 @@
+#1231;Shard of Alexander;亚历山大的碎片
+#100586[Merchant - Coastal Cave] Club
+100586;1231;Shard of Alexander;2;2000;1
+
+#4003;Dragoncrest Greatshield Talisman;龙徽大盾护符
+#100587[Merchant - Coastal Cave] Broadsword
+100587;4003;Dragoncrest Greatshield Talisman;2;2000;1
+
+
+#100588[Merchant - Coastal Cave] Iron Roundshield
+#100589[Merchant - Coastal Cave] Shortbow
+#100590[Merchant - Coastal Cave] Arrow
+
+#100591[Merchant - Coastal Cave] Bolt
+100591;207000;Mimic Tear Ashes;3;2000;1
