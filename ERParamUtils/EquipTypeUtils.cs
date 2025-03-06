@@ -31,7 +31,25 @@ namespace ERParamUtils
     public class EquipTypeUtils
     {
 
-        public static EquipType ConvertShopEquipType(ShopEquipType shopEquipType) {
+        public static ShopEquipType ConvertToShopEquipType(EquipType equipType) {
+
+            switch (equipType) {
+                case EquipType.Accessory:
+                    return ShopEquipType.Accessory;
+                case EquipType.Weapon:
+                    return ShopEquipType.Weapon;
+                case EquipType.Protector:
+                    return ShopEquipType.Protector;
+                case EquipType.Good:
+                    return ShopEquipType.Good;
+                case EquipType.Gem:
+                    return ShopEquipType.Ash;
+
+            }
+            return ShopEquipType.None;
+        }
+
+        public static EquipType ConvertFromShopEquipType(ShopEquipType shopEquipType) {
 
             switch (shopEquipType) {
                 case ShopEquipType.Weapon:
