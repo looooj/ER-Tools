@@ -157,7 +157,7 @@ namespace ERParamUtils
         static public string FindShopEquipName(int id, int shopEquipType) {
 
           
-            var equipType = EquipTypeUtils.ConvertShopEquipType((ShopEquipType)shopEquipType);
+            var equipType = EquipTypeUtils.ConvertFromShopEquipType((ShopEquipType)shopEquipType);
 
             List<int> equipTypes = new();
             switch (equipType) {

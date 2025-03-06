@@ -515,6 +515,8 @@ namespace ERParamEditor
             File.WriteAllText(path, r);
         }
 
+        
+
         public static void Run()
         {
 
@@ -523,6 +525,7 @@ namespace ERParamEditor
             //GenItemText();
             //GenMenuText();
             //Tools.CleanUpdateLog(5);
+            Tests2.FindAlbinaurics();
         }
     }
 }

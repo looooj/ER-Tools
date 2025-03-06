@@ -1,4 +1,5 @@
 ﻿
+using ERParamUtils.UpateParam;
 using SoulsFormats;
 using System.Reflection.Metadata.Ecma335;
 
@@ -401,12 +402,14 @@ namespace ERParamUtils.UpdateParam
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDeathroot));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDragonHeart));
 
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGiantCrowSoul));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGiantCrowSoul));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceLordRune));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.DoubleGetSoul));
+
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.IncRemnant));
-            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.RemoveRemembranceRequire));
         }
 
@@ -426,7 +429,7 @@ namespace ERParamUtils.UpdateParam
                 paramProject.Restore();
             }
 
-            UpdateShopLineupParamRecipe.Init();
+            UpdateShopLineupParamRecipe.Init(paramProject);
 
             UpdateCommand updateCommand = new UpdateCommand(paramProject);
             updateCommand.AddOption(options.UpdateCommandOptions);
@@ -447,6 +450,7 @@ namespace ERParamUtils.UpdateParam
             }
 
             //updateCommand.SetOption(UpdateParamOption.ReplaceTalismanPouch, 1);
+            UpdateShopLineupParamRecipe.AddBellBearing(paramProject, updateCommand);
 
             if (updateCommand.HaveOption(UpdateParamOption.InitMagicSlotAccSlot))
             {
@@ -464,6 +468,11 @@ namespace ERParamUtils.UpdateParam
                 UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
             }
 
+            if (updateCommand.HaveOption(UpdateParamOption.DoubleGetSoul))
+            {
+                UpdateSoul.Proc(paramProject, updateCommand);
+            }
+
             if (updateCommand.HaveOption(UpdateParamOption.ReplaceGiantCrowSoul))
             {
 
@@ -472,10 +481,12 @@ namespace ERParamUtils.UpdateParam
                     UpdateCommandItem.Create(ParamNames.NpcParam, 45610068, "getSoul", "10000000"));
 
             }
-            //if (updateCommand.HaveOption(UpdateParamOption.AddWhetblade))
-            //{
-            //    UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
-            //}
+
+
+            if (updateCommand.HaveOption(UpdateParamOption.AddWhetblade))
+            {
+                UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
+            }
 
 
             //UpdateGrace.UnlockGlaceDefault(updateCommand);

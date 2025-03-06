@@ -69,6 +69,9 @@ namespace ERParamUtils.UpdateParam
            //3030;Cuckoo Glintstone;杜鹃辉石
            // 3050;Glintstone Scrap;崩裂辉石
           //3051;Large Glintstone Scrap;大块崩裂辉石
+          //2008033;Larval Tear;泪滴幼体
+          //8185;Larval Tear;泪滴幼体
+
 
          */
         public static void AddDefault()
@@ -92,7 +95,7 @@ namespace ERParamUtils.UpdateParam
                 new int[] { 9500, 9510, 820, 830 });
 
 
-            AddSpec(10, new int[] { 9501, 10070, 8185, 8193, 2090 });
+            AddSpec(10, new int[] { 9501, 10070, 8185, 2008033, 8193, 2090 });
 
 
             AddSpec(4, new int[] { 10030, 10040, 8186 });

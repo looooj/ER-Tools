@@ -171,7 +171,7 @@ namespace ERParamUtils.UpdateParam
 
                 int equipId = GetEquipId(row);
                 ShopEquipType shopEquipType = (ShopEquipType)GetEquipType(row);
-                EquipType equipType = EquipTypeUtils.ConvertShopEquipType((ShopEquipType)shopEquipType);
+                EquipType equipType = EquipTypeUtils.ConvertFromShopEquipType((ShopEquipType)shopEquipType);
 
                 if (SpecEquipConfig.IsArrow(equipId, equipType)
                     || SpecEquipConfig.IsPot(equipId, equipType)
@@ -199,7 +199,7 @@ namespace ERParamUtils.UpdateParam
             SoulsParam.Param.Row row, int equipId, ShopEquipType shopEquipType, UpdateCommand updateCommand)
         {
 
-            EquipType equipType = EquipTypeUtils.ConvertShopEquipType(shopEquipType);
+            EquipType equipType = EquipTypeUtils.ConvertFromShopEquipType(shopEquipType);
 
             string? paramName = EquipTypeUtils.ShopTypeParamName(shopEquipType);
             if (paramName == null)

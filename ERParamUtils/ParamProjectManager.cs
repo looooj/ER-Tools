@@ -211,7 +211,9 @@ namespace ERParamUtils
 
         public static string DeleteProject(string projectName)
         {
-            if (GlobalConfig.GetCurrentProject().GetName() == projectName) {
+            var project = GlobalConfig.GetCurrentProject();
+ 
+            if (project != null && project.GetName() == projectName) {
                 return "Can not delete current project";
             }
             string oldDir = GlobalConfig.GetProjectsDir() + "\\" + projectName;

@@ -28,3 +28,4 @@ ReplaceGiantCrowSoul=替换大乌鸦卢恩掉落->10000000
 AddMapPiece=添加制作地图碎片
 AddWhetblade=添加砥石刀
 IncRemnant=增加遗物数量(for cer)
+DoubleGetSoul=加倍卢恩掉落
