@@ -1,6 +1,7 @@
 ﻿using Org.BouncyCastle.Asn1;
 using SoulsFormats;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,12 @@ namespace ERParamUtils.UpdateParam
             //190000[Elden Throne] Fractured Marika 
             //110000[Leyndell, Royal Capital] Elden Throne 
             //110001;Erdtree Sanctuary;黄金树大教堂
+
+            //110500; Elden Throne; 艾尔登宝座
+            //110501; Erdtree Sanctuary; 黄金树大教堂
+            //110502; East Capital Rampart; 王城东边城墙
+            //110503; Leyndell, Capital of Ash;“灰烬王城”罗德尔
+            //110504; Queen's Bedchamber;女王闺阁
 
             //350000;Cathedral of the Forsaken;弃置恶兆的大教堂
 
@@ -91,6 +98,7 @@ namespace ERParamUtils.UpdateParam
                 111000,
                 100001,100000,
                 110000,110001,350000,190000,
+                110500,110501,110502,110503,110504,
                 150000,150005,160000,160001,160006,
                 130001,130002,130000,
                 650008,630050,611011,390000,650054,610018,
