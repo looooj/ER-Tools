@@ -17,7 +17,7 @@ namespace ERParamUtils.UpdateParam
         public int EquipType;
         public int EventFlagForStock;
         public int RowId;
-        public string Name="";
+        public string Name = "";
         public bool Parse(string line)
         {
 
@@ -40,9 +40,10 @@ namespace ERParamUtils.UpdateParam
             return true;
         }
 
+        
         internal static void Proc(RecipeUpdateItem item, Param param, ParamProject paramProject, UpdateCommand updateCommand)
         {
-            UpdateShopLineupParamRecipe.AddEquip(updateCommand, item.RowId,
+            UpdateShopLineupParamRecipe.AddEquipX(updateCommand, item.RowId,
                 param,
                 item.EquipId,
                 item.EquipType, item.Name, item.EventFlagForStock);
@@ -54,33 +55,16 @@ namespace ERParamUtils.UpdateParam
     {
 
         static int recipeBaseRowId = 31000;
-        static Dictionary<string, int> eventFlagForStockMap = new();
-        public static void Init() {
-            recipeBaseRowId = 31000;
 
-            string fn = GlobalConfig.BaseDir + "\\docs\\recipe-param\\eventFlag_forStock.txt";
-            if (!File.Exists(fn)) {
-                return;
-            }
-            string[] lines = File.ReadAllLines(fn);
-            foreach (string line in lines) {
-
-                var tmp = line.Trim();
-                var items = tmp.Split(",");
-                //31602,62010,8600,3
-                //rowId,eventFlag_forStock,equipId,equipType
-                if (items.Length == 4) {
-                    var key = items[2] + "_" + items[3];
-                    var val = items[1].Trim();
-                    if (val.Length < 1)
-                        continue;
-                    eventFlagForStockMap.TryAdd(key, int.Parse(val));
-                }
-            }
-
-
-
+        public static void Init(ParamProject project)
+        {
+            EventFlagForStockBuilder.FindFromLot(project);
+            EventFlagForStockBuilder.FindFromShop(project);
+            eventFlagForStockMap = EventFlagForStockBuilder.GetEventFlagStockMap();
         }
+
+        static Dictionary<string, int> eventFlagForStockMap = new();
+
 
         public static void UnlockCrafting(ParamProject paramProject, UpdateCommand updateCommand)
         {
@@ -105,7 +89,7 @@ namespace ERParamUtils.UpdateParam
                 {
                     updateCommand.AddItem(row, key, "-1");
                 }
-            }            
+            }
         }
 
         public static void RemoveRequire(ParamProject paramProject, UpdateCommand updateCommand)
@@ -129,26 +113,16 @@ namespace ERParamUtils.UpdateParam
             }
         }
 
-        /*
-        static int equipIdCol = 0;
-        static int equipTypeCol = 7;
-        static bool FindEquip(SoulsParam.Param param, int equipId, int equipType) {
 
-            foreach (var row in param.Rows) { 
-                
-                ParamRowUtils.GetCellInt(row,)
-            }
-            return false;
-        } */
 
-        public static bool AddEquip(UpdateCommand updateCommand, int rowId,
+        public static bool AddEquipX(UpdateCommand updateCommand, int rowId,
              SoulsParam.Param param, int equipId, int equipType, string name, int eventFlagForStock1)
 
         {
             if (rowId >= 32000)
             {
                 //updateCommand.
-                UpdateLogger.InfoRow("{0} rowId {1} over", param.Name,rowId);
+                UpdateLogger.InfoRow("{0} rowId {1} over", param.Name, rowId);
                 return false;
             }
             if (name.Length < 1)
@@ -156,10 +130,11 @@ namespace ERParamUtils.UpdateParam
 
             var key = equipId + "_" + equipType;
             int eventFlagForStock = eventFlagForStock1;
-            if (eventFlagForStock == 0 )
-               if (eventFlagForStockMap.TryGetValue(key, out int eventFlagForStock2)) {
+            if (eventFlagForStock == 0)
+                if (eventFlagForStockMap.TryGetValue(key, out int eventFlagForStock2))
+                {
                     eventFlagForStock = eventFlagForStock2;
-            }
+                }
 
             var row = param.InsertRow(rowId, name);
             if (row == null)
@@ -187,52 +162,37 @@ namespace ERParamUtils.UpdateParam
             UpdateLogger.InfoRow("add {0} {1} {2}", rowId, equipId, equipType);
             return true;
         }
-/*
-        public static void AddGood(UpdateCommand updateCommand,
-            SoulsParam.Param param, int beginEquipId, int endEquipId, string name, int beginRowId, int beginStockId)
+
+        public static void AddEquips(UpdateCommand updateCommand,
+            SoulsParam.Param param, int beginEquipId, int endEquipId, int equipType, string name, int beginRowId)
         {
 
+            int rowId = beginRowId;
             for (int equipId = beginEquipId; equipId <= endEquipId; equipId++)
             {
-
-                int offset = equipId - beginEquipId;
-                int rowId = beginRowId + offset;
-                int eventFlag_forStock = beginStockId + offset;
-                var row = param.InsertRow(rowId, name + "-" + equipId);
-                if (row == null)
-                    continue;
-                var keyValues =
-                    "value,0," +
-                    "mtrlId,-1," +
-                    "eventFlag_forRelease,0," +
-                    "eventFlag_forStock,0," +
-                    "sellQuantity,-1," +
-                    "equipType,3," +
-                    "costType,0," +
-                    "setNum,1," +
-                    "value_Add,0," +
-                    "value_Magnification,1," +
-                    "iconId,-1," +
-                    "nameMsgId,-1," +
-                    "menuTitleMsgId,-1," +
-                    "menuIconId,-1";
-
-                ParamRowUtils.SetCellValue(row, keyValues);
-                ParamRowUtils.SetCellValue(row, "eventFlag_forStock", eventFlag_forStock);
-                updateCommand.AddItem(row, "equipId", equipId);
+                var name1 = name + "_" + equipId;
+                AddEquipX(updateCommand, rowId, param, equipId, equipType, name1, 0);
+                rowId++;
             }
+            recipeBaseRowId = rowId;
         }
 
-        //? 
+        public static void AddEquip(UpdateCommand updateCommand,
+            SoulsParam.Param param, int equipId, int equipType, string name) {
+
+            AddEquips(updateCommand, param, equipId, equipId, equipType, name, recipeBaseRowId);
+        }
+
         public static void AddWhetblade(ParamProject paramProject, UpdateCommand updateCommand)
         {
             var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
             if (param == null)
                 return;
-            AddGood(updateCommand, param, 8970, 8974, "Whetblade", 30151, 65610);
+
+            AddEquips(updateCommand, param, 8970, 8974, (int)ShopEquipType.Good, "Whetblade", recipeBaseRowId);
 
         }
-*/
+
 
         public static void AddMapPiece(ParamProject paramProject, UpdateCommand updateCommand)
         {
@@ -240,19 +200,26 @@ namespace ERParamUtils.UpdateParam
             if (param == null)
                 return;
 
-            for (int equipId = 8600; equipId <= 8618; equipId++) {
-                recipeBaseRowId++;
-                AddEquip(updateCommand, recipeBaseRowId, param, equipId, (int)ShopEquipType.Good, "", 0);
+            AddEquips(updateCommand, param, 8600, 8618, (int)ShopEquipType.Good, "", recipeBaseRowId);
+            AddEquips(updateCommand, param, 2008600, 2008604, (int)ShopEquipType.Good, "", recipeBaseRowId);
 
-            }
-            //dlc todo eventFlagForStock
-            /*
-            for (int equipId = 2008600; equipId <= 2008604; equipId++)
-            {
-                recipeBaseRowId++;
-                AddEquip(updateCommand, recipeBaseRowId, param, equipId, (int)ShopEquipType.Good, "", 0);
+        }
 
-            }*/
+        //Bell Bearing
+        public static void AddBellBearing(ParamProject paramProject, UpdateCommand updateCommand) {
+            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+            AddEquips(updateCommand, param, 8910, 8913, (int)ShopEquipType.Good, "", recipeBaseRowId);
+            AddEquips(updateCommand, param, 8915, 8933, (int)ShopEquipType.Good, "", recipeBaseRowId);
+            AddEquips(updateCommand, param, 8935, 8944, (int)ShopEquipType.Good, "", recipeBaseRowId);
+
+        }
+
+
+
+        public static void AddOthers() { 
+
         }
 
         public static void ExecSpec(ParamProject paramProject, UpdateCommand updateCommand)
