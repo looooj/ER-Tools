@@ -1,3 +1,8 @@
+1 
+1000 
+1001 
+1002 
+1003 
 100000 [Gatekeeper Gostoc] Festering Bloody Finger
 100002 [Gatekeeper Gostoc] Ruin Fragment
 100004 [Gatekeeper Gostoc] Buckler
@@ -101,6 +106,7 @@
 100337 [Pidia Carian Servant] Budding Horn
 100338 [Pidia Carian Servant] Ripple Blade
 100339 [Pidia Carian Servant] Black Leather Shield
+100340 [Pidia Carian Servant] Weathered Map
 100350 [Brother Corhyn] Rejection
 100351 [Brother Corhyn] Urgent Heal
 100352 [Brother Corhyn] Heal
@@ -329,14 +335,14 @@
 100796 [Merchant - Mt. Gelmir] Confessor Gloves
 100797 [Merchant - Mt. Gelmir] Confessor Boots
 100798 [Merchant - Mt. Gelmir] Guilty Hood
-100801 Poisonbone Dart
-100802 Poisoned Stone
-100803 Poisoned Stone Clump
-100813 Preserving Boluses
-100814 Aeonian Butterfly
-100815 Arrow
-100816 Fire Arrow
-100817 Bolt
+100801 [Merchant - Caelid (Aeonia Swamp)] Poisonbone Dart
+100802 [Merchant - Caelid (Aeonia Swamp)] Poisoned Stone
+100803 [Merchant - Caelid (Aeonia Swamp)] Poisoned Stone Clump
+100813 [Merchant - Caelid (Aeonia Swamp)] Preserving Boluses
+100814 [Merchant - Caelid (Aeonia Swamp)] Aeonian Butterfly
+100815 [Merchant - Caelid (Aeonia Swamp)] Arrow
+100816 [Merchant - Caelid (Aeonia Swamp)] Fire Arrow
+100817 [Merchant - Caelid (Aeonia Swamp)] Bolt
 100825 [Merchant - South Caelid] Nomadic Warrior's Cookbook [15]
 100826 [Merchant - South Caelid] Stonesword Key
 100827 [Merchant - South Caelid] Cracked Pot
@@ -441,6 +447,21 @@
 101551 [Enia - Elemer of the Briar] Briar Armor
 101552 [Enia - Elemer of the Briar] Briar Gauntlets
 101553 [Enia - Elemer of the Briar] Briar Greaves
+101555 [Enia - Commander Gaius] Gaius's Helm
+101556 [Enia - Commander Gaius] Gaius's Armor
+101557 [Enia - Commander Gaius] Gaius's Gauntlets
+101558 [Enia - Messmer the Impaler] Messmer's Helm
+101559 [Enia - Messmer the Impaler] Messmer's Armor
+101560 [Enia - Messmer the Impaler] Messmer's Gauntlets
+101561 [Enia - Messmer the Impaler] Messmer's Greaves
+101562 [Enia - Rellana, Twin Moon Knight] Rellana's Helm
+101563 [Enia - Rellana, Twin Moon Knight] Rellana's Armor
+101564 [Enia - Rellana, Twin Moon Knight] Rellana's Gloves
+101565 [Enia - Rellana, Twin Moon Knight] Rellana's Greaves
+101566 [Enia - Radahn, Consort of Miquella] Young Lion's Helm
+101567 [Enia - Radahn, Consort of Miquella] Young Lion's Armor
+101568 [Enia - Radahn, Consort of Miquella] Young Lion's Gauntlets
+101569 [Enia - Radahn, Consort of Miquella] Young Lion's Greaves
 101775 [Enia - Forging] Remembrance of the Grafted
 101776 [Enia - Forging] Remembrance of the Starscourge
 101777 [Enia - Forging] Remembrance of the Omen King
@@ -538,6 +559,19 @@
 101879 [Twin Maiden Husks] Crafting Kit
 101880 [Twin Maiden Husks] Whetstone Knife
 101881 [Twin Maiden Husks] Talisman Pouch
+101885 [Twin Maiden Husks] Rada Fruit
+101886 [Twin Maiden Husks] Redflesh Mushroom
+101887 [Twin Maiden Husks] Mushroom
+101888 [Twin Maiden Husks] Whiteflesh Mushroom
+101889 [Twin Maiden Husks] Toxic Mushroom
+101890 [Twin Maiden Husks] Knot Resin
+101891 [Twin Maiden Husks] Root Resin
+101892 [Twin Maiden Husks] Fly Mold
+101893 [Twin Maiden Husks] String
+101894 [Twin Maiden Husks] Igon's Harpoon
+101895 [Twin Maiden Husks] Rabbath's Greatbolt
+101898 [Twin Maiden Husks] Enraged Divine Beast
+101899 [Twin Maiden Husks] Ash of War: Divine Beast Frost Stomp
 101900 [Remembrance of the Grafted] Axe of Godrick
 101901 [Remembrance of the Grafted] Grafted Dragon
 101902 [Remembrance of the Starscourge] Starscourge Greatsword
@@ -568,6 +602,25 @@
 101927 [Elden Remembrance] Sacred Relic Sword
 101928 [Remembrance of the Naturalborn] Bastard's Stars
 101929 [Remembrance of the Naturalborn] Ash of War: Waves of Darkness
+101930 [Remembrance of the Twin Moon Knight] Rellana's Twin Blades
+101931 [Remembrance of the Twin Moon Knight] Rellana's Twin Moons
+101932 [Remembrance of the Wild Boar Rider] Sword Lance (Spinning Gravity Thrust)
+101933 [Remembrance of the Wild Boar Rider] Blades of Stone
+101934 [Remembrance of Putrescence] Putrescence Cleaver
+101935 [Remembrance of Putrescence] Vortex of Putrescence
+101936 [Remembrance of the Saint of the Bud] Poleblade of the Bud
+101937 [Remembrance of the Saint of the Bud] Rotten Butterflies
+101938 [Remembrance of the Lord of Frenzied Flame] Greatsword of Damnation
+101939 [Remembrance of the Lord of Frenzied Flame] Midra's Flame of Frenzy
+101940 [Remembrance of the Shadow Sunflower] Shadow Sunflower Blossom
+101941 [Remembrance of the Shadow Sunflower] Land of Shadow
+101942 [Remembrance of the Impaler] Spear of the Impaler
+101943 [Remembrance of the Impaler] Messmer's Orb
+101944 [Remembrance of the Mother of Fingers] Staff of the Great Beyond
+101945 [Remembrance of the Mother of Fingers] Gazing Finger
+101946 [Remembrance of a God and a Lord] Greatsword of Radahn (Lord)
+101947 [Remembrance of a God and a Lord] Greatsword of Radahn (Light)
+101948 [Remembrance of a God and a Lord] Light of Miquella
 101950 [Dragon Communion] Dragonfire
 101951 [Dragon Communion] Dragonice
 101952 [Dragon Communion] Glintstone Breath
@@ -584,6 +637,98 @@
 101975 [Dragon Communion] Dragonclaw
 101976 [Dragon Communion] Dragonmaw
 101980 [Dragon Communion] Dragonfire
+102826 Remembrance of Putrescence
+102250 Rune Arc
+102251 Arrow
+102252 Bolt
+102253 Great Arrow
+102254 Ballista Bolt
+102255 Note: Sealed Spiritsprings
+102256 Rada Fruit
+102257 Redflesh Mushroom
+102258 Whiteflesh Mushroom
+102259 Knot Resin
+102260 Spellproof Pickled Liver
+102261 Fireproof Pickled Liver
+102262 Lightningproof Pickled Liver
+102263 Holyproof Pickled Liver
+102264 Well-Pickled Turtle Neck
+102265 Black Pyrefly
+102266 Sanguine Amaryllis
+102270 Deadly Poison Perfume Bottle
+102271 Poison Grease
+102272 Drawstring Poison Grease
+102273 Poisonbone Dart
+102274 Poisoned Stone
+102275 Poisoned Stone Clump
+102276 Altus Bloom
+102277 Miranda Powder
+102278 Poisonbloom
+102279 Toxic Mushroom
+102280 Toxic Mossling
+102281 Trina's Lily
+102282 Thiollier's Concoction
+102300 [Sorcery] Miriam's Vanishing
+102301 [Sorcery] Glintstone Nail
+102302 [Sorcery] Glintstone Nails
+102303 [Sorcery] Fleeting Microcosm
+102304 [Sorcery] Glintstone Pebble
+102305 [Sorcery] Great Glintstone Shard
+102306 [Sorcery] Glintblade Phalanx
+102307 [Sorcery] Carian Phalanx
+102308 [Sorcery] Carian Retaliation
+102350 [Incantation] Bayle's Tyranny
+102351 [Incantation] Bayle's Flame Lightning
+102355 [Incantation] Ghostflame Breath
+102700 Remembrance of the Grafted
+102701 Remembrance of the Starscourge
+102702 Remembrance of the Omen King
+102703 Remembrance of the Blasphemous
+102704 Remembrance of the Rot Goddess
+102705 Remembrance of the Full Moon Queen
+102706 Remembrance of the Blood Lord
+102707 Remembrance of a God and a Lord
+102708 Remembrance of the Impaler
+102710 Remembrance of the Black Blade
+102711 Remembrance of Hoarah Loux
+102712 Remembrance of the Dragonlord
+102713 Remembrance of the Lichdragon
+102714 Remembrance of the Fire Giant
+102715 Remembrance of the Regal Ancestor
+102716 Elden Remembrance
+102717 Remembrance of the Naturalborn
+102718 Remembrance of the Wild Boar Rider
+102720 Remembrance of the Shadow Sunflower
+102721 Remembrance of the Twin Moon Knight
+102722 Remembrance of the Saint of the Bud
+102723 Remembrance of the Dancing Lion
+102724 Remembrance of the Lord of Frenzied Flame
+102725 Remembrance of the Mother of Fingers
+102726 Remembrance of Putrescence
+102800 Remembrance of the Grafted
+102801 Remembrance of the Starscourge
+102802 Remembrance of the Omen King
+102803 Remembrance of the Blasphemous
+102804 Remembrance of the Rot Goddess
+102805 Remembrance of the Full Moon Queen
+102806 Remembrance of the Blood Lord
+102807 Remembrance of a God and a Lord
+102808 Remembrance of the Impaler
+102810 Remembrance of the Black Blade
+102811 Remembrance of Hoarah Loux
+102812 Remembrance of the Dragonlord
+102813 Remembrance of the Lichdragon
+102814 Remembrance of the Fire Giant
+102815 Remembrance of the Regal Ancestor
+102816 Elden Remembrance
+102817 Remembrance of the Naturalborn
+102818 Remembrance of the Wild Boar Rider
+102820 Remembrance of the Shadow Sunflower
+102821 Remembrance of the Twin Moon Knight
+102822 Remembrance of the Saint of the Bud
+102823 Remembrance of the Dancing Lion
+102824 Remembrance of the Lord of Frenzied Flame
+102825 Remembrance of the Mother of Fingers
 110000 [Alteration] Drake Knight Helm (Altered)
 110001 [Alteration] Drake Knight Armor (Altered)
 110002 [Alteration] Scaled Armor (Altered)
@@ -649,11 +794,24 @@
 110067 [Alteration] Alberich's Pointed Hat (Altered)
 110068 [Alteration] Alberich's Robe (Altered)
 110069 [Alteration] Traveling Maiden Robe (Altered)
+110070 [Alteration] Dryleaf Robe (Altered)
+110073 [Alteration] Thioller's Garb (Altered)
+110074 [Alteration] High Priest Robe
+110075 [Alteration] Dancer's Dress (Altered)
+110076 [Alteration] Igon's Helm (Altered)
+110077 [Alteration] Igon's Armor (Altered)
+110078 [Alteration] Ansbach's Attire (Altered)
+110079 [Alteration] Freyja's Armor (Altered)
+110080 [Alteration] Armor of Solitude (Altered)
+110081 [Alteration] Messmer Soldier Armor (Altered)
+110082 [Alteration] Fire Knight Armor (Altered)
 110100 [Alteration] Elden Lord Armor (Altered)
 110101 [Alteration] Radahn's Lion Armor (Altered)
 110102 [Alteration] Lord of Blood's Robe (Altered)
 110103 [Alteration] Maliketh's Armor (Altered)
 110104 [Alteration] Malenia's Armor (Altered)
+110105 [Alteration] Messmer's Helm (Altered)
+110106 [Alteration] Young Lion's Armor (Altered)
 110200 [Reversion] Drake Knight Helm
 110201 [Reversion] Drake Knight Armor
 110202 [Reversion] Scaled Armor
@@ -719,11 +877,24 @@
 110267 [Reversion] Alberich's Pointed Hat
 110268 [Reversion] Alberich's Robe
 110269 [Reversion] Traveling Maiden Robe
+110270 [Reversion] Dryleaf Robe
+110273 [Reversion] Thioller's Garb
+110274 [Reversion] High Priest Robe
+110275 [Reversion] Dancer's Dress
+110276 [Reversion] Igon's Helm
+110277 [Reversion] Igon's Armor
+110278 [Reversion] Ansbach's Attire
+110279 [Reversion] Freyja's Armor
+110280 [Reversion] Armor of Solitude
+110281 [Reversion] Messmer Soldier Armor
+110282 [Reversion] Fire Knight Armor
 110300 [Reversion] Elden Lord Armor
 110301 [Reversion] Radahn's Lion Armor
 110302 [Reversion] Lord of Blood's Robe
 110303 [Reversion] Maliketh's Armor
 110304 [Reversion] Malenia's Armor
+110305 [Reversion] Messmer's Helm
+110306 [Reversion] Young Lion's Armor
 111000 [Alteration] Drake Knight Helm (Altered)
 111001 [Alteration] Drake Knight Armor (Altered)
 111002 [Alteration] Scaled Armor (Altered)
@@ -789,11 +960,24 @@
 111067 [Alteration] Alberich's Pointed Hat (Altered)
 111068 [Alteration] Alberich's Robe (Altered)
 111069 [Alteration] Traveling Maiden Robe (Altered)
+111070 [Alteration] Dryleaf Robe (Altered)
+111073 [Alteration] Thioller's Garb (Altered)
+111074 [Alteration] High Priest Robe
+111075 [Alteration] Dancer's Dress (Altered)
+111076 [Alteration] Igon's Helm (Altered)
+111077 [Alteration] Igon's Armor (Altered)
+111078 [Alteration] Ansbach's Attire (Altered)
+111079 [Alteration] Freyja's Armor (Altered)
+111080 [Alteration] Armor of Solitude (Altered)
+111081 [Alteration] Messmer Soldier Armor (Altered)
+111082 [Alteration] Fire Knight Armor (Altered)
 111100 [Alteration] Elden Lord Armor (Altered)
 111101 [Alteration] Radahn's Lion Armor (Altered)
 111102 [Alteration] Lord of Blood's Robe (Altered)
 111103 [Alteration] Maliketh's Armor (Altered)
 111104 [Alteration] Malenia's Armor (Altered)
+111105 [Alteration] Messmer's Helm (Altered)
+111106 [Alteration] Young Lion's Armor (Altered)
 111200 [Reversion] Drake Knight Helm
 111201 [Reversion] Drake Knight Armor
 111202 [Reversion] Scaled Armor
@@ -859,11 +1043,24 @@
 111267 [Reversion] Alberich's Pointed Hat
 111268 [Reversion] Alberich's Robe
 111269 [Reversion] Traveling Maiden Robe
+111270 [Reversion] Dryleaf Robe
+111273 [Reversion] Thioller's Garb
+111274 [Reversion] High Priest Robe
+111275 [Reversion] Dancer's Dress
+111276 [Reversion] Igon's Helm
+111277 [Reversion] Igon's Armor
+111278 [Reversion] Ansbach's Attire
+111279 [Reversion] Freyja's Armor
+111280 [Reversion] Armor of Solitude
+111281 [Reversion] Messmer Soldier Armor
+111282 [Reversion] Fire Knight Armor
 111300 [Reversion] Elden Lord Armor
 111301 [Reversion] Radahn's Lion Armor
 111302 [Reversion] Lord of Blood's Robe
 111303 [Reversion] Maliketh's Armor
 111304 [Reversion] Malenia's Armor
+111305 [Reversion] Messmer's Helm
+111306 [Reversion] Young Lion's Armor
 112000 Ash of War: Impaling Thrust
 112001 Ash of War: Piercing Fang
 112002 Ash of War: Spinning Slash
@@ -955,6 +1152,31 @@
 112089 Ash of War: Through and Through
 112090 Ash of War: Enchanted Shot
 112091 Ash of War: Rain of Arrows
+112100 Ash of War: Dryleaf Whirlwind
+112101 Ash of War: Aspects of the Crucible: Wings
+112102 Ash of War: Spinning Gravity Thrust
+112103 Ash of War: Palm Blast
+112104 Ash of War: Piercing Throw
+112105 Ash of War: Scattershot Throw
+112106 Ash of War: Wall of Sparks
+112107 Ash of War: Rolling Sparks
+112108 Ash of War: Raging Beast
+112109 Ash of War: Savage Claws
+112110 Ash of War: Blind Spot
+112111 Ash of War: Swift Slash
+112112 Ash of War: Overhead Stance
+112113 Ash of War: Wing Stance
+112114 Ash of War: Blinkbolt
+112115 Ash of War: Flame Skewer
+112116 Ash of War: Savage Lion's Claw
+112117 Ash of War: Divine Beast Frost Stomp
+112118 Ash of War: Flame Spear
+112119 Ash of War: Carian Sovereignty
+112120 Ash of War: Shriek of Sorrow
+112121 Ash of War: Ghostflame Call
+112122 Ash of War: The Poison Flower Blooms Twice
+112123 Ash of War: Igon's Drake Hunt
+112124 Ash of War: Shield Strike
 600000 Dagger
 600001 Longsword
 600002 Short Spear
@@ -970,11 +1192,14 @@
 600012 Warrior Greaves
 600013 Lone Wolf Ashes
 600014 Cracked Pot
+600015 
 600016 Arrow
 600017 String
 600018 Note: Imp Shades
 600019 Note: Flask of Wondrous Physick
+600020 
 600021 Miranda Powder
+600022 
 900000 [Incantation] Dragonfire
 900001 [Incantation] Agheel's Flame
 900002 [Incantation] Magma Breath
@@ -1008,17 +1233,22 @@
 1600111 Blue Cloth Vest
 1600112 Warrior Gauntlets
 1600113 Warrior Greaves
+1600114 
 1600115 Cracked Pot
+1600116 
 1600117 Arrow
 1600118 String
 1600119 Note: Imp Shades
 1600120 Note: Flask of Wondrous Physick
+1600121 
 1600122 Miranda Powder
+1600123 
 1600401 Glintstone Staff
 1600402 Finger Seal
 1600403 Clawmark Seal
 1600404 [Sorcery] Glintstone Pebble
 1600405 [Sorcery] Stars of Ruin
+1600406 
 1600407 [Incantation] Flame
 1600408 [Incantation] Frenzied Burst
 1600409 Carian Knight Helm
@@ -1042,3 +1272,6 @@
 9001001 Omen Armor
 9001002 Omen Gauntlets
 9001003 Omen Greaves
+9001004 
+9999001 
+9999002 
