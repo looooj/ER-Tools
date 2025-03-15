@@ -33,6 +33,8 @@ namespace ERParamUtils
 
         static string[] defaultIncludeParamNames = new string[] {
              //"Bullet",
+             //"AtkParam_Npc",
+             "AtkParam_Pc",
              "BonfireWarpParam",
              "ItemLotParam_enemy",
              "ItemLotParam_map",
@@ -68,6 +70,8 @@ namespace ERParamUtils
              //"TalkParam",
              "EquipMtrlSetParam",
              "PlayerCommonParam",
+             "SwordArtsParam",
+             "EquipParamCustomWeapon"
              //"MapDefaultInfoParam"
         };
 

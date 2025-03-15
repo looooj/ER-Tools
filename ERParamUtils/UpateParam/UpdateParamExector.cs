@@ -401,6 +401,7 @@ namespace ERParamUtils.UpdateParam
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceFinger));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDeathroot));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDragonHeart));
+            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRemnant));
 
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGiantCrowSoul));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceLordRune));
@@ -408,7 +409,7 @@ namespace ERParamUtils.UpdateParam
 
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.IncRemnant));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.IncRemnant));
             updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.RemoveRemembranceRequire));
         }
@@ -451,6 +452,7 @@ namespace ERParamUtils.UpdateParam
 
             //updateCommand.SetOption(UpdateParamOption.ReplaceTalismanPouch, 1);
             UpdateShopLineupParamRecipe.AddBellBearing(paramProject, updateCommand);
+            UpdateShopLineupParamRecipe.AddOthers(paramProject, updateCommand);
 
             if (updateCommand.HaveOption(UpdateParamOption.InitMagicSlotAccSlot))
             {
@@ -488,7 +490,10 @@ namespace ERParamUtils.UpdateParam
                 UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
             }
 
-
+            //for cer mod
+            if (updateCommand.HaveOption(UpdateParamOption.ReplaceRemnant)) { 
+                UpdateShopLineupParamRecipe.AddRemnant(paramProject, updateCommand);
+            }
             //UpdateGrace.UnlockGlaceDefault(updateCommand);
             //UpdateCharaInit.AddDefault(paramProject,updateCommand);
 

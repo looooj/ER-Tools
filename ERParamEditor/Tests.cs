@@ -525,7 +525,7 @@ namespace ERParamEditor
             //GenItemText();
             //GenMenuText();
             //Tools.CleanUpdateLog(5);
-            Tests2.FindAlbinaurics();
+            Tests2.FindRemnant();
         }
     }
 }

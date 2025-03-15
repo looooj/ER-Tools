@@ -72,9 +72,8 @@
 #100546[Merchant - North Limgrave] Bandit Mask
 100546;9510;Deathroot;3;100;20
 
-#1290;Starlight Shards;星光碎片
 #100547[Merchant - North Limgrave] Smithing Stone [1]
-100547;1290;Starlight Shards;3;100;-1
+
 
 
 

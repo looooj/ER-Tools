@@ -616,6 +616,15 @@ namespace ERParamUtils.UpdateParam
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
 
+                //for cer mod
+                if (updateCommand.HaveOption(UpdateParamOption.ReplaceRemnant)) {
+                    if (SpecEquipConfig.IsRemnant(itemId, EquipType.Good)
+                        || SpecEquipConfig.IsPhysickRemnant(itemId, EquipType.Good) )
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                    }
+
+                }
             }
         }
 

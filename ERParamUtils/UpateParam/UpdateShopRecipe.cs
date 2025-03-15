@@ -60,10 +60,10 @@ namespace ERParamUtils.UpdateParam
         {
             EventFlagForStockBuilder.FindFromLot(project);
             EventFlagForStockBuilder.FindFromShop(project);
-            eventFlagForStockMap = EventFlagForStockBuilder.GetEventFlagStockMap();
+            //eventFlagForStockMap = EventFlagForStockBuilder.GetEventFlagStockMap();
         }
 
-        static Dictionary<string, int> eventFlagForStockMap = new();
+        //static Dictionary<string, int> eventFlagForStockMap = new();
 
 
         public static void UnlockCrafting(ParamProject paramProject, UpdateCommand updateCommand)
@@ -128,14 +128,10 @@ namespace ERParamUtils.UpdateParam
             if (name.Length < 1)
                 name = "_" + equipId;
 
-            var key = equipId + "_" + equipType;
             int eventFlagForStock = eventFlagForStock1;
-            if (eventFlagForStock == 0)
-                if (eventFlagForStockMap.TryGetValue(key, out int eventFlagForStock2))
-                {
-                    eventFlagForStock = eventFlagForStock2;
-                }
-
+            if (eventFlagForStock == 0) {
+                eventFlagForStock = EventFlagForStockBuilder.GetEventFlag(equipType, equipId);
+            }
             var row = param.InsertRow(rowId, name);
             if (row == null)
                 return false;
@@ -216,9 +212,22 @@ namespace ERParamUtils.UpdateParam
 
         }
 
+        public static void AddRemnant(ParamProject paramProject, UpdateCommand updateCommand) {
+            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+            AddEquips(updateCommand, param, 20950, 20957, (int)ShopEquipType.Good, "", recipeBaseRowId);
+            AddEquips(updateCommand, param, 20900, 20904, (int)ShopEquipType.Good, "", recipeBaseRowId);
+
+        }
 
 
-        public static void AddOthers() { 
+        public static void AddOthers(ParamProject paramProject, UpdateCommand updateCommand) {
+            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+            AddEquips(updateCommand, param, 3050, 3051, (int)ShopEquipType.Good, "", recipeBaseRowId);
+            AddEquips(updateCommand, param, 1290, 1290, (int)ShopEquipType.Good, "", recipeBaseRowId);
 
         }
 

@@ -1,0 +1,23 @@
+#Arsenal Charm
+@@id=310300,310310,310320
+equipWeightChangeRate;1.19
+
+#311000 Silver Scarab  
+#311100 Gold Scarab
+@@id=311000,311100
+soulRate;1.5
+itemDropRate;5
+
+
+#350301 Taker's Cameo [Kill]
+@@id=350301
+changeMpPoint;-5
+
+
+#350502
+@@id=350502
+changeMpPoint;-15
+
+#350200 Blessed Dew Talisman
+@@id=350200
+changeMpPoint;-2

@@ -250,6 +250,7 @@ namespace ERParamUtils.UpdateParam
         public static readonly string ReplaceMemoryStone = "ReplaceMemoryStone";
         public static readonly string ReplaceDragonHeart = "ReplaceDragonHeart";
         public static readonly string IncRemnant = "IncRemnant";
+        public static readonly string ReplaceRemnant = "ReplaceRemnant";
 
 
         public static readonly string ReplaceGiantCrowSoul = "ReplaceGiantCrowSoul";

@@ -17,36 +17,15 @@ namespace ERParamUtils
             return eventFlagForStockMap;
         }
 
-        /*
-        public static void LoadFromFilex()
-        {
 
-            string fn = GlobalConfig.BaseDir + "\\docs\\recipe-param\\eventFlag_forStock.txt";
-            if (!File.Exists(fn))
-            {
-                return;
+        public static int GetEventFlag(int eqType,int eqId) {
+
+            string key = buildKey(eqType, eqId);
+            if (eventFlagForStockMap.TryGetValue(key, out int flag)) { 
+                return flag;
             }
-            string[] lines = File.ReadAllLines(fn);
-            foreach (string line in lines)
-            {
-
-                var tmp = line.Trim();
-                var items = tmp.Split(",");
-                //31602,62010,8600,3
-                //rowId,eventFlag_forStock,equipId,equipType
-                if (items.Length == 4)
-                {
-                    var key = items[2] + "_" + items[3];
-                    var val = items[1].Trim();
-                    if (val.Length < 1)
-                        continue;
-                    eventFlagForStockMap.TryAdd(key, int.Parse(val));
-                }
-            }
-
-
+            return 0;
         }
-        */
 
         public static void FindFromShop(ParamProject project)
         {
@@ -58,6 +37,12 @@ namespace ERParamUtils
             {
                 findEventFlagFromShop(row);
             }
+        }
+
+        static string buildKey(int itemType, int itemId) {
+
+            var k = itemId + "_" + itemType;
+            return k;
         }
 
         static void findEventFlagFromShop(SoulsParam.Param.Row row)
@@ -73,7 +58,7 @@ namespace ERParamUtils
 
             int eventFlag = ParamRowUtils.GetCellInt(row, "eventFlag_forStock", 0);
 
-            var k =  itemId  + "_"  + itemType;
+            var k = buildKey(itemType, itemId);
             eventFlagForStockMap.TryAdd(k, eventFlag);
         }
 
@@ -126,7 +111,7 @@ namespace ERParamUtils
                         return;            
                     }
                     int itemType1 = (int)EquipTypeUtils.ConvertToShopEquipType((EquipType)itemType);
-                    var k = itemId + "_" + itemType1;
+                    var k = buildKey(itemType1, itemId);
                     eventFlagForStockMap.TryAdd(k, eventFlag);
                 }
             }
