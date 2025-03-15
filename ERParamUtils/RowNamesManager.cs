@@ -35,7 +35,9 @@ namespace ERParamUtils
     public class RowNamesManager
     {
         //static bool LoadFlag = false;
-  
+
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
 
         static Dictionary<int, Dictionary<int, string>> EquipNameDict = new();
 
@@ -52,11 +54,23 @@ namespace ERParamUtils
             foreach (string line1 in array)
             {
                 string line = line1.Trim();
-                if (line.Length > 0)
+                if (line.Length > 1)
                 {
-                    Match match = Regex.Match(line, "^(\\d+) (.+)$");
-                    int id = int.Parse(match.Groups[1].Value);
-                    names[id] = match.Groups[2].Value;
+                    try
+                    {
+                        Match match = Regex.Match(line, "^(\\d+) (.+)$");
+                        if (!match.Success) { 
+                            continue;
+                        }
+                        string s = match.Groups[1].Value;
+                        s = s.Trim();                        
+                        int id = int.Parse(s);
+                        names[id] = match.Groups[2].Value;
+                    }
+                    catch (Exception e) {
+                        logger.Error("LoadNames_" + paramName + ","+line);
+                        break;
+                    }
                 }
             }
             return names;
