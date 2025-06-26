@@ -12,7 +12,7 @@ CharInitParamTask=执行角色初始脚本(chara-init)
 SpecRecipeParamTask=执行配方脚本(recipe-spec)
 
 InitMagicSlotAccSlot=初始化护符和记忆槽
-ReplaceGoldenSeedSacredTear=替换黄金种子和圣杯露滴(如果有其他途径获取)
+ReplaceGoldenSeedSacredTear=替换黄金种子和圣杯露滴
 ReplaceTalismanPouch=替换护符皮袋
 ReplaceFinger=替换勾指
 ReplaceCookbook=替换制作笔记

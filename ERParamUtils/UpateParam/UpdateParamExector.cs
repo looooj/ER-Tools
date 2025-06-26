@@ -470,6 +470,11 @@ namespace ERParamUtils.UpdateParam
                 UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
             }
 
+            if (updateCommand.HaveOption(UpdateParamOption.ReplaceGoldenSeedSacredTear))
+            {
+                UpdateShopLineupParamRecipe.AddSeedTear(paramProject, updateCommand);
+            }
+
             if (updateCommand.HaveOption(UpdateParamOption.DoubleGetSoul))
             {
                 UpdateSoul.Proc(paramProject, updateCommand);

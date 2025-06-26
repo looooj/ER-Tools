@@ -173,6 +173,8 @@ namespace ERParamUtils.UpdateParam
             recipeBaseRowId = rowId;
         }
 
+
+
         public static void AddEquip(UpdateCommand updateCommand,
             SoulsParam.Param param, int equipId, int equipType, string name) {
 
@@ -198,6 +200,18 @@ namespace ERParamUtils.UpdateParam
 
             AddEquips(updateCommand, param, 8600, 8618, (int)ShopEquipType.Good, "", recipeBaseRowId);
             AddEquips(updateCommand, param, 2008600, 2008604, (int)ShopEquipType.Good, "", recipeBaseRowId);
+
+        }
+
+        //Sacred Tear
+        public static void AddSeedTear(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+
+            AddEquip(updateCommand, param, 10020, (int)ShopEquipType.Good, "");
+            AddEquip(updateCommand, param, 10010, (int)ShopEquipType.Good, "");
 
         }
 
