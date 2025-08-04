@@ -1,0 +1,508 @@
+﻿2000300;Hefty Fire Pot;大火焰壶
+2000310;Hefty Rock Pot;大岩石壶
+2000320;Hefty Lightning Pot;大雷电壶
+2000330;Hefty Fetid Pot;大粪便壶
+2000340;Hefty Fly Pot;大苍蝇壶
+2000360;Hefty Freezing Pot;大结冰壶
+2000370;Hefty Poison Pot;大毒壶
+2000380;Hefty Oil Pot;大油壶
+2000600;Hefty Volcano Pot;大火山壶
+2000620;Hefty Frenzied Flame Pot;大癫火壶
+2000650;Hefty Rancor Pot;大怨魂壶
+2000660;Hefty Magic Pot;大魔力壶
+2000670;Hefty Rot Pot;大腐败壶
+2000680;Hefty Furnace Pot;大燃炉壶
+2000690;Hefty Red Lightning Pot;大红雷壶
+2000700;Red Lightning Pot;红雷壶
+2000710;Frenzied Flame Pot;癫火壶
+2000740;Eternal Sleep Pot;永眠壶
+2000760;Roped Frenzied Flame Pot;附绳癫火壶
+2000800;Spirit Raisin;灵力果干
+2000900;Blessing of Marika;玛莉卡的赐福
+2000910;Lulling Branch;半梦树枝
+2001100;Dragon Communion Flesh;龙飨肉块
+2001105;Dragonscale Flesh;逆鳞肉块
+2001110;Fingerprint Nostrum;指纹秘药
+2001120;Spellproof Pickled Liver;抗魔腌制肝
+2001130;Fireproof Pickled Liver;抗火腌制肝
+2001140;Lightningproof Pickled Liver;抗雷腌制肝
+2001150;Holyproof Pickled Liver;抗圣腌制肝
+2001160;Opaline Pickled Liver;珍珠腌制肝
+2001170;Well-Pickled Turtle Neck;腌制老龟颈肉
+2001200;Scorpion Stew;炖煮蝎子
+2001201;Gourmet Scorpion Stew;豪华炖煮蝎子
+2001202;Scorpion Stew;炖煮蝎子
+2001203;Gourmet Scorpion Stew;豪华炖煮蝎子
+2001210;Sacred Bloody Flesh;神圣血肉
+2001220;Silver Horn Tender;白银角币
+2001230;Golden Horn Tender;黄金角币
+2001400;Messmerfire Grease;梅瑟莫火油脂
+2001410;Dragonbolt Grease;龙雷油脂
+2001420;Royal Magic Grease;王室魔力油脂
+2001430;Golden Grease;黄金油脂
+2001450;Eternal Sleep Grease;永眠油脂
+2001480;Dragon Communion Grease;龙飨油脂
+2001500;Drawstring Messmerfire Grease;附绳梅瑟莫火油脂
+2001510;Drawstring Dragonbolt Grease;附绳龙雷油脂
+2001520;Drawstring Royal Magic Grease;附绳王室魔力油脂
+2001530;Drawstring Golden Grease;附绳黄金油脂
+2001550;Drawstring Eternal Sleep Grease;附绳永眠油脂
+2001600;Festive Grease;庆典油脂
+2001700;Innard Meat;内容物肉块
+2001710;Dragon Communion Harpoon;龙飨鱼叉
+2002000;Polter Stone;人声石
+2002010;Rock Heart;岩石心脏
+2002020;Priestess Heart;女巫心脏
+2002030;Lamenter's Mask;喟叹者面具
+2002100;Ancient Dragon's Blessing;古龙恩泽
+2002120;Iris of Grace;赐福覆眼膜
+2002130;Iris of Occultation;黑暗覆眼膜
+2002140;Thiollier's Concoction;休里耶的秘药
+2002150;Prattling Pate "Lamentation";唤声泥颅“喟叹”
+2002900;Remembrance of the Wild Boar Rider;山猪骑士的追忆
+2002901;Remembrance of the Impaler;穿刺者的追忆
+2002902;Remembrance of the Shadow Sunflower;影轮草的追忆
+2002903;Remembrance of the Twin Moon Knight;双月骑士的追忆
+2002904;Remembrance of the Saint of the Bud;花蕾圣女的追忆
+2002905;Remembrance of the Dancing Lion;舞狮的追忆
+2002907;Remembrance of a God and a Lord;神祇与王的追忆
+2002908;Remembrance of the Lord of Frenzied Flame;癫火之王的追忆
+2002909;Remembrance of the Mother of Fingers;指头之母的追忆
+2002910;Remembrance of Putrescence;融泥的追忆
+2002950;Leda's Rune;蕾妲的卢恩
+2002951;Broken Rune;毁坏卢恩
+2002952;Shadow Realm Rune [1];幽影之地卢恩【１】
+2002953;Shadow Realm Rune [2];幽影之地卢恩【２】
+2002954;Shadow Realm Rune [3];幽影之地卢恩【３】
+2002955;Shadow Realm Rune [4];幽影之地卢恩【４】
+2002956;Shadow Realm Rune [5];幽影之地卢恩【５】
+2002957;Shadow Realm Rune [6];幽影之地卢恩【６】
+2002958;Shadow Realm Rune [7];幽影之地卢恩【７】
+2002959;Rune of an Unsung Hero;不受赞扬的英雄卢恩
+2002960;Marika's Rune;玛莉卡的卢恩
+2003000;Bondstone;情谊石
+2003001;Spritestone;精灵石
+2003130;Horned Bairn;带角幼子像
+2003140;Perfumed Oil of Ranah;拉纳香油瓶
+2003150;Call of Tibia;提比亚的唤声
+2003160;Surging Frenzied Flame;迸发癫火
+2003170;Golden Vow;黄金树立誓
+2003180;Fire Coil;蜷曲火焰
+2003190;Fire Spritestone;火精灵石
+2003200;Glinting Nail;光辉指爪
+2003310;Sunwarmth Stone;暖阳石
+2003350;Charming Branch;惑众树枝
+2004300;Miriam's Vanishing;米丽安的消失
+2004310;Glintblade Trio;魔法三辉剑
+2004320;Rellana's Twin Moons;蕾菈娜的双月
+2004500;Glintstone Nail;辉石指爪
+2004510;Glintstone Nails;辉石繁指爪
+2004700;Blades of Stone;岩块刀刃
+2004710;Gravitational Missile;引力球
+2004900;Mantle of Thorns;棘刺上身
+2004910;Impenetrable Thorns;拒绝的刺
+2005000;Rings of Spectral Light;灵魂光环
+2006200;Vortex of Putrescence;融泥漩
+2006210;Mass of Putrescence;融泥块
+2006300;Furious Blade of Ansbach;安帕赫的狂刃
+2006400;Heal from Afar;远方之恢复
+2006650;Aspects of the Crucible: Thorns;熔炉百相之针
+2006660;Aspects of the Crucible: Bloom;熔炉百相之花
+2006670;Minor Erdtree;小黄金树
+2006680;Land of Shadow;幽影之地
+2006690;Wrath from Afar;远方之怒
+2006700;Light of Miquella;米凯拉的光
+2006710;Multilayered Ring of Light;相迭光环
+2006800;Roar of Rugalea;鲁格利亚的咆哮
+2006900;Knight's Lightning Spear;骑士雷电枪
+2006910;Dragonbolt of Florissax;芙柔桑克斯的龙雷
+2006920;Electrocharge;带电
+2007000;Bayle's Tyranny;贝勒的残虐
+2007010;Bayle's Flame Lightning;贝勒的焰雷
+2007020;Ghostflame Breath;灵火吐息
+2007200;Rotten Butterflies;腐败蝶
+2007210;Pest-Thread Spears;虫丝枪
+2007300;Midra's Flame of Frenzy;米德拉的癫火
+2007410;Fleeting Microcosm;虚幻小宇宙
+2007420;Cherishing Fingers;守护指头
+2007600;Watchful Spirit;守护灵
+2007700;Golden Arcs;黄金弯弧
+2007710;Giant Golden Arc;黄金大弯弧
+2007720;Spira;旋流
+2007730;Divine Beast Tornado;神兽龙卷风
+2007740;Divine Bird Feathers;神鸟羽毛
+2007800;Fire Serpent;火焰蛇
+2007810;Rain of Fire;火焰雨
+2007820;Messmer's Orb;梅瑟莫的火球
+2008000;Miquella's Great Rune;米凯拉的大卢恩
+2008003;Igon's Furled Finger;埃贡的勾指
+2008004;Well Depths Key;井底钥匙
+2008005;Gaol Upper Level Key;监牢上层钥匙
+2008006;Gaol Lower Level Key;监牢下层钥匙
+2008007;Cross Map;十字记号地图
+2008008;Hole-Laden Necklace;孔洞项链
+2008011;Heart of Bayle;贝勒的心脏
+2008012;New Cross Map;新的十字记号地图
+2008013;Storeroom Key;仓库钥匙
+2008014;Secret Rite Scroll;秘密仪式卷轴
+2008015;Letter for Freyja;给弗蕾亚的信
+2008016;Ruins Map;遗迹地图
+2008017;Ruins Map (2nd);遗迹地图（第二张）
+2008018;Ruins Map (3rd);遗迹地图（第三张）
+2008019;Black Syrup;黑色浓浆
+2008021;Messmer's Kindling;梅瑟莫的火种
+2008023;Keep Wall Key;城墙门钥匙
+2008025;Furnace Keeper's Note;燃炉工匠的笔记
+2008027;Castle Cross Message;恩希斯城十字记号旁的信
+2008028;Ancient Ruins Cross Message;古遗迹十字记号旁的信
+2008029;Monk's Missive;修士的信
+2008030;Storehouse Cross Message;保藏库十字记号旁的信
+2008031;Note: Sealed Spiritsprings;文件：关于受封印的灵魂气流
+2008032;Torn Diary Page;被丢弃的日记
+2008033;Larval Tear;泪滴幼体
+2008034;Message from Leda;蕾妲留下的信
+2008036;Prayer Room Key;祈祷厅钥匙
+2008037;Tower of Shadow Message;幽影塔旁的信
+2008131;Note: Sealed Spiritsprings;文件：关于受封印的灵魂气流
+2008200;"Incursion" Painting;绘画《侵略》
+2008201;"The Sacred Tower" Painting;绘画《神之塔》
+2008202;"Domain of Dragons" Painting;绘画《龙之境界》
+2008600;Map: Gravesite Plain;地图碎片：墓地平原
+2008601;Map: Scadu Altus;地图碎片：幽影亚坛
+2008602;Map: Southern Shore;地图碎片：南方海岸
+2008603;Map: Rauh Ruins;地图碎片：劳弗古遗迹
+2008604;Map: Abyss;地图碎片：谷底
+2008900;Moore's Bell Bearing;穆尔的铃珠
+2008901;Ymir's Bell Bearing;尤弥尔的铃珠
+2008902;Herbalist's Bell Bearing;药草贩子的铃珠
+2008903;Mushroom-Seller's Bell Bearing [1];蘑菇贩子的铃珠【１】
+2008904;Mushroom-Seller's Bell Bearing [2];蘑菇贩子的铃珠【２】
+2008905;Greasemonger's Bell Bearing;树脂贩子的铃珠
+2008906;Moldmonger's Bell Bearing;霉菌贩子的铃珠
+2008907;Igon's Bell Bearing;埃贡的铃珠
+2008908;Spellmachinist's Bell Bearing;魔法技师的铃珠
+2008909;String-Seller's Bell Bearing;绳索贩子的铃珠
+2009000;Ring of Miquella;米凯拉法环
+2009001;May the Best Win;期待切磋
+2009002;The Two Fingers;双指
+2009003;Let Us Go Together;伴你同行
+2009004;O Mother;母亲啊
+2009160;About the Scadutree Blessing;说明：幽影树庇佑
+2009161;About the Revered Spirit Ash Blessing;说明：灵灰庇佑
+2009162;About New Inventory Features;说明：置物包的新功能
+2009301;Forager Brood Cookbook [6];集物虫的制作笔记【６】
+2009302;Forager Brood Cookbook [1];集物虫的制作笔记【１】
+2009303;Forager Brood Cookbook [2];集物虫的制作笔记【２】
+2009304;Forager Brood Cookbook [3];集物虫的制作笔记【３】
+2009305;Forager Brood Cookbook [4];集物虫的制作笔记【４】
+2009306;Forager Brood Cookbook [5];集物虫的制作笔记【５】
+2009307;Igon's Cookbook [2];埃贡的制作笔记【２】
+2009308;Finger-Weaver's Cookbook [2];指头追寻者的制作笔记【２】
+2009309;Greater Potentate's Cookbook [1];大维壶师的制作笔记【１】
+2009310;Greater Potentate's Cookbook [4];大维壶师的制作笔记【４】
+2009311;Greater Potentate's Cookbook [5];大维壶师的制作笔记【５】
+2009312;Greater Potentate's Cookbook [12];大维壶师的制作笔记【１２】
+2009313;Greater Potentate's Cookbook [7];大维壶师的制作笔记【７】
+2009314;Greater Potentate's Cookbook [9];大维壶师的制作笔记【９】
+2009315;Greater Potentate's Cookbook [10];大维壶师的制作笔记【１０】
+2009316;Greater Potentate's Cookbook [11];大维壶师的制作笔记【１１】
+2009317;Mad Craftsman's Cookbook [2];发狂工匠的制作笔记【２】
+2009318;Greater Potentate's Cookbook [8];大维壶师的制作笔记【８】
+2009319;Greater Potentate's Cookbook [3];大维壶师的制作笔记【３】
+2009320;Greater Potentate's Cookbook [13];大维壶师的制作笔记【１３】
+2009321;Greater Potentate's Cookbook [14];大维壶师的制作笔记【１４】
+2009322;Greater Potentate's Cookbook [6];大维壶师的制作笔记【６】
+2009323;Greater Potentate's Cookbook [2];大维壶师的制作笔记【２】
+2009324;Ancient Dragon Knight's Cookbook [1];古龙骑士的制作笔记【１】
+2009325;Mad Craftsman's Cookbook [1];发狂工匠的制作笔记【１】
+2009326;St. Trina Disciple's Cookbook [1];托莉娜信徒的制作笔记【１】
+2009327;Fire Knight's Cookbook [1];火焰骑士的制作笔记【１】
+2009328;Ancient Dragon Knight's Cookbook [2];古龙骑士的制作笔记【２】
+2009329;Loyal Knight's Cookbook;骑士实习生的制作笔记
+2009330;Battlefield Priest's Cookbook [1];战场神父的制作笔记【１】
+2009331;Igon's Cookbook [1];埃贡的制作笔记【１】
+2009332;Battlefield Priest's Cookbook [2];战场神父的制作笔记【２】
+2009333;Forager Brood Cookbook [7];集物虫的制作笔记【７】
+2009334;St. Trina Disciple's Cookbook [3];托莉娜信徒的制作笔记【３】
+2009335;Grave Keeper's Cookbook [2];守墓者的制作笔记【２】
+2009336;Antiquity Scholar's Cookbook [2];考古学者的制作笔记【２】
+2009337;Tibia's Cookbook;提比亚的制作笔记
+2009338;Mad Craftsman's Cookbook [3];发狂工匠的制作笔记【３】
+2009339;Battlefield Priest's Cookbook [3];战场神父的制作笔记【３】
+2009340;Fire Knight's Cookbook [2];火焰骑士的制作笔记【２】
+2009341;Antiquity Scholar's Cookbook [1];考古学者的制作笔记【１】
+2009342;Finger-Weaver's Cookbook [1];指头追寻者的制作笔记【１】
+2009343;Battlefield Priest's Cookbook [4];战场神父的制作笔记【４】
+2009344;Grave Keeper's Cookbook [1];守墓者的制作笔记【１】
+2009345;St. Trina Disciple's Cookbook [2];托莉娜信徒的制作笔记【２】
+2009500;Hefty Cracked Pot;大龟裂壶
+2010000;Scadutree Fragment;幽影树碎片
+2010100;Revered Spirit Ash;灵灰
+2011000;Viridian Hidden Tear;绿秘密露滴
+2011010;Crimsonburst Dried Tear;涌红枯露滴
+2011020;Crimson-Sapping Cracked Tear;夺红破露滴
+2011030;Cerulean-Sapping Cracked Tear;夺蓝破露滴
+2011040;Oil-Soaked Tear;油光露滴
+2011050;Bloodsucking Cracked Tear;吸血破露滴
+2011060;Glovewort Crystal Tear;铃兰结晶露滴
+2011070;Deflecting Hardtear;反弹硬露滴
+2015000;Beast Horn;野兽角
+2015010;Spirit Calculus;灵性结石
+2015020;Pearlescent Scale;珍珠色鳞片
+2015030;Scorpion Liver;蝎子肝
+2015040;Fly Mold;苍蝇霉
+2020001;Rada Fruit;拉答果实
+2020002;Redflesh Mushroom;红肉蘑菇
+2020003;Whiteflesh Mushroom;白肉蘑菇
+2020004;Knot Resin;瘤脂
+2020005;Dewgem;玉露
+2020006;Black Pyrefly;黑火蝶
+2020007;Glintslab Firefly;辉石块萤火虫
+2020008;Yellow Fulgurbloom;黄雷电花
+2020009;Shadow Sunflower;影轮草
+2020010;Toxic Mossling;毒苔藓虫
+2020011;Scarlet Bud;猩红花蕾
+2020012;Sanguine Amaryllis;鲜血孤挺花
+2020013;Frozen Maggot;结冻蛆虫
+2020014;Deep-Purple Lily;深紫睡莲
+2020015;Nectarblood Burgeon;蜜血木芽
+2020016;Winter-Lantern Fly;灯笼虫
+2020017;Swollen Grape;膨胀葡萄
+2020018;Grave Keeper's Brainpan;守墓者头盖骨
+2020019;Horn-Strewn Excrement;和角排泄物
+2020020;Gas Stone;燃气石
+2020021;Ghostflame Bloom;灵火花
+2020022;Grave Cricket;墓地铃虫
+2020023;Dragon's Calorbloom;龙热花
+2020024;Finger Mimic;拟态指头
+2020025;Empyrean-Blood Burgeon;神血木芽
+2020026;Congealed Putrescence;凝固融泥
+2020027;Roundrock;浑圆岩石
+2020028;Spiritgrave Stone;灵墓碑石
+2020029;Rauh Burrow;劳弗巢穴
+2020030;Ember of Messmer;梅瑟莫的余火
+2020031;Blessed Bone Shard;赐福骨片
+2020032;Red Fulgurbloom;红雷花
+2020033;Nailstone;指甲石
+2020034;Sharp Gravel Stone;尖锐碎石
+2020035;Furnace Visage;燃炉面具
+2200000;Curseblade Meera;咒剑士米拉
+2200001;Curseblade Meera +1;咒剑士米拉＋１
+2200002;Curseblade Meera +2;咒剑士米拉＋２
+2200003;Curseblade Meera +3;咒剑士米拉＋３
+2200004;Curseblade Meera +4;咒剑士米拉＋４
+2200005;Curseblade Meera +5;咒剑士米拉＋５
+2200006;Curseblade Meera +6;咒剑士米拉＋６
+2200007;Curseblade Meera +7;咒剑士米拉＋７
+2200008;Curseblade Meera +8;咒剑士米拉＋８
+2200009;Curseblade Meera +9;咒剑士米拉＋９
+2200010;Curseblade Meera +10;咒剑士米拉＋１０
+2201000;Bloodfiend Hexer's Ashes;血怪咒术师的骨灰
+2201001;Bloodfiend Hexer's Ashes +1;血怪咒术师的骨灰＋１
+2201002;Bloodfiend Hexer's Ashes +2;血怪咒术师的骨灰＋２
+2201003;Bloodfiend Hexer's Ashes +3;血怪咒术师的骨灰＋３
+2201004;Bloodfiend Hexer's Ashes +4;血怪咒术师的骨灰＋４
+2201005;Bloodfiend Hexer's Ashes +5;血怪咒术师的骨灰＋５
+2201006;Bloodfiend Hexer's Ashes +6;血怪咒术师的骨灰＋６
+2201007;Bloodfiend Hexer's Ashes +7;血怪咒术师的骨灰＋７
+2201008;Bloodfiend Hexer's Ashes +8;血怪咒术师的骨灰＋８
+2201009;Bloodfiend Hexer's Ashes +9;血怪咒术师的骨灰＋９
+2201010;Bloodfiend Hexer's Ashes +10;血怪咒术师的骨灰＋１０
+2202000;Gravebird Ashes;守墓鸟的骨灰
+2202001;Gravebird Ashes +1;守墓鸟的骨灰＋１
+2202002;Gravebird Ashes +2;守墓鸟的骨灰＋２
+2202003;Gravebird Ashes +3;守墓鸟的骨灰＋３
+2202004;Gravebird Ashes +4;守墓鸟的骨灰＋４
+2202005;Gravebird Ashes +5;守墓鸟的骨灰＋５
+2202006;Gravebird Ashes +6;守墓鸟的骨灰＋６
+2202007;Gravebird Ashes +7;守墓鸟的骨灰＋７
+2202008;Gravebird Ashes +8;守墓鸟的骨灰＋８
+2202009;Gravebird Ashes +9;守墓鸟的骨灰＋９
+2202010;Gravebird Ashes +10;守墓鸟的骨灰＋１０
+2203000;Fire Knight Hilde;“火焰骑士”希德
+2203001;Fire Knight Hilde +1;“火焰骑士”希德＋１
+2203002;Fire Knight Hilde +2;“火焰骑士”希德＋２
+2203003;Fire Knight Hilde +3;“火焰骑士”希德＋３
+2203004;Fire Knight Hilde +4;“火焰骑士”希德＋４
+2203005;Fire Knight Hilde +5;“火焰骑士”希德＋５
+2203006;Fire Knight Hilde +6;“火焰骑士”希德＋６
+2203007;Fire Knight Hilde +7;“火焰骑士”希德＋７
+2203008;Fire Knight Hilde +8;“火焰骑士”希德＋８
+2203009;Fire Knight Hilde +9;“火焰骑士”希德＋９
+2203010;Fire Knight Hilde +10;“火焰骑士”希德＋１０
+2204000;Spider Scorpion Ashes;蜘蛛蝎的骨灰
+2204001;Spider Scorpion Ashes +1;蜘蛛蝎的骨灰＋１
+2204002;Spider Scorpion Ashes +2;蜘蛛蝎的骨灰＋２
+2204003;Spider Scorpion Ashes +3;蜘蛛蝎的骨灰＋３
+2204004;Spider Scorpion Ashes +4;蜘蛛蝎的骨灰＋４
+2204005;Spider Scorpion Ashes +5;蜘蛛蝎的骨灰＋５
+2204006;Spider Scorpion Ashes +6;蜘蛛蝎的骨灰＋６
+2204007;Spider Scorpion Ashes +7;蜘蛛蝎的骨灰＋７
+2204008;Spider Scorpion Ashes +8;蜘蛛蝎的骨灰＋８
+2204009;Spider Scorpion Ashes +9;蜘蛛蝎的骨灰＋９
+2204010;Spider Scorpion Ashes +10;蜘蛛蝎的骨灰＋１０
+2205000;Inquisitor Ashes;拷问官的骨灰
+2205001;Inquisitor Ashes +1;拷问官的骨灰＋１
+2205002;Inquisitor Ashes +2;拷问官的骨灰＋２
+2205003;Inquisitor Ashes +3;拷问官的骨灰＋３
+2205004;Inquisitor Ashes +4;拷问官的骨灰＋４
+2205005;Inquisitor Ashes +5;拷问官的骨灰＋５
+2205006;Inquisitor Ashes +6;拷问官的骨灰＋６
+2205007;Inquisitor Ashes +7;拷问官的骨灰＋７
+2205008;Inquisitor Ashes +8;拷问官的骨灰＋８
+2205009;Inquisitor Ashes +9;拷问官的骨灰＋９
+2205010;Inquisitor Ashes +10;拷问官的骨灰＋１０
+2206000;Demi-Human Swordsman Yosh;“亚人剑士”约西
+2206001;Demi-Human Swordsman Yosh +1;“亚人剑士”约西＋１
+2206002;Demi-Human Swordsman Yosh +2;“亚人剑士”约西＋２
+2206003;Demi-Human Swordsman Yosh +3;“亚人剑士”约西＋３
+2206004;Demi-Human Swordsman Yosh +4;“亚人剑士”约西＋４
+2206005;Demi-Human Swordsman Yosh +5;“亚人剑士”约西＋５
+2206006;Demi-Human Swordsman Yosh +6;“亚人剑士”约西＋６
+2206007;Demi-Human Swordsman Yosh +7;“亚人剑士”约西＋７
+2206008;Demi-Human Swordsman Yosh +8;“亚人剑士”约西＋８
+2206009;Demi-Human Swordsman Yosh +9;“亚人剑士”约西＋９
+2206010;Demi-Human Swordsman Yosh +10;“亚人剑士”约西＋１０
+2207000;Messmer Soldier Ashes;梅瑟莫士兵的骨灰
+2207001;Messmer Soldier Ashes +1;梅瑟莫士兵的骨灰＋１
+2207002;Messmer Soldier Ashes +2;梅瑟莫士兵的骨灰＋２
+2207003;Messmer Soldier Ashes +3;梅瑟莫士兵的骨灰＋３
+2207004;Messmer Soldier Ashes +4;梅瑟莫士兵的骨灰＋４
+2207005;Messmer Soldier Ashes +5;梅瑟莫士兵的骨灰＋５
+2207006;Messmer Soldier Ashes +6;梅瑟莫士兵的骨灰＋６
+2207007;Messmer Soldier Ashes +7;梅瑟莫士兵的骨灰＋７
+2207008;Messmer Soldier Ashes +8;梅瑟莫士兵的骨灰＋８
+2207009;Messmer Soldier Ashes +9;梅瑟莫士兵的骨灰＋９
+2207010;Messmer Soldier Ashes +10;梅瑟莫士兵的骨灰＋１０
+2208000;Black Knight Commander Andreas;“黑骑士团长”安卓斯
+2208001;Black Knight Commander Andreas +1;“黑骑士团长”安卓斯＋１
+2208002;Black Knight Commander Andreas +2;“黑骑士团长”安卓斯＋２
+2208003;Black Knight Commander Andreas +3;“黑骑士团长”安卓斯＋３
+2208004;Black Knight Commander Andreas +4;“黑骑士团长”安卓斯＋４
+2208005;Black Knight Commander Andreas +5;“黑骑士团长”安卓斯＋５
+2208006;Black Knight Commander Andreas +6;“黑骑士团长”安卓斯＋６
+2208007;Black Knight Commander Andreas +7;“黑骑士团长”安卓斯＋７
+2208008;Black Knight Commander Andreas +8;“黑骑士团长”安卓斯＋８
+2208009;Black Knight Commander Andreas +9;“黑骑士团长”安卓斯＋９
+2208010;Black Knight Commander Andreas +10;“黑骑士团长”安卓斯＋１０
+2209000;Black Knight Captain Huw;“黑骑士副团长”修
+2209001;Black Knight Captain Huw +1;“黑骑士副团长”修＋１
+2209002;Black Knight Captain Huw +2;“黑骑士副团长”修＋２
+2209003;Black Knight Captain Huw +3;“黑骑士副团长”修＋３
+2209004;Black Knight Captain Huw +4;“黑骑士副团长”修＋４
+2209005;Black Knight Captain Huw +5;“黑骑士副团长”修＋５
+2209006;Black Knight Captain Huw +6;“黑骑士副团长”修＋６
+2209007;Black Knight Captain Huw +7;“黑骑士副团长”修＋７
+2209008;Black Knight Captain Huw +8;“黑骑士副团长”修＋８
+2209009;Black Knight Captain Huw +9;“黑骑士副团长”修＋９
+2209010;Black Knight Captain Huw +10;“黑骑士副团长”修＋１０
+2210000;Bigmouth Imp Ashes;大嘴小恶魔的骨灰
+2210001;Bigmouth Imp Ashes +1;大嘴小恶魔的骨灰＋１
+2210002;Bigmouth Imp Ashes +2;大嘴小恶魔的骨灰＋２
+2210003;Bigmouth Imp Ashes +3;大嘴小恶魔的骨灰＋３
+2210004;Bigmouth Imp Ashes +4;大嘴小恶魔的骨灰＋４
+2210005;Bigmouth Imp Ashes +5;大嘴小恶魔的骨灰＋５
+2210006;Bigmouth Imp Ashes +6;大嘴小恶魔的骨灰＋６
+2210007;Bigmouth Imp Ashes +7;大嘴小恶魔的骨灰＋７
+2210008;Bigmouth Imp Ashes +8;大嘴小恶魔的骨灰＋８
+2210009;Bigmouth Imp Ashes +9;大嘴小恶魔的骨灰＋９
+2210010;Bigmouth Imp Ashes +10;大嘴小恶魔的骨灰＋１０
+2211000;Man-Fly Ashes;人形苍蝇的骨灰
+2211001;Man-Fly Ashes +1;人形苍蝇的骨灰＋１
+2211002;Man-Fly Ashes +2;人形苍蝇的骨灰＋２
+2211003;Man-Fly Ashes +3;人形苍蝇的骨灰＋３
+2211004;Man-Fly Ashes +4;人形苍蝇的骨灰＋４
+2211005;Man-Fly Ashes +5;人形苍蝇的骨灰＋５
+2211006;Man-Fly Ashes +6;人形苍蝇的骨灰＋６
+2211007;Man-Fly Ashes +7;人形苍蝇的骨灰＋７
+2211008;Man-Fly Ashes +8;人形苍蝇的骨灰＋８
+2211009;Man-Fly Ashes +9;人形苍蝇的骨灰＋９
+2211010;Man-Fly Ashes +10;人形苍蝇的骨灰＋１０
+2212000;Taylew the Golem Smith;“锻造魔像”泰乌尔
+2212001;Taylew the Golem Smith +1;“锻造魔像”泰乌尔＋１
+2212002;Taylew the Golem Smith +2;“锻造魔像”泰乌尔＋２
+2212003;Taylew the Golem Smith +3;“锻造魔像”泰乌尔＋３
+2212004;Taylew the Golem Smith +4;“锻造魔像”泰乌尔＋４
+2212005;Taylew the Golem Smith +5;“锻造魔像”泰乌尔＋５
+2212006;Taylew the Golem Smith +6;“锻造魔像”泰乌尔＋６
+2212007;Taylew the Golem Smith +7;“锻造魔像”泰乌尔＋７
+2212008;Taylew the Golem Smith +8;“锻造魔像”泰乌尔＋８
+2212009;Taylew the Golem Smith +9;“锻造魔像”泰乌尔＋９
+2212010;Taylew the Golem Smith +10;“锻造魔像”泰乌尔＋１０
+2213000;Divine Bird Warrior Ornis;“神鸟战士”奥尼斯
+2213001;Divine Bird Warrior Ornis +1;“神鸟战士”奥尼斯＋１
+2213002;Divine Bird Warrior Ornis +2;“神鸟战士”奥尼斯＋２
+2213003;Divine Bird Warrior Ornis +3;“神鸟战士”奥尼斯＋３
+2213004;Divine Bird Warrior Ornis +4;“神鸟战士”奥尼斯＋４
+2213005;Divine Bird Warrior Ornis +5;“神鸟战士”奥尼斯＋５
+2213006;Divine Bird Warrior Ornis +6;“神鸟战士”奥尼斯＋６
+2213007;Divine Bird Warrior Ornis +7;“神鸟战士”奥尼斯＋７
+2213008;Divine Bird Warrior Ornis +8;“神鸟战士”奥尼斯＋８
+2213009;Divine Bird Warrior Ornis +9;“神鸟战士”奥尼斯＋９
+2213010;Divine Bird Warrior Ornis +10;“神鸟战士”奥尼斯＋１０
+2214000;Horned Warrior Ashes;角战士的骨灰
+2214001;Horned Warrior Ashes +1;角战士的骨灰＋１
+2214002;Horned Warrior Ashes +2;角战士的骨灰＋２
+2214003;Horned Warrior Ashes +3;角战士的骨灰＋３
+2214004;Horned Warrior Ashes +4;角战士的骨灰＋４
+2214005;Horned Warrior Ashes +5;角战士的骨灰＋５
+2214006;Horned Warrior Ashes +6;角战士的骨灰＋６
+2214007;Horned Warrior Ashes +7;角战士的骨灰＋７
+2214008;Horned Warrior Ashes +8;角战士的骨灰＋８
+2214009;Horned Warrior Ashes +9;角战士的骨灰＋９
+2214010;Horned Warrior Ashes +10;角战士的骨灰＋１０
+2215000;Ancient Dragon Florissax;“古龙”芙柔桑克斯
+2215001;Ancient Dragon Florissax +1;“古龙”芙柔桑克斯＋１
+2215002;Ancient Dragon Florissax +2;“古龙”芙柔桑克斯＋２
+2215003;Ancient Dragon Florissax +3;“古龙”芙柔桑克斯＋３
+2215004;Ancient Dragon Florissax +4;“古龙”芙柔桑克斯＋４
+2215005;Ancient Dragon Florissax +5;“古龙”芙柔桑克斯＋５
+2215006;Ancient Dragon Florissax +6;“古龙”芙柔桑克斯＋６
+2215007;Ancient Dragon Florissax +7;“古龙”芙柔桑克斯＋７
+2215008;Ancient Dragon Florissax +8;“古龙”芙柔桑克斯＋８
+2215009;Ancient Dragon Florissax +9;“古龙”芙柔桑克斯＋９
+2215010;Ancient Dragon Florissax +10;“古龙”芙柔桑克斯＋１０
+2217000;Fingercreeper Ashes;指虫的骨灰
+2217001;Fingercreeper Ashes +1;指虫的骨灰＋１
+2217002;Fingercreeper Ashes +2;指虫的骨灰＋２
+2217003;Fingercreeper Ashes +3;指虫的骨灰＋３
+2217004;Fingercreeper Ashes +4;指虫的骨灰＋４
+2217005;Fingercreeper Ashes +5;指虫的骨灰＋５
+2217006;Fingercreeper Ashes +6;指虫的骨灰＋６
+2217007;Fingercreeper Ashes +7;指虫的骨灰＋７
+2217008;Fingercreeper Ashes +8;指虫的骨灰＋８
+2217009;Fingercreeper Ashes +9;指虫的骨灰＋９
+2217010;Fingercreeper Ashes +10;指虫的骨灰＋１０
+2218000;Fire Knight Queelign;“火焰骑士”昆兰
+2218001;Fire Knight Queelign +1;“火焰骑士”昆兰＋１
+2218002;Fire Knight Queelign +2;“火焰骑士”昆兰＋２
+2218003;Fire Knight Queelign +3;“火焰骑士”昆兰＋３
+2218004;Fire Knight Queelign +4;“火焰骑士”昆兰＋４
+2218005;Fire Knight Queelign +5;“火焰骑士”昆兰＋５
+2218006;Fire Knight Queelign +6;“火焰骑士”昆兰＋６
+2218007;Fire Knight Queelign +7;“火焰骑士”昆兰＋７
+2218008;Fire Knight Queelign +8;“火焰骑士”昆兰＋８
+2218009;Fire Knight Queelign +9;“火焰骑士”昆兰＋９
+2218010;Fire Knight Queelign +10;“火焰骑士”昆兰＋１０
+2219000;Swordhand of Night Jolán;“黑夜剑士”约兰
+2219001;Swordhand of Night Jolán +1;“黑夜剑士”约兰＋１
+2219002;Swordhand of Night Jolán +2;“黑夜剑士”约兰＋２
+2219003;Swordhand of Night Jolán +3;“黑夜剑士”约兰＋３
+2219004;Swordhand of Night Jolán +4;“黑夜剑士”约兰＋４
+2219005;Swordhand of Night Jolán +5;“黑夜剑士”约兰＋５
+2219006;Swordhand of Night Jolán +6;“黑夜剑士”约兰＋６
+2219007;Swordhand of Night Jolán +7;“黑夜剑士”约兰＋７
+2219008;Swordhand of Night Jolán +8;“黑夜剑士”约兰＋８
+2219009;Swordhand of Night Jolán +9;“黑夜剑士”约兰＋９
+2219010;Swordhand of Night Jolán +10;“黑夜剑士”约兰＋１０
+2220000;Jolán and Anna;约兰与安娜
+2220001;Jolán and Anna +1;约兰与安娜＋１
+2220002;Jolán and Anna +2;约兰与安娜＋２
+2220003;Jolán and Anna +3;约兰与安娜＋３
+2220004;Jolán and Anna +4;约兰与安娜＋４
+2220005;Jolán and Anna +5;约兰与安娜＋５
+2220006;Jolán and Anna +6;约兰与安娜＋６
+2220007;Jolán and Anna +7;约兰与安娜＋７
+2220008;Jolán and Anna +8;约兰与安娜＋８
+2220009;Jolán and Anna +9;约兰与安娜＋９
+2220010;Jolán and Anna +10;约兰与安娜＋１０
