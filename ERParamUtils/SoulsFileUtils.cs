@@ -28,6 +28,9 @@ namespace ERParamUtils
         public static void ExtractDCX(string dcxName, string targetDir) {
 
             Directory.CreateDirectory(targetDir);
+            if (!dcxName.EndsWith(".dcx")) {
+                return;
+            }
 
             if (dcxName.Contains("bnd"))
             {

@@ -12,6 +12,10 @@ namespace ERParamUtils.UpateParam
 
         public static void Proc(ParamProject? paramProject, UpdateCommand updateCommand) {
 
+            int times =  updateCommand.GetOption(UpdateParamOptionNames.TimesGetSoul);
+            if (times <= 1)
+                return;
+
             if (paramProject == null) {
                 return;
             }
@@ -33,13 +37,16 @@ namespace ERParamUtils.UpateParam
 
                 if (v > 0)
                 {
-
+                    //Albinauric;白金之子
                     if (row.Name.Contains("Albinauric"))
                     {
-                        v = v * 10;
+                        if ( times < 10 )
+                            v = v * (times * 10);
+                        else 
+                            v = v * times; 
                     }
                     else {
-                        v = v * 2;
+                        v = v * times;
                     }
                     updateCommand.AddItem(ParamNames.NpcParam, row.ID, key, v);
                     

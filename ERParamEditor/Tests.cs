@@ -77,7 +77,7 @@ namespace ERParamEditor
                 //string dir = @"D:\docs\game\er\unpack-\unpack-files\msg\" + lang;
                 string dir = "F:\\docs\\games\\ER\\Game\\msg\\" + lang;
                 //string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text";
-                string targetDir = @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text";
+                string targetDir = @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer";
                 Directory.CreateDirectory(targetDir);
                 var files = Directory.GetFiles(dir, "*.dcx");
                 foreach (var file in files)
@@ -226,7 +226,7 @@ namespace ERParamEditor
             string baseDir = GlobalConfig.AssetsDir + @"\msg\item.msgbnd\msg";
             string outDir = GlobalConfig.AssetsDir + @"\msg\item-msg-text";
             */
-            string tmp = "D:\\myprojects\\game-tools\\ER-Tools\\tmp\\msg-text\\item_dlc01.msgbnd\\msg\\engUS\\AccessoryName.fmg.xml";
+            //string tmp = "D:\\myprojects\\game-tools\\ER-Tools\\tmp\\msg-text\\item_dlc01.msgbnd\\msg\\engUS\\AccessoryName.fmg.xml";
             foreach (string name in names)
             {
 
@@ -400,7 +400,8 @@ namespace ERParamEditor
                 "ProtectorName","WeaponName","NpcName","PlaceName","GemName" };
             string[] subNames = { "item", "item_dlc01" };
 
-            GenDlcText(@"D:\myprojects\game-tools\ER-Tools\tmp\msg-text", @"D:\myprojects\game-tools\ER-Tools\docs\dlc-item-text",
+            GenDlcText(@"D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer", 
+                @"D:\myprojects\game-tools\ER-Tools\docs\cer-item-text",
                names, subNames);
 
         }
@@ -522,10 +523,11 @@ namespace ERParamEditor
 
             //GenAccessoryId();
             //GenAutoLot();
-            //GenItemText();
+            GenItemText();
             //GenMenuText();
             //Tools.CleanUpdateLog(5);
-            Tests2.FindRemnant();
+            //Tests2.FindRemnant();
+            //ExtractMsg();
         }
     }
 }

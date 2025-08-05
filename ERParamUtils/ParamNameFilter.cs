@@ -71,8 +71,8 @@ namespace ERParamUtils
              "EquipMtrlSetParam",
              "PlayerCommonParam",
              "SwordArtsParam",
-             "EquipParamCustomWeapon"
-             //"MapDefaultInfoParam"
+             "EquipParamCustomWeapon",
+             "MapDefaultInfoParam"
         };
 
         static string[]? includeParamNames = null;

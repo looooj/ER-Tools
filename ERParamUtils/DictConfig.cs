@@ -61,6 +61,9 @@ namespace ERParamUtils
 
         protected Dictionary<string, string> Dict = new();
 
+        public Dictionary<string, string> GetDict() {
+            return Dict;
+        }
 
         public void Load(string filename)
         {
@@ -81,6 +84,10 @@ namespace ERParamUtils
         {
             Dict[key] = value;
             //Dict[key.ToLower()] = value;
+        }
+
+        public bool Contains(string key) {
+            return Dict.ContainsKey(key);
         }
 
         public string GetString(string key, string def)

@@ -1,4 +1,5 @@
 ﻿using ERParamUtils;
+using ERParamUtils.UpateParam;
 using ERParamUtils.UpdateParam;
 using MultiLangLib;
 using NLog;
@@ -24,7 +25,7 @@ namespace ERParamEditor
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         List<UpdateParamTask> updateParamTasks = new();
-        List<UpdateParamOption> updateParamOptions = new();
+        List<UpdateParamOptionNames> updateParamOptions = new();
 
         public ParamProject _paramProject;
 
@@ -112,7 +113,7 @@ namespace ERParamEditor
                 }
             }
 
-            var updateParamOptions = new UpdateParamOptions();
+            var updateParamOptions = new UpdateParamExecOptions();
             List<string> optionLines = new();
             for (int i = 0; i < updateParamTasks.Count; i++)
             {

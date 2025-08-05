@@ -5,26 +5,7 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace ERParamUtils.UpdateParam
 {
-    public class UpdateParamOptions
-    {
 
-        public bool Restore = true;
-        public bool Publish = true;
-
-        public List<UpdateParamTask> UpdateTasks = new();
-        public List<string> UpdateCommandOptions = new();
-
-        public void AddTask(UpdateParamTask task)
-        {
-            UpdateTasks.Add(task);
-        }
-
-        public void AddUpdateCommandOption(string name)
-        {
-
-            UpdateCommandOptions.Add(name);
-        }
-    }
 
     public abstract class UpdateParamTask
     {
@@ -57,7 +38,7 @@ namespace ERParamUtils.UpdateParam
         {
             base.ExecBefore(project, updateCommand);
 
-            updateCommand.SetOption(UpdateParamOption.ReplaceBellBearing,1);
+            updateCommand.SetOption(UpdateParamOptionNames.ReplaceBellBearing,1);
 
         }
     }
@@ -305,7 +286,7 @@ namespace ERParamUtils.UpdateParam
         public override void ExecBefore(ParamProject paramProject, UpdateCommand updateCommand)
         {
 
-            updateCommand.SetOption(UpdateParamOption.ReplaceCookbook, 1);
+            updateCommand.SetOption(UpdateParamOptionNames.ReplaceCookbook, 1);
 
         }
         public override void Exec(ParamProject paramProject, UpdateCommand updateCommand)
@@ -315,7 +296,7 @@ namespace ERParamUtils.UpdateParam
     }
 
 
-
+    /*
 
     public class UnlockGraceTask : UpdateParamTask
     {
@@ -337,7 +318,7 @@ namespace ERParamUtils.UpdateParam
 
 
     }
-
+    */
 
     public class ReplaceParamTask : UpdateParamTask
     {
@@ -368,12 +349,12 @@ namespace ERParamUtils.UpdateParam
             updateParamTasks.Add(new UnlockCraftingTask());
             //updateParamTasks.Add(new SpecRecipeParamTask());
 
-            updateParamTasks.Add(new UnlockGraceTask());
+            //updateParamTasks.Add(new UnlockGraceTask());
             updateParamTasks.Add(new UpdateShopParamTask());
             updateParamTasks.Add(new SpecShopParamTask());
 
 
-            updateParamTasks.Add(new ItemLotCountParamTask());
+            //updateParamTasks.Add(new ItemLotCountParamTask());
             updateParamTasks.Add(new LotParamTask());
 
             updateParamTasks.Add(new RemoveRequireTask());
@@ -388,33 +369,35 @@ namespace ERParamUtils.UpdateParam
 
         }
 
-        public static void CreateOptionList(List<UpdateParamOption> updateParamOptions)
+        public static void CreateOptionList(List<UpdateParamOptionNames> updateParamOptions)
         {
 
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.InitMagicSlotAccSlot));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGoldenSeedSacredTear));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.InitMagicSlotAccSlot));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.ReplaceGoldenSeedSacredTear));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.ReplaceScadutreeFragmentSpiritAsh));
+
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceTalismanPouch));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRune));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceStoneswordKey));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRuneArc));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceMemoryStone));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceFinger));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDeathroot));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceDragonHeart));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRemnant));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceRune));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.ReplaceStoneswordKey));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.ReplaceRuneArc));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.ReplaceMemoryStone));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.ReplaceFinger));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.ReplaceDeathroot));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.ReplaceDragonHeart));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.ReplaceRemnant));
 
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGiantCrowSoul));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceLordRune));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.DoubleGetSoul));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceLordRune));
+            //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.DoubleGetSoul));
 
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceCookbook));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddMapPiece));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.AddMapPiece));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.IncRemnant));
-            updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.AddWhetblade));
+            updateParamOptions.Add(new UpdateParamOptionNames(UpdateParamOptionNames.AddWhetblade));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.RemoveRemembranceRequire));
         }
 
-        public static void Exec(ParamProject paramProject, UpdateParamOptions options)
+        public static void Exec(ParamProject paramProject, UpdateParamExecOptions options)
         {
 
             UpdateLogger.SetDir(paramProject.GetUpdateDir() + @"/logs");
@@ -454,33 +437,39 @@ namespace ERParamUtils.UpdateParam
             UpdateShopLineupParamRecipe.AddBellBearing(paramProject, updateCommand);
             UpdateShopLineupParamRecipe.AddOthers(paramProject, updateCommand);
 
-            if (updateCommand.HaveOption(UpdateParamOption.InitMagicSlotAccSlot))
+            if (updateCommand.HaveOption(UpdateParamOptionNames.InitMagicSlotAccSlot))
             {
                 updateCommand.AddItem(
                     UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
                 updateCommand.AddItem(
                     UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));
 
-                updateCommand.SetOption(UpdateParamOption.ReplaceTalismanPouch, 1);
-                updateCommand.SetOption(UpdateParamOption.ReplaceMemoryStone, 1);
+                updateCommand.SetOption(UpdateParamOptionNames.ReplaceTalismanPouch, 1);
+                updateCommand.SetOption(UpdateParamOptionNames.ReplaceMemoryStone, 1);
             }
 
-            if (updateCommand.HaveOption(UpdateParamOption.AddMapPiece))
+            if (updateCommand.HaveOption(UpdateParamOptionNames.AddMapPiece))
             {
                 UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
             }
 
-            if (updateCommand.HaveOption(UpdateParamOption.ReplaceGoldenSeedSacredTear))
+            if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGoldenSeedSacredTear))
             {
                 UpdateShopLineupParamRecipe.AddSeedTear(paramProject, updateCommand);
             }
 
-            if (updateCommand.HaveOption(UpdateParamOption.DoubleGetSoul))
+            if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceScadutreeFragmentSpiritAsh))
+            {
+                UpdateShopLineupParamRecipe.AddFragmentAsh(paramProject, updateCommand);
+            }
+
+
+            if (updateCommand.HaveOption(UpdateParamOptionNames.TimesGetSoul))
             {
                 UpdateSoul.Proc(paramProject, updateCommand);
             }
 
-            if (updateCommand.HaveOption(UpdateParamOption.ReplaceGiantCrowSoul))
+            if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGiantCrowSoul))
             {
 
                 //45610068,Bloodbane Giant Crow,11038,0
@@ -490,15 +479,18 @@ namespace ERParamUtils.UpdateParam
             }
 
 
-            if (updateCommand.HaveOption(UpdateParamOption.AddWhetblade))
+            if (updateCommand.HaveOption(UpdateParamOptionNames.AddWhetblade))
             {
                 UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
             }
 
             //for cer mod
-            if (updateCommand.HaveOption(UpdateParamOption.ReplaceRemnant)) { 
+            if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceRemnant)) { 
                 UpdateShopLineupParamRecipe.AddRemnant(paramProject, updateCommand);
             }
+
+            UpdateGrace.UnlockGrace(paramProject, updateCommand);
+
             //UpdateGrace.UnlockGlaceDefault(updateCommand);
             //UpdateCharaInit.AddDefault(paramProject,updateCommand);
 

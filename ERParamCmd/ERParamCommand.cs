@@ -1,4 +1,5 @@
 ﻿using ERParamUtils;
+using ERParamUtils.UpateParam;
 using ERParamUtils.UpdateParam;
 using NLog;
 using System;
@@ -153,7 +154,7 @@ namespace ERParamCmd
             }
 
             List<UpdateParamTask> updateParamTasks = new();
-            List<UpdateParamOption> updateParamOptions = new();
+            List<UpdateParamOptionNames> updateParamOptions = new();
 
             UpdateParamExector.CreateOptionList(updateParamOptions);
             UpdateParamExector.CreateTaskList(updateParamTasks);
@@ -163,7 +164,7 @@ namespace ERParamCmd
                 saveOptions = new();
             }
 
-            UpdateParamOptions execOptions = new(); ;
+            UpdateParamExecOptions execOptions = new(); ;
 
             execOptions.Restore = true;
             execOptions.Publish = true;

@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using ERParamUtils;
 using static SoulsFormats.MSB.Shape.Composite;
 using ERParamUtils.UpdateParam;
+using ERParamUtils.UpateParam;
 
 namespace MultiLangLib
 {
@@ -25,19 +26,13 @@ namespace MultiLangLib
 
         public static void SwitchLanguage(string langId,string appName) {
 
-
-
             if (CurrentLangId == langId)
                 return;
 
             MessageDict.Clear();
 
-
-
             string localesPath = ".\\locales\\" + appName;
-            //ERParamEditor\bin\Debug\net6.0-windows\locales\ERParamEditor
-            //string s = ".\\locales\\ERParamEditor";
-            //Directory.Exists(s);
+
             
            if (!Directory.Exists(localesPath)) {
                 return;
@@ -105,14 +100,14 @@ namespace MultiLangLib
             SwitchLanguage(langId,appName);
         }
 
-        public static void ApplyMessage(List<UpdateParamOption> updateParamOptions)
+        public static void ApplyMessage(List<UpdateParamOptionNames> updateParamOptions)
         {
-            var id = "UpdateParamTask";
+            var id = "UpdateParam";
             if (!MessageDict.ContainsKey(id))
                 return;
             var dict = MessageDict[id];
 
-            foreach(UpdateParamOption option in updateParamOptions) {
+            foreach(UpdateParamOptionNames option in updateParamOptions) {
                 if (dict.TryGetValue(option.Name, out string? text)) {
 
                     option.Description = text;
@@ -122,7 +117,7 @@ namespace MultiLangLib
 
         public static void ApplyMessage(List<UpdateParamTask> updateParamTasks)
         {
-            var id = "UpdateParamTask";
+            var id = "UpdateParam";
             if (!MessageDict.ContainsKey(id))
                 return;
             var dict = MessageDict[id];
@@ -134,6 +129,11 @@ namespace MultiLangLib
                     task.Description = text;
                 }
             }
+        }
+
+        public static string GetUpdateParamText(string text)
+        {
+            return GetText("UpdateParam", text);
         }
 
         public static string GetText(string id, string text) {

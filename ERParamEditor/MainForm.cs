@@ -249,7 +249,7 @@ namespace ERParamEditor
             if (paramProject == null)
                 return;
 
-            ParamUpdateForm form = new();
+            ParamUpdateForm2 form = new();
 
             form.Exec(paramProject);
 
@@ -260,8 +260,21 @@ namespace ERParamEditor
 
         }
 
+        void testUpdateForm2() {
+
+            ParamProject? paramProject = GlobalConfig.GetCurrentProject();
+            if (paramProject == null)
+                return;
+
+            ParamUpdateForm2 form = new();
+
+            form.Exec(paramProject);
+
+        }
         private void buttonTest_Click_1(object sender, EventArgs e)
         {
+
+            
             try
             {
                 Cursor = Cursors.WaitCursor;

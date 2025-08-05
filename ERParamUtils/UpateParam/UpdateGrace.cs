@@ -1,9 +1,11 @@
-﻿using Org.BouncyCastle.Asn1;
+﻿using ERParamUtils.UpateParam;
+using Org.BouncyCastle.Asn1;
 using SoulsFormats;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,10 +18,46 @@ namespace ERParamUtils.UpdateParam
 
         public static void UnlockGrace(ParamProject paramProject, UpdateCommand updateCommand)
         {
+
+            int value = updateCommand.GetOption(UpdateParamOptionNames.UnlockGrace);
+            UnlockGraceType t = UnlockGraceConfig.ValueToType(value);
+            if (t == UnlockGraceType.None) {
+                return;
+            }
+
+            if ( value < 1)
+                return;
             var param = paramProject.FindParam(ParamNames.BonfireWarpParam);
             if (param == null)
                 return;
 
+            switch (t) { 
+                case UnlockGraceType.UnlockNormal:
+                    UnlockGraceNormal(param,paramProject, updateCommand);
+                    break;
+                case UnlockGraceType.UnlockCustom:
+                    UnlockGraceCustom(param, paramProject, updateCommand);
+                    break;
+            }
+
+
+        }
+        static int[] normalSkipRowIds = {
+                111000,
+                100001,100000,
+                110000,110001,350000,190000,
+                110500,110501,110502,110503,110504,
+                150000,150005,160000,160001,160006,
+                130001,130002,130000,
+                650008,630050,611011,390000,650054,610018,
+                640014,640010,640007,
+                620047,620062,620043,
+                140000,140001,
+                120400,120300,120201,120200,120500,120100,
+                200000,694005,280000,685003,682002,210001,210100,210007,
+                692000,220000,694005,696000,200100
+               };
+        private static void UnlockGraceNormal(SoulsParam.Param param,ParamProject paramProject, UpdateCommand updateCommand) {
 
             //100000;Godrick the Grafted;“接肢”葛瑞克
             //100001; Margit, the Fell Omen;“恶兆妖鬼”玛尔基特
@@ -94,37 +132,100 @@ namespace ERParamUtils.UpdateParam
 
             //111000;Roundtable Hold;圆桌厅堂
 
-            int[] skipRowIds = {
-                111000,
-                100001,100000,
-                110000,110001,350000,190000,
-                110500,110501,110502,110503,110504,
-                150000,150005,160000,160001,160006,
-                130001,130002,130000,
-                650008,630050,611011,390000,650054,610018,
-                640014,640010,640007,
-                620047,620062,620043,
-                140000,140001,
-                120400,120300,120201,120200,120500,120100,
-                200000,694005,280000,685003,682002,210001,210100,210007,
-                692000,220000,694005,696000,200100
-               };
+ 
 
             for (int i = 0; i < param.Rows.Count; i++)
             {
 
                 var row = param.Rows[i];
 
-             
-                int textId = ParamRowUtils.GetCellInt(row, "textId1", 0);                
-                if (skipRowIds.Contains(row.ID) || skipRowIds.Contains(textId) )
+
+                int textId = ParamRowUtils.GetCellInt(row, "textId1", 0);
+                if (normalSkipRowIds.Contains(row.ID) || normalSkipRowIds.Contains(textId))
                     continue;
 
 
                 updateCommand.AddItem(row, eventflagIdKey, "71801");
             }
         }
-    
+
+
+        static string FindUnlockFile(ParamProject paramProject) {
+
+            string unlockName = "unlock_grace.txt";
+            string fn = paramProject.GetDir() + "\\" + unlockName;
+            if (File.Exists(fn))
+            {
+                return fn;
+            }
+
+            fn = GlobalConfig.TemplateDir + "\\" + unlockName;
+            if (File.Exists(fn))
+            {
+                return fn;
+            }
+
+
+            fn = GlobalConfig.BaseDir + "\\" + unlockName;
+            if (File.Exists(fn))
+            {
+                return fn;
+            }
+            return "";
+        }
+
+        private static void UnlockGraceCustom(SoulsParam.Param param, ParamProject paramProject, UpdateCommand updateCommand)
+        {
+
+            string fn = FindUnlockFile(paramProject);
+            // paramProject.GetDir() + "\\unlock_grace.txt";
+            if (fn.Length < 3) {
+                return;
+            }
+
+            var lines = File.ReadAllLines(fn);
+            HashSet<int> customIdSet = new();
+
+            foreach (var line in lines) { 
+
+                var line1 = line.Trim();
+                if (line1.StartsWith("#")) {
+                    continue;
+                }
+                if (line1.Length < 6)
+                {
+                    continue;
+                }
+                var items = line1.Split(';');
+
+                if (items.Length >= 1) {
+                    var id = int.Parse(items[0]);
+                    if (id < 100000)
+                        continue;
+                    customIdSet.Add(id);
+                }
+            }
+            if (customIdSet.Count < 1)
+                return;
+
+            for (int i = 0; i < param.Rows.Count; i++)
+            {
+
+                var row = param.Rows[i];
+
+
+                int textId = ParamRowUtils.GetCellInt(row, "textId1", 0);
+                if (normalSkipRowIds.Contains(row.ID) || normalSkipRowIds.Contains(textId))
+                    continue;
+
+                if (!customIdSet.Contains(textId) && !customIdSet.Contains(row.ID))
+                    continue;
+                updateCommand.AddItem(row, eventflagIdKey, "71801");
+            }
+        
+            //todo
+        }
+
         /* 
         public static void UnlockGlaceDefault(UpdateCommand updateCommand) {
 

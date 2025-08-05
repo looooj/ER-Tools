@@ -204,6 +204,8 @@ namespace ERParamUtils.UpdateParam
         }
 
         //Sacred Tear
+        //2010000;Scadutree Fragment;幽影树碎片
+        //2010100;Revered Spirit Ash;灵灰
         public static void AddSeedTear(ParamProject paramProject, UpdateCommand updateCommand)
         {
             var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
@@ -212,7 +214,16 @@ namespace ERParamUtils.UpdateParam
 
             AddEquip(updateCommand, param, 10020, (int)ShopEquipType.Good, "");
             AddEquip(updateCommand, param, 10010, (int)ShopEquipType.Good, "");
+        }
 
+        public static void AddFragmentAsh(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+
+            AddEquip(updateCommand, param, 2010000, (int)ShopEquipType.Good, "");
+            AddEquip(updateCommand, param, 2010100, (int)ShopEquipType.Good, "");
         }
 
         //Bell Bearing

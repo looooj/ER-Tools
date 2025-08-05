@@ -219,56 +219,7 @@ namespace ERParamUtils.UpdateParam
         }
     }
 
-    public class UpdateParamOption
-    {
 
-        public string Name;
-        public string Description;
-
-        public UpdateParamOption(string name)
-        {
-            Name = name;
-            Description = name;
-        }
-
-        public UpdateParamOption(string name, string description) {
-            Name = name;
-            Description = description;
-        }
-
-        public static readonly string ReplaceGoldenSeedSacredTear= "ReplaceGoldenSeedSacredTear";
-        public static readonly string ReplaceTalismanPouch = "ReplaceTalismanPouch";
-        public static readonly string ReplaceFinger = "ReplaceFinger";
-        public static readonly string ReplaceCookbook = "ReplaceCookbook";
-        public static readonly string ReplaceDeathroot = "ReplaceDeathroot";
-        public static readonly string ReplaceRune = "ReplaceRune";
-        public static readonly string ReplaceRuneArc = "ReplaceRuneArc";        
-        //public static readonly string ReplaceBolt = "ReplaceBolt";
-
-        public static readonly string ReplaceBellBearing = "ReplaceBellBearing";
-        public static readonly string ReplaceStoneswordKey = "ReplaceStoneswordKey";
-        public static readonly string ReplaceMemoryStone = "ReplaceMemoryStone";
-        public static readonly string ReplaceDragonHeart = "ReplaceDragonHeart";
-        public static readonly string IncRemnant = "IncRemnant";
-        public static readonly string ReplaceRemnant = "ReplaceRemnant";
-
-
-        public static readonly string ReplaceGiantCrowSoul = "ReplaceGiantCrowSoul";
-        public static readonly string ReplaceLordRune = "ReplaceLordRune";
-        public static readonly string DoubleGetSoul = "DoubleGetSoul";
-
-        public static readonly string InitMagicSlotAccSlot = "InitMagicSlotAccSlot";
-
-
-        public static readonly string AddMapPiece = "AddMapPiece";
-        public static readonly string AddWhetblade = "AddWhetblade";
-
-        //public static readonly string RemoveRemembranceRequire = "RemoveRemembranceRequire";
-        //public static readonly string RemoveRecipe = "AddWhetblade";
-
-
-
-    }
 
     public class UpdateCommand
     {
@@ -285,6 +236,13 @@ namespace ERParamUtils.UpdateParam
 
         public void SetOption(string key, int value) {
             _updateOptions[key] = value;
+        }
+
+        public void AddOption(Dictionary<string,int> options)        
+        {
+            foreach(string key in options.Keys) { 
+                SetOption(key, options[key]);
+            }
         }
 
         public void AddOption(List<string> options) {
@@ -381,9 +339,13 @@ namespace ERParamUtils.UpdateParam
             return _paramProject;
         }
 
-        internal bool HaveOption(string configName)
+        public bool HaveOption(string optName)
         {
-            return _updateOptions.ContainsKey(configName);
+            return _updateOptions.ContainsKey(optName);
+        }
+
+        public int GetOption(string optName) {
+            return _updateOptions[optName];
         }
     }
 

@@ -1,4 +1,5 @@
-﻿using Org.BouncyCastle.Asn1.X509;
+﻿using ERParamUtils.UpateParam;
+using Org.BouncyCastle.Asn1.X509;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,7 +64,8 @@ namespace ERParamUtils.UpdateParam
                 return;
             }
 
-            if (line.StartsWith("@@getItemFlagId")) {
+            if (line.StartsWith("@@getItemFlagId"))
+            {
                 string[] ss = line.Split('=');
                 currentGetItemFlagId = Int32.Parse(ss[1]);
                 return;
@@ -109,7 +111,7 @@ namespace ERParamUtils.UpdateParam
                 if (currentLotIndex == 0)
                 {
                     procOneItem(updateCommand, rowId, 1, equipId + "", currentEquipType + "", lotCount, 1000);
-                    procOneItem(updateCommand, rowId, 2,  "0",  "0", 0, 0);
+                    procOneItem(updateCommand, rowId, 2, "0", "0", 0, 0);
 
                 }
                 else
@@ -123,7 +125,8 @@ namespace ERParamUtils.UpdateParam
             }
         }
 
-        public void procOneItem(UpdateCommand updateCommand, string rowId, int index, string equipId, string equipType, int count, int point) {
+        public void procOneItem(UpdateCommand updateCommand, string rowId, int index, string equipId, string equipType, int count, int point)
+        {
             UpdateCommandItem item = CreateItem(rowId);
             item.Key = string.Format("lotItemId0{0}", index);
             item.Value = equipId;
@@ -145,7 +148,8 @@ namespace ERParamUtils.UpdateParam
             item.Value = point + "";
             updateCommand.AddItem(item);
 
-            if (currentGetItemFlagId > 0) {
+            if (currentGetItemFlagId > 0)
+            {
                 item = CreateItem(rowId);
                 item.Key = string.Format("getItemFlagId");
                 item.Value = currentGetItemFlagId + "";
@@ -173,7 +177,7 @@ namespace ERParamUtils.UpdateParam
     {
 
         string paramName;
-        string currentType="";
+        string currentType = "";
         int index = 1;
         int point = 1000;
         int count = 1;
@@ -252,12 +256,13 @@ namespace ERParamUtils.UpdateParam
                         lastCount = Int32.Parse(counts[i]);
                     }
 
-                    if (index == 0) {
+                    if (index == 0)
+                    {
                         procOneItem(updateCommand, rowId, 1, equip, currentType, lastCount, 1000);
                         procOneItem(updateCommand, rowId, 2, "0", currentType, 0, 0);
                         break;
                     }
-                    procOneItem(updateCommand, rowId, index, equip, currentType,lastCount, point);
+                    procOneItem(updateCommand, rowId, index, equip, currentType, lastCount, point);
 
                     /*
                     UpdateCommandItem item = CreateItem(rowId);
@@ -385,7 +390,7 @@ namespace ERParamUtils.UpdateParam
             int newItemCount = 20;
             int specLotCount = SpecEquipConfig.GetSpec(itemId, (EquipType)itemType);
 
-            if (!( specLotCount > 0
+            if (!(specLotCount > 0
                 || SpecEquipConfig.IsRune(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsSmithingStone(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsRemnant(itemId, (EquipType)itemType)
@@ -489,37 +494,42 @@ namespace ERParamUtils.UpdateParam
                 }
                 key = "lotItemCategory0" + i;
                 int itemType = ParamRowUtils.GetCellInt(row, key, 0);
-                if (itemType < 1) {
+                if (itemType < 1)
+                {
                     continue;
                 }
+                int incLotItemNum = 0;
 
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceBellBearing))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceBellBearing))
                     if (SpecEquipConfig.isBellBearing(itemId, (EquipType)itemType))
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        incLotItemNum = 10;
                     }
 
 
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceFinger))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceFinger))
                     if (SpecEquipConfig.IsFinger(itemId, (EquipType)itemType))
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        incLotItemNum = 5;
                     }
 
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceCookbook))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceCookbook))
                     if (SpecEquipConfig.IsCookBook(itemId, (EquipType)itemType))
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        incLotItemNum = 5;
                     }
 
-                if (updateCommand.HaveOption(UpdateParamOption.AddMapPiece))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.AddMapPiece))
                     if (SpecEquipConfig.IsMapPiece(itemId, (EquipType)itemType))
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
 
                 //for cer mod
-                if (updateCommand.HaveOption(UpdateParamOption.IncRemnant))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.IncRemnant))
                 {
                     if (SpecEquipConfig.IsRemnant(itemId, (EquipType)itemType))
                     {
@@ -532,6 +542,7 @@ namespace ERParamUtils.UpdateParam
 
                 }
 
+                /*
                 if (updateCommand.HaveOption(UpdateParamOption.ReplaceLordRune))
                 {
                     if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
@@ -548,11 +559,13 @@ namespace ERParamUtils.UpdateParam
                         updateCommand.AddItem(row, "lotItemNum0" + i, 10);
                     }
                 }
-                else {
+                else
+                {
                     if (updateCommand.HaveOption(UpdateParamOption.ReplaceRune))
                         if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
                         {
-                            if (itemId < 2912) {
+                            if (itemId < 2912)
+                            {
                                 updateCommand.AddItem(row, "lotItemId0" + i, 2912);
                             }
                             if (itemId >= 2002951)
@@ -562,68 +575,112 @@ namespace ERParamUtils.UpdateParam
                             updateCommand.AddItem(row, "lotItemNum0" + i, 10);
                         }
                 }
+                */
 
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGoldenRune))
+                {
+                    var value = updateCommand.GetOption(UpdateParamOptionNames.ReplaceGoldenRune);
+                    var eqId = ReplaceGoldenRune.ValueToEquipId(value);
+                    if (eqId > 0 && SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
+                    {
+                        if (itemId < eqId )
+                        {
+                            updateCommand.AddItem(row, "lotItemId0" + i, eqId);
+                        }
+                        //if (itemId >= 2002951)
+                        //{
+                        //    updateCommand.AddItem(row, "lotItemId0" + i, 2002958);
+                        //}
+                        updateCommand.AddItem(row, "lotItemNum0" + i, 5);
+                    }
 
+                }
                 //10010;Golden Seed;黄金种子
                 //10020; Sacred Tear; 圣杯露滴
-
-                
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceGoldenSeedSacredTear))
-                    if ((itemId == 10010 || itemId == 10020) && itemType == (int)EquipType.Good)
-                    {                       
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGoldenSeedSacredTear))
+                    if ((itemId == 10010
+                        || itemId == 10020 ) && itemType == (int)EquipType.Good)
+                    {
 
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        incLotItemNum = 10;
                     }
-                
+
+                //2010000;Scadutree Fragment;幽影树碎片
+                //2010100;Revered Spirit Ash;灵灰
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceScadutreeFragmentSpiritAsh))
+                    if ((
+                         itemId == 2010000
+                        || itemId == 2010100
+                        ) && itemType == (int)EquipType.Good)
+                    {
+
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2002960);
+                        incLotItemNum = 10;
+
+                    }
+
+
                 //10030;Memory Stone;记忆石
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceMemoryStone))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceMemoryStone))
                     if ((itemId == 10030) && itemType == (int)EquipType.Good)
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        incLotItemNum = 10;
                     }
 
 
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceStoneswordKey))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceStoneswordKey))
                     //8000; Stonesword Key; 石剑钥匙
                     if ((itemId == 8000) && itemType == (int)EquipType.Good)
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        incLotItemNum = 10;
+
                     }
 
                 //10040; Talisman Pouch; 护符皮袋  
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceTalismanPouch))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceTalismanPouch))
                     if ((itemId == 10040) && itemType == (int)EquipType.Good)
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        incLotItemNum = 10;
                     }
                 //2090;Deathroot;死根
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceDeathroot))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceDeathroot))
                     if ((itemId == 2090) && itemType == (int)EquipType.Good)
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        incLotItemNum = 10;
                     }
                 //10060; Dragon Heart; 龙心脏
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceDragonHeart))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceDragonHeart))
                     if ((itemId == 10060) && itemType == (int)EquipType.Good)
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        incLotItemNum = 5;
+
                     }
 
                 //190;Rune Arc;卢恩弯弧
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceRuneArc))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceRuneArc))
                     if ((itemId == 190) && itemType == (int)EquipType.Good)
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
 
                 //for cer mod
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceRemnant)) {
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceRemnant))
+                {
                     if (SpecEquipConfig.IsRemnant(itemId, EquipType.Good)
-                        || SpecEquipConfig.IsPhysickRemnant(itemId, EquipType.Good) )
+                        || SpecEquipConfig.IsPhysickRemnant(itemId, EquipType.Good))
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
 
+                }
+                if (incLotItemNum > 1) {
+                    updateCommand.AddItem(row, "lotItemNum0" + i, incLotItemNum);
                 }
             }
         }
