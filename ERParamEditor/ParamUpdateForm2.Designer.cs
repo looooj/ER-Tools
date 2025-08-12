@@ -33,6 +33,8 @@
             checkedListBoxOptions = new CheckedListBox();
             tabPageOthers = new TabPage();
             tableLayoutPanel1 = new TableLayoutPanel();
+            tabPageTalismans = new TabPage();
+            checkedListBoxTalisman = new CheckedListBox();
             panel1 = new Panel();
             checkBoxSelectAll = new CheckBox();
             buttonPublish = new Button();
@@ -40,6 +42,7 @@
             tabControl1.SuspendLayout();
             ggg.SuspendLayout();
             tabPageOthers.SuspendLayout();
+            tabPageTalismans.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,11 +50,12 @@
             // 
             tabControl1.Controls.Add(ggg);
             tabControl1.Controls.Add(tabPageOthers);
-            tabControl1.Location = new Point(33, 26);
+            tabControl1.Controls.Add(tabPageTalismans);
+            tabControl1.Location = new Point(12, 11);
             tabControl1.Margin = new Padding(3, 2, 3, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(872, 421);
+            tabControl1.Size = new Size(1065, 580);
             tabControl1.TabIndex = 0;
             // 
             // ggg
@@ -61,7 +65,7 @@
             ggg.Margin = new Padding(3, 2, 3, 2);
             ggg.Name = "ggg";
             ggg.Padding = new Padding(3, 2, 3, 2);
-            ggg.Size = new Size(864, 395);
+            ggg.Size = new Size(1057, 554);
             ggg.TabIndex = 0;
             ggg.Text = "General";
             ggg.UseVisualStyleBackColor = true;
@@ -69,19 +73,19 @@
             // checkedListBoxOptions
             // 
             checkedListBoxOptions.FormattingEnabled = true;
-            checkedListBoxOptions.Location = new Point(73, 84);
+            checkedListBoxOptions.Location = new Point(6, 5);
             checkedListBoxOptions.Name = "checkedListBoxOptions";
-            checkedListBoxOptions.Size = new Size(608, 244);
+            checkedListBoxOptions.Size = new Size(1021, 500);
             checkedListBoxOptions.TabIndex = 0;
             // 
             // tabPageOthers
             // 
             tabPageOthers.Controls.Add(tableLayoutPanel1);
-            tabPageOthers.Location = new Point(4, 26);
+            tabPageOthers.Location = new Point(4, 22);
             tabPageOthers.Margin = new Padding(3, 2, 3, 2);
             tabPageOthers.Name = "tabPageOthers";
             tabPageOthers.Padding = new Padding(3, 2, 3, 2);
-            tabPageOthers.Size = new Size(864, 391);
+            tabPageOthers.Size = new Size(1057, 554);
             tabPageOthers.TabIndex = 1;
             tabPageOthers.Text = "Others";
             tabPageOthers.UseVisualStyleBackColor = true;
@@ -97,6 +101,26 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.Size = new Size(628, 39);
             tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tabPageTalismans
+            // 
+            tabPageTalismans.Controls.Add(checkedListBoxTalisman);
+            tabPageTalismans.Location = new Point(4, 26);
+            tabPageTalismans.Name = "tabPageTalismans";
+            tabPageTalismans.Padding = new Padding(3);
+            tabPageTalismans.Size = new Size(1057, 550);
+            tabPageTalismans.TabIndex = 2;
+            tabPageTalismans.Text = "Talismans";
+            tabPageTalismans.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBoxTalisman
+            // 
+            checkedListBoxTalisman.Dock = DockStyle.Top;
+            checkedListBoxTalisman.FormattingEnabled = true;
+            checkedListBoxTalisman.Location = new Point(3, 3);
+            checkedListBoxTalisman.Name = "checkedListBoxTalisman";
+            checkedListBoxTalisman.Size = new Size(1051, 148);
+            checkedListBoxTalisman.TabIndex = 4;
             // 
             // panel1
             // 
@@ -162,6 +186,7 @@
             tabControl1.ResumeLayout(false);
             ggg.ResumeLayout(false);
             tabPageOthers.ResumeLayout(false);
+            tabPageTalismans.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -178,5 +203,7 @@
         private CheckedListBox checkedListBoxOptions;
         private TableLayoutPanel tableLayoutPanel1;
         private CheckBox checkBoxSelectAll;
+        private TabPage tabPageTalismans;
+        private CheckedListBox checkedListBoxTalisman;
     }
 }

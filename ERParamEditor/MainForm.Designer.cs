@@ -48,6 +48,7 @@
             buttonTest = new Button();
             buttonExec = new Button();
             errorProvider1 = new ErrorProvider(components);
+            buttonTestForm = new Button();
             panel1.SuspendLayout();
             panelClient.SuspendLayout();
             panelParamList.SuspendLayout();
@@ -184,6 +185,7 @@
             // 
             // panelBottom
             // 
+            panelBottom.Controls.Add(buttonTestForm);
             panelBottom.Controls.Add(buttonFind);
             panelBottom.Controls.Add(buttonRestore);
             panelBottom.Controls.Add(buttonTest);
@@ -216,7 +218,7 @@
             // 
             // buttonTest
             // 
-            buttonTest.Location = new Point(870, 13);
+            buttonTest.Location = new Point(828, 12);
             buttonTest.Name = "buttonTest";
             buttonTest.Size = new Size(75, 23);
             buttonTest.TabIndex = 2;
@@ -238,6 +240,17 @@
             // errorProvider1
             // 
             errorProvider1.ContainerControl = this;
+            // 
+            // buttonTestForm
+            // 
+            buttonTestForm.Location = new Point(909, 12);
+            buttonTestForm.Name = "buttonTestForm";
+            buttonTestForm.Size = new Size(75, 23);
+            buttonTestForm.TabIndex = 5;
+            buttonTestForm.Text = "TestForm";
+            buttonTestForm.UseVisualStyleBackColor = true;
+            buttonTestForm.Visible = false;
+            buttonTestForm.Click += buttonTestForm_Click;
             // 
             // MainForm
             // 
@@ -285,5 +298,6 @@
         private Button buttonRestore;
         private Button buttonFind;
         private Button buttonCompare;
+        private Button buttonTestForm;
     }
 }

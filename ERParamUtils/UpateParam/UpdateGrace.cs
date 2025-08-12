@@ -39,8 +39,10 @@ namespace ERParamUtils.UpdateParam
                     UnlockGraceCustom(param, paramProject, updateCommand);
                     break;
             }
-
-
+            SetMapInfoParam(paramProject, updateCommand);
+            if (updateCommand.HaveOption(UpdateParamOptionNames.UnlockRoundtableHold)) {
+                UnlockRoundtableHold(updateCommand);
+            }
         }
         static int[] normalSkipRowIds = {
                 111000,
@@ -136,9 +138,13 @@ namespace ERParamUtils.UpdateParam
 
             for (int i = 0; i < param.Rows.Count; i++)
             {
+                
 
                 var row = param.Rows[i];
 
+                if (row.ID < 100000) { 
+                    continue;
+                }
 
                 int textId = ParamRowUtils.GetCellInt(row, "textId1", 0);
                 if (normalSkipRowIds.Contains(row.ID) || normalSkipRowIds.Contains(textId))
@@ -159,18 +165,18 @@ namespace ERParamUtils.UpdateParam
                 return fn;
             }
 
-            fn = GlobalConfig.TemplateDir + "\\" + unlockName;
-            if (File.Exists(fn))
-            {
-                return fn;
-            }
-
-
             fn = GlobalConfig.BaseDir + "\\" + unlockName;
             if (File.Exists(fn))
             {
                 return fn;
             }
+
+            fn = GlobalConfig.TemplateDir + "\\commons\\" + unlockName;
+            if (File.Exists(fn))
+            {
+                return fn;
+            }
+
             return "";
         }
 
@@ -178,6 +184,8 @@ namespace ERParamUtils.UpdateParam
         {
 
             string fn = FindUnlockFile(paramProject);
+
+            UpdateLogger.InfoTime("UnlockGraceCustom [{0}]",fn);
             // paramProject.GetDir() + "\\unlock_grace.txt";
             if (fn.Length < 3) {
                 return;
@@ -226,15 +234,15 @@ namespace ERParamUtils.UpdateParam
             //todo
         }
 
-        /* 
-        public static void UnlockGlaceDefault(UpdateCommand updateCommand) {
+         
+        public static void UnlockRoundtableHold(UpdateCommand updateCommand) {
 
             //111000;Table of Lost Grace;大赐福
             int[] defaultIds = { 111000 };
             foreach (int rowId in defaultIds) {
                 updateCommand.AddItem(ParamNames.BonfireWarpParam, rowId, eventflagIdKey, 71801);
             }
-        }*/
+        }
 
 
         //MapDefaultInfoParam
@@ -248,12 +256,12 @@ namespace ERParamUtils.UpdateParam
             {
 
                 var row = param.Rows[i];
-                if (row.Name == null || row.Name.Length < 1)
-                    continue;
+                //if (row.Name == null || row.Name.Length < 1)
+                //    continue;
 
                 int val = ParamRowUtils.GetCellInt(row, key, -1);
-                if (val > 0) {
-                    updateCommand.AddItem(row, key, "82001");
+                if (val > 1) {
+                    updateCommand.AddItem(row, key, "6001");
                 }
             }
         }

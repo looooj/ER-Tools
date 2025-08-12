@@ -32,6 +32,7 @@ namespace ERParamEditor
         private static async Task<int> InitLoadTask()
         {
 
+            
             try
             {
 
@@ -42,7 +43,7 @@ namespace ERParamEditor
             }
             catch (Exception e)
             {
-                logger.Info("===InitLoadTask {}",e);
+                logger.Info("===InitLoadTask {}", e);
                 return 0;
             }
 
@@ -77,6 +78,7 @@ namespace ERParamEditor
             if (GlobalConfig.Debug)
             {
                 buttonTest.Visible = true;
+                buttonTestForm.Visible = true;
             }
 
             menuProject = new();
@@ -130,9 +132,12 @@ namespace ERParamEditor
             listViewParam.Items.Clear();
 
             //ListViewUtils.AddItem(listViewProject, "CurrentCulture", CultureInfo.CurrentCulture.ThreeLetterISOLanguageName);
-
+            ListViewUtils.AddItem(listViewProject, "LangId", MultiLang.GetLangId());
+            ListViewUtils.AddItem(listViewProject, "LangName", MultiLang.GetLangName());
 
             ListViewUtils.AddItem(listViewProject, "GlobalConfig");
+
+
             ListViewUtils.AddItem(listViewProject, "BaseDir", GlobalConfig.BaseDir);
             ListViewUtils.AddItem(listViewProject, "AssetsDir", GlobalConfig.AssetsDir);
             ListViewUtils.AddItem(listViewProject, "");
@@ -158,8 +163,8 @@ namespace ERParamEditor
             foreach (var p in paramList)
             {
                 string? desc = ParamNames.GetDesc(p);
-                if ( desc != null )
-                    ListViewUtils.AddItem(listViewParam, p+ " | "+desc);
+                if (desc != null)
+                    ListViewUtils.AddItem(listViewParam, p + " | " + desc);
                 else
                     ListViewUtils.AddItem(listViewParam, p);
             }
@@ -204,9 +209,10 @@ namespace ERParamEditor
                 {
                     project = ParamProjectManager.OpenProject(form.ProjectName, form.initCopy());
 
-                    
+
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
 
                     MessageBox.Show(ex.Message);
                 }
@@ -249,7 +255,7 @@ namespace ERParamEditor
             if (paramProject == null)
                 return;
 
-            ParamUpdateForm2 form = new();
+            ParamUpdateForm3 form = new();
 
             form.Exec(paramProject);
 
@@ -260,27 +266,18 @@ namespace ERParamEditor
 
         }
 
-        void testUpdateForm2() {
 
-            ParamProject? paramProject = GlobalConfig.GetCurrentProject();
-            if (paramProject == null)
-                return;
-
-            ParamUpdateForm2 form = new();
-
-            form.Exec(paramProject);
-
-        }
         private void buttonTest_Click_1(object sender, EventArgs e)
         {
 
-            
+
             try
             {
                 Cursor = Cursors.WaitCursor;
                 Tests.Run();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString());
             }
             Cursor = Cursors.Default;
@@ -333,7 +330,7 @@ namespace ERParamEditor
 
         private void buttonRestore_Click(object sender, EventArgs e)
         {
-            string msg = MultiLang.GetText("Are you sure exec restore?");
+            string msg = MultiLang.GetDefaultText("restore", "Are you sure exec restore?");
             DialogResult r = MessageBox.Show(msg, "", MessageBoxButtons.YesNo);
             if (r != DialogResult.Yes)
             {
@@ -353,6 +350,13 @@ namespace ERParamEditor
         private void buttonCompare_Click(object sender, EventArgs e)
         {
             CompareProjectForm form = new();
+            form.ShowDialog();
+        }
+
+        private void buttonTestForm_Click(object sender, EventArgs e)
+        {
+
+            TestForm form = new TestForm();
             form.ShowDialog();
         }
     }

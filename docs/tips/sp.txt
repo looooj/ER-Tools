@@ -1,0 +1,23 @@
+269,defEnemyDmgCorrectRate_Physics 物防
+270,defEnemyDmgCorrectRate_Magic 魔防
+271,defEnemyDmgCorrectRate_Fire 火防
+272,defEnemyDmgCorrectRate_Thunder 雷防
+273,defEnemyDmgCorrectRate_Dark 圣防 
+
+DamageCorrectRate
+
+防护加成 默认是1, 0.8是20%防护
+
+
+14_physicsAttackRate 
+15_magicAttackRate
+16_fireAttackRate
+17_thunderAttackRate
+219_darkAttackRate
+攻击加成 默认是1, 1.15 就是15%加成
+
+artsConsumptionRate
+magicConsumptionRate
+shamanConsumptionRate
+miracleConsumptionRate
+消耗比率默认是1, 0.75就是减少25%消耗

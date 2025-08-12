@@ -12,7 +12,7 @@ namespace ERParamUtils.UpateParam
 
         public static void Proc(ParamProject? paramProject, UpdateCommand updateCommand) {
 
-            int times =  updateCommand.GetOption(UpdateParamOptionNames.TimesGetSoul);
+            int times =  updateCommand.GetOption(UpdateParamOptionNames.GetRuneRate);
             if (times <= 1)
                 return;
 

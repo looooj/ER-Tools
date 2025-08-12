@@ -48,7 +48,7 @@ namespace ERParamUtils.UpdateParam
                 {
                     return false;
                 }
-                varMap.TryAdd(varName, varValue);
+                varMap[varName]=varValue;
                 return true;
             }
             return false;

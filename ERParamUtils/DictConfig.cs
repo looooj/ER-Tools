@@ -114,5 +114,19 @@ namespace ERParamUtils
             return def;
         }
 
+        public string GetKeyValueString() {
+            var keys = Dict.Keys;
+            var str = "";
+            foreach (string key in keys) {
+                if (str.Length > 0) {
+                    str = str + ";";
+                }
+                str = str + key;
+                str = str + "=";
+                str = str + Dict[key];                
+            }
+            return str;
+        }
+
     }
 }

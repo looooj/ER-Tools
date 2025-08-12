@@ -30,7 +30,7 @@ namespace ERParamEditor
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         List<UpdateParamTask> updateParamTasks = new();
-        List<UpdateParamOptionNames> updateParamOptions = new();
+        List<UpdateParamOptionItem> updateParamOptions = new();
         public ParamProject _paramProject;
 
         const string optionsFile = "update-opt-2.txt";
@@ -61,7 +61,7 @@ namespace ERParamEditor
         private void InitControls()
         {
 
-            checkedListBoxOptions.Dock = DockStyle.Fill;
+            checkedListBoxOptions.Dock = DockStyle.Top;
             tabControl1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Dock = DockStyle.Fill;
 
@@ -95,19 +95,19 @@ namespace ERParamEditor
                 index++;
             }
             InitOthers(lastSaveOptions);
-
+            initTalisman(lastSaveOptions);
             MultiLang.ApplyForm(this, "ParamUpdateForm");
 
         }
 
         //List<ComboBox> optionSelectionList = new List<ComboBox>();
         ComboBox comboBoxReplaceGoldenRune;
-        ComboBox comboBoxTimesGetSoul;
+        ComboBox comboBoxGetSoulRate;
         ComboBox comboBoxUnlockGrace;
         void InitOthers(DictConfig lastSaveOptions)
         {
 
-            string runeNames = MultiLang.GetText(UpdateParamOptionNames.ReplaceGoldenRune,
+            string runeNames = MultiLang.GetText("UpdateParam",UpdateParamOptionNames.ReplaceGoldenRune,
                 ReplaceGoldenRune.GetNameList());
 
             comboBoxReplaceGoldenRune = ControlUtils.AddSelectionNameValue(tableLayoutPanel1,
@@ -118,13 +118,13 @@ namespace ERParamEditor
                 );
 
             //optionSelectionList.Add(cb);
-            string timesList = "1,2,3,4,5,10,20";
-            comboBoxTimesGetSoul = ControlUtils.AddSelectionNameValue(tableLayoutPanel1,
-                UpdateParamOptionNames.TimesGetSoul, UpdateParamOptionNames.TimesGetSoul, timesList, timesList,
-                                lastSaveOptions.GetString(UpdateParamOptionNames.TimesGetSoul, "1"));
+            string rateList = "1,2,3,4,5,10,20,50";
+            comboBoxGetSoulRate = ControlUtils.AddSelectionNameValue(tableLayoutPanel1,
+                UpdateParamOptionNames.GetRuneRate, UpdateParamOptionNames.GetRuneRate, rateList, rateList,
+                                lastSaveOptions.GetString(UpdateParamOptionNames.GetRuneRate, "1"));
 
 
-            string unlockGraceNames = MultiLang.GetText(UpdateParamOptionNames.UnlockGrace,
+            string unlockGraceNames = MultiLang.GetText("UpdateParam", UpdateParamOptionNames.UnlockGrace,
                  UnlockGraceConfig.GetNameList());
 
             comboBoxUnlockGrace = ControlUtils.AddSelectionNameValue(tableLayoutPanel1,
@@ -134,6 +134,23 @@ namespace ERParamEditor
                 lastSaveOptions.GetString(UpdateParamOptionNames.UnlockGrace, "0")
                 );
             //optionSelectionList.Add(cb);
+        }
+        List<UpdateParamOptionItem> updateTalismanOptions = new();
+
+        private void initTalisman(DictConfig lastSaveOptions) {
+
+            //checkedListBoxCrimsonAmberMedallion.Dock = DockStyle.Fill;
+            updateTalismanOptions = UpdateTalisman.GetUpdateParams();
+            MultiLang.ApplyMessage(updateTalismanOptions);
+
+            for (int i = 0; i < updateTalismanOptions.Count; i++) { 
+                var item = updateTalismanOptions[i];
+                
+                checkedListBoxTalisman.Items.Add(item.Description);
+                var c = (lastSaveOptions.Contains(item.Name));
+                checkedListBoxTalisman.SetItemChecked(i, c);                
+            }
+            //checkedListBoxCrimsonAmberMedallion.Items.Add(  );
         }
 
         private void ExecUpdatePublish(string? msg, bool publish)
@@ -176,11 +193,17 @@ namespace ERParamEditor
                 index++;
             }
 
+            for (int i = 0; i < updateTalismanOptions.Count; i++) {
+                if (checkedListBoxTalisman.GetItemChecked(i)) {
+                    dictConfig.SetString(updateTalismanOptions[i].Name, "1"); 
+                }
+            }
+
             dictConfig.SetString(UpdateParamOptionNames.ReplaceGoldenRune,
                 comboBoxReplaceGoldenRune.SelectedValue.ToString());
 
-            dictConfig.SetString(UpdateParamOptionNames.TimesGetSoul,
-                comboBoxTimesGetSoul.SelectedValue.ToString());
+            dictConfig.SetString(UpdateParamOptionNames.GetRuneRate,
+                comboBoxGetSoulRate.SelectedValue.ToString());
 
 
             dictConfig.SetString(UpdateParamOptionNames.UnlockGrace,
@@ -216,7 +239,7 @@ namespace ERParamEditor
 
         private void buttonPublish_Click(object sender, EventArgs e)
         {
-            string msg = MultiLang.GetText("Are you sure exec publish?");
+            string msg = MultiLang.GetDefaultText("publish", "Are you sure exec publish?");
 
             ExecUpdatePublish(msg, true);
         }

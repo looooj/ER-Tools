@@ -1,18 +1,24 @@
-﻿UnlockCraftingTask=解锁制作笔记,无条件制作,替换制作笔记为王之卢恩
-UnlockGraceTask=解锁赐福点
-BuddyTask=增加骨灰的召唤范围;移除骨灰召唤消耗;无限召唤次数
-UpdateShopParamTask=全部商品可见;物品类无限数量;设置最小价格
+﻿
 SpecShopParamTask=执行商店脚本(shop-spec)
 ItemLotCountParamTask=设置特定物品拾取掉落数量(黄金卢恩20;弓箭90;...)
 LotParamTask=执行拾取掉落脚本(lot-enemy*,lot-map*)
 SpEffectParamTask=执行效果脚本(sp-effect)
-RemoveRequireTask=移除武器魔法祷告需求
-RemoveWeightTask=移除武器盔甲重量
 CharInitParamTask=执行角色初始脚本(chara-init)
+
+
 SpecRecipeParamTask=执行配方脚本(recipe-spec)
+
+RemoveRequire=移除武器魔法祷告需求
+RemoveWeight=移除武器盔甲重量
+UnlockCrafting=解锁制作笔记,无条件制作,替换制作笔记为王之卢恩
+Buddy=增加骨灰的召唤范围;移除骨灰召唤消耗;无限召唤次数
+UpdateShop=全部商品可见;物品类无限数量;...
+
+
 
 InitMagicSlotAccSlot=初始化护符和记忆槽
 ReplaceGoldenSeedSacredTear=替换黄金种子和圣杯露滴
+ReplaceScadutreeFragmentSpiritAsh=替换灵灰和幽影树碎片
 ReplaceTalismanPouch=替换护符皮袋
 ReplaceFinger=替换勾指
 ReplaceCookbook=替换制作笔记
@@ -25,7 +31,16 @@ ReplaceStoneswordKey=替换石剑钥匙
 ReplaceMemoryStone=替换记忆石
 ReplaceDragonHeart=替换龙心脏
 ReplaceGiantCrowSoul=替换大乌鸦卢恩掉落->10000000
-AddMapPiece=添加制作地图碎片
+ReplaceMapPiece=替换地图碎片
+
 AddWhetblade=添加砥石刀
 IncRemnant=增加遗物数量(for cer)
 DoubleGetSoul=加倍卢恩掉落
+
+CrimsonAmberMedallionBase=红琥珀链坠: (血量,专注值,精力,负重)*1.5;获取卢恩200%;物品掉落概率500%;静音
+CrimsonAmberMedallionRestore=红琥珀链坠: 恢复血量和专注值
+CrimsonAmberMedallionDisable=红琥珀链坠: (中毒,冻伤,出血,腐败,发狂,催眠,咒死)无效
+AllTalisman=全部护符: (血量,专注值,精力,获取卢恩，物品掉落)*1.2 
+
+ReplaceGoldenRune=不变,黄金卢恩 [13](10000),英雄卢恩 [2](20000),英雄卢恩 [4](30000)
+UnlockGrace=不变,解锁全部,解锁指定(unlock_grace.txt)

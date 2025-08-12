@@ -1,7 +1,9 @@
-﻿using Org.BouncyCastle.Asn1.Mozilla;
+﻿using ERParamUtils.UpateParam;
+using Org.BouncyCastle.Asn1.Mozilla;
 using Org.BouncyCastle.Asn1.Ocsp;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.Contracts;
 using System.Linq;
@@ -150,8 +152,70 @@ namespace ERParamUtils.UpdateParam
             }
 
         }
-        public static void ExecDefaultUpdate(ParamProject paramProject, UpdateCommand updateCommand)
+        //101800[Twin Maiden Husks] White Cipher Ring
+        //10168;Somber Ancient Dragon Smithing Stone;古龙岩失色锻造石
+        //10140;Ancient Dragon Smithing Stone;古龙岩锻造石
+        //10909;Great Grave Glovewort;大朵墓地铃兰
+        //10919;Great Ghost Glovewort;大朵灵依墓地铃兰
+
+        static bool NotUsedEquip(int eqId, EquipType eqType) {
+
+            if (SpecEquipConfig.IsBoluses(eqId, eqType)) {
+                return true;
+            }
+
+            return false;
+        }
+        public static void ReplaceAncientStone(ParamProject paramProject, UpdateCommand updateCommand)
         {
+
+            int[] idList = { 10168,10140,10909,10919};
+            UpdateLogger.Begin(ParamNames.ShopLineupParam);
+
+
+
+            var param = paramProject.FindParam(ParamNames.ShopLineupParam);
+            if (param == null)
+                return;
+
+            int replaceIndex = 0;
+
+            foreach (var row in param.Rows)
+            {
+                int equipId = GetEquipId(row);
+
+                ShopEquipType shopEquipType = (ShopEquipType)GetEquipType(row);
+                EquipType equipType = EquipTypeUtils.ConvertFromShopEquipType((ShopEquipType)shopEquipType);
+                if (row.ID >= 101800) {
+
+                    if (NotUsedEquip(equipId, equipType)) {
+
+                        updateCommand.AddItem(row, "equipId", idList[replaceIndex]);
+                        updateCommand.AddItem(row, "equipType", (int)ShopEquipType.Good);
+                        updateCommand.AddItem(row, "value", 2000);
+                        updateCommand.AddItem(row, "sellQuantity", -1);
+                        updateCommand.AddItem(row, "eventFlag_forRelease", 0);
+                        replaceIndex++;
+                    }
+                }
+                if (replaceIndex >= idList.Length) {
+                    break;
+                }
+            }
+        }
+
+        public static void ExecDefault(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+
+            if (!updateCommand.HaveOption(UpdateParamOptionNames.UpdateShop)) {
+                return;
+            }
+
+            updateCommand.SetOption(UpdateParamOptionNames.ReplaceBellBearing, 1);
+
+
+            UpdateLogger.InfoTime("===UpdateShopLineupParam.ExecDefault");
+
 
             UpdateLogger.Begin(ParamNames.ShopLineupParam);
 
@@ -249,6 +313,27 @@ namespace ERParamUtils.UpdateParam
 
 
         }
+
+        /*
+        public static void ChangeSpecVisibility(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+
+            var param = paramProject.FindParam(ParamNames.ShopLineupParam);
+            if (param == null)
+                return;
+
+            foreach (var row in param.Rows)
+            {
+
+                if (row.ID >= 110000 || row.ID < 100000)
+                    continue;
+
+                ChangeVisibility(row, updateCommand);
+
+                int equipId = GetEquipId(row);
+
+            }
+        }*/
 
         static void ChangeVisibility(SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {

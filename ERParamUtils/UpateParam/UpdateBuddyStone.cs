@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ERParamUtils.UpateParam;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,11 @@ namespace ERParamUtils.UpdateParam
 
         public static void Exec(ParamProject paramProject,UpdateCommand updateCommand)
         {
+            if (!updateCommand.HaveOption(UpdateParamOptionNames.Buddy)) {
+                return;
+            }
+            UpdateLogger.Info("===UpdateBuddyStone.Exec");
+
             ProcBuddyStone(paramProject,updateCommand);
             ProcRemoveConsume(paramProject,updateCommand);
         }

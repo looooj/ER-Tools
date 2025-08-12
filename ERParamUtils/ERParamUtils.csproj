@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SoulsFormats\SoulsFormats.csproj" />
+    <ProjectReference Include="..\SoulsFormatsX\SoulsFormats\Andre.SoulsFormats.csproj" />
     <ProjectReference Include="..\VdfFile\VdfFile.csproj" />
     </ItemGroup>
 

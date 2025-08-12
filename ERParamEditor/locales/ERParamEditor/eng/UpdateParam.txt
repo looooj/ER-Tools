@@ -1,0 +1,6 @@
+﻿CrimsonAmberMedallionBase=Crimson Amber Medallion: (HP,MP,stamina,负重)*1.5;runeRate,200%;itemDropRate,500%;静音
+CrimsonAmberMedallionRestore=Crimson Amber Medallion: restore HP,MP
+CrimsonAmberMedallionDisable=Crimson Amber Medallion: (Poison,Freeze,Blood,Disease,Madness,Sleep,Curse)disable
+AllTalisman=AllTalisman: (HP,MP,stamina,runeRate,itemDropRate)*1.2 
+
+Buddy=Increase summoning area, Remove summon consume HP/MP

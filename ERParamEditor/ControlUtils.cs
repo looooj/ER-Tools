@@ -66,7 +66,7 @@ namespace ERParamEditor
             return control;
         }
 
-        class SelectionItem {
+        public class SelectionItem {
             public string ItemName { get; set; }
             public string ItemValue { get; set; }
         }

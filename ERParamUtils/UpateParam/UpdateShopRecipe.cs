@@ -1,4 +1,5 @@
-﻿using NLog.LayoutRenderers.Wrappers;
+﻿using ERParamUtils.UpateParam;
+using NLog.LayoutRenderers.Wrappers;
 using SoulsParam;
 using System;
 using System.Collections.Generic;
@@ -68,6 +69,12 @@ namespace ERParamUtils.UpdateParam
 
         public static void UnlockCrafting(ParamProject paramProject, UpdateCommand updateCommand)
         {
+            if (!updateCommand.HaveOption(UpdateParamOptionNames.UnlockCrafting)) {
+                return;
+            }
+
+            updateCommand.SetOption(UpdateParamOptionNames.ReplaceCookbook, 1);
+
 
             var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
             if (param == null)
@@ -155,7 +162,7 @@ namespace ERParamUtils.UpdateParam
 
             ParamRowUtils.SetCellValue(row, keyValues);
             updateCommand.AddItem(row, "equipId", equipId);
-            UpdateLogger.InfoRow("add {0} {1} {2}", rowId, equipId, equipType);
+            //UpdateLogger.InfoRow("add {0} {1} {2}", rowId, equipId, equipType);
             return true;
         }
 
@@ -204,8 +211,7 @@ namespace ERParamUtils.UpdateParam
         }
 
         //Sacred Tear
-        //2010000;Scadutree Fragment;幽影树碎片
-        //2010100;Revered Spirit Ash;灵灰
+
         public static void AddSeedTear(ParamProject paramProject, UpdateCommand updateCommand)
         {
             var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
@@ -215,7 +221,8 @@ namespace ERParamUtils.UpdateParam
             AddEquip(updateCommand, param, 10020, (int)ShopEquipType.Good, "");
             AddEquip(updateCommand, param, 10010, (int)ShopEquipType.Good, "");
         }
-
+        //2010000;Scadutree Fragment;幽影树碎片
+        //2010100;Revered Spirit Ash;灵灰
         public static void AddFragmentAsh(ParamProject paramProject, UpdateCommand updateCommand)
         {
             var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);

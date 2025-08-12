@@ -70,7 +70,7 @@ namespace ERParamCmd
                 if (argState == 1)
                 {
                     argState = 0;
-                    options.TryAdd(argName, arg);
+                    options[argName] = arg;
                     argName = "";
                 }
                 else {
@@ -154,7 +154,7 @@ namespace ERParamCmd
             }
 
             List<UpdateParamTask> updateParamTasks = new();
-            List<UpdateParamOptionNames> updateParamOptions = new();
+            List<UpdateParamOptionItem> updateParamOptions = new();
 
             UpdateParamExector.CreateOptionList(updateParamOptions);
             UpdateParamExector.CreateTaskList(updateParamTasks);

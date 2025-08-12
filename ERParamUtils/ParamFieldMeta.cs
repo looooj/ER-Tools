@@ -206,7 +206,7 @@ namespace ERParamUtils
 
                 var meta = ParamFieldMeta.Parse(doc);
                 var metaKey = Path.GetFileNameWithoutExtension(file);
-                MetaDict.TryAdd(metaKey, meta);
+                MetaDict[metaKey]=meta;
 
             }          
 

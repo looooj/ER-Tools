@@ -1,2 +1,2 @@
-﻿Are you sure exec restore?=确认执行还原操作?
-Are you sure exec publish?=确认执行发布操作?
+﻿restore=确认执行还原操作?
+publish=确认执行更新&发布操作?

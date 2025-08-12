@@ -391,11 +391,11 @@ namespace ERParamUtils.UpdateParam
             int specLotCount = SpecEquipConfig.GetSpec(itemId, (EquipType)itemType);
 
             if (!(specLotCount > 0
-                || SpecEquipConfig.IsRune(itemId, (EquipType)itemType)
-                || SpecEquipConfig.IsSmithingStone(itemId, (EquipType)itemType)
+                //|| SpecEquipConfig.IsRune(itemId, (EquipType)itemType)
+                //|| SpecEquipConfig.IsSmithingStone(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsRemnant(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsPhysickRemnant(itemId, (EquipType)itemType)
-                || SpecEquipConfig.IsArrow(itemId, (EquipType)itemType)
+                //|| SpecEquipConfig.IsArrow(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsBoluses(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsPot(itemId, (EquipType)itemType)
                 || SpecEquipConfig.IsAromatic(itemId, (EquipType)itemType)
@@ -479,7 +479,7 @@ namespace ERParamUtils.UpdateParam
         //
         // replace by options
         //
-        private static void SetLotReplace(SoulsParam.Param.Row row, UpdateCommand updateCommand)
+        private static void SetLotReplaceRow(SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
 
             for (int i = 1; i < 8; i++)
@@ -498,6 +498,7 @@ namespace ERParamUtils.UpdateParam
                 {
                     continue;
                 }
+                EquipType itemEquipType = (EquipType)itemType;
                 int incLotItemNum = 0;
 
                 if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceBellBearing))
@@ -522,7 +523,7 @@ namespace ERParamUtils.UpdateParam
                         incLotItemNum = 5;
                     }
 
-                if (updateCommand.HaveOption(UpdateParamOptionNames.AddMapPiece))
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceMapPiece))
                     if (SpecEquipConfig.IsMapPiece(itemId, (EquipType)itemType))
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
@@ -542,56 +543,26 @@ namespace ERParamUtils.UpdateParam
 
                 }
 
-                /*
-                if (updateCommand.HaveOption(UpdateParamOption.ReplaceLordRune))
-                {
-                    if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
-                    {
-                        if (itemId < 2919)
-                        {
-                            updateCommand.AddItem(row, "lotItemId0" + i, 2919);
-                        }
-
-                        if (itemId >= 2002951)
-                        {
-                            updateCommand.AddItem(row, "lotItemId0" + i, 2002960);
-                        }
-                        updateCommand.AddItem(row, "lotItemNum0" + i, 10);
-                    }
-                }
-                else
-                {
-                    if (updateCommand.HaveOption(UpdateParamOption.ReplaceRune))
-                        if (SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
-                        {
-                            if (itemId < 2912)
-                            {
-                                updateCommand.AddItem(row, "lotItemId0" + i, 2912);
-                            }
-                            if (itemId >= 2002951)
-                            {
-                                updateCommand.AddItem(row, "lotItemId0" + i, 2002958);
-                            }
-                            updateCommand.AddItem(row, "lotItemNum0" + i, 10);
-                        }
-                }
-                */
-
-                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGoldenRune))
+                if (updateCommand.GetOption(UpdateParamOptionNames.ReplaceGoldenRune) > 0)
                 {
                     var value = updateCommand.GetOption(UpdateParamOptionNames.ReplaceGoldenRune);
                     var eqId = ReplaceGoldenRune.ValueToEquipId(value);
+                    var runeValue = ReplaceGoldenRune.GetRuneValue(eqId);
                     if (eqId > 0 && SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
                     {
                         if (itemId < eqId )
                         {
                             updateCommand.AddItem(row, "lotItemId0" + i, eqId);
                         }
-                        //if (itemId >= 2002951)
-                        //{
-                        //    updateCommand.AddItem(row, "lotItemId0" + i, 2002958);
-                        //}
-                        updateCommand.AddItem(row, "lotItemNum0" + i, 5);
+                        if (itemId >= 2002951)
+                        {
+                            var itemRuneValue = ReplaceGoldenRune.GetRuneValue(itemId);
+                            if (itemRuneValue < runeValue)
+                            {
+                                updateCommand.AddItem(row, "lotItemId0" + i, eqId);
+                            }
+                        }
+                        updateCommand.AddItem(row, "lotItemNum0" + i, 10);
                     }
 
                 }
@@ -635,7 +606,7 @@ namespace ERParamUtils.UpdateParam
                     if ((itemId == 8000) && itemType == (int)EquipType.Good)
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
-                        incLotItemNum = 10;
+                        incLotItemNum = 5;
 
                     }
 
@@ -669,8 +640,18 @@ namespace ERParamUtils.UpdateParam
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                     }
 
+                //
+                if (updateCommand.HaveOption(UpdateParamOptionNames.CrimsonAmberMedallionRestore)) {
+                    if ((itemId == 5020 || itemId== 8000) && itemType == (int)EquipType.Accessory)
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        incLotItemNum = 10;
+                    }
+                }
+
                 //for cer mod
-                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceRemnant))
+                if (itemEquipType == EquipType.Good && 
+                    updateCommand.HaveOption(UpdateParamOptionNames.ReplaceRemnant))
                 {
                     if (SpecEquipConfig.IsRemnant(itemId, EquipType.Good)
                         || SpecEquipConfig.IsPhysickRemnant(itemId, EquipType.Good))
@@ -700,7 +681,7 @@ namespace ERParamUtils.UpdateParam
 
                 foreach (var row in param.Rows)
                 {
-                    SetLotReplace(row, updateCommand);
+                    SetLotReplaceRow(row, updateCommand);
                 }
             }
         }

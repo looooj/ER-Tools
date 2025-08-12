@@ -1,0 +1,11 @@
+33130000;Astrologer's Staff;观星杖
+
+
+52,baseVit=15  生命力
+53,baseWil=9  集中力
+54,baseEnd=14  耐力
+55,baseStr=15  力量
+56,baseDex=15  灵巧
+57,baseMag=7  智力
+58,baseFai=8  信仰
+59,baseLuc=6  感应

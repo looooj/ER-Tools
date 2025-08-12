@@ -1,0 +1,84 @@
+
+100007;Secluded Cell;深处小房间
+
+390002;Ruin-Strewn Precipice Overlook;古遗迹断崖（对岸）
+
+120501;Palace Approach Ledge-Road;通往王朝的崖上道路
+
+
+130010;Beside the Great Bridge;大桥侧边
+130005;Tempest-Facing Balcony;龙卷旁露台
+
+160005;Audience Pathway;谒见之路
+
+150002;Elphael Inner Wall;艾布雷菲尔城墙内部
+
+650000;Forbidden Lands;禁域
+650010;Grand Lift of Rold;洛德大升降机
+651002;Ordina, Liturgical Town;“仪典镇”奥缇那
+650053;Church of the Eclipse;日蚀教堂
+650004;First Church of Marika;玛莉卡第一教堂
+
+630009;Altus Plateau;亚坛高原
+630005;Hermit Merchant's Shack;遁世商人的破屋
+630007;Forest-Spanning Greatbridge;穿林大桥
+
+
+6110600;Isolated Merchant's Shack;隐居商人的破屋
+610003;Third Church of Marika;玛莉卡第三教堂
+611000;Fourth Church of Marika;玛莉卡第四教堂
+
+620005;Main Academy Gate;学院正门口
+621000;Moonlight Altar;月光祭坛
+620031;Boilprawn Shack;煮虾子的破屋
+620023;Road to the Manor;通往城寨的道路
+620051;Fallen Ruins of the Lake;湖中坠落遗迹
+620060;Jarburg;壶村
+620003;Scenic Isle;远眺岛
+620001;Liurnia Lake Shore;利耶尼亚湖（湖边）
+
+
+640006;Isolated Merchant's Shack;隐居商人的破屋
+
+341101;Liurnia Tower Bridge;利耶尼亚神授塔（桥上）
+341301;Divine Tower of Caelid: Basement;盖利德神授塔（地底）
+341302;Divine Tower of Caelid: Center;盖利德神授塔（中段）
+
+120203;Siofra River Bank;希芙拉河（岸边）
+120206;Ancestral Woods;祖灵森林
+120208;Night's Sacred Ground;黑夜神域
+120106;Lake of Rot Shoreside;腐败湖畔
+120108;Grand Cloister;大回廊
+120104;Ainsel River Main;安瑟尔河主流
+120305;Across the Roots;树根前路
+120701;Nokron, Eternal City;“永恒之城”诺克隆恩
+
+
+
+694003;Church of the Bud, Main Entrance;花蕾教堂（正门口）
+200003;Stagefront;舞台前方
+
+280001;Manse Hall;府邸大厅
+280003;Second Floor Chamber;二楼小房间
+
+
+210103;Storehouse, Seventh Floor;保藏库（七楼）
+
+686004;Church Ruins;废弃教堂
+
+
+685000;Foot of the Jagged Peak;尖刺山的山脚
+685001;Jagged Peak Mountainside;尖刺山（中段）
+685002;Jagged Peak Summit;尖刺山（山顶）
+
+
+
+683001;Cerulean Coast;青蓝海岸
+683002;Cerulean Coast West;青蓝海岸西边
+
+690002;Moorth Ruins;穆斯废墟
+690003;Bonny Village;波尼村
+
+
+690017;Recluses' River Upstream;隐者河上游
+690018;Recluses' River Downstream;隐者河下游

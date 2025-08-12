@@ -260,16 +260,21 @@ namespace ERParamUtils.UpdateParam
             rowItemDict.Add(item);
         }
 
-        public void AddItem(string paramName,int rowId, string key, int value)
+        public void AddItem(string paramName, int rowId, string key, string value)
         {
             var item = new UpdateCommandItem
             {
                 ParamName = paramName,
                 RowId = rowId,
                 Key = key,
-                Value = value+""
+                Value = value
             };
             AddItem(item);
+        }
+
+        public void AddItem(string paramName,int rowId, string key, int value)
+        {
+            AddItem(paramName, rowId, key, value + "");
         }
 
         public void AddItem(SoulsParam.Param.Row row, string key, int value) {
@@ -280,6 +285,14 @@ namespace ERParamUtils.UpdateParam
         {
             var item = UpdateCommandItem.Create(row, key, value);
             AddItem(item);
+        }
+
+        public void AddKeysItem(string paramName,int rowId, string[] keys, string value) {
+
+            foreach (var key in keys) {
+                AddItem(paramName, rowId, key,value);
+            }
+                     
         }
 
 
@@ -313,7 +326,7 @@ namespace ERParamUtils.UpdateParam
             if (project == null)
                 return;
 
-            UpdateLogger.InfoTime("===Begin");
+            UpdateLogger.InfoTime("===Update Param Begin");
             foreach (var paramName in _itemDict.Keys)
             {
                 var rowDict = _itemDict[paramName];
@@ -329,7 +342,7 @@ namespace ERParamUtils.UpdateParam
             }
             _itemDict.Clear();
 
-            UpdateLogger.InfoTime("===End");
+            UpdateLogger.InfoTime("===Update Param End");
         }
 
 

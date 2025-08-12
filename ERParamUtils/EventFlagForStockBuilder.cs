@@ -59,7 +59,7 @@ namespace ERParamUtils
             int eventFlag = ParamRowUtils.GetCellInt(row, "eventFlag_forStock", 0);
 
             var k = buildKey(itemType, itemId);
-            eventFlagForStockMap.TryAdd(k, eventFlag);
+            eventFlagForStockMap[k]=(eventFlag);
         }
 
 
@@ -112,7 +112,7 @@ namespace ERParamUtils
                     }
                     int itemType1 = (int)EquipTypeUtils.ConvertToShopEquipType((EquipType)itemType);
                     var k = buildKey(itemType1, itemId);
-                    eventFlagForStockMap.TryAdd(k, eventFlag);
+                    eventFlagForStockMap[k] = eventFlag;
                 }
             }
         }

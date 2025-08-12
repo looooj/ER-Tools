@@ -1,0 +1,66 @@
+﻿7310;Talk;交谈
+7320;Touch cross;触碰十字记号
+7330;Examine puppet;调查傀儡
+7340;Examine;调查
+7350;Talk;交谈
+202800;Acquire materials;采集材料
+202810;Acquire materials;采集材料
+202811;Acquire materials;采集材料
+202812;Acquire materials;采集材料
+202813;Acquire materials;采集材料
+202814;Acquire materials;采集材料
+202815;Acquire materials;采集材料
+202816;Acquire materials;采集材料
+202817;Acquire materials;采集材料
+202818;Acquire materials;采集材料
+202819;Acquire materials;采集材料
+202820;Acquire materials;采集材料
+202821;Acquire materials;采集材料
+202822;Acquire materials;采集材料
+202823;Acquire materials;采集材料
+202824;Acquire materials;采集材料
+202825;Acquire materials;采集材料
+202826;Acquire materials;采集材料
+202827;Acquire materials;采集材料
+202828;Acquire materials;采集材料
+202829;Acquire materials;采集材料
+202830;Acquire materials;采集材料
+202831;Acquire materials;采集材料
+202832;Acquire materials;采集材料
+202833;Acquire materials;采集材料
+202834;Acquire materials;采集材料
+202835;Acquire materials;采集材料
+202836;Acquire materials;采集材料
+202837;Acquire materials;采集材料
+202838;Acquire materials;采集材料
+202839;Acquire materials;采集材料
+202840;Acquire materials;采集材料
+202841;Acquire materials;采集材料
+202842;Acquire materials;采集材料
+202843;Acquire materials;采集材料
+202844;Acquire materials;采集材料
+208700;Sound hanging bell;吹响吊钟
+208701;Sound hanging bell;吹响吊钟
+208702;Sound hanging bell;吹响吊钟
+208710;Examine;调查
+209051;Be summoned to assist Needle Knight Leda;作为“金针骑士”蕾妲的协助者，接受召唤
+209052;Be summoned to assist Sir Ansbach;作为老兵安帕赫的协助者，接受召唤
+209053;Be summoned to assist Needle Knight Leda;作为“金针骑士”蕾妲的协助者，接受召唤
+209054;Be summoned to assist Hornsent;作为角人的协助者，接受召唤
+209060;Touch gold summon sign;触碰金色召唤记号
+209200;Examine altar;调查祭坛
+209500;Touch withered arm;触碰干枯手臂
+209502;Examine;调查
+209504;Examine seal;调查封印
+209520;Touch gold summon sign;触碰金色召唤记号
+209522;Touch gold summon sign;触碰金色召唤记号
+209523;Examine;调查
+209525;Examine altar;调查祭坛
+209526;Examine altar;调查祭坛
+209529;Examine monument;调查石碑
+209530;Touch gold summon sign;触碰金色召唤记号
+209531;Touch gold summon sign;触碰金色召唤记号
+209532;Touch gold summon sign;触碰金色召唤记号
+209600;Touch memory;触碰记忆
+209610;Examine sealing tree;调查封印之树
+209620;Rest in coffin;进入石棺

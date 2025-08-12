@@ -1,7 +1,9 @@
 ﻿buttonUpdate=更新
 buttonUpdatePublish=更新&发布
 buttonPublish=发布
-ReplaceGoldenRune_label=替换卢恩
-TimesGetSoul_label=卢恩获取倍数
+ReplaceGoldenRune_label=替换黄金卢恩
+GetRuneRate_label=卢恩获取倍数
 UnlockGrace_label=解锁赐福点
 
+tabPageTalismans=增强护符
+labelCrimsonAmberMedallion=红琥珀链坠

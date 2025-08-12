@@ -20,38 +20,55 @@ namespace MultiLangLib
     public class MultiLang
     {
 
+        static string engId = "eng";
+        static string zhoId = "zho";
+
         static Dictionary<string, Dictionary<string, string>> MessageDict = new();
 
-        static string CurrentLangId = "eng";
+        static string CurrentLangId = "";
+        static string CurrentLangName = "";
 
         public static void SwitchLanguage(string langId,string appName) {
+            if (langId != zhoId)
+                langId = engId;
 
             if (CurrentLangId == langId)
                 return;
 
+            var info =  CultureInfo.GetCultureInfo(langId);
+            var langName = info.DisplayName;
+
             MessageDict.Clear();
 
-            string localesPath = ".\\locales\\" + appName;
+            string localesPath = ".\\locales\\" + appName +"\\"+langId;
 
             
            if (!Directory.Exists(localesPath)) {
                 return;
             }
-
+           
+            /* 
             var dirs = Directory.GetDirectories(localesPath, "*.*");
             foreach (string d in dirs) {
 
                 LoadDir(d);               
             }
-
+            */
+            LoadDir(localesPath);
             CurrentLangId = langId;
-
+            CurrentLangName = langName;
 
         }
 
         public static string GetLangId() {
             return CurrentLangId;
         }
+
+        public static string GetLangName()
+        {
+            return CurrentLangName;
+        }
+
 
         public static void LoadDir(string dir) {
 
@@ -60,7 +77,7 @@ namespace MultiLangLib
 
                 var dict = ConfigUtils.LoadDict(file);
                 var id = Path.GetFileNameWithoutExtension(file);
-                MessageDict.TryAdd(id, dict);
+                MessageDict[id]=dict;
             }
         }
 
@@ -96,21 +113,25 @@ namespace MultiLangLib
 
         public static void InitDefault(string appName) {
 
+            //CultureInfo.GetCultures()
             string langId = CultureInfo.CurrentCulture.ThreeLetterISOLanguageName;
+            //string langName = CultureInfo.CurrentCulture.DisplayName;
+            //only support zho & eng
+
             SwitchLanguage(langId,appName);
         }
 
-        public static void ApplyMessage(List<UpdateParamOptionNames> updateParamOptions)
+        public static void ApplyMessage(List<UpdateParamOptionItem> updateParamOptions)
         {
             var id = "UpdateParam";
             if (!MessageDict.ContainsKey(id))
                 return;
             var dict = MessageDict[id];
 
-            foreach(UpdateParamOptionNames option in updateParamOptions) {
+            foreach(UpdateParamOptionItem option in updateParamOptions) {
                 if (dict.TryGetValue(option.Name, out string? text)) {
 
-                    option.Description = text;
+                    option.Description = text.Trim();
                 }
             }
         }
@@ -126,17 +147,17 @@ namespace MultiLangLib
 
                 var name = task.GetType().Name;
                 if (dict.TryGetValue(name, out string? text)) {
-                    task.Description = text;
+                    task.Description = text.Trim(); 
                 }
             }
         }
 
         public static string GetUpdateParamText(string text)
         {
-            return GetText("UpdateParam", text);
+            return GetText2("UpdateParam", text);
         }
 
-        public static string GetText(string id, string text) {
+        public static string GetText2(string id, string text) {
 
             if (!MessageDict.ContainsKey(id))
                 return text;
@@ -147,9 +168,22 @@ namespace MultiLangLib
             return text;
         }
 
-        public static string GetText(string text)
+        public static string GetText(string id, string key, string text)
         {
-            return GetText("Default", text);
+
+            if (!MessageDict.ContainsKey(id))
+                return text;
+            var dict = MessageDict[id];
+            if (dict.TryGetValue(key, out string? newText))
+            {
+                return newText;
+            }
+            return text;
+        }
+
+        public static string GetDefaultText(string key,string text)
+        {
+            return GetText("Default", key, text);
         }
     }
 }

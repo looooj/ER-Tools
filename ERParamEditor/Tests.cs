@@ -394,6 +394,7 @@ namespace ERParamEditor
             }
         }
 
+
         static void GenItemText() {
 
             string[] names = { "AccessoryName","GoodsName",
@@ -411,7 +412,8 @@ namespace ERParamEditor
             string[] names = { "GR_MenuText", "ActionButtonText", "BloodMsg", "EventTextForTalk" };
             string[] subNames = { "menu","menu_dlc01" };
 
-            GenDlcText(@"D:\myprojects\game-tools\ER-Tools\tmp\msg-text", @"D:\myprojects\game-tools\ER-Tools\docs\dlc-menu-text",
+            GenDlcText(@"D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer", 
+                @"D:\myprojects\game-tools\ER-Tools\docs\cer-menu-text",
                names, subNames);
         }
 
@@ -523,8 +525,8 @@ namespace ERParamEditor
 
             //GenAccessoryId();
             //GenAutoLot();
-            GenItemText();
-            //GenMenuText();
+            //GenItemText();
+            GenMenuText();
             //Tools.CleanUpdateLog(5);
             //Tests2.FindRemnant();
             //ExtractMsg();
