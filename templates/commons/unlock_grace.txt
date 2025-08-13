@@ -29,16 +29,22 @@
 611000;Fourth Church of Marika;玛莉卡第四教堂
 
 620005;Main Academy Gate;学院正门口
-621000;Moonlight Altar;月光祭坛
 620031;Boilprawn Shack;煮虾子的破屋
 620023;Road to the Manor;通往城寨的道路
 620051;Fallen Ruins of the Lake;湖中坠落遗迹
-620060;Jarburg;壶村
+
 620003;Scenic Isle;远眺岛
 620001;Liurnia Lake Shore;利耶尼亚湖（湖边）
 
+620060;Jarburg;壶村
+620055;Church of Inhibition;镇静教堂
+
+621000;Moonlight Altar;月光祭坛
+
 
 640006;Isolated Merchant's Shack;隐居商人的破屋
+640018;Church of the Plague;腐败病教堂
+
 
 341101;Liurnia Tower Bridge;利耶尼亚神授塔（桥上）
 341301;Divine Tower of Caelid: Basement;盖利德神授塔（地底）

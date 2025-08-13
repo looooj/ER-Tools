@@ -1,0 +1,20 @@
+103401[D- Hunter of the Dead] Twinned Helm,
+103402[D- Hunter of the Dead] Twinned Armor,
+103403[D- Hunter of the Dead] Twinned Gauntlets,
+103404[D- Hunter of the Dead] Twinned Greaves
+
+113400[Corpse - D- Hunter of the Dead] D's Bell Bearing
+113401[Corpse - D- Hunter of the Dead] Twinned Helm
+113402[Corpse - D- Hunter of the Dead] Twinned Armor
+113403[Corpse - D- Hunter of the Dead] Twinned Gauntlets
+113404[Corpse - D- Hunter of the Dead] Twinned Greaves
+
+
+113404[Corpse - D- Hunter of the Dead] Twinned Greaves
+
+600000;Twinned Helm;孪生头盔
+600100;Twinned Armor;孪生铠甲
+600200;Twinned Gauntlets;孪生臂甲
+600300;Twinned Greaves;孪生腿甲
+
+

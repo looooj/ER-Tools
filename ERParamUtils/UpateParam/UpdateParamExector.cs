@@ -224,15 +224,15 @@ namespace ERParamUtils.UpdateParam
   
             updateParamTasks.Add(new SpecShopParamTask());
             //updateParamTasks.Add(new ItemLotCountParamTask());
-            updateParamTasks.Add(new LotParamTask());
+            //updateParamTasks.Add(new LotParamTask());
 
             //updateParamTasks.Add(new RemoveRequireTask());
             //updateParamTasks.Add(new RemoveWeightTask());
             //updateParamTasks.Add(new BuddyTask());
 
 
-            updateParamTasks.Add(new CharInitParamTask());
-            updateParamTasks.Add(new SpEffectParamTask());
+            //updateParamTasks.Add(new CharInitParamTask());
+            //updateParamTasks.Add(new SpEffectParamTask());
             updateParamTasks.Add(new UpdateRowParamTask());
             updateParamTasks.Add(new UpdateItemParamTask());
 

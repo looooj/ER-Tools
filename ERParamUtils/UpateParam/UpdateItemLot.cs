@@ -378,8 +378,20 @@ namespace ERParamUtils.UpdateParam
     public class ItemLotChangeReplace
     {
 
+        //
+        public static void ReplaceSuite(ParamProject project, UpdateCommand updateCommand)
+        {
+
+            string[] paramNames = { ParamNames.ItemLotParamMap, ParamNames.ItemLotParamEnemy };
+            foreach (string paramName in paramNames)
+            {
+                var param = project.FindParam(paramName);
+                if (param == null)
+                    continue;
 
 
+            }
+        }
         //
         // change lot count only
         //

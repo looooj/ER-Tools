@@ -181,15 +181,28 @@ namespace ERParamEditor
               UpdateParamOptionNames.ReplaceInitWeaponRight3, wepNames, wepIds, "0");
 
 
-            var iWepIds = WeaponConfig.GetReplaceIntelligenceWeaponIds();
-            var iWepNames = WeaponConfig.GetReplaceIntelligenceWeaponNames();
-            panel.AddSelectionNameValue(UpdateParamOptionNames.ReplaceInitIntelligenceWeapon,
-                UpdateParamOptionNames.ReplaceInitIntelligenceWeapon, iWepNames, iWepIds, "0");
+            var iWepIds = WeaponConfig.GetReplaceStaffIds();
+            var iWepNames = WeaponConfig.GetReplaceStaffNames();
+            panel.AddSelectionNameValue(UpdateParamOptionNames.ReplaceInitStaff,
+                UpdateParamOptionNames.ReplaceInitStaff, iWepNames, iWepIds, "0");
 
             var dWepIds = WeaponConfig.GetReplaceDexterityWeaponIds();
             var dWepNames = WeaponConfig.GetReplaceDexterityWeaponNames();
             panel.AddSelectionNameValue(UpdateParamOptionNames.ReplaceInitDexterityWeapon,
                 UpdateParamOptionNames.ReplaceInitDexterityWeapon, dWepNames, dWepIds, "0");
+
+
+            var leftIds = WeaponConfig.GetAddWeaponLeftIds();
+            var leftNames = WeaponConfig.GetAddWeaponLeftNames();
+            panel.AddSelectionNameValue(UpdateParamOptionNames.AddInitWeaponLeft3,
+                UpdateParamOptionNames.AddInitWeaponLeft3, leftNames, leftIds, "0");
+
+
+            var shieldIds = WeaponConfig.GetShieldIds();
+            var shieldNames = WeaponConfig.GetShieldNames();
+            panel.AddSelectionNameValue(UpdateParamOptionNames.ReplaceInitShield,
+                UpdateParamOptionNames.ReplaceInitShield, shieldNames, shieldIds, "0");
+
 
 
             panel.AddCheckBox(UpdateParamOptionNames.RemoveInitWeaponWeightRequire,"");

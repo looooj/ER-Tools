@@ -9,3 +9,14 @@
 57,baseMag=7  智力
 58,baseFai=8  信仰
 59,baseLuc=6  感应
+
+288100;Vagabond;流浪骑士
+288101;Warrior;剑士
+288102;Hero;勇者
+288103;Bandit;盗贼
+288104;Astrologer;观星者
+288105;Prophet;预言家
+288106;Confessor;密使
+288107;Samurai;武士
+288108;Prisoner;囚犯
+288109;Wretch;一贫如洗

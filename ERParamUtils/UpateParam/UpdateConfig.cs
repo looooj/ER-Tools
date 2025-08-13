@@ -161,9 +161,13 @@ namespace ERParamUtils.UpateParam
         public static readonly string ReplaceInitBow = "ReplaceInitBow";
         public static readonly string ReplaceInitWeaponRight3 = "ReplaceInitWeaponRight3";
         public static readonly string ReplaceInitWeaponRight2 = "ReplaceInitWeaponRight2";
-        //public static string GetReplaceIntelligenceWeaponIds()
-        //
-        public static readonly string ReplaceInitIntelligenceWeapon = "ReplaceInitIntelligenceWeapon";
+
+        public static readonly string ReplaceInitShield = "ReplaceInitShied";
+
+        public static readonly string ReplaceInitWeaponLeft2 = "ReplaceInitWeaponLeft2";
+        public static readonly string AddInitWeaponLeft3 = "AddInitWeaponLeft3";
+
+        public static readonly string ReplaceInitStaff = "ReplaceInitStaff";
         public static readonly string ReplaceInitDexterityWeapon = "ReplaceInitDexterityWeapon";
 
         public static readonly string RemoveInitWeaponWeightRequire = "RemoveInitWeaponWeightRequire";

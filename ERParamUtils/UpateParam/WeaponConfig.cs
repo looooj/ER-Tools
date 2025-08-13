@@ -14,8 +14,20 @@ namespace ERParamUtils.UpateParam
 
         public static bool IsBow(int eqId) {
 
-            return (eqId >= 40000000 && eqId <= 43110000);
+            return (eqId >= 40000000 && eqId <= 44000000);
         }
+
+        public static bool IsStaff(int eqId) {
+
+            return (eqId >= 33000000 && eqId < 34000000);
+        }
+
+        public static bool IsSeal(int eqId)
+        {
+
+            return (eqId >= 34000000 && eqId < 34100000);
+        }
+
 
         /*
 //41000000;Longbow;长弓
@@ -48,18 +60,33 @@ namespace ERParamUtils.UpateParam
             return "None,3100000,9020000,17030000";
         }
 
-        //34080000;Dragon Communion Seal;龙飨印记
         //32140000;Icon Shield;神圣绘画盾
 
-        public static string GetReplaceWeaponLeftNames()
-        {
+        public static bool IsShield(int eqId) {
 
-            return "None,Dragon Communion Seal,Icon Shield";
+
+            return (eqId <= 32301200 && eqId >=30000000);
         }
 
-        public static string GetReplaceWeaponLeftIds()
+        public static string GetShieldNames()
         {
-            return "None,34080000,32140000";
+            return "None,Icon Shield";
+        }
+
+        public static string GetShieldIds()
+        {
+            return "None,32140000";
+        }
+
+        //34080000;Dragon Communion Seal;龙飨印记
+        public static string GetAddWeaponLeftNames()
+        {
+            return "None,Dragon Communion Seal";
+        }
+
+        public static string GetAddWeaponLeftIds()
+        {
+            return "None,34080000";
         }
 
         /*
@@ -85,12 +112,12 @@ namespace ERParamUtils.UpateParam
         //33250000;Meteorite Staff;陨石杖
         //4710;Rock Sling;岩石球
 
-        public static string GetReplaceIntelligenceWeaponNames()
+        public static string GetReplaceStaffNames()
         {
             return "None,Meteorite Staff";
         }
 
-        public static string GetReplaceIntelligenceWeaponIds()
+        public static string GetReplaceStaffIds()
         {
             return "None,33250000";
         }
