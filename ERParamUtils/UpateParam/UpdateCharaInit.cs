@@ -1,5 +1,7 @@
 ﻿using ERParamUtils.UpateParam;
 using Microsoft.VisualBasic;
+using Org.BouncyCastle.Tls;
+using SoulsFormats.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +24,9 @@ namespace ERParamUtils.UpdateParam
     public class UpdateCharaInit
     {
         
-        static Dictionary<int,int> removeWeaponDict = new Dictionary<int,int>();
+        static Dictionary<int,int> removeWeaponRequireDict = new Dictionary<int,int>();
+        static Dictionary<string, int> replaceWeaponDict = new Dictionary<string, int>();
+
 
         public static List<CharInitRow> GetCharInitClassRowList(ParamProject paramProject)
         {
@@ -82,11 +86,12 @@ namespace ERParamUtils.UpdateParam
             var param = paramProject.FindParam(ParamNames.CharaInitParam);
             if (param == null)
                 return;
-            removeWeaponDict.Clear();
+            removeWeaponRequireDict.Clear();
             bool startFlag = false;
             for (int i = 0; i < 100; i++)
             {
                 addItemOffset = 0;
+                replaceWeaponDict.Clear();
                 SoulsParam.Param.Row? row = param.FindRow(3000 + i);
                 if (row == null || row.Name == null || row.Name.Length < 3
                     || !row.Name.StartsWith("Class")
@@ -98,6 +103,7 @@ namespace ERParamUtils.UpdateParam
                     }
                     continue;
                 }
+                UpdateLogger.InfoTime("{0} {1}",row.ID,row.Name);
                 startFlag = true;
                 if (updateCommand.HaveOption(UpdateParamOptionNames.AddInitCrimsonAmberMedallion))
                 {
@@ -119,12 +125,14 @@ namespace ERParamUtils.UpdateParam
                     AddItem(updateCommand, row, 2160, 1);
                 }
 
-                ReplaceBow(updateCommand, row);
+                ReplaceShield(updateCommand, row);
 
-                ReplaceIntelligenceWeapon(updateCommand, row,
-                    updateCommand.GetOption(UpdateParamOptionNames.ReplaceInitIntelligenceWeapon)
+                ReplaceStaff(updateCommand, row,
+                    updateCommand.GetOption(UpdateParamOptionNames.ReplaceInitStaff)
                     );
-                //ReplaceInitDexterityWeapon
+
+                
+
                 ReplaceDexterityWeapon(updateCommand, row,
                     updateCommand.GetOption(UpdateParamOptionNames.ReplaceInitDexterityWeapon)
                     );
@@ -134,6 +142,11 @@ namespace ERParamUtils.UpdateParam
 
                 ReplaceWep(updateCommand, row, "equip_Subwep_Right3",
                     updateCommand.GetOption(UpdateParamOptionNames.ReplaceInitWeaponRight3));
+
+                ReplaceLeft(updateCommand, row, "equip_Subwep_Left3",
+                    updateCommand.GetOption(UpdateParamOptionNames.AddInitWeaponLeft3));
+
+                ReplaceBow(updateCommand, row);
             }
         }
 
@@ -195,27 +208,95 @@ namespace ERParamUtils.UpdateParam
             }
         }
         //
-        static void ReplaceBow(UpdateCommand updateCommand, SoulsParam.Param.Row row) {
+        static void ReplaceShield(UpdateCommand updateCommand, SoulsParam.Param.Row row) {
 
-            int newBowId = updateCommand.GetOption("ReplaceInitBow");
-            if (newBowId < 1)
+            int newShieldId = updateCommand.GetOption(UpdateParamOptionNames.ReplaceInitShield);
+            if (newShieldId < 1)
                 return;
             foreach (string key in LeftWepKeys) {
                 var v = ParamRowUtils.GetCellInt(row, key, 0);
                 if (v > 0)
                 {
-                    if (WeaponConfig.IsBow(v))
+                    if (WeaponConfig.IsShield(v))
                     {
-                        updateCommand.AddItem(row, key, newBowId);
+                        ReplaceWep(updateCommand, row, key, newShieldId);
                         break;
                     }
                 }
-                else
+            }
+        }
+        /*
+46,arrowNum=0 
+47,boltNum=0  
+48,subArrowNum=0  
+49,subBoltNum=0  
+12,equip_Arrow=-1
+13,equip_Bolt=-1 
+14,equip_SubArrow=-1 
+15,equip_SubBolt=-1 
+
+50000000;Arrow;箭矢
+50010000;Fire Arrow;火箭
+         */
+
+        static void AddArrow(UpdateCommand updateCommand, SoulsParam.Param.Row row) {
+            updateCommand.AddItem(row, "arrowNum", 99);
+            updateCommand.AddItem(row, "equip_Arrow", 50000000);
+
+            updateCommand.AddItem(row, "subArrowNum", 99);
+            updateCommand.AddItem(row, "equip_SubArrow", 50010000);
+        }
+        static void ReplaceBow(UpdateCommand updateCommand, SoulsParam.Param.Row row) {
+            int newBowId = updateCommand.GetOption(UpdateParamOptionNames.ReplaceInitBow);
+            if (newBowId < 1)
+                return;
+            foreach (string key in LeftWepKeys)
+            {
+                var v = ParamRowUtils.GetCellInt(row, key, 0);
+                if (v > 0)
                 {
-                    updateCommand.AddItem(row, key, newBowId);
-                    break;
+                    if (WeaponConfig.IsBow(v)) 
+                    {
+                        ReplaceWep(updateCommand, row, key, newBowId);
+                        AddArrow(updateCommand, row);
+                        return;
+                    }
                 }
             }
+            foreach (string key in LeftWepKeys)
+            {
+                var v = ParamRowUtils.GetCellInt(row, key, 0);
+                if (v < 1 && !replaceWeaponDict.ContainsKey(key) )
+                {
+                    ReplaceWep(updateCommand, row, key, newBowId);
+                    AddArrow(updateCommand, row);
+                    UpdateLogger.InfoTime("add bow");
+                    return;
+                }
+            }
+
+            UpdateLogger.InfoTime("no space for bow");
+        }
+
+        static void ReplaceLeft(UpdateCommand updateCommand, SoulsParam.Param.Row row, string repKey, int repId) {
+            if (repId < 1)
+                return;
+
+            if ( WeaponConfig.IsSeal(repId))
+            foreach (string key in LeftWepKeys)
+            {
+                var v = ParamRowUtils.GetCellInt(row, key, 0);
+                if (v > 0)
+                {
+                    if ( WeaponConfig.IsSeal(v))
+                    {
+                        ReplaceWep(updateCommand, row, key, repId);
+                        return;
+                    }
+                }
+            }
+            ReplaceWep(updateCommand, row, repKey, repId);
+
         }
         /* 
 equip_Wep_Right
@@ -224,21 +305,29 @@ equip_Wep_Left
 equip_Subwep_Left
          */
         static string[] RightWepKeys = { "equip_Wep_Right", "equip_Subwep_Right", "equip_Subwep_Right3" };
-        static string[] LeftWepKeys = { "equip_Wep_Left", "equip_Subwep_Left", "equip_Subwep_Left" };
+        static string[] LeftWepKeys = { "equip_Wep_Left", "equip_Subwep_Left", "equip_Subwep_Left3" };
         private static void ReplaceWep(UpdateCommand updateCommand, SoulsParam.Param.Row row, string key, int itemId) {
             if (itemId < 1)
                 return;
-            if (removeWeaponDict.ContainsKey(itemId)) {
+            if (replaceWeaponDict.ContainsKey(key) ) {
+                UpdateLogger.InfoTime("skip wep {0} {1}", key, itemId);
                 return;
             }
             updateCommand.AddItem(row, key, itemId);
+
+            replaceWeaponDict[key] = itemId;
+
             if (updateCommand.HaveOption(UpdateParamOptionNames.RemoveInitWeaponWeightRequire)) {
+                if (removeWeaponRequireDict.ContainsKey(itemId))
+                {
+                    return;
+                }
                 RemoveWeightRequire(updateCommand, itemId);
             }
         }
 
         private static void RemoveWeightRequire(UpdateCommand updateCommand, int itemId) {
-            removeWeaponDict[itemId] = 1;
+            removeWeaponRequireDict[itemId] = 1;
             ParamUpdateRequire.RemoveWeightRequire(updateCommand, itemId);
         }
 
@@ -265,12 +354,12 @@ equip_Subwep_Left
             }
         }
 
-        private static void ReplaceIntelligenceWeapon(UpdateCommand updateCommand, SoulsParam.Param.Row row, int itemId) {
+        private static void ReplaceStaff(UpdateCommand updateCommand, SoulsParam.Param.Row row, int itemId) {
             if (itemId < 1) {
                 return;
             }
-            var v = ParamRowUtils.GetCellInt(row, "baseMag", 0);
-            if (v >= 12)
+            var v = ParamRowUtils.GetCellInt(row, "equip_Wep_Right", 0);
+            if (WeaponConfig.IsStaff(v))
             {
                 ReplaceWep(updateCommand, row, "equip_Wep_Right", itemId);
                 //updateCommand.AddItem(row, "equip_Wep_Right", itemId);
@@ -289,71 +378,20 @@ equip_Subwep_Left
             {
                 return;
             }
-            var v = ParamRowUtils.GetCellInt(row, "baseDex", 0);
-            if (v >= 12)
+
+            var v = ParamRowUtils.GetCellInt(row, "equip_Wep_Right", 0);
+            if ( v == 9000000)
             {
                 ReplaceWep(updateCommand, row, "equip_Wep_Right", itemId);
-                //updateCommand.AddItem(row, "equip_Wep_Right", itemId);
             }
 
-        }
-        /*
-        public static void Test(ParamProject paramProject, UpdateCommand updateCommand)
-        {
-            var param = paramProject.FindParam(ParamNames.CharaInitParam);
-            if (param == null)
-                return;
-
-            var row = ParamRowUtils.FindRow(param, 3007);
-            if (row == null)
-                return;
-            
-             //8590;Whetstone Knife;砥石小刀
-             //130;Spectral Steed Whistle;灵马哨笛
-             
-
-            AddItem(updateCommand, row, 4, 8590, 1);
-            AddItem(updateCommand, row, 5, 8500, 1);     
-
-
-            updateCommand.AddItem(row, "HpEstMax", 13);
-            updateCommand.AddItem(row, "MpEstMax", 1);
+            //var v = ParamRowUtils.GetCellInt(row, "baseDex", 0);
+            //if (v >= 12)
+            //{
+            //    ReplaceWep(updateCommand, row, "equip_Wep_Right", itemId);
+            //}
 
         }
-        */
-        /*
-        //1000
-        public static void AddDefault(ParamProject paramProject, UpdateCommand updateCommand) {
 
-            var param = paramProject.FindParam(ParamNames.CharaInitParam);
-            if (param == null)
-                return;
-            for (int i = 0; i < 30; i++) {
-
-                SoulsParam.Param.Row? row = param.FindRow(3000 + i);
-                if ( row == null || row.Name == null || row.Name.Length < 3 )
-                    continue;
-
-                //1000;Crimson Amber Medallion;红琥珀链坠
-                //updateCommand.AddItem(row, "equip_Accessory01", 1000);
-                //AddSecondaryItem(updateCommand, row, 2, 130, 1);
-                //AddItem(updateCommand, row, 7, 2990, 1);
-                //AddItem(updateCommand, row, 8, 8590, 1);
-                //AddItem(updateCommand, row, 9, 2919, 1);
-            }
-        }
-
-        static void AddItem(UpdateCommand updateCommand, SoulsParam.Param.Row row, int index, int itemId, int itemCount)
-        {
-
-            updateCommand.AddItem(row, "item_0" + index, itemId);
-            updateCommand.AddItem(row, "itemNum_0" + index, itemCount);
-        }
-
-        static void AddSecondaryItem(UpdateCommand updateCommand,SoulsParam.Param.Row row,  int index, int itemId, int itemCount) {
-
-            updateCommand.AddItem(row, "secondaryItem_0"+index,itemId);
-            updateCommand.AddItem(row, "secondaryItemNum_0" + index, itemCount);
-        }*/
     }
 }
