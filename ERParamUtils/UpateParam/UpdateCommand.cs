@@ -17,7 +17,7 @@ namespace ERParamUtils.UpdateParam
         public string RowName = "";
         public string Key = "";
         public string Value = "";
-        
+        static string currentParamName = "";
         public static void Proc(string line, UpdateCommand updateCommand)
         {
 
@@ -25,22 +25,65 @@ namespace ERParamUtils.UpdateParam
             if (line.StartsWith("#"))
                 return;
 
-            string[] fields = line.Split(";");
-
-            if (fields.Length < 5)
+            if (line.StartsWith("@@param=") )
             {
-                //throw new Exception("invalid update command item format");
+                string[] ss = line.Split('=');
+                if (ss.Length >= 2)
+                {
+                    currentParamName = ss[1];
+                }
                 return;
             }
 
+            string[] fields = line.Split(";");
+            UpdateCommandItem item = new();
+
+            if (fields.Length == 3) {
+                item.RowId = int.Parse(fields[0]);
+                item.Key = fields[1].Trim();
+                item.Value = fields[2].Trim();
+                item.ParamName = currentParamName;
+                if (currentParamName.Length < 3) {
+                    return;
+                }
+                updateCommand.AddItem(item);
+
+            }
+            if (fields.Length == 4)
+            {
+                item.ParamName = fields[0].Trim();
+                item.RowId = int.Parse(fields[1]);
+                item.Key = fields[2].Trim();
+                item.Value = fields[3].Trim();
+                updateCommand.AddItem(item);
+                currentParamName = item.ParamName;
+             }
+
+            if (fields.Length == 5)
+            {
+                item.ParamName = fields[0];
+                item.RowId = int.Parse(fields[1]);
+                item.Key = fields[2].Trim();
+                item.Value = fields[3].Trim();
+                item.RowName = fields[4].Trim();
+                updateCommand.AddItem(item);
+                currentParamName = item.ParamName;
+
+            }
+            //if (fields.Length < 5)
+            //{
+            //    //throw new Exception("invalid update command item format");
+            //    return;
+            //}
+
+            /*
             UpdateCommandItem item = new();
             item.ParamName = fields[0].Trim();
             item.RowId = int.Parse(fields[1]);
             item.RowName = fields[2].Trim();
             item.Key = fields[3].Trim();
-            item.Value = fields[4].Trim();
+            item.Value = fields[4].Trim();*/
 
-            updateCommand.AddItem(item);
 
         }
 

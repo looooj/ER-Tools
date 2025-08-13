@@ -147,6 +147,16 @@ equipType use shop equipType
 
 #### format
 
-     paramName;rowId;key;value    
+
+
+@@param=name
+rowId;key;value
+
+paramName;rowId;key;value    
+
+paramName;rowId;key;value;rowName
+
+
+
 
 
