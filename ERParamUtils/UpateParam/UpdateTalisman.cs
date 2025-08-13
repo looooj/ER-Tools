@@ -33,7 +33,7 @@ namespace ERParamUtils.UpateParam
             updateCommand.AddItem(ParamNames.SpEffectParam, 350301, "changeMpPoint", "-5");
 
             //350200[Talisman] Blessed Dew Talisman
-            updateCommand.AddItem(ParamNames.SpEffectParam, 350200, "changeHpPoint", "-3");
+            updateCommand.AddItem(ParamNames.SpEffectParam, 350200, "changeHpPoint", "-5");
             updateCommand.AddItem(ParamNames.SpEffectParam, 350200, "changeMpPoint", "-2");
 
             //5071101[Weapon] Serpent-God's Curved Sword (On Enemy Kill)
@@ -47,6 +47,10 @@ namespace ERParamUtils.UpateParam
 
             //5031401[Weapon] Blasphemous Blade (On Enemy Kill)
             updateCommand.AddItem(ParamNames.SpEffectParam, 5031401, "changeMpPoint", "-5");
+
+            //5321400[Weapon] Icon Shield -Grant HP Restoration
+            updateCommand.AddItem(ParamNames.SpEffectParam, 5321400, "changeHpPoint", "-5");
+            updateCommand.AddItem(ParamNames.SpEffectParam, 5321400, "changeMpPoint", "-2");
 
 
         }
