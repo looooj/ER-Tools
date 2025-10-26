@@ -35,17 +35,17 @@
             tableLayoutPanel2 = new TableLayoutPanel();
             tabPage3 = new TabPage();
             tableLayoutPanel3 = new TableLayoutPanel();
+            tabPage4 = new TabPage();
+            tableLayoutPanel4 = new TableLayoutPanel();
             panel1 = new Panel();
             buttonPublish = new Button();
             buttonUpdate = new Button();
-            tabPage4 = new TabPage();
-            tableLayoutPanel4 = new TableLayoutPanel();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
-            panel1.SuspendLayout();
             tabPage4.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -68,7 +68,7 @@
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(1015, 607);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
+            tabPage1.Text = "Normal";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
@@ -92,7 +92,7 @@
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(1015, 607);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Talismans";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
@@ -116,7 +116,7 @@
             tabPage3.Padding = new Padding(3);
             tabPage3.Size = new Size(1015, 607);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "tabPage3";
+            tabPage3.Text = "Init";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
@@ -131,6 +131,30 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.Size = new Size(962, 567);
             tableLayoutPanel3.TabIndex = 2;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(tableLayoutPanel4);
+            tabPage4.Location = new Point(4, 26);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new Padding(3);
+            tabPage4.Size = new Size(1015, 607);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Scripts";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.ColumnCount = 2;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel4.Location = new Point(26, 20);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle());
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.Size = new Size(962, 567);
+            tableLayoutPanel4.TabIndex = 3;
             // 
             // panel1
             // 
@@ -162,30 +186,6 @@
             buttonUpdate.UseVisualStyleBackColor = true;
             buttonUpdate.Click += buttonUpdate_Click;
             // 
-            // tabPage4
-            // 
-            tabPage4.Controls.Add(tableLayoutPanel4);
-            tabPage4.Location = new Point(4, 26);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(1015, 607);
-            tabPage4.TabIndex = 3;
-            tabPage4.Text = "tabPage4";
-            tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel4
-            // 
-            tableLayoutPanel4.ColumnCount = 2;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel4.Location = new Point(26, 20);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 1;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle());
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.Size = new Size(962, 567);
-            tableLayoutPanel4.TabIndex = 3;
-            // 
             // ParamUpdateForm3
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -198,15 +198,15 @@
             MinimizeBox = false;
             Name = "ParamUpdateForm3";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "ParamUpdateForm3";
+            Text = "ParamUpdateFormV3";
             Load += ParamUpdateForm3_Load;
             Shown += ParamUpdateForm3_Shown;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tabPage3.ResumeLayout(false);
-            panel1.ResumeLayout(false);
             tabPage4.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 

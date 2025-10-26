@@ -7,3 +7,8 @@ UnlockGrace_label=解锁赐福点
 
 tabPageTalismans=增强护符
 labelCrimsonAmberMedallion=红琥珀链坠
+tabPage1=普通参数
+tabPage2=首饰参数
+tabPage3=初始参数
+tabPage4=脚本参数
+
