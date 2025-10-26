@@ -380,7 +380,7 @@ equip_Subwep_Left
             }
 
             var v = ParamRowUtils.GetCellInt(row, "equip_Wep_Right", 0);
-            if ( v == 9000000)
+            if ( v == 9000000 || row.Name.Contains("Samurai"))
             {
                 ReplaceWep(updateCommand, row, "equip_Wep_Right", itemId);
             }
