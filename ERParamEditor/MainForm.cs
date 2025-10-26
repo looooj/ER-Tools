@@ -330,6 +330,10 @@ namespace ERParamEditor
 
         private void buttonRestore_Click(object sender, EventArgs e)
         {
+            var proj = GlobalConfig.GetCurrentProject();
+            if (proj == null) 
+                return;
+
             string msg = MultiLang.GetDefaultText("restore", "Are you sure exec restore?");
             DialogResult r = MessageBox.Show(msg, "", MessageBoxButtons.YesNo);
             if (r != DialogResult.Yes)
@@ -337,7 +341,7 @@ namespace ERParamEditor
                 return;
             }
 
-            GlobalConfig.GetCurrentProject().Restore();
+            proj.Restore();
 
         }
 
