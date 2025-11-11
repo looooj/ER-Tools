@@ -26,3 +26,4 @@ https://github.com/soulsmods/DSMapStudio
 https://github.com/vawser/Yapped-Rune-Bear
 
 
+https://github.com/vawser/Smithbox
