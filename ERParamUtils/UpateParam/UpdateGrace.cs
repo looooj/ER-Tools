@@ -57,9 +57,16 @@ namespace ERParamUtils.UpdateParam
                 140000,140001,
                 120400,120300,120201,120200,120500,120100,
                 200000,694005,280000,685003,682002,210001,210100,210007,
-                692000,220000,694005,696000,200100
+                692000,220000,694005,696000,200100,
+                341200,341102,341300,341500,341401
                };
         private static void UnlockGraceNormal(SoulsParam.Param param,ParamProject paramProject, UpdateCommand updateCommand) {
+
+            //341300;Divine Tower of Caelid;盖利德神授塔
+            //341102;Divine Tower of Liurnia;利耶尼亚神授塔
+            //341200; Divine Tower of West Altus; 西亚坛神授塔
+            //341500;Isolated Divine Tower;孤立神授塔
+            //341401;Divine Tower of East Altus;东亚坛神授塔
 
             //100000;Godrick the Grafted;“接肢”葛瑞克
             //100001; Margit, the Fell Omen;“恶兆妖鬼”玛尔基特
@@ -134,7 +141,7 @@ namespace ERParamUtils.UpdateParam
 
             //111000;Roundtable Hold;圆桌厅堂
 
- 
+
 
             for (int i = 0; i < param.Rows.Count; i++)
             {

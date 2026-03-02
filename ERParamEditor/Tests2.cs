@@ -89,6 +89,71 @@ namespace ERParamEditor
             File.WriteAllText(path, r);
 
         }
+
+
+        static void getMaxMinValue(Dictionary<string,int> dict, string key, int v) {
+
+            string maxKey = key + "_max";
+            string minKey = key + "_min";
+
+            if (dict.ContainsKey(maxKey))
+            {
+                int v1 = dict[maxKey];
+                if (v1 < v)
+                {
+                    dict[maxKey] = v;
+                }
+            }
+            else { 
+                dict[maxKey] = v;
+            }
+
+            if (dict.ContainsKey(minKey))
+            {
+                int v1 = dict[minKey];
+                if (v1 > v)
+                {
+                    dict[minKey] = v;
+                }
+            }
+            else {
+                dict[minKey] = v;
+            }
+        }
+
+        public static void FindGuardLevel()
+        {
+
+            var proj = GlobalConfig.GetCurrentProject();
+            if (proj == null)
+                return;
+            var param = proj.FindParam(ParamNames.NpcParam);
+
+            if (param == null)
+                return;
+            var rows = param.Rows;
+            var dict = new Dictionary<string, int>();
+            int v = 0;
+            foreach (var row in rows)
+            {
+                v = ParamRowUtils.GetCellInt(row, "lockDist", 0);
+                getMaxMinValue(dict, "lockDist", v);
+                v = ParamRowUtils.GetCellInt(row, "guardLevel", 0);
+                getMaxMinValue(dict, "guardLevel", v);
+
+            }
+
+            var lines = new List<string>();
+            foreach (var key in dict.Keys) { 
+                lines.Add(key + "=" + dict[key] );
+            }
+
+            string path = proj.GetUpdateDir() + "\\npc-max-min.txt";
+            string r = string.Join("\n", lines);
+
+            File.WriteAllText(path, r);
+
+        }
     }
 
 }

@@ -79,11 +79,26 @@ namespace ERParamUtils.UpdateParam
             return "";
         }
 
+        public static string FindFile(ParamProject project, string updateName) {
+            string baseDir = project.GetUpdateDir();
+            string fullPath = Path.Combine(baseDir, updateName);
+
+            if (File.Exists(fullPath))
+                return fullPath;
+
+            baseDir = GlobalConfig.GetTemplateDir() + "\\commons";
+            fullPath = Path.Combine(baseDir, updateName);
+            if (File.Exists(fullPath))
+                return fullPath;
+
+            return project.GetUpdateFile(updateName);  
+        }
+
         public static List<string> Load(ParamProject project, string updateName) {
 
             List<string> result = new();
             Dictionary<string, string> varMap = new();
-            string path = project.GetUpdateFile(updateName);
+            string path = FindFile(project, updateName);
 
             if (!File.Exists(path)) {
                 UpdateLogger.Info("{0} {1} not found", updateName, path);

@@ -1,0 +1,17 @@
+@@param=NpcParam
+@@id=100000010
+hp;10000
+staminaRecoverBaseVel;50
+resist_curse;999
+guardLevel;4
+lockDist;80
+def_slash;100
+def_blow;100
+def_thrust;100
+#20371300
+#7130;Pearldrake Talisman +3;珍珠龙徽护符＋３
+spEffectID16=20371300
+#
+#spEffectID17=-1
+#spEffectID19=-1
+

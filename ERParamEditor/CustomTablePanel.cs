@@ -51,11 +51,11 @@ namespace ERParamEditor
             mainPanel.RowStyles.Add(a);
         }
 
-        public void AddCheckBoxList(string name, string description) {
+        public CheckedListBox? AddCheckBoxList(string name, string description) {
 
             if (mainPanel == null)
             {
-                return;
+                return null;
             }
             if (currentCheckListBox == null) {
                 IncRow();
@@ -78,12 +78,14 @@ namespace ERParamEditor
             item.Index = currentCheckListBox.Items.Count-1;
             items.Add(item);
             currentCheckListBox.Height = currentCheckListBox.Items.Count * 20;
+
+            return currentCheckListBox;
         }
-        public void AddCheckBox(string name, string description)
+        public CheckBox? AddCheckBox(string name, string description)
         {
             if (mainPanel == null)
             {
-                return;
+                return null;
             }
             IncRow();
             if (description.Length < 1)
@@ -105,6 +107,7 @@ namespace ERParamEditor
 
             items.Add(item);
             rowCount++;
+            return checkBox1;
         }
 
         public void AddSpace(string text)

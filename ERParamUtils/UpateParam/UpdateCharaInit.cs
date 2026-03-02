@@ -166,6 +166,15 @@ namespace ERParamUtils.UpdateParam
             }
         }
 
+        private static void AddAccessory(UpdateCommand updateCommand, SoulsParam.Param.Row row, int i, int eqId)
+        {
+            {
+                string key = "equip_Accessory0" + i;
+                var v = ParamRowUtils.GetCellInt(row, key, 0);
+                updateCommand.AddItem(row, key, eqId);
+            }
+        }
+
         //item_01
         static int addItemOffset = 0;
         private static void AddItem(UpdateCommand updateCommand, SoulsParam.Param.Row row, int itemId, int itemCount)

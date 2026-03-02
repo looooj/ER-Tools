@@ -12,3 +12,9 @@ tabPage2=首饰参数
 tabPage3=初始参数
 tabPage4=脚本参数
 
+AddInitCrimsonAmberMedallion=初始添加红琥珀链坠
+AddInit99Rune=初始添加99个王之卢恩
+AddInitMimicTear=初始添加仿真泪滴
+AddInitPurebloodKnightMeda=初始添加纯血骑士勋章
+UnlockRoundtableHold=解锁大赐福
+SelectAll=全选

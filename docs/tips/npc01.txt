@@ -1,0 +1,4 @@
+100000010;[Spirit Summon] Mimic Tear;
+264-estusFlaskLotPoint;0;
+265-hpEstusFlaskLotPoint;0;
+266-mpEstusFlaskLotPoint;0;

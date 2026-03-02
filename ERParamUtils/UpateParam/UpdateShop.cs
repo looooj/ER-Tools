@@ -211,7 +211,7 @@ namespace ERParamUtils.UpdateParam
                 return;
             }
 
-            updateCommand.SetOption(UpdateParamOptionNames.ReplaceBellBearing, 1);
+            //updateCommand.SetOption(UpdateParamOptionNames.ReplaceBellBearing, 1);
 
 
             UpdateLogger.InfoTime("===UpdateShopLineupParam.ExecDefault");

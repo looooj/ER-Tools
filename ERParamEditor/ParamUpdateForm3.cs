@@ -81,7 +81,17 @@ namespace ERParamEditor
 
         }
 
+        private void checkBoxSelectAll_CheckedChanged(object sender, EventArgs e)
+        {
+            //for (int i = 0; i < checkedListBoxOptions.Items.Count; i++)
+            //{
+            //    checkedListBoxOptions.SetItemChecked(i, checkBoxSelectAll.Checked);
+            //}
 
+        }
+
+        CheckedListBox? checkedListOptions;
+        CheckBox? checkBoxSelectAll;
         private void InitPageA(TableLayoutPanel control)
         {
 
@@ -93,10 +103,19 @@ namespace ERParamEditor
             for (int i = 0; i < updateParamOptions.Count; i++)
             {
                 var option = updateParamOptions[i];
-                panel.AddCheckBoxList(option.Name, option.Description);
+                checkedListOptions = panel.AddCheckBoxList(option.Name, option.Description);
             }
 
-
+            checkBoxSelectAll = panel.AddCheckBox("SelectAll", "");
+            if (checkBoxSelectAll != null && checkedListOptions != null) {
+                checkBoxSelectAll.CheckedChanged += delegate (object sender, EventArgs e) {
+                    for (int i = 0; i < checkedListOptions.Items.Count; i++)
+                    {
+                        checkedListOptions.SetItemChecked(i, checkBoxSelectAll.Checked);
+                    }
+                };                
+                
+            }
             //panel.SetValues(currentConfig);
         }
 

@@ -206,6 +206,9 @@ namespace ERParamUtils.UpateParam
 
         public static readonly string ReplaceWhetblade = "ReplaceWhetblade";
 
+        public static readonly string EnhanceMinicTear = "EnhanceMinicTear";
+
+
         //public static readonly string RemoveRemembranceRequire = "RemoveRemembranceRequire";
         //public static readonly string RemoveRecipe = "AddWhetblade";
 

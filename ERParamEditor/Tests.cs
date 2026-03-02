@@ -526,10 +526,11 @@ namespace ERParamEditor
             //GenAccessoryId();
             //GenAutoLot();
             //GenItemText();
-            GenMenuText();
+            //GenMenuText();
             //Tools.CleanUpdateLog(5);
             //Tests2.FindRemnant();
             //ExtractMsg();
+            Tests2.FindGuardLevel();
         }
     }
 }

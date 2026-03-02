@@ -32,6 +32,11 @@ ReplaceMemoryStone=替换记忆石
 ReplaceDragonHeart=替换龙心脏
 ReplaceGiantCrowSoul=替换大乌鸦卢恩掉落->10000000
 ReplaceMapPiece=替换地图碎片
+ReplaceBellBearing=替换灵珠
+ReplaceWhetblade=替换砥石刀
+EnhanceMinicTear=增强仿生泪滴
+
+
 
 AddWhetblade=添加砥石刀
 IncRemnant=增加遗物数量(for cer)
@@ -40,7 +45,14 @@ DoubleGetSoul=加倍卢恩掉落
 CrimsonAmberMedallionBase=红琥珀链坠: (血量,专注值,精力,负重)*1.5;获取卢恩200%;物品掉落概率500%;静音
 CrimsonAmberMedallionRestore=红琥珀链坠: 恢复血量和专注值
 CrimsonAmberMedallionDisable=红琥珀链坠: (中毒,冻伤,出血,腐败,发狂,催眠,咒死)无效
+CrimsonAmberMedallionDamageCorrectRate=红琥珀链坠: 减伤25%
+CrimsonAmberMedallionAttackRate=红琥珀链坠: 增伤20%
+CrimsonAmberMedallionConsumptionRate=红琥珀链坠: 减耗20%
+
 AllTalisman=全部护符: (血量,专注值,精力,获取卢恩，物品掉落)*1.2 
 
 ReplaceGoldenRune=不变,黄金卢恩 [13](10000),英雄卢恩 [2](20000),英雄卢恩 [4](30000)
 UnlockGrace=不变,解锁全部,解锁指定(unlock_grace.txt)
+
+
+AddInitCrimsonAmberMedallion=初始添加红琥珀链坠

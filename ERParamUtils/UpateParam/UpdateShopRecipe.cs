@@ -133,7 +133,7 @@ namespace ERParamUtils.UpdateParam
                 return false;
             }
             if (name.Length < 1)
-                name = "_" + equipId;
+                name = RowNamesManager.FindShopEquipName(equipId,equipType) +  "_" + equipId;
 
             int eventFlagForStock = eventFlagForStock1;
             if (eventFlagForStock == 0) {
@@ -173,7 +173,9 @@ namespace ERParamUtils.UpdateParam
             int rowId = beginRowId;
             for (int equipId = beginEquipId; equipId <= endEquipId; equipId++)
             {
-                var name1 = name + "_" + equipId;
+                var name1 = name;
+                if ( name.Length > 1 )
+                    name1 = name + "_" + equipId;
                 AddEquipX(updateCommand, rowId, param, equipId, equipType, name1, 0);
                 rowId++;
             }
@@ -241,6 +243,7 @@ namespace ERParamUtils.UpdateParam
             AddEquips(updateCommand, param, 8910, 8913, (int)ShopEquipType.Good, "", recipeBaseRowId);
             AddEquips(updateCommand, param, 8915, 8933, (int)ShopEquipType.Good, "", recipeBaseRowId);
             AddEquips(updateCommand, param, 8935, 8944, (int)ShopEquipType.Good, "", recipeBaseRowId);
+            AddEquips(updateCommand, param, 8951, 8965, (int)ShopEquipType.Good, "", recipeBaseRowId);
 
         }
 
