@@ -1,4 +1,4 @@
-﻿
+
 using ERParamUtils.UpateParam;
 using SoulsFormats;
 using System.Reflection.Metadata.Ecma335;
@@ -38,7 +38,7 @@ namespace ERParamUtils.UpdateParam
         {
             base.ExecBefore(project, updateCommand);
 
-            updateCommand.SetOption(UpdateParamOptionNames.ReplaceBellBearing,1);
+            //updateCommand.SetOption(UpdateParamOptionNames.ReplaceBellBearing,1);
 
         }
     }
@@ -276,6 +276,11 @@ namespace ERParamUtils.UpdateParam
             updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.ReplaceMapPiece));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.IncRemnant));
             updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.ReplaceWhetblade));
+
+            updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.ReplaceBellBearing));
+
+            updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.EnhanceMinicTear));
+
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.RemoveRemembranceRequire));
         }
 
@@ -327,7 +332,7 @@ namespace ERParamUtils.UpdateParam
 
             ParamUpdateRequire.Exec(paramProject, updateCommand);
             ParamRemoveWeight.Exec(paramProject, updateCommand);
-
+            UpdateBuddyStone.Exec(paramProject, updateCommand);
 
             //if (updateCommand.HaveOption(UpdateParamOptionNames.InitMagicSlotAccSlot))
             {
@@ -338,11 +343,15 @@ namespace ERParamUtils.UpdateParam
 
                 updateCommand.SetOption(UpdateParamOptionNames.ReplaceTalismanPouch, 1);
                 updateCommand.SetOption(UpdateParamOptionNames.ReplaceMemoryStone, 1);
-            }
+            }            
 
             //if (updateCommand.HaveOption(UpdateParamOptionNames.AddMapPiece))
             {
                 UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
+            }
+
+            if (updateCommand.HaveOption(UpdateParamOptionNames.EnhanceMinicTear)) {
+                UpdateRow.LoadUpdateRow("patch-mimic-tear.txt", updateCommand);
             }
 
             if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGoldenSeedSacredTear))
