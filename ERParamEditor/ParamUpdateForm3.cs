@@ -1,4 +1,4 @@
-﻿using ERParamUtils;
+using ERParamUtils;
 using ERParamUtils.UpateParam;
 using ERParamUtils.UpdateParam;
 using MultiLangLib;
@@ -136,7 +136,7 @@ namespace ERParamEditor
                 runeNames, ReplaceGoldenRune.GetValueList(), "0");
                 
             ///
-            string rateList = "1,2,3,4,5,10,20,50";
+            string rateList = "1,2,3,4,5,10,20,50,100";
             panel.AddSelectionNameValue(UpdateParamOptionNames.GetRuneRate,
                 UpdateParamOptionNames.GetRuneRate, rateList, rateList, "1");
 
