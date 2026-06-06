@@ -1,4 +1,4 @@
-﻿using ERParamUtils.UpateParam;
+using ERParamUtils.UpateParam;
 using Microsoft.VisualBasic;
 using Org.BouncyCastle.Tls;
 using SoulsFormats.Util;
@@ -87,24 +87,25 @@ namespace ERParamUtils.UpdateParam
             if (param == null)
                 return;
             removeWeaponRequireDict.Clear();
-            bool startFlag = false;
-            for (int i = 0; i < 100; i++)
+            //bool startFlag = false;
+            for (int i = 0; i < 200; i++)
             {
                 addItemOffset = 0;
+                addSecondaryItemOffset = 0;
                 replaceWeaponDict.Clear();
                 SoulsParam.Param.Row? row = param.FindRow(3000 + i);
                 if (row == null || row.Name == null || row.Name.Length < 3
                     || !row.Name.StartsWith("Class")
                     )
                 {
-                    if (startFlag)
-                    {
-                        break;
-                    }
+                    //if (startFlag)
+                    //{
+                    //    break;
+                    //}
                     continue;
                 }
                 UpdateLogger.InfoTime("{0} {1}",row.ID,row.Name);
-                startFlag = true;
+                //startFlag = true;
                 if (updateCommand.HaveOption(UpdateParamOptionNames.AddInitCrimsonAmberMedallion))
                 {
                     AddCrimsonAmberMedallion(updateCommand, row);
@@ -118,6 +119,7 @@ namespace ERParamUtils.UpdateParam
                 if (updateCommand.HaveOption(UpdateParamOptionNames.AddInitMimicTear))
                 {
                     AddItem(updateCommand, row, 207010, 1);
+                    AddItem(updateCommand, row, 253010, 1);
                 }
                 //2160;Pureblood Knight's Medal;纯血骑士勋章
                 if (updateCommand.HaveOption(UpdateParamOptionNames.AddInitPurebloodKnightMeda))
@@ -179,21 +181,29 @@ namespace ERParamUtils.UpdateParam
         static int addItemOffset = 0;
         private static void AddItem(UpdateCommand updateCommand, SoulsParam.Param.Row row, int itemId, int itemCount)
         {
-            for (int i = 1; i < 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
-                string key = "item_0" + (i);
-                string numKey = "itemNum_0" + (i);
+                string numIndex = i.ToString("D2");
+                string key = "item_" + numIndex;
+                string numKey = "itemNum_" + numIndex;
                 var v = ParamRowUtils.GetCellInt(row, key, 0);
                 if (v < 1)
                 {
-                    key = "item_0" + (i + addItemOffset);
-                    numKey = "itemNum_0" + (i + addItemOffset);
+                    if ((i + addSecondaryItemOffset) > 10)
+                        break;
+                    numIndex = (i + addItemOffset).ToString("D2");
+                    key = "item_" + numIndex;
+                    numKey = "itemNum_" + numIndex;
                     updateCommand.AddItem(row, key, itemId);
                     updateCommand.AddItem(row, numKey, itemCount);
                     addItemOffset++;
                     return;
                 }
             }
+            UpdateLogger.InfoRow("AddSecondaryItem {0} {1}", itemId, itemCount);
+
+            AddSecondaryItem(updateCommand, row, itemId, itemCount);
+
         }
         //secondaryItem_01
         //secondaryItemNum_01
@@ -207,6 +217,9 @@ namespace ERParamUtils.UpdateParam
                 var v = ParamRowUtils.GetCellInt(row, key, 0);
                 if (v < 1)
                 {
+                    if (i + addSecondaryItemOffset > 6) {
+                        break;
+                    }
                     key = "secondaryItem_0" + (i + addSecondaryItemOffset);
                     numKey = "secondaryItemNum_0" + (i + addSecondaryItemOffset);
                     updateCommand.AddItem(row, key, itemId);
@@ -215,6 +228,7 @@ namespace ERParamUtils.UpdateParam
                     return;
                 }
             }
+            UpdateLogger.InfoRow("AddItem Fail {0} {1}", itemId, itemCount);
         }
         //
         static void ReplaceShield(UpdateCommand updateCommand, SoulsParam.Param.Row row) {
