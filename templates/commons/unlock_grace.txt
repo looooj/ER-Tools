@@ -5,11 +5,13 @@
 
 120501;Palace Approach Ledge-Road;通往王朝的崖上道路
 
-
 130010;Beside the Great Bridge;大桥侧边
 130005;Tempest-Facing Balcony;龙卷旁露台
 
 160005;Audience Pathway;谒见之路
+
+
+
 
 150002;Elphael Inner Wall;艾布雷菲尔城墙内部
 
@@ -22,6 +24,14 @@
 630009;Altus Plateau;亚坛高原
 630005;Hermit Merchant's Shack;遁世商人的破屋
 630007;Forest-Spanning Greatbridge;穿林大桥
+
+631001;Ninth Mt. Gelmir Campsite;格密尔火山（第９休息站）
+631002;First Mt. Gelmir Campsite;格密尔火山（第１休息站）
+631003;Road of Iniquity;移送罪人之路
+631004;Seethewater River;沸滚河
+631005;Seethewater Terminus;沸滚河终点
+631006;Craftsman's Shack;匠人的破屋
+631007;Primeval Sorcerer Azur;“起源魔法师”亚兹勒
 
 
 6110600;Isolated Merchant's Shack;隐居商人的破屋
