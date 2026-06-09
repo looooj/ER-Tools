@@ -61,6 +61,7 @@ namespace ERParamEditor
             tableLayoutPanel2.RowStyles.Clear();
             tableLayoutPanel3.RowStyles.Clear();
             tableLayoutPanel4.RowStyles.Clear();
+            tableLayoutPanel5.RowStyles.Clear();
             //
             InitPageA(tableLayoutPanel1);
             InitPageB(tableLayoutPanel1);
@@ -70,6 +71,11 @@ namespace ERParamEditor
             InitPageD(tableLayoutPanel3);
             //
             InitPageScript(tableLayoutPanel4);
+
+
+            //tabControl1.TabPages.Remove(tabPageShop);
+            InitPageShop(tableLayoutPanel5);
+
 
 
             for (int i = 0; i < customTablePanels.Count; i++)
@@ -107,14 +113,16 @@ namespace ERParamEditor
             }
 
             checkBoxSelectAll = panel.AddCheckBox("SelectAll", "");
-            if (checkBoxSelectAll != null && checkedListOptions != null) {
-                checkBoxSelectAll.CheckedChanged += delegate (object sender, EventArgs e) {
+            if (checkBoxSelectAll != null && checkedListOptions != null)
+            {
+                checkBoxSelectAll.CheckedChanged += delegate (object sender, EventArgs e)
+                {
                     for (int i = 0; i < checkedListOptions.Items.Count; i++)
                     {
                         checkedListOptions.SetItemChecked(i, checkBoxSelectAll.Checked);
                     }
-                };                
-                
+                };
+
             }
             //panel.SetValues(currentConfig);
         }
@@ -134,7 +142,7 @@ namespace ERParamEditor
                 UpdateParamOptionNames.ReplaceGoldenRune,
                 UpdateParamOptionNames.ReplaceGoldenRune,
                 runeNames, ReplaceGoldenRune.GetValueList(), "0");
-                
+
             ///
             string rateList = "1,2,3,4,5,10,20,50,100";
             panel.AddSelectionNameValue(UpdateParamOptionNames.GetRuneRate,
@@ -167,9 +175,12 @@ namespace ERParamEditor
                 var item = updateTalismanOptions[i];
                 panel.AddCheckBox(item.Name, item.Description);
             }
+
+
         }
 
-        private void InitPageD(TableLayoutPanel control) {
+        private void InitPageD(TableLayoutPanel control)
+        {
 
             CustomTablePanel panel = new CustomTablePanel();
             customTablePanels.Add(panel);
@@ -186,7 +197,7 @@ namespace ERParamEditor
                 WeaponConfig.GetReplaceBowNames());
             var bowIds = WeaponConfig.GetReplaceBowIds();
             panel.AddSelectionNameValue(UpdateParamOptionNames.ReplaceInitBow,
-                UpdateParamOptionNames.ReplaceInitBow, bowNames, bowIds,"0");
+                UpdateParamOptionNames.ReplaceInitBow, bowNames, bowIds, "0");
 
             var wepNames =
                 MultiLang.GetText("UpdateParam", UpdateParamOptionNames.ReplaceInitWeaponRight3,
@@ -223,9 +234,25 @@ namespace ERParamEditor
                 UpdateParamOptionNames.ReplaceInitShield, shieldNames, shieldIds, "0");
 
 
+            var box1 = panel.AddCheckBox(UpdateParamOptionNames.RemoveInitWeaponWeightRequire, "");
+            if (box1 != null)
+            {
+                box1.Checked = true;
+                box1.Enabled = false;
+            }
 
-            panel.AddCheckBox(UpdateParamOptionNames.RemoveInitWeaponWeightRequire,"");
+        }
 
+        private void InitPageShop(TableLayoutPanel control)
+        {
+            CustomTablePanel panel = new CustomTablePanel();
+            customTablePanels.Add(panel);
+            panel.Init(control);
+
+            panel.AddCheckBox(UpdateParamOptionNames.ShopSellQuantityUnlimited, "");
+            panel.AddCheckBox(UpdateParamOptionNames.ShopVisibilityAll, "");
+            panel.AddCheckBox(UpdateParamOptionNames.ShopAddAncient, "");
+            panel.AddCheckBox(UpdateParamOptionNames.ShopSetAll, "");
         }
 
         private void InitPageScript(TableLayoutPanel control)
@@ -264,7 +291,8 @@ namespace ERParamEditor
         }
 
 
-        void execUpdatePublish(string? msg, bool publishFlag) {
+        void execUpdatePublish(string? msg, bool publishFlag)
+        {
 
             DictConfig config = new();
             for (int i = 0; i < customTablePanels.Count; i++)

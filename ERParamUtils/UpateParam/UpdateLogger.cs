@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -125,6 +125,14 @@ namespace ERParamUtils.UpdateParam
             GetLogger("").Add(s);
         }
 
+        public static void InfoParam(string format, params object[] args)
+        {
+
+            //string s = string.Format(format, args);
+            //GetLogger(currentParamName).Add(s);
+            GetLogger(currentParamName).Info(format, args);
+
+        }
 
         public static void InfoRow(SoulsParam.Param.Row row, string key, object value) {
 

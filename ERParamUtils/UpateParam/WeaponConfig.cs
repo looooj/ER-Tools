@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -68,14 +68,15 @@ namespace ERParamUtils.UpateParam
             return (eqId <= 32301200 && eqId >=30000000);
         }
 
+        //32130000;Fingerprint Stone Shield
         public static string GetShieldNames()
         {
-            return "None,Icon Shield";
+            return "None,Icon Shield,Fingerprint Stone Shield";
         }
 
         public static string GetShieldIds()
         {
-            return "None,32140000";
+            return "None,32140000,32130000";
         }
 
         //34080000;Dragon Communion Seal;龙飨印记

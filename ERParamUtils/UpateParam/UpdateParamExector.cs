@@ -19,7 +19,7 @@ namespace ERParamUtils.UpdateParam
         public abstract void Exec(ParamProject project, UpdateCommand updateCommand);
     };
 
-
+    /*
     public class UpdateShopParamTask : UpdateParamTask
     {
         public UpdateShopParamTask()
@@ -31,7 +31,7 @@ namespace ERParamUtils.UpdateParam
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
             UpdateName = Description;
-            UpdateShopLineupParam.ExecDefault(project, updateCommand);
+            UpdateShopLineupParam.Exec(project, updateCommand);
         }
 
         public override void ExecBefore(ParamProject project, UpdateCommand updateCommand)
@@ -42,7 +42,7 @@ namespace ERParamUtils.UpdateParam
 
         }
     }
-
+    */
     public class SpecShopParamTask : UpdateParamTask
     {
         public SpecShopParamTask()
@@ -58,6 +58,7 @@ namespace ERParamUtils.UpdateParam
         }
     }
 
+    /*
     public class ItemLotCountParamTask : UpdateParamTask
     {
         public ItemLotCountParamTask()
@@ -72,7 +73,7 @@ namespace ERParamUtils.UpdateParam
             ItemLotChangeReplace.SetItemLotCount(project, updateCommand);
         }
     }
-
+    */
 
     public class LotParamTask : UpdateParamTask
     {
@@ -184,6 +185,7 @@ namespace ERParamUtils.UpdateParam
 
     }
 
+    /*
     public class SmithingStoneTask : UpdateParamTask
     {
 
@@ -198,7 +200,7 @@ namespace ERParamUtils.UpdateParam
             UpdateSmithingStone.Proc(project, updateCommand);
         }
     }
-
+    */
 
 
 
@@ -245,13 +247,13 @@ namespace ERParamUtils.UpdateParam
 
             updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.UnlockCrafting));
 
-            updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.UpdateShop));
+            //updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.UpdateShop));
 
             updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.RemoveRequire));
 
             updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.RemoveWeight));
 
-            updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.Buddy));
+            updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.EnhanceBuddy));
 
 
             updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.ReplaceGoldenSeedSacredTear));
@@ -396,10 +398,10 @@ namespace ERParamUtils.UpdateParam
             //UpdateCharaInit.AddDefault(paramProject,updateCommand);
             UpdateTalisman.Exec(paramProject, updateCommand);
 
-            UpdateShopLineupParam.ExecDefault(paramProject, updateCommand);
-            if (updateCommand.HaveOption(UpdateParamOptionNames.UnlockCrafting)) {
-                UpdateShopLineupParam.ReplaceAncientStone(paramProject, updateCommand);
-            }
+            UpdateShopLineupParam.Exec(paramProject, updateCommand);
+            //if (updateCommand.HaveOption(UpdateParamOptionNames.UnlockCrafting)) {
+                //UpdateShopLineupParam.ReplaceAncientStone(paramProject, updateCommand);
+            //}
 
             foreach (var task in options.UpdateTasks)
             {

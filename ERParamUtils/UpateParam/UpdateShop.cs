@@ -1,4 +1,4 @@
-﻿using ERParamUtils.UpateParam;
+using ERParamUtils.UpateParam;
 using Org.BouncyCastle.Asn1.Mozilla;
 using Org.BouncyCastle.Asn1.Ocsp;
 using System;
@@ -166,13 +166,14 @@ namespace ERParamUtils.UpdateParam
 
             return false;
         }
-        public static void ReplaceAncientStone(ParamProject paramProject, UpdateCommand updateCommand)
+
+        private static void ReplaceAncientStone(ParamProject paramProject, UpdateCommand updateCommand)
         {
 
             int[] idList = { 10168,10140,10909,10919};
-            UpdateLogger.Begin(ParamNames.ShopLineupParam);
+            //UpdateLogger.Begin(ParamNames.ShopLineupParam);
 
-
+            UpdateLogger.InfoParam("ReplaceAncientStone");
 
             var param = paramProject.FindParam(ParamNames.ShopLineupParam);
             if (param == null)
@@ -186,15 +187,20 @@ namespace ERParamUtils.UpdateParam
 
                 ShopEquipType shopEquipType = (ShopEquipType)GetEquipType(row);
                 EquipType equipType = EquipTypeUtils.ConvertFromShopEquipType((ShopEquipType)shopEquipType);
+                //101800
                 if (row.ID >= 101800) {
 
                     if (NotUsedEquip(equipId, equipType)) {
 
-                        updateCommand.AddItem(row, "equipId", idList[replaceIndex]);
+                        int tmpId = idList[replaceIndex];
+                        UpdateLogger.InfoRow("ReplaceAncientStone {0}", tmpId);
+
+                        updateCommand.AddItem(row, "equipId", tmpId);
                         updateCommand.AddItem(row, "equipType", (int)ShopEquipType.Good);
                         updateCommand.AddItem(row, "value", 2000);
                         updateCommand.AddItem(row, "sellQuantity", -1);
                         updateCommand.AddItem(row, "eventFlag_forRelease", 0);
+
                         replaceIndex++;
                     }
                 }
@@ -204,17 +210,20 @@ namespace ERParamUtils.UpdateParam
             }
         }
 
-        public static void ExecDefault(ParamProject paramProject, UpdateCommand updateCommand)
+        public static void Exec(ParamProject paramProject, UpdateCommand updateCommand)
         {
 
-            if (!updateCommand.HaveOption(UpdateParamOptionNames.UpdateShop)) {
-                return;
+            if (updateCommand.HaveOption(UpdateParamOptionNames.ShopSetAll)) {
+                updateCommand.SetOption(UpdateParamOptionNames.ShopVisibilityAll,1);
+                updateCommand.SetOption(UpdateParamOptionNames.ShopSellQuantityUnlimited, 1);
+                updateCommand.SetOption(UpdateParamOptionNames.ShopAddAncient, 1);
             }
 
             //updateCommand.SetOption(UpdateParamOptionNames.ReplaceBellBearing, 1);
 
 
-            UpdateLogger.InfoTime("===UpdateShopLineupParam.ExecDefault");
+
+            UpdateLogger.InfoTime("===UpdateShopLineupParam.Exec");
 
 
             UpdateLogger.Begin(ParamNames.ShopLineupParam);
@@ -231,7 +240,8 @@ namespace ERParamUtils.UpdateParam
                 if (row.ID >= 110000 || row.ID < 100000)
                     continue;
 
-                ChangeVisibility(row, updateCommand);
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ShopVisibilityAll))
+                    ChangeVisibility(row, updateCommand);
 
                 int equipId = GetEquipId(row);
                 ShopEquipType shopEquipType = (ShopEquipType)GetEquipType(row);
@@ -251,10 +261,16 @@ namespace ERParamUtils.UpdateParam
                     || SpecEquipConfig.GetSpec(equipId, equipType) > 0
                     )
                 {
-                    ChangeSellAmount(row, "sellQuantity", -1, updateCommand);
+                    if ( updateCommand.HaveOption(UpdateParamOptionNames.ShopSellQuantityUnlimited))
+                        ChangeSellAmount(row, "sellQuantity", -1, updateCommand);
                 }
                 ChangeToMinPrice(paramProject, row, equipId, shopEquipType, updateCommand);
 
+            }
+
+            if (updateCommand.HaveOption(UpdateParamOptionNames.ShopAddAncient)) {
+
+                ReplaceAncientStone(paramProject,updateCommand);
             }
         }
 

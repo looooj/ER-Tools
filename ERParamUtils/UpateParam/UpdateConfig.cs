@@ -1,4 +1,4 @@
-﻿using ERParamUtils.UpdateParam;
+using ERParamUtils.UpdateParam;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -136,10 +136,10 @@ namespace ERParamUtils.UpateParam
     {
 
         public static readonly string UnlockCrafting = "UnlockCrafting";
-        public static readonly string Buddy = "Buddy";
+        public static readonly string EnhanceBuddy = "EnhanceBuddy";
         public static readonly string RemoveWeight = "RemoveWeight";
         public static readonly string RemoveRequire = "RemoveRequire";
-        public static readonly string UpdateShop = "UpdateShop";
+        //public static readonly string UpdateShop = "UpdateShop";
 
 
         public static readonly string AllTalisman = "AllTalisman";
@@ -213,6 +213,12 @@ namespace ERParamUtils.UpateParam
         //public static readonly string RemoveRecipe = "AddWhetblade";
 
         public static readonly string GetRuneRate = "GetRuneRate";
+
+
+        public static readonly string ShopSellQuantityUnlimited = "ShopSellQuantityUnlimited";
+        public static readonly string ShopVisibilityAll = "ShopVisibilityAll";
+        public static readonly string ShopAddAncient = "ShopAddAncient";
+        public static readonly string ShopSetAll = "ShopSetAll";
 
     }
 

@@ -1,4 +1,4 @@
-﻿using ERParamUtils.UpateParam;
+using ERParamUtils.UpateParam;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ namespace ERParamUtils.UpdateParam
 
         public static void Exec(ParamProject paramProject,UpdateCommand updateCommand)
         {
-            if (!updateCommand.HaveOption(UpdateParamOptionNames.Buddy)) {
+            if (!updateCommand.HaveOption(UpdateParamOptionNames.EnhanceBuddy)) {
                 return;
             }
             UpdateLogger.Info("===UpdateBuddyStone.Exec");

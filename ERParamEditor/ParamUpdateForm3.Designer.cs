@@ -1,4 +1,4 @@
-﻿namespace ERParamEditor
+namespace ERParamEditor
 {
     partial class ParamUpdateForm3
     {
@@ -40,12 +40,15 @@
             panel1 = new Panel();
             buttonPublish = new Button();
             buttonUpdate = new Button();
+            tabPageShop = new TabPage();
+            tableLayoutPanel5 = new TableLayoutPanel();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
             tabPage4.SuspendLayout();
             panel1.SuspendLayout();
+            tabPageShop.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -53,6 +56,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPageShop);
             tabControl1.Controls.Add(tabPage4);
             tabControl1.Location = new Point(13, 8);
             tabControl1.Name = "tabControl1";
@@ -186,6 +190,30 @@
             buttonUpdate.UseVisualStyleBackColor = true;
             buttonUpdate.Click += buttonUpdate_Click;
             // 
+            // tabPageShop
+            // 
+            tabPageShop.Controls.Add(tableLayoutPanel5);
+            tabPageShop.Location = new Point(4, 26);
+            tabPageShop.Name = "tabPageShop";
+            tabPageShop.Padding = new Padding(3);
+            tabPageShop.Size = new Size(1015, 607);
+            tabPageShop.TabIndex = 4;
+            tabPageShop.Text = "Shop";
+            tabPageShop.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel5.Location = new Point(26, 20);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle());
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel5.Size = new Size(962, 567);
+            tableLayoutPanel5.TabIndex = 4;
+            // 
             // ParamUpdateForm3
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -207,6 +235,7 @@
             tabPage3.ResumeLayout(false);
             tabPage4.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            tabPageShop.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -224,5 +253,7 @@
         private TableLayoutPanel tableLayoutPanel3;
         private TabPage tabPage4;
         private TableLayoutPanel tableLayoutPanel4;
+        private TabPage tabPageShop;
+        private TableLayoutPanel tableLayoutPanel5;
     }
 }

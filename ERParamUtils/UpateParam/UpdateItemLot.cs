@@ -1,4 +1,4 @@
-﻿using ERParamUtils.UpateParam;
+using ERParamUtils.UpateParam;
 using Org.BouncyCastle.Asn1.X509;
 using System;
 using System.Collections.Generic;
@@ -491,6 +491,7 @@ namespace ERParamUtils.UpdateParam
         //
         // replace by options
         //
+    
         private static void SetLotReplaceRow(SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
 
@@ -672,6 +673,17 @@ namespace ERParamUtils.UpdateParam
                     }
 
                 }
+
+                if (SpecEquipConfig.IsGreat(itemId, itemEquipType)) {
+                    incLotItemNum = 50;
+                }
+
+                //
+                if (itemEquipType == EquipType.Good &&
+                    updateCommand.HaveOption(UpdateParamOptionNames.EnhanceBuddy)) {
+                    updateCommand.AddItem(row, "lotItemId0" + i, itemId+10);
+                }
+
                 if (incLotItemNum > 1) {
                     updateCommand.AddItem(row, "lotItemNum0" + i, incLotItemNum);
                 }

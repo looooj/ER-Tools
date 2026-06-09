@@ -2,3 +2,9 @@
 @@et=2
 
 3100000;Sacred Relic Sword;神躯化剑
+
+
+常驻效果
+residentSpEffectId=5321400
+
+62,staminaGuardDef=59  Guard Stability(ガード時スタミナ防御力) s16 

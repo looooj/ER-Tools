@@ -1,4 +1,4 @@
-﻿
+
 SpecShopParamTask=执行商店脚本(shop-spec)
 ItemLotCountParamTask=设置特定物品拾取掉落数量(黄金卢恩20;弓箭90;...)
 LotParamTask=执行拾取掉落脚本(lot-enemy*,lot-map*)
@@ -11,7 +11,7 @@ SpecRecipeParamTask=执行配方脚本(recipe-spec)
 RemoveRequire=移除武器魔法祷告需求
 RemoveWeight=移除武器盔甲重量
 UnlockCrafting=解锁制作笔记,无条件制作,替换制作笔记为王之卢恩
-Buddy=增加骨灰的召唤范围;移除骨灰召唤消耗;无限召唤次数
+EnhanceBuddy=增加骨灰的召唤范围;移除骨灰召唤消耗;无限召唤次数
 UpdateShop=全部商品可见;物品类无限数量;...
 
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -162,11 +162,22 @@ namespace ERParamUtils.UpdateParam
             return false;
         }
 
+        public static bool IsGreat(int itemId, EquipType equipType) {
+            if (equipType != EquipType.Good)
+                return false;
+            if (itemId == 10140 || itemId == 10168)
+                return true;
+            if (itemId == 10909 || itemId == 10919)
+                return true;
+
+            return false;
+        } 
+
         public static bool IsAncientDragonStone(int itemId, EquipType equipType) {
             if (equipType != EquipType.Good)
                 return false;
 
-            if (itemId == 10140 && itemId == 10168)
+            if (itemId == 10140 || itemId == 10168)
                 return true;
             return false;
         }
@@ -236,10 +247,13 @@ namespace ERParamUtils.UpdateParam
             if ( itemId >= 1100 && itemId <= 1841)
                 return true;
 
-            if (itemId >= 2011000 && itemId <= 2020035)
+            if (itemId >= 2015000 && itemId <= 2020035)
                 return true;
 
             if (itemId >= 2000300 && itemId <= 2002020)
+                return true;
+
+            if (itemId >= 2009500 && itemId <= 2010100)
                 return true;
             return false;
         }
