@@ -1,4 +1,4 @@
-﻿using ERParamUtils.UpdateParam;
+using ERParamUtils.UpdateParam;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -218,8 +218,12 @@ namespace ERParamUtils
             }
             string oldDir = GlobalConfig.GetProjectsDir() + "\\" + projectName;
             string timeId = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-            
-            string newDir = GlobalConfig.GetProjectsDir() + "\\_" + projectName +"_"+timeId;
+            string delDir = GlobalConfig.GetProjectsDir() + "\\_del_";
+            if (!Directory.Exists(delDir))
+            {
+                Directory.CreateDirectory(delDir);
+            }
+            string newDir = delDir + "\\" + projectName +"_"+timeId;
             Directory.Move(oldDir, newDir);
             return "";
         }
