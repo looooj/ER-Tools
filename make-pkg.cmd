@@ -8,8 +8,8 @@ rd /s /q ER-Tools
 md ER-Tools
 cd ER-Tools
 copy ..\..\*.md 
-copy ..\..\ERBackup\bin\Release\net6.0-windows\*.* 
-xcopy /s /y /i /q ..\..\ERParamEditor\bin\Release\net6.0-windows\*.* 
+copy ..\..\ERBackup\bin\Release\net8.0-windows7.0\*.* 
+xcopy /s /y /i /q ..\..\ERParamEditor\bin\Release\net8.0-windows7.0\*.* 
 del *.txt
 del *.pdb
 md assets
