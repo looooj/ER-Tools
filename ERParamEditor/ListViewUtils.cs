@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,10 +16,19 @@ namespace ERParamEditor
                 return comboBox.GetItemText(item);
             return null;
         }
+
+ 
     }
 
     public class ListViewUtils
     {
+        static public ListViewItem? GetCurrentItem(ListView listView) {
+            var items = listView.SelectedItems;
+            if (items.Count == 0) return null;
+
+            return items[0];
+        }
+
         static public void AddItem(ListView lv, params object[] args)
         {
 
