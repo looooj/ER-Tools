@@ -258,6 +258,7 @@ namespace ERParamUtils.UpdateParam
                     || SpecEquipConfig.IsMeat(equipId, equipType)
                     || SpecEquipConfig.IsRemembrance(equipId, equipType)
                     || SpecEquipConfig.IsSacrificialTwig(equipId, equipType)
+                    || SpecEquipConfig.IsFinger(equipId,equipType)
                     || SpecEquipConfig.GetSpec(equipId, equipType) > 0
                     )
                 {

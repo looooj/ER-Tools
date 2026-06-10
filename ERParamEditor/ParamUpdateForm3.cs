@@ -252,7 +252,7 @@ namespace ERParamEditor
             panel.AddCheckBox(UpdateParamOptionNames.ShopSellQuantityUnlimited, "");
             panel.AddCheckBox(UpdateParamOptionNames.ShopVisibilityAll, "");
             panel.AddCheckBox(UpdateParamOptionNames.ShopAddAncient, "");
-            panel.AddCheckBox(UpdateParamOptionNames.ShopSetAll, "");
+            //panel.AddCheckBox(UpdateParamOptionNames.ShopSetAll, "");
         }
 
         private void InitPageScript(TableLayoutPanel control)

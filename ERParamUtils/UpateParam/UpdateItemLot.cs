@@ -582,27 +582,35 @@ namespace ERParamUtils.UpdateParam
                 //10010;Golden Seed;黄金种子
                 //10020; Sacred Tear; 圣杯露滴
                 if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGoldenSeedSacredTear))
+                {
                     if ((itemId == 10010
-                        || itemId == 10020 ) && itemType == (int)EquipType.Good)
+                        || itemId == 10020) && itemType == (int)EquipType.Good)
                     {
 
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                         incLotItemNum = 10;
                     }
+                }
+                else
+                {
+                    if (itemId == 10010) {
+                        incLotItemNum = 2;
+                    }
+                }
 
                 //2010000;Scadutree Fragment;幽影树碎片
                 //2010100;Revered Spirit Ash;灵灰
                 if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceScadutreeFragmentSpiritAsh))
-                    if ((
-                         itemId == 2010000
-                        || itemId == 2010100
-                        ) && itemType == (int)EquipType.Good)
-                    {
+                        if ((
+                             itemId == 2010000
+                            || itemId == 2010100
+                            ) && itemType == (int)EquipType.Good)
+                        {
 
-                        updateCommand.AddItem(row, "lotItemId0" + i, 2002960);
-                        incLotItemNum = 10;
+                            updateCommand.AddItem(row, "lotItemId0" + i, 2002960);
+                            incLotItemNum = 10;
 
-                    }
+                        }
 
 
                 //10030;Memory Stone;记忆石

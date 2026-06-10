@@ -135,6 +135,7 @@ namespace ERParamUtils.UpdateParam
                 || itemId == 101
                 || itemId == 170
                 || itemId == 171
+                || itemId == 111
                 )
             {
                 return true;
@@ -329,7 +330,8 @@ namespace ERParamUtils.UpdateParam
 
             if (itemId >= 2950 && itemId <= 2964)
                 return true;
-
+            if (itemId >= 2002900 && itemId <= 2002910)
+                return true;
             return false;
         }
 

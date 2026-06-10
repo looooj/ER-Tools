@@ -174,6 +174,15 @@ namespace ERParamEditor
 
         private void OpenInExplorerClick(object? sender, EventArgs e)
         {
+            var item = ListViewUtils.GetCurrentItem(listViewProject);
+            if (item != null) {
+                if (item.Text == "ModRegulationPath") {
+
+                    ProcessUtils.OpenInExplorer(item.SubItems[1].Text);
+                    return;
+                }
+            }
+
             ProcessUtils.OpenInExplorer(GlobalConfig.GetProjectsDir());
         }
 

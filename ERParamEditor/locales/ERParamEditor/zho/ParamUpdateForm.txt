@@ -1,4 +1,4 @@
-﻿buttonUpdate=更新
+buttonUpdate=更新
 buttonUpdatePublish=更新&发布
 buttonPublish=发布
 ReplaceGoldenRune_label=替换黄金卢恩
@@ -11,6 +11,7 @@ tabPage1=普通参数
 tabPage2=首饰参数
 tabPage3=初始参数
 tabPage4=脚本参数
+tabPageShop=商店参数
 
 AddInitCrimsonAmberMedallion=初始添加红琥珀链坠
 AddInit99Rune=初始添加99个王之卢恩
@@ -18,3 +19,8 @@ AddInitMimicTear=初始添加仿真泪滴
 AddInitPurebloodKnightMeda=初始添加纯血骑士勋章
 UnlockRoundtableHold=解锁大赐福
 SelectAll=全选
+
+ShopSellQuantityUnlimited=商店销售数量无限
+ShopVisibilityAll=商店物品全部可见
+ShopAddAncient=商店添加古龙锻造石
+
