@@ -1,4 +1,4 @@
-﻿using ERParamUtils.UpateParam;
+using ERParamUtils.UpateParam;
 using Org.BouncyCastle.Asn1;
 using SoulsFormats;
 using System;
@@ -21,26 +21,32 @@ namespace ERParamUtils.UpdateParam
 
             int value = updateCommand.GetOption(UpdateParamOptionNames.UnlockGrace);
             UnlockGraceType t = UnlockGraceConfig.ValueToType(value);
-            if (t == UnlockGraceType.None) {
+            if (t == UnlockGraceType.None)
+            {
                 return;
             }
 
-            if ( value < 1)
+            if (value < 1)
                 return;
             var param = paramProject.FindParam(ParamNames.BonfireWarpParam);
             if (param == null)
                 return;
 
-            switch (t) { 
+            switch (t)
+            {
                 case UnlockGraceType.UnlockNormal:
-                    UnlockGraceNormal(param,paramProject, updateCommand);
+                    UnlockGraceNormal(param, paramProject, updateCommand);
                     break;
                 case UnlockGraceType.UnlockCustom:
                     UnlockGraceCustom(param, paramProject, updateCommand);
                     break;
             }
-            SetMapInfoParam(paramProject, updateCommand);
-            if (updateCommand.HaveOption(UpdateParamOptionNames.UnlockRoundtableHold)) {
+            if (updateCommand.HaveOption(UpdateParamOptionNames.EnableFastTravel))
+            {
+                SetMapInfoParam(paramProject, updateCommand);
+            }
+            if (updateCommand.HaveOption(UpdateParamOptionNames.UnlockRoundtableHold))
+            {
                 UnlockRoundtableHold(updateCommand);
             }
         }
@@ -60,7 +66,8 @@ namespace ERParamUtils.UpdateParam
                 692000,220000,694005,696000,200100,
                 341200,341102,341300,341500,341401
                };
-        private static void UnlockGraceNormal(SoulsParam.Param param,ParamProject paramProject, UpdateCommand updateCommand) {
+        private static void UnlockGraceNormal(SoulsParam.Param param, ParamProject paramProject, UpdateCommand updateCommand)
+        {
 
             //341300;Divine Tower of Caelid;盖利德神授塔
             //341102;Divine Tower of Liurnia;利耶尼亚神授塔
@@ -145,11 +152,12 @@ namespace ERParamUtils.UpdateParam
 
             for (int i = 0; i < param.Rows.Count; i++)
             {
-                
+
 
                 var row = param.Rows[i];
 
-                if (row.ID < 100000) { 
+                if (row.ID < 100000)
+                {
                     continue;
                 }
 
@@ -163,7 +171,8 @@ namespace ERParamUtils.UpdateParam
         }
 
 
-        static string FindUnlockFile(ParamProject paramProject) {
+        static string FindUnlockFile(ParamProject paramProject)
+        {
 
             string unlockName = "unlock_grace.txt";
             string fn = paramProject.GetDir() + "\\" + unlockName;
@@ -192,19 +201,22 @@ namespace ERParamUtils.UpdateParam
 
             string fn = FindUnlockFile(paramProject);
 
-            UpdateLogger.InfoTime("UnlockGraceCustom [{0}]",fn);
+            UpdateLogger.InfoTime("UnlockGraceCustom [{0}]", fn);
             // paramProject.GetDir() + "\\unlock_grace.txt";
-            if (fn.Length < 3) {
+            if (fn.Length < 3)
+            {
                 return;
             }
 
             var lines = File.ReadAllLines(fn);
             HashSet<int> customIdSet = new();
 
-            foreach (var line in lines) { 
+            foreach (var line in lines)
+            {
 
                 var line1 = line.Trim();
-                if (line1.StartsWith("#")) {
+                if (line1.StartsWith("#"))
+                {
                     continue;
                 }
                 if (line1.Length < 6)
@@ -213,7 +225,8 @@ namespace ERParamUtils.UpdateParam
                 }
                 var items = line1.Split(';');
 
-                if (items.Length >= 1) {
+                if (items.Length >= 1)
+                {
                     var id = int.Parse(items[0]);
                     if (id < 100000)
                         continue;
@@ -237,26 +250,32 @@ namespace ERParamUtils.UpdateParam
                     continue;
                 updateCommand.AddItem(row, eventflagIdKey, "71801");
             }
-        
+
             //todo
         }
 
-         
-        public static void UnlockRoundtableHold(UpdateCommand updateCommand) {
+
+        public static void UnlockRoundtableHold(UpdateCommand updateCommand)
+        {
 
             //111000;Table of Lost Grace;大赐福
             int[] defaultIds = { 111000 };
-            foreach (int rowId in defaultIds) {
+            foreach (int rowId in defaultIds)
+            {
                 updateCommand.AddItem(ParamNames.BonfireWarpParam, rowId, eventflagIdKey, 71801);
             }
         }
 
 
         //MapDefaultInfoParam
-        public static void SetMapInfoParam(ParamProject paramProject, UpdateCommand updateCommand) {
+        public static void SetMapInfoParam(ParamProject paramProject, UpdateCommand updateCommand)
+        {
             var param = paramProject.FindParam(ParamNames.MapDefaultInfoParam);
             if (param == null)
+            {
+                UpdateLogger.Info("Find MapDefaultInfoParam Fail");
                 return;
+            }
             string key = "EnableFastTravelEventFlagId";
 
             for (int i = 0; i < param.Rows.Count; i++)
@@ -267,7 +286,9 @@ namespace ERParamUtils.UpdateParam
                 //    continue;
 
                 int val = ParamRowUtils.GetCellInt(row, key, -1);
-                if (val > 1) {
+                if (val > 1)
+                {
+                    //82001
                     updateCommand.AddItem(row, key, "6001");
                 }
             }

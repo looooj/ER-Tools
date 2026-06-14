@@ -14,6 +14,8 @@
 
 
 150002;Elphael Inner Wall;艾布雷菲尔城墙内部
+651003;Apostate Derelict;离教废屋
+650006;Church of Repose;安歇教堂
 
 650000;Forbidden Lands;禁域
 650010;Grand Lift of Rold;洛德大升降机
@@ -24,6 +26,8 @@
 630009;Altus Plateau;亚坛高原
 630005;Hermit Merchant's Shack;遁世商人的破屋
 630007;Forest-Spanning Greatbridge;穿林大桥
+
+
 
 631001;Ninth Mt. Gelmir Campsite;格密尔火山（第９休息站）
 631002;First Mt. Gelmir Campsite;格密尔火山（第１休息站）
@@ -45,11 +49,16 @@
 
 620003;Scenic Isle;远眺岛
 620001;Liurnia Lake Shore;利耶尼亚湖（湖边）
+310500;Lakeside Crystal Cave;湖旁结晶洞窟
+620035;Village of the Albinaurics;白金村
+
+
 
 620060;Jarburg;壶村
 620055;Church of Inhibition;镇静教堂
 
 621000;Moonlight Altar;月光祭坛
+620039;Church of Vows;结缘教堂
 
 
 640006;Isolated Merchant's Shack;隐居商人的破屋
@@ -60,6 +69,11 @@
 341301;Divine Tower of Caelid: Basement;盖利德神授塔（地底）
 341302;Divine Tower of Caelid: Center;盖利德神授塔（中段）
 
+630004;Rampartside Path;城墙旁小径
+
+350001;Underground Roadside;地底大道旁
+350002;Forsaken Depths;弃置恶兆的底层
+
 120203;Siofra River Bank;希芙拉河（岸边）
 120206;Ancestral Woods;祖灵森林
 120208;Night's Sacred Ground;黑夜神域
@@ -68,6 +82,7 @@
 120104;Ainsel River Main;安瑟尔河主流
 120305;Across the Roots;树根前路
 120701;Nokron, Eternal City;“永恒之城”诺克隆恩
+120105;Nokstella, Eternal City;“永恒之城”诺克史黛拉
 
 
 

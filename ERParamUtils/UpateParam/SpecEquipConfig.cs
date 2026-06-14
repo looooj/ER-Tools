@@ -357,6 +357,17 @@ namespace ERParamUtils.UpdateParam
             return false;
         }
 
+        //2010000;Scadutree Fragment; 幽影树碎片
+        //2010100;Revered Spirit Ash;灵灰
+        public static bool IsScadutreeFragmentSpiritAsh(int itemId, EquipType equipType) {
+            if (equipType != EquipType.Good)
+                return false;
+            if (itemId == 2010000 || itemId == 2010100) {
+                return true;
+            }
+            return false;
+        }
+
         public static void LoadConfig()
         {
             AddDefault();

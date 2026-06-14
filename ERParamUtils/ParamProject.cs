@@ -1,4 +1,4 @@
-﻿using ERParamUtils;
+using ERParamUtils;
 using SoulsFormats;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -174,7 +174,7 @@ namespace ERParamUtils
 
             LoadParamdefs();
             currentBinder = SFUtil.DecryptERRegulation(path);
-            LoadParamFromBinder(currentBinder, useFilter, out _paramVersion, true);
+            LoadParamFromBinder(currentBinder, useFilter, out _paramVersion, useFilter);
             ImpRowNames();
 
 

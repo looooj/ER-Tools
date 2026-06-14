@@ -174,6 +174,7 @@ namespace ERParamUtils.UpateParam
 
         public static readonly string UnlockGrace = "UnlockGrace";
         public static readonly string UnlockRoundtableHold = "UnlockRoundtableHold";
+        public static readonly string EnableFastTravel = "EnableFastTravel";
 
         public static readonly string ReplaceGoldenSeedSacredTear = "ReplaceGoldenSeedSacredTear";
         public static readonly string ReplaceScadutreeFragmentSpiritAsh = "ReplaceScadutreeFragmentSpiritAsh";

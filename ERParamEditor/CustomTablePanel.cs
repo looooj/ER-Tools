@@ -1,4 +1,4 @@
-﻿using ERParamUtils;
+using ERParamUtils;
 using SoulsFormats;
 using System;
 using System.Collections.Generic;
@@ -81,7 +81,7 @@ namespace ERParamEditor
 
             return currentCheckListBox;
         }
-        public CheckBox? AddCheckBox(string name, string description)
+        public CheckBox? AddCheckBox(string name, string description,bool initValue=false)
         {
             if (mainPanel == null)
             {
@@ -107,6 +107,8 @@ namespace ERParamEditor
 
             items.Add(item);
             rowCount++;
+
+            checkBox1.Checked = initValue;
             return checkBox1;
         }
 

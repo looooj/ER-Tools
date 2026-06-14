@@ -491,7 +491,7 @@ namespace ERParamUtils.UpdateParam
         //
         // replace by options
         //
-    
+
         private static void SetLotReplaceRow(SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
 
@@ -563,7 +563,7 @@ namespace ERParamUtils.UpdateParam
                     var runeValue = ReplaceGoldenRune.GetRuneValue(eqId);
                     if (eqId > 0 && SpecEquipConfig.IsRune(itemId, (EquipType)itemType))
                     {
-                        if (itemId < eqId )
+                        if (itemId < eqId)
                         {
                             updateCommand.AddItem(row, "lotItemId0" + i, eqId);
                         }
@@ -593,25 +593,27 @@ namespace ERParamUtils.UpdateParam
                 }
                 else
                 {
-                    if (itemId == 10010) {
+                    if (itemId == 10010)
+                    {
                         incLotItemNum = 2;
                     }
                 }
 
                 //2010000;Scadutree Fragment;幽影树碎片
                 //2010100;Revered Spirit Ash;灵灰
-                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceScadutreeFragmentSpiritAsh))
-                        if ((
-                             itemId == 2010000
-                            || itemId == 2010100
-                            ) && itemType == (int)EquipType.Good)
-                        {
+                if (SpecEquipConfig.IsScadutreeFragmentSpiritAsh(itemId, itemEquipType))
+                {
 
-                            updateCommand.AddItem(row, "lotItemId0" + i, 2002960);
-                            incLotItemNum = 10;
-
-                        }
-
+                    if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceScadutreeFragmentSpiritAsh))
+                    {
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2002960);
+                        incLotItemNum = 10;
+                    }
+                    else
+                    {
+                        incLotItemNum = 2;
+                    }
+                }
 
                 //10030;Memory Stone;记忆石
                 if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceMemoryStone))
@@ -662,8 +664,9 @@ namespace ERParamUtils.UpdateParam
                     }
 
                 //
-                if (updateCommand.HaveOption(UpdateParamOptionNames.CrimsonAmberMedallionRestore)) {
-                    if ((itemId == 5020 || itemId== 8000) && itemType == (int)EquipType.Accessory)
+                if (updateCommand.HaveOption(UpdateParamOptionNames.CrimsonAmberMedallionRestore))
+                {
+                    if ((itemId == 5020 || itemId == 8000) && itemType == (int)EquipType.Accessory)
                     {
                         updateCommand.AddItem(row, "lotItemId0" + i, 2919);
                         incLotItemNum = 10;
@@ -671,7 +674,7 @@ namespace ERParamUtils.UpdateParam
                 }
 
                 //for cer mod
-                if (itemEquipType == EquipType.Good && 
+                if (itemEquipType == EquipType.Good &&
                     updateCommand.HaveOption(UpdateParamOptionNames.ReplaceRemnant))
                 {
                     if (SpecEquipConfig.IsRemnant(itemId, EquipType.Good)
@@ -682,17 +685,20 @@ namespace ERParamUtils.UpdateParam
 
                 }
 
-                if (SpecEquipConfig.IsGreat(itemId, itemEquipType)) {
+                if (SpecEquipConfig.IsGreat(itemId, itemEquipType))
+                {
                     incLotItemNum = 50;
                 }
 
                 //
                 if (itemEquipType == EquipType.Good &&
-                    updateCommand.HaveOption(UpdateParamOptionNames.EnhanceBuddy)) {
-                    updateCommand.AddItem(row, "lotItemId0" + i, itemId+10);
+                    updateCommand.HaveOption(UpdateParamOptionNames.EnhanceBuddy))
+                {
+                    updateCommand.AddItem(row, "lotItemId0" + i, itemId + 10);
                 }
 
-                if (incLotItemNum > 1) {
+                if (incLotItemNum > 1)
+                {
                     updateCommand.AddItem(row, "lotItemNum0" + i, incLotItemNum);
                 }
             }

@@ -400,8 +400,10 @@ namespace ERParamUtils.UpdateParam
 
             UpdateShopLineupParam.Exec(paramProject, updateCommand);
             //if (updateCommand.HaveOption(UpdateParamOptionNames.UnlockCrafting)) {
-                //UpdateShopLineupParam.ReplaceAncientStone(paramProject, updateCommand);
+            //UpdateShopLineupParam.ReplaceAncientStone(paramProject, updateCommand);
             //}
+
+            UpdateRow.LoadUpdateRow("patch-lot.txt",updateCommand);
 
             foreach (var task in options.UpdateTasks)
             {
