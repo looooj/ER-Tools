@@ -49,11 +49,12 @@ namespace ERParamUtils.UpdateParam
         {
             OrderNo = 0;
             Description = "Exec shop-spec.txt";
+            UpdateName = "shop-spec.txt";
         }
 
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
-            UpdateName = Description;
+            //UpdateName = Description;
             UpdateShopLineupParam.ExecSpec(project, updateCommand);
         }
     }
@@ -268,8 +269,9 @@ namespace ERParamUtils.UpdateParam
             updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.ReplaceFinger));
             updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.ReplaceDeathroot));
             updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.ReplaceDragonHeart));
-            updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.ReplaceRemnant));
 
+            //updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.ReplaceRemnant));
+            updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.IncRemnant));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceGiantCrowSoul));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.ReplaceLordRune));
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.DoubleGetSoul));
@@ -281,7 +283,7 @@ namespace ERParamUtils.UpdateParam
 
             updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.ReplaceBellBearing));
 
-            updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.EnhanceMinicTear));
+            //updateParamOptions.Add(new UpdateParamOptionItem(UpdateParamOptionNames.EnhanceMinicTear));
 
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.RemoveRemembranceRequire));
         }

@@ -241,7 +241,13 @@ namespace ERParamUtils.UpdateParam
                     continue;
 
                 if (updateCommand.HaveOption(UpdateParamOptionNames.ShopVisibilityAll))
+                {
                     ChangeVisibility(row, updateCommand);
+                }
+
+                if (row.Name != null && row.Name.Contains("Enia")) {
+                    ChangeVisibility(row, updateCommand);
+                }
 
                 int equipId = GetEquipId(row);
                 ShopEquipType shopEquipType = (ShopEquipType)GetEquipType(row);

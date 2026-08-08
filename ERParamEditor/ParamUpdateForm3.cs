@@ -157,7 +157,7 @@ namespace ERParamEditor
                unlockGraceNames, UnlockGraceConfig.GetValueList(), "0");
 
             panel.AddCheckBox(UpdateParamOptionNames.UnlockRoundtableHold, "");
-            panel.AddCheckBox(UpdateParamOptionNames.EnableFastTravel, "",true);
+            panel.AddCheckBox(UpdateParamOptionNames.EnableFastTravel, "");
 
 
         }

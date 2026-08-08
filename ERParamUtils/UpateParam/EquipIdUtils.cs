@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ namespace ERParamUtils.UpdateParam
 {
     public class EquipIdUtilsx
     {
-
+        /*
         public static bool IsRune(int itemId)
         {
             if (itemId >= 2900 && itemId <= 2919)
@@ -59,7 +59,7 @@ namespace ERParamUtils.UpdateParam
                 return true;
             return false;
 
-        }
+        } */
     }
 
    

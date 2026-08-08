@@ -46,29 +46,34 @@ namespace ERParamUtils.UpateParam
 
 
         public static string GetValueList() {
-            return "0,1,2,3"; 
+            return "0,1,2,10"; 
         }
 
         public static string GetNameList()
         {
             
-            return "NotChange,Golden Rune [13](10000),Hero's Rune [2](20000),Hero's Rune [4](30000)";
+            return "NotChange,Golden Rune [13](10000),Hero's Rune [4](30000),Rand Hero Rune";
         }
 
         /*
-2912;Golden Rune [13];黄金卢恩【１３】
-2915;Hero's Rune [2];英雄卢恩【２】
-2917;Hero's Rune [4];英雄卢恩【４】
+1-> 2912;Golden Rune [13];黄金卢恩【１３】
+2-> 2917;Hero's Rune [4];英雄卢恩【４】
          */
+        static int RandHeroRune() { 
+
+            int  n = Random.Shared.Next(5);
+
+            return 2914+n;
+        }
         public static int ValueToEquipId(int value)
         {
             switch (value) { 
                 case 1: 
                     return 2912;
                 case 2:
-                    return 2915;
-                case 3:
                     return 2917;
+                case 10:
+                    return RandHeroRune();
             }
             return 0;
         }
@@ -77,10 +82,18 @@ namespace ERParamUtils.UpateParam
             switch (id) {
                 case 2912:
                     return 10000;
+                case 2913:
+                    return 12500;
+                case 2914:
+                    return 15000;
                 case 2915:
                     return 20000;
+                case 2916:
+                    return 25000;
                 case 2917:
                     return 30000;
+                case 2918:
+                    return 35000;
                 case 2919:
                     return 50000;
                 case 2002951:

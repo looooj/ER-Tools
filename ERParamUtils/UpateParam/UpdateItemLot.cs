@@ -567,9 +567,10 @@ namespace ERParamUtils.UpdateParam
                         {
                             updateCommand.AddItem(row, "lotItemId0" + i, eqId);
                         }
-                        if (itemId >= 2002951)
+                        var itemRuneValue = ReplaceGoldenRune.GetRuneValue(itemId);
+
+                        //if (itemId >= 2002951)
                         {
-                            var itemRuneValue = ReplaceGoldenRune.GetRuneValue(itemId);
                             if (itemRuneValue < runeValue)
                             {
                                 updateCommand.AddItem(row, "lotItemId0" + i, eqId);
@@ -687,9 +688,14 @@ namespace ERParamUtils.UpdateParam
 
                 if (SpecEquipConfig.IsGreat(itemId, itemEquipType))
                 {
-                    incLotItemNum = 50;
+                    if (!updateCommand.HaveOption(UpdateParamOptionNames.ShopAddAncient))
+                        incLotItemNum = 20;
                 }
 
+                //8186;Imbued Sword Key;魔石剑钥匙
+                if (itemEquipType == EquipType.Good && itemId == 8186) {
+                    incLotItemNum = 4;
+                }
                 //
                 if (itemEquipType == EquipType.Good &&
                     updateCommand.HaveOption(UpdateParamOptionNames.EnhanceBuddy))
