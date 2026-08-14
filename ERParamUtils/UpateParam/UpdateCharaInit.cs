@@ -80,16 +80,19 @@ namespace ERParamUtils.UpdateParam
             return s;
         }
 
-
         public static void Exec(ParamProject paramProject, UpdateCommand updateCommand)
         {
             var param = paramProject.FindParam(ParamNames.CharaInitParam);
             if (param == null)
                 return;
             removeWeaponRequireDict.Clear();
+            UpdateLogger.Begin(param.Name);
             //bool startFlag = false;
+            int classCount = 0;
             for (int i = 0; i < 200; i++)
             {
+                if (classCount >= ModConfig.GetCharaClassCount())
+                    break;
                 addItemOffset = 0;
                 addSecondaryItemOffset = 0;
                 replaceWeaponDict.Clear();
@@ -104,7 +107,8 @@ namespace ERParamUtils.UpdateParam
                     //}
                     continue;
                 }
-                UpdateLogger.InfoParam("{0} {1}",row.ID,row.Name);
+                classCount++;
+                UpdateLogger.InfoParam("{0},{1},{2}", classCount,row.ID,row.Name);
                 //startFlag = true;
                 if (updateCommand.HaveOption(UpdateParamOptionNames.AddInitCrimsonAmberMedallion))
                 {
@@ -149,6 +153,8 @@ namespace ERParamUtils.UpdateParam
                     updateCommand.GetOption(UpdateParamOptionNames.AddInitWeaponLeft3));
 
                 ReplaceBow(updateCommand, row);
+
+                AddArrow(updateCommand, row);
             }
         }
 
@@ -260,14 +266,29 @@ namespace ERParamUtils.UpdateParam
 
 50000000;Arrow;箭矢
 50010000;Fire Arrow;火箭
+52000000;Bolt;弩箭
+52040000;Burred Bolt;倒刺弩箭
+
+
          */
-
+        static int ID_ARROW = 50000000;
+        static int ID_FIRE_ARROW = 50010000;
+        static int ID_BOLT = 52000000;
+        static int ID_BURRED_BOLT = 52040000;
+           
         static void AddArrow(UpdateCommand updateCommand, SoulsParam.Param.Row row) {
-            updateCommand.AddItem(row, "arrowNum", 99);
-            updateCommand.AddItem(row, "equip_Arrow", 50000000);
 
+            updateCommand.AddItem(row, "equip_Arrow", ID_ARROW);
+            updateCommand.AddItem(row, "equip_SubArrow", ID_FIRE_ARROW);
+            updateCommand.AddItem(row, "equip_Bolt", ID_BOLT);
+            updateCommand.AddItem(row, "equip_SubBolt", ID_BURRED_BOLT);
+
+            updateCommand.AddItem(row, "arrowNum", 99);            
             updateCommand.AddItem(row, "subArrowNum", 99);
-            updateCommand.AddItem(row, "equip_SubArrow", 50010000);
+            updateCommand.AddItem(row, "boltNum", 99);
+            updateCommand.AddItem(row, "subBoltNum", 99);
+
+            //
         }
         static void ReplaceBow(UpdateCommand updateCommand, SoulsParam.Param.Row row) {
             int newBowId = updateCommand.GetOption(UpdateParamOptionNames.ReplaceInitBow);
@@ -281,7 +302,7 @@ namespace ERParamUtils.UpdateParam
                     if (WeaponConfig.IsBow(v)) 
                     {
                         ReplaceWep(updateCommand, row, key, newBowId);
-                        AddArrow(updateCommand, row);
+                        //AddArrow(updateCommand, row);
                         return;
                     }
                 }
