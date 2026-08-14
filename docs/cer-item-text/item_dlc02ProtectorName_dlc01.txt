@@ -120,6 +120,8 @@
 5250300;Horned Warrior Greaves;角战士腿甲
 5252000;Divine Beast Helm;神兽头盔
 5252100;Divine Beast Warrior Armor;神兽战士铠甲
+5252200;Divine Beast Gauntlets;神兽战士臂甲
+5252300;Divine Beast Greaves;神兽战士腿甲
 5253000;Divine Bird Helm;神鸟头盔
 5253100;Divine Bird Warrior Armor;神鸟战士铠甲
 5253200;Divine Bird Warrior Gauntlets;神鸟战士臂甲
@@ -143,3 +145,8 @@
 5310000;Crucible Hammer-Helm;熔炉槌形盔
 5320000;Greatjar;大壶头罩
 5330000;Imp Head (Lion);小恶魔头罩（狮子）
+5340000;Midra's Gaze;米德拉的凝视
+5360000;Quicksilver Circlet;水银头环
+5360100;Quicksilver Scale Robe;水银鳞袍
+5360200;Quicksilver Cuffs;水银护腕
+5360300;Quicksilver Greaves;水银腿甲

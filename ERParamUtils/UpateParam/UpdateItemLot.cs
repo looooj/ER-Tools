@@ -494,6 +494,10 @@ namespace ERParamUtils.UpdateParam
 
         private static void SetLotReplaceRow(SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
+            //for mod cer
+            if (row.Name != null && row.Name.Contains("used")) {
+                return;
+            }
 
             for (int i = 1; i < 8; i++)
             {

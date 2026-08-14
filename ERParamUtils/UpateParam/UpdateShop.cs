@@ -152,16 +152,18 @@ namespace ERParamUtils.UpdateParam
             }
 
         }
-        //101800[Twin Maiden Husks] White Cipher Ring
-        //10168;Somber Ancient Dragon Smithing Stone;古龙岩失色锻造石
-        //10140;Ancient Dragon Smithing Stone;古龙岩锻造石
-        //10909;Great Grave Glovewort;大朵墓地铃兰
-        //10919;Great Ghost Glovewort;大朵灵依墓地铃兰
 
         static bool NotUsedEquip(int eqId, EquipType eqType) {
 
-            if (SpecEquipConfig.IsBoluses(eqId, eqType)) {
-                return true;
+            if (eqType == EquipType.Good) {
+
+                if (eqId == 1830 || eqId == 104 || eqId == 105)
+                    return true;
+            }
+
+            if (eqType == EquipType.Weapon) {
+                if (eqId == 14020000)
+                    return true;
             }
 
             return false;
@@ -170,7 +172,7 @@ namespace ERParamUtils.UpdateParam
         private static void ReplaceAncientStone(ParamProject paramProject, UpdateCommand updateCommand)
         {
 
-            int[] idList = { 10168,10140,10909,10919};
+            int[] idList = { 10168, 10140 };//,10909,10919};
             //UpdateLogger.Begin(ParamNames.ShopLineupParam);
 
             UpdateLogger.InfoParam("ReplaceAncientStone");

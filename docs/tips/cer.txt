@@ -1,0 +1,3 @@
+
+2049430500;[Fort Reprimand] Repeating Crossbow (Used to be Large Smithing Stone x8);
+0-lotItemId01;43500000;Repeating Crossbow 

@@ -1,0 +1,4150 @@
+﻿110000;Unarmed;徒手
+1000000;Dagger;匕首
+1000100;Heavy Dagger;厚重匕首
+1000200;Keen Dagger;锋利匕首
+1000300;Quality Dagger;优质匕首
+1000400;Glint Dagger;辉石匕首
+1000500;Dragonkin Dagger;龙人匕首
+1000600;Gravity Dagger;重力匕首
+1000700;Flame Dagger;火焰匕首
+1000800;Golden Dagger;黄金匕首
+1000900;Draconic Dagger;龙装匕首
+1001000;Bestial Dagger;野兽匕首
+1001100;Night Dagger;黑夜匕首
+1001200;Lava Dagger;熔岩匕首
+1001300;Frenzy Dagger;癫狂匕首
+1001400;Death Dagger;死亡匕首
+1001500;Godslayer Dagger;狩猎神祇匕首
+1001600;Frost Dagger;冰霜匕首
+1001700;Aberrant Dagger;异端匕首
+1001800;Bloodflame Dagger;血焰匕首
+1001900;Rotten Dagger;腐败匕首
+1002000;Storm Dagger;风暴匕首
+1002100;Mystic Dagger;密契匕首
+1010000;Black Knife;黑刀
+1020000;Parrying Dagger;格挡匕首
+1020100;Heavy Parrying Dagger;厚重格挡匕首
+1020200;Keen Parrying Dagger;锋利格挡匕首
+1020300;Quality Parrying Dagger;优质格挡匕首
+1020400;Glint Parrying Dagger;辉石格挡匕首
+1020500;Dragonkin Parrying Dagger;龙人格挡匕首
+1020600;Gravity Parrying Dagger;重力格挡匕首
+1020700;Flame Parrying Dagger;火焰格挡匕首
+1020800;Golden Parrying Dagger;黄金格挡匕首
+1020900;Draconic Parrying Dagger;龙装格挡匕首
+1021000;Bestial Parrying Dagger;野兽格挡匕首
+1021100;Night Parrying Dagger;黑夜格挡匕首
+1021200;Lava Parrying Dagger;熔岩格挡匕首
+1021300;Frenzy Parrying Dagger;癫狂格挡匕首
+1021400;Death Parrying Dagger;死亡格挡匕首
+1021500;Godslayer Parrying Dagger;狩猎神祇格挡匕首
+1021600;Frost Parrying Dagger;冰霜格挡匕首
+1021700;Aberrant Parrying Dagger;异端格挡匕首
+1021800;Bloodflame Parrying Dagger;血焰格挡匕首
+1021900;Rotten Parrying Dagger;腐败格挡匕首
+1022000;Storm Parrying Dagger;风暴格挡匕首
+1022100;Mystic Parrying Dagger;密契格挡匕首
+1030000;Miséricorde;慈悲短剑
+1030100;Heavy Miséricorde;厚重慈悲短剑
+1030200;Keen Miséricorde;锋利慈悲短剑
+1030300;Quality Miséricorde;优质慈悲短剑
+1030400;Glint Miséricorde;辉石慈悲短剑
+1030500;Dragonkin Miséricorde;龙人慈悲短剑
+1030600;Gravity Miséricorde;重力慈悲短剑
+1030700;Flame Miséricorde;火焰慈悲短剑
+1030800;Golden Miséricorde;黄金慈悲短剑
+1030900;Draconic Miséricorde;龙装慈悲短剑
+1031000;Bestial Miséricorde;野兽慈悲短剑
+1031100;Night Miséricorde;黑夜慈悲短剑
+1031200;Lava Miséricorde;熔岩慈悲短剑
+1031300;Frenzy Miséricorde;癫狂慈悲短剑
+1031400;Death Miséricorde;死亡慈悲短剑
+1031500;Godslayer Miséricorde;狩猎神祇慈悲短剑
+1031600;Frost Miséricorde;冰霜慈悲短剑
+1031700;Aberrant Miséricorde;异端慈悲短剑
+1031800;Bloodflame Miséricorde;血焰慈悲短剑
+1031900;Rotten Miséricorde;腐败慈悲短剑
+1032000;Storm Miséricorde;风暴慈悲短剑
+1032100;Mystic Miséricorde;密契慈悲短剑
+1040000;Reduvia;逆刺
+1050000;Underworld Dagger;地底小刀
+1060000;Celebrant's Sickle;庆典小镰刀
+1060100;Celebrant's Heavy Sickle;厚重庆典小镰刀
+1060200;Celebrant's Keen Sickle;锋利庆典小镰刀
+1060300;Celebrant's Quality Sickle;优质庆典小镰刀
+1060400;Celebrant's Glint Sickle;辉石庆典小镰刀
+1060500;Celebrant's Dragonkin Sickle;龙人庆典小镰刀
+1060600;Celebrant's Gravity Sickle;重力庆典小镰刀
+1060700;Celebrant's Flame Sickle;火焰庆典小镰刀
+1060800;Celebrant's Golden Sickle;黄金庆典小镰刀
+1060900;Celebrant's Draconic Sickle;龙装庆典小镰刀
+1061000;Celebrant's Bestial Sickle;野兽庆典小镰刀
+1061100;Celebrant's Night Sickle;黑夜庆典小镰刀
+1061200;Celebrant's Lava Sickle;熔岩庆典小镰刀
+1061300;Celebrant's Frenzy Sickle;癫狂庆典小镰刀
+1061400;Celebrant's Death Sickle;死亡庆典小镰刀
+1061500;Celebrant's Godslayer Sickle;狩猎神祇庆典小镰刀
+1061600;Celebrant's Frost Sickle;冰霜庆典小镰刀
+1061700;Celebrant's Aberrant Sickle;异端庆典小镰刀
+1061800;Celebrant's Bloodflame Sickle;血焰庆典小镰刀
+1061900;Celebrant's Rotten Sickle;腐败庆典小镰刀
+1062000;Celebrant's Storm Sickle;风暴庆典小镰刀
+1062100;Celebrant's Mystic Sickle;密契庆典小镰刀
+1070000;Glintstone Kris;辉石克力士
+1080000;Scorpion's Stinger;蝎尾针
+1090000;Great Knife;单刃小刀
+1090100;Heavy Great Knife;厚重单刃小刀
+1090200;Keen Great Knife;锋利单刃小刀
+1090300;Quality Great Knife;优质单刃小刀
+1090400;Glint Great Knife;辉石单刃小刀
+1090500;Dragonkin Great Knife;龙人单刃小刀
+1090600;Gravity Great Knife;重力单刃小刀
+1090700;Flame Great Knife;火焰单刃小刀
+1090800;Golden Great Knife;黄金单刃小刀
+1090900;Draconic Great Knife;龙装单刃小刀
+1091000;Bestial Great Knife;野兽单刃小刀
+1091100;Night Great Knife;黑夜单刃小刀
+1091200;Lava Great Knife;熔岩单刃小刀
+1091300;Frenzy Great Knife;癫狂单刃小刀
+1091400;Death Great Knife;死亡单刃小刀
+1091500;Godslayer Great Knife;狩猎神祇单刃小刀
+1091600;Frost Great Knife;冰霜单刃小刀
+1091700;Aberrant Great Knife;异端单刃小刀
+1091800;Bloodflame Great Knife;血焰单刃小刀
+1091900;Rotten Great Knife;腐败单刃小刀
+1092000;Storm Great Knife;风暴单刃小刀
+1092100;Mystic Great Knife;密契单刃小刀
+1100000;Wakizashi;胁差
+1100100;Heavy Wakizashi;厚重胁差
+1100200;Keen Wakizashi;锋利胁差
+1100300;Quality Wakizashi;优质胁差
+1100400;Glint Wakizashi;辉石胁差
+1100500;Dragonkin Wakizashi;龙人胁差
+1100600;Gravity Wakizashi;重力胁差
+1100700;Flame Wakizashi;火焰胁差
+1100800;Golden Wakizashi;黄金胁差
+1100900;Draconic Wakizashi;龙装胁差
+1101000;Bestial Wakizashi;野兽胁差
+1101100;Night Wakizashi;黑夜胁差
+1101200;Lava Wakizashi;熔岩胁差
+1101300;Frenzy Wakizashi;癫狂胁差
+1101400;Death Wakizashi;死亡胁差
+1101500;Godslayer Wakizashi;狩猎神祇胁差
+1101600;Frost Wakizashi;冰霜胁差
+1101700;Aberrant Wakizashi;异端胁差
+1101800;Bloodflame Wakizashi;血焰胁差
+1101900;Rotten Wakizashi;腐败胁差
+1102000;Storm Wakizashi;风暴胁差
+1102100;Mystic Wakizashi;密契胁差
+1110000;Cinquedea;五指剑
+1120000;Surgeon's Catling;医师手术刀
+1130000;Ivory Sickle;象牙小镰刀
+1140000;Bloodstained Dagger;染血短刀
+1140100;Heavy Bloodstained Dagger;厚重染血短刀
+1140200;Keen Bloodstained Dagger;锋利染血短刀
+1140300;Quality Bloodstained Dagger;优质染血短刀
+1140400;Glint Bloodstained Dagger;辉石染血短刀
+1140500;Dragonkin Bloodstained Dagger;龙人染血短刀
+1140600;Gravity Bloodstained Dagger;重力染血短刀
+1140700;Flame Bloodstained Dagger;火焰染血短刀
+1140800;Golden Bloodstained Dagger;黄金染血短刀
+1140900;Draconic Bloodstained Dagger;龙装染血短刀
+1141000;Bestial Bloodstained Dagger;野兽染血短刀
+1141100;Night Bloodstained Dagger;黑夜染血短刀
+1141200;Lava Bloodstained Dagger;熔岩染血短刀
+1141300;Frenzy Bloodstained Dagger;癫狂染血短刀
+1141400;Death Bloodstained Dagger;死亡染血短刀
+1141500;Godslayer Bloodstained Dagger;狩猎神祇染血短刀
+1141600;Frost Bloodstained Dagger;冰霜染血短刀
+1141700;Aberrant Bloodstained Dagger;异端染血短刀
+1141800;Bloodflame Bloodstained Dagger;血焰染血短刀
+1141900;Rotten Bloodstained Dagger;腐败染血短刀
+1142000;Storm Bloodstained Dagger;风暴染血短刀
+1142100;Mystic Bloodstained Dagger;密契染血短刀
+1150000;Erdsteel Dagger;黄铜短刀
+1150100;Heavy Erdsteel Dagger;厚重黄铜短刀
+1150200;Keen Erdsteel Dagger;锋利黄铜短刀
+1150300;Quality Erdsteel Dagger;优质黄铜短刀
+1150400;Glint Erdsteel Dagger;辉石黄铜短刀
+1150500;Dragonkin Erdsteel Dagger;龙人黄铜短刀
+1150600;Gravity Erdsteel Dagger;重力黄铜短刀
+1150700;Flame Erdsteel Dagger;火焰黄铜短刀
+1150800;Golden Erdsteel Dagger;黄金黄铜短刀
+1150900;Draconic Erdsteel Dagger;龙装黄铜短刀
+1151000;Bestial Erdsteel Dagger;野兽黄铜短刀
+1151100;Night Erdsteel Dagger;黑夜黄铜短刀
+1151200;Lava Erdsteel Dagger;熔岩黄铜短刀
+1160000;Blade of Calling;使命短刀
+1170000;Midnight Dagger;午夜短刀
+1180000;Deathrite Dagger;死亡仪式匕首
+1200000;Blades of the Prince;王子之刃
+1205000;Blades of the Prince;王子之刃
+1300000;Stormcaller's Dirk;风暴呼召者匕首
+1400000;Quicksilver Fragment;水银碎片
+2000000;Longsword;长剑
+2000100;Heavy Longsword;厚重长剑
+2000200;Keen Longsword;锋利长剑
+2000300;Quality Longsword;优质长剑
+2000400;Glint Longsword;辉石长剑
+2000500;Dragonkin Longsword;龙人长剑
+2000600;Gravity Longsword;重力长剑
+2000700;Flame Longsword;火焰长剑
+2000800;Golden Longsword;黄金长剑
+2000900;Draconic Longsword;龙装长剑
+2001000;Bestial Longsword;野兽长剑
+2001100;Night Longsword;黑夜长剑
+2001200;Lava Longsword;熔岩长剑
+2001300;Frenzy Longsword;癫狂长剑
+2001400;Death Longsword;死亡长剑
+2001500;Godslayer Longsword;狩猎神祇长剑
+2001600;Frost Longsword;冰霜长剑
+2001700;Aberrant Longsword;异端长剑
+2001800;Bloodflame Longsword;血焰长剑
+2001900;Rotten Longsword;腐败长剑
+2002000;Storm Longsword;风暴长剑
+2002100;Mystic Longsword;密契长剑
+2010000;Short Sword;短剑
+2010100;Heavy Short Sword;厚重短剑
+2010200;Keen Short Sword;锋利短剑
+2010300;Quality Short Sword;优质短剑
+2010400;Glint Short Sword;辉石短剑
+2010500;Dragonkin Short Sword;龙人短剑
+2010600;Gravity Short Sword;重力短剑
+2010700;Flame Short Sword;火焰短剑
+2010800;Golden Short Sword;黄金短剑
+2010900;Draconic Short Sword;龙装短剑
+2011000;Bestial Short Sword;野兽短剑
+2011100;Night Short Sword;黑夜短剑
+2011200;Lava Short Sword;熔岩短剑
+2011300;Frenzy Short Sword;癫狂短剑
+2011400;Death Short Sword;死亡短剑
+2011500;Godslayer Short Sword;狩猎神祇短剑
+2011600;Frost Short Sword;冰霜短剑
+2011700;Aberrant Short Sword;异端短剑
+2011800;Bloodflame Short Sword;血焰短剑
+2011900;Rotten Short Sword;腐败短剑
+2012000;Storm Short Sword;风暴短剑
+2012100;Mystic Short Sword;密契短剑
+2020000;Broadsword;阔剑
+2020100;Heavy Broadsword;厚重阔剑
+2020200;Keen Broadsword;锋利阔剑
+2020300;Quality Broadsword;优质阔剑
+2020400;Glint Broadsword;辉石阔剑
+2020500;Dragonkin Broadsword;龙人阔剑
+2020600;Gravity Broadsword;重力阔剑
+2020700;Flame Broadsword;火焰阔剑
+2020800;Golden Broadsword;黄金阔剑
+2020900;Draconic Broadsword;龙装阔剑
+2021000;Bestial Broadsword;野兽阔剑
+2021100;Night Broadsword;黑夜阔剑
+2021200;Lava Broadsword;熔岩阔剑
+2021300;Frenzy Broadsword;癫狂阔剑
+2021400;Death Broadsword;死亡阔剑
+2021500;Godslayer Broadsword;狩猎神祇阔剑
+2021600;Frost Broadsword;冰霜阔剑
+2021700;Aberrant Broadsword;异端阔剑
+2021800;Bloodflame Broadsword;血焰阔剑
+2021900;Rotten Broadsword;腐败阔剑
+2022000;Storm Broadsword;风暴阔剑
+2022100;Mystic Broadsword;密契阔剑
+2030000;Yura's Kanabo;尤拉的金棒
+2040000;Lordsworn's Straight Sword;君王军直剑
+2040100;Lordsworn's Heavy Straight Sword;厚重君王军直剑
+2040200;Lordsworn's Keen Straight Sword;锋利君王军直剑
+2040300;Lordsworn's Quality Straight Sword;优质君王军直剑
+2040400;Lordsworn's Glint Straight Sword;辉石君王军直剑
+2040500;Lordsworn's Dragonkin Straight Sword;龙人君王军直剑
+2040600;Lordsworn's Gravity Straight Sword;重力君王军直剑
+2040700;Lordsworn's Flame Straight Sword;火焰君王军直剑
+2040800;Lordsworn's Golden Straight Sword;黄金君王军直剑
+2040900;Lordsworn's Draconic Straight Sword;龙装君王军直剑
+2041000;Lordsworn's Bestial Straight Sword;野兽君王军直剑
+2041100;Lordsworn's Night Straight Sword;黑夜君王军直剑
+2041200;Lordsworn's Lava Straight Sword;熔岩君王军直剑
+2041300;Lordsworn's Frenzy Straight Sword;癫狂君王军直剑
+2041400;Lordsworn's Death Straight Sword;死亡君王军直剑
+2041500;Lordsworn's Godslayer Straight Sword;狩猎神祇君王军直剑
+2041600;Lordsworn's Frost Straight Sword;冰霜君王军直剑
+2041700;Lordsworn's Aberrant Straight Sword;异端君王军直剑
+2041800;Lordsworn's Bloodflame Straight Sword;血焰君王军直剑
+2041900;Lordsworn's Rotten Straight Sword;腐败君王军直剑
+2042000;Lordsworn's Storm Straight Sword;风暴君王军直剑
+2042100;Lordsworn's Mystic Straight Sword;密契君王军直剑
+2050000;Weathered Straight Sword;老旧直剑
+2050100;Weathered Heavy Straight Sword;厚重老旧直剑
+2050200;Weathered Keen Straight Sword;锋利老旧直剑
+2050300;Weathered Quality Straight Sword;优质老旧直剑
+2050400;Weathered Glint Straight Sword;辉石老旧直剑
+2050500;Weathered Dragonkin Straight Sword;龙人老旧直剑
+2050600;Weathered Gravity Straight Sword;重力老旧直剑
+2050700;Weathered Flame Straight Sword;火焰老旧直剑
+2050800;Weathered Golden Straight Sword;黄金老旧直剑
+2050900;Weathered Draconic Straight Sword;龙装老旧直剑
+2051000;Weathered Bestial Straight Sword;野兽老旧直剑
+2051100;Weathered Night Straight Sword;黑夜老旧直剑
+2051200;Weathered Lava Straight Sword;熔岩老旧直剑
+2051300;Weathered Frenzy Straight Sword;癫狂老旧直剑
+2051400;Weathered Death Straight Sword;死亡老旧直剑
+2051500;Weathered Godslayer Straight Sword;狩猎神祇老旧直剑
+2051600;Weathered Frost Straight Sword;冰霜老旧直剑
+2051700;Weathered Aberrant Straight Sword;异端老旧直剑
+2051800;Weathered Bloodflame Straight Sword;血焰老旧直剑
+2051900;Weathered Rotten Straight Sword;腐败老旧直剑
+2052000;Weathered Storm Straight Sword;风暴老旧直剑
+2052100;Weathered Mystic Straight Sword;密契老旧直剑
+2060000;Ornamental Straight Sword;仪式直剑
+2070000;Draconic Epitaph;龙之墓碑
+2080000;Nox Flowing Sword;诺克斯流体剑
+2090000;Inseparable Sword;紧密孪生剑
+2090100;Heavy Inseparable Sword;厚重紧密孪生剑
+2090200;Keen Inseparable Sword;锋利紧密孪生剑
+2090300;Quality Inseparable Sword;优质紧密孪生剑
+2090400;Glint Inseparable Sword;辉石紧密孪生剑
+2090500;Dragonkin Inseparable Sword;龙人紧密孪生剑
+2090600;Gravity Inseparable Sword;重力紧密孪生剑
+2090700;Flame Inseparable Sword;火焰紧密孪生剑
+2090800;Golden Inseparable Sword;黄金紧密孪生剑
+2090900;Draconic Inseparable Sword;龙装紧密孪生剑
+2091000;Bestial Inseparable Sword;野兽紧密孪生剑
+2091100;Night Inseparable Sword;黑夜紧密孪生剑
+2091200;Lava Inseparable Sword;熔岩紧密孪生剑
+2110000;Coded Sword;秘文剑
+2120000;Blade of Valor;英勇之刃
+2140000;Sword of Night and Flame;夜与火之剑
+2150000;Molten Sword;熔火之剑
+2180000;Carian Knight's Sword;卡利亚骑士剑
+2190000;Sword of St. Trina;托莉娜剑
+2200000;Fell Flame Sword;恶焰之剑
+2210000;Cane Sword;手杖剑
+2210100;Heavy Cane Sword;厚重手杖剑
+2210200;Keen Cane Sword;锋利手杖剑
+2210300;Quality Cane Sword;优质手杖剑
+2210400;Glint Cane Sword;辉石手杖剑
+2210500;Dragonkin Cane Sword;龙人手杖剑
+2210600;Gravity Cane Sword;重力手杖剑
+2210700;Flame Cane Sword;火焰手杖剑
+2210800;Golden Cane Sword;黄金手杖剑
+2210900;Draconic Cane Sword;龙装手杖剑
+2211000;Bestial Cane Sword;野兽手杖剑
+2211100;Night Cane Sword;黑夜手杖剑
+2211200;Lava Cane Sword;熔岩手杖剑
+2211300;Frenzy Cane Sword;癫狂手杖剑
+2211400;Death Cane Sword;死亡手杖剑
+2211500;Godslayer Cane Sword;狩猎神祇手杖剑
+2211600;Frost Cane Sword;冰霜手杖剑
+2211700;Aberrant Cane Sword;异端手杖剑
+2211800;Bloodflame Cane Sword;血焰手杖剑
+2211900;Rotten Cane Sword;腐败手杖剑
+2212000;Storm Cane Sword;风暴手杖剑
+2212100;Mystic Cane Sword;密契手杖剑
+2220000;Regalia of Eochaid;欧赫宝剑
+2230000;Noble's Slender Sword;权贵细身剑
+2230100;Noble's Heavy Slender Sword;厚重权贵细身剑
+2230200;Noble's Keen Slender Sword;锋利权贵细身剑
+2230300;Noble's Quality Slender Sword;优质权贵细身剑
+2230400;Noble's Glint Slender Sword;辉石权贵细身剑
+2230500;Noble's Dragonkin Slender Sword;龙人权贵细身剑
+2230600;Noble's Gravity Slender Sword;重力权贵细身剑
+2230700;Noble's Flame Slender Sword;火焰权贵细身剑
+2230800;Noble's Golden Slender Sword;黄金权贵细身剑
+2230900;Noble's Draconic Slender Sword;龙装权贵细身剑
+2231000;Noble's Bestial Slender Sword;野兽权贵细身剑
+2231100;Noble's Night Slender Sword;黑夜权贵细身剑
+2231200;Noble's Lava Slender Sword;熔岩权贵细身剑
+2231300;Noble's Frenzy Slender Sword;癫狂权贵细身剑
+2231400;Noble's Death Slender Sword;死亡权贵细身剑
+2231500;Noble's Godslayer Slender Sword;狩猎神祇权贵细身剑
+2231600;Noble's Frost Slender Sword;冰霜权贵细身剑
+2231700;Noble's Aberrant Slender Sword;异端权贵细身剑
+2231800;Noble's Bloodflame Slender Sword;血焰权贵细身剑
+2231900;Noble's Rotten Slender Sword;腐败权贵细身剑
+2232000;Noble's Storm Slender Sword;风暴权贵细身剑
+2232100;Noble's Mystic Slender Sword;密契权贵细身剑
+2240000;Warhawk's Talon;战鹰爪形剑
+2240100;Warhawk's Heavy Talon;厚重战鹰爪形剑
+2240200;Warhawk's Keen Talon;锋利战鹰爪形剑
+2240300;Warhawk's Quality Talon;优质战鹰爪形剑
+2240400;Warhawk's Glint Talon;辉石战鹰爪形剑
+2240500;Warhawk's Dragonkin Talon;龙人战鹰爪形剑
+2240600;Warhawk's Gravity Talon;重力战鹰爪形剑
+2240700;Warhawk's Flame Talon;火焰战鹰爪形剑
+2240800;Warhawk's Golden Talon;黄金战鹰爪形剑
+2240900;Warhawk's Draconic Talon;龙装战鹰爪形剑
+2241000;Warhawk's Bestial Talon;野兽战鹰爪形剑
+2241100;Warhawk's Night Talon;黑夜战鹰爪形剑
+2241200;Warhawk's Lava Talon;熔岩战鹰爪形剑
+2241300;Warhawk's Frenzy Talon;癫狂战鹰爪形剑
+2241400;Warhawk's Death Talon;死亡战鹰爪形剑
+2241500;Warhawk's Godslayer Talon;狩猎神祇战鹰爪形剑
+2241600;Warhawk's Frost Talon;冰霜战鹰爪形剑
+2241700;Warhawk's Aberrant Talon;异端战鹰爪形剑
+2241800;Warhawk's Bloodflame Talon;血焰战鹰爪形剑
+2241900;Warhawk's Rotten Talon;腐败战鹰爪形剑
+2242000;Warhawk's Storm Talon;风暴战鹰爪形剑
+2242100;Warhawk's Mystic Talon;密契战鹰爪形剑
+2250000;Dragonkin Seeker Sword;龙之求道剑
+2260000;Rotten Crystal Sword;腐败结晶剑
+2270000;Maddening Brand;癫狂烙印
+3000000;Bastard Sword;混种大剑
+3000100;Heavy Bastard Sword;厚重混种大剑
+3000200;Keen Bastard Sword;锋利混种大剑
+3000300;Quality Bastard Sword;优质混种大剑
+3000400;Glint Bastard Sword;辉石混种大剑
+3000500;Dragonkin Bastard Sword;龙人混种大剑
+3000600;Gravity Bastard Sword;重力混种大剑
+3000700;Flame Bastard Sword;火焰混种大剑
+3000800;Golden Bastard Sword;黄金混种大剑
+3000900;Draconic Bastard Sword;龙装混种大剑
+3001000;Bestial Bastard Sword;野兽混种大剑
+3001100;Night Bastard Sword;黑夜混种大剑
+3001200;Lava Bastard Sword;熔岩混种大剑
+3001300;Frenzy Bastard Sword;癫狂混种大剑
+3001400;Death Bastard Sword;死亡混种大剑
+3001500;Godslayer Bastard Sword;狩猎神祇混种大剑
+3001600;Frost Bastard Sword;冰霜混种大剑
+3001700;Aberrant Bastard Sword;异端混种大剑
+3001800;Bloodflame Bastard Sword;血焰混种大剑
+3001900;Rotten Bastard Sword;腐败混种大剑
+3002000;Storm Bastard Sword;风暴混种大剑
+3002100;Mystic Bastard Sword;密契混种大剑
+3010000;Forked Greatsword;分岔大剑
+3010100;Heavy Forked Greatsword;厚重分岔大剑
+3010200;Keen Forked Greatsword;锋利分岔大剑
+3010300;Quality Forked Greatsword;优质分岔大剑
+3010400;Glint Forked Greatsword;辉石分岔大剑
+3010500;Dragonkin Forked Greatsword;龙人分岔大剑
+3010600;Gravity Forked Greatsword;重力分岔大剑
+3010700;Flame Forked Greatsword;火焰分岔大剑
+3010800;Golden Forked Greatsword;黄金分岔大剑
+3010900;Draconic Forked Greatsword;龙装分岔大剑
+3011000;Bestial Forked Greatsword;野兽分岔大剑
+3011100;Night Forked Greatsword;黑夜分岔大剑
+3011200;Lava Forked Greatsword;熔岩分岔大剑
+3011300;Frenzy Forked Greatsword;癫狂分岔大剑
+3011400;Death Forked Greatsword;死亡分岔大剑
+3011500;Godslayer Forked Greatsword;狩猎神祇分岔大剑
+3011600;Frost Forked Greatsword;冰霜分岔大剑
+3011700;Aberrant Forked Greatsword;异端分岔大剑
+3011800;Bloodflame Forked Greatsword;血焰分岔大剑
+3011900;Rotten Forked Greatsword;腐败分岔大剑
+3012000;Storm Forked Greatsword;风暴分岔大剑
+3012100;Mystic Forked Greatsword;密契分岔大剑
+3020000;Iron Greatsword;铁制大剑
+3020100;Heavy Iron Greatsword;厚重铁制大剑
+3020200;Keen Iron Greatsword;锋利铁制大剑
+3020300;Quality Iron Greatsword;优质铁制大剑
+3020400;Glint Iron Greatsword;辉石铁制大剑
+3020500;Dragonkin Iron Greatsword;龙人铁制大剑
+3020600;Gravity Iron Greatsword;重力铁制大剑
+3020700;Flame Iron Greatsword;火焰铁制大剑
+3020800;Golden Iron Greatsword;黄金铁制大剑
+3020900;Draconic Iron Greatsword;龙装铁制大剑
+3021000;Bestial Iron Greatsword;野兽铁制大剑
+3021100;Night Iron Greatsword;黑夜铁制大剑
+3021200;Lava Iron Greatsword;熔岩铁制大剑
+3021300;Frenzy Iron Greatsword;癫狂铁制大剑
+3021400;Death Iron Greatsword;死亡铁制大剑
+3021500;Godslayer Iron Greatsword;狩猎神祇铁制大剑
+3021600;Frost Iron Greatsword;冰霜铁制大剑
+3021700;Aberrant Iron Greatsword;异端铁制大剑
+3021800;Bloodflame Iron Greatsword;血焰铁制大剑
+3021900;Rotten Iron Greatsword;腐败铁制大剑
+3022000;Storm Iron Greatsword;风暴铁制大剑
+3022100;Mystic Iron Greatsword;密契铁制大剑
+3030000;Lordsworn's Greatsword;君王军大剑
+3030100;Lordsworn's Heavy Greatsword;厚重君王军大剑
+3030200;Lordsworn's Keen Greatsword;锋利君王军大剑
+3030300;Lordsworn's Quality Greatsword;优质君王军大剑
+3030400;Lordsworn's Glint Greatsword;辉石君王军大剑
+3030500;Lordsworn's Dragonkin Greatsword;龙人君王军大剑
+3030600;Lordsworn's Gravity Greatsword;重力君王军大剑
+3030700;Lordsworn's Flame Greatsword;火焰君王军大剑
+3030800;Lordsworn's Golden Greatsword;黄金君王军大剑
+3030900;Lordsworn's Draconic Greatsword;龙装君王军大剑
+3031000;Lordsworn's Bestial Greatsword;野兽君王军大剑
+3031100;Lordsworn's Night Greatsword;黑夜君王军大剑
+3031200;Lordsworn's Lava Greatsword;熔岩君王军大剑
+3031300;Lordsworn's Frenzy Greatsword;癫狂君王军大剑
+3031400;Lordsworn's Death Greatsword;死亡君王军大剑
+3031500;Lordsworn's Godslayer Greatsword;狩猎神祇君王军大剑
+3031600;Lordsworn's Frost Greatsword;冰霜君王军大剑
+3031700;Lordsworn's Aberrant Greatsword;异端君王军大剑
+3031800;Lordsworn's Bloodflame Greatsword;血焰君王军大剑
+3031900;Lordsworn's Rotten Greatsword;腐败君王军大剑
+3032000;Lordsworn's Storm Greatsword;风暴君王军大剑
+3032100;Lordsworn's Mystic Greatsword;密契君王军大剑
+3040000;Knight's Greatsword;骑士大剑
+3040100;Knight's Heavy Greatsword;厚重骑士大剑
+3040200;Knight's Keen Greatsword;锋利骑士大剑
+3040300;Knight's Quality Greatsword;优质骑士大剑
+3040400;Knight's Glint Greatsword;辉石骑士大剑
+3040500;Knight's Dragonkin Greatsword;龙人骑士大剑
+3040600;Knight's Gravity Greatsword;重力骑士大剑
+3040700;Knight's Flame Greatsword;火焰骑士大剑
+3040800;Knight's Golden Greatsword;黄金骑士大剑
+3040900;Knight's Draconic Greatsword;龙装骑士大剑
+3041000;Knight's Bestial Greatsword;野兽骑士大剑
+3041100;Knight's Night Greatsword;黑夜骑士大剑
+3041200;Knight's Lava Greatsword;熔岩骑士大剑
+3041300;Knight's Frenzy Greatsword;癫狂骑士大剑
+3041400;Knight's Death Greatsword;死亡骑士大剑
+3041500;Knight's Godslayer Greatsword;狩猎神祇骑士大剑
+3041600;Knight's Frost Greatsword;冰霜骑士大剑
+3041700;Knight's Aberrant Greatsword;异端骑士大剑
+3041800;Knight's Bloodflame Greatsword;血焰骑士大剑
+3041900;Knight's Rotten Greatsword;腐败骑士大剑
+3042000;Knight's Storm Greatsword;风暴骑士大剑
+3042100;Knight's Mystic Greatsword;密契骑士大剑
+3050000;Flamberge;焰形大剑
+3050100;Heavy Flamberge;厚重焰形大剑
+3050200;Keen Flamberge;锋利焰形大剑
+3050300;Quality Flamberge;优质焰形大剑
+3050400;Glint Flamberge;辉石焰形大剑
+3050500;Dragonkin Flamberge;龙人焰形大剑
+3050600;Gravity Flamberge;重力焰形大剑
+3050700;Flame Flamberge;火焰焰形大剑
+3050800;Golden Flamberge;黄金焰形大剑
+3050900;Draconic Flamberge;龙装焰形大剑
+3051000;Bestial Flamberge;野兽焰形大剑
+3051100;Night Flamberge;黑夜焰形大剑
+3051200;Lava Flamberge;熔岩焰形大剑
+3051300;Frenzy Flamberge;癫狂焰形大剑
+3051400;Death Flamberge;死亡焰形大剑
+3051500;Godslayer Flamberge;狩猎神祇焰形大剑
+3051600;Frost Flamberge;冰霜焰形大剑
+3051700;Aberrant Flamberge;异端焰形大剑
+3051800;Bloodflame Flamberge;血焰焰形大剑
+3051900;Rotten Flamberge;腐败焰形大剑
+3052000;Storm Flamberge;风暴焰形大剑
+3052100;Mystic Flamberge;密契焰形大剑
+3060000;Ordovis's Greatsword;奥陶琵斯大剑
+3070000;Alabaster Lord's Greatsword;白王大剑
+3080000;Banished Knight's Greatsword;失乡骑士大剑
+3080100;Banished Knight's Heavy Greatsword;厚重失乡骑士大剑
+3080200;Banished Knight's Keen Greatsword;锋利失乡骑士大剑
+3080300;Banished Knight's Quality Greatsword;优质失乡骑士大剑
+3080400;Banished Knight's Glint Greatsword;辉石失乡骑士大剑
+3080500;Banished Knight's Dragonkin Greatsword;龙人失乡骑士大剑
+3080600;Banished Knight's Gravity Greatsword;重力失乡骑士大剑
+3080700;Banished Knight's Flame Greatsword;火焰失乡骑士大剑
+3080800;Banished Knight's Golden Greatsword;黄金失乡骑士大剑
+3080900;Banished Knight's Draconic Greatsword;龙装失乡骑士大剑
+3081000;Banished Knight's Bestial Greatsword;野兽失乡骑士大剑
+3081100;Banished Knight's Night Greatsword;黑夜失乡骑士大剑
+3081200;Banished Knight's Lava Greatsword;熔岩失乡骑士大剑
+3081300;Banished Knight's Frenzy Greatsword;癫狂失乡骑士大剑
+3081400;Banished Knight's Death Greatsword;死亡失乡骑士大剑
+3081500;Banished Knight's Godslayer Greatsword;狩猎神祇失乡骑士大剑
+3081600;Banished Knight's Frost Greatsword;冰霜失乡骑士大剑
+3081700;Banished Knight's Aberrant Greatsword;异端失乡骑士大剑
+3081800;Banished Knight's Bloodflame Greatsword;血焰失乡骑士大剑
+3081900;Banished Knight's Rotten Greatsword;腐败失乡骑士大剑
+3082000;Banished Knight's Storm Greatsword;风暴失乡骑士大剑
+3082100;Banished Knight's Mystic Greatsword;密契失乡骑士大剑
+3090000;Dark Moon Greatsword;暗月大剑
+3100000;Sacred Relic Sword;神躯化剑
+3110000;Celestial Blade;天穹之剑
+3120000;Sword of the Cyclops;独眼巨人之剑
+3130000;Helphen's Steeple;赫芬尖塔剑
+3140000;Blasphemous Blade;亵渎圣剑
+3150000;Marais Executioner's Sword;玛雷家行刑剑
+3160000;Sword of Milos;灭洛斯剑
+3160100;Heavy Sword of Milos;厚重灭洛斯剑
+3160200;Keen Sword of Milos;锋利灭洛斯剑
+3160300;Quality Sword of Milos;优质灭洛斯剑
+3160400;Glint Sword of Milos;辉石灭洛斯剑
+3160500;Dragonkin Sword of Milos;龙人灭洛斯剑
+3160600;Gravity Sword of Milos;重力灭洛斯剑
+3160700;Flame Sword of Milos;火焰灭洛斯剑
+3160800;Golden Sword of Milos;黄金灭洛斯剑
+3160900;Draconic Sword of Milos;龙装灭洛斯剑
+3161000;Bestial Sword of Milos;野兽灭洛斯剑
+3161100;Night Sword of Milos;黑夜灭洛斯剑
+3161200;Lava Sword of Milos;熔岩灭洛斯剑
+3170000;Golden Order Greatsword;黄金律法大剑
+3180000;Claymore;大剑
+3180100;Heavy Claymore;厚重大剑
+3180200;Keen Claymore;锋利大剑
+3180300;Quality Claymore;优质大剑
+3180400;Glint Claymore;辉石大剑
+3180500;Dragonkin Claymore;龙人大剑
+3180600;Gravity Claymore;重力大剑
+3180700;Flame Claymore;火焰大剑
+3180800;Golden Claymore;黄金大剑
+3180900;Draconic Claymore;龙装大剑
+3181000;Bestial Claymore;野兽大剑
+3181100;Night Claymore;黑夜大剑
+3181200;Lava Claymore;熔岩大剑
+3181300;Frenzy Claymore;癫狂大剑
+3181400;Death Claymore;死亡大剑
+3181500;Godslayer Claymore;大剑（狩猎神祇）
+3181600;Frost Claymore;冰霜大剑
+3181700;Aberrant Claymore;异端大剑
+3181800;Bloodflame Claymore;血焰大剑
+3181900;Rotten Claymore;腐败大剑
+3182000;Storm Claymore;风暴大剑
+3182100;Mystic Claymore;密契大剑
+3190000;Gargoyle's Greatsword;石像鬼大剑
+3190100;Gargoyle's Heavy Greatsword;厚重石像鬼大剑
+3190200;Gargoyle's Keen Greatsword;锋利石像鬼大剑
+3190300;Gargoyle's Quality Greatsword;优质石像鬼大剑
+3190400;Gargoyle's Glint Greatsword;辉石石像鬼大剑
+3190500;Gargoyle's Dragonkin Greatsword;龙人石像鬼大剑
+3190600;Gargoyle's Gravity Greatsword;重力石像鬼大剑
+3190700;Gargoyle's Flame Greatsword;火焰石像鬼大剑
+3190800;Gargoyle's Golden Greatsword;黄金石像鬼大剑
+3190900;Gargoyle's Draconic Greatsword;龙装石像鬼大剑
+3191000;Gargoyle's Bestial Greatsword;野兽石像鬼大剑
+3191100;Gargoyle's Night Greatsword;黑夜石像鬼大剑
+3191200;Gargoyle's Lava Greatsword;熔岩石像鬼大剑
+3200000;Death's Poker;死亡钩棒
+3210000;Gargoyle's Blackblade;石像鬼黑剑
+3210100;Heavy Gargoyle's Blackblade;厚重石像鬼黑剑
+3210200;Keen Gargoyle's Blackblade;锋利石像鬼黑剑
+3210300;Quality Gargoyle's Blackblade;优质石像鬼黑剑
+3210400;Glint Gargoyle's Blackblade;辉石石像鬼黑剑
+3210500;Dragonkin Gargoyle's Blackblade;龙人石像鬼黑剑
+3210600;Gravity Gargoyle's Blackblade;重力石像鬼黑剑
+3210700;Flame Gargoyle's Blackblade;火焰石像鬼黑剑
+3210800;Golden Gargoyle's Blackblade;黄金石像鬼黑剑
+3210900;Draconic Gargoyle's Blackblade;龙装石像鬼黑剑
+3211000;Bestial Gargoyle's Blackblade;野兽石像鬼黑剑
+3211100;Night Gargoyle's Blackblade;黑夜石像鬼黑剑
+3211200;Lava Gargoyle's Blackblade;熔岩石像鬼黑剑
+3230000;Sword of Hadea;哈迪亚之剑
+3240000;Dyru's Greatsword;迪鲁大剑
+3250000;Regal Splitblade;王室分刃
+3255000;Regal Splitblade;王室分刃
+3300000;Prime Maliketh's Black Blade;玛利喀斯的黑剑·原初
+4000000;Greatsword;巨剑
+4000100;Heavy Greatsword;厚重巨剑
+4000200;Keen Greatsword;锋利巨剑
+4000300;Quality Greatsword;优质巨剑
+4000400;Glint Greatsword;辉石巨剑
+4000500;Dragonkin Greatsword;龙人巨剑
+4000600;Gravity Greatsword;重力巨剑
+4000700;Flame Greatsword;火焰巨剑
+4000800;Golden Greatsword;黄金巨剑
+4000900;Draconic Greatsword;龙装巨剑
+4001000;Bestial Greatsword;野兽巨剑
+4001100;Night Greatsword;黑夜巨剑
+4001200;Lava Greatsword;熔岩巨剑
+4001300;Frenzy Greatsword;癫狂巨剑
+4001400;Death Greatsword;死亡巨剑
+4001500;Godslayer Greatsword;狩猎神祇巨剑
+4001600;Frost Greatsword;冰霜巨剑
+4001700;Aberrant Greatsword;异端巨剑
+4001800;Bloodflame Greatsword;血焰巨剑
+4001900;Rotten Greatsword;腐败巨剑
+4002000;Storm Greatsword;风暴巨剑
+4002100;Mystic Greatsword;密契巨剑
+4010000;Watchdog's Greatsword;看门犬大剑
+4010100;Watchdog's Heavy Greatsword;厚重看门犬大剑
+4010200;Watchdog's Keen Greatsword;锋利看门犬大剑
+4010300;Watchdog's Quality Greatsword;优质看门犬大剑
+4010400;Watchdog's Glint Greatsword;辉石看门犬大剑
+4010500;Watchdog's Dragonkin Greatsword;龙人看门犬大剑
+4010600;Watchdog's Gravity Greatsword;重力看门犬大剑
+4010700;Watchdog's Flame Greatsword;火焰看门犬大剑
+4010800;Watchdog's Golden Greatsword;黄金看门犬大剑
+4010900;Watchdog's Draconic Greatsword;龙装看门犬大剑
+4011000;Watchdog's Bestial Greatsword;野兽看门犬大剑
+4011100;Watchdog's Night Greatsword;黑夜看门犬大剑
+4011200;Watchdog's Lava Greatsword;熔岩看门犬大剑
+4011300;Watchdog's Frenzy Greatsword;癫狂看门犬大剑
+4011400;Watchdog's Death Greatsword;死亡看门犬大剑
+4011500;Watchdog's Godslayer Greatsword;狩猎神祇看门犬大剑
+4011600;Watchdog's Frost Greatsword;冰霜看门犬大剑
+4011700;Watchdog's Aberrant Greatsword;异端看门犬大剑
+4011800;Watchdog's Bloodflame Greatsword;血焰看门犬大剑
+4011900;Watchdog's Rotten Greatsword;腐败看门犬大剑
+4012000;Watchdog's Storm Greatsword;风暴看门犬大剑
+4012100;Watchdog's Mystic Greatsword;密契看门犬大剑
+4020000;Maliketh's Black Blade;玛利喀斯的黑剑
+4030000;Troll's Golden Sword;山妖黄金剑
+4030100;Troll's Golden Heavy Sword;厚重山妖黄金剑
+4030200;Troll's Golden Keen Sword;锋利山妖黄金剑
+4030300;Troll's Golden Quality Sword;优质山妖黄金剑
+4030400;Troll's Golden Glint Sword;辉石山妖黄金剑
+4030500;Troll's Golden Dragonkin Sword;龙人山妖黄金剑
+4030600;Troll's Golden Gravity Sword;重力山妖黄金剑
+4030700;Troll's Golden Flame Sword;火焰山妖黄金剑
+4030800;Troll's Golden Golden Sword;黄金山妖黄金剑
+4030900;Troll's Golden Draconic Sword;龙装山妖黄金剑
+4031000;Troll's Golden Bestial Sword;野兽山妖黄金剑
+4031100;Troll's Golden Night Sword;黑夜山妖黄金剑
+4031200;Troll's Golden Lava Sword;熔岩山妖黄金剑
+4031300;Troll's Golden Frenzy Sword;癫狂山妖黄金剑
+4031400;Troll's Golden Death Sword;死亡山妖黄金剑
+4031500;Troll's Golden Godslayer Sword;狩猎神祇山妖黄金剑
+4031600;Troll's Golden Frost Sword;冰霜山妖黄金剑
+4031700;Troll's Golden Aberrant Sword;异端山妖黄金剑
+4031800;Troll's Golden Bloodflame Sword;血焰山妖黄金剑
+4031900;Troll's Golden Rotten Sword;腐败山妖黄金剑
+4032000;Troll's Golden Storm Sword;风暴山妖黄金剑
+4032100;Troll's Golden Mystic Sword;密契山妖黄金剑
+4040000;Zweihander;双手巨剑
+4040100;Heavy Zweihander;厚重双手巨剑
+4040200;Keen Zweihander;锋利双手巨剑
+4040300;Quality Zweihander;优质双手巨剑
+4040400;Glint Zweihander;辉石双手巨剑
+4040500;Dragonkin Zweihander;龙人双手巨剑
+4040600;Gravity Zweihander;重力双手巨剑
+4040700;Flame Zweihander;火焰双手巨剑
+4040800;Golden Zweihander;黄金双手巨剑
+4040900;Draconic Zweihander;龙装双手巨剑
+4041000;Bestial Zweihander;野兽双手巨剑
+4041100;Night Zweihander;黑夜双手巨剑
+4041200;Lava Zweihander;熔岩双手巨剑
+4041300;Frenzy Zweihander;癫狂双手巨剑
+4041400;Death Zweihander;死亡双手巨剑
+4041500;Godslayer Zweihander;狩猎神祇双手巨剑
+4041600;Frost Zweihander;冰霜双手巨剑
+4041700;Aberrant Zweihander;异端双手巨剑
+4041800;Bloodflame Zweihander;血焰双手巨剑
+4041900;Rotten Zweihander;腐败双手巨剑
+4042000;Storm Zweihander;风暴双手巨剑
+4042100;Mystic Zweihander;密契双手巨剑
+4050000;Starscourge Greatsword;碎星大剑
+4060000;Royal Greatsword;王室巨剑
+4070000;Godslayer's Greatsword;狩猎神祇大剑
+4080000;Ruins Greatsword;遗迹大剑
+4100000;Grafted Blade Greatsword;剑骸大剑
+4110000;Troll Knight's Sword;山妖骑士剑
+4120000;Gravelstone Arcblades;碎石弧形双刃
+4130000;Osian's Greatsword;奥西安大剑
+4140000;Fingerprint Hexmark;指痕咒印
+5000000;Estoc;刺剑
+5000100;Heavy Estoc;厚重刺剑
+5000200;Keen Estoc;锋利刺剑
+5000300;Quality Estoc;优质刺剑
+5000400;Glint Estoc;辉石刺剑
+5000500;Dragonkin Estoc;龙人刺剑
+5000600;Gravity Estoc;重力刺剑
+5000700;Flame Estoc;火焰刺剑
+5000800;Golden Estoc;黄金刺剑
+5000900;Draconic Estoc;龙装刺剑
+5001000;Bestial Estoc;野兽刺剑
+5001100;Night Estoc;黑夜刺剑
+5001200;Lava Estoc;熔岩刺剑
+5001300;Frenzy Estoc;癫狂刺剑
+5001400;Death Estoc;死亡刺剑
+5001500;Godslayer Estoc;狩猎神祇刺剑
+5001600;Frost Estoc;冰霜刺剑
+5001700;Aberrant Estoc;异端刺剑
+5001800;Bloodflame Estoc;血焰刺剑
+5001900;Rotten Estoc;腐败刺剑
+5002000;Storm Estoc;风暴刺剑
+5002100;Mystic Estoc;密契刺剑
+5010000;Cleanrot Knight's Sword;尊腐骑士剑
+5010100;Cleanrot Knight's Heavy Sword;厚重尊腐骑士剑
+5010200;Cleanrot Knight's Keen Sword;锋利尊腐骑士剑
+5010300;Cleanrot Knight's Quality Sword;优质尊腐骑士剑
+5010400;Cleanrot Knight's Glint Sword;辉石尊腐骑士剑
+5010500;Cleanrot Knight's Dragonkin Sword;龙人尊腐骑士剑
+5010600;Cleanrot Knight's Gravity Sword;重力尊腐骑士剑
+5010700;Cleanrot Knight's Flame Sword;火焰尊腐骑士剑
+5010800;Cleanrot Knight's Golden Sword;黄金尊腐骑士剑
+5010900;Cleanrot Knight's Draconic Sword;龙装尊腐骑士剑
+5011000;Cleanrot Knight's Bestial Sword;野兽尊腐骑士剑
+5011100;Cleanrot Knight's Night Sword;黑夜尊腐骑士剑
+5011200;Cleanrot Knight's Lava Sword;熔岩尊腐骑士剑
+5011300;Cleanrot Knight's Frenzy Sword;癫狂尊腐骑士剑
+5011400;Cleanrot Knight's Death Sword;死亡尊腐骑士剑
+5011500;Cleanrot Knight's Godslayer Sword;狩猎神祇尊腐骑士剑
+5011600;Cleanrot Knight's Frost Sword;冰霜尊腐骑士剑
+5011700;Cleanrot Knight's Aberrant Sword;异端尊腐骑士剑
+5011800;Cleanrot Knight's Bloodflame Sword;血焰尊腐骑士剑
+5011900;Cleanrot Knight's Rotten Sword;腐败尊腐骑士剑
+5012000;Cleanrot Knight's Storm Sword;风暴尊腐骑士剑
+5012100;Cleanrot Knight's Mystic Sword;密契尊腐骑士剑
+5020000;Rapier;细剑
+5020100;Heavy Rapier;厚重细剑
+5020200;Keen Rapier;锋利细剑
+5020300;Quality Rapier;优质细剑
+5020400;Glint Rapier;辉石细剑
+5020500;Dragonkin Rapier;龙人细剑
+5020600;Gravity Rapier;重力细剑
+5020700;Flame Rapier;火焰细剑
+5020800;Golden Rapier;黄金细剑
+5020900;Draconic Rapier;龙装细剑
+5021000;Bestial Rapier;野兽细剑
+5021100;Night Rapier;黑夜细剑
+5021200;Lava Rapier;熔岩细剑
+5021300;Frenzy Rapier;癫狂细剑
+5021400;Death Rapier;死亡细剑
+5021500;Godslayer Rapier;狩猎神祇细剑
+5021600;Frost Rapier;冰霜细剑
+5021700;Aberrant Rapier;异端细剑
+5021800;Bloodflame Rapier;血焰细剑
+5021900;Rotten Rapier;腐败细剑
+5022000;Storm Rapier;风暴细剑
+5022100;Mystic Rapier;密契细剑
+5030000;Rogier's Rapier;罗杰尔刺剑
+5030100;Rogier's Heavy Rapier;厚重罗杰尔刺剑
+5030200;Rogier's Keen Rapier;锋利罗杰尔刺剑
+5030300;Rogier's Quality Rapier;优质罗杰尔刺剑
+5030400;Rogier's Glint Rapier;辉石罗杰尔刺剑
+5030500;Rogier's Dragonkin Rapier;龙人罗杰尔刺剑
+5030600;Rogier's Gravity Rapier;重力罗杰尔刺剑
+5030700;Rogier's Flame Rapier;火焰罗杰尔刺剑
+5030800;Rogier's Golden Rapier;黄金罗杰尔刺剑
+5030900;Rogier's Draconic Rapier;龙装罗杰尔刺剑
+5031000;Rogier's Bestial Rapier;野兽罗杰尔刺剑
+5031100;Rogier's Night Rapier;黑夜罗杰尔刺剑
+5031200;Rogier's Lava Rapier;熔岩罗杰尔刺剑
+5031300;Rogier's Frenzy Rapier;癫狂罗杰尔刺剑
+5031400;Rogier's Death Rapier;死亡罗杰尔刺剑
+5031500;Rogier's Godslayer Rapier;狩猎神祇罗杰尔刺剑
+5031600;Rogier's Frost Rapier;冰霜罗杰尔刺剑
+5031700;Rogier's Aberrant Rapier;异端罗杰尔刺剑
+5031800;Rogier's Bloodflame Rapier;血焰罗杰尔刺剑
+5031900;Rogier's Rotten Rapier;腐败罗杰尔刺剑
+5032000;Rogier's Storm Rapier;风暴罗杰尔刺剑
+5032100;Rogier's Mystic Rapier;密契罗杰尔刺剑
+5040000;Antspur Rapier;蚁刺细剑
+5040100;Heavy Antspur Rapier;厚重蚁刺细剑
+5040200;Keen Antspur Rapier;锋利蚁刺细剑
+5040300;Quality Antspur Rapier;优质蚁刺细剑
+5040400;Glint Antspur Rapier;辉石蚁刺细剑
+5040500;Dragonkin Antspur Rapier;龙人蚁刺细剑
+5040600;Gravity Antspur Rapier;重力蚁刺细剑
+5040700;Flame Antspur Rapier;火焰蚁刺细剑
+5040800;Golden Antspur Rapier;黄金蚁刺细剑
+5040900;Draconic Antspur Rapier;龙装蚁刺细剑
+5041000;Bestial Antspur Rapier;野兽蚁刺细剑
+5041100;Night Antspur Rapier;黑夜蚁刺细剑
+5041200;Lava Antspur Rapier;熔岩蚁刺细剑
+5050000;Frozen Needle;结冰针
+5060000;Noble's Estoc;权贵刺剑
+5060100;Noble's Heavy Estoc;厚重权贵刺剑
+5060200;Noble's Keen Estoc;锋利权贵刺剑
+5060300;Noble's Quality Estoc;优质权贵刺剑
+5060400;Noble's Glint Estoc;辉石权贵刺剑
+5060500;Noble's Dragonkin Estoc;龙人权贵刺剑
+5060600;Noble's Gravity Estoc;重力权贵刺剑
+5060700;Noble's Flame Estoc;火焰权贵刺剑
+5060800;Noble's Golden Estoc;黄金权贵刺剑
+5060900;Noble's Draconic Estoc;龙装权贵刺剑
+5061000;Noble's Bestial Estoc;野兽权贵刺剑
+5061100;Noble's Night Estoc;黑夜权贵刺剑
+5061200;Noble's Lava Estoc;熔岩权贵刺剑
+5061300;Noble's Frenzy Estoc;癫狂权贵刺剑
+5061400;Noble's Death Estoc;死亡权贵刺剑
+5061500;Noble's Godslayer Estoc;狩猎神祇权贵刺剑
+5061600;Noble's Frost Estoc;冰霜权贵刺剑
+5061700;Noble's Aberrant Estoc;异端权贵刺剑
+5061800;Noble's Bloodflame Estoc;血焰权贵刺剑
+5061900;Noble's Rotten Estoc;腐败权贵刺剑
+5062000;Noble's Storm Estoc;风暴权贵刺剑
+5062100;Noble's Mystic Estoc;密契权贵刺剑
+5070000;Thorn of the Guilty;罪恶荆棘
+5080000;Foil of Caddock;卡多克的花剑
+5090000;Quicksilver Rapier;水银细剑
+6000000;Bloody Helice;鲜血旋流
+6010000;Godskin Stitcher;神皮缝针
+6010100;Heavy Godskin Stitcher;厚重神皮缝针
+6010200;Keen Godskin Stitcher;锋利神皮缝针
+6010300;Quality Godskin Stitcher;优质神皮缝针
+6010400;Glint Godskin Stitcher;辉石神皮缝针
+6010500;Dragonkin Godskin Stitcher;龙人神皮缝针
+6010600;Gravity Godskin Stitcher;重力神皮缝针
+6010700;Flame Godskin Stitcher;火焰神皮缝针
+6010800;Golden Godskin Stitcher;黄金神皮缝针
+6010900;Draconic Godskin Stitcher;龙装神皮缝针
+6011000;Bestial Godskin Stitcher;野兽神皮缝针
+6011100;Night Godskin Stitcher;黑夜神皮缝针
+6011200;Lava Godskin Stitcher;熔岩神皮缝针
+6020000;Great Épée;大重剑
+6020100;Heavy Great Épée;厚重大重剑
+6020200;Keen Great Épée;锋利大重剑
+6020300;Quality Great Épée;优质大重剑
+6020400;Glint Great Épée;辉石大重剑
+6020500;Dragonkin Great Épée;龙人大重剑
+6020600;Gravity Great Épée;重力大重剑
+6020700;Flame Great Épée;火焰大重剑
+6020800;Golden Great Épée;黄金大重剑
+6020900;Draconic Great Épée;龙装大重剑
+6021000;Bestial Great Épée;野兽大重剑
+6021100;Night Great Épée;黑夜大重剑
+6021200;Lava Great Épée;熔岩大重剑
+6021300;Frenzy Great Épée;癫狂大重剑
+6021400;Death Great Épée;死亡大重剑
+6021500;Godslayer Great Épée;狩猎神祇大重剑
+6021600;Frost Great Épée;冰霜大重剑
+6021700;Aberrant Great Épée;异端大重剑
+6021800;Bloodflame Great Épée;血焰大重剑
+6021900;Rotten Great Épée;腐败大重剑
+6022000;Storm Great Épée;风暴大重剑
+6022100;Mystic Great Épée;密契大重剑
+6030000;Carwyn's Épée;卡尔温的重剑
+6040000;Dragon King's Cragblade;龙王岩剑
+6050000;Estoc of the Serpent Priest;蛇人祭司的刺剑
+7000000;Falchion;弯刃大刀
+7000100;Heavy Falchion;厚重弯刃大刀
+7000200;Keen Falchion;锋利弯刃大刀
+7000300;Quality Falchion;优质弯刃大刀
+7000400;Glint Falchion;辉石弯刃大刀
+7000500;Dragonkin Falchion;龙人弯刃大刀
+7000600;Gravity Falchion;重力弯刃大刀
+7000700;Flame Falchion;火焰弯刃大刀
+7000800;Golden Falchion;黄金弯刃大刀
+7000900;Draconic Falchion;龙装弯刃大刀
+7001000;Bestial Falchion;野兽弯刃大刀
+7001100;Night Falchion;黑夜弯刃大刀
+7001200;Lava Falchion;熔岩弯刃大刀
+7001300;Frenzy Falchion;癫狂弯刃大刀
+7001400;Death Falchion;死亡弯刃大刀
+7001500;Godslayer Falchion;狩猎神祇弯刃大刀
+7001600;Frost Falchion;冰霜弯刃大刀
+7001700;Aberrant Falchion;异端弯刃大刀
+7001800;Bloodflame Falchion;血焰弯刃大刀
+7001900;Rotten Falchion;腐败弯刃大刀
+7002000;Storm Falchion;风暴弯刃大刀
+7002100;Mystic Falchion;密契弯刃大刀
+7010000;Beastman's Curved Sword;兽人弯刀
+7010100;Beastman's Heavy Curved Sword;厚重兽人弯刀
+7010200;Beastman's Keen Curved Sword;锋利兽人弯刀
+7010300;Beastman's Quality Curved Sword;优质兽人弯刀
+7010400;Beastman's Glint Curved Sword;辉石兽人弯刀
+7010500;Beastman's Dragonkin Curved Sword;龙人兽人弯刀
+7010600;Beastman's Gravity Curved Sword;重力兽人弯刀
+7010700;Beastman's Flame Curved Sword;火焰兽人弯刀
+7010800;Beastman's Golden Curved Sword;黄金兽人弯刀
+7010900;Beastman's Draconic Curved Sword;龙装兽人弯刀
+7011000;Beastman's Bestial Curved Sword;野兽兽人弯刀
+7011100;Beastman's Night Curved Sword;黑夜兽人弯刀
+7011200;Beastman's Lava Curved Sword;熔岩兽人弯刀
+7020000;Shotel;钩剑
+7020100;Heavy Shotel;厚重钩剑
+7020200;Keen Shotel;锋利钩剑
+7020300;Quality Shotel;优质钩剑
+7020400;Glint Shotel;辉石钩剑
+7020500;Dragonkin Shotel;龙人钩剑
+7020600;Gravity Shotel;重力钩剑
+7020700;Flame Shotel;火焰钩剑
+7020800;Golden Shotel;黄金钩剑
+7020900;Draconic Shotel;龙装钩剑
+7021000;Bestial Shotel;野兽钩剑
+7021100;Night Shotel;黑夜钩剑
+7021200;Lava Shotel;熔岩钩剑
+7021300;Frenzy Shotel;癫狂钩剑
+7021400;Death Shotel;死亡钩剑
+7021500;Godslayer Shotel;狩猎神祇钩剑
+7021600;Frost Shotel;冰霜钩剑
+7021700;Aberrant Shotel;异端钩剑
+7021800;Bloodflame Shotel;血焰钩剑
+7021900;Rotten Shotel;腐败钩剑
+7022000;Storm Shotel;风暴钩剑
+7022100;Mystic Shotel;密契钩剑
+7030000;Shamshir;赛施尔长刀
+7030100;Heavy Shamshir;厚重赛施尔长刀
+7030200;Keen Shamshir;锋利赛施尔长刀
+7030300;Quality Shamshir;优质赛施尔长刀
+7030400;Glint Shamshir;辉石赛施尔长刀
+7030500;Dragonkin Shamshir;龙人赛施尔长刀
+7030600;Gravity Shamshir;重力赛施尔长刀
+7030700;Flame Shamshir;火焰赛施尔长刀
+7030800;Golden Shamshir;黄金赛施尔长刀
+7030900;Draconic Shamshir;龙装赛施尔长刀
+7031000;Bestial Shamshir;野兽赛施尔长刀
+7031100;Night Shamshir;黑夜赛施尔长刀
+7031200;Lava Shamshir;熔岩赛施尔长刀
+7031300;Frenzy Shamshir;癫狂赛施尔长刀
+7031400;Death Shamshir;死亡赛施尔长刀
+7031500;Godslayer Shamshir;狩猎神祇赛施尔长刀
+7031600;Frost Shamshir;冰霜赛施尔长刀
+7031700;Aberrant Shamshir;异端赛施尔长刀
+7031800;Bloodflame Shamshir;血焰赛施尔长刀
+7031900;Rotten Shamshir;腐败赛施尔长刀
+7032000;Storm Shamshir;风暴赛施尔长刀
+7032100;Mystic Shamshir;密契赛施尔长刀
+7040000;Bandit's Curved Sword;山贼弯刀
+7040100;Bandit's Heavy Curved Sword;厚重山贼弯刀
+7040200;Bandit's Keen Curved Sword;锋利山贼弯刀
+7040300;Bandit's Quality Curved Sword;优质山贼弯刀
+7040400;Bandit's Glint Curved Sword;辉石山贼弯刀
+7040500;Bandit's Dragonkin Curved Sword;龙人山贼弯刀
+7040600;Bandit's Gravity Curved Sword;重力山贼弯刀
+7040700;Bandit's Flame Curved Sword;火焰山贼弯刀
+7040800;Bandit's Golden Curved Sword;黄金山贼弯刀
+7040900;Bandit's Draconic Curved Sword;龙装山贼弯刀
+7041000;Bandit's Bestial Curved Sword;野兽山贼弯刀
+7041100;Bandit's Night Curved Sword;黑夜山贼弯刀
+7041200;Bandit's Lava Curved Sword;熔岩山贼弯刀
+7041300;Bandit's Frenzy Curved Sword;癫狂山贼弯刀
+7041400;Bandit's Death Curved Sword;死亡山贼弯刀
+7041500;Bandit's Godslayer Curved Sword;狩猎神祇山贼弯刀
+7041600;Bandit's Frost Curved Sword;冰霜山贼弯刀
+7041700;Bandit's Aberrant Curved Sword;异端山贼弯刀
+7041800;Bandit's Bloodflame Curved Sword;血焰山贼弯刀
+7041900;Bandit's Rotten Curved Sword;腐败山贼弯刀
+7042000;Bandit's Storm Curved Sword;风暴山贼弯刀
+7042100;Bandit's Mystic Curved Sword;密契山贼弯刀
+7050000;Magma Blade;熔岩刀
+7060000;Flowing Curved Sword;流水曲剑
+7060100;Flowing Heavy Curved Sword;厚重流水曲剑
+7060200;Flowing Keen Curved Sword;锋利流水曲剑
+7060300;Flowing Quality Curved Sword;优质流水曲剑
+7060400;Flowing Glint Curved Sword;辉石流水曲剑
+7060500;Flowing Dragonkin Curved Sword;龙人流水曲剑
+7060600;Flowing Gravity Curved Sword;重力流水曲剑
+7060700;Flowing Flame Curved Sword;火焰流水曲剑
+7060800;Flowing Golden Curved Sword;黄金流水曲剑
+7060900;Flowing Draconic Curved Sword;龙装流水曲剑
+7061000;Flowing Bestial Curved Sword;野兽流水曲剑
+7061100;Flowing Night Curved Sword;黑夜流水曲剑
+7061200;Flowing Lava Curved Sword;熔岩流水曲剑
+7070000;Wing of Astel;艾丝缇薄翼
+7080000;Scavenger's Curved Sword;剥尸曲剑
+7080100;Scavenger's Heavy Curved Sword;厚重剥尸曲剑
+7080200;Scavenger's Keen Curved Sword;锋利剥尸曲剑
+7080300;Scavenger's Quality Curved Sword;优质剥尸曲剑
+7080400;Scavenger's Glint Curved Sword;辉石剥尸曲剑
+7080500;Scavenger's Dragonkin Curved Sword;龙人剥尸曲剑
+7080600;Scavenger's Gravity Curved Sword;重力剥尸曲剑
+7080700;Scavenger's Flame Curved Sword;火焰剥尸曲剑
+7080800;Scavenger's Golden Curved Sword;黄金剥尸曲剑
+7080900;Scavenger's Draconic Curved Sword;龙装剥尸曲剑
+7081000;Scavenger's Bestial Curved Sword;野兽剥尸曲剑
+7081100;Scavenger's Night Curved Sword;黑夜剥尸曲剑
+7081200;Scavenger's Lava Curved Sword;熔岩剥尸曲剑
+7081300;Scavenger's Frenzy Curved Sword;癫狂剥尸曲剑
+7081400;Scavenger's Death Curved Sword;死亡剥尸曲剑
+7081500;Scavenger's Godslayer Curved Sword;狩猎神祇剥尸曲剑
+7081600;Scavenger's Frost Curved Sword;冰霜剥尸曲剑
+7081700;Scavenger's Aberrant Curved Sword;异端剥尸曲剑
+7081800;Scavenger's Bloodflame Curved Sword;血焰剥尸曲剑
+7081900;Scavenger's Rotten Curved Sword;腐败剥尸曲剑
+7082000;Scavenger's Storm Curved Sword;风暴剥尸曲剑
+7082100;Scavenger's Mystic Curved Sword;密契剥尸曲剑
+7090000;Zephyr Blades;微风双刃
+7100000;Eclipse Shotel;日蚀钩剑
+7110000;Serpent-God's Curved Sword;蛇神弯刀
+7110100;Serpent-God's Heavy Curved Sword;厚重蛇神弯刀
+7110200;Serpent-God's Keen Curved Sword;锋利蛇神弯刀
+7110300;Serpent-God's Quality Curved Sword;优质蛇神弯刀
+7110400;Serpent-God's Glint Curved Sword;辉石蛇神弯刀
+7110500;Serpent-God's Dragonkin Curved Sword;龙人蛇神弯刀
+7110600;Serpent-God's Gravity Curved Sword;重力蛇神弯刀
+7110700;Serpent-God's Flame Curved Sword;火焰蛇神弯刀
+7110800;Serpent-God's Golden Curved Sword;黄金蛇神弯刀
+7110900;Serpent-God's Draconic Curved Sword;龙装蛇神弯刀
+7111000;Serpent-God's Bestial Curved Sword;野兽蛇神弯刀
+7111100;Serpent-God's Night Curved Sword;黑夜蛇神弯刀
+7111200;Serpent-God's Lava Curved Sword;熔岩蛇神弯刀
+7111300;Serpent-God's Frenzy Curved Sword;癫狂蛇神弯刀
+7111400;Serpent-God's Death Curved Sword;死亡蛇神弯刀
+7111500;Serpent-God's Godslayer Curved Sword;狩猎神祇蛇神弯刀
+7111600;Serpent-God's Frost Curved Sword;冰霜蛇神弯刀
+7111700;Serpent-God's Aberrant Curved Sword;异端蛇神弯刀
+7111800;Serpent-God's Bloodflame Curved Sword;血焰蛇神弯刀
+7111900;Serpent-God's Rotten Curved Sword;腐败蛇神弯刀
+7112000;Serpent-God's Storm Curved Sword;风暴蛇神弯刀
+7112100;Serpent-God's Mystic Curved Sword;密契蛇神弯刀
+7120000;Mantis Blade;螳臂刀
+7120100;Heavy Mantis Blade;厚重螳臂刀
+7120200;Keen Mantis Blade;锋利螳臂刀
+7120300;Quality Mantis Blade;优质螳臂刀
+7120400;Glint Mantis Blade;辉石螳臂刀
+7120500;Dragonkin Mantis Blade;龙人螳臂刀
+7120600;Gravity Mantis Blade;重力螳臂刀
+7120700;Flame Mantis Blade;火焰螳臂刀
+7120800;Golden Mantis Blade;黄金螳臂刀
+7120900;Draconic Mantis Blade;龙装螳臂刀
+7121000;Bestial Mantis Blade;野兽螳臂刀
+7121100;Night Mantis Blade;黑夜螳臂刀
+7121200;Lava Mantis Blade;熔岩螳臂刀
+7140000;Scimitar;短弯刀
+7140100;Heavy Scimitar;厚重短弯刀
+7140200;Keen Scimitar;锋利短弯刀
+7140300;Quality Scimitar;优质短弯刀
+7140400;Glint Scimitar;辉石短弯刀
+7140500;Dragonkin Scimitar;龙人短弯刀
+7140600;Gravity Scimitar;重力短弯刀
+7140700;Flame Scimitar;火焰短弯刀
+7140800;Golden Scimitar;黄金短弯刀
+7140900;Draconic Scimitar;龙装短弯刀
+7141000;Bestial Scimitar;野兽短弯刀
+7141100;Night Scimitar;黑夜短弯刀
+7141200;Lava Scimitar;熔岩短弯刀
+7141300;Frenzy Scimitar;癫狂短弯刀
+7141400;Death Scimitar;死亡短弯刀
+7141500;Godslayer Scimitar;狩猎神祇短弯刀
+7141600;Frost Scimitar;冰霜短弯刀
+7141700;Aberrant Scimitar;异端短弯刀
+7141800;Bloodflame Scimitar;血焰短弯刀
+7141900;Rotten Scimitar;腐败短弯刀
+7142000;Storm Scimitar;风暴短弯刀
+7142100;Mystic Scimitar;密契短弯刀
+7150000;Grossmesser;巨型刀
+7150100;Heavy Grossmesser;厚重巨型刀
+7150200;Keen Grossmesser;锋利巨型刀
+7150300;Quality Grossmesser;优质巨型刀
+7150400;Glint Grossmesser;辉石巨型刀
+7150500;Dragonkin Grossmesser;龙人巨型刀
+7150600;Gravity Grossmesser;重力巨型刀
+7150700;Flame Grossmesser;火焰巨型刀
+7150800;Golden Grossmesser;黄金巨型刀
+7150900;Draconic Grossmesser;龙装巨型刀
+7151000;Bestial Grossmesser;野兽巨型刀
+7151100;Night Grossmesser;黑夜巨型刀
+7151200;Lava Grossmesser;熔岩巨型刀
+7151300;Frenzy Grossmesser;癫狂巨型刀
+7151400;Death Grossmesser;死亡巨型刀
+7151500;Godslayer Grossmesser;狩猎神祇巨型刀
+7151600;Frost Grossmesser;冰霜巨型刀
+7151700;Aberrant Grossmesser;异端巨型刀
+7151800;Bloodflame Grossmesser;血焰巨型刀
+7151900;Rotten Grossmesser;腐败巨型刀
+7152000;Storm Grossmesser;风暴巨型刀
+7152100;Mystic Grossmesser;密契巨型刀
+7160000;Blade of Scarlet Bloom;猩红绽放之刃
+7170000;Godskin Flayer;神皮剥制刀
+7180000;Nomad's Kilij;流浪民族的弯刀
+8010000;Onyx Lord's Greatsword;黑王大剑
+8020000;Dismounter;骑兵马刀
+8020100;Heavy Dismounter;厚重骑兵马刀
+8020200;Keen Dismounter;锋利骑兵马刀
+8020300;Quality Dismounter;优质骑兵马刀
+8020400;Glint Dismounter;辉石骑兵马刀
+8020500;Dragonkin Dismounter;龙人骑兵马刀
+8020600;Gravity Dismounter;重力骑兵马刀
+8020700;Flame Dismounter;火焰骑兵马刀
+8020800;Golden Dismounter;黄金骑兵马刀
+8020900;Draconic Dismounter;龙装骑兵马刀
+8021000;Bestial Dismounter;野兽骑兵马刀
+8021100;Night Dismounter;黑夜骑兵马刀
+8021200;Lava Dismounter;熔岩骑兵马刀
+8021300;Frenzy Dismounter;癫狂骑兵马刀
+8021400;Death Dismounter;死亡骑兵马刀
+8021500;Godslayer Dismounter;狩猎神祇骑兵马刀
+8021600;Frost Dismounter;冰霜骑兵马刀
+8021700;Aberrant Dismounter;异端骑兵马刀
+8021800;Bloodflame Dismounter;血焰骑兵马刀
+8021900;Rotten Dismounter;腐败骑兵马刀
+8022000;Storm Dismounter;风暴骑兵马刀
+8022100;Mystic Dismounter;密契骑兵马刀
+8030000;Bloodhound's Fang;猎犬长牙
+8030100;Bloodhound's Heavy Fang;厚重猎犬长牙
+8030200;Bloodhound's Keen Fang;锋利猎犬长牙
+8030300;Bloodhound's Quality Fang;优质猎犬长牙
+8030400;Bloodhound's Glint Fang;辉石猎犬长牙
+8030500;Bloodhound's Dragonkin Fang;龙人猎犬长牙
+8030600;Bloodhound's Gravity Fang;重力猎犬长牙
+8030700;Bloodhound's Flame Fang;火焰猎犬长牙
+8030800;Bloodhound's Golden Fang;黄金猎犬长牙
+8030900;Bloodhound's Draconic Fang;龙装猎犬长牙
+8031000;Bloodhound's Bestial Fang;野兽猎犬长牙
+8031100;Bloodhound's Night Fang;黑夜猎犬长牙
+8031200;Bloodhound's Lava Fang;熔岩猎犬长牙
+8040000;Magma Wyrm's Scalesword;土龙鳞剑
+8050000;Zamor Curved Sword;萨米尔弯刀
+8060000;Omen Cleaver;恶兆之子大刀
+8060100;Heavy Omen Cleaver;厚重恶兆之子大刀
+8060200;Keen Omen Cleaver;锋利恶兆之子大刀
+8060300;Quality Omen Cleaver;优质恶兆之子大刀
+8060400;Glint Omen Cleaver;辉石恶兆之子大刀
+8060500;Dragonkin Omen Cleaver;龙人恶兆之子大刀
+8060600;Gravity Omen Cleaver;重力恶兆之子大刀
+8060700;Flame Omen Cleaver;火焰恶兆之子大刀
+8060800;Golden Omen Cleaver;黄金恶兆之子大刀
+8060900;Draconic Omen Cleaver;龙装恶兆之子大刀
+8061000;Bestial Omen Cleaver;野兽恶兆之子大刀
+8061100;Night Omen Cleaver;黑夜恶兆之子大刀
+8061200;Lava Omen Cleaver;熔岩恶兆之子大刀
+8061300;Frenzy Omen Cleaver;癫狂恶兆之子大刀
+8061400;Death Omen Cleaver;死亡恶兆之子大刀
+8061500;Godslayer Omen Cleaver;狩猎神祇恶兆之子大刀
+8061600;Frost Omen Cleaver;冰霜恶兆之子大刀
+8061700;Aberrant Omen Cleaver;异端恶兆之子大刀
+8061800;Bloodflame Omen Cleaver;血焰恶兆之子大刀
+8061900;Rotten Omen Cleaver;腐败恶兆之子大刀
+8062000;Storm Omen Cleaver;风暴恶兆之子大刀
+8062100;Mystic Omen Cleaver;密契恶兆之子大刀
+8070000;Monk's Flameblade;习武修士火纹刀
+8070100;Monk's Heavy Flameblade;厚重习武修士火纹刀
+8070200;Monk's Keen Flameblade;锋利习武修士火纹刀
+8070300;Monk's Quality Flameblade;优质习武修士火纹刀
+8070400;Monk's Glint Flameblade;辉石习武修士火纹刀
+8070500;Monk's Dragonkin Flameblade;龙人习武修士火纹刀
+8070600;Monk's Gravity Flameblade;重力习武修士火纹刀
+8070700;Monk's Flame Flameblade;火焰习武修士火纹刀
+8070800;Monk's Golden Flameblade;黄金习武修士火纹刀
+8070900;Monk's Draconic Flameblade;龙装习武修士火纹刀
+8071000;Monk's Bestial Flameblade;野兽习武修士火纹刀
+8071100;Monk's Night Flameblade;黑夜习武修士火纹刀
+8071200;Monk's Lava Flameblade;熔岩习武修士火纹刀
+8080000;Beastman's Cleaver;兽人大弯刀
+8080100;Beastman's Heavy Cleaver;厚重兽人大弯刀
+8080200;Beastman's Keen Cleaver;锋利兽人大弯刀
+8080300;Beastman's Quality Cleaver;优质兽人大弯刀
+8080400;Beastman's Glint Cleaver;辉石兽人大弯刀
+8080500;Beastman's Dragonkin Cleaver;龙人兽人大弯刀
+8080600;Beastman's Gravity Cleaver;重力兽人大弯刀
+8080700;Beastman's Flame Cleaver;火焰兽人大弯刀
+8080800;Beastman's Golden Cleaver;黄金兽人大弯刀
+8080900;Beastman's Draconic Cleaver;龙装兽人大弯刀
+8081000;Beastman's Bestial Cleaver;野兽兽人大弯刀
+8081100;Beastman's Night Cleaver;黑夜兽人大弯刀
+8081200;Beastman's Lava Cleaver;熔岩兽人大弯刀
+8090000;Three Finger Blade;叁指刃
+8100000;Morgott's Cursed Sword;蒙葛特咒剑
+8110000;Holy Inferno Greatsword;神火大弯刀
+8110100;Heavy Holy Inferno Greatsword;厚重神火大弯刀
+8110200;Keen Holy Inferno Greatsword;锋利神火大弯刀
+8110300;Quality Holy Inferno Greatsword;优质神火大弯刀
+8110400;Glint Holy Inferno Greatsword;辉石神火大弯刀
+8110500;Dragonkin Holy Inferno Greatsword;龙人神火大弯刀
+8110600;Gravity Holy Inferno Greatsword;重力神火大弯刀
+8110700;Flame Holy Inferno Greatsword;火焰神火大弯刀
+8110800;Golden Holy Inferno Greatsword;黄金神火大弯刀
+8110900;Draconic Holy Inferno Greatsword;龙装神火大弯刀
+8111000;Bestial Holy Inferno Greatsword;野兽神火大弯刀
+8111100;Night Holy Inferno Greatsword;黑夜神火大弯刀
+8111200;Lava Holy Inferno Greatsword;熔岩神火大弯刀
+9000000;Uchigatana;打刀
+9000100;Heavy Uchigatana;厚重打刀
+9000200;Keen Uchigatana;锋利打刀
+9000300;Quality Uchigatana;优质打刀
+9000400;Glint Uchigatana;辉石打刀
+9000500;Dragonkin Uchigatana;龙人打刀
+9000600;Gravity Uchigatana;重力打刀
+9000700;Flame Uchigatana;火焰打刀
+9000800;Golden Uchigatana;黄金打刀
+9000900;Draconic Uchigatana;龙装打刀
+9001000;Bestial Uchigatana;野兽打刀
+9001100;Night Uchigatana;黑夜打刀
+9001200;Lava Uchigatana;熔岩打刀
+9001300;Frenzy Uchigatana;癫狂打刀
+9001400;Death Uchigatana;死亡打刀
+9001500;Godslayer Uchigatana;狩猎神祇打刀
+9001600;Frost Uchigatana;冰霜打刀
+9001700;Aberrant Uchigatana;异端打刀
+9001800;Bloodflame Uchigatana;血焰打刀
+9001900;Rotten Uchigatana;腐败打刀
+9002000;Storm Uchigatana;风暴打刀
+9002100;Mystic Uchigatana;密契打刀
+9010000;Nagakiba;长牙
+9010100;Heavy Nagakiba;厚重长牙
+9010200;Keen Nagakiba;锋利长牙
+9010300;Quality Nagakiba;优质长牙
+9010400;Glint Nagakiba;辉石长牙
+9010500;Dragonkin Nagakiba;龙人长牙
+9010600;Gravity Nagakiba;重力长牙
+9010700;Flame Nagakiba;火焰长牙
+9010800;Golden Nagakiba;黄金长牙
+9010900;Draconic Nagakiba;龙装长牙
+9011000;Bestial Nagakiba;野兽长牙
+9011100;Night Nagakiba;黑夜长牙
+9011200;Lava Nagakiba;熔岩长牙
+9011300;Frenzy Nagakiba;癫狂长牙
+9011400;Death Nagakiba;死亡长牙
+9011500;Godslayer Nagakiba;狩猎神祇长牙
+9011600;Frost Nagakiba;冰霜长牙
+9011700;Aberrant Nagakiba;异端长牙
+9011800;Bloodflame Nagakiba;血焰长牙
+9011900;Rotten Nagakiba;腐败长牙
+9012000;Storm Nagakiba;风暴长牙
+9012100;Mystic Nagakiba;密契长牙
+9020000;Hand of Malenia;玛莲妮亚的义手刀
+9030000;Meteoric Ore Blade;铁陨石刀
+9030100;Heavy Meteoric Ore Blade;厚重铁陨石刀
+9030200;Keen Meteoric Ore Blade;锋利铁陨石刀
+9030300;Quality Meteoric Ore Blade;优质铁陨石刀
+9030400;Glint Meteoric Ore Blade;辉石铁陨石刀
+9030500;Dragonkin Meteoric Ore Blade;龙人铁陨石刀
+9030600;Gravity Meteoric Ore Blade;重力铁陨石刀
+9030700;Flame Meteoric Ore Blade;火焰铁陨石刀
+9030800;Golden Meteoric Ore Blade;黄金铁陨石刀
+9030900;Draconic Meteoric Ore Blade;龙装铁陨石刀
+9031000;Bestial Meteoric Ore Blade;野兽铁陨石刀
+9031100;Night Meteoric Ore Blade;黑夜铁陨石刀
+9031200;Lava Meteoric Ore Blade;熔岩铁陨石刀
+9040000;Rivers of Blood;尸山血海
+9050000;Star Shadow;星辰之影
+9060000;Moonveil;名刀月隐
+9070000;Dragonscale Blade;龙鳞刀
+9080000;Serpentbone Blade;蛇骨刀
+9090000;Blade of Distant Light;彼岸灯火剑
+10000000;Twinblade;双头剑
+10000100;Heavy Twinblade;厚重双头剑
+10000200;Keen Twinblade;锋利双头剑
+10000300;Quality Twinblade;优质双头剑
+10000400;Glint Twinblade;辉石双头剑
+10000500;Dragonkin Twinblade;龙人双头剑
+10000600;Gravity Twinblade;重力双头剑
+10000700;Flame Twinblade;火焰双头剑
+10000800;Golden Twinblade;黄金双头剑
+10000900;Draconic Twinblade;龙装双头剑
+10001000;Bestial Twinblade;野兽双头剑
+10001100;Night Twinblade;黑夜双头剑
+10001200;Lava Twinblade;熔岩双头剑
+10001300;Frenzy Twinblade;癫狂双头剑
+10001400;Death Twinblade;死亡双头剑
+10001500;Godslayer Twinblade;狩猎神祇双头剑
+10001600;Frost Twinblade;冰霜双头剑
+10001700;Aberrant Twinblade;异端双头剑
+10001800;Bloodflame Twinblade;血焰双头剑
+10001900;Rotten Twinblade;腐败双头剑
+10002000;Storm Twinblade;风暴双头剑
+10002100;Mystic Twinblade;密契双头剑
+10010000;Godskin Peeler;神皮剥制剑
+10010100;Heavy Godskin Peeler;厚重神皮剥制剑
+10010200;Keen Godskin Peeler;锋利神皮剥制剑
+10010300;Quality Godskin Peeler;优质神皮剥制剑
+10010400;Glint Godskin Peeler;辉石神皮剥制剑
+10010500;Dragonkin Godskin Peeler;龙人神皮剥制剑
+10010600;Gravity Godskin Peeler;重力神皮剥制剑
+10010700;Flame Godskin Peeler;火焰神皮剥制剑
+10010800;Golden Godskin Peeler;黄金神皮剥制剑
+10010900;Draconic Godskin Peeler;龙装神皮剥制剑
+10011000;Bestial Godskin Peeler;野兽神皮剥制剑
+10011100;Night Godskin Peeler;黑夜神皮剥制剑
+10011200;Lava Godskin Peeler;熔岩神皮剥制剑
+10020000;Sulien's Razors;苏莲的剃刀
+10030000;Twinned Knight Swords;骑士双头剑
+10030100;Heavy Twinned Knight Swords;厚重骑士双头剑
+10030200;Keen Twinned Knight Swords;锋利骑士双头剑
+10030300;Quality Twinned Knight Swords;优质骑士双头剑
+10030400;Glint Twinned Knight Swords;辉石骑士双头剑
+10030500;Dragonkin Twinned Knight Swords;龙人骑士双头剑
+10030600;Gravity Twinned Knight Swords;重力骑士双头剑
+10030700;Flame Twinned Knight Swords;火焰骑士双头剑
+10030800;Golden Twinned Knight Swords;黄金骑士双头剑
+10030900;Draconic Twinned Knight Swords;龙装骑士双头剑
+10031000;Bestial Twinned Knight Swords;野兽骑士双头剑
+10031100;Night Twinned Knight Swords;黑夜骑士双头剑
+10031200;Lava Twinned Knight Swords;熔岩骑士双头剑
+10031300;Frenzy Twinned Knight Swords;癫狂骑士双头剑
+10031400;Death Twinned Knight Swords;死亡骑士双头剑
+10031500;Godslayer Twinned Knight Swords;狩猎神祇骑士双头剑
+10031600;Frost Twinned Knight Swords;冰霜骑士双头剑
+10031700;Aberrant Twinned Knight Swords;异端骑士双头剑
+10031800;Bloodflame Twinned Knight Swords;血焰骑士双头剑
+10031900;Rotten Twinned Knight Swords;腐败骑士双头剑
+10032000;Storm Twinned Knight Swords;风暴骑士双头剑
+10032100;Mystic Twinned Knight Swords;密契骑士双头剑
+10040000;Frozen Twinshards;冰结双头刃
+10050000;Eleonora's Poleblade;艾琉诺拉的双头刀
+10060000;Caimar's Battlestaff;凯玛战杖
+10070000;Godwyn's Cragblades;葛德文的岩石双刃
+10080000;Gargoyle's Twinblade;石像鬼双头剑
+10080100;Gargoyle's Heavy Twinblade;厚重石像鬼双头剑
+10080200;Gargoyle's Keen Twinblade;锋利石像鬼双头剑
+10080300;Gargoyle's Quality Twinblade;优质石像鬼双头剑
+10080400;Gargoyle's Glint Twinblade;辉石石像鬼双头剑
+10080500;Gargoyle's Dragonkin Twinblade;龙人石像鬼双头剑
+10080600;Gargoyle's Gravity Twinblade;重力石像鬼双头剑
+10080700;Gargoyle's Flame Twinblade;火焰石像鬼双头剑
+10080800;Gargoyle's Golden Twinblade;黄金石像鬼双头剑
+10080900;Gargoyle's Draconic Twinblade;龙装石像鬼双头剑
+10081000;Gargoyle's Bestial Twinblade;野兽石像鬼双头剑
+10081100;Gargoyle's Night Twinblade;黑夜石像鬼双头剑
+10081200;Gargoyle's Lava Twinblade;熔岩石像鬼双头剑
+10090000;Gargoyle's Black Blades;石像鬼黑双头剑
+10090100;Gargoyle's Heavy Black Blades;厚重石像鬼黑双头剑
+10090200;Gargoyle's Keen Black Blades;锋利石像鬼黑双头剑
+10090300;Gargoyle's Quality Black Blades;优质石像鬼黑双头剑
+10090400;Gargoyle's Glint Black Blades;辉石石像鬼黑双头剑
+10090500;Gargoyle's Dragonkin Black Blades;龙人石像鬼黑双头剑
+10090600;Gargoyle's Gravity Black Blades;重力石像鬼黑双头剑
+10090700;Gargoyle's Flame Black Blades;火焰石像鬼黑双头剑
+10090800;Gargoyle's Golden Black Blades;黄金石像鬼黑双头剑
+10090900;Gargoyle's Draconic Black Blades;龙装石像鬼黑双头剑
+10091000;Gargoyle's Bestial Black Blades;野兽石像鬼黑双头剑
+10091100;Gargoyle's Night Black Blades;黑夜石像鬼黑双头剑
+10091200;Gargoyle's Lava Black Blades;熔岩石像鬼黑双头剑
+10100000;Palm-Ax Twinblades;双头斧刃
+10110000;Gilded Quarterstaff;镀金长棍
+10200000;Galvanic Culling Blade;流电剔骨之刃
+10205000;Galvanic Culling Blade;流电剔骨之刃
+11000000;Mace;锤矛
+11000100;Heavy Mace;厚重锤矛
+11000200;Keen Mace;锋利锤矛
+11000300;Quality Mace;优质锤矛
+11000400;Glint Mace;辉石锤矛
+11000500;Dragonkin Mace;龙人锤矛
+11000600;Gravity Mace;重力锤矛
+11000700;Flame Mace;火焰锤矛
+11000800;Golden Mace;黄金锤矛
+11000900;Draconic Mace;龙装锤矛
+11001000;Bestial Mace;野兽锤矛
+11001100;Night Mace;黑夜锤矛
+11001200;Lava Mace;熔岩锤矛
+11001300;Frenzy Mace;癫狂锤矛
+11001400;Death Mace;死亡锤矛
+11001500;Godslayer Mace;狩猎神祇锤矛
+11001600;Frost Mace;冰霜锤矛
+11001700;Aberrant Mace;异端锤矛
+11001800;Bloodflame Mace;血焰锤矛
+11001900;Rotten Mace;腐败锤矛
+11002000;Storm Mace;风暴锤矛
+11002100;Mystic Mace;密契锤矛
+11010000;Club;棍棒
+11010100;Heavy Club;厚重棍棒
+11010200;Keen Club;锋利棍棒
+11010300;Quality Club;优质棍棒
+11010400;Glint Club;辉石棍棒
+11010500;Dragonkin Club;龙人棍棒
+11010600;Gravity Club;重力棍棒
+11010700;Flame Club;火焰棍棒
+11010800;Golden Club;黄金棍棒
+11010900;Draconic Club;龙装棍棒
+11011000;Bestial Club;野兽棍棒
+11011100;Night Club;黑夜棍棒
+11011200;Lava Club;熔岩棍棒
+11011300;Frenzy Club;癫狂棍棒
+11011400;Death Club;死亡棍棒
+11011500;Godslayer Club;狩猎神祇棍棒
+11011600;Frost Club;冰霜棍棒
+11011700;Aberrant Club;异端棍棒
+11011800;Bloodflame Club;血焰棍棒
+11011900;Rotten Club;腐败棍棒
+11012000;Storm Club;风暴棍棒
+11012100;Mystic Club;密契棍棒
+11020000;Leaden Maul;铅槌
+11030000;Curved Club;弯曲棍棒
+11030100;Heavy Curved Club;厚重弯曲棍棒
+11030200;Keen Curved Club;锋利弯曲棍棒
+11030300;Quality Curved Club;优质弯曲棍棒
+11030400;Glint Curved Club;辉石弯曲棍棒
+11030500;Dragonkin Curved Club;龙人弯曲棍棒
+11030600;Gravity Curved Club;重力弯曲棍棒
+11030700;Flame Curved Club;火焰弯曲棍棒
+11030800;Golden Curved Club;黄金弯曲棍棒
+11030900;Draconic Curved Club;龙装弯曲棍棒
+11031000;Bestial Curved Club;野兽弯曲棍棒
+11031100;Night Curved Club;黑夜弯曲棍棒
+11031200;Lava Curved Club;熔岩弯曲棍棒
+11031300;Frenzy Curved Club;癫狂弯曲棍棒
+11031400;Death Curved Club;死亡弯曲棍棒
+11031500;Godslayer Curved Club;狩猎神祇弯曲棍棒
+11031600;Frost Curved Club;冰霜弯曲棍棒
+11031700;Aberrant Curved Club;异端弯曲棍棒
+11031800;Bloodflame Curved Club;血焰弯曲棍棒
+11031900;Rotten Curved Club;腐败弯曲棍棒
+11032000;Storm Curved Club;风暴弯曲棍棒
+11032100;Mystic Curved Club;密契弯曲棍棒
+11040000;Warpick;战镐
+11040100;Heavy Warpick;厚重战镐
+11040200;Keen Warpick;锋利战镐
+11040300;Quality Warpick;优质战镐
+11040400;Glint Warpick;辉石战镐
+11040500;Dragonkin Warpick;龙人战镐
+11040600;Gravity Warpick;重力战镐
+11040700;Flame Warpick;火焰战镐
+11040800;Golden Warpick;黄金战镐
+11040900;Draconic Warpick;龙装战镐
+11041000;Bestial Warpick;野兽战镐
+11041100;Night Warpick;黑夜战镐
+11041200;Lava Warpick;熔岩战镐
+11041300;Frenzy Warpick;癫狂战镐
+11041400;Death Warpick;死亡战镐
+11041500;Godslayer Warpick;狩猎神祇战镐
+11041600;Frost Warpick;冰霜战镐
+11041700;Aberrant Warpick;异端战镐
+11041800;Bloodflame Warpick;血焰战镐
+11041900;Rotten Warpick;腐败战镐
+11042000;Storm Warpick;风暴战镐
+11042100;Mystic Warpick;密契战镐
+11050000;Morning Star;晨星锤
+11050100;Heavy Morning Star;厚重晨星锤
+11050200;Keen Morning Star;锋利晨星锤
+11050300;Quality Morning Star;优质晨星锤
+11050400;Glint Morning Star;辉石晨星锤
+11050500;Dragonkin Morning Star;龙人晨星锤
+11050600;Gravity Morning Star;重力晨星锤
+11050700;Flame Morning Star;火焰晨星锤
+11050800;Golden Morning Star;黄金晨星锤
+11050900;Draconic Morning Star;龙装晨星锤
+11051000;Bestial Morning Star;野兽晨星锤
+11051100;Night Morning Star;黑夜晨星锤
+11051200;Lava Morning Star;熔岩晨星锤
+11051300;Frenzy Morning Star;癫狂晨星锤
+11051400;Death Morning Star;死亡晨星锤
+11051500;Godslayer Morning Star;狩猎神祇晨星锤
+11051600;Frost Morning Star;冰霜晨星锤
+11051700;Aberrant Morning Star;异端晨星锤
+11051800;Bloodflame Morning Star;血焰晨星锤
+11051900;Rotten Morning Star;腐败晨星锤
+11052000;Storm Morning Star;风暴晨星锤
+11052100;Mystic Morning Star;密契晨星锤
+11060000;Varré's Bouquet;梵雷的花束
+11060100;Heavy Varré's Bouquet;厚重梵雷的花束
+11060200;Keen Varré's Bouquet;锋利梵雷的花束
+11060300;Quality Varré's Bouquet;优质梵雷的花束
+11060400;Glint Varré's Bouquet;辉石梵雷的花束
+11060500;Dragonkin Varré's Bouquet;龙人梵雷的花束
+11060600;Gravity Varré's Bouquet;重力梵雷的花束
+11060700;Flame Varré's Bouquet;火焰梵雷的花束
+11060800;Golden Varré's Bouquet;黄金梵雷的花束
+11060900;Draconic Varré's Bouquet;龙装梵雷的花束
+11061000;Bestial Varré's Bouquet;野兽梵雷的花束
+11061100;Night Varré's Bouquet;黑夜梵雷的花束
+11061200;Lava Varré's Bouquet;熔岩梵雷的花束
+11070000;Spiked Club;兽牙棒
+11070100;Heavy Spiked Club;厚重兽牙棒
+11070200;Keen Spiked Club;锋利兽牙棒
+11070300;Quality Spiked Club;优质兽牙棒
+11070400;Glint Spiked Club;辉石兽牙棒
+11070500;Dragonkin Spiked Club;龙人兽牙棒
+11070600;Gravity Spiked Club;重力兽牙棒
+11070700;Flame Spiked Club;火焰兽牙棒
+11070800;Golden Spiked Club;黄金兽牙棒
+11070900;Draconic Spiked Club;龙装兽牙棒
+11071000;Bestial Spiked Club;野兽兽牙棒
+11071100;Night Spiked Club;黑夜兽牙棒
+11071200;Lava Spiked Club;熔岩兽牙棒
+11071300;Frenzy Spiked Club;癫狂兽牙棒
+11071400;Death Spiked Club;死亡兽牙棒
+11071500;Godslayer Spiked Club;狩猎神祇兽牙棒
+11071600;Frost Spiked Club;冰霜兽牙棒
+11071700;Aberrant Spiked Club;异端兽牙棒
+11071800;Bloodflame Spiked Club;血焰兽牙棒
+11071900;Rotten Spiked Club;腐败兽牙棒
+11072000;Storm Spiked Club;风暴兽牙棒
+11072100;Mystic Spiked Club;密契兽牙棒
+11080000;Hammer;石槌
+11080100;Heavy Hammer;厚重石槌
+11080200;Keen Hammer;锋利石槌
+11080300;Quality Hammer;优质石槌
+11080400;Glint Hammer;辉石石槌
+11080500;Dragonkin Hammer;龙人石槌
+11080600;Gravity Hammer;重力石槌
+11080700;Flame Hammer;火焰石槌
+11080800;Golden Hammer;黄金石槌
+11080900;Draconic Hammer;龙装石槌
+11081000;Bestial Hammer;野兽石槌
+11081100;Night Hammer;黑夜石槌
+11081200;Lava Hammer;熔岩石槌
+11081300;Frenzy Hammer;癫狂石槌
+11081400;Death Hammer;死亡石槌
+11081500;Godslayer Hammer;狩猎神祇石槌
+11081600;Frost Hammer;冰霜石槌
+11081700;Aberrant Hammer;异端石槌
+11081800;Bloodflame Hammer;血焰石槌
+11081900;Rotten Hammer;腐败石槌
+11082000;Storm Hammer;风暴石槌
+11082100;Mystic Hammer;密契石槌
+11090000;Monk's Flamemace;习武修士火纹锤
+11090100;Monk's Heavy Flamemace;厚重习武修士火纹锤
+11090200;Monk's Keen Flamemace;锋利习武修士火纹锤
+11090300;Monk's Quality Flamemace;优质习武修士火纹锤
+11090400;Monk's Glint Flamemace;辉石习武修士火纹锤
+11090500;Monk's Dragonkin Flamemace;龙人习武修士火纹锤
+11090600;Monk's Gravity Flamemace;重力习武修士火纹锤
+11090700;Monk's Flame Flamemace;火焰习武修士火纹锤
+11090800;Monk's Golden Flamemace;黄金习武修士火纹锤
+11090900;Monk's Draconic Flamemace;龙装习武修士火纹锤
+11091000;Monk's Bestial Flamemace;野兽习武修士火纹锤
+11091100;Monk's Night Flamemace;黑夜习武修士火纹锤
+11091200;Monk's Lava Flamemace;熔岩习武修士火纹锤
+11100000;Envoy's Horn;众使者的笛子
+11110000;Scepter of the All-Knowing;百智权杖
+11120000;Nox Flowing Hammer;诺克斯流体锤
+11130000;Ringed Finger;戒指指头
+11140000;Stone Club;石棍棒
+11140100;Heavy Stone Club;厚重石棍棒
+11140200;Keen Stone Club;锋利石棍棒
+11140300;Quality Stone Club;优质石棍棒
+11140400;Glint Stone Club;辉石石棍棒
+11140500;Dragonkin Stone Club;龙人石棍棒
+11140600;Gravity Stone Club;重力石棍棒
+11140700;Flame Stone Club;火焰石棍棒
+11140800;Golden Stone Club;黄金石棍棒
+11140900;Draconic Stone Club;龙装石棍棒
+11141000;Bestial Stone Club;野兽石棍棒
+11141100;Night Stone Club;黑夜石棍棒
+11141200;Lava Stone Club;熔岩石棍棒
+11141300;Frenzy Stone Club;癫狂石棍棒
+11141400;Death Stone Club;死亡石棍棒
+11141500;Godslayer Stone Club;狩猎神祇石棍棒
+11141600;Frost Stone Club;冰霜石棍棒
+11141700;Aberrant Stone Club;异端石棍棒
+11141800;Bloodflame Stone Club;血焰石棍棒
+11141900;Rotten Stone Club;腐败石棍棒
+11142000;Storm Stone Club;风暴石棍棒
+11142100;Mystic Stone Club;密契石棍棒
+11150000;Marika's Hammer;玛莉卡的石槌
+11160000;Zamor Star Mace;萨米尔星槌
+11160100;Heavy Marika's Hammer;厚重神父的玛莉卡槌
+11160200;Keen Marika's Hammer;锋利神父的玛莉卡槌
+11160300;Quality Marika's Hammer;优质神父的玛莉卡槌
+11160400;Glint Marika's Hammer;辉石玛莉卡槌
+11160500;Dragonkin Marika's Hammer;龙人玛莉卡槌
+11160600;Gravity Marika's Hammer;重力玛莉卡槌
+11160700;Flame Marika's Hammer;火焰玛莉卡槌
+11160800;Golden Marika's Hammer;黄金玛莉卡槌
+11160900;Draconic Marika's Hammer;龙装玛莉卡槌
+11161000;Bestial Marika's Hammer;野兽玛莉卡槌
+11161100;Night Marika's Hammer;黑夜玛莉卡槌
+11161200;Lava Marika's Hammer;熔岩玛莉卡槌
+11180000;Hammer of Virtue;高尚之锤
+11190000;Tricia's Pomander;托莉夏香炉
+11191000;Tricia's Pomander;托莉夏香炉
+11192000;Tricia's Pomander;托莉夏香炉
+11193000;Tricia's Pomander;托莉夏香炉
+11200000;Prime Marika's Hammer;玛莉卡的石槌·原初
+12000000;Large Club;大棍棒
+12000100;Heavy Large Club;厚重大棍棒
+12000200;Keen Large Club;锋利大棍棒
+12000300;Quality Large Club;优质大棍棒
+12000400;Glint Large Club;辉石大棍棒
+12000500;Dragonkin Large Club;龙人大棍棒
+12000600;Gravity Large Club;重力大棍棒
+12000700;Flame Large Club;火焰大棍棒
+12000800;Golden Large Club;黄金大棍棒
+12000900;Draconic Large Club;龙装大棍棒
+12001000;Bestial Large Club;野兽大棍棒
+12001100;Night Large Club;黑夜大棍棒
+12001200;Lava Large Club;熔岩大棍棒
+12001300;Frenzy Large Club;癫狂大棍棒
+12001400;Death Large Club;死亡大棍棒
+12001500;Godslayer Large Club;狩猎神祇大棍棒
+12001600;Frost Large Club;冰霜大棍棒
+12001700;Aberrant Large Club;异端大棍棒
+12001800;Bloodflame Large Club;血焰大棍棒
+12001900;Rotten Large Club;腐败大棍棒
+12002000;Storm Large Club;风暴大棍棒
+12002100;Mystic Large Club;密契大棍棒
+12010000;Greathorn Hammer;大角槌
+12010100;Heavy Greathorn Hammer;厚重大角槌
+12010200;Keen Greathorn Hammer;锋利大角槌
+12010300;Quality Greathorn Hammer;优质大角槌
+12010400;Glint Greathorn Hammer;辉石大角槌
+12010500;Dragonkin Greathorn Hammer;龙人大角槌
+12010600;Gravity Greathorn Hammer;重力大角槌
+12010700;Flame Greathorn Hammer;火焰大角槌
+12010800;Golden Greathorn Hammer;黄金大角槌
+12010900;Draconic Greathorn Hammer;龙装大角槌
+12011000;Bestial Greathorn Hammer;野兽大角槌
+12011100;Night Greathorn Hammer;黑夜大角槌
+12011200;Lava Greathorn Hammer;熔岩大角槌
+12020000;Battle Hammer;斗技锤
+12020100;Heavy Battle Hammer;厚重斗技锤
+12020200;Keen Battle Hammer;锋利斗技锤
+12020300;Quality Battle Hammer;优质斗技锤
+12020400;Glint Battle Hammer;辉石斗技锤
+12020500;Dragonkin Battle Hammer;龙人斗技锤
+12020600;Gravity Battle Hammer;重力斗技锤
+12020700;Flame Battle Hammer;火焰斗技锤
+12020800;Golden Battle Hammer;黄金斗技锤
+12020900;Draconic Battle Hammer;龙装斗技锤
+12021000;Bestial Battle Hammer;野兽斗技锤
+12021100;Night Battle Hammer;黑夜斗技锤
+12021200;Lava Battle Hammer;熔岩斗技锤
+12021300;Frenzy Battle Hammer;癫狂斗技锤
+12021400;Death Battle Hammer;死亡斗技锤
+12021500;Godslayer Battle Hammer;狩猎神祇斗技锤
+12021600;Frost Battle Hammer;冰霜斗技锤
+12021700;Aberrant Battle Hammer;异端斗技锤
+12021800;Bloodflame Battle Hammer;血焰斗技锤
+12021900;Rotten Battle Hammer;腐败斗技锤
+12022000;Storm Battle Hammer;风暴斗技锤
+12022100;Mystic Battle Hammer;密契斗技锤
+12030000;Underworld Greatmace;地底大锤矛
+12040000;Crimson Briar-Bough;深红棘枝
+12060000;Great Mace;巨型锤矛
+12060100;Heavy Great Mace;厚重巨型锤矛
+12060200;Keen Great Mace;锋利巨型锤矛
+12060300;Quality Great Mace;优质巨型锤矛
+12060400;Glint Great Mace;辉石巨型锤矛
+12060500;Dragonkin Great Mace;龙人巨型锤矛
+12060600;Gravity Great Mace;重力巨型锤矛
+12060700;Flame Great Mace;火焰巨型锤矛
+12060800;Golden Great Mace;黄金巨型锤矛
+12060900;Draconic Great Mace;龙装巨型锤矛
+12061000;Bestial Great Mace;野兽巨型锤矛
+12061100;Night Great Mace;黑夜巨型锤矛
+12061200;Lava Great Mace;熔岩巨型锤矛
+12061300;Frenzy Great Mace;癫狂巨型锤矛
+12061400;Death Great Mace;死亡巨型锤矛
+12061500;Godslayer Great Mace;狩猎神祇巨型锤矛
+12061600;Frost Great Mace;冰霜巨型锤矛
+12061700;Aberrant Great Mace;异端巨型锤矛
+12061800;Bloodflame Great Mace;血焰巨型锤矛
+12061900;Rotten Great Mace;腐败巨型锤矛
+12062000;Storm Great Mace;风暴巨型锤矛
+12062100;Mystic Great Mace;密契巨型锤矛
+12070000;Sigur's Greatmace;西古尔大锤矛
+12080000;Curved Great Club;弯曲大棍棒
+12080100;Heavy Curved Great Club;厚重弯曲大棍棒
+12080200;Keen Curved Great Club;锋利弯曲大棍棒
+12080300;Quality Curved Great Club;优质弯曲大棍棒
+12080400;Glint Curved Great Club;辉石弯曲大棍棒
+12080500;Dragonkin Curved Great Club;龙人弯曲大棍棒
+12080600;Gravity Curved Great Club;重力弯曲大棍棒
+12080700;Flame Curved Great Club;火焰弯曲大棍棒
+12080800;Golden Curved Great Club;黄金弯曲大棍棒
+12080900;Draconic Curved Great Club;龙装弯曲大棍棒
+12081000;Bestial Curved Great Club;野兽弯曲大棍棒
+12081100;Night Curved Great Club;黑夜弯曲大棍棒
+12081200;Lava Curved Great Club;熔岩弯曲大棍棒
+12081300;Frenzy Curved Great Club;癫狂弯曲大棍棒
+12081400;Death Curved Great Club;死亡弯曲大棍棒
+12081500;Godslayer Curved Great Club;狩猎神祇弯曲大棍棒
+12081600;Frost Curved Great Club;冰霜弯曲大棍棒
+12081700;Aberrant Curved Great Club;异端弯曲大棍棒
+12081800;Bloodflame Curved Great Club;血焰弯曲大棍棒
+12081900;Rotten Curved Great Club;腐败弯曲大棍棒
+12082000;Storm Curved Great Club;风暴弯曲大棍棒
+12082100;Mystic Curved Great Club;密契弯曲大棍棒
+12090000;Einar's Hammer;艾纳尔之锤
+12130000;Celebrant's Skull;庆典大头盖骨
+12130100;Celebrant's Heavy Skull;厚重庆典大头盖骨
+12130200;Celebrant's Keen Skull;锋利庆典大头盖骨
+12130300;Celebrant's Quality Skull;优质庆典大头盖骨
+12130400;Celebrant's Glint Skull;辉石庆典大头盖骨
+12130500;Celebrant's Dragonkin Skull;龙人庆典大头盖骨
+12130600;Celebrant's Gravity Skull;重力庆典大头盖骨
+12130700;Celebrant's Flame Skull;火焰庆典大头盖骨
+12130800;Celebrant's Golden Skull;黄金庆典大头盖骨
+12130900;Celebrant's Draconic Skull;龙装庆典大头盖骨
+12131000;Celebrant's Bestial Skull;野兽庆典大头盖骨
+12131100;Celebrant's Night Skull;黑夜庆典大头盖骨
+12131200;Celebrant's Lava Skull;熔岩庆典大头盖骨
+12140000;Pickaxe;十字镐
+12140100;Heavy Pickaxe;厚重十字镐
+12140200;Keen Pickaxe;锋利十字镐
+12140300;Quality Pickaxe;优质十字镐
+12140400;Glint Pickaxe;辉石十字镐
+12140500;Dragonkin Pickaxe;龙人十字镐
+12140600;Gravity Pickaxe;重力十字镐
+12140700;Flame Pickaxe;火焰十字镐
+12140800;Golden Pickaxe;黄金十字镐
+12140900;Draconic Pickaxe;龙装十字镐
+12141000;Bestial Pickaxe;野兽十字镐
+12141100;Night Pickaxe;黑夜十字镐
+12141200;Lava Pickaxe;熔岩十字镐
+12141300;Frenzy Pickaxe;癫狂十字镐
+12141400;Death Pickaxe;死亡十字镐
+12141500;Godslayer Pickaxe;狩猎神祇十字镐
+12141600;Frost Pickaxe;冰霜十字镐
+12141700;Aberrant Pickaxe;异端十字镐
+12141800;Bloodflame Pickaxe;血焰十字镐
+12141900;Rotten Pickaxe;腐败十字镐
+12142000;Storm Pickaxe;风暴十字镐
+12142100;Mystic Pickaxe;密契十字镐
+12150000;Beastclaw Greathammer;兽爪大锤
+12160000;Envoy's Long Horn;众使者的长笛子
+12170000;Cranial Vessel Candlestand;尊容烛台
+12180000;Great Stars;巨星锤
+12180100;Heavy Great Stars;厚重巨星锤
+12180200;Keen Great Stars;锋利巨星锤
+12180300;Quality Great Stars;优质巨星锤
+12180400;Glint Great Stars;辉石巨星锤
+12180500;Dragonkin Great Stars;龙人巨星锤
+12180600;Gravity Great Stars;重力巨星锤
+12180700;Flame Great Stars;火焰巨星锤
+12180800;Golden Great Stars;黄金巨星锤
+12180900;Draconic Great Stars;龙装巨星锤
+12181000;Bestial Great Stars;野兽巨星锤
+12181100;Night Great Stars;黑夜巨星锤
+12181200;Lava Great Stars;熔岩巨星锤
+12181300;Frenzy Great Stars;癫狂巨星锤
+12181400;Death Great Stars;死亡巨星锤
+12181500;Godslayer Great Stars;狩猎神祇巨星锤
+12181600;Frost Great Stars;冰霜巨星锤
+12181700;Aberrant Great Stars;异端巨星锤
+12181800;Bloodflame Great Stars;血焰巨星锤
+12181900;Rotten Great Stars;腐败巨星锤
+12182000;Storm Great Stars;风暴巨星锤
+12182100;Mystic Great Stars;密契巨星锤
+12190000;Brick Hammer;砌石槌
+12190100;Heavy Brick Hammer;厚重砌石槌
+12190200;Keen Brick Hammer;锋利砌石槌
+12190300;Quality Brick Hammer;优质砌石槌
+12190400;Glint Brick Hammer;辉石砌石槌
+12190500;Dragonkin Brick Hammer;龙人砌石槌
+12190600;Gravity Brick Hammer;重力砌石槌
+12190700;Flame Brick Hammer;火焰砌石槌
+12190800;Golden Brick Hammer;黄金砌石槌
+12190900;Draconic Brick Hammer;龙装砌石槌
+12191000;Bestial Brick Hammer;野兽砌石槌
+12191100;Night Brick Hammer;黑夜砌石槌
+12191200;Lava Brick Hammer;熔岩砌石槌
+12191300;Frenzy Brick Hammer;癫狂砌石槌
+12191400;Death Brick Hammer;死亡砌石槌
+12191500;Godslayer Brick Hammer;狩猎神祇砌石槌
+12191600;Frost Brick Hammer;冰霜砌石槌
+12191700;Aberrant Brick Hammer;异端砌石槌
+12191800;Bloodflame Brick Hammer;血焰砌石槌
+12191900;Rotten Brick Hammer;腐败砌石槌
+12192000;Storm Brick Hammer;风暴砌石槌
+12192100;Mystic Brick Hammer;密契砌石槌
+12200000;Devourer's Scepter;吞世权杖
+12210000;Rotten Battle Hammer;腐败斗技锤
+12210100;Heavy Rotten Battle Hammer;厚重腐败斗技锤
+12210200;Keen Rotten Battle Hammer;锋利腐败斗技锤
+12210300;Quality Rotten Battle Hammer;优质腐败斗技锤
+12210400;Glint Rotten Battle Hammer;辉石腐败斗技锤
+12210500;Dragonkin Rotten Battle Hammer;龙人腐败斗技锤
+12210600;Gravity Rotten Battle Hammer;重力腐败斗技锤
+12210700;Flame Rotten Battle Hammer;火焰腐败斗技锤
+12210800;Golden Rotten Battle Hammer;黄金腐败斗技锤
+12210900;Draconic Rotten Battle Hammer;龙装腐败斗技锤
+12211000;Bestial Rotten Battle Hammer;野兽腐败斗技锤
+12211100;Night Rotten Battle Hammer;黑夜腐败斗技锤
+12211200;Lava Rotten Battle Hammer;熔岩腐败斗技锤
+13000000;Nightrider Flail;黑夜骑兵连枷
+13000100;Heavy Nightrider Flail;厚重黑夜骑兵连枷
+13000200;Keen Nightrider Flail;锋利黑夜骑兵连枷
+13000300;Quality Nightrider Flail;优质黑夜骑兵连枷
+13000400;Glint Nightrider Flail;辉石黑夜骑兵连枷
+13000500;Dragonkin Nightrider Flail;龙人黑夜骑兵连枷
+13000600;Gravity Nightrider Flail;重力黑夜骑兵连枷
+13000700;Flame Nightrider Flail;火焰黑夜骑兵连枷
+13000800;Golden Nightrider Flail;黄金黑夜骑兵连枷
+13000900;Draconic Nightrider Flail;龙装黑夜骑兵连枷
+13001000;Bestial Nightrider Flail;野兽黑夜骑兵连枷
+13001100;Night Nightrider Flail;黑夜黑夜骑兵连枷
+13001200;Lava Nightrider Flail;熔岩黑夜骑兵连枷
+13001300;Frenzy Nightrider Flail;癫狂黑夜骑兵连枷
+13001400;Death Nightrider Flail;死亡黑夜骑兵连枷
+13001500;Godslayer Nightrider Flail;狩猎神祇黑夜骑兵连枷
+13001600;Frost Nightrider Flail;冰霜黑夜骑兵连枷
+13001700;Aberrant Nightrider Flail;异端黑夜骑兵连枷
+13001800;Bloodflame Nightrider Flail;血焰黑夜骑兵连枷
+13001900;Rotten Nightrider Flail;腐败黑夜骑兵连枷
+13002000;Storm Nightrider Flail;风暴黑夜骑兵连枷
+13002100;Mystic Nightrider Flail;密契黑夜骑兵连枷
+13010000;Flail;连枷
+13010100;Heavy Flail;厚重连枷
+13010200;Keen Flail;锋利连枷
+13010300;Quality Flail;优质连枷
+13010400;Glint Flail;辉石连枷
+13010500;Dragonkin Flail;龙人连枷
+13010600;Gravity Flail;重力连枷
+13010700;Flame Flail;火焰连枷
+13010800;Golden Flail;黄金连枷
+13010900;Draconic Flail;龙装连枷
+13011000;Bestial Flail;野兽连枷
+13011100;Night Flail;黑夜连枷
+13011200;Lava Flail;熔岩连枷
+13011300;Frenzy Flail;癫狂连枷
+13011400;Death Flail;死亡连枷
+13011500;Godslayer Flail;狩猎神祇连枷
+13011600;Frost Flail;冰霜连枷
+13011700;Aberrant Flail;异端连枷
+13011800;Bloodflame Flail;血焰连枷
+13011900;Rotten Flail;腐败连枷
+13012000;Storm Flail;风暴连枷
+13012100;Mystic Flail;密契连枷
+13020000;Family Heads;家族头连枷
+13030000;Bastard's Stars;弃子的繁星
+13040000;Chainlink Flail;铁块连枷
+13040100;Heavy Chainlink Flail;厚重铁块连枷
+13040200;Keen Chainlink Flail;锋利铁块连枷
+13040300;Quality Chainlink Flail;优质铁块连枷
+13040400;Glint Chainlink Flail;辉石铁块连枷
+13040500;Dragonkin Chainlink Flail;龙人铁块连枷
+13040600;Gravity Chainlink Flail;重力铁块连枷
+13040700;Flame Chainlink Flail;火焰铁块连枷
+13040800;Golden Chainlink Flail;黄金铁块连枷
+13040900;Draconic Chainlink Flail;龙装铁块连枷
+13041000;Bestial Chainlink Flail;野兽铁块连枷
+13041100;Night Chainlink Flail;黑夜铁块连枷
+13041200;Lava Chainlink Flail;熔岩铁块连枷
+13041300;Frenzy Chainlink Flail;癫狂铁块连枷
+13041400;Death Chainlink Flail;死亡铁块连枷
+13041500;Godslayer Chainlink Flail;狩猎神祇铁块连枷
+13041600;Frost Chainlink Flail;冰霜铁块连枷
+13041700;Aberrant Chainlink Flail;异端铁块连枷
+13041800;Bloodflame Chainlink Flail;血焰铁块连枷
+13041900;Rotten Chainlink Flail;腐败铁块连枷
+13042000;Storm Chainlink Flail;风暴铁块连枷
+13042100;Mystic Chainlink Flail;密契铁块连枷
+13050000;Mohgwyn Censer;蒙格温香炉
+13060000;Seething Flail;沸腾连枷
+14000000;Battle Axe;战斧
+14000100;Heavy Battle Axe;厚重战斧
+14000200;Keen Battle Axe;锋利战斧
+14000300;Quality Battle Axe;优质战斧
+14000400;Glint Battle Axe;辉石战斧
+14000500;Dragonkin Battle Axe;龙人战斧
+14000600;Gravity Battle Axe;重力战斧
+14000700;Flame Battle Axe;火焰战斧
+14000800;Golden Battle Axe;黄金战斧
+14000900;Draconic Battle Axe;龙装战斧
+14001000;Bestial Battle Axe;野兽战斧
+14001100;Night Battle Axe;黑夜战斧
+14001200;Lava Battle Axe;熔岩战斧
+14001300;Frenzy Battle Axe;癫狂战斧
+14001400;Death Battle Axe;死亡战斧
+14001500;Godslayer Battle Axe;狩猎神祇战斧
+14001600;Frost Battle Axe;冰霜战斧
+14001700;Aberrant Battle Axe;异端战斧
+14001800;Bloodflame Battle Axe;血焰战斧
+14001900;Rotten Battle Axe;腐败战斧
+14002000;Storm Battle Axe;风暴战斧
+14002100;Mystic Battle Axe;密契战斧
+14010000;Forked Hatchet;分岔手斧
+14010100;Heavy Forked Hatchet;厚重分岔手斧
+14010200;Keen Forked Hatchet;锋利分岔手斧
+14010300;Quality Forked Hatchet;优质分岔手斧
+14010400;Glint Forked Hatchet;辉石分岔手斧
+14010500;Dragonkin Forked Hatchet;龙人分岔手斧
+14010600;Gravity Forked Hatchet;重力分岔手斧
+14010700;Flame Forked Hatchet;火焰分岔手斧
+14010800;Golden Forked Hatchet;黄金分岔手斧
+14010900;Draconic Forked Hatchet;龙装分岔手斧
+14011000;Bestial Forked Hatchet;野兽分岔手斧
+14011100;Night Forked Hatchet;黑夜分岔手斧
+14011200;Lava Forked Hatchet;熔岩分岔手斧
+14011300;Frenzy Forked Hatchet;癫狂分岔手斧
+14011400;Death Forked Hatchet;死亡分岔手斧
+14011500;Godslayer Forked Hatchet;狩猎神祇分岔手斧
+14011600;Frost Forked Hatchet;冰霜分岔手斧
+14011700;Aberrant Forked Hatchet;异端分岔手斧
+14011800;Bloodflame Forked Hatchet;血焰分岔手斧
+14011900;Rotten Forked Hatchet;腐败分岔手斧
+14012000;Storm Forked Hatchet;风暴分岔手斧
+14012100;Mystic Forked Hatchet;密契分岔手斧
+14020000;Hand Axe;手斧
+14020100;Heavy Hand Axe;厚重手斧
+14020200;Keen Hand Axe;锋利手斧
+14020300;Quality Hand Axe;优质手斧
+14020400;Glint Hand Axe;辉石手斧
+14020500;Dragonkin Hand Axe;龙人手斧
+14020600;Gravity Hand Axe;重力手斧
+14020700;Flame Hand Axe;火焰手斧
+14020800;Golden Hand Axe;黄金手斧
+14020900;Draconic Hand Axe;龙装手斧
+14021000;Bestial Hand Axe;野兽手斧
+14021100;Night Hand Axe;黑夜手斧
+14021200;Lava Hand Axe;熔岩手斧
+14021300;Frenzy Hand Axe;癫狂手斧
+14021400;Death Hand Axe;死亡手斧
+14021500;Godslayer Hand Axe;狩猎神祇手斧
+14021600;Frost Hand Axe;冰霜手斧
+14021700;Aberrant Hand Axe;异端手斧
+14021800;Bloodflame Hand Axe;血焰手斧
+14021900;Rotten Hand Axe;腐败手斧
+14022000;Storm Hand Axe;风暴手斧
+14022100;Mystic Hand Axe;密契手斧
+14030000;Jawbone Axe;颚齿斧
+14030100;Heavy Jawbone Axe;厚重颚齿斧
+14030200;Keen Jawbone Axe;锋利颚齿斧
+14030300;Quality Jawbone Axe;优质颚齿斧
+14030400;Glint Jawbone Axe;辉石颚齿斧
+14030500;Dragonkin Jawbone Axe;龙人颚齿斧
+14030600;Gravity Jawbone Axe;重力颚齿斧
+14030700;Flame Jawbone Axe;火焰颚齿斧
+14030800;Golden Jawbone Axe;黄金颚齿斧
+14030900;Draconic Jawbone Axe;龙装颚齿斧
+14031000;Bestial Jawbone Axe;野兽颚齿斧
+14031100;Night Jawbone Axe;黑夜颚齿斧
+14031200;Lava Jawbone Axe;熔岩颚齿斧
+14040000;Iron Cleaver;铁柴刀
+14040100;Heavy Iron Cleaver;厚重铁柴刀
+14040200;Keen Iron Cleaver;锋利铁柴刀
+14040300;Quality Iron Cleaver;优质铁柴刀
+14040400;Glint Iron Cleaver;辉石铁柴刀
+14040500;Dragonkin Iron Cleaver;龙人铁柴刀
+14040600;Gravity Iron Cleaver;重力铁柴刀
+14040700;Flame Iron Cleaver;火焰铁柴刀
+14040800;Golden Iron Cleaver;黄金铁柴刀
+14040900;Draconic Iron Cleaver;龙装铁柴刀
+14041000;Bestial Iron Cleaver;野兽铁柴刀
+14041100;Night Iron Cleaver;黑夜铁柴刀
+14041200;Lava Iron Cleaver;熔岩铁柴刀
+14041300;Frenzy Iron Cleaver;癫狂铁柴刀
+14041400;Death Iron Cleaver;死亡铁柴刀
+14041500;Godslayer Iron Cleaver;狩猎神祇铁柴刀
+14041600;Frost Iron Cleaver;冰霜铁柴刀
+14041700;Aberrant Iron Cleaver;异端铁柴刀
+14041800;Bloodflame Iron Cleaver;血焰铁柴刀
+14041900;Rotten Iron Cleaver;腐败铁柴刀
+14042000;Storm Iron Cleaver;风暴铁柴刀
+14042100;Mystic Iron Cleaver;密契铁柴刀
+14050000;Ripple Blade;波纹剑
+14050100;Heavy Ripple Blade;厚重波纹剑
+14050200;Keen Ripple Blade;锋利波纹剑
+14050300;Quality Ripple Blade;优质波纹剑
+14050400;Glint Ripple Blade;辉石波纹剑
+14050500;Dragonkin Ripple Blade;龙人波纹剑
+14050600;Gravity Ripple Blade;重力波纹剑
+14050700;Flame Ripple Blade;火焰波纹剑
+14050800;Golden Ripple Blade;黄金波纹剑
+14050900;Draconic Ripple Blade;龙装波纹剑
+14051000;Bestial Ripple Blade;野兽波纹剑
+14051100;Night Ripple Blade;黑夜波纹剑
+14051200;Lava Ripple Blade;熔岩波纹剑
+14060000;Celebrant's Cleaver;庆典柴刀
+14060100;Celebrant's Heavy Cleaver;厚重庆典柴刀
+14060200;Celebrant's Keen Cleaver;锋利庆典柴刀
+14060300;Celebrant's Quality Cleaver;优质庆典柴刀
+14060400;Celebrant's Glint Cleaver;辉石庆典柴刀
+14060500;Celebrant's Dragonkin Cleaver;龙人庆典柴刀
+14060600;Celebrant's Gravity Cleaver;重力庆典柴刀
+14060700;Celebrant's Flame Cleaver;火焰庆典柴刀
+14060800;Celebrant's Golden Cleaver;黄金庆典柴刀
+14060900;Celebrant's Draconic Cleaver;龙装庆典柴刀
+14061000;Celebrant's Bestial Cleaver;野兽庆典柴刀
+14061100;Celebrant's Night Cleaver;黑夜庆典柴刀
+14061200;Celebrant's Lava Cleaver;熔岩庆典柴刀
+14070000;Glintstone Cleaver;辉石切割刃
+14080000;Icerind Hatchet;冻壳斧
+14090000;Axe of Epiphany;显圣之斧
+14100000;Highland Axe;高地斧
+14100100;Heavy Highland Axe;厚重高地斧
+14100200;Keen Highland Axe;锋利高地斧
+14100300;Quality Highland Axe;优质高地斧
+14100400;Glint Highland Axe;辉石高地斧
+14100500;Dragonkin Highland Axe;龙人高地斧
+14100600;Gravity Highland Axe;重力高地斧
+14100700;Flame Highland Axe;火焰高地斧
+14100800;Golden Highland Axe;黄金高地斧
+14100900;Draconic Highland Axe;龙装高地斧
+14101000;Bestial Highland Axe;野兽高地斧
+14101100;Night Highland Axe;黑夜高地斧
+14101200;Lava Highland Axe;熔岩高地斧
+14101300;Frenzy Highland Axe;癫狂高地斧
+14101400;Death Highland Axe;死亡高地斧
+14101500;Godslayer Highland Axe;狩猎神祇高地斧
+14101600;Frost Highland Axe;冰霜高地斧
+14101700;Aberrant Highland Axe;异端高地斧
+14101800;Bloodflame Highland Axe;血焰高地斧
+14101900;Rotten Highland Axe;腐败高地斧
+14102000;Storm Highland Axe;风暴高地斧
+14102100;Mystic Highland Axe;密契高地斧
+14110000;Sacrificial Axe;活祭品斧
+14110100;Heavy Sacrificial Axe;厚重活祭品斧
+14110200;Keen Sacrificial Axe;锋利活祭品斧
+14110300;Quality Sacrificial Axe;优质活祭品斧
+14110400;Glint Sacrificial Axe;辉石活祭品斧
+14110500;Dragonkin Sacrificial Axe;龙人活祭品斧
+14110600;Gravity Sacrificial Axe;重力活祭品斧
+14110700;Flame Sacrificial Axe;火焰活祭品斧
+14110800;Golden Sacrificial Axe;黄金活祭品斧
+14110900;Draconic Sacrificial Axe;龙装活祭品斧
+14111000;Bestial Sacrificial Axe;野兽活祭品斧
+14111100;Night Sacrificial Axe;黑夜活祭品斧
+14111200;Lava Sacrificial Axe;熔岩活祭品斧
+14120000;Rosus' Axe;罗泽司的斧
+14130000;Axe of Fell Prophecy;恶焰预言斧
+14130600;Gravity Burial Axe;重力埋葬斧
+14130800;Golden Burial Axe;黄金埋葬斧
+14131000;Bestial Burial Axe;野兽埋葬斧
+14131100;Night Burial Axe;黑夜埋葬斧
+14140000;Stormhawk Axe;风暴鹰斧
+14150000;Bloodhound Hookblade;猎犬钩刃
+14160000;Rimeheart;霜心
+14170000;Bloodflame Kamas;血焰小镰
+15000000;Greataxe;巨斧
+15000100;Heavy Greataxe;厚重巨斧
+15000200;Keen Greataxe;锋利巨斧
+15000300;Quality Greataxe;优质巨斧
+15000400;Glint Greataxe;辉石巨斧
+15000500;Dragonkin Greataxe;龙人巨斧
+15000600;Gravity Greataxe;重力巨斧
+15000700;Flame Greataxe;火焰巨斧
+15000800;Golden Greataxe;黄金巨斧
+15000900;Draconic Greataxe;龙装巨斧
+15001000;Bestial Greataxe;野兽巨斧
+15001100;Night Greataxe;黑夜巨斧
+15001200;Lava Greataxe;熔岩巨斧
+15001300;Frenzy Greataxe;癫狂巨斧
+15001400;Death Greataxe;死亡巨斧
+15001500;Godslayer Greataxe;狩猎神祇巨斧
+15001600;Frost Greataxe;冰霜巨斧
+15001700;Aberrant Greataxe;异端巨斧
+15001800;Bloodflame Greataxe;血焰巨斧
+15001900;Rotten Greataxe;腐败巨斧
+15002000;Storm Greataxe;风暴巨斧
+15002100;Mystic Greataxe;密契巨斧
+15010000;Warped Axe;歪柄斧
+15010100;Heavy Warped Axe;厚重歪柄斧
+15010200;Keen Warped Axe;锋利歪柄斧
+15010300;Quality Warped Axe;优质歪柄斧
+15010400;Glint Warped Axe;辉石歪柄斧
+15010500;Dragonkin Warped Axe;龙人歪柄斧
+15010600;Gravity Warped Axe;重力歪柄斧
+15010700;Flame Warped Axe;火焰歪柄斧
+15010800;Golden Warped Axe;黄金歪柄斧
+15010900;Draconic Warped Axe;龙装歪柄斧
+15011000;Bestial Warped Axe;野兽歪柄斧
+15011100;Night Warped Axe;黑夜歪柄斧
+15011200;Lava Warped Axe;熔岩歪柄斧
+15011300;Frenzy Warped Axe;癫狂歪柄斧
+15011400;Death Warped Axe;死亡歪柄斧
+15011500;Godslayer Warped Axe;狩猎神祇歪柄斧
+15011600;Frost Warped Axe;冰霜歪柄斧
+15011700;Aberrant Warped Axe;异端歪柄斧
+15011800;Bloodflame Warped Axe;血焰歪柄斧
+15011900;Rotten Warped Axe;腐败歪柄斧
+15012000;Storm Warped Axe;风暴歪柄斧
+15012100;Mystic Warped Axe;密契歪柄斧
+15020000;Great Omenkiller Cleaver;恶兆猎人大柴刀
+15020100;Heavy Great Omenkiller Cleaver;厚重恶兆猎人大柴刀
+15020200;Keen Great Omenkiller Cleaver;锋利恶兆猎人大柴刀
+15020300;Quality Great Omenkiller Cleaver;优质恶兆猎人大柴刀
+15020400;Glint Great Omenkiller Cleaver;辉石恶兆猎人大柴刀
+15020500;Dragonkin Great Omenkiller Cleaver;龙人恶兆猎人大柴刀
+15020600;Gravity Great Omenkiller Cleaver;重力恶兆猎人大柴刀
+15020700;Flame Great Omenkiller Cleaver;火焰恶兆猎人大柴刀
+15020800;Golden Great Omenkiller Cleaver;黄金恶兆猎人大柴刀
+15020900;Draconic Great Omenkiller Cleaver;龙装恶兆猎人大柴刀
+15021000;Bestial Great Omenkiller Cleaver;野兽恶兆猎人大柴刀
+15021100;Night Great Omenkiller Cleaver;黑夜恶兆猎人大柴刀
+15021200;Lava Great Omenkiller Cleaver;熔岩恶兆猎人大柴刀
+15021300;Frenzy Great Omenkiller Cleaver;癫狂恶兆猎人大柴刀
+15021400;Death Great Omenkiller Cleaver;死亡恶兆猎人大柴刀
+15021500;Godslayer Great Omenkiller Cleaver;狩猎神祇恶兆猎人大柴刀
+15021600;Frost Great Omenkiller Cleaver;冰霜恶兆猎人大柴刀
+15021700;Aberrant Great Omenkiller Cleaver;异端恶兆猎人大柴刀
+15021800;Bloodflame Great Omenkiller Cleaver;血焰恶兆猎人大柴刀
+15021900;Rotten Great Omenkiller Cleaver;腐败恶兆猎人大柴刀
+15022000;Storm Great Omenkiller Cleaver;风暴恶兆猎人大柴刀
+15022100;Mystic Great Omenkiller Cleaver;密契恶兆猎人大柴刀
+15030000;Crescent Moon Axe;弦月斧
+15030100;Heavy Crescent Moon Axe;厚重弦月斧
+15030200;Keen Crescent Moon Axe;锋利弦月斧
+15030300;Quality Crescent Moon Axe;优质弦月斧
+15030400;Glint Crescent Moon Axe;辉石弦月斧
+15030500;Dragonkin Crescent Moon Axe;龙人弦月斧
+15030600;Gravity Crescent Moon Axe;重力弦月斧
+15030700;Flame Crescent Moon Axe;火焰弦月斧
+15030800;Golden Crescent Moon Axe;黄金弦月斧
+15030900;Draconic Crescent Moon Axe;龙装弦月斧
+15031000;Bestial Crescent Moon Axe;野兽弦月斧
+15031100;Night Crescent Moon Axe;黑夜弦月斧
+15031200;Lava Crescent Moon Axe;熔岩弦月斧
+15031300;Frenzy Crescent Moon Axe;癫狂弦月斧
+15031400;Death Crescent Moon Axe;死亡弦月斧
+15031500;Godslayer Crescent Moon Axe;狩猎神祇弦月斧
+15031600;Frost Crescent Moon Axe;冰霜弦月斧
+15031700;Aberrant Crescent Moon Axe;异端弦月斧
+15031800;Bloodflame Crescent Moon Axe;血焰弦月斧
+15031900;Rotten Crescent Moon Axe;腐败弦月斧
+15032000;Storm Crescent Moon Axe;风暴弦月斧
+15032100;Mystic Crescent Moon Axe;密契弦月斧
+15040000;Axe of Godrick;葛瑞克的王斧
+15050000;Longhaft Axe;长柄柴刀
+15050100;Heavy Longhaft Axe;厚重长柄柴刀
+15050200;Keen Longhaft Axe;锋利长柄柴刀
+15050300;Quality Longhaft Axe;优质长柄柴刀
+15050400;Glint Longhaft Axe;辉石长柄柴刀
+15050500;Dragonkin Longhaft Axe;龙人长柄柴刀
+15050600;Gravity Longhaft Axe;重力长柄柴刀
+15050700;Flame Longhaft Axe;火焰长柄柴刀
+15050800;Golden Longhaft Axe;黄金长柄柴刀
+15050900;Draconic Longhaft Axe;龙装长柄柴刀
+15051000;Bestial Longhaft Axe;野兽长柄柴刀
+15051100;Night Longhaft Axe;黑夜长柄柴刀
+15051200;Lava Longhaft Axe;熔岩长柄柴刀
+15051300;Frenzy Longhaft Axe;癫狂长柄柴刀
+15051400;Death Longhaft Axe;死亡长柄柴刀
+15051500;Godslayer Longhaft Axe;狩猎神祇长柄柴刀
+15051600;Frost Longhaft Axe;冰霜长柄柴刀
+15051700;Aberrant Longhaft Axe;异端长柄柴刀
+15051800;Bloodflame Longhaft Axe;血焰长柄柴刀
+15051900;Rotten Longhaft Axe;腐败长柄柴刀
+15052000;Storm Longhaft Axe;风暴长柄柴刀
+15052100;Mystic Longhaft Axe;密契长柄柴刀
+15060000;Rusted Anchor;锈蚀船锚
+15060100;Heavy Rusted Anchor;厚重锈蚀船锚
+15060200;Keen Rusted Anchor;锋利锈蚀船锚
+15060300;Quality Rusted Anchor;优质锈蚀船锚
+15060400;Glint Rusted Anchor;辉石锈蚀船锚
+15060500;Dragonkin Rusted Anchor;龙人锈蚀船锚
+15060600;Gravity Rusted Anchor;重力锈蚀船锚
+15060700;Flame Rusted Anchor;火焰锈蚀船锚
+15060800;Golden Rusted Anchor;黄金锈蚀船锚
+15060900;Draconic Rusted Anchor;龙装锈蚀船锚
+15061000;Bestial Rusted Anchor;野兽锈蚀船锚
+15061100;Night Rusted Anchor;黑夜锈蚀船锚
+15061200;Lava Rusted Anchor;熔岩锈蚀船锚
+15061300;Frenzy Rusted Anchor;癫狂锈蚀船锚
+15061400;Death Rusted Anchor;死亡锈蚀船锚
+15061500;Godslayer Rusted Anchor;狩猎神祇锈蚀船锚
+15061600;Frost Rusted Anchor;冰霜锈蚀船锚
+15061700;Aberrant Rusted Anchor;异端锈蚀船锚
+15061800;Bloodflame Rusted Anchor;血焰锈蚀船锚
+15061900;Rotten Rusted Anchor;腐败锈蚀船锚
+15062000;Storm Rusted Anchor;风暴锈蚀船锚
+15062100;Mystic Rusted Anchor;密契锈蚀船锚
+15080000;Executioner's Greataxe;斩身大柴刀
+15080100;Executioner's Heavy Greataxe;厚重斩身大柴刀
+15080200;Executioner's Keen Greataxe;锋利斩身大柴刀
+15080300;Executioner's Quality Greataxe;优质斩身大柴刀
+15080400;Executioner's Glint Greataxe;辉石斩身大柴刀
+15080500;Executioner's Dragonkin Greataxe;龙人斩身大柴刀
+15080600;Executioner's Gravity Greataxe;重力斩身大柴刀
+15080700;Executioner's Flame Greataxe;火焰斩身大柴刀
+15080800;Executioner's Golden Greataxe;黄金斩身大柴刀
+15080900;Executioner's Draconic Greataxe;龙装斩身大柴刀
+15081000;Executioner's Bestial Greataxe;野兽斩身大柴刀
+15081100;Executioner's Night Greataxe;黑夜斩身大柴刀
+15081200;Executioner's Lava Greataxe;熔岩斩身大柴刀
+15081300;Executioner's Frenzy Greataxe;癫狂斩身大柴刀
+15081400;Executioner's Death Greataxe;死亡斩身大柴刀
+15081500;Executioner's Godslayer Greataxe;狩猎神祇斩身大柴刀
+15081600;Executioner's Frost Greataxe;冰霜斩身大柴刀
+15081700;Executioner's Aberrant Greataxe;异端斩身大柴刀
+15081800;Executioner's Bloodflame Greataxe;血焰斩身大柴刀
+15081900;Executioner's Rotten Greataxe;腐败斩身大柴刀
+15082000;Executioner's Storm Greataxe;风暴斩身大柴刀
+15082100;Executioner's Mystic Greataxe;密契斩身大柴刀
+15090000;Axe of Rust;锈斧
+15110000;Winged Greathorn;展翼大角
+15120000;Butchering Knife;肢解菜刀
+15120100;Heavy Butchering Knife;厚重肢解菜刀
+15120200;Keen Butchering Knife;锋利肢解菜刀
+15120300;Quality Butchering Knife;优质肢解菜刀
+15120400;Glint Butchering Knife;辉石肢解菜刀
+15120500;Dragonkin Butchering Knife;龙人肢解菜刀
+15120600;Gravity Butchering Knife;重力肢解菜刀
+15120700;Flame Butchering Knife;火焰肢解菜刀
+15120800;Golden Butchering Knife;黄金肢解菜刀
+15120900;Draconic Butchering Knife;龙装肢解菜刀
+15121000;Bestial Butchering Knife;野兽肢解菜刀
+15121100;Night Butchering Knife;黑夜肢解菜刀
+15121200;Lava Butchering Knife;熔岩肢解菜刀
+15121300;Frenzy Butchering Knife;癫狂肢解菜刀
+15121400;Death Butchering Knife;死亡肢解菜刀
+15121500;Godslayer Butchering Knife;狩猎神祇肢解菜刀
+15121600;Frost Butchering Knife;冰霜肢解菜刀
+15121700;Aberrant Butchering Knife;异端肢解菜刀
+15121800;Bloodflame Butchering Knife;血焰肢解菜刀
+15121900;Rotten Butchering Knife;腐败肢解菜刀
+15122000;Storm Butchering Knife;风暴肢解菜刀
+15122100;Mystic Butchering Knife;密契肢解菜刀
+15130000;Gargoyle's Great Axe;石像鬼大斧
+15130100;Gargoyle's Heavy Great Axe;厚重石像鬼大斧
+15130200;Gargoyle's Keen Great Axe;锋利石像鬼大斧
+15130300;Gargoyle's Quality Great Axe;优质石像鬼大斧
+15130400;Gargoyle's Glint Great Axe;辉石石像鬼大斧
+15130500;Gargoyle's Dragonkin Great Axe;龙人石像鬼大斧
+15130600;Gargoyle's Gravity Great Axe;重力石像鬼大斧
+15130700;Gargoyle's Flame Great Axe;火焰石像鬼大斧
+15130800;Gargoyle's Golden Great Axe;黄金石像鬼大斧
+15130900;Gargoyle's Draconic Great Axe;龙装石像鬼大斧
+15131000;Gargoyle's Bestial Great Axe;野兽石像鬼大斧
+15131100;Gargoyle's Night Great Axe;黑夜石像鬼大斧
+15131200;Gargoyle's Lava Great Axe;熔岩石像鬼大斧
+15140000;Gargoyle's Black Axe;石像鬼黑斧
+15140100;Heavy Gargoyle's Black Axe;厚重石像鬼黑斧
+15140200;Keen Gargoyle's Black Axe;锋利石像鬼黑斧
+15140300;Quality Gargoyle's Black Axe;优质石像鬼黑斧
+15140400;Glint Gargoyle's Black Axe;辉石石像鬼黑斧
+15140500;Dragonkin Gargoyle's Black Axe;龙人石像鬼黑斧
+15140600;Gravity Gargoyle's Black Axe;重力石像鬼黑斧
+15140700;Flame Gargoyle's Black Axe;火焰石像鬼黑斧
+15140800;Golden Gargoyle's Black Axe;黄金石像鬼黑斧
+15140900;Draconic Gargoyle's Black Axe;龙装石像鬼黑斧
+15141000;Bestial Gargoyle's Black Axe;野兽石像鬼黑斧
+15141100;Night Gargoyle's Black Axe;黑夜石像鬼黑斧
+15141200;Lava Gargoyle's Black Axe;熔岩石像鬼黑斧
+16000000;Short Spear;短矛
+16000100;Heavy Short Spear;厚重短矛
+16000200;Keen Short Spear;锋利短矛
+16000300;Quality Short Spear;优质短矛
+16000400;Glint Short Spear;辉石短矛
+16000500;Dragonkin Short Spear;龙人短矛
+16000600;Gravity Short Spear;重力短矛
+16000700;Flame Short Spear;火焰短矛
+16000800;Golden Short Spear;黄金短矛
+16000900;Draconic Short Spear;龙装短矛
+16001000;Bestial Short Spear;野兽短矛
+16001100;Night Short Spear;黑夜短矛
+16001200;Lava Short Spear;熔岩短矛
+16001300;Frenzy Short Spear;癫狂短矛
+16001400;Death Short Spear;死亡短矛
+16001500;Godslayer Short Spear;狩猎神祇短矛
+16001600;Frost Short Spear;冰霜短矛
+16001700;Aberrant Short Spear;异端短矛
+16001800;Bloodflame Short Spear;血焰短矛
+16001900;Rotten Short Spear;腐败短矛
+16002000;Storm Short Spear;风暴短矛
+16002100;Mystic Short Spear;密契短矛
+16010000;Spear;矛
+16010100;Heavy Spear;厚重矛
+16010200;Keen Spear;锋利矛
+16010300;Quality Spear;优质矛
+16010400;Glint Spear;辉石矛
+16010500;Dragonkin Spear;龙人矛
+16010600;Gravity Spear;重力矛
+16010700;Flame Spear;火焰矛
+16010800;Golden Spear;黄金矛
+16010900;Draconic Spear;龙装矛
+16011000;Bestial Spear;野兽矛
+16011100;Night Spear;黑夜矛
+16011200;Lava Spear;熔岩矛
+16011300;Frenzy Spear;癫狂矛
+16011400;Death Spear;死亡矛
+16011500;Godslayer Spear;狩猎神祇矛
+16011600;Frost Spear;冰霜矛
+16011700;Aberrant Spear;异端矛
+16011800;Bloodflame Spear;血焰矛
+16011900;Rotten Spear;腐败矛
+16012000;Storm Spear;风暴矛
+16012100;Mystic Spear;密契矛
+16020000;Crystal Spear;结晶矛
+16030000;Clayman's Harpoon;泥人鱼叉
+16030100;Clayman's Heavy Harpoon;厚重泥人鱼叉
+16030200;Clayman's Keen Harpoon;锋利泥人鱼叉
+16030300;Clayman's Quality Harpoon;优质泥人鱼叉
+16030400;Clayman's Glint Harpoon;辉石泥人鱼叉
+16030500;Clayman's Dragonkin Harpoon;龙人泥人鱼叉
+16030600;Clayman's Gravity Harpoon;重力泥人鱼叉
+16030700;Clayman's Flame Harpoon;火焰泥人鱼叉
+16030800;Clayman's Golden Harpoon;黄金泥人鱼叉
+16030900;Clayman's Draconic Harpoon;龙装泥人鱼叉
+16031000;Clayman's Bestial Harpoon;野兽泥人鱼叉
+16031100;Clayman's Night Harpoon;黑夜泥人鱼叉
+16031200;Clayman's Lava Harpoon;熔岩泥人鱼叉
+16040000;Cleanrot Spear;尊腐骑士矛
+16040100;Heavy Cleanrot Knight's Spear;厚重尊腐骑士矛
+16040200;Keen Cleanrot Knight's Spear;锋利尊腐骑士矛
+16040300;Quality Cleanrot Knight's Spear;优质尊腐骑士矛
+16040400;Glint Cleanrot Knight's Spear;辉石尊腐骑士矛
+16040500;Dragonkin Cleanrot Knight's Spear;龙人尊腐骑士矛
+16040600;Gravity Cleanrot Knight's Spear;重力尊腐骑士矛
+16040700;Flame Cleanrot Knight's Spear;火焰尊腐骑士矛
+16040800;Golden Cleanrot Knight's Spear;黄金尊腐骑士矛
+16040900;Draconic Cleanrot Knight's Spear;龙装尊腐骑士矛
+16041000;Bestial Cleanrot Knight's Spear;野兽尊腐骑士矛
+16041100;Night Cleanrot Knight's Spear;黑夜尊腐骑士矛
+16041200;Lava Cleanrot Spear;熔岩尊腐骑士矛
+16050000;Partisan;阔头枪
+16050100;Heavy Partisan;厚重阔头枪
+16050200;Keen Partisan;锋利阔头枪
+16050300;Quality Partisan;优质阔头枪
+16050400;Glint Partisan;辉石阔头枪
+16050500;Dragonkin Partisan;龙人阔头枪
+16050600;Gravity Partisan;重力阔头枪
+16050700;Flame Partisan;火焰阔头枪
+16050800;Golden Partisan;黄金阔头枪
+16050900;Draconic Partisan;龙装阔头枪
+16051000;Bestial Partisan;野兽阔头枪
+16051100;Night Partisan;黑夜阔头枪
+16051200;Lava Partisan;熔岩阔头枪
+16051300;Frenzy Partisan;癫狂阔头枪
+16051400;Death Partisan;死亡阔头枪
+16051500;Godslayer Partisan;狩猎神祇阔头枪
+16051600;Frost Partisan;冰霜阔头枪
+16051700;Aberrant Partisan;异端阔头枪
+16051800;Bloodflame Partisan;血焰阔头枪
+16051900;Rotten Partisan;腐败阔头枪
+16052000;Storm Partisan;风暴阔头枪
+16052100;Mystic Partisan;密契阔头枪
+16060000;Celebrant's Rib-Rake;庆典肋骨钉耙
+16060100;Celebrant's Heavy Rib-Rake;厚重庆典肋骨钉耙
+16060200;Celebrant's Keen Rib-Rake;锋利庆典肋骨钉耙
+16060300;Celebrant's Quality Rib-Rake;优质庆典肋骨钉耙
+16060400;Celebrant's Glint Rib-Rake;辉石庆典肋骨钉耙
+16060500;Celebrant's Dragonkin Rib-Rake;龙人庆典肋骨钉耙
+16060600;Celebrant's Gravity Rib-Rake;重力庆典肋骨钉耙
+16060700;Celebrant's Flame Rib-Rake;火焰庆典肋骨钉耙
+16060800;Celebrant's Golden Rib-Rake;黄金庆典肋骨钉耙
+16060900;Celebrant's Draconic Rib-Rake;龙装庆典肋骨钉耙
+16061000;Celebrant's Bestial Rib-Rake;野兽庆典肋骨钉耙
+16061100;Celebrant's Night Rib-Rake;黑夜庆典肋骨钉耙
+16061200;Celebrant's Lava Rib-Rake;熔岩庆典肋骨钉耙
+16070000;Pike;长矛
+16070100;Heavy Pike;厚重长矛
+16070200;Keen Pike;锋利长矛
+16070300;Quality Pike;优质长矛
+16070400;Glint Pike;辉石长矛
+16070500;Dragonkin Pike;龙人长矛
+16070600;Gravity Pike;重力长矛
+16070700;Flame Pike;火焰长矛
+16070800;Golden Pike;黄金长矛
+16070900;Draconic Pike;龙装长矛
+16071000;Bestial Pike;野兽长矛
+16071100;Night Pike;黑夜长矛
+16071200;Lava Pike;熔岩长矛
+16071300;Frenzy Pike;癫狂长矛
+16071400;Death Pike;死亡长矛
+16071500;Godslayer Pike;狩猎神祇长矛
+16071600;Frost Pike;冰霜长矛
+16071700;Aberrant Pike;异端长矛
+16071800;Bloodflame Pike;血焰长矛
+16071900;Rotten Pike;腐败长矛
+16072000;Storm Pike;风暴长矛
+16072100;Mystic Pike;密契长矛
+16080000;Torchpole;烛台棒
+16090000;Bolt of Gransax;古兰桑克斯的雷电
+16100000;Spear of Tranquility;安宁之矛
+16110000;Cross-Naginata;十字刀
+16110100;Heavy Cross-Naginata;厚重十字刀
+16110200;Keen Cross-Naginata;锋利十字刀
+16110300;Quality Cross-Naginata;优质十字刀
+16110400;Glint Cross-Naginata;辉石十字刀
+16110500;Dragonkin Cross-Naginata;龙人十字刀
+16110600;Gravity Cross-Naginata;重力十字刀
+16110700;Flame Cross-Naginata;火焰十字刀
+16110800;Golden Cross-Naginata;黄金十字刀
+16110900;Draconic Cross-Naginata;龙装十字刀
+16111000;Bestial Cross-Naginata;野兽十字刀
+16111100;Night Cross-Naginata;黑夜十字刀
+16111200;Lava Cross-Naginata;熔岩十字刀
+16111300;Frenzy Cross-Naginata;癫狂十字刀
+16111400;Death Cross-Naginata;死亡十字刀
+16111500;Godslayer Cross-Naginata;狩猎神祇十字刀
+16111600;Frost Cross-Naginata;冰霜十字刀
+16111700;Aberrant Cross-Naginata;异端十字刀
+16111800;Bloodflame Cross-Naginata;血焰十字刀
+16111900;Rotten Cross-Naginata;腐败十字刀
+16112000;Storm Cross-Naginata;风暴十字刀
+16112100;Mystic Cross-Naginata;密契十字刀
+16120000;Death Ritual Spear;死亡仪式矛
+16130000;Inquisitor's Girandole;拷问烛台
+16140000;Spiked Spear;棘刺棍
+16140100;Heavy Spiked Spear;厚重棘刺棍
+16140200;Keen Spiked Spear;锋利棘刺棍
+16140300;Quality Spiked Spear;优质棘刺棍
+16140400;Glint Spiked Spear;辉石棘刺棍
+16140500;Dragonkin Spiked Spear;龙人棘刺棍
+16140600;Gravity Spiked Spear;重力棘刺棍
+16140700;Flame Spiked Spear;火焰棘刺棍
+16140800;Golden Spiked Spear;黄金棘刺棍
+16140900;Draconic Spiked Spear;龙装棘刺棍
+16141000;Bestial Spiked Spear;野兽棘刺棍
+16141100;Night Spiked Spear;黑夜棘刺棍
+16141200;Lava Spiked Spear;熔岩棘刺棍
+16141300;Frenzy Spiked Spear;癫狂棘刺棍
+16141400;Death Spiked Spear;死亡棘刺棍
+16141500;Godslayer Spiked Spear;狩猎神祇棘刺棍
+16141600;Frost Spiked Spear;冰霜棘刺棍
+16141700;Aberrant Spiked Spear;异端棘刺棍
+16141800;Bloodflame Spiked Spear;血焰棘刺棍
+16141900;Rotten Spiked Spear;腐败棘刺棍
+16142000;Storm Spiked Spear;风暴棘刺棍
+16142100;Mystic Spiked Spear;密契棘刺棍
+16150000;Iron Spear;铁制矛
+16150100;Heavy Iron Spear;厚重铁制矛
+16150200;Keen Iron Spear;锋利铁制矛
+16150300;Quality Iron Spear;优质铁制矛
+16150400;Glint Iron Spear;辉石铁制矛
+16150500;Dragonkin Iron Spear;龙人铁制矛
+16150600;Gravity Iron Spear;重力铁制矛
+16150700;Flame Iron Spear;火焰铁制矛
+16150800;Golden Iron Spear;黄金铁制矛
+16150900;Draconic Iron Spear;龙装铁制矛
+16151000;Bestial Iron Spear;野兽铁制矛
+16151100;Night Iron Spear;黑夜铁制矛
+16151200;Lava Iron Spear;熔岩铁制矛
+16151300;Frenzy Iron Spear;癫狂铁制矛
+16151400;Death Iron Spear;死亡铁制矛
+16151500;Godslayer Iron Spear;狩猎神祇铁制矛
+16151600;Frost Iron Spear;冰霜铁制矛
+16151700;Aberrant Iron Spear;异端铁制矛
+16151800;Bloodflame Iron Spear;血焰铁制矛
+16151900;Rotten Iron Spear;腐败铁制矛
+16152000;Storm Iron Spear;风暴铁制矛
+16152100;Mystic Iron Spear;密契铁制矛
+16160000;Rotten Crystal Spear;腐败结晶矛
+16170000;Phalanx Pike;方阵长枪
+16180000;Crucifix of Eochaid;欧赫十字矛
+17010000;Mohgwyn's Sacred Spear;蒙格温圣矛
+17020000;Siluria's Tree;志留亚的树矛
+17030000;Serpent-Hunter;大蛇狩猎矛
+17050000;Vyke's War Spear;维克的战矛
+17060000;Lance;骑兵长矛
+17060100;Heavy Lance;厚重骑兵长矛
+17060200;Keen Lance;锋利骑兵长矛
+17060300;Quality Lance;优质骑兵长矛
+17060400;Glint Lance;辉石骑兵长矛
+17060500;Dragonkin Lance;龙人骑兵长矛
+17060600;Gravity Lance;重力骑兵长矛
+17060700;Flame Lance;火焰骑兵长矛
+17060800;Golden Lance;黄金骑兵长矛
+17060900;Draconic Lance;龙装骑兵长矛
+17061000;Bestial Lance;野兽骑兵长矛
+17061100;Night Lance;黑夜骑兵长矛
+17061200;Lava Lance;熔岩骑兵长矛
+17061300;Frenzy Lance;癫狂骑兵长矛
+17061400;Death Lance;死亡骑兵长矛
+17061500;Godslayer Lance;狩猎神祇骑兵长矛
+17061600;Frost Lance;冰霜骑兵长矛
+17061700;Aberrant Lance;异端骑兵长矛
+17061800;Bloodflame Lance;血焰骑兵长矛
+17061900;Rotten Lance;腐败骑兵长矛
+17062000;Storm Lance;风暴骑兵长矛
+17062100;Mystic Lance;密契骑兵长矛
+17070000;Treespear;大树矛
+17080000;Spear of the Dreaming;梦之矛
+17090000;Cragsplitter;裂岩大矛
+18000000;Halberd;戟
+18000100;Heavy Halberd;厚重戟
+18000200;Keen Halberd;锋利戟
+18000300;Quality Halberd;优质戟
+18000400;Glint Halberd;辉石戟
+18000500;Dragonkin Halberd;龙人戟
+18000600;Gravity Halberd;重力戟
+18000700;Flame Halberd;火焰戟
+18000800;Golden Halberd;黄金戟
+18000900;Draconic Halberd;龙装戟
+18001000;Bestial Halberd;野兽戟
+18001100;Night Halberd;黑夜戟
+18001200;Lava Halberd;熔岩戟
+18001300;Frenzy Halberd;癫狂戟
+18001400;Death Halberd;死亡戟
+18001500;Godslayer Halberd;狩猎神祇戟
+18001600;Frost Halberd;冰霜戟
+18001700;Aberrant Halberd;异端戟
+18001800;Bloodflame Halberd;血焰戟
+18001900;Rotten Halberd;腐败戟
+18002000;Storm Halberd;风暴戟
+18002100;Mystic Halberd;密契戟
+18010000;Pest's Glaive;昆虫剑刃戟
+18010100;Pest's Heavy Glaive;厚重昆虫剑刃戟
+18010200;Pest's Keen Glaive;锋利昆虫剑刃戟
+18010300;Pest's Quality Glaive;优质昆虫剑刃戟
+18010400;Pest's Glint Glaive;辉石昆虫剑刃戟
+18010500;Pest's Dragonkin Glaive;龙人昆虫剑刃戟
+18010600;Pest's Gravity Glaive;重力昆虫剑刃戟
+18010700;Pest's Flame Glaive;火焰昆虫剑刃戟
+18010800;Pest's Golden Glaive;黄金昆虫剑刃戟
+18010900;Pest's Draconic Glaive;龙装昆虫剑刃戟
+18011000;Pest's Bestial Glaive;野兽昆虫剑刃戟
+18011100;Pest's Night Glaive;黑夜昆虫剑刃戟
+18011200;Pest's Lava Glaive;熔岩昆虫剑刃戟
+18020000;Lucerne;琉森戟
+18020100;Heavy Lucerne;厚重琉森戟
+18020200;Keen Lucerne;锋利琉森戟
+18020300;Quality Lucerne;优质琉森戟
+18020400;Glint Lucerne;辉石琉森戟
+18020500;Dragonkin Lucerne;龙人琉森戟
+18020600;Gravity Lucerne;重力琉森戟
+18020700;Flame Lucerne;火焰琉森戟
+18020800;Golden Lucerne;黄金琉森戟
+18020900;Draconic Lucerne;龙装琉森戟
+18021000;Bestial Lucerne;野兽琉森戟
+18021100;Night Lucerne;黑夜琉森戟
+18021200;Lava Lucerne;熔岩琉森戟
+18021300;Frenzy Lucerne;癫狂琉森戟
+18021400;Death Lucerne;死亡琉森戟
+18021500;Godslayer Lucerne;狩猎神祇琉森戟
+18021600;Frost Lucerne;冰霜琉森戟
+18021700;Aberrant Lucerne;异端琉森戟
+18021800;Bloodflame Lucerne;血焰琉森戟
+18021900;Rotten Lucerne;腐败琉森戟
+18022000;Storm Lucerne;风暴琉森戟
+18022100;Mystic Lucerne;密契琉森戟
+18030000;Banished Knight's Halberd;失乡骑士戟
+18030100;Banished Knight's Heavy Halberd;厚重失乡骑士戟
+18030200;Banished Knight's Keen Halberd;锋利失乡骑士戟
+18030300;Banished Knight's Quality Halberd;优质失乡骑士戟
+18030400;Banished Knight's Glint Halberd;辉石失乡骑士戟
+18030500;Banished Knight's Dragonkin Halberd;龙人失乡骑士戟
+18030600;Banished Knight's Gravity Halberd;重力失乡骑士戟
+18030700;Banished Knight's Flame Halberd;火焰失乡骑士戟
+18030800;Banished Knight's Golden Halberd;黄金失乡骑士戟
+18030900;Banished Knight's Draconic Halberd;龙装失乡骑士戟
+18031000;Banished Knight's Bestial Halberd;野兽失乡骑士戟
+18031100;Banished Knight's Night Halberd;黑夜失乡骑士戟
+18031200;Banished Knight's Lava Halberd;熔岩失乡骑士戟
+18031300;Banished Knight's Frenzy Halberd;癫狂失乡骑士戟
+18031400;Banished Knight's Death Halberd;死亡失乡骑士戟
+18031500;Banished Knight's Godslayer Halberd;狩猎神祇失乡骑士戟
+18031600;Banished Knight's Frost Halberd;冰霜失乡骑士戟
+18031700;Banished Knight's Aberrant Halberd;异端失乡骑士戟
+18031800;Banished Knight's Bloodflame Halberd;血焰失乡骑士戟
+18031900;Banished Knight's Rotten Halberd;腐败失乡骑士戟
+18032000;Banished Knight's Storm Halberd;风暴失乡骑士戟
+18032100;Banished Knight's Mystic Halberd;密契失乡骑士戟
+18040000;Commander's Standard;老将的军旗
+18050000;Nightrider Glaive;黑夜骑兵剑刃戟
+18050100;Heavy Nightrider Glaive;厚重黑夜骑兵剑刃戟
+18050200;Keen Nightrider Glaive;锋利黑夜骑兵剑刃戟
+18050300;Quality Nightrider Glaive;优质黑夜骑兵剑刃戟
+18050400;Glint Nightrider Glaive;辉石黑夜骑兵剑刃戟
+18050500;Dragonkin Nightrider Glaive;龙人黑夜骑兵剑刃戟
+18050600;Gravity Nightrider Glaive;重力黑夜骑兵剑刃戟
+18050700;Flame Nightrider Glaive;火焰黑夜骑兵剑刃戟
+18050800;Golden Nightrider Glaive;黄金黑夜骑兵剑刃戟
+18050900;Draconic Nightrider Glaive;龙装黑夜骑兵剑刃戟
+18051000;Bestial Nightrider Glaive;野兽黑夜骑兵剑刃戟
+18051100;Night Nightrider Glaive;黑夜黑夜骑兵剑刃戟
+18051200;Lava Nightrider Glaive;熔岩黑夜骑兵剑刃戟
+18051300;Frenzy Nightrider Glaive;癫狂黑夜骑兵剑刃戟
+18051400;Death Nightrider Glaive;死亡黑夜骑兵剑刃戟
+18051500;Godslayer Nightrider Glaive;狩猎神祇黑夜骑兵剑刃戟
+18051600;Frost Nightrider Glaive;冰霜黑夜骑兵剑刃戟
+18051700;Aberrant Nightrider Glaive;异端黑夜骑兵剑刃戟
+18051800;Bloodflame Nightrider Glaive;血焰黑夜骑兵剑刃戟
+18051900;Rotten Nightrider Glaive;腐败黑夜骑兵剑刃戟
+18052000;Storm Nightrider Glaive;风暴黑夜骑兵剑刃戟
+18052100;Mystic Nightrider Glaive;密契黑夜骑兵剑刃戟
+18060000;Ripple Crescent Halberd;残缺波纹戟
+18060100;Heavy Ripple Crescent Halberd;厚重残缺波纹戟
+18060200;Keen Ripple Crescent Halberd;锋利残缺波纹戟
+18060300;Quality Ripple Crescent Halberd;优质残缺波纹戟
+18060400;Glint Ripple Crescent Halberd;辉石残缺波纹戟
+18060500;Dragonkin Ripple Crescent Halberd;龙人残缺波纹戟
+18060600;Gravity Ripple Crescent Halberd;重力残缺波纹戟
+18060700;Flame Ripple Crescent Halberd;火焰残缺波纹戟
+18060800;Golden Ripple Crescent Halberd;黄金残缺波纹戟
+18060900;Draconic Ripple Crescent Halberd;龙装残缺波纹戟
+18061000;Bestial Ripple Crescent Halberd;野兽残缺波纹戟
+18061100;Night Ripple Crescent Halberd;黑夜残缺波纹戟
+18061200;Lava Ripple Crescent Halberd;熔岩残缺波纹戟
+18070000;Vulgar Militia Saw;恶兵锯齿刀
+18070100;Heavy Vulgar Militia Saw;厚重恶兵锯齿刀
+18070200;Keen Vulgar Militia Saw;锋利恶兵锯齿刀
+18070300;Quality Vulgar Militia Saw;优质恶兵锯齿刀
+18070400;Glint Vulgar Militia Saw;辉石恶兵锯齿刀
+18070500;Dragonkin Vulgar Militia Saw;龙人恶兵锯齿刀
+18070600;Gravity Vulgar Militia Saw;重力恶兵锯齿刀
+18070700;Flame Vulgar Militia Saw;火焰恶兵锯齿刀
+18070800;Golden Vulgar Militia Saw;黄金恶兵锯齿刀
+18070900;Draconic Vulgar Militia Saw;龙装恶兵锯齿刀
+18071000;Bestial Vulgar Militia Saw;野兽恶兵锯齿刀
+18071100;Night Vulgar Militia Saw;黑夜恶兵锯齿刀
+18071200;Lava Vulgar Militia Saw;熔岩恶兵锯齿刀
+18080000;Golden Halberd;黄金戟
+18080100;Heavy Golden Halberd;厚重黄金戟
+18080200;Keen Golden Halberd;锋利黄金戟
+18080300;Quality Golden Halberd;优质黄金戟
+18080400;Glint Golden Halberd;辉石黄金戟
+18080500;Dragonkin Golden Halberd;龙人黄金戟
+18080600;Gravity Golden Halberd;重力黄金戟
+18080700;Flame Golden Halberd;火焰黄金戟
+18080800;Golden Golden Halberd;黄金黄金戟
+18080900;Draconic Golden Halberd;龙装黄金戟
+18081000;Bestial Golden Halberd;野兽黄金戟
+18081100;Night Golden Halberd;黑夜黄金戟
+18081200;Lava Golden Halberd;熔岩黄金戟
+18090000;Glaive;剑刃戟
+18090100;Heavy Glaive;厚重剑刃戟
+18090200;Keen Glaive;锋利剑刃戟
+18090300;Quality Glaive;优质剑刃戟
+18090400;Glint Glaive;辉石剑刃戟
+18090500;Dragonkin Glaive;龙人剑刃戟
+18090600;Gravity Glaive;重力剑刃戟
+18090700;Flame Glaive;火焰剑刃戟
+18090800;Golden Glaive;黄金剑刃戟
+18090900;Draconic Glaive;龙装剑刃戟
+18091000;Bestial Glaive;野兽剑刃戟
+18091100;Night Glaive;黑夜剑刃戟
+18091200;Lava Glaive;熔岩剑刃戟
+18091300;Frenzy Glaive;癫狂剑刃戟
+18091400;Death Glaive;死亡剑刃戟
+18091500;Godslayer Glaive;狩猎神祇剑刃戟
+18091600;Frost Glaive;冰霜剑刃戟
+18091700;Aberrant Glaive;异端剑刃戟
+18091800;Bloodflame Glaive;血焰剑刃戟
+18091900;Rotten Glaive;腐败剑刃戟
+18092000;Storm Glaive;风暴剑刃戟
+18092100;Mystic Glaive;密契剑刃戟
+18100000;Loretta's War Sickle;罗蕾塔的战镰
+18110000;Guardian's Spearblade;守卫枪剑
+18110100;Guardian's Heavy Swordspear;厚重守卫剑枪
+18110200;Guardian's Keen Swordspear;锋利守卫剑枪
+18110300;Guardian's Quality Swordspear;优质守卫剑枪
+18110400;Guardian's Glint Swordspear;辉石守卫剑枪
+18110500;Guardian's Dragonkin Swordspear;龙人守卫剑枪
+18110600;Guardian's Gravity Swordspear;重力守卫剑枪
+18110700;Guardian's Flame Swordspear;火焰守卫剑枪
+18110800;Guardian's Golden Swordspear;黄金守卫剑枪
+18110900;Guardian's Draconic Swordspear;龙装守卫剑枪
+18111000;Guardian's Bestial Swordspear;野兽守卫剑枪
+18111100;Guardian's Night Swordspear;黑夜守卫剑枪
+18111200;Guardian's Lava Swordspear;熔岩守卫剑枪
+18115000;Guardian's Spearblade;守卫枪剑
+18120000;Glaive of the Ancients;古龙剑刃戟
+18130000;Vulgar Militia Shotel;恶兵钩剑
+18130100;Heavy Vulgar Militia Shotel;厚重恶兵钩剑
+18130200;Keen Vulgar Militia Shotel;锋利恶兵钩剑
+18130300;Quality Vulgar Militia Shotel;优质恶兵钩剑
+18130400;Glint Vulgar Militia Shotel;辉石恶兵钩剑
+18130500;Dragonkin Vulgar Militia Shotel;龙人恶兵钩剑
+18130600;Gravity Vulgar Militia Shotel;重力恶兵钩剑
+18130700;Flame Vulgar Militia Shotel;火焰恶兵钩剑
+18130800;Golden Vulgar Militia Shotel;黄金恶兵钩剑
+18130900;Draconic Vulgar Militia Shotel;龙装恶兵钩剑
+18131000;Bestial Vulgar Militia Shotel;野兽恶兵钩剑
+18131100;Night Vulgar Militia Shotel;黑夜恶兵钩剑
+18131200;Lava Vulgar Militia Shotel;熔岩恶兵钩剑
+18140000;Dragonkin Halberd;龙人戟
+18140100;Heavy Dragon Halberd;厚重龙头戟
+18140200;Keen Dragon Halberd;锋利龙头戟
+18140300;Quality Dragon Halberd;优质龙头戟
+18140400;Glint Dragon Halberd;辉石龙头戟
+18140500;Dragonkin Dragon Halberd;龙人龙头戟
+18140600;Gravity Dragon Halberd;重力龙头戟
+18140700;Flame Dragon Halberd;火焰龙头戟
+18140800;Golden Dragon Halberd;黄金龙头戟
+18140900;Draconic Dragon Halberd;龙装龙头戟
+18141000;Bestial Dragon Halberd;野兽龙头戟
+18141100;Night Dragon Halberd;黑夜龙头戟
+18141200;Lava Dragon Halberd;熔岩龙头戟
+18150000;Gargoyle's Halberd;石像鬼戟
+18150100;Gargoyle's Heavy Halberd;厚重石像鬼戟
+18150200;Gargoyle's Keen Halberd;锋利石像鬼戟
+18150300;Gargoyle's Quality Halberd;优质石像鬼戟
+18150400;Gargoyle's Glint Halberd;辉石石像鬼戟
+18150500;Gargoyle's Dragonkin Halberd;龙人石像鬼戟
+18150600;Gargoyle's Gravity Halberd;重力石像鬼戟
+18150700;Gargoyle's Flame Halberd;火焰石像鬼戟
+18150800;Gargoyle's Golden Halberd;黄金石像鬼戟
+18150900;Gargoyle's Draconic Halberd;龙装石像鬼戟
+18151000;Gargoyle's Bestial Halberd;野兽石像鬼戟
+18151100;Gargoyle's Night Halberd;黑夜石像鬼戟
+18151200;Gargoyle's Lava Halberd;熔岩石像鬼戟
+18160000;Gargoyle's Black Halberd;石像鬼黑戟
+18160100;Heavy Gargoyle's Black Halberd;厚重石像鬼黑戟
+18160200;Keen Gargoyle's Black Halberd;锋利石像鬼黑戟
+18160300;Quality Gargoyle's Black Halberd;优质石像鬼黑戟
+18160400;Glint Gargoyle's Black Halberd;辉石石像鬼黑戟
+18160500;Dragonkin Gargoyle's Black Halberd;龙人石像鬼黑戟
+18160600;Gravity Gargoyle's Black Halberd;重力石像鬼黑戟
+18160700;Flame Gargoyle's Black Halberd;火焰石像鬼黑戟
+18160800;Golden Gargoyle's Black Halberd;黄金石像鬼黑戟
+18160900;Draconic Gargoyle's Black Halberd;龙装石像鬼黑戟
+18161000;Bestial Gargoyle's Black Halberd;野兽石像鬼黑戟
+18161100;Night Gargoyle's Black Halberd;黑夜石像鬼黑戟
+18161200;Lava Gargoyle's Black Halberd;熔岩石像鬼黑戟
+18170000;Reaver's Odachi;掠夺者大太刀
+18180000;Rhys' Swordspear;里斯的剑枪
+18190000;Starcaller Mattock;唤星者鹤嘴镐
+18200000;Blightpole;枯死之杆
+18205000;Blightpole;枯死之杆
+18250000;Halberd of Archea;太古亚的大戟
+19000000;Scythe;大镰刀
+19000100;Heavy Scythe;厚重大镰刀
+19000200;Keen Scythe;锋利大镰刀
+19000300;Quality Scythe;优质大镰刀
+19000400;Glint Scythe;辉石大镰刀
+19000500;Dragonkin Scythe;龙人大镰刀
+19000600;Gravity Scythe;重力大镰刀
+19000700;Flame Scythe;火焰大镰刀
+19000800;Golden Scythe;黄金大镰刀
+19000900;Draconic Scythe;龙装大镰刀
+19001000;Bestial Scythe;野兽大镰刀
+19001100;Night Scythe;黑夜大镰刀
+19001200;Lava Scythe;熔岩大镰刀
+19001300;Frenzy Scythe;癫狂大镰刀
+19001400;Death Scythe;死亡大镰刀
+19001500;Godslayer Scythe;狩猎神祇大镰刀
+19001600;Frost Scythe;冰霜大镰刀
+19001700;Aberrant Scythe;异端大镰刀
+19001800;Bloodflame Scythe;血焰大镰刀
+19001900;Rotten Scythe;腐败大镰刀
+19002000;Storm Scythe;风暴大镰刀
+19002100;Mystic Scythe;密契大镰刀
+19010000;Grave Scythe;墓地大镰刀
+19010100;Heavy Grave Scythe;厚重墓地大镰刀
+19010200;Keen Grave Scythe;锋利墓地大镰刀
+19010300;Quality Grave Scythe;优质墓地大镰刀
+19010400;Glint Grave Scythe;辉石墓地大镰刀
+19010500;Dragonkin Grave Scythe;龙人墓地大镰刀
+19010600;Gravity Grave Scythe;重力墓地大镰刀
+19010700;Flame Grave Scythe;火焰墓地大镰刀
+19010800;Golden Grave Scythe;黄金墓地大镰刀
+19010900;Draconic Grave Scythe;龙装墓地大镰刀
+19011000;Bestial Grave Scythe;野兽墓地大镰刀
+19011100;Night Grave Scythe;黑夜墓地大镰刀
+19011200;Lava Grave Scythe;熔岩墓地大镰刀
+19011300;Frenzy Grave Scythe;癫狂墓地大镰刀
+19011400;Death Grave Scythe;死亡墓地大镰刀
+19011500;Godslayer Grave Scythe;狩猎神祇墓地大镰刀
+19011600;Frost Grave Scythe;冰霜墓地大镰刀
+19011700;Aberrant Grave Scythe;异端墓地大镰刀
+19011800;Bloodflame Grave Scythe;血焰墓地大镰刀
+19011900;Rotten Grave Scythe;腐败墓地大镰刀
+19012000;Storm Grave Scythe;风暴墓地大镰刀
+19012100;Mystic Grave Scythe;密契墓地大镰刀
+19020000;Halo Scythe;光环镰刀
+19030000;Moon Breaker Scythe;破月镰刀
+19040000;War Scythe;战镰
+19050000;Rosus' Harvester;罗泽司的收割刀
+19060000;Winged Scythe;展翼镰刀
+19070000;Scarlet Triscythe;猩红三刃镰
+20000000;Whip;软鞭
+20000100;Heavy Whip;厚重软鞭
+20000200;Keen Whip;锋利软鞭
+20000300;Quality Whip;优质软鞭
+20000400;Glint Whip;辉石软鞭
+20000500;Dragonkin Whip;龙人软鞭
+20000600;Gravity Whip;重力软鞭
+20000700;Flame Whip;火焰软鞭
+20000800;Golden Whip;黄金软鞭
+20000900;Draconic Whip;龙装软鞭
+20001000;Bestial Whip;野兽软鞭
+20001100;Night Whip;黑夜软鞭
+20001200;Lava Whip;熔岩软鞭
+20001300;Frenzy Whip;癫狂软鞭
+20001400;Death Whip;死亡软鞭
+20001500;Godslayer Whip;狩猎神祇软鞭
+20001600;Frost Whip;冰霜软鞭
+20001700;Aberrant Whip;异端软鞭
+20001800;Bloodflame Whip;血焰软鞭
+20001900;Rotten Whip;腐败软鞭
+20002000;Storm Whip;风暴软鞭
+20002100;Mystic Whip;密契软鞭
+20020000;Thorned Whip;荆棘鞭
+20020100;Heavy Thorned Whip;厚重荆棘鞭
+20020200;Keen Thorned Whip;锋利荆棘鞭
+20020300;Quality Thorned Whip;优质荆棘鞭
+20020400;Glint Thorned Whip;辉石荆棘鞭
+20020500;Dragonkin Thorned Whip;龙人荆棘鞭
+20020600;Gravity Thorned Whip;重力荆棘鞭
+20020700;Flame Thorned Whip;火焰荆棘鞭
+20020800;Golden Thorned Whip;黄金荆棘鞭
+20020900;Draconic Thorned Whip;龙装荆棘鞭
+20021000;Bestial Thorned Whip;野兽荆棘鞭
+20021100;Night Thorned Whip;黑夜荆棘鞭
+20021200;Lava Thorned Whip;熔岩荆棘鞭
+20021300;Frenzy Thorned Whip;癫狂荆棘鞭
+20021400;Death Thorned Whip;死亡荆棘鞭
+20021500;Godslayer Thorned Whip;狩猎神祇荆棘鞭
+20021600;Frost Thorned Whip;冰霜荆棘鞭
+20021700;Aberrant Thorned Whip;异端荆棘鞭
+20021800;Bloodflame Thorned Whip;血焰荆棘鞭
+20021900;Rotten Thorned Whip;腐败荆棘鞭
+20022000;Storm Thorned Whip;风暴荆棘鞭
+20022100;Mystic Thorned Whip;密契荆棘鞭
+20030000;Magma Whip Candlestick;熔岩烛台鞭
+20030100;Heavy Lava Whip;厚重熔岩烛台鞭
+20030200;Keen Lava Whip;锋利熔岩烛台鞭
+20030300;Quality Lava Whip;优质熔岩烛台鞭
+20030400;Glint Lava Whip;辉石熔岩烛台鞭
+20030500;Dragonkin Lava Whip;龙人熔岩烛台鞭
+20030600;Gravity Lava Whip;重力熔岩烛台鞭
+20030700;Flame Lava Whip;火焰熔岩烛台鞭
+20030800;Golden Lava Whip;黄金熔岩烛台鞭
+20030900;Draconic Lava Whip;龙装熔岩烛台鞭
+20031000;Bestial Lava Whip;野兽熔岩烛台鞭
+20031100;Night Lava Whip;黑夜熔岩烛台鞭
+20031200;Lava Lava Whip;熔岩熔岩烛台鞭
+20050000;Hoslow's Petal Whip;霍斯劳花瓣鞭
+20050100;Hoslow's Heavy Petal Whip;厚重霍斯劳花瓣鞭
+20050200;Hoslow's Keen Petal Whip;锋利霍斯劳花瓣鞭
+20050300;Hoslow's Quality Petal Whip;优质霍斯劳花瓣鞭
+20050400;Hoslow's Glint Petal Whip;辉石霍斯劳花瓣鞭
+20050500;Hoslow's Dragonkin Petal Whip;龙人霍斯劳花瓣鞭
+20050600;Hoslow's Gravity Petal Whip;重力霍斯劳花瓣鞭
+20050700;Hoslow's Flame Petal Whip;火焰霍斯劳花瓣鞭
+20050800;Hoslow's Golden Petal Whip;黄金霍斯劳花瓣鞭
+20050900;Hoslow's Draconic Petal Whip;龙装霍斯劳花瓣鞭
+20051000;Hoslow's Bestial Petal Whip;野兽霍斯劳花瓣鞭
+20051100;Hoslow's Night Petal Whip;黑夜霍斯劳花瓣鞭
+20051200;Hoslow's Lava Petal Whip;熔岩霍斯劳花瓣鞭
+20060000;Giant's Red Braid;巨人红发鞭
+20070000;Urumi;软鞭剑
+20070100;Heavy Urumi;厚重软鞭剑
+20070200;Keen Urumi;锋利软鞭剑
+20070300;Quality Urumi;优质软鞭剑
+20070400;Glint Urumi;辉石软鞭剑
+20070500;Dragonkin Urumi;龙人软鞭剑
+20070600;Gravity Urumi;重力软鞭剑
+20070700;Flame Urumi;火焰软鞭剑
+20070800;Golden Urumi;黄金软鞭剑
+20070900;Draconic Urumi;龙装软鞭剑
+20071000;Bestial Urumi;野兽软鞭剑
+20071100;Night Urumi;黑夜软鞭剑
+20071200;Lava Urumi;熔岩软鞭剑
+20071300;Frenzy Urumi;癫狂软鞭剑
+20071400;Death Urumi;死亡软鞭剑
+20071500;Godslayer Urumi;狩猎神祇软鞭剑
+20071600;Frost Urumi;冰霜软鞭剑
+20071700;Aberrant Urumi;异端软鞭剑
+20071800;Bloodflame Urumi;血焰软鞭剑
+20071900;Rotten Urumi;腐败软鞭剑
+20072000;Storm Urumi;风暴软鞭剑
+20072100;Mystic Urumi;密契软鞭剑
+21000000;Caestus;搏击手套
+21000100;Heavy Caestus;厚重搏击手套
+21000200;Keen Caestus;锋利搏击手套
+21000300;Quality Caestus;优质搏击手套
+21000400;Glint Caestus;辉石搏击手套
+21000500;Dragonkin Caestus;龙人搏击手套
+21000600;Gravity Caestus;重力搏击手套
+21000700;Flame Caestus;火焰搏击手套
+21000800;Golden Caestus;黄金搏击手套
+21000900;Draconic Caestus;龙装搏击手套
+21001000;Bestial Caestus;野兽搏击手套
+21001100;Night Caestus;黑夜搏击手套
+21001200;Lava Caestus;熔岩搏击手套
+21001300;Frenzy Caestus;癫狂搏击手套
+21001400;Death Caestus;死亡搏击手套
+21001500;Godslayer Caestus;狩猎神祇搏击手套
+21001600;Frost Caestus;冰霜搏击手套
+21001700;Aberrant Caestus;异端搏击手套
+21001800;Bloodflame Caestus;血焰搏击手套
+21001900;Rotten Caestus;腐败搏击手套
+21002000;Storm Caestus;风暴搏击手套
+21002100;Mystic Caestus;密契搏击手套
+21010000;Spiked Caestus;棘刺搏击手套
+21010100;Heavy Spiked Caestus;厚重棘刺搏击手套
+21010200;Keen Spiked Caestus;锋利棘刺搏击手套
+21010300;Quality Spiked Caestus;优质棘刺搏击手套
+21010400;Glint Spiked Caestus;辉石棘刺搏击手套
+21010500;Dragonkin Spiked Caestus;龙人棘刺搏击手套
+21010600;Gravity Spiked Caestus;重力棘刺搏击手套
+21010700;Flame Spiked Caestus;火焰棘刺搏击手套
+21010800;Golden Spiked Caestus;黄金棘刺搏击手套
+21010900;Draconic Spiked Caestus;龙装棘刺搏击手套
+21011000;Bestial Spiked Caestus;野兽棘刺搏击手套
+21011100;Night Spiked Caestus;黑夜棘刺搏击手套
+21011200;Lava Spiked Caestus;熔岩棘刺搏击手套
+21011300;Frenzy Spiked Caestus;癫狂棘刺搏击手套
+21011400;Death Spiked Caestus;死亡棘刺搏击手套
+21011500;Godslayer Spiked Caestus;狩猎神祇棘刺搏击手套
+21011600;Frost Spiked Caestus;冰霜棘刺搏击手套
+21011700;Aberrant Spiked Caestus;异端棘刺搏击手套
+21011800;Bloodflame Spiked Caestus;血焰棘刺搏击手套
+21011900;Rotten Spiked Caestus;腐败棘刺搏击手套
+21012000;Storm Spiked Caestus;风暴棘刺搏击手套
+21012100;Mystic Spiked Caestus;密契棘刺搏击手套
+21020000;Daergraf's Opus;达格拉夫的杰作
+21060000;Grafted Dragon;接肢飞龙
+21070000;Iron Ball;铁球拳套
+21070100;Heavy Iron Ball;厚重铁球拳套
+21070200;Keen Iron Ball;锋利铁球拳套
+21070300;Quality Iron Ball;优质铁球拳套
+21070400;Glint Iron Ball;辉石铁球拳套
+21070500;Dragonkin Iron Ball;龙人铁球拳套
+21070600;Gravity Iron Ball;重力铁球拳套
+21070700;Flame Iron Ball;火焰铁球拳套
+21070800;Golden Iron Ball;黄金铁球拳套
+21070900;Draconic Iron Ball;龙装铁球拳套
+21071000;Bestial Iron Ball;野兽铁球拳套
+21071100;Night Iron Ball;黑夜铁球拳套
+21071200;Lava Iron Ball;熔岩铁球拳套
+21071300;Frenzy Iron Ball;癫狂铁球拳套
+21071400;Death Iron Ball;死亡铁球拳套
+21071500;Godslayer Iron Ball;狩猎神祇铁球拳套
+21071600;Frost Iron Ball;冰霜铁球拳套
+21071700;Aberrant Iron Ball;异端铁球拳套
+21071800;Bloodflame Iron Ball;血焰铁球拳套
+21071900;Rotten Iron Ball;腐败铁球拳套
+21072000;Storm Iron Ball;风暴铁球拳套
+21072100;Mystic Iron Ball;密契铁球拳套
+21080000;Star Fist;晨星拳套
+21080100;Heavy Star Fist;厚重晨星拳套
+21080200;Keen Star Fist;锋利晨星拳套
+21080300;Quality Star Fist;优质晨星拳套
+21080400;Glint Star Fist;辉石晨星拳套
+21080500;Dragonkin Star Fist;龙人晨星拳套
+21080600;Gravity Star Fist;重力晨星拳套
+21080700;Flame Star Fist;火焰晨星拳套
+21080800;Golden Star Fist;黄金晨星拳套
+21080900;Draconic Star Fist;龙装晨星拳套
+21081000;Bestial Star Fist;野兽晨星拳套
+21081100;Night Star Fist;黑夜晨星拳套
+21081200;Lava Star Fist;熔岩晨星拳套
+21081300;Frenzy Star Fist;癫狂晨星拳套
+21081400;Death Star Fist;死亡晨星拳套
+21081500;Godslayer Star Fist;狩猎神祇晨星拳套
+21081600;Frost Star Fist;冰霜晨星拳套
+21081700;Aberrant Star Fist;异端晨星拳套
+21081800;Bloodflame Star Fist;血焰晨星拳套
+21081900;Rotten Star Fist;腐败晨星拳套
+21082000;Storm Star Fist;风暴晨星拳套
+21082100;Mystic Star Fist;密契晨星拳套
+21090000;Furnace Fists;燃炉拳套
+21100000;Katar;拳剑
+21100100;Heavy Katar;厚重拳剑
+21100200;Keen Katar;锋利拳剑
+21100300;Quality Katar;优质拳剑
+21100400;Glint Katar;辉石拳剑
+21100500;Dragonkin Katar;龙人拳剑
+21100600;Gravity Katar;重力拳剑
+21100700;Flame Katar;火焰拳剑
+21100800;Golden Katar;黄金拳剑
+21100900;Draconic Katar;龙装拳剑
+21101000;Bestial Katar;野兽拳剑
+21101100;Night Katar;黑夜拳剑
+21101200;Lava Katar;熔岩拳剑
+21101300;Frenzy Katar;癫狂拳剑
+21101400;Death Katar;死亡拳剑
+21101500;Godslayer Katar;狩猎神祇拳剑
+21101600;Frost Katar;冰霜拳剑
+21101700;Aberrant Katar;异端拳剑
+21101800;Bloodflame Katar;血焰拳剑
+21101900;Rotten Katar;腐败拳剑
+21102000;Storm Katar;风暴拳剑
+21102100;Mystic Katar;密契拳剑
+21110000;Clinging Bone;攀附手骨
+21120000;Veteran's Prosthesis;老将的义足
+21130000;Cipher Pata;秘文帕塔剑
+22000000;Hookclaws;钩爪
+22000100;Heavy Hookclaws;厚重钩爪
+22000200;Keen Hookclaws;锋利钩爪
+22000300;Quality Hookclaws;优质钩爪
+22000400;Glint Hookclaws;辉石钩爪
+22000500;Dragonkin Hookclaws;龙人钩爪
+22000600;Gravity Hookclaws;重力钩爪
+22000700;Flame Hookclaws;火焰钩爪
+22000800;Golden Hookclaws;黄金钩爪
+22000900;Draconic Hookclaws;龙装钩爪
+22001000;Bestial Hookclaws;野兽钩爪
+22001100;Night Hookclaws;黑夜钩爪
+22001200;Lava Hookclaws;熔岩钩爪
+22001300;Frenzy Hookclaws;癫狂钩爪
+22001400;Death Hookclaws;死亡钩爪
+22001500;Godslayer Hookclaws;狩猎神祇钩爪
+22001600;Frost Hookclaws;冰霜钩爪
+22001700;Aberrant Hookclaws;异端钩爪
+22001800;Bloodflame Hookclaws;血焰钩爪
+22001900;Rotten Hookclaws;腐败钩爪
+22002000;Storm Hookclaws;风暴钩爪
+22002100;Mystic Hookclaws;密契钩爪
+22010000;Venomous Fang;毒蛇牙
+22010100;Heavy Venomous Fang;厚重毒蛇牙
+22010200;Keen Venomous Fang;锋利毒蛇牙
+22010300;Quality Venomous Fang;优质毒蛇牙
+22010400;Glint Venomous Fang;辉石毒蛇牙
+22010500;Dragonkin Venomous Fang;龙人毒蛇牙
+22010600;Gravity Venomous Fang;重力毒蛇牙
+22010700;Flame Venomous Fang;火焰毒蛇牙
+22010800;Golden Venomous Fang;黄金毒蛇牙
+22010900;Draconic Venomous Fang;龙装毒蛇牙
+22011000;Bestial Venomous Fang;野兽毒蛇牙
+22011100;Night Venomous Fang;黑夜毒蛇牙
+22011200;Lava Venomous Fang;熔岩毒蛇牙
+22011300;Frenzy Venomous Fang;癫狂毒蛇牙
+22011400;Death Venomous Fang;死亡毒蛇牙
+22011500;Godslayer Venomous Fang;狩猎神祇毒蛇牙
+22011600;Frost Venomous Fang;冰霜毒蛇牙
+22011700;Aberrant Venomous Fang;异端毒蛇牙
+22011800;Bloodflame Venomous Fang;血焰毒蛇牙
+22011900;Rotten Venomous Fang;腐败毒蛇牙
+22012000;Storm Venomous Fang;风暴毒蛇牙
+22012100;Mystic Venomous Fang;密契毒蛇牙
+22020000;Bloodhound Claws;猎犬弯爪
+22020100;Heavy Bloodhound Claws;厚重猎犬弯爪
+22020200;Keen Bloodhound Claws;锋利猎犬弯爪
+22020300;Quality Bloodhound Claws;优质猎犬弯爪
+22020400;Glint Bloodhound Claws;辉石猎犬弯爪
+22020500;Dragonkin Bloodhound Claws;龙人猎犬弯爪
+22020600;Gravity Bloodhound Claws;重力猎犬弯爪
+22020700;Flame Bloodhound Claws;火焰猎犬弯爪
+22020800;Golden Bloodhound Claws;黄金猎犬弯爪
+22020900;Draconic Bloodhound Claws;龙装猎犬弯爪
+22021000;Bestial Bloodhound Claws;野兽猎犬弯爪
+22021100;Night Bloodhound Claws;黑夜猎犬弯爪
+22021200;Lava Bloodhound Claws;熔岩猎犬弯爪
+22030000;Raptor Talons;猛禽钩爪
+22030100;Heavy Raptor Talons;厚重猛禽钩爪
+22030200;Keen Raptor Talons;锋利猛禽钩爪
+22030300;Quality Raptor Talons;优质猛禽钩爪
+22030400;Glint Raptor Talons;辉石猛禽钩爪
+22030500;Dragonkin Raptor Talons;龙人猛禽钩爪
+22030600;Gravity Raptor Talons;重力猛禽钩爪
+22030700;Flame Raptor Talons;火焰猛禽钩爪
+22030800;Golden Raptor Talons;黄金猛禽钩爪
+22030900;Draconic Raptor Talons;龙装猛禽钩爪
+22031000;Bestial Raptor Talons;野兽猛禽钩爪
+22031100;Night Raptor Talons;黑夜猛禽钩爪
+22031200;Lava Raptor Talons;熔岩猛禽钩爪
+22031300;Frenzy Raptor Talons;癫狂猛禽钩爪
+22031400;Death Raptor Talons;死亡猛禽钩爪
+22031500;Godslayer Raptor Talons;狩猎神祇猛禽钩爪
+22031600;Frost Raptor Talons;冰霜猛禽钩爪
+22031700;Aberrant Raptor Talons;异端猛禽钩爪
+22031800;Bloodflame Raptor Talons;血焰猛禽钩爪
+22031900;Rotten Raptor Talons;腐败猛禽钩爪
+22032000;Storm Raptor Talons;风暴猛禽钩爪
+22032100;Mystic Raptor Talons;密契猛禽钩爪
+22040000;Stone Claws;石爪
+22050000;Emyr's Great Talons;埃米尔的巨爪
+23000000;Prelate's Inferno Crozier;主教大火槌
+23000100;Prelate's Heavy Inferno Crozier;厚重主教大火槌
+23000200;Prelate's Keen Inferno Crozier;锋利主教大火槌
+23000300;Prelate's Quality Inferno Crozier;优质主教大火槌
+23000400;Prelate's Glint Inferno Crozier;辉石主教大火槌
+23000500;Prelate's Dragonkin Inferno Crozier;龙人主教大火槌
+23000600;Prelate's Gravity Inferno Crozier;重力主教大火槌
+23000700;Prelate's Flame Inferno Crozier;火焰主教大火槌
+23000800;Prelate's Golden Inferno Crozier;黄金主教大火槌
+23000900;Prelate's Draconic Inferno Crozier;龙装主教大火槌
+23001000;Prelate's Bestial Inferno Crozier;野兽主教大火槌
+23001100;Prelate's Night Inferno Crozier;黑夜主教大火槌
+23001200;Prelate's Lava Inferno Crozier;熔岩主教大火槌
+23010000;Watchdog's Staff;看门犬锡杖
+23010100;Heavy Watchdog's Crosier;厚重看门犬锡杖
+23010200;Keen Watchdog's Crosier;锋利看门犬锡杖
+23010300;Quality Watchdog's Crosier;优质看门犬锡杖
+23010400;Glint Watchdog's Crosier;辉石看门犬锡杖
+23010500;Dragonkin Watchdog's Crosier;龙人看门犬锡杖
+23010600;Gravity Watchdog's Crosier;重力看门犬锡杖
+23010700;Flame Watchdog's Crosier;火焰看门犬锡杖
+23010800;Golden Watchdog's Crosier;黄金看门犬锡杖
+23010900;Draconic Watchdog's Crosier;龙装看门犬锡杖
+23011000;Bestial Watchdog's Crosier;野兽看门犬锡杖
+23011100;Night Watchdog's Crosier;黑夜看门犬锡杖
+23011200;Lava Watchdog's Crosier;熔岩看门犬锡杖
+23020000;Great Club;巨型棍棒
+23030000;Envoy's Greathorn;众使者的扇形笛子
+23040000;Duelist Greataxe;斗士大斧
+23040100;Heavy Duelist Greataxe;厚重斗士大斧
+23040200;Keen Duelist Greataxe;锋利斗士大斧
+23040300;Quality Duelist Greataxe;优质斗士大斧
+23040400;Glint Duelist Greataxe;辉石斗士大斧
+23040500;Dragonkin Duelist Greataxe;龙人斗士大斧
+23040600;Gravity Duelist Greataxe;重力斗士大斧
+23040700;Flame Duelist Greataxe;火焰斗士大斧
+23040800;Golden Duelist Greataxe;黄金斗士大斧
+23040900;Draconic Duelist Greataxe;龙装斗士大斧
+23041000;Bestial Duelist Greataxe;野兽斗士大斧
+23041100;Night Duelist Greataxe;黑夜斗士大斧
+23041200;Lava Duelist Greataxe;熔岩斗士大斧
+23041300;Frenzy Duelist Greataxe;癫狂斗士大斧
+23041400;Death Duelist Greataxe;死亡斗士大斧
+23041500;Godslayer Duelist Greataxe;狩猎神祇斗士大斧
+23041600;Frost Duelist Greataxe;冰霜斗士大斧
+23041700;Aberrant Duelist Greataxe;异端斗士大斧
+23041800;Bloodflame Duelist Greataxe;血焰斗士大斧
+23041900;Rotten Duelist Greataxe;腐败斗士大斧
+23042000;Storm Duelist Greataxe;风暴斗士大斧
+23042100;Mystic Duelist Greataxe;密契斗士大斧
+23050000;Axe of Godfrey;葛孚雷的王斧
+23060000;Dragon Greatclaw;大龙爪
+23070000;Staff of the Avatar;化身仪式杖
+23080000;Fallingstar Beast Jaw;星兽半颚
+23090000;Greatstaff of Decay;腐朽大杖
+23100000;Ghiza's Wheel;基萨的刺轮
+23110000;Giant-Crusher;粉碎巨人槌
+23110100;Heavy Giant-Crusher;厚重粉碎巨人槌
+23110200;Keen Giant-Crusher;锋利粉碎巨人槌
+23110300;Quality Giant-Crusher;优质粉碎巨人槌
+23110400;Glint Giant-Crusher;辉石粉碎巨人槌
+23110500;Dragonkin Giant-Crusher;龙人粉碎巨人槌
+23110600;Gravity Giant-Crusher;重力粉碎巨人槌
+23110700;Flame Giant-Crusher;火焰粉碎巨人槌
+23110800;Golden Giant-Crusher;黄金粉碎巨人槌
+23110900;Draconic Giant-Crusher;龙装粉碎巨人槌
+23111000;Bestial Giant-Crusher;野兽粉碎巨人槌
+23111100;Night Giant-Crusher;黑夜粉碎巨人槌
+23111200;Lava Giant-Crusher;熔岩粉碎巨人槌
+23111300;Frenzy Giant-Crusher;癫狂粉碎巨人槌
+23111400;Death Giant-Crusher;死亡粉碎巨人槌
+23111500;Godslayer Giant-Crusher;狩猎神祇粉碎巨人槌
+23111600;Frost Giant-Crusher;冰霜粉碎巨人槌
+23111700;Aberrant Giant-Crusher;异端粉碎巨人槌
+23111800;Bloodflame Giant-Crusher;血焰粉碎巨人槌
+23111900;Rotten Giant-Crusher;腐败粉碎巨人槌
+23112000;Storm Giant-Crusher;风暴粉碎巨人槌
+23112100;Mystic Giant-Crusher;密契粉碎巨人槌
+23120000;Golem's Halberd;魔像戟
+23120100;Golem's Heavy Halberd;厚重魔像戟
+23120200;Golem's Keen Halberd;锋利魔像戟
+23120300;Golem's Quality Halberd;优质魔像戟
+23120400;Golem's Glint Halberd;辉石魔像戟
+23120500;Golem's Dragonkin Halberd;龙人魔像戟
+23120600;Golem's Gravity Halberd;重力魔像戟
+23120700;Golem's Flame Halberd;火焰魔像戟
+23120800;Golem's Golden Halberd;黄金魔像戟
+23120900;Golem's Draconic Halberd;龙装魔像戟
+23121000;Golem's Bestial Halberd;野兽魔像戟
+23121100;Golem's Night Halberd;黑夜魔像戟
+23121200;Golem's Lava Halberd;熔岩魔像戟
+23121300;Golem's Frenzy Halberd;癫狂魔像戟
+23121400;Golem's Death Halberd;死亡魔像戟
+23121500;Golem's Godslayer Halberd;狩猎神祇魔像戟
+23121600;Golem's Frost Halberd;冰霜魔像戟
+23121700;Golem's Aberrant Halberd;异端魔像戟
+23121800;Golem's Bloodflame Halberd;血焰魔像戟
+23121900;Golem's Rotten Halberd;腐败魔像戟
+23122000;Golem's Storm Halberd;风暴魔像戟
+23122100;Golem's Mystic Halberd;密契魔像戟
+23130000;Troll's Hammer;山妖大槌
+23140000;Rotten Staff;腐败仪式杖
+23150000;Rotten Greataxe;腐败大斧
+23150100;Heavy Rotten Greataxe;厚重腐败大斧
+23150200;Keen Rotten Greataxe;锋利腐败大斧
+23150300;Quality Rotten Greataxe;优质腐败大斧
+23150400;Glint Rotten Greataxe;辉石腐败大斧
+23150500;Dragonkin Rotten Greataxe;龙人腐败大斧
+23150600;Gravity Rotten Greataxe;重力腐败大斧
+23150700;Flame Rotten Greataxe;火焰腐败大斧
+23150800;Golden Rotten Greataxe;黄金腐败大斧
+23150900;Draconic Rotten Greataxe;龙装腐败大斧
+23151000;Bestial Rotten Greataxe;野兽腐败大斧
+23151100;Night Rotten Greataxe;黑夜腐败大斧
+23151200;Lava Rotten Greataxe;熔岩腐败大斧
+23160000;Lodestone of Gelmir;格密尔脉岩
+23170000;Crystaline Claw;结晶蟹爪
+24000000;Torch;火把
+24020000;Steel-Wire Torch;钢丝火把
+24040000;St. Trina's Torch;托莉娜烛火
+24050000;Ghostflame Torch;灵火火把
+24060000;Beast-Repellent Torch;驱兽火把
+24070000;Sentry's Torch;哨兵火把
+30000000;Buckler;小圆盾
+30000100;Heavy Buckler;厚重小圆盾
+30000200;Keen Buckler;锋利小圆盾
+30000300;Quality Buckler;优质小圆盾
+30000400;Glint Buckler;辉石小圆盾
+30000500;Dragonkin Buckler;龙人小圆盾
+30000600;Gravity Buckler;重力小圆盾
+30000700;Flame Buckler;火焰小圆盾
+30000800;Golden Buckler;黄金小圆盾
+30000900;Draconic Buckler;龙装小圆盾
+30001000;Bestial Buckler;野兽小圆盾
+30001100;Night Buckler;黑夜小圆盾
+30001200;Lava Buckler;熔岩小圆盾
+30010000;Perfumer's Shield;调香师盾
+30010100;Perfumer's Heavy Shield;厚重调香师盾
+30010200;Perfumer's Keen Shield;锋利调香师盾
+30010300;Perfumer's Quality Shield;优质调香师盾
+30010400;Perfumer's Glint Shield;辉石调香师盾
+30010500;Perfumer's Dragonkin Shield;龙人调香师盾
+30010600;Perfumer's Gravity Shield;重力调香师盾
+30010700;Perfumer's Flame Shield;火焰调香师盾
+30010800;Perfumer's Golden Shield;黄金调香师盾
+30010900;Perfumer's Draconic Shield;龙装调香师盾
+30011000;Perfumer's Bestial Shield;野兽调香师盾
+30011100;Perfumer's Night Shield;黑夜调香师盾
+30011200;Perfumer's Lava Shield;熔岩调香师盾
+30020000;Man-Serpent's Shield;蛇人盾
+30020100;Man-Serpent's Heavy Shield;厚重蛇人盾
+30020200;Man-Serpent's Keen Shield;锋利蛇人盾
+30020300;Man-Serpent's Quality Shield;优质蛇人盾
+30020400;Man-Serpent's Glint Shield;辉石蛇人盾
+30020500;Man-Serpent's Dragonkin Shield;龙人蛇人盾
+30020600;Man-Serpent's Gravity Shield;重力蛇人盾
+30020700;Man-Serpent's Flame Shield;火焰蛇人盾
+30020800;Man-Serpent's Golden Shield;黄金蛇人盾
+30020900;Man-Serpent's Draconic Shield;龙装蛇人盾
+30021000;Man-Serpent's Bestial Shield;野兽蛇人盾
+30021100;Man-Serpent's Night Shield;黑夜蛇人盾
+30021200;Man-Serpent's Lava Shield;熔岩蛇人盾
+30030000;Rickety Shield;半坏木盾
+30030100;Heavy Rickety Shield;厚重半坏木盾
+30030200;Keen Rickety Shield;锋利半坏木盾
+30030300;Quality Rickety Shield;优质半坏木盾
+30030400;Glint Rickety Shield;辉石半坏木盾
+30030500;Dragonkin Rickety Shield;龙人半坏木盾
+30030600;Gravity Rickety Shield;重力半坏木盾
+30030700;Flame Rickety Shield;火焰半坏木盾
+30030800;Golden Rickety Shield;黄金半坏木盾
+30030900;Draconic Rickety Shield;龙装半坏木盾
+30031000;Bestial Rickety Shield;野兽半坏木盾
+30031100;Night Rickety Shield;黑夜半坏木盾
+30031200;Lava Rickety Shield;熔岩半坏木盾
+30040000;Pillory Shield;枷锁盾
+30040100;Heavy Pillory Shield;厚重枷锁盾
+30040200;Keen Pillory Shield;锋利枷锁盾
+30040300;Quality Pillory Shield;优质枷锁盾
+30040400;Glint Pillory Shield;辉石枷锁盾
+30040500;Dragonkin Pillory Shield;龙人枷锁盾
+30040600;Gravity Pillory Shield;重力枷锁盾
+30040700;Flame Pillory Shield;火焰枷锁盾
+30040800;Golden Pillory Shield;黄金枷锁盾
+30040900;Draconic Pillory Shield;龙装枷锁盾
+30041000;Bestial Pillory Shield;野兽枷锁盾
+30041100;Night Pillory Shield;黑夜枷锁盾
+30041200;Lava Pillory Shield;熔岩枷锁盾
+30060000;Beastman's Jar-Shield;兽人壶盾
+30060100;Beastman's Heavy Jar-Shield;厚重兽人壶盾
+30060200;Beastman's Keen Jar-Shield;锋利兽人壶盾
+30060300;Beastman's Quality Jar-Shield;优质兽人壶盾
+30060400;Beastman's Glint Jar-Shield;辉石兽人壶盾
+30060500;Beastman's Dragonkin Jar-Shield;龙人兽人壶盾
+30060600;Beastman's Gravity Jar-Shield;重力兽人壶盾
+30060700;Beastman's Flame Jar-Shield;火焰兽人壶盾
+30060800;Beastman's Golden Jar-Shield;黄金兽人壶盾
+30060900;Beastman's Draconic Jar-Shield;龙装兽人壶盾
+30061000;Beastman's Bestial Jar-Shield;野兽兽人壶盾
+30061100;Beastman's Night Jar-Shield;黑夜兽人壶盾
+30061200;Beastman's Lava Jar-Shield;熔岩兽人壶盾
+30070000;Red Thorn Roundshield;红棘木盾
+30070100;Heavy Red Thorn Roundshield;厚重红棘木盾
+30070200;Keen Red Thorn Roundshield;锋利红棘木盾
+30070300;Quality Red Thorn Roundshield;优质红棘木盾
+30070400;Glint Red Thorn Roundshield;辉石红棘木盾
+30070500;Dragonkin Red Thorn Roundshield;龙人红棘木盾
+30070600;Gravity Red Thorn Roundshield;重力红棘木盾
+30070700;Flame Red Thorn Roundshield;火焰红棘木盾
+30070800;Golden Red Thorn Roundshield;黄金红棘木盾
+30070900;Draconic Red Thorn Roundshield;龙装红棘木盾
+30071000;Bestial Red Thorn Roundshield;野兽红棘木盾
+30071100;Night Red Thorn Roundshield;黑夜红棘木盾
+30071200;Lava Red Thorn Roundshield;熔岩红棘木盾
+30080000;Scripture Wooden Shield;圣句木盾
+30080100;Heavy Scripture Wooden Shield;厚重圣句木盾
+30080200;Keen Scripture Wooden Shield;锋利圣句木盾
+30080300;Quality Scripture Wooden Shield;优质圣句木盾
+30080400;Glint Scripture Wooden Shield;辉石圣句木盾
+30080500;Dragonkin Scripture Wooden Shield;龙人圣句木盾
+30080600;Gravity Scripture Wooden Shield;重力圣句木盾
+30080700;Flame Scripture Wooden Shield;火焰圣句木盾
+30080800;Golden Scripture Wooden Shield;黄金圣句木盾
+30080900;Draconic Scripture Wooden Shield;龙装圣句木盾
+30081000;Bestial Scripture Wooden Shield;野兽圣句木盾
+30081100;Night Scripture Wooden Shield;黑夜圣句木盾
+30081200;Lava Scripture Wooden Shield;熔岩圣句木盾
+30090000;Riveted Wooden Shield;铁铆钉木盾
+30090100;Heavy Riveted Wooden Shield;厚重铁铆钉木盾
+30090200;Keen Riveted Wooden Shield;锋利铁铆钉木盾
+30090300;Quality Riveted Wooden Shield;优质铁铆钉木盾
+30090400;Glint Riveted Wooden Shield;辉石铁铆钉木盾
+30090500;Dragonkin Riveted Wooden Shield;龙人铁铆钉木盾
+30090600;Gravity Riveted Wooden Shield;重力铁铆钉木盾
+30090700;Flame Riveted Wooden Shield;火焰铁铆钉木盾
+30090800;Golden Riveted Wooden Shield;黄金铁铆钉木盾
+30090900;Draconic Riveted Wooden Shield;龙装铁铆钉木盾
+30091000;Bestial Riveted Wooden Shield;野兽铁铆钉木盾
+30091100;Night Riveted Wooden Shield;黑夜铁铆钉木盾
+30091200;Lava Riveted Wooden Shield;熔岩铁铆钉木盾
+30100000;Blue-White Wooden Shield;蓝白木盾
+30100100;Heavy Blue-White Wooden Shield;厚重蓝白木盾
+30100200;Keen Blue-White Wooden Shield;锋利蓝白木盾
+30100300;Quality Blue-White Wooden Shield;优质蓝白木盾
+30100400;Glint Blue-White Wooden Shield;辉石蓝白木盾
+30100500;Dragonkin Blue-White Wooden Shield;龙人蓝白木盾
+30100600;Gravity Blue-White Wooden Shield;重力蓝白木盾
+30100700;Flame Blue-White Wooden Shield;火焰蓝白木盾
+30100800;Golden Blue-White Wooden Shield;黄金蓝白木盾
+30100900;Draconic Blue-White Wooden Shield;龙装蓝白木盾
+30101000;Bestial Blue-White Wooden Shield;野兽蓝白木盾
+30101100;Night Blue-White Wooden Shield;黑夜蓝白木盾
+30101200;Lava Blue-White Wooden Shield;熔岩蓝白木盾
+30110000;Rift Shield;裂缝盾
+30110100;Heavy Rift Shield;厚重裂缝盾
+30110200;Keen Rift Shield;锋利裂缝盾
+30110300;Quality Rift Shield;优质裂缝盾
+30110400;Glint Rift Shield;辉石裂缝盾
+30110500;Dragonkin Rift Shield;龙人裂缝盾
+30110600;Gravity Rift Shield;重力裂缝盾
+30110700;Flame Rift Shield;火焰裂缝盾
+30110800;Golden Rift Shield;黄金裂缝盾
+30110900;Draconic Rift Shield;龙装裂缝盾
+30111000;Bestial Rift Shield;野兽裂缝盾
+30111100;Night Rift Shield;黑夜裂缝盾
+30111200;Lava Rift Shield;熔岩裂缝盾
+30120000;Iron Roundshield;铁圆盾
+30120100;Heavy Iron Roundshield;厚重铁圆盾
+30120200;Keen Iron Roundshield;锋利铁圆盾
+30120300;Quality Iron Roundshield;优质铁圆盾
+30120400;Glint Iron Roundshield;辉石铁圆盾
+30120500;Dragonkin Iron Roundshield;龙人铁圆盾
+30120600;Gravity Iron Roundshield;重力铁圆盾
+30120700;Flame Iron Roundshield;火焰铁圆盾
+30120800;Golden Iron Roundshield;黄金铁圆盾
+30120900;Draconic Iron Roundshield;龙装铁圆盾
+30121000;Bestial Iron Roundshield;野兽铁圆盾
+30121100;Night Iron Roundshield;黑夜铁圆盾
+30121200;Lava Iron Roundshield;熔岩铁圆盾
+30130000;Gilded Iron Shield;金黄铁盾
+30130100;Gilded Heavy Iron Shield;厚重金黄铁盾
+30130200;Gilded Keen Iron Shield;锋利金黄铁盾
+30130300;Gilded Quality Iron Shield;优质金黄铁盾
+30130400;Gilded Glint Iron Shield;辉石金黄铁盾
+30130500;Gilded Dragonkin Iron Shield;龙人金黄铁盾
+30130600;Gilded Gravity Iron Shield;重力金黄铁盾
+30130700;Gilded Flame Iron Shield;火焰金黄铁盾
+30130800;Gilded Golden Iron Shield;黄金金黄铁盾
+30130900;Gilded Draconic Iron Shield;龙装金黄铁盾
+30131000;Gilded Bestial Iron Shield;野兽金黄铁盾
+30131100;Gilded Night Iron Shield;黑夜金黄铁盾
+30131200;Gilded Lava Iron Shield;熔岩金黄铁盾
+30140000;Ice Crest Shield;冰纹铁盾
+30140100;Heavy Ice Crest Shield;厚重冰纹铁盾
+30140200;Keen Ice Crest Shield;锋利冰纹铁盾
+30140300;Quality Ice Crest Shield;优质冰纹铁盾
+30140400;Glint Ice Crest Shield;辉石冰纹铁盾
+30140500;Dragonkin Ice Crest Shield;龙人冰纹铁盾
+30140600;Gravity Ice Crest Shield;重力冰纹铁盾
+30140700;Flame Ice Crest Shield;火焰冰纹铁盾
+30140800;Golden Ice Crest Shield;黄金冰纹铁盾
+30140900;Draconic Ice Crest Shield;龙装冰纹铁盾
+30141000;Bestial Ice Crest Shield;野兽冰纹铁盾
+30141100;Night Ice Crest Shield;黑夜冰纹铁盾
+30141200;Lava Ice Crest Shield;熔岩冰纹铁盾
+30150000;Smoldering Shield;熏烧盾
+30150100;Heavy Smoldering Shield;厚重熏烧盾
+30150200;Keen Smoldering Shield;锋利熏烧盾
+30150300;Quality Smoldering Shield;优质熏烧盾
+30150400;Glint Smoldering Shield;辉石熏烧盾
+30150500;Dragonkin Smoldering Shield;龙人熏烧盾
+30150600;Gravity Smoldering Shield;重力熏烧盾
+30150700;Flame Smoldering Shield;火焰熏烧盾
+30150800;Golden Smoldering Shield;黄金熏烧盾
+30150900;Draconic Smoldering Shield;龙装熏烧盾
+30151000;Bestial Smoldering Shield;野兽熏烧盾
+30151100;Night Smoldering Shield;黑夜熏烧盾
+30151200;Lava Smoldering Shield;熔岩熏烧盾
+30160000;Hermit's Buckler;遁世者圆盾
+30170000;Shield of Alacrity;迅捷盾
+30190000;Spiralhorn Shield;旋角盾
+30190100;Heavy Spiralhorn Shield;厚重旋角盾
+30190200;Keen Spiralhorn Shield;锋利旋角盾
+30190300;Quality Spiralhorn Shield;优质旋角盾
+30190400;Glint Spiralhorn Shield;辉石旋角盾
+30190500;Dragonkin Spiralhorn Shield;龙人旋角盾
+30190600;Gravity Spiralhorn Shield;重力旋角盾
+30190700;Flame Spiralhorn Shield;火焰旋角盾
+30190800;Golden Spiralhorn Shield;黄金旋角盾
+30190900;Draconic Spiralhorn Shield;龙装旋角盾
+30191000;Bestial Spiralhorn Shield;野兽旋角盾
+30191100;Night Spiralhorn Shield;黑夜旋角盾
+30191200;Lava Spiralhorn Shield;熔岩旋角盾
+30200000;Coil Shield;盘蛇盾
+30300000;Crest of the Dragon Cult;古龙信仰纹章盾
+31000000;Kite Shield;鸢形盾
+31000100;Heavy Kite Shield;厚重鸢形盾
+31000200;Keen Kite Shield;锋利鸢形盾
+31000300;Quality Kite Shield;优质鸢形盾
+31000400;Glint Kite Shield;辉石鸢形盾
+31000500;Dragonkin Kite Shield;龙人鸢形盾
+31000600;Gravity Kite Shield;重力鸢形盾
+31000700;Flame Kite Shield;火焰鸢形盾
+31000800;Golden Kite Shield;黄金鸢形盾
+31000900;Draconic Kite Shield;龙装鸢形盾
+31001000;Bestial Kite Shield;野兽鸢形盾
+31001100;Night Kite Shield;黑夜鸢形盾
+31001200;Lava Kite Shield;熔岩鸢形盾
+31010000;Marred Leather Shield;侵蚀皮盾
+31010100;Marred Heavy Leather Shield;厚重侵蚀皮盾
+31010200;Marred Keen Leather Shield;锋利侵蚀皮盾
+31010300;Marred Quality Leather Shield;优质侵蚀皮盾
+31010400;Marred Glint Leather Shield;辉石侵蚀皮盾
+31010500;Marred Dragonkin Leather Shield;龙人侵蚀皮盾
+31010600;Marred Gravity Leather Shield;重力侵蚀皮盾
+31010700;Marred Flame Leather Shield;火焰侵蚀皮盾
+31010800;Marred Golden Leather Shield;黄金侵蚀皮盾
+31010900;Marred Draconic Leather Shield;龙装侵蚀皮盾
+31011000;Marred Bestial Leather Shield;野兽侵蚀皮盾
+31011100;Marred Night Leather Shield;黑夜侵蚀皮盾
+31011200;Marred Lava Leather Shield;熔岩侵蚀皮盾
+31020000;Marred Wooden Shield;侵蚀木盾
+31020100;Marred Heavy Wooden Shield;厚重侵蚀木盾
+31020200;Marred Keen Wooden Shield;锋利侵蚀木盾
+31020300;Marred Quality Wooden Shield;优质侵蚀木盾
+31020400;Marred Glint Wooden Shield;辉石侵蚀木盾
+31020500;Marred Dragonkin Wooden Shield;龙人侵蚀木盾
+31020600;Marred Gravity Wooden Shield;重力侵蚀木盾
+31020700;Marred Flame Wooden Shield;火焰侵蚀木盾
+31020800;Marred Golden Wooden Shield;黄金侵蚀木盾
+31020900;Marred Draconic Wooden Shield;龙装侵蚀木盾
+31021000;Marred Bestial Wooden Shield;野兽侵蚀木盾
+31021100;Marred Night Wooden Shield;黑夜侵蚀木盾
+31021200;Marred Lava Wooden Shield;熔岩侵蚀木盾
+31030000;Banished Knight's Shield;失乡骑士盾
+31030100;Banished Knight's Heavy Shield;厚重失乡骑士盾
+31030200;Banished Knight's Keen Shield;锋利失乡骑士盾
+31030300;Banished Knight's Quality Shield;优质失乡骑士盾
+31030400;Banished Knight's Glint Shield;辉石失乡骑士盾
+31030500;Banished Knight's Dragonkin Shield;龙人失乡骑士盾
+31030600;Banished Knight's Gravity Shield;重力失乡骑士盾
+31030700;Banished Knight's Flame Shield;火焰失乡骑士盾
+31030800;Banished Knight's Golden Shield;黄金失乡骑士盾
+31030900;Banished Knight's Draconic Shield;龙装失乡骑士盾
+31031000;Banished Knight's Bestial Shield;野兽失乡骑士盾
+31031100;Banished Knight's Night Shield;黑夜失乡骑士盾
+31031200;Banished Knight's Lava Shield;熔岩失乡骑士盾
+31040000;Albinauric Shield;白金盾
+31040100;Heavy Albinauric Shield;厚重白金盾
+31040200;Keen Albinauric Shield;锋利白金盾
+31040300;Quality Albinauric Shield;优质白金盾
+31040400;Glint Albinauric Shield;辉石白金盾
+31040500;Dragonkin Albinauric Shield;龙人白金盾
+31040600;Gravity Albinauric Shield;重力白金盾
+31040700;Flame Albinauric Shield;火焰白金盾
+31040800;Golden Albinauric Shield;黄金白金盾
+31040900;Draconic Albinauric Shield;龙装白金盾
+31041000;Bestial Albinauric Shield;野兽白金盾
+31041100;Night Albinauric Shield;黑夜白金盾
+31041200;Lava Albinauric Shield;熔岩白金盾
+31050000;Sun Realm Shield;太阳城盾
+31050100;Heavy Sun Realm Shield;厚重太阳城盾
+31050200;Keen Sun Realm Shield;锋利太阳城盾
+31050300;Quality Sun Realm Shield;优质太阳城盾
+31050400;Glint Sun Realm Shield;辉石太阳城盾
+31050500;Dragonkin Sun Realm Shield;龙人太阳城盾
+31050600;Gravity Sun Realm Shield;重力太阳城盾
+31050700;Flame Sun Realm Shield;火焰太阳城盾
+31050800;Golden Sun Realm Shield;黄金太阳城盾
+31050900;Draconic Sun Realm Shield;龙装太阳城盾
+31051000;Bestial Sun Realm Shield;野兽太阳城盾
+31051100;Night Sun Realm Shield;黑夜太阳城盾
+31051200;Lava Sun Realm Shield;熔岩太阳城盾
+31060000;Silver Mirrorshield;白银盾
+31070000;Round Shield;圆盾
+31070100;Heavy Round Shield;厚重圆盾
+31070200;Keen Round Shield;锋利圆盾
+31070300;Quality Round Shield;优质圆盾
+31070400;Glint Round Shield;辉石圆盾
+31070500;Dragonkin Round Shield;龙人圆盾
+31070600;Gravity Round Shield;重力圆盾
+31070700;Flame Round Shield;火焰圆盾
+31070800;Golden Round Shield;黄金圆盾
+31070900;Draconic Round Shield;龙装圆盾
+31071000;Bestial Round Shield;野兽圆盾
+31071100;Night Round Shield;黑夜圆盾
+31071200;Lava Round Shield;熔岩圆盾
+31080000;Scorpion Kite Shield;蝎纹鸢形盾
+31080100;Heavy Scorpion Kite Shield;厚重蝎纹鸢形盾
+31080200;Keen Scorpion Kite Shield;锋利蝎纹鸢形盾
+31080300;Quality Scorpion Kite Shield;优质蝎纹鸢形盾
+31080400;Glint Scorpion Kite Shield;辉石蝎纹鸢形盾
+31080500;Dragonkin Scorpion Kite Shield;龙人蝎纹鸢形盾
+31080600;Gravity Scorpion Kite Shield;重力蝎纹鸢形盾
+31080700;Flame Scorpion Kite Shield;火焰蝎纹鸢形盾
+31080800;Golden Scorpion Kite Shield;黄金蝎纹鸢形盾
+31080900;Draconic Scorpion Kite Shield;龙装蝎纹鸢形盾
+31081000;Bestial Scorpion Kite Shield;野兽蝎纹鸢形盾
+31081100;Night Scorpion Kite Shield;黑夜蝎纹鸢形盾
+31081200;Lava Scorpion Kite Shield;熔岩蝎纹鸢形盾
+31090000;Twinbird Kite Shield;双鸟鸢形盾
+31090100;Heavy Twinbird Kite Shield;厚重双鸟鸢形盾
+31090200;Keen Twinbird Kite Shield;锋利双鸟鸢形盾
+31090300;Quality Twinbird Kite Shield;优质双鸟鸢形盾
+31090400;Glint Twinbird Kite Shield;辉石双鸟鸢形盾
+31090500;Dragonkin Twinbird Kite Shield;龙人双鸟鸢形盾
+31090600;Gravity Twinbird Kite Shield;重力双鸟鸢形盾
+31090700;Flame Twinbird Kite Shield;火焰双鸟鸢形盾
+31090800;Golden Twinbird Kite Shield;黄金双鸟鸢形盾
+31090900;Draconic Twinbird Kite Shield;龙装双鸟鸢形盾
+31091000;Bestial Twinbird Kite Shield;野兽双鸟鸢形盾
+31091100;Night Twinbird Kite Shield;黑夜双鸟鸢形盾
+31091200;Lava Twinbird Kite Shield;熔岩双鸟鸢形盾
+31100000;Blue-Gold Kite Shield;蓝金鸢形盾
+31100100;Heavy Blue-Gold Kite Shield;厚重蓝金鸢形盾
+31100200;Keen Blue-Gold Kite Shield;锋利蓝金鸢形盾
+31100300;Quality Blue-Gold Kite Shield;优质蓝金鸢形盾
+31100400;Glint Blue-Gold Kite Shield;辉石蓝金鸢形盾
+31100500;Dragonkin Blue-Gold Kite Shield;龙人蓝金鸢形盾
+31100600;Gravity Blue-Gold Kite Shield;重力蓝金鸢形盾
+31100700;Flame Blue-Gold Kite Shield;火焰蓝金鸢形盾
+31100800;Golden Blue-Gold Kite Shield;黄金蓝金鸢形盾
+31100900;Draconic Blue-Gold Kite Shield;龙装蓝金鸢形盾
+31101000;Bestial Blue-Gold Kite Shield;野兽蓝金鸢形盾
+31101100;Night Blue-Gold Kite Shield;黑夜蓝金鸢形盾
+31101200;Lava Blue-Gold Kite Shield;熔岩蓝金鸢形盾
+31130000;Brass Shield;黄铜盾
+31130100;Heavy Brass Shield;厚重黄铜盾
+31130200;Keen Brass Shield;锋利黄铜盾
+31130300;Quality Brass Shield;优质黄铜盾
+31130400;Glint Brass Shield;辉石黄铜盾
+31130500;Dragonkin Brass Shield;龙人黄铜盾
+31130600;Gravity Brass Shield;重力黄铜盾
+31130700;Flame Brass Shield;火焰黄铜盾
+31130800;Golden Brass Shield;黄金黄铜盾
+31130900;Draconic Brass Shield;龙装黄铜盾
+31131000;Bestial Brass Shield;野兽黄铜盾
+31131100;Night Brass Shield;黑夜黄铜盾
+31131200;Lava Brass Shield;熔岩黄铜盾
+31140000;Great Turtle Shell;大乌龟壳
+31140100;Heavy Great Turtle Shell;厚重大乌龟壳
+31140200;Keen Great Turtle Shell;锋利大乌龟壳
+31140300;Quality Great Turtle Shell;优质大乌龟壳
+31140400;Glint Great Turtle Shell;辉石大乌龟壳
+31140500;Dragonkin Great Turtle Shell;龙人大乌龟壳
+31140600;Gravity Great Turtle Shell;重力大乌龟壳
+31140700;Flame Great Turtle Shell;火焰大乌龟壳
+31140800;Golden Great Turtle Shell;黄金大乌龟壳
+31140900;Draconic Great Turtle Shell;龙装大乌龟壳
+31141000;Bestial Great Turtle Shell;野兽大乌龟壳
+31141100;Night Great Turtle Shell;黑夜大乌龟壳
+31141200;Lava Great Turtle Shell;熔岩大乌龟壳
+31170000;Shield of the Guilty;罪人盾
+31170100;Heavy Shield of the Guilty;厚重罪人盾
+31170200;Keen Shield of the Guilty;锋利罪人盾
+31170300;Quality Shield of the Guilty;优质罪人盾
+31170400;Glint Shield of the Guilty;辉石罪人盾
+31170500;Dragonkin Shield of the Guilty;龙人罪人盾
+31170600;Gravity Shield of the Guilty;重力罪人盾
+31170700;Flame Shield of the Guilty;火焰罪人盾
+31170800;Golden Shield of the Guilty;黄金罪人盾
+31170900;Draconic Shield of the Guilty;龙装罪人盾
+31171000;Bestial Shield of the Guilty;野兽罪人盾
+31171100;Night Shield of the Guilty;黑夜罪人盾
+31171200;Lava Shield of the Guilty;熔岩罪人盾
+31180000;Shield of Starlight;星光盾
+31190000;Carian Knight's Shield;卡利亚骑士盾
+31190100;Carian Knight's Heavy Shield;厚重卡利亚骑士盾
+31190200;Carian Knight's Keen Shield;锋利卡利亚骑士盾
+31190300;Carian Knight's Quality Shield;优质卡利亚骑士盾
+31190400;Carian Knight's Glint Shield;辉石卡利亚骑士盾
+31190500;Carian Knight's Dragonkin Shield;龙人卡利亚骑士盾
+31190600;Carian Knight's Gravity Shield;重力卡利亚骑士盾
+31190700;Carian Knight's Flame Shield;火焰卡利亚骑士盾
+31190800;Carian Knight's Golden Shield;黄金卡利亚骑士盾
+31190900;Carian Knight's Draconic Shield;龙装卡利亚骑士盾
+31191000;Carian Knight's Bestial Shield;野兽卡利亚骑士盾
+31191100;Carian Knight's Night Shield;黑夜卡利亚骑士盾
+31191200;Carian Knight's Lava Shield;熔岩卡利亚骑士盾
+31230000;Large Leather Shield;大皮盾
+31230100;Heavy Large Leather Shield;厚重大皮盾
+31230200;Keen Large Leather Shield;锋利大皮盾
+31230300;Quality Large Leather Shield;优质大皮盾
+31230400;Glint Large Leather Shield;辉石大皮盾
+31230500;Dragonkin Large Leather Shield;龙人大皮盾
+31230600;Gravity Large Leather Shield;重力大皮盾
+31230700;Flame Large Leather Shield;火焰大皮盾
+31230800;Golden Large Leather Shield;黄金大皮盾
+31230900;Draconic Large Leather Shield;龙装大皮盾
+31231000;Bestial Large Leather Shield;野兽大皮盾
+31231100;Night Large Leather Shield;黑夜大皮盾
+31231200;Lava Large Leather Shield;熔岩大皮盾
+31240000;Horse Crest Wooden Shield;马纹木盾
+31240100;Heavy Horse Crest Wooden Shield;厚重马纹木盾
+31240200;Keen Horse Crest Wooden Shield;锋利马纹木盾
+31240300;Quality Horse Crest Wooden Shield;优质马纹木盾
+31240400;Glint Horse Crest Wooden Shield;辉石马纹木盾
+31240500;Dragonkin Horse Crest Wooden Shield;龙人马纹木盾
+31240600;Gravity Horse Crest Wooden Shield;重力马纹木盾
+31240700;Flame Horse Crest Wooden Shield;火焰马纹木盾
+31240800;Golden Horse Crest Wooden Shield;黄金马纹木盾
+31240900;Draconic Horse Crest Wooden Shield;龙装马纹木盾
+31241000;Bestial Horse Crest Wooden Shield;野兽马纹木盾
+31241100;Night Horse Crest Wooden Shield;黑夜马纹木盾
+31241200;Lava Horse Crest Wooden Shield;熔岩马纹木盾
+31250000;Candletree Wooden Shield;烛树纹木盾
+31250100;Heavy Candletree Wooden Shield;厚重烛树纹木盾
+31250200;Keen Candletree Wooden Shield;锋利烛树纹木盾
+31250300;Quality Candletree Wooden Shield;优质烛树纹木盾
+31250400;Glint Candletree Wooden Shield;辉石烛树纹木盾
+31250500;Dragonkin Candletree Wooden Shield;龙人烛树纹木盾
+31250600;Gravity Candletree Wooden Shield;重力烛树纹木盾
+31250700;Flame Candletree Wooden Shield;火焰烛树纹木盾
+31250800;Golden Candletree Wooden Shield;黄金烛树纹木盾
+31250900;Draconic Candletree Wooden Shield;龙装烛树纹木盾
+31251000;Bestial Candletree Wooden Shield;野兽烛树纹木盾
+31251100;Night Candletree Wooden Shield;黑夜烛树纹木盾
+31251200;Lava Candletree Wooden Shield;熔岩烛树纹木盾
+31260000;Flame Crest Wooden Shield;火纹木盾
+31260100;Heavy Flame Crest Wooden Shield;厚重火纹木盾
+31260200;Keen Flame Crest Wooden Shield;锋利火纹木盾
+31260300;Quality Flame Crest Wooden Shield;优质火纹木盾
+31260400;Glint Flame Crest Wooden Shield;辉石火纹木盾
+31260500;Dragonkin Flame Crest Wooden Shield;龙人火纹木盾
+31260600;Gravity Flame Crest Wooden Shield;重力火纹木盾
+31260700;Flame Flame Crest Wooden Shield;火焰火纹木盾
+31260800;Golden Flame Crest Wooden Shield;黄金火纹木盾
+31260900;Draconic Flame Crest Wooden Shield;龙装火纹木盾
+31261000;Bestial Flame Crest Wooden Shield;野兽火纹木盾
+31261100;Night Flame Crest Wooden Shield;黑夜火纹木盾
+31261200;Lava Flame Crest Wooden Shield;熔岩火纹木盾
+31270000;Hawk Crest Wooden Shield;鹰纹木盾
+31270100;Heavy Hawk Crest Wooden Shield;厚重鹰纹木盾
+31270200;Keen Hawk Crest Wooden Shield;锋利鹰纹木盾
+31270300;Quality Hawk Crest Wooden Shield;优质鹰纹木盾
+31270400;Glint Hawk Crest Wooden Shield;辉石鹰纹木盾
+31270500;Dragonkin Hawk Crest Wooden Shield;龙人鹰纹木盾
+31270600;Gravity Hawk Crest Wooden Shield;重力鹰纹木盾
+31270700;Flame Hawk Crest Wooden Shield;火焰鹰纹木盾
+31270800;Golden Hawk Crest Wooden Shield;黄金鹰纹木盾
+31270900;Draconic Hawk Crest Wooden Shield;龙装鹰纹木盾
+31271000;Bestial Hawk Crest Wooden Shield;野兽鹰纹木盾
+31271100;Night Hawk Crest Wooden Shield;黑夜鹰纹木盾
+31271200;Lava Hawk Crest Wooden Shield;熔岩鹰纹木盾
+31280000;Beast Crest Heater Shield;兽纹熨斗形盾
+31280100;Heavy Beast Crest Heater Shield;厚重兽纹熨斗形盾
+31280200;Keen Beast Crest Heater Shield;锋利兽纹熨斗形盾
+31280300;Quality Beast Crest Heater Shield;优质兽纹熨斗形盾
+31280400;Glint Beast Crest Heater Shield;辉石兽纹熨斗形盾
+31280500;Dragonkin Beast Crest Heater Shield;龙人兽纹熨斗形盾
+31280600;Gravity Beast Crest Heater Shield;重力兽纹熨斗形盾
+31280700;Flame Beast Crest Heater Shield;火焰兽纹熨斗形盾
+31280800;Golden Beast Crest Heater Shield;黄金兽纹熨斗形盾
+31280900;Draconic Beast Crest Heater Shield;龙装兽纹熨斗形盾
+31281000;Bestial Beast Crest Heater Shield;野兽兽纹熨斗形盾
+31281100;Night Beast Crest Heater Shield;黑夜兽纹熨斗形盾
+31281200;Lava Beast Crest Heater Shield;熔岩兽纹熨斗形盾
+31290000;Red Crest Heater Shield;红纹熨斗形盾
+31290100;Heavy Red Crest Heater Shield;厚重红纹熨斗形盾
+31290200;Keen Red Crest Heater Shield;锋利红纹熨斗形盾
+31290300;Quality Red Crest Heater Shield;优质红纹熨斗形盾
+31290400;Glint Red Crest Heater Shield;辉石红纹熨斗形盾
+31290500;Dragonkin Red Crest Heater Shield;龙人红纹熨斗形盾
+31290600;Gravity Red Crest Heater Shield;重力红纹熨斗形盾
+31290700;Flame Red Crest Heater Shield;火焰红纹熨斗形盾
+31290800;Golden Red Crest Heater Shield;黄金红纹熨斗形盾
+31290900;Draconic Red Crest Heater Shield;龙装红纹熨斗形盾
+31291000;Bestial Red Crest Heater Shield;野兽红纹熨斗形盾
+31291100;Night Red Crest Heater Shield;黑夜红纹熨斗形盾
+31291200;Lava Red Crest Heater Shield;熔岩红纹熨斗形盾
+31300000;Blue Crest Heater Shield;蓝纹熨斗形盾
+31300100;Heavy Blue Crest Heater Shield;厚重蓝纹熨斗形盾
+31300200;Keen Blue Crest Heater Shield;锋利蓝纹熨斗形盾
+31300300;Quality Blue Crest Heater Shield;优质蓝纹熨斗形盾
+31300400;Glint Blue Crest Heater Shield;辉石蓝纹熨斗形盾
+31300500;Dragonkin Blue Crest Heater Shield;龙人蓝纹熨斗形盾
+31300600;Gravity Blue Crest Heater Shield;重力蓝纹熨斗形盾
+31300700;Flame Blue Crest Heater Shield;火焰蓝纹熨斗形盾
+31300800;Golden Blue Crest Heater Shield;黄金蓝纹熨斗形盾
+31300900;Draconic Blue Crest Heater Shield;龙装蓝纹熨斗形盾
+31301000;Bestial Blue Crest Heater Shield;野兽蓝纹熨斗形盾
+31301100;Night Blue Crest Heater Shield;黑夜蓝纹熨斗形盾
+31301200;Lava Blue Crest Heater Shield;熔岩蓝纹熨斗形盾
+31310000;Eclipse Crest Heater Shield;日蚀纹熨斗形盾
+31310100;Heavy Eclipse Crest Heater Shield;厚重日蚀纹熨斗形盾
+31310200;Keen Eclipse Crest Heater Shield;锋利日蚀纹熨斗形盾
+31310300;Quality Eclipse Crest Heater Shield;优质日蚀纹熨斗形盾
+31310400;Glint Eclipse Crest Heater Shield;辉石日蚀纹熨斗形盾
+31310500;Dragonkin Eclipse Crest Heater Shield;龙人日蚀纹熨斗形盾
+31310600;Gravity Eclipse Crest Heater Shield;重力日蚀纹熨斗形盾
+31310700;Flame Eclipse Crest Heater Shield;火焰日蚀纹熨斗形盾
+31310800;Golden Eclipse Crest Heater Shield;黄金日蚀纹熨斗形盾
+31310900;Draconic Eclipse Crest Heater Shield;龙装日蚀纹熨斗形盾
+31311000;Bestial Eclipse Crest Heater Shield;野兽日蚀纹熨斗形盾
+31311100;Night Eclipse Crest Heater Shield;黑夜日蚀纹熨斗形盾
+31311200;Lava Eclipse Crest Heater Shield;熔岩日蚀纹熨斗形盾
+31320000;Inverted Hawk Heater Shield;逆鹰纹熨斗形盾
+31320100;Heavy Inverted Hawk Heater Shield;厚重逆鹰纹熨斗形盾
+31320200;Keen Inverted Hawk Heater Shield;锋利逆鹰纹熨斗形盾
+31320300;Quality Inverted Hawk Heater Shield;优质逆鹰纹熨斗形盾
+31320400;Glint Inverted Hawk Heater Shield;辉石逆鹰纹熨斗形盾
+31320500;Dragonkin Inverted Hawk Heater Shield;龙人逆鹰纹熨斗形盾
+31320600;Gravity Inverted Hawk Heater Shield;重力逆鹰纹熨斗形盾
+31320700;Flame Inverted Hawk Heater Shield;火焰逆鹰纹熨斗形盾
+31320800;Golden Inverted Hawk Heater Shield;黄金逆鹰纹熨斗形盾
+31320900;Draconic Inverted Hawk Heater Shield;龙装逆鹰纹熨斗形盾
+31321000;Bestial Inverted Hawk Heater Shield;野兽逆鹰纹熨斗形盾
+31321100;Night Inverted Hawk Heater Shield;黑夜逆鹰纹熨斗形盾
+31321200;Lava Inverted Hawk Heater Shield;熔岩逆鹰纹熨斗形盾
+31330000;Heater Shield;熨斗形盾
+31330100;Heavy Heater Shield;厚重熨斗形盾
+31330200;Keen Heater Shield;锋利熨斗形盾
+31330300;Quality Heater Shield;优质熨斗形盾
+31330400;Glint Heater Shield;辉石熨斗形盾
+31330500;Dragonkin Heater Shield;龙人熨斗形盾
+31330600;Gravity Heater Shield;重力熨斗形盾
+31330700;Flame Heater Shield;火焰熨斗形盾
+31330800;Golden Heater Shield;黄金熨斗形盾
+31330900;Draconic Heater Shield;龙装熨斗形盾
+31331000;Bestial Heater Shield;野兽熨斗形盾
+31331100;Night Heater Shield;黑夜熨斗形盾
+31331200;Lava Heater Shield;熔岩熨斗形盾
+31340000;Black Leather Shield;黑皮盾
+31340100;Heavy Black Leather Shield;厚重黑皮盾
+31340200;Keen Black Leather Shield;锋利黑皮盾
+31340300;Quality Black Leather Shield;优质黑皮盾
+31340400;Glint Black Leather Shield;辉石黑皮盾
+31340500;Dragonkin Black Leather Shield;龙人黑皮盾
+31340600;Gravity Black Leather Shield;重力黑皮盾
+31340700;Flame Black Leather Shield;火焰黑皮盾
+31340800;Golden Black Leather Shield;黄金黑皮盾
+31340900;Draconic Black Leather Shield;龙装黑皮盾
+31341000;Bestial Black Leather Shield;野兽黑皮盾
+31341100;Night Black Leather Shield;黑夜黑皮盾
+31341200;Lava Black Leather Shield;熔岩黑皮盾
+31350000;Aegis of Hadea;哈迪亚之盾
+32000000;Dragon Towershield;龙塔盾
+32000100;Heavy Dragon Towershield;厚重龙塔盾
+32000200;Keen Dragon Towershield;锋利龙塔盾
+32000300;Quality Dragon Towershield;优质龙塔盾
+32000400;Glint Dragon Towershield;辉石龙塔盾
+32000500;Dragonkin Dragon Towershield;龙人龙塔盾
+32000600;Gravity Dragon Towershield;重力龙塔盾
+32000700;Flame Dragon Towershield;火焰龙塔盾
+32000800;Golden Dragon Towershield;黄金龙塔盾
+32000900;Draconic Dragon Towershield;龙装龙塔盾
+32001000;Bestial Dragon Towershield;野兽龙塔盾
+32001100;Night Dragon Towershield;黑夜龙塔盾
+32001200;Lava Dragon Towershield;熔岩龙塔盾
+32020000;Distinguished Greatshield;名门大盾
+32020100;Distinguished Heavy Greatshield;厚重名门大盾
+32020200;Distinguished Keen Greatshield;锋利名门大盾
+32020300;Distinguished Quality Greatshield;优质名门大盾
+32020400;Distinguished Glint Greatshield;辉石名门大盾
+32020500;Distinguished Dragonkin Greatshield;龙人名门大盾
+32020600;Distinguished Gravity Greatshield;重力名门大盾
+32020700;Distinguished Flame Greatshield;火焰名门大盾
+32020800;Distinguished Golden Greatshield;黄金名门大盾
+32020900;Distinguished Draconic Greatshield;龙装名门大盾
+32021000;Distinguished Bestial Greatshield;野兽名门大盾
+32021100;Distinguished Night Greatshield;黑夜名门大盾
+32021200;Distinguished Lava Greatshield;熔岩名门大盾
+32030000;Crucible Hornshield;熔炉角盾
+32030100;Heavy Crucible Hornshield;厚重熔炉角盾
+32030200;Keen Crucible Hornshield;锋利熔炉角盾
+32030300;Quality Crucible Hornshield;优质熔炉角盾
+32030400;Glint Crucible Hornshield;辉石熔炉角盾
+32030500;Dragonkin Crucible Hornshield;龙人熔炉角盾
+32030600;Gravity Crucible Hornshield;重力熔炉角盾
+32030700;Flame Crucible Hornshield;火焰熔炉角盾
+32030800;Golden Crucible Hornshield;黄金熔炉角盾
+32030900;Draconic Crucible Hornshield;龙装熔炉角盾
+32031000;Bestial Crucible Hornshield;野兽熔炉角盾
+32031100;Night Crucible Hornshield;黑夜熔炉角盾
+32031200;Lava Crucible Hornshield;熔岩熔炉角盾
+32040000;Dragonclaw Shield;龙爪盾
+32040100;Heavy Dragonclaw Shield;厚重龙爪盾
+32040200;Keen Dragonclaw Shield;锋利龙爪盾
+32040300;Quality Dragonclaw Shield;优质龙爪盾
+32040400;Glint Dragonclaw Shield;辉石龙爪盾
+32040500;Dragonkin Dragonclaw Shield;龙人龙爪盾
+32040600;Gravity Dragonclaw Shield;重力龙爪盾
+32040700;Flame Dragonclaw Shield;火焰龙爪盾
+32040800;Golden Dragonclaw Shield;黄金龙爪盾
+32040900;Draconic Dragonclaw Shield;龙装龙爪盾
+32041000;Bestial Dragonclaw Shield;野兽龙爪盾
+32041100;Night Dragonclaw Shield;黑夜龙爪盾
+32041200;Lava Dragonclaw Shield;熔岩龙爪盾
+32050000;Briar Greatshield;铁棘大盾
+32050100;Heavy Briar Greatshield;厚重铁棘大盾
+32050200;Keen Briar Greatshield;锋利铁棘大盾
+32050300;Quality Briar Greatshield;优质铁棘大盾
+32050400;Glint Briar Greatshield;辉石铁棘大盾
+32050500;Dragonkin Briar Greatshield;龙人铁棘大盾
+32050600;Gravity Briar Greatshield;重力铁棘大盾
+32050700;Flame Briar Greatshield;火焰铁棘大盾
+32050800;Golden Briar Greatshield;黄金铁棘大盾
+32050900;Draconic Briar Greatshield;龙装铁棘大盾
+32051000;Bestial Briar Greatshield;野兽铁棘大盾
+32051100;Night Briar Greatshield;黑夜铁棘大盾
+32051200;Lava Briar Greatshield;熔岩铁棘大盾
+32080000;Erdtree Greatshield;黄金树大盾
+32080100;Heavy Erdtree Greatshield;厚重黄金树大盾
+32080200;Keen Erdtree Greatshield;锋利黄金树大盾
+32080300;Quality Erdtree Greatshield;优质黄金树大盾
+32080400;Glint Erdtree Greatshield;辉石黄金树大盾
+32080500;Dragonkin Erdtree Greatshield;龙人黄金树大盾
+32080600;Gravity Erdtree Greatshield;重力黄金树大盾
+32080700;Flame Erdtree Greatshield;火焰黄金树大盾
+32080800;Golden Erdtree Greatshield;黄金黄金树大盾
+32080900;Draconic Erdtree Greatshield;龙装黄金树大盾
+32081000;Bestial Erdtree Greatshield;野兽黄金树大盾
+32081100;Night Erdtree Greatshield;黑夜黄金树大盾
+32081200;Lava Erdtree Greatshield;熔岩黄金树大盾
+32090000;Golden Beast Crest Shield;兽纹黄金盾
+32090100;Heavy Golden Beast Crest Shield;厚重兽纹黄金盾
+32090200;Keen Golden Beast Crest Shield;锋利兽纹黄金盾
+32090300;Quality Golden Beast Crest Shield;优质兽纹黄金盾
+32090400;Glint Golden Beast Crest Shield;辉石兽纹黄金盾
+32090500;Dragonkin Golden Beast Crest Shield;龙人兽纹黄金盾
+32090600;Gravity Golden Beast Crest Shield;重力兽纹黄金盾
+32090700;Flame Golden Beast Crest Shield;火焰兽纹黄金盾
+32090800;Golden Golden Beast Crest Shield;黄金兽纹黄金盾
+32090900;Draconic Golden Beast Crest Shield;龙装兽纹黄金盾
+32091000;Bestial Golden Beast Crest Shield;野兽兽纹黄金盾
+32091100;Night Golden Beast Crest Shield;黑夜兽纹黄金盾
+32091200;Lava Golden Beast Crest Shield;熔岩兽纹黄金盾
+32120000;Jellyfish Shield;水母盾
+32130000;Fingerprint Stone Shield;指纹石盾
+32130100;Heavy Fingerprint Stone Shield;厚重指纹石盾
+32130200;Keen Fingerprint Stone Shield;锋利指纹石盾
+32130300;Quality Fingerprint Stone Shield;优质指纹石盾
+32130400;Glint Fingerprint Stone Shield;辉石指纹石盾
+32130500;Dragonkin Fingerprint Stone Shield;龙人指纹石盾
+32130600;Gravity Fingerprint Stone Shield;重力指纹石盾
+32130700;Flame Fingerprint Stone Shield;火焰指纹石盾
+32130800;Golden Fingerprint Stone Shield;黄金指纹石盾
+32130900;Draconic Fingerprint Stone Shield;龙装指纹石盾
+32131000;Bestial Fingerprint Stone Shield;野兽指纹石盾
+32131100;Night Fingerprint Stone Shield;黑夜指纹石盾
+32131200;Lava Fingerprint Stone Shield;熔岩指纹石盾
+32140000;Icon Shield;神圣绘画盾
+32140100;Heavy Icon Shield;厚重神圣绘画盾
+32140200;Keen Icon Shield;锋利神圣绘画盾
+32140300;Quality Icon Shield;优质神圣绘画盾
+32140400;Glint Icon Shield;辉石神圣绘画盾
+32140500;Dragonkin Icon Shield;龙人神圣绘画盾
+32140600;Gravity Icon Shield;重力神圣绘画盾
+32140700;Flame Icon Shield;火焰神圣绘画盾
+32140800;Golden Icon Shield;黄金神圣绘画盾
+32140900;Draconic Icon Shield;龙装神圣绘画盾
+32141000;Bestial Icon Shield;野兽神圣绘画盾
+32141100;Night Icon Shield;黑夜神圣绘画盾
+32141200;Lava Icon Shield;熔岩神圣绘画盾
+32150000;One-Eyed Shield;独眼盾
+32160000;Visage Shield;颜面盾
+32170000;Spiked Palisade Shield;钉墙盾
+32170100;Heavy Spiked Palisade Shield;厚重钉墙盾
+32170200;Keen Spiked Palisade Shield;锋利钉墙盾
+32170300;Quality Spiked Palisade Shield;优质钉墙盾
+32170400;Glint Spiked Palisade Shield;辉石钉墙盾
+32170500;Dragonkin Spiked Palisade Shield;龙人钉墙盾
+32170600;Gravity Spiked Palisade Shield;重力钉墙盾
+32170700;Flame Spiked Palisade Shield;火焰钉墙盾
+32170800;Golden Spiked Palisade Shield;黄金钉墙盾
+32170900;Draconic Spiked Palisade Shield;龙装钉墙盾
+32171000;Bestial Spiked Palisade Shield;野兽钉墙盾
+32171100;Night Spiked Palisade Shield;黑夜钉墙盾
+32171200;Lava Spiked Palisade Shield;熔岩钉墙盾
+32190000;Manor Towershield;城寨塔盾
+32190100;Heavy Manor Towershield;厚重城寨塔盾
+32190200;Keen Manor Towershield;锋利城寨塔盾
+32190300;Quality Manor Towershield;优质城寨塔盾
+32190400;Glint Manor Towershield;辉石城寨塔盾
+32190500;Dragonkin Manor Towershield;龙人城寨塔盾
+32190600;Gravity Manor Towershield;重力城寨塔盾
+32190700;Flame Manor Towershield;火焰城寨塔盾
+32190800;Golden Manor Towershield;黄金城寨塔盾
+32190900;Draconic Manor Towershield;龙装城寨塔盾
+32191000;Bestial Manor Towershield;野兽城寨塔盾
+32191100;Night Manor Towershield;黑夜城寨塔盾
+32191200;Lava Manor Towershield;熔岩城寨塔盾
+32200000;Crossed-Tree Towershield;交错树塔盾
+32200100;Heavy Crossed-Tree Towershield;厚重交错树塔盾
+32200200;Keen Crossed-Tree Towershield;锋利交错树塔盾
+32200300;Quality Crossed-Tree Towershield;优质交错树塔盾
+32200400;Glint Crossed-Tree Towershield;辉石交错树塔盾
+32200500;Dragonkin Crossed-Tree Towershield;龙人交错树塔盾
+32200600;Gravity Crossed-Tree Towershield;重力交错树塔盾
+32200700;Flame Crossed-Tree Towershield;火焰交错树塔盾
+32200800;Golden Crossed-Tree Towershield;黄金交错树塔盾
+32200900;Draconic Crossed-Tree Towershield;龙装交错树塔盾
+32201000;Bestial Crossed-Tree Towershield;野兽交错树塔盾
+32201100;Night Crossed-Tree Towershield;黑夜交错树塔盾
+32201200;Lava Crossed-Tree Towershield;熔岩交错树塔盾
+32210000;Inverted Hawk Towershield;逆鹰塔盾
+32210100;Heavy Inverted Hawk Towershield;厚重逆鹰塔盾
+32210200;Keen Inverted Hawk Towershield;锋利逆鹰塔盾
+32210300;Quality Inverted Hawk Towershield;优质逆鹰塔盾
+32210400;Glint Inverted Hawk Towershield;辉石逆鹰塔盾
+32210500;Dragonkin Inverted Hawk Towershield;龙人逆鹰塔盾
+32210600;Gravity Inverted Hawk Towershield;重力逆鹰塔盾
+32210700;Flame Inverted Hawk Towershield;火焰逆鹰塔盾
+32210800;Golden Inverted Hawk Towershield;黄金逆鹰塔盾
+32210900;Draconic Inverted Hawk Towershield;龙装逆鹰塔盾
+32211000;Bestial Inverted Hawk Towershield;野兽逆鹰塔盾
+32211100;Night Inverted Hawk Towershield;黑夜逆鹰塔盾
+32211200;Lava Inverted Hawk Towershield;熔岩逆鹰塔盾
+32220000;Ant's Skull Plate;蚂蚁头盾
+32230000;Redmane Greatshield;红狮子大盾
+32230100;Heavy Redmane Greatshield;厚重红狮子大盾
+32230200;Keen Redmane Greatshield;锋利红狮子大盾
+32230300;Quality Redmane Greatshield;优质红狮子大盾
+32230400;Glint Redmane Greatshield;辉石红狮子大盾
+32230500;Dragonkin Redmane Greatshield;龙人红狮子大盾
+32230600;Gravity Redmane Greatshield;重力红狮子大盾
+32230700;Flame Redmane Greatshield;火焰红狮子大盾
+32230800;Golden Redmane Greatshield;黄金红狮子大盾
+32230900;Draconic Redmane Greatshield;龙装红狮子大盾
+32231000;Bestial Redmane Greatshield;野兽红狮子大盾
+32231100;Night Redmane Greatshield;黑夜红狮子大盾
+32231200;Lava Redmane Greatshield;熔岩红狮子大盾
+32240000;Eclipse Crest Greatshield;日蚀纹大盾
+32240100;Heavy Eclipse Crest Greatshield;厚重日蚀纹大盾
+32240200;Keen Eclipse Crest Greatshield;锋利日蚀纹大盾
+32240300;Quality Eclipse Crest Greatshield;优质日蚀纹大盾
+32240400;Glint Eclipse Crest Greatshield;辉石日蚀纹大盾
+32240500;Dragonkin Eclipse Crest Greatshield;龙人日蚀纹大盾
+32240600;Gravity Eclipse Crest Greatshield;重力日蚀纹大盾
+32240700;Flame Eclipse Crest Greatshield;火焰日蚀纹大盾
+32240800;Golden Eclipse Crest Greatshield;黄金日蚀纹大盾
+32240900;Draconic Eclipse Crest Greatshield;龙装日蚀纹大盾
+32241000;Bestial Eclipse Crest Greatshield;野兽日蚀纹大盾
+32241100;Night Eclipse Crest Greatshield;黑夜日蚀纹大盾
+32241200;Lava Eclipse Crest Greatshield;熔岩日蚀纹大盾
+32250000;Cuckoo Greatshield;杜鹃大盾
+32250100;Heavy Cuckoo Greatshield;厚重杜鹃大盾
+32250200;Keen Cuckoo Greatshield;锋利杜鹃大盾
+32250300;Quality Cuckoo Greatshield;优质杜鹃大盾
+32250400;Glint Cuckoo Greatshield;辉石杜鹃大盾
+32250500;Dragonkin Cuckoo Greatshield;龙人杜鹃大盾
+32250600;Gravity Cuckoo Greatshield;重力杜鹃大盾
+32250700;Flame Cuckoo Greatshield;火焰杜鹃大盾
+32250800;Golden Cuckoo Greatshield;黄金杜鹃大盾
+32250900;Draconic Cuckoo Greatshield;龙装杜鹃大盾
+32251000;Bestial Cuckoo Greatshield;野兽杜鹃大盾
+32251100;Night Cuckoo Greatshield;黑夜杜鹃大盾
+32251200;Lava Cuckoo Greatshield;熔岩杜鹃大盾
+32260000;Golden Greatshield;黄金大盾
+32260100;Heavy Golden Greatshield;厚重黄金大盾
+32260200;Keen Golden Greatshield;锋利黄金大盾
+32260300;Quality Golden Greatshield;优质黄金大盾
+32260400;Glint Golden Greatshield;辉石黄金大盾
+32260500;Dragonkin Golden Greatshield;龙人黄金大盾
+32260600;Gravity Golden Greatshield;重力黄金大盾
+32260700;Flame Golden Greatshield;火焰黄金大盾
+32260800;Golden Golden Greatshield;黄金黄金大盾
+32260900;Draconic Golden Greatshield;龙装黄金大盾
+32261000;Bestial Golden Greatshield;野兽黄金大盾
+32261100;Night Golden Greatshield;黑夜黄金大盾
+32261200;Lava Golden Greatshield;熔岩黄金大盾
+32270000;Gilded Greatshield;金黄大盾
+32270100;Heavy Gilded Greatshield;厚重金黄大盾
+32270200;Keen Gilded Greatshield;锋利金黄大盾
+32270300;Quality Gilded Greatshield;优质金黄大盾
+32270400;Glint Gilded Greatshield;辉石金黄大盾
+32270500;Dragonkin Gilded Greatshield;龙人金黄大盾
+32270600;Gravity Gilded Greatshield;重力金黄大盾
+32270700;Flame Gilded Greatshield;火焰金黄大盾
+32270800;Golden Gilded Greatshield;黄金金黄大盾
+32270900;Draconic Gilded Greatshield;龙装金黄大盾
+32271000;Bestial Gilded Greatshield;野兽金黄大盾
+32271100;Night Gilded Greatshield;黑夜金黄大盾
+32271200;Lava Gilded Greatshield;熔岩金黄大盾
+32280000;Haligtree Crest Greatshield;圣树纹大盾
+32280100;Heavy Haligtree Crest Greatshield;厚重圣树纹大盾
+32280200;Keen Haligtree Crest Greatshield;锋利圣树纹大盾
+32280300;Quality Haligtree Crest Greatshield;优质圣树纹大盾
+32280400;Glint Haligtree Crest Greatshield;辉石圣树纹大盾
+32280500;Dragonkin Haligtree Crest Greatshield;龙人圣树纹大盾
+32280600;Gravity Haligtree Crest Greatshield;重力圣树纹大盾
+32280700;Flame Haligtree Crest Greatshield;火焰圣树纹大盾
+32280800;Golden Haligtree Crest Greatshield;黄金圣树纹大盾
+32280900;Draconic Haligtree Crest Greatshield;龙装圣树纹大盾
+32281000;Bestial Haligtree Crest Greatshield;野兽圣树纹大盾
+32281100;Night Haligtree Crest Greatshield;黑夜圣树纹大盾
+32281200;Lava Haligtree Crest Greatshield;熔岩圣树纹大盾
+32290000;Wooden Greatshield;木制大盾
+32290100;Heavy Wooden Greatshield;厚重木制大盾
+32290200;Keen Wooden Greatshield;锋利木制大盾
+32290300;Quality Wooden Greatshield;优质木制大盾
+32290400;Glint Wooden Greatshield;辉石木制大盾
+32290500;Dragonkin Wooden Greatshield;龙人木制大盾
+32290600;Gravity Wooden Greatshield;重力木制大盾
+32290700;Flame Wooden Greatshield;火焰木制大盾
+32290800;Golden Wooden Greatshield;黄金木制大盾
+32290900;Draconic Wooden Greatshield;龙装木制大盾
+32291000;Bestial Wooden Greatshield;野兽木制大盾
+32291100;Night Wooden Greatshield;黑夜木制大盾
+32291200;Lava Wooden Greatshield;熔岩木制大盾
+32300000;Lordsworn's Shield;君王军大盾
+32300100;Heavy Lordsworn's Shield;厚重君王军大盾
+32300200;Keen Lordsworn's Shield;锋利君王军大盾
+32300300;Quality Lordsworn's Shield;优质君王军大盾
+32300400;Glint Lordsworn's Shield;辉石君王军大盾
+32300500;Dragonkin Lordsworn's Shield;龙人君王军大盾
+32300600;Gravity Lordsworn's Shield;重力君王军大盾
+32300700;Flame Lordsworn's Shield;火焰君王军大盾
+32300800;Golden Lordsworn's Shield;黄金君王军大盾
+32300900;Draconic Lordsworn's Shield;龙装君王军大盾
+32301000;Bestial Lordsworn's Shield;野兽君王军大盾
+32301100;Night Lordsworn's Shield;黑夜君王军大盾
+32301200;Lava Lordsworn's Shield;熔岩君王军大盾
+33000000;Glintstone Staff;辉石杖
+33040000;Crystal Staff;结晶杖
+33050000;Gelmir Lava Staff;格密尔熔岩杖
+33060000;Blighted Branch;咒死枝桠
+33090000;Carian Regal Scepter;卡利亚权杖
+33120000;Digger's Staff;挖石杖
+33130000;Astrologer's Staff;观星杖
+33170000;Carian Glintblade Staff;卡利亚辉剑杖
+33180000;Prince of Death's Staff;死王子杖
+33190000;Albinauric Staff;白金杖
+33200000;Dragon Student Staff;龙学徒杖
+33210000;Carian Glintstone Staff;卡利亚辉石杖
+33230000;Azur's Glintstone Staff;亚兹勒的辉石杖
+33240000;Lusat's Night Staff;卢瑟特的黑夜杖
+33250000;Meteorite Staff;陨石杖
+33260000;Staff of the Guilty;罪人杖
+33270000;Rotten Crystal Staff;腐败结晶杖
+33280000;Staff of Loss;丧失杖
+33290000;Dragonkin Scepter;龙权杖
+33300000;Ranni's Staff;菈妮之杖
+33310000;Snow Witch Staff;雪魔女杖
+33320000;Staff of Briar;荆棘杖
+33330000;Lavastone Staff;熔石杖
+33340000;Tempestcaller's Staff;风暴敕令杖
+33350000;Stormcaller's Staff;风暴呼召杖
+34000000;Finger Seal;指头圣印记
+34010000;Godslayer's Seal;狩猎神祇圣印记
+34020000;Giant's Seal;巨人圣印记
+34030000;Gravel Stone Seal;碎石圣印记
+34040000;Clawmark Seal;爪痕圣印记
+34060000;Golden Order Seal;黄金律法圣印记
+34070000;Erdtree Seal;黄金树圣印记
+34080000;Dragon Communion Seal;龙飨印记
+34090000;Frenzied Flame Seal;癫火圣印记
+34100000;Godskin Seal;神皮圣印记
+34110000;Fire Monk's Seal;火焰习武修士圣印记
+34120000;Dragon Cult Seal;古龙信仰圣印记
+34130000;Earthbreaker Seal;裂地圣印记
+34140000;Fingerprint Seal;指痕圣印记
+34150000;Mohgwyn Seal;蒙格温圣印记
+34160000;War Surgeon's Seal;战场医师圣印记
+34170000;Seal of Rot;腐败圣印记
+34180000;Pest's Seal;虫之圣印记
+34190000;Spiritshaper Seal;塑灵圣印记
+34200000;Mystic Seal;密契圣印记
+40000000;Shortbow;短弓
+40010000;Misbegotten Shortbow;混种小弓
+40020000;Red Branch Shortbow;红木短弓
+40030000;Harp Bow;竖琴弓
+40050000;Composite Bow;复合弓
+41000000;Longbow;长弓
+41010000;Albinauric Bow;白金弓
+41020000;Horn Bow;角弓
+41030000;Erdtree Bow;黄金树弓
+41040000;Serpent Bow;蛇弓
+41060000;Pulley Bow;滑轮弓
+41070000;Black Bow;黑弓
+41080000;Scadu Sapling;幽影树苗
+41090000;Devonia's Longbow;泥盆亚的长弓
+42000000;Lion Greatbow;狮子大弓
+42010000;Golem Greatbow;魔像大弓
+42030000;Erdtree Greatbow;黄金树大弓
+42040000;Greatbow;大弓
+43000000;Soldier's Crossbow;士兵弩
+43020000;Light Crossbow;轻弩
+43030000;Heavy Crossbow;重弩
+43050000;Pulley Crossbow;滑轮弩
+43060000;Full Moon Crossbow;圆月弩
+43080000;Arbalest;钢弩
+43110000;Crepus's Black-Key Crossbow;克雷普的黑键
+44000000;Hand Ballista;携带型弩炮
+44010000;Jar Cannon;壶大炮
+50000000;Arrow;箭矢
+50010000;Fire Arrow;火箭
+50020000;Serpent Arrow;飞蛇毒箭
+50030000;Bone Arrow (Fletched);兽骨箭（附箭羽）
+50040000;St. Trina's Arrow;托莉娜箭
+50060000;Shattershard Arrow (Fletched);碎片生音箭（附箭羽）
+50080000;Rainbow Stone Arrow (Fletched);虹彩石箭（附箭羽）
+50090000;Golden Arrow;黄金箭
+50100000;Dwelling Arrow;宿灵箭
+50110000;Bone Arrow;兽骨箭
+50130000;Firebone Arrow (Fletched);兽骨火箭（附箭羽）
+50140000;Firebone Arrow;兽骨火箭
+50150000;Poisonbone Arrow (Fletched);兽骨毒箭（附箭羽）
+50160000;Poisonbone Arrow;兽骨毒箭
+50170000;Sleepbone Arrow (Fletched);兽骨催眠箭（附箭羽）
+50180000;Sleepbone Arrow;兽骨催眠箭
+50190000;Stormwing Bone Arrow;风暴羽毛兽骨箭
+50200000;Lightningbone Arrow (Fletched);兽骨雷箭（附箭羽）
+50210000;Lightningbone Arrow;兽骨雷箭
+50220000;Rainbow Stone Arrow;虹彩石箭
+50230000;Shattershard Arrow;碎片生音箭
+50240000;Spiritflame Arrow;灵火箭
+50260000;Magicbone Arrow (Fletched);兽骨魔力箭（附箭羽）
+50270000;Magicbone Arrow;兽骨魔力箭
+50280000;Haligbone Arrow (Fletched);兽骨圣箭（附箭羽）
+50290000;Haligbone Arrow;兽骨圣箭
+50300000;Bloodbone Arrow (Fletched);兽骨出血箭（附箭羽）
+50310000;Bloodbone Arrow;兽骨出血箭
+50320000;Coldbone Arrow (Fletched);兽骨结冰箭（附箭羽）
+50330000;Coldbone Arrow;兽骨结冰箭
+50340000;Rotbone Arrow (Fletched);兽骨腐败箭（附箭羽）
+50350000;Rotbone Arrow;兽骨腐败箭
+50360000;Frenzybone Arrow (Fletched);兽骨癫火箭（附箭羽）
+50370000;Frenzybone Arrow;兽骨癫火箭
+50380000;Blightbone Arrow (Fletched);兽骨死亡箭（附箭羽）
+50390000;Blightbone Arrow;兽骨死亡箭
+51000000;Great Arrow;大箭
+51010000;Golem's Great Arrow;魔像大箭
+51020000;Golden Great Arrow;黄金大箭
+51030000;Golem's Magic Arrow;魔像魔力箭
+51040000;Radahn's Spear;拉塔恩的矛
+51050000;Bone Great Arrow (Fletched);兽骨大箭（附箭羽）
+51060000;Bone Great Arrow;兽骨大箭
+51070000;Lightning Great Arrow;雷电大箭
+52000000;Bolt;弩箭
+52010000;Lightning Bolt;雷电弩箭
+52020000;Perfumer's Bolt;调香弩箭
+52030000;Black-Key Bolt;黑键木桩
+52040000;Burred Bolt;倒刺弩箭
+52050000;Meteor Bolt;流星弩箭
+52060000;Explosive Bolt;爆炸弩箭
+52070000;Golden Bolt;黄金弩箭
+52080000;Lordsworn's Bolt;君王军弩箭
+52090000;Bone Bolt;兽骨弩箭
+52100000;Firebone Bolt;兽骨火弩箭
+52110000;Lightningbone Bolt;兽骨雷弩箭
+52120000;Magicbone Bolt;兽骨魔力弩箭
+52130000;Haligbone Bolt;兽骨圣弩箭
+52140000;Poisonbone Bolt;兽骨毒弩箭
+52150000;Bloodbone Bolt;兽骨出血弩箭
+52160000;Coldbone Bolt;兽骨结冰弩箭
+52170000;Rotbone Bolt;兽骨腐败弩箭
+52180000;Sleepbone Bolt;兽骨催眠弩箭
+52190000;Flaming Bolt;猛火弩箭
+52200000;Frenzybone Bolt;兽骨癫火弩箭
+52210000;Blightbone Bolt;兽骨死亡弩箭
+53000000;Ballista Bolt;弩炮箭
+53010000;Lightning Greatbolt;雷电大弩箭
+53020000;Explosive Greatbolt;爆炸大弩箭
+53030000;Bone Ballista Bolt;兽骨弩炮箭
+64530000;Fingerslayer Blade;猎杀指头刀
+67530000;Sword of the Cosmos;星空之剑
+67540000;Konrad's Bloodletter;康拉德的放血剑
+67550000;Nia's Passot;尼亚的破甲剑
+67700000;Primeval Splinter;起源碎锋
+68540000;Goras' Claw;哥拉斯之爪
+68550000;Transcendent Talons;达格拉夫之爪
+69500000;Smithscript Rosary;流纹万器

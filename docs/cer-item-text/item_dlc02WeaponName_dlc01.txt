@@ -1,0 +1,725 @@
+﻿1500000;Main-gauche;左手匕首
+1500100;Heavy Main-gauche;厚重左手匕首
+1500200;Keen Main-gauche;锋利左手匕首
+1500300;Quality Main-gauche;优质左手匕首
+1500400;Glint Main-gauche;辉石左手匕首
+1500500;Dragonkin Main-gauche;龙人左手匕首
+1500600;Gravity Main-gauche;重力左手匕首
+1500700;Flame Main-gauche;火焰左手匕首
+1500800;Golden Main-gauche;黄金左手匕首
+1500900;Draconic Main-gauche;龙装左手匕首
+1501000;Bestial Main-gauche;野兽左手匕首
+1501100;Night Main-gauche;黑夜左手匕首
+1501200;Lava Main-gauche;熔岩左手匕首
+1501300;Frenzy Main-gauche;癫狂左手匕首
+1501400;Death Main-gauche;死亡左手匕首
+1501500;Godslayer Main-gauche;狩猎神祇左手匕首
+1501600;Frost Main-gauche;冰霜左手匕首
+1501700;Aberrant Main-gauche;异端左手匕首
+1501800;Bloodflame Main-gauche;血焰左手匕首
+1501900;Rotten Main-gauche;腐败左手匕首
+1502000;Storm Main-gauche;风暴左手匕首
+1502100;Mystic Main-gauche;密契左手匕首
+1510000;Fire Knight's Shortsword;火焰骑士短剑
+1510100;Fire Knight's Heavy Shortsword;厚重火焰骑士短剑
+1510200;Fire Knight's Keen Shortsword;锋利火焰骑士短剑
+1510300;Fire Knight's Quality Shortsword;优质火焰骑士短剑
+1510400;Fire Knight's Fire Shortsword;火焰火焰骑士短剑
+1510500;Fire Knight's Flame Art Shortsword;焰术火焰骑士短剑
+1510600;Fire Knight's Lightning Shortsword;雷电火焰骑士短剑
+1510700;Fire Knight's Sacred Shortsword;神圣火焰骑士短剑
+1510800;Fire Knight's Magic Shortsword;魔力火焰骑士短剑
+1510900;Fire Knight's Cold Shortsword;寒冷火焰骑士短剑
+1511000;Fire Knight's Poison Shortsword;毒火焰骑士短剑
+1511100;Fire Knight's Blood Shortsword;血火焰骑士短剑
+1511200;Fire Knight's Occult Shortsword;神秘火焰骑士短剑
+2510000;Velvet Sword of St. Trina;托莉娜暗剑
+2520000;Star-Lined Sword;连星剑
+2530000;Carian Sorcery Sword;卡利亚魔法剑
+2540000;Stone-Sheathed Sword;石鞘剑
+2550000;Sword of Light;光明剑
+2560000;Sword of Darkness;黑暗剑
+3500000;Sword Lance;剑型长矛
+3500100;Heavy Sword Lance;厚重剑型长矛
+3500200;Keen Sword Lance;锋利剑型长矛
+3500300;Quality Sword Lance;优质剑型长矛
+3500400;Glint Sword Lance;辉石剑型长矛
+3500500;Dragonkin Sword Lance;龙人剑型长矛
+3500600;Gravity Sword Lance;重力剑型长矛
+3500700;Flame Sword Lance;火焰剑型长矛
+3500800;Golden Sword Lance;黄金剑型长矛
+3500900;Draconic Sword Lance;龙装剑型长矛
+3501000;Bestial Sword Lance;野兽剑型长矛
+3501100;Night Sword Lance;黑夜剑型长矛
+3501200;Lava Sword Lance;熔岩剑型长矛
+3501300;Frenzy Sword Lance;癫狂剑型长矛
+3501400;Death Sword Lance;死亡剑型长矛
+3501500;Godslayer Sword Lance;狩猎神祇剑型长矛
+3501600;Frost Sword Lance;冰霜剑型长矛
+3501700;Aberrant Sword Lance;异端剑型长矛
+3501800;Bloodflame Sword Lance;血焰剑型长矛
+3501900;Rotten Sword Lance;腐败剑型长矛
+3502000;Storm Sword Lance;风暴剑型长矛
+3502100;Mystic Sword Lance;密契剑型长矛
+3510000;Greatsword of Damnation;永罚大剑
+3520000;Lizard Greatsword;大蜥蜴大剑
+3520100;Heavy Lizard Greatsword;厚重大蜥蜴大剑
+3520200;Keen Lizard Greatsword;锋利大蜥蜴大剑
+3520300;Quality Lizard Greatsword;优质大蜥蜴大剑
+3520400;Glint Lizard Greatsword;辉石大蜥蜴大剑
+3520500;Dragonkin Lizard Greatsword;龙人大蜥蜴大剑
+3520600;Gravity Lizard Greatsword;重力大蜥蜴大剑
+3520700;Flame Lizard Greatsword;火焰大蜥蜴大剑
+3520800;Golden Lizard Greatsword;黄金大蜥蜴大剑
+3520900;Draconic Lizard Greatsword;龙装大蜥蜴大剑
+3521000;Bestial Lizard Greatsword;野兽大蜥蜴大剑
+3521100;Night Lizard Greatsword;黑夜大蜥蜴大剑
+3521200;Lava Lizard Greatsword;熔岩大蜥蜴大剑
+3521300;Frenzy Lizard Greatsword;癫狂大蜥蜴大剑
+3521400;Death Lizard Greatsword;死亡大蜥蜴大剑
+3521500;Godslayer Lizard Greatsword;狩猎神祇大蜥蜴大剑
+3521600;Frost Lizard Greatsword;冰霜大蜥蜴大剑
+3521700;Aberrant Lizard Greatsword;异端大蜥蜴大剑
+3521800;Bloodflame Lizard Greatsword;血焰大蜥蜴大剑
+3521900;Rotten Lizard Greatsword;腐败大蜥蜴大剑
+3522000;Storm Lizard Greatsword;风暴大蜥蜴大剑
+3522100;Mystic Lizard Greatsword;密契大蜥蜴大剑
+3550000;Greatsword of Solitude;孤牢大剑
+3560000;Greatsword of Midra;米德拉的大剑
+4500000;Ancient Meteoric Ore Greatsword;古铁陨石大剑
+4520000;Fire Knight's Greatsword;火焰骑士大剑
+4520100;Fire Knight's Heavy Greatsword;厚重火焰骑士大剑
+4520200;Fire Knight's Keen Greatsword;锋利火焰骑士大剑
+4520300;Fire Knight's Quality Greatsword;优质火焰骑士大剑
+4520400;Fire Knight's Fire Greatsword;火焰火焰骑士大剑
+4520500;Fire Knight's Flame Art Greatsword;焰术火焰骑士大剑
+4520600;Fire Knight's Lightning Greatsword;雷电火焰骑士大剑
+4520700;Fire Knight's Sacred Greatsword;神圣火焰骑士大剑
+4520800;Fire Knight's Magic Greatsword;魔力火焰骑士大剑
+4520900;Fire Knight's Cold Greatsword;寒冷火焰骑士大剑
+4521000;Fire Knight's Poison Greatsword;毒火焰骑士大剑
+4521100;Fire Knight's Blood Greatsword;血火焰骑士大剑
+4521200;Fire Knight's Occult Greatsword;神秘火焰骑士大剑
+4530000;Greatswords of Radahn;拉塔恩的大剑
+4540000;Moonrithyll's Knight Sword;穆利缇尔的骑士剑
+4550000;Greatsword of Radahn (Light);拉塔恩的大剑（光）
+6500000;Queelign's Greatsword;昆兰的大剑
+6500100;Queelign's Heavy Greatsword;厚重昆兰的大剑
+6500200;Queelign's Keen Greatsword;锋利昆兰的大剑
+6500300;Queelign's Quality Greatsword;优质昆兰的大剑
+6500400;Queelign's Fire Greatsword;火焰昆兰的大剑
+6500500;Queelign's Flame Art Greatsword;焰术昆兰的大剑
+6500600;Queelign's Lightning Greatsword;雷电昆兰的大剑
+6500700;Queelign's Sacred Greatsword;神圣昆兰的大剑
+6500800;Queelign's Magic Greatsword;魔力昆兰的大剑
+6500900;Queelign's Cold Greatsword;寒冷昆兰的大剑
+6501000;Queelign's Poison Greatsword;毒昆兰的大剑
+6501100;Queelign's Blood Greatsword;血昆兰的大剑
+6501200;Queelign's Occult Greatsword;神秘昆兰的大剑
+7500000;Spirit Sword;灵魂剑
+7510000;Falx;镰型刀
+7520000;Dancing Blade of Ranah;拉纳舞蹈剑
+7530000;Horned Warrior's Sword;角战士曲剑
+8500000;Putrescence Cleaver;融泥大柴刀
+8510000;Freyja's Greatsword;弗蕾亚的大剑
+8510100;Freyja's Heavy Greatsword;厚重弗蕾亚的大剑
+8510200;Freyja's Keen Greatsword;锋利弗蕾亚的大剑
+8510300;Freyja's Quality Greatsword;优质弗蕾亚的大剑
+8510400;Freyja's Fire Greatsword;火焰弗蕾亚的大剑
+8510500;Freyja's Flame Art Greatsword;焰术弗蕾亚的大剑
+8510600;Freyja's Lightning Greatsword;雷电弗蕾亚的大剑
+8510700;Freyja's Sacred Greatsword;神圣弗蕾亚的大剑
+8510800;Freyja's Magic Greatsword;魔力弗蕾亚的大剑
+8510900;Freyja's Cold Greatsword;寒冷弗蕾亚的大剑
+8511000;Freyja's Poison Greatsword;毒弗蕾亚的大剑
+8511100;Freyja's Blood Greatsword;血弗蕾亚的大剑
+8511200;Freyja's Occult Greatsword;神秘弗蕾亚的大剑
+8520000;Horned Warrior's Greatsword;角战士大曲剑
+8530000;Demi-Dragon Cleaver;亚龙大柴刀
+8530100;Heavy Demi-Dragon Cleaver;厚重亚龙大柴刀
+8530200;Keen Demi-Dragon Cleaver;锋利亚龙大柴刀
+8530300;Quality Demi-Dragon Cleaver;优质亚龙大柴刀
+8530400;Glint Demi-Dragon Cleaver;辉石亚龙大柴刀
+8530500;Dragonkin Demi-Dragon Cleaver;龙人亚龙大柴刀
+8530600;Gravity Demi-Dragon Cleaver;重力亚龙大柴刀
+8530700;Flame Demi-Dragon Cleaver;火焰亚龙大柴刀
+8530800;Golden Demi-Dragon Cleaver;黄金亚龙大柴刀
+8530900;Draconic Demi-Dragon Cleaver;龙装亚龙大柴刀
+8531000;Bestial Demi-Dragon Cleaver;野兽亚龙大柴刀
+8531100;Night Demi-Dragon Cleaver;黑夜亚龙大柴刀
+8531200;Lava Demi-Dragon Cleaver;熔岩亚龙大柴刀
+8531300;Frenzy Demi-Dragon Cleaver;癫狂亚龙大柴刀
+8531400;Death Demi-Dragon Cleaver;死亡亚龙大柴刀
+8531500;Godslayer Demi-Dragon Cleaver;狩猎神祇亚龙大柴刀
+8531600;Frost Demi-Dragon Cleaver;冰霜亚龙大柴刀
+8531700;Aberrant Demi-Dragon Cleaver;异端亚龙大柴刀
+8531800;Bloodflame Demi-Dragon Cleaver;血焰亚龙大柴刀
+8531900;Rotten Demi-Dragon Cleaver;腐败亚龙大柴刀
+8532000;Storm Demi-Dragon Cleaver;风暴亚龙大柴刀
+8532100;Mystic Demi-Dragon Cleaver;密契亚龙大柴刀
+9500000;Sword of Night;黑夜刀
+10500000;Euporia;艾珀莉亚
+10510000;Black Steel Twinblade;黑铁双头剑
+10510100;Heavy Black Steel Twinblade;厚重黑铁双头剑
+10510200;Keen Black Steel Twinblade;锋利黑铁双头剑
+10510300;Quality Black Steel Twinblade;优质黑铁双头剑
+10510400;Fire Black Steel Twinblade;火焰黑铁双头剑
+10510500;Flame Art Black Steel Twinblade;焰术黑铁双头剑
+10510600;Lightning Black Steel Twinblade;雷电黑铁双头剑
+10510700;Sacred Black Steel Twinblade;神圣黑铁双头剑
+10510800;Magic Black Steel Twinblade;魔力黑铁双头剑
+10510900;Cold Black Steel Twinblade;寒冷黑铁双头剑
+10511000;Poison Black Steel Twinblade;毒黑铁双头剑
+10511100;Blood Black Steel Twinblade;血黑铁双头剑
+10511200;Occult Black Steel Twinblade;神秘黑铁双头剑
+11500000;Flowerstone Gavel;花岩槌
+12500000;Smithscript Greathammer;流纹大槌
+12500100;Heavy Smithscript Greathammer;厚重流纹大槌
+12500200;Keen Smithscript Greathammer;锋利流纹大槌
+12500300;Quality Smithscript Greathammer;优质流纹大槌
+12500400;Glint Smithscript Greathammer;辉石流纹大槌
+12500500;Dragonkin Smithscript Greathammer;龙人流纹大槌
+12500600;Gravity Smithscript Greathammer;重力流纹大槌
+12500700;Flame Smithscript Greathammer;火焰流纹大槌
+12500800;Golden Smithscript Greathammer;黄金流纹大槌
+12500900;Draconic Smithscript Greathammer;龙装流纹大槌
+12501000;Bestial Smithscript Greathammer;野兽流纹大槌
+12501100;Night Smithscript Greathammer;黑夜流纹大槌
+12501200;Lava Smithscript Greathammer;熔岩流纹大槌
+12501300;Frenzy Smithscript Greathammer;癫狂流纹大槌
+12501400;Death Smithscript Greathammer;死亡流纹大槌
+12501500;Godslayer Smithscript Greathammer;狩猎神祇流纹大槌
+12501600;Frost Smithscript Greathammer;冰霜流纹大槌
+12501700;Aberrant Smithscript Greathammer;异端流纹大槌
+12501800;Bloodflame Smithscript Greathammer;血焰流纹大槌
+12501900;Rotten Smithscript Greathammer;腐败流纹大槌
+12502000;Storm Smithscript Greathammer;风暴流纹大槌
+12502100;Mystic Smithscript Greathammer;密契流纹大槌
+12510000;Anvil Hammer;铁砧大锤
+12520000;Black Steel Greathammer;黑铁大锤
+12520100;Heavy Black Steel Greathammer;厚重黑铁大锤
+12520200;Keen Black Steel Greathammer;锋利黑铁大锤
+12520300;Quality Black Steel Greathammer;优质黑铁大锤
+12520400;Fire Black Steel Greathammer;火焰黑铁大锤
+12520500;Flame Art Black Steel Greathammer;焰术黑铁大锤
+12520600;Lightning Black Steel Greathammer;雷电黑铁大锤
+12520700;Sacred Black Steel Greathammer;神圣黑铁大锤
+12520800;Magic Black Steel Greathammer;魔力黑铁大锤
+12520900;Cold Black Steel Greathammer;寒冷黑铁大锤
+12521000;Poison Black Steel Greathammer;毒黑铁大锤
+12521100;Blood Black Steel Greathammer;血黑铁大锤
+12521200;Occult Black Steel Greathammer;神秘黑铁大锤
+12530000;Bloodfiend's Arm;血怪手臂
+12530100;Bloodfiend's Heavy Arm;厚重血怪手臂
+12530200;Bloodfiend's Keen Arm;锋利血怪手臂
+12530300;Bloodfiend's Quality Arm;优质血怪手臂
+12530400;Bloodfiend's Fire Arm;火焰血怪手臂
+12530500;Bloodfiend's Flame Art Arm;焰术血怪手臂
+12530600;Bloodfiend's Lightning Arm;雷电血怪手臂
+12530700;Bloodfiend's Sacred Arm;神圣血怪手臂
+12530800;Bloodfiend's Magic Arm;魔力血怪手臂
+12530900;Bloodfiend's Cold Arm;寒冷血怪手臂
+12531000;Bloodfiend's Poison Arm;毒血怪手臂
+12531100;Bloodfiend's Blood Arm;血血怪手臂
+12531200;Bloodfiend's Occult Arm;神秘血怪手臂
+13500000;Serpent Flail;蛇连枷
+14500000;Smithscript Axe;流纹斧
+14500100;Heavy Smithscript Axe;厚重流纹斧
+14500200;Keen Smithscript Axe;锋利流纹斧
+14500300;Quality Smithscript Axe;优质流纹斧
+14500400;Glint Smithscript Axe;辉石流纹斧
+14500500;Dragonkin Smithscript Axe;龙人流纹斧
+14500600;Gravity Smithscript Axe;重力流纹斧
+14500700;Flame Smithscript Axe;火焰流纹斧
+14500800;Golden Smithscript Axe;黄金流纹斧
+14500900;Draconic Smithscript Axe;龙装流纹斧
+14501000;Bestial Smithscript Axe;野兽流纹斧
+14501100;Night Smithscript Axe;黑夜流纹斧
+14501200;Lava Smithscript Axe;熔岩流纹斧
+14501300;Frenzy Smithscript Axe;癫狂流纹斧
+14501400;Death Smithscript Axe;死亡流纹斧
+14501500;Godslayer Smithscript Axe;狩猎神祇流纹斧
+14501600;Frost Smithscript Axe;冰霜流纹斧
+14501700;Aberrant Smithscript Axe;异端流纹斧
+14501800;Bloodflame Smithscript Axe;血焰流纹斧
+14501900;Rotten Smithscript Axe;腐败流纹斧
+14502000;Storm Smithscript Axe;风暴流纹斧
+14502100;Mystic Smithscript Axe;密契流纹斧
+14510000;Death Knight's Twin Axes;死骑士对斧
+14520000;Messmer Soldier's Axe;梅瑟莫士兵斧
+14520100;Messmer Soldier's Heavy Axe;厚重梅瑟莫士兵斧
+14520200;Messmer Soldier's Keen Axe;锋利梅瑟莫士兵斧
+14520300;Messmer Soldier's Quality Axe;优质梅瑟莫士兵斧
+14520400;Messmer Soldier's Glint Axe;辉石梅瑟莫士兵斧
+14520500;Messmer Soldier's Dragonkin Axe;龙人梅瑟莫士兵斧
+14520600;Messmer Soldier's Gravity Axe;重力梅瑟莫士兵斧
+14520700;Messmer Soldier's Flame Axe;火焰梅瑟莫士兵斧
+14520800;Messmer Soldier's Golden Axe;黄金梅瑟莫士兵斧
+14520900;Messmer Soldier's Draconic Axe;龙装梅瑟莫士兵斧
+14521000;Messmer Soldier's Bestial Axe;野兽梅瑟莫士兵斧
+14521100;Messmer Soldier's Night Axe;黑夜梅瑟莫士兵斧
+14521200;Messmer Soldier's Lava Axe;熔岩梅瑟莫士兵斧
+14521300;Messmer Soldier's Frenzy Axe;癫狂梅瑟莫士兵斧
+14521400;Messmer Soldier's Death Axe;死亡梅瑟莫士兵斧
+14521500;Messmer Soldier's Godslayer Axe;狩猎神祇梅瑟莫士兵斧
+14521600;Messmer Soldier's Frost Axe;冰霜梅瑟莫士兵斧
+14521700;Messmer Soldier's Aberrant Axe;异端梅瑟莫士兵斧
+14521800;Messmer Soldier's Bloodflame Axe;血焰梅瑟莫士兵斧
+14521900;Messmer Soldier's Rotten Axe;腐败梅瑟莫士兵斧
+14522000;Messmer Soldier's Storm Axe;风暴梅瑟莫士兵斧
+14522100;Messmer Soldier's Mystic Axe;密契梅瑟莫士兵斧
+14540000;Forked-Tongue Hatchet;分岔舌手斧
+15500000;Death Knight's Longhaft Axe;死骑士长柄斧
+15510000;Bonny Butchering Knife;波尼肢解菜刀
+16500000;Smithscript Spear;流纹矛
+16500100;Heavy Smithscript Spear;厚重流纹矛
+16500200;Keen Smithscript Spear;锋利流纹矛
+16500300;Quality Smithscript Spear;优质流纹矛
+16500400;Glint Smithscript Spear;辉石流纹矛
+16500500;Dragonkin Smithscript Spear;龙人流纹矛
+16500600;Gravity Smithscript Spear;重力流纹矛
+16500700;Flame Smithscript Spear;火焰流纹矛
+16500800;Golden Smithscript Spear;黄金流纹矛
+16500900;Draconic Smithscript Spear;龙装流纹矛
+16501000;Bestial Smithscript Spear;野兽流纹矛
+16501100;Night Smithscript Spear;黑夜流纹矛
+16501200;Lava Smithscript Spear;熔岩流纹矛
+16501300;Frenzy Smithscript Spear;癫狂流纹矛
+16501400;Death Smithscript Spear;死亡流纹矛
+16501500;Godslayer Smithscript Spear;狩猎神祇流纹矛
+16501600;Frost Smithscript Spear;冰霜流纹矛
+16501700;Aberrant Smithscript Spear;异端流纹矛
+16501800;Bloodflame Smithscript Spear;血焰流纹矛
+16501900;Rotten Smithscript Spear;腐败流纹矛
+16502000;Storm Smithscript Spear;风暴流纹矛
+16502100;Mystic Smithscript Spear;密契流纹矛
+16520000;Swift Spear;迅矛
+16520100;Heavy Swift Spear;厚重迅矛
+16520200;Keen Swift Spear;锋利迅矛
+16520300;Quality Swift Spear;优质迅矛
+16520400;Fire Swift Spear;火焰迅矛
+16520500;Flame Art Swift Spear;焰术迅矛
+16520600;Lightning Swift Spear;雷电迅矛
+16520700;Sacred Swift Spear;神圣迅矛
+16520800;Magic Swift Spear;魔力迅矛
+16520900;Cold Swift Spear;寒冷迅矛
+16521000;Poison Swift Spear;毒迅矛
+16521100;Blood Swift Spear;血迅矛
+16521200;Occult Swift Spear;神秘迅矛
+16540000;Bloodfiend's Fork;血怪叉矛
+16540100;Bloodfiend's Heavy Fork;厚重血怪叉矛
+16540200;Bloodfiend's Keen Fork;锋利血怪叉矛
+16540300;Bloodfiend's Quality Fork;优质血怪叉矛
+16540400;Bloodfiend's Fire Fork;火焰血怪叉矛
+16540500;Bloodfiend's Flame Art Fork;焰术血怪叉矛
+16540600;Bloodfiend's Lightning Fork;雷电血怪叉矛
+16540700;Bloodfiend's Sacred Fork;神圣血怪叉矛
+16540800;Bloodfiend's Magic Fork;魔力血怪叉矛
+16540900;Bloodfiend's Cold Fork;寒冷血怪叉矛
+16541000;Bloodfiend's Poison Fork;毒血怪叉矛
+16541100;Bloodfiend's Blood Fork;血血怪叉矛
+16541200;Bloodfiend's Occult Fork;神秘血怪叉矛
+16550000;Bloodfiend's Sacred Spear;血怪圣矛
+16560000;Gaoler's Mancatcher;狱卒捕人叉
+16560100;Heavy Gaoler's Mancatcher;厚重狱卒捕人叉
+16560200;Keen Gaoler's Mancatcher;锋利狱卒捕人叉
+16560300;Quality Gaoler's Mancatcher;优质狱卒捕人叉
+16560400;Glint Gaoler's Mancatcher;辉石狱卒捕人叉
+16560500;Dragonkin Gaoler's Mancatcher;龙人狱卒捕人叉
+16560600;Gravity Gaoler's Mancatcher;重力狱卒捕人叉
+16560700;Flame Gaoler's Mancatcher;火焰狱卒捕人叉
+16560800;Golden Gaoler's Mancatcher;黄金狱卒捕人叉
+16560900;Draconic Gaoler's Mancatcher;龙装狱卒捕人叉
+16561000;Bestial Gaoler's Mancatcher;野兽狱卒捕人叉
+16561100;Night Gaoler's Mancatcher;黑夜狱卒捕人叉
+16561200;Lava Gaoler's Mancatcher;熔岩狱卒捕人叉
+16561300;Frenzy Gaoler's Mancatcher;癫狂狱卒捕人叉
+16561400;Death Gaoler's Mancatcher;死亡狱卒捕人叉
+16561500;Godslayer Gaoler's Mancatcher;狩猎神祇狱卒捕人叉
+16561600;Frost Gaoler's Mancatcher;冰霜狱卒捕人叉
+16561700;Aberrant Gaoler's Mancatcher;异端狱卒捕人叉
+16561800;Bloodflame Gaoler's Mancatcher;血焰狱卒捕人叉
+16561900;Rotten Gaoler's Mancatcher;腐败狱卒捕人叉
+16562000;Storm Gaoler's Mancatcher;风暴狱卒捕人叉
+16562100;Mystic Gaoler's Mancatcher;密契狱卒捕人叉
+17500000;Spear of the Impaler;穿刺者矛
+17510000;Messmer Soldier's Spear;梅瑟莫士兵矛
+17510100;Messmer Soldier's Heavy Spear;厚重梅瑟莫士兵矛
+17510200;Messmer Soldier's Keen Spear;锋利梅瑟莫士兵矛
+17510300;Messmer Soldier's Quality Spear;优质梅瑟莫士兵矛
+17510400;Messmer Soldier's Glint Spear;辉石梅瑟莫士兵矛
+17510500;Messmer Soldier's Dragonkin Spear;龙人梅瑟莫士兵矛
+17510600;Messmer Soldier's Gravity Spear;重力梅瑟莫士兵矛
+17510700;Messmer Soldier's Flame Spear;火焰梅瑟莫士兵矛
+17510800;Messmer Soldier's Golden Spear;黄金梅瑟莫士兵矛
+17510900;Messmer Soldier's Draconic Spear;龙装梅瑟莫士兵矛
+17511000;Messmer Soldier's Bestial Spear;野兽梅瑟莫士兵矛
+17511100;Messmer Soldier's Night Spear;黑夜梅瑟莫士兵矛
+17511200;Messmer Soldier's Lava Spear;熔岩梅瑟莫士兵矛
+17511300;Messmer Soldier's Frenzy Spear;癫狂梅瑟莫士兵矛
+17511400;Messmer Soldier's Death Spear;死亡梅瑟莫士兵矛
+17511500;Messmer Soldier's Godslayer Spear;狩猎神祇梅瑟莫士兵矛
+17511600;Messmer Soldier's Frost Spear;冰霜梅瑟莫士兵矛
+17511700;Messmer Soldier's Aberrant Spear;异端梅瑟莫士兵矛
+17511800;Messmer Soldier's Bloodflame Spear;血焰梅瑟莫士兵矛
+17511900;Messmer Soldier's Rotten Spear;腐败梅瑟莫士兵矛
+17512000;Messmer Soldier's Storm Spear;风暴梅瑟莫士兵矛
+17512100;Messmer Soldier's Mystic Spear;密契梅瑟莫士兵矛
+17520000;Barbed Staff-Spear;倒刺杖矛
+18500000;Spirit Glaive;灵魂剑刃戟
+18510000;Poleblade of the Bud;花蕾刀
+18520000;Glaive of the Crusade;圣战之戟
+19500000;Obsidian Lamina;黑曜薄刀
+20500000;Tooth Whip;畸齿软鞭
+21500000;Thiollier's Hidden Needle;休里耶的暗针
+21510000;Pata;帕塔剑
+21510100;Heavy Pata;厚重帕塔剑
+21510200;Keen Pata;锋利帕塔剑
+21510300;Quality Pata;优质帕塔剑
+21510400;Glint Pata;辉石帕塔剑
+21510500;Dragonkin Pata;龙人帕塔剑
+21510600;Gravity Pata;重力帕塔剑
+21510700;Flame Pata;火焰帕塔剑
+21510800;Golden Pata;黄金帕塔剑
+21510900;Draconic Pata;龙装帕塔剑
+21511000;Bestial Pata;野兽帕塔剑
+21511100;Night Pata;黑夜帕塔剑
+21511200;Lava Pata;熔岩帕塔剑
+21511300;Frenzy Pata;癫狂帕塔剑
+21511400;Death Pata;死亡帕塔剑
+21511500;Godslayer Pata;狩猎神祇帕塔剑
+21511600;Frost Pata;冰霜帕塔剑
+21511700;Aberrant Pata;异端帕塔剑
+21511800;Bloodflame Pata;血焰帕塔剑
+21511900;Rotten Pata;腐败帕塔剑
+21512000;Storm Pata;风暴帕塔剑
+21512100;Mystic Pata;密契帕塔剑
+21520000;Poisoned Hand;毒皮手套
+21530000;Madding Hand;癫狂皮手套
+21540000;Golem Fist;魔像拳头
+21540100;Heavy Golem Fist;厚重魔像拳头
+21540200;Keen Golem Fist;锋利魔像拳头
+21540300;Quality Golem Fist;优质魔像拳头
+21540400;Glint Golem Fist;辉石魔像拳头
+21540500;Dragonkin Golem Fist;龙人魔像拳头
+21540600;Gravity Golem Fist;重力魔像拳头
+21540700;Flame Golem Fist;火焰魔像拳头
+21540800;Golden Golem Fist;黄金魔像拳头
+21540900;Draconic Golem Fist;龙装魔像拳头
+21541000;Bestial Golem Fist;野兽魔像拳头
+21541100;Night Golem Fist;黑夜魔像拳头
+21541200;Lava Golem Fist;熔岩魔像拳头
+21541300;Frenzy Golem Fist;癫狂魔像拳头
+21541400;Death Golem Fist;死亡魔像拳头
+21541500;Godslayer Golem Fist;狩猎神祇魔像拳头
+21541600;Frost Golem Fist;冰霜魔像拳头
+21541700;Aberrant Golem Fist;异端魔像拳头
+21541800;Bloodflame Golem Fist;血焰魔像拳头
+21541900;Rotten Golem Fist;腐败魔像拳头
+21542000;Storm Golem Fist;风暴魔像拳头
+21542100;Mystic Golem Fist;密契魔像拳头
+21550000;Shield of Night;黑夜盾
+22500000;Claws of Night;黑夜爪
+23500000;Devonia's Hammer;泥盆亚的大槌
+23510000;Shadow Sunflower Blossom;影轮草大花
+23520000;Gazing Finger;凝望指头
+24500000;Nanaya's Torch;娜娜亚烛火
+24510000;Lamenting Visage;喟叹头颅
+30510000;Smithscript Shield;流纹盾
+31500000;Messmer Soldier Shield;梅瑟莫士兵盾
+31500100;Heavy Messmer Soldier Shield;厚重梅瑟莫士兵盾
+31500200;Keen Messmer Soldier Shield;锋利梅瑟莫士兵盾
+31500300;Quality Messmer Soldier Shield;优质梅瑟莫士兵盾
+31500400;Fire Messmer Soldier Shield;火焰梅瑟莫士兵盾
+31500500;Flame Art Messmer Soldier Shield;焰术梅瑟莫士兵盾
+31500600;Lightning Messmer Soldier Shield;雷电梅瑟莫士兵盾
+31500700;Sacred Messmer Soldier Shield;神圣梅瑟莫士兵盾
+31500800;Magic Messmer Soldier Shield;魔力梅瑟莫士兵盾
+31500900;Cold Messmer Soldier Shield;寒冷梅瑟莫士兵盾
+31501000;Poison Messmer Soldier Shield;毒梅瑟莫士兵盾
+31501100;Blood Messmer Soldier Shield;血梅瑟莫士兵盾
+31501200;Occult Messmer Soldier Shield;神秘梅瑟莫士兵盾
+31510000;Wolf Crest Shield;狼徽章盾
+31510100;Heavy Wolf Crest Shield;厚重狼徽章盾
+31510200;Keen Wolf Crest Shield;锋利狼徽章盾
+31510300;Quality Wolf Crest Shield;优质狼徽章盾
+31510400;Fire Wolf Crest Shield;火焰狼徽章盾
+31510500;Flame Art Wolf Crest Shield;焰术狼徽章盾
+31510600;Lightning Wolf Crest Shield;雷电狼徽章盾
+31510700;Sacred Wolf Crest Shield;神圣狼徽章盾
+31510800;Magic Wolf Crest Shield;魔力狼徽章盾
+31510900;Cold Wolf Crest Shield;寒冷狼徽章盾
+31511000;Poison Wolf Crest Shield;毒狼徽章盾
+31511100;Blood Wolf Crest Shield;血狼徽章盾
+31511200;Occult Wolf Crest Shield;神秘狼徽章盾
+31520000;Serpent Crest Shield;蛇徽章盾
+31520100;Heavy Serpent Crest Shield;厚重蛇徽章盾
+31520200;Keen Serpent Crest Shield;锋利蛇徽章盾
+31520300;Quality Serpent Crest Shield;优质蛇徽章盾
+31520400;Fire Serpent Crest Shield;火焰蛇徽章盾
+31520500;Flame Art Serpent Crest Shield;焰术蛇徽章盾
+31520600;Lightning Serpent Crest Shield;雷电蛇徽章盾
+31520700;Sacred Serpent Crest Shield;神圣蛇徽章盾
+31520800;Magic Serpent Crest Shield;魔力蛇徽章盾
+31520900;Cold Serpent Crest Shield;寒冷蛇徽章盾
+31521000;Poison Serpent Crest Shield;毒蛇徽章盾
+31521100;Blood Serpent Crest Shield;血蛇徽章盾
+31521200;Occult Serpent Crest Shield;神秘蛇徽章盾
+31530000;Golden Lion Shield;黄金狮子盾
+32500000;Black Steel Greatshield;黑铁大盾
+32500100;Heavy Black Steel Greatshield;厚重黑铁大盾
+32500200;Keen Black Steel Greatshield;锋利黑铁大盾
+32500300;Quality Black Steel Greatshield;优质黑铁大盾
+32500400;Fire Black Steel Greatshield;火焰黑铁大盾
+32500500;Flame Art Black Steel Greatshield;焰术黑铁大盾
+32500600;Lightning Black Steel Greatshield;雷电黑铁大盾
+32500700;Sacred Black Steel Greatshield;神圣黑铁大盾
+32500800;Magic Black Steel Greatshield;魔力黑铁大盾
+32500900;Cold Black Steel Greatshield;寒冷黑铁大盾
+32501000;Poison Black Steel Greatshield;毒黑铁大盾
+32501100;Blood Black Steel Greatshield;血黑铁大盾
+32501200;Occult Black Steel Greatshield;神秘黑铁大盾
+32520000;Verdigris Greatshield;铜绿大盾
+33510000;Staff of the Great Beyond;无上远方杖
+33520000;Maternal Staff;母亲杖
+34500000;Dryleaf Seal;落叶圣印记
+34510000;Fire Knight's Seal;火焰骑士圣印记
+34520000;Spiraltree Seal;螺旋树圣印记
+40500000;Bone Bow;骸骨弓
+41510000;Ansbach's Longbow;安帕赫的长弓
+42500000;Igon's Greatbow;埃贡的大弓
+43500000;Repeating Crossbow;连射弩
+43510000;Spread Crossbow;多击发弩
+44500000;Rabbath's Cannon;拉巴斯大炮
+50540000;Piquebone Arrow (Fletched);兽骨诱惑箭（附箭羽）
+50550000;Piquebone Arrow;兽骨诱惑箭
+51500000;Igon's Harpoon;埃贡的鱼叉
+52520000;Piquebone Bolt;兽骨诱惑弩箭
+53500000;Rabbath's Greatbolt;拉巴斯大弩箭
+60500000;Dryleaf Arts;落叶格斗术
+60500100;Heavy Dryleaf Arts;厚重落叶格斗术
+60500200;Keen Dryleaf Arts;锋利落叶格斗术
+60500300;Quality Dryleaf Arts;优质落叶格斗术
+60500400;Glint Dryleaf Arts;辉石落叶格斗术
+60500500;Dragonkin Dryleaf Arts;龙人落叶格斗术
+60500600;Gravity Dryleaf Arts;重力落叶格斗术
+60500700;Flame Dryleaf Arts;火焰落叶格斗术
+60500800;Golden Dryleaf Arts;黄金落叶格斗术
+60500900;Draconic Dryleaf Arts;龙装落叶格斗术
+60501000;Bestial Dryleaf Arts;野兽落叶格斗术
+60501100;Night Dryleaf Arts;黑夜落叶格斗术
+60501200;Lava Dryleaf Arts;熔岩落叶格斗术
+60501300;Frenzy Dryleaf Arts;癫狂落叶格斗术
+60501400;Death Dryleaf Arts;死亡落叶格斗术
+60501500;Godslayer Dryleaf Arts;狩猎神祇落叶格斗术
+60501600;Frost Dryleaf Arts;冰霜落叶格斗术
+60501700;Aberrant Dryleaf Arts;异端落叶格斗术
+60501800;Bloodflame Dryleaf Arts;血焰落叶格斗术
+60501900;Rotten Dryleaf Arts;腐败落叶格斗术
+60502000;Storm Dryleaf Arts;风暴落叶格斗术
+60502100;Mystic Dryleaf Arts;密契落叶格斗术
+60510000;Dane's Footwork;丹恩流踢击术
+60510100;Dane's Heavy Footwork;厚重丹恩流踢击术
+60510200;Dane's Keen Footwork;锋利丹恩流踢击术
+60510300;Dane's Quality Footwork;优质丹恩流踢击术
+60510400;Dane's Glint Footwork;辉石丹恩流踢击术
+60510500;Dane's Dragonkin Footwork;龙人丹恩流踢击术
+60510600;Dane's Gravity Footwork;重力丹恩流踢击术
+60510700;Dane's Flame Footwork;火焰丹恩流踢击术
+60510800;Dane's Golden Footwork;黄金丹恩流踢击术
+60510900;Dane's Draconic Footwork;龙装丹恩流踢击术
+60511000;Dane's Bestial Footwork;野兽丹恩流踢击术
+60511100;Dane's Night Footwork;黑夜丹恩流踢击术
+60511200;Dane's Lava Footwork;熔岩丹恩流踢击术
+60511300;Dane's Frenzy Footwork;癫狂丹恩流踢击术
+60511400;Dane's Death Footwork;死亡丹恩流踢击术
+60511500;Dane's Godslayer Footwork;狩猎神祇丹恩流踢击术
+60511600;Dane's Frost Footwork;冰霜丹恩流踢击术
+60511700;Dane's Aberrant Footwork;异端丹恩流踢击术
+60511800;Dane's Bloodflame Footwork;血焰丹恩流踢击术
+60511900;Dane's Rotten Footwork;腐败丹恩流踢击术
+60512000;Dane's Storm Footwork;风暴丹恩流踢击术
+60512100;Dane's Mystic Footwork;密契丹恩流踢击术
+60520000;Rancor Touch;怨魂之触
+60530000;Bracelet of Shadow;暗影手环
+60540000;Bracelet of Gold;黄金手环
+61500000;Firespark Perfume Bottle;火花调香瓶
+61510000;Chilling Perfume Bottle;寒气调香瓶
+61520000;Frenzyflame Perfume Bottle;癫火调香瓶
+61530000;Lightning Perfume Bottle;雷电调香瓶
+61540000;Deadly Poison Perfume Bottle;剧毒调香瓶
+62500000;Dueling Shield;决斗盾
+62500100;Heavy Dueling Shield;厚重决斗盾
+62500200;Keen Dueling Shield;锋利决斗盾
+62500300;Quality Dueling Shield;优质决斗盾
+62500400;Glint Dueling Shield;辉石决斗盾
+62500500;Dragonkin Dueling Shield;龙人决斗盾
+62500600;Gravity Dueling Shield;重力决斗盾
+62500700;Flame Dueling Shield;火焰决斗盾
+62500800;Golden Dueling Shield;黄金决斗盾
+62500900;Draconic Dueling Shield;龙装决斗盾
+62501000;Bestial Dueling Shield;野兽决斗盾
+62501100;Night Dueling Shield;黑夜决斗盾
+62501200;Lava Dueling Shield;熔岩决斗盾
+62501300;Frenzy Dueling Shield;癫狂决斗盾
+62501400;Death Dueling Shield;死亡决斗盾
+62501500;Godslayer Dueling Shield;狩猎神祇决斗盾
+62501600;Frost Dueling Shield;冰霜决斗盾
+62501700;Aberrant Dueling Shield;异端决斗盾
+62501800;Bloodflame Dueling Shield;血焰决斗盾
+62501900;Rotten Dueling Shield;腐败决斗盾
+62502000;Storm Dueling Shield;风暴决斗盾
+62502100;Mystic Dueling Shield;密契决斗盾
+62510000;Carian Thrusting Shield;卡利亚突刺盾
+62510100;Heavy Carian Thrusting Shield;厚重卡利亚突刺盾
+62510200;Keen Carian Thrusting Shield;锋利卡利亚突刺盾
+62510300;Quality Carian Thrusting Shield;优质卡利亚突刺盾
+62510400;Fire Carian Thrusting Shield;火焰卡利亚突刺盾
+62510500;Flame Art Carian Thrusting Shield;焰术卡利亚突刺盾
+62510600;Lightning Carian Thrusting Shield;雷电卡利亚突刺盾
+62510700;Sacred Carian Thrusting Shield;神圣卡利亚突刺盾
+62510800;Magic Carian Thrusting Shield;魔力卡利亚突刺盾
+62510900;Cold Carian Thrusting Shield;寒冷卡利亚突刺盾
+62511000;Poison Carian Thrusting Shield;毒卡利亚突刺盾
+62511100;Blood Carian Thrusting Shield;血卡利亚突刺盾
+62511200;Occult Carian Thrusting Shield;神秘卡利亚突刺盾
+63500000;Smithscript Dagger;流纹短剑
+63500100;Heavy Smithscript Dagger;厚重流纹短剑
+63500200;Keen Smithscript Dagger;锋利流纹短剑
+63500300;Quality Smithscript Dagger;优质流纹短剑
+63500400;Glint Smithscript Dagger;辉石流纹短剑
+63500500;Dragonkin Smithscript Dagger;龙人流纹短剑
+63500600;Gravity Smithscript Dagger;重力流纹短剑
+63500700;Flame Smithscript Dagger;火焰流纹短剑
+63500800;Golden Smithscript Dagger;黄金流纹短剑
+63500900;Draconic Smithscript Dagger;龙装流纹短剑
+63501000;Bestial Smithscript Dagger;野兽流纹短剑
+63501100;Night Smithscript Dagger;黑夜流纹短剑
+63501200;Lava Smithscript Dagger;熔岩流纹短剑
+63501300;Frenzy Smithscript Dagger;癫狂流纹短剑
+63501400;Death Smithscript Dagger;死亡流纹短剑
+63501500;Godslayer Smithscript Dagger;狩猎神祇流纹短剑
+63501600;Frost Smithscript Dagger;冰霜流纹短剑
+63501700;Aberrant Smithscript Dagger;异端流纹短剑
+63501800;Bloodflame Smithscript Dagger;血焰流纹短剑
+63501900;Rotten Smithscript Dagger;腐败流纹短剑
+63502000;Storm Smithscript Dagger;风暴流纹短剑
+63502100;Mystic Smithscript Dagger;密契流纹短剑
+64500000;Backhand Blade;反手剑
+64500100;Heavy Backhand Blade;厚重反手剑
+64500200;Keen Backhand Blade;锋利反手剑
+64500300;Quality Backhand Blade;优质反手剑
+64500400;Glint Backhand Blade;辉石反手剑
+64500500;Dragonkin Backhand Blade;龙人反手剑
+64500600;Gravity Backhand Blade;重力反手剑
+64500700;Flame Backhand Blade;火焰反手剑
+64500800;Golden Backhand Blade;黄金反手剑
+64500900;Draconic Backhand Blade;龙装反手剑
+64501000;Bestial Backhand Blade;野兽反手剑
+64501100;Night Backhand Blade;黑夜反手剑
+64501200;Lava Backhand Blade;熔岩反手剑
+64501300;Frenzy Backhand Blade;癫狂反手剑
+64501400;Death Backhand Blade;死亡反手剑
+64501500;Godslayer Backhand Blade;狩猎神祇反手剑
+64501600;Frost Backhand Blade;冰霜反手剑
+64501700;Aberrant Backhand Blade;异端反手剑
+64501800;Bloodflame Backhand Blade;血焰反手剑
+64501900;Rotten Backhand Blade;腐败反手剑
+64502000;Storm Backhand Blade;风暴反手剑
+64502100;Mystic Backhand Blade;密契反手剑
+64510000;Smithscript Cirque;流纹圆刃刀
+64510100;Heavy Smithscript Cirque;厚重流纹圆刃刀
+64510200;Keen Smithscript Cirque;锋利流纹圆刃刀
+64510300;Quality Smithscript Cirque;优质流纹圆刃刀
+64510400;Glint Smithscript Cirque;辉石流纹圆刃刀
+64510500;Dragonkin Smithscript Cirque;龙人流纹圆刃刀
+64510600;Gravity Smithscript Cirque;重力流纹圆刃刀
+64510700;Flame Smithscript Cirque;火焰流纹圆刃刀
+64510800;Golden Smithscript Cirque;黄金流纹圆刃刀
+64510900;Draconic Smithscript Cirque;龙装流纹圆刃刀
+64511000;Bestial Smithscript Cirque;野兽流纹圆刃刀
+64511100;Night Smithscript Cirque;黑夜流纹圆刃刀
+64511200;Lava Smithscript Cirque;熔岩流纹圆刃刀
+64511300;Frenzy Smithscript Cirque;癫狂流纹圆刃刀
+64511400;Death Smithscript Cirque;死亡流纹圆刃刀
+64511500;Godslayer Smithscript Cirque;狩猎神祇流纹圆刃刀
+64511600;Frost Smithscript Cirque;冰霜流纹圆刃刀
+64511700;Aberrant Smithscript Cirque;异端流纹圆刃刀
+64511800;Bloodflame Smithscript Cirque;血焰流纹圆刃刀
+64511900;Rotten Smithscript Cirque;腐败流纹圆刃刀
+64512000;Storm Smithscript Cirque;风暴流纹圆刃刀
+64512100;Mystic Smithscript Cirque;密契流纹圆刃刀
+64520000;Curseblade's Cirque;咒剑士圆刃刀
+64550000;Crescent Moons;新月双刃
+66500000;Great Katana;大刀
+66500100;Heavy Great Katana;厚重大刀
+66500200;Keen Great Katana;锋利大刀
+66500300;Quality Great Katana;优质大刀
+66500400;Glint Great Katana;辉石大刀
+66500500;Dragonkin Great Katana;龙人大刀
+66500600;Gravity Great Katana;重力大刀
+66500700;Flame Great Katana;火焰大刀
+66500800;Golden Great Katana;黄金大刀
+66500900;Draconic Great Katana;龙装大刀
+66501000;Bestial Great Katana;野兽大刀
+66501100;Night Great Katana;黑夜大刀
+66501200;Lava Great Katana;熔岩大刀
+66501300;Frenzy Great Katana;癫狂大刀
+66501400;Death Great Katana;死亡大刀
+66501500;Godslayer Great Katana;狩猎神祇大刀
+66501600;Frost Great Katana;冰霜大刀
+66501700;Aberrant Great Katana;异端大刀
+66501800;Bloodflame Great Katana;血焰大刀
+66501900;Rotten Great Katana;腐败大刀
+66502000;Storm Great Katana;风暴大刀
+66502100;Mystic Great Katana;密契大刀
+66510000;Dragon-Hunter's Great Katana;猎龙大刀
+66520000;Rakshasa's Great Katana;罗刹大刀
+66530000;Eagle's Edge;鹰之刃
+67500000;Milady;仕女剑
+67500100;Heavy Milady;厚重仕女剑
+67500200;Keen Milady;锋利仕女剑
+67500300;Quality Milady;优质仕女剑
+67500400;Glint Milady;辉石仕女剑
+67500500;Dragonkin Milady;龙人仕女剑
+67500600;Gravity Milady;重力仕女剑
+67500700;Flame Milady;火焰仕女剑
+67500800;Golden Milady;黄金仕女剑
+67500900;Draconic Milady;龙装仕女剑
+67501000;Bestial Milady;野兽仕女剑
+67501100;Night Milady;黑夜仕女剑
+67501200;Lava Milady;熔岩仕女剑
+67501300;Frenzy Milady;癫狂仕女剑
+67501400;Death Milady;死亡仕女剑
+67501500;Godslayer Milady;狩猎神祇仕女剑
+67501600;Frost Milady;冰霜仕女剑
+67501700;Aberrant Milady;异端仕女剑
+67501800;Bloodflame Milady;血焰仕女剑
+67501900;Rotten Milady;腐败仕女剑
+67502000;Storm Milady;风暴仕女剑
+67502100;Mystic Milady;密契仕女剑
+67510000;Leda's Sword;蕾妲的剑
+67520000;Rellana's Twin Blades;蕾菈娜的对剑
+68500000;Beast Claw;野兽爪
+68500100;Heavy Beast Claw;厚重野兽爪
+68500200;Keen Beast Claw;锋利野兽爪
+68500300;Quality Beast Claw;优质野兽爪
+68500400;Glint Beast Claw;辉石野兽爪
+68500500;Dragonkin Beast Claw;龙人野兽爪
+68500600;Gravity Beast Claw;重力野兽爪
+68500700;Flame Beast Claw;火焰野兽爪
+68500800;Golden Beast Claw;黄金野兽爪
+68500900;Draconic Beast Claw;龙装野兽爪
+68501000;Bestial Beast Claw;野兽野兽爪
+68501100;Night Beast Claw;黑夜野兽爪
+68501200;Lava Beast Claw;熔岩野兽爪
+68501300;Frenzy Beast Claw;癫狂野兽爪
+68501400;Death Beast Claw;死亡野兽爪
+68501500;Godslayer Beast Claw;狩猎神祇野兽爪
+68501600;Frost Beast Claw;冰霜野兽爪
+68501700;Aberrant Beast Claw;异端野兽爪
+68501800;Bloodflame Beast Claw;血焰野兽爪
+68501900;Rotten Beast Claw;腐败野兽爪
+68502000;Storm Beast Claw;风暴野兽爪
+68502100;Mystic Beast Claw;密契野兽爪
+68510000;Red Bear's Claw;红熊爪

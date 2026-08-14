@@ -81,6 +81,7 @@
 211100;Briar Armor (Altered);铁棘铠甲（轻装）
 220000;Page Hood;随从风帽
 220100;Page Garb;随从上衣
+220200;Page Gloves;随从手套
 220300;Page Trousers;随从长裤
 221100;Page Garb (Altered);随从上衣（轻装）
 230000;Night's Cavalry Helm;黑夜骑兵头盔
@@ -96,6 +97,7 @@
 241100;Blue Silver Mail Armor (Altered);苍银铠甲（轻装）
 250000;Nomadic Merchant's Chapeau;流浪商人帽子
 250100;Nomadic Merchant's Finery;流浪商人上衣
+250200;Nomadic Merchant's Gloves;流浪商人的手套
 250300;Nomadic Merchant's Trousers;流浪商人长裤
 251100;Nomadic Merchant's Finery (Altered);流浪商人上衣（轻装）
 260000;Malformed Dragon Helm;异形龙盔
@@ -122,6 +124,8 @@
 292100;Nox Swordstress Armor;诺克斯剑士铠甲
 293000;Night Maiden Twin Crown;黑夜女巫双生冠
 293100;Night Maiden Armor;黑夜女巫铠甲
+293200;Night Maiden Bracelets;黑夜女巫手环
+293300;Night Maiden Greaves;黑夜女巫腿甲
 294000;Nox Swordstress Crown (Altered);诺克斯剑士头冠（轻装）
 294100;Nox Swordstress Armor (Altered);诺克斯剑士铠甲（轻装）
 300000;Great Horned Headband;大角头带
@@ -129,13 +133,17 @@
 300300;Fur Leggings;毛皮绑腿
 301000;Shining Horned Headband;光角头带
 301100;Shaman Furs;祭司毛皮上衣
+301200;Shaman Bracelets;祭司手环
 301300;Shaman Leggings;祭司绑腿
+302000;Mystic Circlet;密契头环
+302200;Mystic Bracelets;密契手环
 310000;Duelist Helm;斗士头盔
 310100;Gravekeeper Cloak;守墓斗篷
 310300;Duelist Greaves;斗士腿甲
 311100;Gravekeeper Cloak (Altered);守墓斗篷（轻装）
 320000;Sanguine Noble Hood;鲜血贵族风帽
 320100;Sanguine Noble Robe;鲜血贵族长袍
+320200;Sanguine Noble Bracelets;鲜血贵族手环
 320300;Sanguine Noble Waistcloth;鲜血贵族腰巾
 330000;Guardian Mask;守卫面具
 330100;Guardian Garb (Full Bloom);守卫上衣（开花）
@@ -170,10 +178,15 @@
 390000;Old Aristocrat Cowl;年迈权贵头巾
 390100;Old Aristocrat Gown;年迈权贵长袍
 390300;Old Aristocrat Shoes;年迈权贵短靴
+401000;Spiritshaper's Antlers;塑灵者鹿角
+401100;Spiritshaper's Cloak;塑灵者披风
+401200;Spiritshaper's Wraps;塑灵者腕带
+401300;Spiritshaper's Trousers;塑灵者长裤
 420000;Vulgar Militia Helm;恶兵头盔
 420100;Vulgar Militia Armor;恶兵铠甲
 420200;Vulgar Militia Gauntlets;恶兵臂甲
 420300;Vulgar Militia Greaves;恶兵腿甲
+421000;Vulgar Militia Hood;恶兵风帽
 430000;Sage Hood;贤者风帽
 430100;Sage Robe;贤者长袍
 430300;Sage Trousers;贤者长裤
@@ -194,6 +207,7 @@
 510100;Queen's Robe;女王长袍
 510200;Queen's Bracelets;女王手环
 510300;Queen's Leggings;女王长裤
+511000;Queen's Crescent Crown (Altered);女王弯月冠（轻装）
 520000;Godskin Apostle Hood;神皮使徒风帽
 520100;Godskin Apostle Robe;神皮使徒长袍
 520200;Godskin Apostle Bracelets;使徒手环
@@ -241,6 +255,7 @@
 611100;Ragged Armor (Altered);拼接铠甲（轻装）
 620000;Prophet Blindfold;预言家眼罩
 620100;Corhyn's Robe;柯林长袍
+620200;Prophet Manacles;预言家镣铐
 620300;Prophet Trousers;预言家长裤
 621100;Prophet Robe (Altered);预言家长袍（轻装）
 622100;Prophet Robe;预言家长袍
@@ -273,11 +288,18 @@
 680100;War Surgeon Gown;战场医师白上衣
 680200;War Surgeon Gloves;战场医师手套
 680300;War Surgeon Trousers;战场医师长裤
+681000;War Surgeon Hood;战场医师风帽
 681100;War Surgeon Gown (Altered);战场医师白上衣（轻装）
 690000;Royal Remains Helm;王骸头盔
 690100;Royal Remains Armor;王骸铠甲
 690200;Royal Remains Gauntlets;王骸臂甲
 690300;Royal Remains Greaves;王骸腿甲
+700000;Brave's Cord Circlet;勇士额带
+700100;Brave's Battlewear;勇士战袍
+700200;Brave's Bracer;勇士腕套
+700300;Brave's Legwraps;勇士绑腿
+701000;Brave's Leather Helm;勇士皮盔
+702000;Brave's Battlewear (Altered);勇士战袍（轻装）
 720000;Beast Champion Helm;聚兽头盔
 720100;Beast Champion Armor;聚兽铠甲
 720200;Beast Champion Gauntlets;聚兽臂甲
@@ -292,6 +314,7 @@
 740200;Noble's Gloves;贵族手套
 740300;Noble's Trousers;贵族长裤
 741000;Navy Hood;深蓝风帽
+743000;Viridian Hood;翠绿风帽
 760000;Maliketh's Helm;玛利喀斯头盔
 760100;Maliketh's Armor;玛利喀斯铠甲
 760200;Maliketh's Gauntlets;玛利喀斯臂甲
@@ -314,6 +337,8 @@
 791100;Bloodhound Knight Armor (Altered);猎犬骑士铠甲（轻装）
 800000;Festive Hood;庆典风帽
 800100;Festive Garb;庆典礼服
+800200;Festive Gloves;庆典手套
+800300;Festive Trousers;庆典长裤
 801000;Festive Hood (Altered);庆典风帽（简化）
 801100;Festive Garb (Altered);庆典礼服（简化）
 802000;Blue Festive Hood;庆典蓝风帽
@@ -334,6 +359,10 @@
 832000;Lazuli Glintstone Crown;拉兹利辉石头罩
 833000;Karolos Glintstone Crown;卡勒罗斯辉石头罩
 834000;Witch's Glintstone Crown;魔女辉石头罩
+837000;Glint Mage Cap;辉石魔法师帽
+837100;Glint Mage Robe;辉石魔法师袍
+837200;Raya Lucarian Gloves;雷亚卢卡利亚手套
+837300;Raya Lucarian Trousers;雷亚卢卡利亚长裤
 840000;Marionette Soldier Helm;人偶兵头盔
 840100;Marionette Soldier Armor;人偶兵铠甲
 850000;Marionette Soldier Birdhelm;人偶兵鸟笼盔
@@ -359,6 +388,7 @@
 881100;Confessor Armor (Altered);密使铠甲（轻装）
 890000;Prisoner Iron Mask;囚犯铁面具
 890100;Prisoner Clothing;囚犯布衣
+890200;Prisoner Chains;囚犯链铐
 890300;Prisoner Trousers;囚犯长裤
 891000;Blackguard's Iron Mask;流氓铁面具
 900000;Traveling Maiden Hood;旅行女巫风帽
@@ -376,11 +406,14 @@
 910300;Preceptor's Trousers;魔法教授长裤
 911000;Mask of Confidence;隐匿面具
 911100;Preceptor's Long Gown (Altered);魔法教授长袍（轻装）
+920000;Grass Hair Ornament;结草发饰
 930000;Skeletal Mask;亡骨面具
 930100;Raptor's Black Feathers;猛禽黑羽
-930200;Bandit Manchettes;盗贼腕套
-930300;Bandit Boots;盗贼靴子
+930200;Raptor's Gloves;猛禽手套
+930300;Raptor's Boots;猛禽靴子
 931100;Bandit Garb;盗贼束腰衣
+931200;Bandit Manchettes;游荡者腕套
+931300;Bandit Boots;游荡者靴子
 940000;Eccentric's Hood;奇异骑士风帽
 940100;Eccentric's Armor;奇异骑士铠甲
 940200;Eccentric's Manchettes;奇异骑士腕套
@@ -393,15 +426,18 @@
 951100;Fingerprint Armor (Altered);指痕铠甲（轻装）
 960000;Consort's Mask;侧室面具
 960100;Consort's Robe;侧室长袍
+960200;Consort's Gloves;侧室手套
 960300;Consort's Trousers;侧室长裤
 961000;Ruler's Mask;领主面具
 961100;Ruler's Robe;领主长袍
 962100;Upper-Class Robe;上流阶级长袍
 963000;Marais Mask;玛雷家面具
 963100;Marais Robe;玛雷家长袍
-963200;Bloodsoaked Manchettes;渗血腕套
 964000;Bloodsoaked Mask;渗血面具
-964100;Official's Attire;官吏上衣
+964100;Bloodsoaked Attire;渗血上衣
+964200;Bloodsoaked Manchettes;渗血腕套
+964300;Bloodsoaked Wraps;渗血护膝
+968100;Official's Attire;官吏上衣
 970000;Omen Helm;忌讳头盔
 970100;Omen Armor;忌讳铠甲
 970200;Omen Gauntlets;忌讳臂甲
@@ -422,6 +458,7 @@
 1000300;Battlemage Legwraps;战场魔法师绑腿
 1010000;Snow Witch Hat;雪魔女尖帽
 1010100;Snow Witch Robe;雪魔女长袍
+1010200;Snow Witch Gloves;雪魔女手套
 1010300;Snow Witch Skirt;雪魔女长裙
 1011100;Snow Witch Robe (Altered);雪魔女长袍（轻装）
 1020100;Traveler's Clothes;旅行上衣
@@ -460,8 +497,89 @@
 1130100;Mushroom Body;蘑菇身体
 1130200;Mushroom Arms;蘑菇腕部
 1130300;Mushroom Legs;蘑菇腿部
+1140000;Vanguard Helm;先锋头盔
+1140100;Vanguard Armor;先锋铠甲
+1140200;Vanguard Gauntlets;先锋臂甲
+1140300;Vanguard Greaves;先锋腿甲
+1150000;Marksman Hat;神射手帽子
+1150100;Marksman Tabard;神射手制服
+1150200;Marksman Gauntlets;神射手臂甲
+1150300;Marksman Boots;神射手靴子
+1160000;Berserker Leather Helm;狂战士皮盔
+1160100;Berserker Battlewear;狂战士战衣
+1160200;Berserker Bracers;狂战士护腕
+1160300;Berserker Legwraps;狂战士裹腿
+1161000;Berserker Leather Helm (Altered);狂战士皮盔（轻装）
+1170000;Dreadnought Helm;无畏者头盔
+1170100;Dreadnought Armor;无畏者铠甲
+1170200;Dreadnought Gauntlets;无畏者臂甲
+1170300;Dreadnought Greaves;无畏者腿甲
+1180000;Sellsword Helm;佣兵头盔
+1180100;Sellsword Armor;佣兵铠甲
+1180200;Sellsword Gloves;佣兵手套
+1180300;Sellsword Boots;佣兵靴子
+1190000;Starcaller Hood;唤星者风帽
+1190100;Starcaller Garb;唤星者外衣
+1190200;Starcaller Wraps;唤星者腕带
+1190300;Starcaller Boots;唤星者靴子
+1200000;Underworld Hood;地底风帽
+1200100;Underworld Robe;地底长袍
+1200200;Underworld Bracers;地底护腕
+1200300;Underworld Boots;地底靴子
+1210000;Volcanist Hat;火山术士帽子
+1210100;Volcanist Robe;火山术士长袍
+1210200;Volcanist Gloves;火山术士手套
+1210300;Volcanist Boots;火山术士靴子
+1220000;Stormcaller Helm;风暴呼召者头盔
+1220100;Stormcaller Armor;风暴呼召者铠甲
+1220200;Stormcaller Gauntlets;风暴呼召者臂甲
+1220300;Stormcaller Greaves;风暴呼召者腿甲
+1230000;Nox Oracle Headband;诺克斯神谕官头带
+1230100;Nox Oracle Armor;诺克斯神谕官铠甲
+1230200;Nox Oracle Gloves;诺克斯神谕官手套
+1230300;Nox Oracle Skirt;诺克斯神谕官长裙
+1240000;Necromancer Hood;死灵术士风帽
+1240100;Necromancer Robe;死灵术士长袍
+1240200;Necromancer Gloves;死灵术士手套
+1240300;Necromancer Trousers;死灵术士长裤
+1250000;Frost Witch Hat;冰霜巫师帽子
+1250100;Frost Witch Robe;冰霜巫师长袍
+1250200;Frost Witch Wraps;冰霜巫师腕带
+1250300;Frost Witch Skirt;冰霜巫师长裙
+1260000;Heretic's Collar;异教徒项圈
+1260100;Heretic's Rags;异教徒布衣
+1260200;Heretic's Wraps;异教徒腕带
+1260300;Heretic's Boots;异教徒靴子
 1300000;Nox Mirrorhelm;诺克斯镜面盔
 1301000;Iji's Mirrorhelm;伊吉镜面盔
+1310000;Fundamentalist Crown;基本主义者头冠
+1310100;Fundamentalist Breastplate;基本主义者胸甲
+1310200;Fundamentalist Bracers;基本主义者护腕
+1310300;Fundamentalist Greaves;基本主义者腿甲
+1320000;Dragon Cult Helm;龙装头盔
+1320100;Dragon Cult Armor;龙装铠甲
+1320200;Dragon Cult Gauntlets;龙装臂甲
+1320300;Dragon Cult Greaves;龙装腿甲
+1330000;Zealot Hood;狂徒风帽
+1330100;Zealot Robe;狂徒长袍
+1330200;Zealot Wraps;狂徒腕带
+1330300;Zealot Boots;狂徒靴子
+1340000;Hood of Rot;腐败风帽
+1340100;Coat of Rot;腐败披风
+1340200;Gloves of Rot;腐败手套
+1340300;Boots of Rot;腐败靴子
+1350000;Frenzied Maiden Blindfold;癫火女巫眼罩
+1350100;Frenzied Maiden Robe;癫火女巫长袍
+1350200;Frenzied Maiden Gloves;癫火女巫手套
+1350300;Frenzied Maiden Boots;癫火女巫靴子
+1360000;Dreamer's Horned Headband;梦者角头带
+1360100;Dreamer's Rags;梦者布衣
+1360200;Dreamer's Wraps;梦者腕带
+1360300;Dreamer's Skirt;梦者长裙
+1370000;Beast Clergy Hood;野兽祭司风帽
+1370100;Beast Clergy Robe;野兽祭司长袍
+1370200;Beast Clergy Bracers;野兽祭司护腕
+1370300;Beast Clergy Boots;野兽祭司靴子
 1400000;Black Hood;黑布风帽
 1400100;Leather Armor;皮革铠甲
 1400200;Leather Gloves;皮革手套
@@ -520,6 +638,7 @@
 1800200;Redmane Knight Gauntlets;红狮子骑士臂甲
 1800300;Redmane Knight Greaves;红狮子骑士腿甲
 1801100;Redmane Knight Armor (Altered);红狮子骑士铠甲（轻装）
+1810000;Mausoleum Knight Helm;灵庙骑士头盔
 1810100;Mausoleum Knight Armor;灵庙骑士铠甲
 1810200;Mausoleum Knight Gauntlets;灵庙骑士臂甲
 1810300;Mausoleum Knight Greaves;灵庙骑士腿甲
@@ -552,19 +671,35 @@
 1910000;Crimson Tear Scarab;红露滴粪金龟
 1920000;Cerulean Tear Scarab;蓝露滴粪金龟
 1930100;Deathbed Dress;死眠连身裙
+1930300;Deathbed Smalls;死眠长裤
 1940000;Fia's Hood;菲雅风帽
 1940100;Fia's Robe;菲雅长袍
+1940200;Fia's Bracelets;菲雅手环
+1940300;Fia's Trousers;菲雅长裤
 1941100;Fia's Robe (Altered);菲雅长袍（轻装）
+1950000;Millicent's Headband;米莉森头带
+1950100;Millicent's Robe;米莉森长袍
+1950200;Millicent's Gloves;米莉森手套
+1950300;Millicent's Boots;米莉森靴子
+1970100;Millicent's Tunic;米莉森外衣
+1970200;Golden Prosthetic;黄金义肢
 1980000;Highwayman Hood;强盗风帽
 1980100;Highwayman Cloth Armor;强盗软铠甲
 1980200;Highwayman Gauntlets;强盗臂甲
 1990000;High Page Hood;上流随从风帽
 1990100;High Page Clothes;上流随从上衣
+1990200;High Page Gloves;上流随从手套
+1990300;High Page Trousers;上流随从长裤
 1991100;High Page Clothes (Altered);上流随从上衣（轻装）
 2000000;Rotten Duelist Helm;腐败斗士头盔
 2000100;Rotten Gravekeeper Cloak;腐败守墓斗篷
+2000200;Rotten Duelist Wraps;腐败斗士腕带
 2000300;Rotten Duelist Greaves;腐败斗士腿甲
 2001100;Rotten Gravekeeper Cloak (Altered);腐败守墓斗篷（轻装）
 2010000;Mushroom Crown;蘑菇王冠
 2020000;Black Dumpling;黑头罩
 2030000;Lazuli Robe;拉兹利长袍
+3020000;Carian Golem Helm;卡利亚魔像头盔
+3020100;Carian Golem Armor;卡利亚魔像铠甲
+3020200;Carian Golem Gauntlets;卡利亚魔像臂甲
+3020300;Carian Golem Greaves;卡利亚魔像腿甲

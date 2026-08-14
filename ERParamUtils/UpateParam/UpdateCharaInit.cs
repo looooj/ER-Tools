@@ -104,7 +104,7 @@ namespace ERParamUtils.UpdateParam
                     //}
                     continue;
                 }
-                UpdateLogger.InfoTime("{0} {1}",row.ID,row.Name);
+                UpdateLogger.InfoParam("{0} {1}",row.ID,row.Name);
                 //startFlag = true;
                 if (updateCommand.HaveOption(UpdateParamOptionNames.AddInitCrimsonAmberMedallion))
                 {
@@ -293,12 +293,12 @@ namespace ERParamUtils.UpdateParam
                 {
                     ReplaceWep(updateCommand, row, key, newBowId);
                     AddArrow(updateCommand, row);
-                    UpdateLogger.InfoTime("add bow");
+                    UpdateLogger.InfoParam("add bow");
                     return;
                 }
             }
 
-            UpdateLogger.InfoTime("no space for bow");
+            UpdateLogger.InfoParam("no space for bow");
         }
 
         static void ReplaceLeft(UpdateCommand updateCommand, SoulsParam.Param.Row row, string repKey, int repId) {
@@ -333,7 +333,7 @@ equip_Subwep_Left
             if (itemId < 1)
                 return;
             if (replaceWeaponDict.ContainsKey(key) ) {
-                UpdateLogger.InfoTime("skip wep {0} {1}", key, itemId);
+                UpdateLogger.InfoParam("skip wep {0} {1}", key, itemId);
                 return;
             }
             updateCommand.AddItem(row, key, itemId);

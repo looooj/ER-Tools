@@ -1,4 +1,5 @@
-﻿140200;Hornsent Grandam;角人老妪
+﻿90000;<font color="#3AE400">Alive</font>;<font color="#3AE400">存活</font>
+140200;Hornsent Grandam;角人老妪
 140300;Igon;埃贡
 140301;Drake Warrior Igon;“龙战士”埃贡
 140500;St. Trina;圣女托莉娜
@@ -60,7 +61,7 @@
 900000560;Red Bear;红熊
 900000561;Dancer of Ranah;拉纳舞娘
 900000562;Rakshasa;罗刹
-900000563;Blackgaol Knight;孤牢骑士
+900000563;Knight of the Solitary Gaol;孤牢骑士
 900000605;Swordhand of Night Jolán;“黑夜剑士”约兰
 900000606;Count Ymir, Mother of Fingers;“指头之母”尤弥尔
 905000000;Commander Gaius;老将盖乌斯
@@ -69,7 +70,7 @@
 905030000;Romina, Saint of the Bud;“花蕾圣女”萝蜜娜
 905040400;Curseblade Labirith;咒剑士拉比利士
 905051000;Midra, Lord of Frenzied Flame;“癫火之王”米德拉
-905070400;Death Knight;死骑士
+905070400;Idris, Godskin Deceiver;“神皮欺诈者”伊德里斯
 905070401;Death Knight;死骑士
 905081430;Chief Bloodfiend;血怪之首
 905120000;Bayle the Dread;“狂龙”贝勒

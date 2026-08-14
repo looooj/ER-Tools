@@ -1,4 +1,4 @@
-﻿using ERParamUtils;
+using ERParamUtils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -84,6 +84,44 @@ namespace ERParamEditor
             FindRemnant(items, proj,ParamNames.ItemLotParamEnemy);
             FindRemnant(items, proj, ParamNames.ItemLotParamMap);
             string path = proj.GetUpdateDir() + "\\FindRemnant.txt";
+            string r = string.Join("\n", items);
+
+            File.WriteAllText(path, r);
+
+        }
+
+        public static void ExportParamGrace()
+        {
+
+            var proj = GlobalConfig.GetCurrentProject();
+            if (proj == null)
+                return;
+
+            var param = proj.FindParam(ParamNames.BonfireWarpParam);
+            if (param == null)
+                return;
+
+            List<string> items = new List<string>();
+
+            var rows = param.Rows;
+            foreach (var row in rows)
+            {
+
+                if (row.Name == null || row.Name.Length < 6) {
+                    continue;
+                }
+
+                var rowName = row.Name;
+                var textId = ParamRowUtils.GetCellInt(row, "textId1",0);
+
+                var line = string.Format("{0};{1};{2}",textId,rowName,row.ID);
+
+
+                items.Add(line);
+
+            }
+
+            string path = proj.GetUpdateDir() + "\\ParamGrace.txt";
             string r = string.Join("\n", items);
 
             File.WriteAllText(path, r);

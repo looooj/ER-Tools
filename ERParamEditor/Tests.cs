@@ -1,4 +1,4 @@
-﻿using ERParamUtils;
+using ERParamUtils;
 using ERParamUtils.UpateParam;
 using Org.BouncyCastle.Utilities;
 using SoulsFormats;
@@ -75,9 +75,11 @@ namespace ERParamEditor
             foreach (string lang in langs)
             {
                 //string dir = @"D:\docs\game\er\unpack-\unpack-files\msg\" + lang;
-                string dir = "F:\\docs\\games\\ER\\Game\\msg\\" + lang;
+
+                //string dir = "F:\\docs\\games\\ER\\Game\\msg\\" + lang;
+                string dir = "E:\\games\\er\\ConvergenceER\\mod\\msg\\" + lang;
                 //string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text";
-                string targetDir = @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer";
+                string targetDir = @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer\"+lang;
                 Directory.CreateDirectory(targetDir);
                 var files = Directory.GetFiles(dir, "*.dcx");
                 foreach (var file in files)
@@ -199,7 +201,7 @@ namespace ERParamEditor
                 text = text.Trim();
                 if (text.ToUpper().Contains("[ERROR]") || text.Length < 1)
                     continue;
-                dict.Add(id, text);
+                dict.TryAdd(id, text);
             }
 
             return dict;
@@ -230,8 +232,9 @@ namespace ERParamEditor
             foreach (string name in names)
             {
 
-                string engFileName = string.Format("{0}\\{1}.msgbnd\\msg\\engUS\\{2}.fmg.xml", baseDir, subName, name);
-                string zhoFileName = string.Format("{0}\\{1}.msgbnd\\msg\\zhoCN\\{2}.fmg.xml", baseDir, subName, name);
+                //D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer\zhocn\item_dlc02.msgbnd\msg\zhoCN\AccessoryCaption_dlc01.fmg.xml
+                string engFileName = string.Format("{0}\\engus\\{1}.msgbnd\\msg\\engUS\\{2}.fmg.xml", baseDir, subName, name);
+                string zhoFileName = string.Format("{0}\\zhocn\\{1}.msgbnd\\msg\\zhoCN\\{2}.fmg.xml", baseDir, subName, name);
 
                 if (!File.Exists(engFileName))
                 {
@@ -399,7 +402,7 @@ namespace ERParamEditor
 
             string[] names = { "AccessoryName","GoodsName",
                 "ProtectorName","WeaponName","NpcName","PlaceName","GemName" };
-            string[] subNames = { "item", "item_dlc01" };
+            string[] subNames = { "item", "item_dlc01", "item_dlc02" };
 
             GenDlcText(@"D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer", 
                 @"D:\myprojects\game-tools\ER-Tools\docs\cer-item-text",
@@ -525,12 +528,13 @@ namespace ERParamEditor
 
             //GenAccessoryId();
             //GenAutoLot();
-            //GenItemText();
+            GenItemText();
             //GenMenuText();
             //Tools.CleanUpdateLog(5);
             //Tests2.FindRemnant();
             //ExtractMsg();
-            Tests2.FindGuardLevel();
+            //Tests2.FindGuardLevel();
+            //Tests2.ExportParamGrace();
         }
     }
 }

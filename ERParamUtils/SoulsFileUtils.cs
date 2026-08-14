@@ -1,4 +1,4 @@
-﻿using DotNext.IO.MemoryMappedFiles;
+using DotNext.IO.MemoryMappedFiles;
 using SoulsFormats;
 using System;
 using System.Collections.Generic;
@@ -48,7 +48,7 @@ namespace ERParamUtils
         public static void ProcBnd(string dcxName, string targetDir) {
 
             var bytes = DCX.Decompress(dcxName, out DCX.Type dcxType);
-            string outPath = string.Format(@"{0}/{1}.{2}",
+            string outPath = string.Format(@"{0}\{1}.{2}",
                 targetDir,
                 Path.GetFileNameWithoutExtension(dcxName),
                  dcxType.ToString());
@@ -75,7 +75,7 @@ namespace ERParamUtils
             NullProgress testProgress = new();
 
             string tag = Path.GetFileNameWithoutExtension(dcxName);
-            SoulsFileUtils.WriteBinderFiles(bnd, xw, targetDir + "/" + tag, testProgress);
+            SoulsFileUtils.WriteBinderFiles(bnd, xw, targetDir + "\\" + tag, testProgress);
 
             xw.WriteEndElement();
             xw.Close();
@@ -233,7 +233,7 @@ namespace ERParamUtils
 
         public static void ProcEMEVD(string path,string targetDir) {
 
-            string outPath = string.Format(@"{0}/{1}",
+            string outPath = string.Format(@"{0}\{1}",
                      targetDir,
             Path.GetFileNameWithoutExtension(path));
 

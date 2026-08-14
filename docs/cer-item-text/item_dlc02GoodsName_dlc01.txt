@@ -54,6 +54,7 @@
 2002010;Rock Heart;岩石心脏
 2002020;Priestess Heart;女巫心脏
 2002030;Lamenter's Mask;喟叹者面具
+2002040;Daergraf's Heart;达格拉夫的心脏
 2002100;Ancient Dragon's Blessing;古龙恩泽
 2002120;Iris of Grace;赐福覆眼膜
 2002130;Iris of Occultation;黑暗覆眼膜
@@ -93,21 +94,35 @@
 2003310;Sunwarmth Stone;暖阳石
 2003350;Charming Branch;惑众树枝
 2004300;Miriam's Vanishing;米丽安的消失
-2004310;Glintblade Trio;魔法三辉剑
+2004310;Cragbolt Trio;三重冰雷
 2004320;Rellana's Twin Moons;蕾菈娜的双月
 2004500;Glintstone Nail;辉石指爪
-2004510;Glintstone Nails;辉石繁指爪
+2004510;Nail Volley;繁指爪
+2004520;Nail Constellation;指爪星群
+2004530;Nail Burst;指爪爆发
 2004700;Blades of Stone;岩块刀刃
 2004710;Gravitational Missile;引力球
 2004900;Mantle of Thorns;棘刺上身
 2004910;Impenetrable Thorns;拒绝的刺
+2004920;Creeping Vines;匍匐荆藤
+2004930;Thorn Field;荆棘地
+2004940;Scadutree Coruscation;幽影树璨光
 2005000;Rings of Spectral Light;灵魂光环
 2006200;Vortex of Putrescence;融泥漩
 2006210;Mass of Putrescence;融泥块
-2006300;Furious Blade of Ansbach;安帕赫的狂刃
+2006220;Putrid Salvo;融泥霰
+2006230;Putrid Shardstorm;融泥砂暴
+2006250;Scadu Rebirth;幽影重生
+2006260;Shadow of Death;死之影
+2006300;Bloodflame Scythe;血焰之镰
+2006310;Bloodboon Quagmire;血沼恩泽
+2006320;Seeker Swarm;追觅蝇群
+2006330;Sanguine Traversal;血行穿梭
+2006340;Fiendish Ritual;恶魔仪式
+2006350;Blood of the Maiden;女巫之血
 2006400;Heal from Afar;远方之恢复
-2006650;Aspects of the Crucible: Thorns;熔炉百相之针
-2006660;Aspects of the Crucible: Bloom;熔炉百相之花
+2006650;Crucible Quills;熔炉刺针
+2006660;Miranda Bloom;米兰达的绽放
 2006670;Minor Erdtree;小黄金树
 2006680;Land of Shadow;幽影之地
 2006690;Wrath from Afar;远方之怒
@@ -122,15 +137,25 @@
 2007020;Ghostflame Breath;灵火吐息
 2007200;Rotten Butterflies;腐败蝶
 2007210;Pest-Thread Spears;虫丝枪
-2007300;Midra's Flame of Frenzy;米德拉的癫火
+2007300;Midra's Exaltation;米德拉的狂喜
+2007310;Frenzied Lunge;癫火突刺
+2007320;Maddening Orb;癫狂之球
+2007330;Terrifying Presence;恐怖存在
+2007400;Cosmic Surge;宇宙奔流
 2007410;Fleeting Microcosm;虚幻小宇宙
 2007420;Cherishing Fingers;守护指头
+2007430;Gaze of Metyr;梅蒂尔的凝视
+2007440;Microcosmic Spree;小宇宙狂乱
+2007450;Creeping Offspring;匍匐子嗣
 2007600;Watchful Spirit;守护灵
-2007700;Golden Arcs;黄金弯弧
-2007710;Giant Golden Arc;黄金大弯弧
+2007610;Watchful Seekers;守护追索
+2007700;Crucible Arcs;熔炉弯弧
+2007710;Giant Crucible Arc;熔炉大弯弧
 2007720;Spira;旋流
 2007730;Divine Beast Tornado;神兽龙卷风
-2007740;Divine Bird Feathers;神鸟羽毛
+2007740;Crucible Feathers;熔炉羽毛
+2007750;Horn Spike;角刺
+2007760;Immortal Coil;不朽盘旋
 2007800;Fire Serpent;火焰蛇
 2007810;Rain of Fire;火焰雨
 2007820;Messmer's Orb;梅瑟莫的火球
@@ -506,3 +531,311 @@
 2220008;Jolán and Anna +8;约兰与安娜＋８
 2220009;Jolán and Anna +9;约兰与安娜＋９
 2220010;Jolán and Anna +10;约兰与安娜＋１０
+2400000;Cemetery Shade Ashes;墓地影子的骨灰
+2400001;Cemetery Shade Ashes +1;墓地影子的骨灰＋１
+2400002;Cemetery Shade Ashes +2;墓地影子的骨灰＋２
+2400003;Cemetery Shade Ashes +3;墓地影子的骨灰＋３
+2400004;Cemetery Shade Ashes +4;墓地影子的骨灰＋４
+2400005;Cemetery Shade Ashes +5;墓地影子的骨灰＋５
+2400006;Cemetery Shade Ashes +6;墓地影子的骨灰＋６
+2400007;Cemetery Shade Ashes +7;墓地影子的骨灰＋７
+2400008;Cemetery Shade Ashes +8;墓地影子的骨灰＋８
+2400009;Cemetery Shade Ashes +9;墓地影子的骨灰＋９
+2400010;Cemetery Shade Ashes +10;墓地影子的骨灰＋１０
+2410000;Horned Omen Khata;“有角恶兆”卡塔
+2410001;Horned Omen Khata +1;“有角恶兆”卡塔＋１
+2410002;Horned Omen Khata +2;“有角恶兆”卡塔＋２
+2410003;Horned Omen Khata +3;“有角恶兆”卡塔＋３
+2410004;Horned Omen Khata +4;“有角恶兆”卡塔＋４
+2410005;Horned Omen Khata +5;“有角恶兆”卡塔＋５
+2410006;Horned Omen Khata +6;“有角恶兆”卡塔＋６
+2410007;Horned Omen Khata +7;“有角恶兆”卡塔＋７
+2410008;Horned Omen Khata +8;“有角恶兆”卡塔＋８
+2410009;Horned Omen Khata +9;“有角恶兆”卡塔＋９
+2410010;Horned Omen Khata +10;“有角恶兆”卡塔＋１０
+2420000;Nox Ancestor Lasko;“诺克斯先祖”拉斯克
+2420001;Nox Ancestor Lasko +1;“诺克斯先祖”拉斯克＋１
+2420002;Nox Ancestor Lasko +2;“诺克斯先祖”拉斯克＋２
+2420003;Nox Ancestor Lasko +3;“诺克斯先祖”拉斯克＋３
+2420004;Nox Ancestor Lasko +4;“诺克斯先祖”拉斯克＋４
+2420005;Nox Ancestor Lasko +5;“诺克斯先祖”拉斯克＋５
+2420006;Nox Ancestor Lasko +6;“诺克斯先祖”拉斯克＋６
+2420007;Nox Ancestor Lasko +7;“诺克斯先祖”拉斯克＋７
+2420008;Nox Ancestor Lasko +8;“诺克斯先祖”拉斯克＋８
+2420009;Nox Ancestor Lasko +9;“诺克斯先祖”拉斯克＋９
+2420010;Nox Ancestor Lasko +10;“诺克斯先祖”拉斯克＋１０
+2430000;Rotten Duelist Verus;“腐败斗士”维鲁斯
+2430001;Rotten Duelist Verus +1;“腐败斗士”维鲁斯＋１
+2430002;Rotten Duelist Verus +2;“腐败斗士”维鲁斯＋２
+2430003;Rotten Duelist Verus +3;“腐败斗士”维鲁斯＋３
+2430004;Rotten Duelist Verus +4;“腐败斗士”维鲁斯＋４
+2430005;Rotten Duelist Verus +5;“腐败斗士”维鲁斯＋５
+2430006;Rotten Duelist Verus +6;“腐败斗士”维鲁斯＋６
+2430007;Rotten Duelist Verus +7;“腐败斗士”维鲁斯＋７
+2430008;Rotten Duelist Verus +8;“腐败斗士”维鲁斯＋８
+2430009;Rotten Duelist Verus +9;“腐败斗士”维鲁斯＋９
+2430010;Rotten Duelist Verus +10;“腐败斗士”维鲁斯＋１０
+2440000;Sanguine Noble Strage;“鲜血贵族”斯特拉格
+2440001;Sanguine Noble Strage +1;“鲜血贵族”斯特拉格＋１
+2440002;Sanguine Noble Strage +2;“鲜血贵族”斯特拉格＋２
+2440003;Sanguine Noble Strage +3;“鲜血贵族”斯特拉格＋３
+2440004;Sanguine Noble Strage +4;“鲜血贵族”斯特拉格＋４
+2440005;Sanguine Noble Strage +5;“鲜血贵族”斯特拉格＋５
+2440006;Sanguine Noble Strage +6;“鲜血贵族”斯特拉格＋６
+2440007;Sanguine Noble Strage +7;“鲜血贵族”斯特拉格＋７
+2440008;Sanguine Noble Strage +8;“鲜血贵族”斯特拉格＋８
+2440009;Sanguine Noble Strage +9;“鲜血贵族”斯特拉格＋９
+2440010;Sanguine Noble Strage +10;“鲜血贵族”斯特拉格＋１０
+2450000;Erdtree Guardian Ashes;黄金树守卫的骨灰
+2450001;Erdtree Guardian Ashes +1;黄金树守卫的骨灰＋１
+2450002;Erdtree Guardian Ashes +2;黄金树守卫的骨灰＋２
+2450003;Erdtree Guardian Ashes +3;黄金树守卫的骨灰＋３
+2450004;Erdtree Guardian Ashes +4;黄金树守卫的骨灰＋４
+2450005;Erdtree Guardian Ashes +5;黄金树守卫的骨灰＋５
+2450006;Erdtree Guardian Ashes +6;黄金树守卫的骨灰＋６
+2450007;Erdtree Guardian Ashes +7;黄金树守卫的骨灰＋７
+2450008;Erdtree Guardian Ashes +8;黄金树守卫的骨灰＋８
+2450009;Erdtree Guardian Ashes +9;黄金树守卫的骨灰＋９
+2450010;Erdtree Guardian Ashes +10;黄金树守卫的骨灰＋１０
+2460000;Rootman Ashes;根之民的骨灰
+2460001;Rootman Ashes +1;根之民的骨灰＋１
+2460002;Rootman Ashes +2;根之民的骨灰＋２
+2460003;Rootman Ashes +3;根之民的骨灰＋３
+2460004;Rootman Ashes +4;根之民的骨灰＋４
+2460005;Rootman Ashes +5;根之民的骨灰＋５
+2460006;Rootman Ashes +6;根之民的骨灰＋６
+2460007;Rootman Ashes +7;根之民的骨灰＋７
+2460008;Rootman Ashes +8;根之民的骨灰＋８
+2460009;Rootman Ashes +9;根之民的骨灰＋９
+2460010;Rootman Ashes +10;根之民的骨灰＋１０
+2470000;Spiritcaller Snail Ashes;唤灵蜗牛的骨灰
+2470001;Spiritcaller Snail Ashes +1;唤灵蜗牛的骨灰＋１
+2470002;Spiritcaller Snail Ashes +2;唤灵蜗牛的骨灰＋２
+2470003;Spiritcaller Snail Ashes +3;唤灵蜗牛的骨灰＋３
+2470004;Spiritcaller Snail Ashes +4;唤灵蜗牛的骨灰＋４
+2470005;Spiritcaller Snail Ashes +5;唤灵蜗牛的骨灰＋５
+2470006;Spiritcaller Snail Ashes +6;唤灵蜗牛的骨灰＋６
+2470007;Spiritcaller Snail Ashes +7;唤灵蜗牛的骨灰＋７
+2470008;Spiritcaller Snail Ashes +8;唤灵蜗牛的骨灰＋８
+2470009;Spiritcaller Snail Ashes +9;唤灵蜗牛的骨灰＋９
+2470010;Spiritcaller Snail Ashes +10;唤灵蜗牛的骨灰＋１０
+2480000;Winged Dame Ashes;翼蝠贵妇的骨灰
+2480001;Winged Dame Ashes +1;翼蝠贵妇的骨灰＋１
+2480002;Winged Dame Ashes +2;翼蝠贵妇的骨灰＋２
+2480003;Winged Dame Ashes +3;翼蝠贵妇的骨灰＋３
+2480004;Winged Dame Ashes +4;翼蝠贵妇的骨灰＋４
+2480005;Winged Dame Ashes +5;翼蝠贵妇的骨灰＋５
+2480006;Winged Dame Ashes +6;翼蝠贵妇的骨灰＋６
+2480007;Winged Dame Ashes +7;翼蝠贵妇的骨灰＋７
+2480008;Winged Dame Ashes +8;翼蝠贵妇的骨灰＋８
+2480009;Winged Dame Ashes +9;翼蝠贵妇的骨灰＋９
+2480010;Winged Dame Ashes +10;翼蝠贵妇的骨灰＋１０
+2490000;Starcaller Ashes;唤星者的骨灰
+2490001;Starcaller Ashes +1;唤星者的骨灰＋１
+2490002;Starcaller Ashes +2;唤星者的骨灰＋２
+2490003;Starcaller Ashes +3;唤星者的骨灰＋３
+2490004;Starcaller Ashes +4;唤星者的骨灰＋４
+2490005;Starcaller Ashes +5;唤星者的骨灰＋５
+2490006;Starcaller Ashes +6;唤星者的骨灰＋６
+2490007;Starcaller Ashes +7;唤星者的骨灰＋７
+2490008;Starcaller Ashes +8;唤星者的骨灰＋８
+2490009;Starcaller Ashes +9;唤星者的骨灰＋９
+2490010;Starcaller Ashes +10;唤星者的骨灰＋１０
+2500000;Bloodthorn Exile Ashes;血棘罪人的骨灰
+2500001;Bloodthorn Exile Ashes +1;血棘罪人的骨灰＋１
+2500002;Bloodthorn Exile Ashes +2;血棘罪人的骨灰＋２
+2500003;Bloodthorn Exile Ashes +3;血棘罪人的骨灰＋３
+2500004;Bloodthorn Exile Ashes +4;血棘罪人的骨灰＋４
+2500005;Bloodthorn Exile Ashes +5;血棘罪人的骨灰＋５
+2500006;Bloodthorn Exile Ashes +6;血棘罪人的骨灰＋６
+2500007;Bloodthorn Exile Ashes +7;血棘罪人的骨灰＋７
+2500008;Bloodthorn Exile Ashes +8;血棘罪人的骨灰＋８
+2500009;Bloodthorn Exile Ashes +9;血棘罪人的骨灰＋９
+2500010;Bloodthorn Exile Ashes +10;血棘罪人的骨灰＋１０
+2510000;Warrior Jar Alexander;“战士壶”亚历山大
+2510001;Warrior Jar Alexander +1;“战士壶”亚历山大＋１
+2510002;Warrior Jar Alexander +2;“战士壶”亚历山大＋２
+2510003;Warrior Jar Alexander +3;“战士壶”亚历山大＋３
+2510004;Warrior Jar Alexander +4;“战士壶”亚历山大＋４
+2510005;Warrior Jar Alexander +5;“战士壶”亚历山大＋５
+2510006;Warrior Jar Alexander +6;“战士壶”亚历山大＋６
+2510007;Warrior Jar Alexander +7;“战士壶”亚历山大＋７
+2510008;Warrior Jar Alexander +8;“战士壶”亚历山大＋８
+2510009;Warrior Jar Alexander +9;“战士壶”亚历山大＋９
+2510010;Warrior Jar Alexander +10;“战士壶”亚历山大＋１０
+2520000;Wormface Ashes;蚯蚓脸的骨灰
+2520001;Wormface Ashes +1;蚯蚓脸的骨灰＋１
+2520002;Wormface Ashes +2;蚯蚓脸的骨灰＋２
+2520003;Wormface Ashes +3;蚯蚓脸的骨灰＋３
+2520004;Wormface Ashes +4;蚯蚓脸的骨灰＋４
+2520005;Wormface Ashes +5;蚯蚓脸的骨灰＋５
+2520006;Wormface Ashes +6;蚯蚓脸的骨灰＋６
+2520007;Wormface Ashes +7;蚯蚓脸的骨灰＋７
+2520008;Wormface Ashes +8;蚯蚓脸的骨灰＋８
+2520009;Wormface Ashes +9;蚯蚓脸的骨灰＋９
+2520010;Wormface Ashes +10;蚯蚓脸的骨灰＋１０
+2530000;Catacomb Sorcerer Ashes;墓地魔法师的骨灰
+2530001;Catacomb Sorcerer Ashes +1;墓地魔法师的骨灰＋１
+2530002;Catacomb Sorcerer Ashes +2;墓地魔法师的骨灰＋２
+2530003;Catacomb Sorcerer Ashes +3;墓地魔法师的骨灰＋３
+2530004;Catacomb Sorcerer Ashes +4;墓地魔法师的骨灰＋４
+2530005;Catacomb Sorcerer Ashes +5;墓地魔法师的骨灰＋５
+2530006;Catacomb Sorcerer Ashes +6;墓地魔法师的骨灰＋６
+2530007;Catacomb Sorcerer Ashes +7;墓地魔法师的骨灰＋７
+2530008;Catacomb Sorcerer Ashes +8;墓地魔法师的骨灰＋８
+2530009;Catacomb Sorcerer Ashes +9;墓地魔法师的骨灰＋９
+2530010;Catacomb Sorcerer Ashes +10;墓地魔法师的骨灰＋１０
+2540000;Stone Cluster Ashes;岩石团的骨灰
+2540001;Stone Cluster Ashes +1;岩石团的骨灰＋１
+2540002;Stone Cluster Ashes +2;岩石团的骨灰＋２
+2540003;Stone Cluster Ashes +3;岩石团的骨灰＋３
+2540004;Stone Cluster Ashes +4;岩石团的骨灰＋４
+2540005;Stone Cluster Ashes +5;岩石团的骨灰＋５
+2540006;Stone Cluster Ashes +6;岩石团的骨灰＋６
+2540007;Stone Cluster Ashes +7;岩石团的骨灰＋７
+2540008;Stone Cluster Ashes +8;岩石团的骨灰＋８
+2540009;Stone Cluster Ashes +9;岩石团的骨灰＋９
+2540010;Stone Cluster Ashes +10;岩石团的骨灰＋１０
+2550000;Stone Sentry Ashes;岩石守卫的骨灰
+2550001;Stone Sentry Ashes +1;岩石守卫的骨灰＋１
+2550002;Stone Sentry Ashes +2;岩石守卫的骨灰＋２
+2550003;Stone Sentry Ashes +3;岩石守卫的骨灰＋３
+2550004;Stone Sentry Ashes +4;岩石守卫的骨灰＋４
+2550005;Stone Sentry Ashes +5;岩石守卫的骨灰＋５
+2550006;Stone Sentry Ashes +6;岩石守卫的骨灰＋６
+2550007;Stone Sentry Ashes +7;岩石守卫的骨灰＋７
+2550008;Stone Sentry Ashes +8;岩石守卫的骨灰＋８
+2550009;Stone Sentry Ashes +9;岩石守卫的骨灰＋９
+2550010;Stone Sentry Ashes +10;岩石守卫的骨灰＋１０
+2560000;Red Bear Ashes;红熊的骨灰
+2560001;Red Bear Ashes +1;红熊的骨灰＋１
+2560002;Red Bear Ashes +2;红熊的骨灰＋２
+2560003;Red Bear Ashes +3;红熊的骨灰＋３
+2560004;Red Bear Ashes +4;红熊的骨灰＋４
+2560005;Red Bear Ashes +5;红熊的骨灰＋５
+2560006;Red Bear Ashes +6;红熊的骨灰＋６
+2560007;Red Bear Ashes +7;红熊的骨灰＋７
+2560008;Red Bear Ashes +8;红熊的骨灰＋８
+2560009;Red Bear Ashes +9;红熊的骨灰＋９
+2560010;Red Bear Ashes +10;红熊的骨灰＋１０
+2570000;Mystic Pigman Ashes;密契猪人的骨灰
+2570001;Mystic Pigman Ashes +1;密契猪人的骨灰＋１
+2570002;Mystic Pigman Ashes +2;密契猪人的骨灰＋２
+2570003;Mystic Pigman Ashes +3;密契猪人的骨灰＋３
+2570004;Mystic Pigman Ashes +4;密契猪人的骨灰＋４
+2570005;Mystic Pigman Ashes +5;密契猪人的骨灰＋５
+2570006;Mystic Pigman Ashes +6;密契猪人的骨灰＋６
+2570007;Mystic Pigman Ashes +7;密契猪人的骨灰＋７
+2570008;Mystic Pigman Ashes +8;密契猪人的骨灰＋８
+2570009;Mystic Pigman Ashes +9;密契猪人的骨灰＋９
+2570010;Mystic Pigman Ashes +10;密契猪人的骨灰＋１０
+2580000;Zamor Knight Siddi;“萨米尔骑士”西迪
+2580001;Zamor Knight Siddi +1;“萨米尔骑士”西迪＋１
+2580002;Zamor Knight Siddi +2;“萨米尔骑士”西迪＋２
+2580003;Zamor Knight Siddi +3;“萨米尔骑士”西迪＋３
+2580004;Zamor Knight Siddi +4;“萨米尔骑士”西迪＋４
+2580005;Zamor Knight Siddi +5;“萨米尔骑士”西迪＋５
+2580006;Zamor Knight Siddi +6;“萨米尔骑士”西迪＋６
+2580007;Zamor Knight Siddi +7;“萨米尔骑士”西迪＋７
+2580008;Zamor Knight Siddi +8;“萨米尔骑士”西迪＋８
+2580009;Zamor Knight Siddi +9;“萨米尔骑士”西迪＋９
+2580010;Zamor Knight Siddi +10;“萨米尔骑士”西迪＋１０
+2590000;Erdtree Sentry Shamar;“黄金树看护者”萨马尔
+2590001;Erdtree Sentry Shamar +1;“黄金树看护者”萨马尔＋１
+2590002;Erdtree Sentry Shamar +2;“黄金树看护者”萨马尔＋２
+2590003;Erdtree Sentry Shamar +3;“黄金树看护者”萨马尔＋３
+2590004;Erdtree Sentry Shamar +4;“黄金树看护者”萨马尔＋４
+2590005;Erdtree Sentry Shamar +5;“黄金树看护者”萨马尔＋５
+2590006;Erdtree Sentry Shamar +6;“黄金树看护者”萨马尔＋６
+2590007;Erdtree Sentry Shamar +7;“黄金树看护者”萨马尔＋７
+2590008;Erdtree Sentry Shamar +8;“黄金树看护者”萨马尔＋８
+2590009;Erdtree Sentry Shamar +9;“黄金树看护者”萨马尔＋９
+2590010;Erdtree Sentry Shamar +10;“黄金树看护者”萨马尔＋１０
+2600000;Man-Serpent Sorcerer Timuris;蛇人魔法师提穆里斯
+2600001;Man-Serpent Sorcerer Timuris +1;蛇人魔法师提穆里斯＋１
+2600002;Man-Serpent Sorcerer Timuris +2;蛇人魔法师提穆里斯＋２
+2600003;Man-Serpent Sorcerer Timuris +3;蛇人魔法师提穆里斯＋３
+2600004;Man-Serpent Sorcerer Timuris +4;蛇人魔法师提穆里斯＋４
+2600005;Man-Serpent Sorcerer Timuris +5;蛇人魔法师提穆里斯＋５
+2600006;Man-Serpent Sorcerer Timuris +6;蛇人魔法师提穆里斯＋６
+2600007;Man-Serpent Sorcerer Timuris +7;蛇人魔法师提穆里斯＋７
+2600008;Man-Serpent Sorcerer Timuris +8;蛇人魔法师提穆里斯＋８
+2600009;Man-Serpent Sorcerer Timuris +9;蛇人魔法师提穆里斯＋９
+2600010;Man-Serpent Sorcerer Timuris +10;蛇人魔法师提穆里斯＋１０
+2601000;Great Dragonfly;巨型蜻蜓
+2601001;Great Dragonfly +1;巨型蜻蜓＋１
+2601002;Great Dragonfly +2;巨型蜻蜓＋２
+2601003;Great Dragonfly +3;巨型蜻蜓＋３
+2601004;Great Dragonfly +4;巨型蜻蜓＋４
+2601005;Great Dragonfly +5;巨型蜻蜓＋５
+2601006;Great Dragonfly +6;巨型蜻蜓＋６
+2601007;Great Dragonfly +7;巨型蜻蜓＋７
+2601008;Great Dragonfly +8;巨型蜻蜓＋８
+2601009;Great Dragonfly +9;巨型蜻蜓＋９
+2601010;Great Dragonfly +10;巨型蜻蜓＋１０
+2602000;Blaidd the Half-Wolf;“半狼”布莱泽
+2602001;Blaidd the Half-Wolf +1;“半狼”布莱泽＋１
+2602002;Blaidd the Half-Wolf +2;“半狼”布莱泽＋２
+2602003;Blaidd the Half-Wolf +3;“半狼”布莱泽＋３
+2602004;Blaidd the Half-Wolf +4;“半狼”布莱泽＋４
+2602005;Blaidd the Half-Wolf +5;“半狼”布莱泽＋５
+2602006;Blaidd the Half-Wolf +6;“半狼”布莱泽＋６
+2602007;Blaidd the Half-Wolf +7;“半狼”布莱泽＋７
+2602008;Blaidd the Half-Wolf +8;“半狼”布莱泽＋８
+2602009;Blaidd the Half-Wolf +9;“半狼”布莱泽＋９
+2602010;Blaidd the Half-Wolf +10;“半狼”布莱泽＋１０
+2603000;Titanus, Shell-Bound Companion;“壳中伙伴”泰坦努斯
+2603001;Titanus, Shell-Bound Companion +1;“壳中伙伴”泰坦努斯＋１
+2603002;Titanus, Shell-Bound Companion +2;“壳中伙伴”泰坦努斯＋２
+2603003;Titanus, Shell-Bound Companion +3;“壳中伙伴”泰坦努斯＋３
+2603004;Titanus, Shell-Bound Companion +4;“壳中伙伴”泰坦努斯＋４
+2603005;Titanus, Shell-Bound Companion +5;“壳中伙伴”泰坦努斯＋５
+2603006;Titanus, Shell-Bound Companion +6;“壳中伙伴”泰坦努斯＋６
+2603007;Titanus, Shell-Bound Companion +7;“壳中伙伴”泰坦努斯＋７
+2603008;Titanus, Shell-Bound Companion +8;“壳中伙伴”泰坦努斯＋８
+2603009;Titanus, Shell-Bound Companion +9;“壳中伙伴”泰坦努斯＋９
+2603010;Titanus, Shell-Bound Companion +10;“壳中伙伴”泰坦努斯＋１０
+2604000;Twinned Spirit Jellyfish;双生灵魂水母
+2604001;Twinned Spirit Jellyfish +1;双生灵魂水母＋１
+2604002;Twinned Spirit Jellyfish +2;双生灵魂水母＋２
+2604003;Twinned Spirit Jellyfish +3;双生灵魂水母＋３
+2604004;Twinned Spirit Jellyfish +4;双生灵魂水母＋４
+2604005;Twinned Spirit Jellyfish +5;双生灵魂水母＋５
+2604006;Twinned Spirit Jellyfish +6;双生灵魂水母＋６
+2604007;Twinned Spirit Jellyfish +7;双生灵魂水母＋７
+2604008;Twinned Spirit Jellyfish +8;双生灵魂水母＋８
+2604009;Twinned Spirit Jellyfish +9;双生灵魂水母＋９
+2604010;Twinned Spirit Jellyfish +10;双生灵魂水母＋１０
+2605000;Noxumbra Gaoler Ashes;诺克斯安布拉的狱卒骨灰
+2605001;Noxumbra Gaoler Ashes +1;诺克斯安布拉的狱卒骨灰＋１
+2605002;Noxumbra Gaoler Ashes +2;诺克斯安布拉的狱卒骨灰＋２
+2605003;Noxumbra Gaoler Ashes +3;诺克斯安布拉的狱卒骨灰＋３
+2605004;Noxumbra Gaoler Ashes +4;诺克斯安布拉的狱卒骨灰＋４
+2605005;Noxumbra Gaoler Ashes +5;诺克斯安布拉的狱卒骨灰＋５
+2605006;Noxumbra Gaoler Ashes +6;诺克斯安布拉的狱卒骨灰＋６
+2605007;Noxumbra Gaoler Ashes +7;诺克斯安布拉的狱卒骨灰＋７
+2605008;Noxumbra Gaoler Ashes +8;诺克斯安布拉的狱卒骨灰＋８
+2605009;Noxumbra Gaoler Ashes +9;诺克斯安布拉的狱卒骨灰＋９
+2605010;Noxumbra Gaoler Ashes +10;诺克斯安布拉的狱卒骨灰＋１０
+2606000;Demi-Dragon Ashes;亚龙的骨灰
+2606001;Demi-Dragon Ashes +1;亚龙的骨灰＋１
+2606002;Demi-Dragon Ashes +2;亚龙的骨灰＋２
+2606003;Demi-Dragon Ashes +3;亚龙的骨灰＋３
+2606004;Demi-Dragon Ashes +4;亚龙的骨灰＋４
+2606005;Demi-Dragon Ashes +5;亚龙的骨灰＋５
+2606006;Demi-Dragon Ashes +6;亚龙的骨灰＋６
+2606007;Demi-Dragon Ashes +7;亚龙的骨灰＋７
+2606008;Demi-Dragon Ashes +8;亚龙的骨灰＋８
+2606009;Demi-Dragon Ashes +9;亚龙的骨灰＋９
+2606010;Demi-Dragon Ashes +10;亚龙的骨灰＋１０
+2607000;Tempestcaller Lochlan;风暴敕令者洛克兰
+2607001;Tempestcaller Lochlan +1;风暴敕令者洛克兰＋１
+2607002;Tempestcaller Lochlan +2;风暴敕令者洛克兰＋２
+2607003;Tempestcaller Lochlan +3;风暴敕令者洛克兰＋３
+2607004;Tempestcaller Lochlan +4;风暴敕令者洛克兰＋４
+2607005;Tempestcaller Lochlan +5;风暴敕令者洛克兰＋５
+2607006;Tempestcaller Lochlan +6;风暴敕令者洛克兰＋６
+2607007;Tempestcaller Lochlan +7;风暴敕令者洛克兰＋７
+2607008;Tempestcaller Lochlan +8;风暴敕令者洛克兰＋８
+2607009;Tempestcaller Lochlan +9;风暴敕令者洛克兰＋９
+2607010;Tempestcaller Lochlan +10;风暴敕令者洛克兰＋１０

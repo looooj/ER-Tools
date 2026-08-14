@@ -7,6 +7,7 @@
 111100;Primeval Sorcerer Azur;“起源魔法师”亚兹勒
 111200;The Noble Goldmask;金面具
 120000;Rennala, Queen of the Full Moon;“满月女王”蕾娜菈
+120100;Godskin Matriarch;神皮女族长
 120200;Gurranq, Beast Clergyman;“野兽祭司”古兰格
 121300;Smithing Master Hewg;铁匠修古
 121600;Blaidd the Half-Wolf;“半狼”布莱泽
@@ -14,7 +15,22 @@
 121700;Pidia, Carian Servant;仆人毕迪
 121800;Asimi, Silver Tear;“银色泪滴”阿史米
 121810;Asimi, Eternal King;“永恒之王”阿史米
+121850;Boss Resurrection Altar;BOSS复活圣坛
+121860;Training Grounds Statue;训练场雕像
+121870;Forgotten Warrior;被遗忘的战士
+121880;Erdtree Nursery;黄金树苗圃
+121890;Rauh Reliquary;劳弗圣龛
 121900;Old Albus;艾尔帕斯
+121910;Forgotten Ritekeeper of Rauh;被遗忘的劳弗仪卫
+121911;Refined Ritekeeper of Rauh;精干的劳弗仪卫
+121912;Staunch Ritekeeper of Rauh;坚定的劳弗仪卫
+121913;Deft Ritekeeper of Rauh;机敏的劳弗仪卫
+121914;Iridescent Ritekeeper of Rauh;虹彩的劳弗仪卫
+121915;Gnarled Ritekeeper of Rauh;虬曲的劳弗仪卫
+121916;Scorched Ritekeeper of Rauh;炙焦的劳弗仪卫
+121917;Primeval Ritekeeper of Rauh;始源的劳弗仪卫
+121918;Fulminated Ritekeeper of Rauh;轰雷的劳弗仪卫
+121919;Hallowed Ritekeeper of Rauh;神圣的劳弗仪卫
 122000;Alexander, Warrior Jar;“战士壶”亚历山大
 122300;Demi-Human Boc;亚人柏克
 122310;Boc the Seamster;裁缝师柏克
@@ -120,6 +136,28 @@
 138400;Inquisitor Ghiza;拷问官基萨
 138500;Mad Tongue Alberich;“发狂之舌”阿尔佩利希
 138600;Esgar, Priest of Blood;“鲜血祭司”艾斯加
+138650;Stormcaller Curtis;风暴呼召者柯蒂斯
+138660;Necromancer Domo;死灵术士多摩
+138670;Glint Sorceress Bree;辉石魔法师布里
+138671;Fundamentalist Gino;基本主义者吉诺
+138672;Darkmoon Knight Oroboro;“暗月骑士”乌洛波洛
+138673;Volcanist Dist;火山术士迪斯特
+138674;Snuppet, Servant of Rot;腐败侍仆斯拿佩
+138675;Nox Oracle Sadia;诺克斯神谕官萨蒂亚
+138676;Dragon Cultist Seki;古龙祀者瑟奇
+138677;Frost Witch Dino;冰霜巫师狄诺
+138678;Ainrun the Mystic;密契者艾恩伦
+138679;Aberrant Heretic Loreena;左道异端罗琳纳
+138680;Bee the Relentless;无情之蜂
+138681;Dragon Mage Caleb;龙法师迦勒
+138682;Death Knight Lenny;死骑士莱尼
+138683;Starcaller Dumpy;唤星者邓皮
+138684;Blood Initiate Parky;鲜血新锐帕基
+138685;Godskin Celebrant Prod;神皮庆典者普罗德
+138686;Squilla of the Golden Order;“黄金律法”斯奎拉
+138687;Berserker Mikkaa;狂战士米卡
+138688;Frenzied Zealot Hoozher;癫火狂徒胡泽
+138689;Oathseeker Bender;守誓者本德
 138700;Mary, Eldest Sister;大姊玛莉
 138800;Maureen, Second Sister;二姊茉莉
 138900;Amy, Third Sister;三姊艾蜜
@@ -128,6 +166,7 @@
 139100;Magnus the Beast Claw;“兽爪”玛格纳斯
 160000;Twin Maiden Husks;孪生老妪
 160100;Church of Dragon Communion;龙飨教堂
+160110;Erdtree Transporter;黄金树传送门
 160200;Smithing Table;锻造台
 160300;Wandering Mausoleum Corpse;漫步灵庙的尸体
 160400;Basin of Atonement;赎罪水池
@@ -135,6 +174,7 @@
 160700;Fractured Marika;濒毁玛莉卡
 160800;Clouded Mirror Stand;雾镜化妆台
 160900;Sword of Bernahl;贝纳尔的剑
+170000;Selwyn the Owl;猫头鹰塞尔温
 175000;Finger Reader Crone;解指老妪
 175001;Finger Reader Crone;解指老妪
 175002;Finger Reader Crone;解指老妪
@@ -146,11 +186,11 @@
 175008;Godwyn's Wet Nurse;葛德文的乳母
 180000;Merchant Kalé;“流浪商人”咖列
 180101;Nomadic Merchant;流浪民族的商人
-180102;Nomadic Merchant;流浪民族的商人
-180103;Nomadic Merchant;流浪民族的商人
-180104;Nomadic Merchant;流浪民族的商人
+180102;Woodsman Merchant;林中商人
+180103;Survivalist Merchant;求生商人
+180104;Herbalist Merchant;草药商人
 180105;Nomadic Merchant;流浪民族的商人
-180106;Isolated Merchant;隐居商人
+180106;Collector Merchant;拾荒商人
 180107;Isolated Merchant;隐居商人
 180108;Nomadic Merchant;流浪民族的商人
 180109;Hermit Merchant;遁世商人
@@ -185,6 +225,12 @@
 900000601;Okina;老翁
 902030000;Rennala, Queen of the Full Moon;“满月女王”蕾娜菈
 902030001;Rennala, Queen of the Full Moon;“满月女王”蕾娜菈
+902035000;Godskin Matriarch;神皮女族长
+902036000;Scion of the Sealed God;受封印神祇之嗣
+902036001;Vessel of Rot;腐败容器
+902036010;Daergraf, Underworld Archmage;“地底大法师”达格拉夫
+902036011;Feigned Dragonlord Daergraf;“伪龙王”达格拉夫
+902036020;Quicksilver Husk;水银躯壳
 902100300;Black Knife Assassin;黑刀刺客
 902100301;Black Knife Assassin;黑刀刺客
 902100302;Black Knife Assassin;黑刀刺客
@@ -205,8 +251,12 @@
 902500300;Crucible Knight Ordovis;“熔炉骑士”奥陶琵斯
 902500301;Crucible Knight;熔炉骑士
 902500500;Crucible Knight;熔炉骑士
+902500510;Dakk, Starcaller Lord;“唤星领主”达克
 902500520;Crucible Knight;熔炉骑士
 902500600;Crucible Knight Siluria;“熔炉骑士”志留亚
+902500601;Blighted Nox Ancestor;咒死的诺克斯先祖
+902500602;Tearna, Night Mistress;“黑夜的女主人”蒂尔娜
+902500603;Aled, Knight of Godwyn;“葛德文骑士”阿莱德
 903050500;Commander Niall;老将尼奥
 903050600;Commander O'Neil;老将欧尼尔
 903100500;Elemer of the Briar;“铁棘”艾隆梅尔
@@ -225,7 +275,7 @@
 903150608;Night's Cavalry (Glaive);黑夜骑兵（剑刃戟）
 903150609;Night's Cavalry (Flail);黑夜骑兵（连枷）
 903181000;Red Wolf of Radagon;拉达冈的红狼
-903181300;Red Wolf of the Champion;英雄的红狼
+903181300;Red Wolf of Eiglay;艾格蕾的红狼
 903250600;Draconic Tree Sentinel;龙装大树守卫
 903251600;Tree Sentinel;大树守卫
 903251601;Tree Sentinel;大树守卫
@@ -234,7 +284,9 @@
 903253500;Royal Knight Loretta;禁卫骑士罗蕾塔
 903300560;Nox Monk;诺克斯修士
 903300561;Nox Swordstress;诺克斯剑士
-903320000;Mimic Tear;仿身泪滴
+903310000;Stormcaller Taran;风暴呼召者塔兰
+903310501;Tempestcaller Corwynt;风暴敕令者科温特
+903320000;Goras, Scourge of Dreams;“梦之灾厄”哥拉斯
 903320300;Stray Mimic Tear;离群仿身泪滴
 903350310;Crystalian (Staff);结晶人（手杖）
 903350311;Crystalian (Spear);结晶人（矛）
@@ -246,8 +298,8 @@
 903350322;Crystalian (Spear);结晶人（矛）
 903400300;Grave Warden Duelist;守墓斗士
 903400301;Grave Warden Duelist;守墓斗士
-903400302;Putrid Grave Warden Duelist;腐败守墓斗士
-903400310;Frenzied Duelist;发狂斗士
+903400302;Vigo, High Priest of Eiglay;“艾格蕾大祭司”维戈
+903400310;Frenzied Troll;癫火山妖
 903451320;Scaly Misbegotten;片鳞混种
 903460300;Misbegotten Warrior;混种战士
 903460310;Misbegotten Crusader;混种圣骑士
@@ -259,7 +311,7 @@
 903560600;Godskin Apostle;神皮使徒
 903570000;Godskin Noble;神皮贵族
 903570310;Godskin Noble;神皮贵族
-903575000;Godskin Duo;神皮双人组
+903575000;Seera, Blade of the Ancients;“古龙之剑”希拉
 903600320;Onyx Lord;石肤黑王
 903600520;Onyx Lord;石肤黑王
 903664300;Cemetery Shade;墓地影子
@@ -270,6 +322,8 @@
 903800310;Cleanrot Knight;玛莲妮亚的尊腐骑士
 903800311;Cleanrot Knight (Spear);玛莲妮亚的尊腐骑士（矛）
 903800312;Cleanrot Knight (Sickle);玛莲妮亚的尊腐骑士（镰刀）
+903805300;Mystic Huntress;密契女猎手
+903805301;Mystic Huntress of the Lost Tribe;失落部族的密契女猎手
 903810310;Kindred of Rot;腐败眷属
 903810311;Kindred of Rot;腐败眷属
 903970310;Beastman of Farum Azula;法姆·亚兹拉的兽人
@@ -282,6 +336,7 @@
 904130540;Demi-Human Queen Gilika;“亚人女王”姬丽卡
 904130600;Demi-Human Queen Maggie;“亚人女王”玛姬
 904140300;Spiritcaller Snail;唤灵蜗牛
+904140305;Shabriri's Chosen;夏玻利利的选民
 904140310;Spiritcaller Snail;唤灵蜗牛
 904260300;Erdtree Burial Watchdog;归树看门犬
 904260301;Erdtree Burial Watchdog;归树看门犬
@@ -289,18 +344,22 @@
 904260303;Erdtree Burial Watchdog;归树看门犬
 904260304;Erdtree Burial Watchdog (Sword);归树看门犬（剑）
 904260305;Erdtree Burial Watchdog (Scepter);归树看门犬（杖）
-904290310;Bloodhound Knight;猎犬骑士
+904260306;Frenzied Burial Watchdog;癫火归树看门犬
+904290310;Battlemage Duncan;“战场魔法师”邓肯
 904290520;Bloodhound Knight Darriwil;“猎犬骑士”达瑞威尔
-904311000;Soldier of Godrick;葛瑞克的士兵
+904311000;Bloodhound Knight Gethin;“猎犬骑士”哥廷
 904340540;Mad Pumpkin Head;发狂南瓜头士兵
 904340541;Mad Pumpkin Head (Hammer);发狂南瓜头士兵（槌）
 904340542;Mad Pumpkin Head (Flail);发狂南瓜头士兵（连枷）
 904470000;Abductor Virgin (Swinging Sickle);掳人少女人偶（摆荡镰刀）
 904470001;Abductor Virgin (Wheel);掳人少女人偶（刺轮）
+904470002;Twisted Abductor;扭曲的掳人者
+904470003;Franken-Abductor-Stein;弗兰肯-掳人者-斯坦
 904480310;Miranda the Blighted Bloom;“病花”米兰达
 904480311;Miranda Blossom;米兰达之花
 904500600;Flying Dragon Agheel;“飞龙”亚基尔
 904500601;Flying Dragon Greyll;“飞龙”桂雷尔
+904500602;Bloodflame Dragon Sanguivaros;“血焰龙”桑吉瓦罗斯
 904501600;Decaying Ekzykes;“步入腐败”艾格基斯
 904502600;Glintstone Dragon Smarag;“辉石龙”史玛拉格
 904502601;Glintstone Dragon Adula;“辉石龙”亚杜拉
@@ -317,6 +376,7 @@
 904620001;Astel, Naturalborn of the Void;“黑暗弃子”艾丝缇
 904620320;Astel, Stars of Darkness;“黑暗繁星”艾丝缇
 904630310;Runebear;卢恩熊
+904630315;Chanting Winged Dame;圣咏翼蝠贵妇
 904640000;Ulcerated Tree Spirit;腐烂树灵
 904640300;Putrid Tree Spirit;腐败树灵
 904640301;Ulcerated Tree Spirit;腐烂树灵
@@ -336,25 +396,58 @@
 904710001;Rykard, Lord of Blasphemy;“亵渎君王”拉卡德
 904720000;Godfrey, First Elden Lord;“初始之王”葛孚雷
 904720001;Hoarah Loux, Warrior;战士荷莱·露
-904720002;Godfrey, First Elden Lord;“初始之王”葛孚雷
+904720002;Sigur, Night's Captain;“黑夜骑兵长官”西古尔
+904720003;Skarde, Crucible's Betrayer;“背叛熔炉者”斯卡德
 904730000;Starscourge Radahn;“碎星”拉塔恩
 904750000;Godrick the Grafted;“接肢”葛瑞克
-904750520;Godefroy the Grafted;“接肢”葛孚亚
+904750520;Banished Knight Oleg;“失乡骑士”奥雷格
 904760000;Fire Giant;火焰巨人
 904770000;Valiant Gargoyle;英雄石像鬼
 904770001;Valiant Gargoyle (Twinblade);英雄石像鬼（双头剑）
+904770002;Spiritshaper Caimar;“塑灵者”凯玛
 904770600;Black Blade Kindred;黑剑眷属
 904770601;Black Blade Kindred;黑剑眷属
 904800000;Mohg, Lord of Blood;“鲜血君王”蒙格
 904800002;Mohg, the Omen;“恶兆之子”蒙格
+904800010;Konrad, Pureblood Knight;“纯血骑士”康拉德
 904810600;Erdtree Avatar;黄金树的化身
 904810601;Erdtree Avatar;黄金树的化身
 904810602;Erdtree Avatar;黄金树的化身
+904810603;Erdtree Sentry;黄金树看护者
+904810650;Erdtree Guardian;黄金树守卫
+904810651;Jar Warrior Champion;大壶勇者
+904810652;Bloodstained Raven;咒血乌鸦
+904810653;Carian Golem;卡利亚魔像
+904810654;Ancestral Shaman;祖灵祭司
+904810655;Demi-Human Chief;亚人首领
+904810656;Charred Banished Knight;焦黑失乡骑士
+904810657;Blighted Omen;咒死的恶兆之子
+904810658;Vulgar Militia Chief;恶兵长官
+904810659;Grand Flame Prelate;火焰大主教
+904810660;Mountain Troll;雪山山妖
+904810661;Albinauric Wolf Rider;白金狼骑射手
+904810662;Mimic Tear;仿身泪滴
+904810663;Nox Insect Cavalry;诺克斯蚁骑士
+904810664;Ant Swarm;蚁群
+904810665;Giant Crystal Crab;巨大结晶蟹
+904810700;Monstrous Spider Scorpion;巨大蜘蛛蝎
+904810701;Bloodfiend Mystic;血怪密契者
+904810702;Fire Knight Crusader;火焰骑士圣战者
+904810703;Black Knight Captain;黑骑士副团长
+904810704;Maddened Hippopotamus;发狂河马
+904810705;Divine Bird Warrior;神鸟战士
+904810706;Grave Bird Raptor;凶猛守墓鸟
+904810707;Rotten Monk;腐败习武修士
 904811600;Putrid Avatar;腐败化身
 904811601;Putrid Avatar;腐败化身
 904811602;Putrid Avatar;腐败化身
+904811603;Erdtree Sentry;黄金树看护者
+904812000;Einar, Ice Guardian;“冰之守卫”艾纳尔
+904813000;Rhys, Carian Paragon;“卡利亚典范”里斯
 904820310;Omenkiller;恶兆猎人
 904820600;Omenkiller;恶兆猎人
+904820650;Omenkiller Sandro;恶兆猎人桑德罗
+904820700;Dyru, Scavenger King;“剥尸王”迪鲁
 904910000;Magma Wyrm Makar;“熔岩土龙”马卡尔
 904910320;Magma Wyrm;熔岩土龙
 904910600;Magma Wyrm;熔岩土龙

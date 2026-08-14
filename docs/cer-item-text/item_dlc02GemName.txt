@@ -3,7 +3,7 @@
 10200;Ash of War: Piercing Fang;战灰：突刺
 10300;Ash of War: Spinning Slash;战灰：回旋斩
 10500;Ash of War: Charge Forth;战灰：突击
-10600;Ash of War: Stamp (Upward Cut);战灰：箭步（上砍）
+10600;Ash of War: Stamp;战灰：箭步
 10700;Ash of War: Stamp (Sweep);战灰：箭步（回旋斩）
 10800;Ash of War: Blood Tax;战灰：鲜血征收
 10900;Ash of War: Repeating Thrust;战灰：连击
@@ -21,7 +21,7 @@
 12200;Ash of War: Storm Assault;战灰：风暴袭击
 12300;Ash of War: Stormcaller;战灰：唤起风暴
 12400;Ash of War: Sword Dance;战灰：剑舞
-12500;Ash of War: Spinning Chain;战灰：回旋锁链
+12500;Ash of War: Evasive Strike;战灰：闪避打击
 20000;Ash of War: Glintblade Phalanx;战灰：辉剑圆阵
 20100;Ash of War: Sacred Blade;战灰：神圣刀刃
 20200;Ash of War: Ice Spear;战灰：冰枪
@@ -59,12 +59,13 @@
 30800;Ash of War: Shield Crash;战灰：突进冲击
 30900;Ash of War: No Skill;战灰：无战技
 31000;Ash of War: Thops's Barrier;战灰：托普斯的力场
-40000;Ash of War: Through and Through;战灰：贯穿射击
+40000;Ash of War: Titanic Shot;战灰：强力射击
 40100;Ash of War: Barrage;战灰：连续射击
 40200;Ash of War: Mighty Shot;战灰：拉满弓
 40400;Ash of War: Enchanted Shot;战灰：宿灵射击
 40500;Ash of War: Sky Shot;战灰：对空射击
 40600;Ash of War: Rain of Arrows;战灰：箭雨
+40700;Ash of War: Abyssal Flame Shot;战灰：深渊炎矢
 50100;Ash of War: Hoarfrost Stomp;战灰：冻霜踏地
 50200;Ash of War: Storm Stomp;战灰：风暴足
 50300;Ash of War: Kick;战灰：踢击
@@ -82,6 +83,7 @@
 60500;Ash of War: Shared Order;战灰：共享圣律
 60600;Ash of War: Seppuku;战灰：切腹
 60700;Ash of War: Cragblade;战灰：岩石剑
+60800;Ash of War: Stormbreaker's Deflection;战灰：破风暴者偏折
 65000;Ash of War: Barbaric Roar;战灰：野蛮咆哮
 65100;Ash of War: War Cry;战灰：战吼
 65200;Ash of War: Beast's Roar;战灰：野兽咆哮
@@ -93,4 +95,7 @@
 80000;Ash of War: Quickstep;战灰：碎步
 80100;Ash of War: Bloodhound's Step;战灰：猎犬步法
 80200;Ash of War: Raptor of the Mists;战灰：潜雾猛禽
+80300;Ash of War: Assassin’s Feint;战灰：刺客佯攻
+80400;Ash of War: Flame Arc;战灰：火焰弧
+80500;Ash of War: Dragonlord's Recall;战灰：龙王召还
 85000;Ash of War: White Shadow's Lure;战灰：白影诱惑

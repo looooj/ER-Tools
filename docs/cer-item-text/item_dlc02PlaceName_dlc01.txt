@@ -5,6 +5,7 @@
 21010;Specimen Storehouse;物种保藏库
 22000;Stone Coffin Fissure;石棺大洞
 28000;Midra's Manse;米德拉府邸
+31810;Ritual Amphitheatre;仪式斗技场
 40000;Fog Rift Catacombs;雾谷地下墓地
 40010;Scorpion River Catacombs;蝎河地下墓地
 40020;Darklight Catacombs;驱暗地下墓地
@@ -27,6 +28,63 @@
 69001;Rauh Base;劳弗下方
 69200;Scaduview;望影露台
 69400;Ancient Ruins of Rauh;劳弗古遗迹
+140200;Empyrean Grandam;神人老妪
+140300;Igon;埃贡
+140301;Drake Warrior Igon;“猎龙战士”埃贡
+140500;St. Trina;圣女托莉娜
+140600;Dragon Communion Priestess;龙飨女巫
+140601;Ancient Dragon Florissax;“古龙”芙柔桑克斯
+140700;Ancient Dragon-Man;古龙人
+140900;Swordhand of Night Jolán;“黑夜剑士”约兰
+140901;Swordhand of Night Jolán;“黑夜剑士”约兰
+140902;Swordhand of Night Jolán;“黑夜剑士”约兰
+140903;Swordhand of Night Jolán;“黑夜剑士”约兰
+140904;Swordhand of Night Anna;“黑夜剑士”安娜
+140905;Swordhand of Night Jolán;“黑夜剑士”约兰
+140906;Jolán and Anna;约兰与安娜
+141300;Fire Knight Queelign;“火焰骑士”昆兰
+141301;Fire Knight Queelign;“火焰骑士”昆兰
+141302;Fire Knight Queelign;“火焰骑士”昆兰
+141400;Hornsent;角人
+141401;Hornsent;角人
+141402;Hornsent;角人
+141403;Hornsent;角人
+141500;Moore;穆尔
+141501;Moore;穆尔
+141502;Moore;穆尔
+141503;Forager Brood;集物虫
+141504;Forager Brood;集物虫
+141600;Sir Ansbach;老兵安帕赫
+141601;Sir Ansbach;老兵安帕赫
+141602;Sir Ansbach;老兵安帕赫
+141603;Pureblood Knight Ansbach;“纯血骑士”安帕赫
+141700;Redmane Freyja;“红狮子”弗蕾亚
+141701;Redmane Freyja;“红狮子”弗蕾亚
+141702;Redmane Freyja;“红狮子”弗蕾亚
+141800;Needle Knight Leda;“金针骑士”蕾妲
+141801;Needle Knight Leda;“金针骑士”蕾妲
+141802;Needle Knight Leda;“金针骑士”蕾妲
+141803;Needle Knight Leda;“金针骑士”蕾妲
+141900;Thiollier;休里耶
+141901;Thiollier;休里耶
+141902;Thiollier;休里耶
+141903;Thiollier;休里耶
+142000;Count Ymir, High Priest;“大祭司”尤弥尔
+142001;Count Ymir, Mother of Fingers;“指头之母”尤弥尔
+142100;Red Bear;红熊
+142200;Dancer of Ranah;拉纳舞娘
+142300;Rakshasa;罗刹
+142400;Knight of the Solitary Gaol;孤牢骑士
+142500;Dryleaf Dane;“落叶”丹恩
+142501;Dryleaf Dane;“落叶”丹恩
+142502;Dryleaf Dane;“落叶”丹恩
+142600;Sanguine Noble Nataan;“鲜血贵族”奈坦
+142700;Lamenter;喟叹者
+142800;Greater Potentate;大维壶师
+142900;Madding Hand;癫狂皮手套
+143100;Logur, the Beast Claw;“兽爪”罗格
+143200;Moonrithyll, Carian Knight;“卡利亚骑士”穆利缇尔
+163000;Grand Altar of Dragon Communion;龙飨大祭坛
 200000;Theatre of the Divine Beast;神兽舞台
 200001;Belurat, Tower Settlement;“塔之镇”贝瑞特
 200002;Small Private Altar;民宅小祭坛
@@ -61,9 +119,11 @@
 280001;Manse Hall;府邸大厅
 280002;Midra's Library;米德拉的书库
 280003;Second Floor Chamber;二楼小房间
+318100;Ritual Amphitheatre;仪式斗技场
 400000;Fog Rift Catacombs;雾谷地下墓地
 400100;Scorpion River Catacombs;蝎河地下墓地
 400200;Darklight Catacombs;驱暗地下墓地
+400201;Abyssal Overlook;谷底眺望处
 410000;Belurat Gaol;贝瑞特监牢
 410100;Bonny Gaol;波尼监牢
 410200;Lamenter's Gaol;喟叹监牢
@@ -79,10 +139,12 @@
 680003;Main Gate Cross;正门前方的十字记号
 680004;Cliffroad Terminus;崖上道路的终点
 680005;Greatbridge, North;大桥北方
+680006;Gravesite Woodland;墓地森林
 681000;Ellac River Cave;艾拉克河洞窟
 681001;Pillar Path Cross;通柱坡的十字记号
 681002;Pillar Path Waypoint;通柱坡中段
 681003;Castle Front;城的前方
+681004;Rauh Reliquary of Grace;优雅的劳弗圣龛
 682000;Castle Ensis Checkpoint;恩希斯城（关卡）
 682001;Castle-Lord's Chamber;城主的房间
 682002;Ensis Moongazing Grounds;恩希斯赏月地
@@ -92,12 +154,17 @@
 683003;The Fissure;大洞
 683004;Finger Ruins of Rhia;利亚指头遗迹
 683005;Cerulean Coast Cross;青蓝海岸的十字记号
+683006;Cerulean Bluffs;青蓝断崖
 684000;Grand Altar of Dragon Communion;龙飨大祭坛
 684001;Charo's Hidden Grave;卡罗隐藏墓地
+684002;Dragon Resting Grounds;龙之休憩地
+684003;Sarrulat, Basin Town;盆地小镇·赛鲁拉特
+684004;Rauh Reliquary of the Thunder-Bound;掣雷的劳弗圣龛
 685000;Foot of the Jagged Peak;尖刺山的山脚
 685001;Jagged Peak Mountainside;尖刺山（中段）
 685002;Jagged Peak Summit;尖刺山（山顶）
 685003;Rest of the Dread Dragon;狂龙之席
+685004;Rauh Reliquary of the Scorched;炙焦的劳弗圣龛
 686000;Abyssal Woods;谷底森林
 686001;Divided Falls;水帘瀑布
 686002;Forsaken Graveyard;荒废墓地
@@ -120,17 +187,22 @@
 690016;Castle Watering Hole;城底积水处
 690017;Recluses' River Upstream;隐者河上游
 690018;Recluses' River Downstream;隐者河下游
+690019;Minor Erdtree Cave;小黄金树洞窟
 692000;Scaduview;望影露台
 692001;Shadow Keep, Back Gate;幽影城（后门）
 693000;Hinterland;隐匿之地
 693001;Fingerstone Hill;指岩山丘
 693002;Hinterland Bridge;隐匿之地（桥边）
+693003;Shaman Village;巫者村
 694000;Viaduct Minor Tower;高架桥的小塔
 694001;Rauh Ancient Ruins, East;劳弗古遗迹（东方）
 694002;Rauh Ancient Ruins, West;劳弗古遗迹（西方）
 694003;Church of the Bud, Main Entrance;花蕾教堂（正门口）
 694004;Ancient Ruins, Grand Stairway;古遗迹（大楼梯）
 694005;Church of the Bud;花蕾教堂
+694006;Rauh Steppes;劳弗草原
+694007;Rauh Reliquary of Balance;均衡的劳弗圣龛
+694008;Rauh Reliquary of the Rugged;粗犷的劳弗圣龛
 696000;Scadutree Base;幽影树的树脚
 6800800;Miquella's Cross;米凯拉的十字记号
 6800801;Miquella's Cross;米凯拉的十字记号
@@ -308,7 +380,7 @@
 10670539;Haligtree Roots;圣树底层
 10670560;Giant-Conquering Hero's Grave;巨人战争的英雄墓地
 10670561;Giants' Mountaintop Catacombs;巨人山顶地下墓地
-10670562;Consecrated Snowfield Catacombs;化圣雪原地下墓地
+10670562;Sanctum of Eiglay;艾格蕾圣所
 10670563;Hidden Path to the Haligtree;通往圣树的密道
 10670570;Cave of the Forlorn;安身洞窟
 10670571;Spiritcaller Cave;唤灵洞窟
@@ -392,6 +464,7 @@
 10670911;Altus, Bear Woods;亚坛的熊栖森林
 10670912;Fog Rift Fort;雾谷要塞
 10670913;Moorth Highway, South;穆斯大道（南方）
+10670914;Ritual Amphitheatre;仪式斗技场
 10670930;Miyr Hanging Bell;密亚吊钟
 10670940;Shadow Keep Main Gate;幽影城（正门）
 10670941;Church District Entrance;教区入口
@@ -408,3 +481,49 @@
 10670961;Darklight Catacombs;驱暗地下墓地
 10670970;Bonny Gaol;波尼监牢
 10670980;Rivermouth Cave;河尾洞窟
+900000410;Lamenter;喟叹者
+900000430;Ancient Dragon-Man;古龙人
+900000560;Red Bear;红熊
+900000561;Dancer of Ranah;拉纳舞娘
+900000562;Rakshasa;罗刹
+900000563;Knight of the Solitary Gaol;孤牢骑士
+900000605;Swordhand of Night Jolán;“黑夜剑士”约兰
+900000606;Count Ymir, Mother of Fingers;“指头之母”尤弥尔
+905000000;Commander Gaius;老将盖乌斯
+905010000;Golden Hippopotamus;黄金河马
+905020000;Putrescent Knight;融泥骑士
+905030000;Romina, Saint of the Bud;“花蕾圣女”萝蜜娜
+905040400;Curseblade Labirith;咒剑士拉比利士
+905051000;Midra, Lord of Frenzied Flame;“癫火之王”米德拉
+905070400;Death Knight;死骑士
+905070401;Death Knight;死骑士
+905081430;Chief Bloodfiend;血怪之首
+905120000;Bayle the Dread;“狂龙”贝勒
+905130000;Messmer the Impaler;“穿刺者”梅瑟莫
+905130001;Base Serpent Messmer;“恶之蛇”梅瑟莫
+905200000;Metyr, Mother of Fingers;“指头之母”梅蒂尔
+905210000;Divine Beast Dancing Lion;神兽舞狮
+905210600;Divine Beast Dancing Lion;神兽舞狮
+905220000;Promised Consort Radahn;“约定之王”拉塔恩
+905220001;Radahn, Consort of Miquella;“米凯拉的王”拉塔恩
+905230000;Scadutree Avatar;幽影树的化身
+905230001;Scadutree Avatar;幽影树的化身
+905230002;Scadutree Avatar;幽影树的化身
+905300000;Rellana, Twin Moon Knight;“双月骑士”蕾菈娜
+905320000;Jori, Elder Inquisitor;“拷问老者”约里
+905370600;Ancient Dragon Senessax;“古龙”瑟涅桑克斯
+905580600;Jagged Peak Drake;尖刺山的飞龙
+905580601;Jagged Peak Drake;尖刺山的飞龙
+905730600;Demi-Human Queen Marigga;“亚人女王”玛丽戈
+905810410;Demi-Human Swordmaster Onze;“亚人剑圣”翁吉
+905820600;Rugalea the Great Red Bear;大红熊鲁格利亚
+905820601;Ralva the Great Red Bear;大红熊拉鲁瓦
+905840500;Black Knight Edredd;“黑骑士”艾瑞德
+905840501;Black Knight Garrew;“黑骑士”迦鲁
+905860600;Ghostflame Dragon;灵火龙
+905860601;Ghostflame Dragon;灵火龙
+905860603;Ghostflame Dragon;灵火龙
+906251600;Tree Sentinel;大树守卫
+906251601;Tree Sentinel;大树守卫
+906260600;Death Rite Bird;死亡仪式鸟
+906310600;Fallingstar Beast;坠星兽物

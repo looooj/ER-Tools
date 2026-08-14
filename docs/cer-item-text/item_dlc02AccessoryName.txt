@@ -18,9 +18,20 @@
 1050;Radagon's Scarseal;拉达冈的烙印
 1051;Radagon's Soreseal;拉达冈的糜烂烙印
 1060;Starscourge Heirloom;碎星的传说
+1061;Valorous Heirloom;英勇的传说
+1062;Strategist Heirloom;军师的传说
+1063;Chosen Heirloom;神选的传说
+1064;Blackguard Heirloom;流氓的传说
 1070;Prosthesis-Wearer Heirloom;义手剑士的传说
+1071;Saboteur Heirloom;破坏者的传说
+1072;Cloister Heirloom;修道者的传说
+1073;Perfume Heirloom;调香的传说
 1080;Stargazer Heirloom;观星少女的传说
+1081;Midnight Heirloom;午夜的传说
+1082;Forbidden Heirloom;禁忌的传说
 1090;Two Fingers Heirloom;双指的传说
+1091;Scorpion Heirloom;对蝎的传说
+1095;Outer God Heirloom;外在神祇的传说
 1100;Silver Scarab;银色粪金龟
 1110;Gold Scarab;金色粪金龟
 1140;Moon of Nokstella;诺克史黛拉之月
@@ -29,7 +40,7 @@
 1161;Stalwart Horn Charm +1;健壮角饰品＋１
 1170;Immunizing Horn Charm;免疫角饰品
 1171;Immunizing Horn Charm +1;免疫角饰品＋１
-1180;Clarifying Horn Charm;理智角饰品
+1180;Rousing Horn Charm;活力角饰品
 1181;Clarifying Horn Charm +1;理智角饰品＋１
 1190;Prince of Death's Pustule;死王子的脓疮
 1191;Prince of Death's Cyst;死王子的恶性脓疮
@@ -41,10 +52,20 @@
 1230;Warrior Jar Shard;战士壶碎片
 1231;Shard of Alexander;亚历山大的碎片
 1250;Millicent's Prosthesis;米莉森的义手
+1260;Warming Horn Charm;温暖角饰品
+1270;Clarifying Horn Charm;理智角饰品
+1280;Curative Horn Charm;疗愈角饰品
 2000;Magic Scorpion Charm;魔力对蝎
 2010;Lightning Scorpion Charm;雷对蝎
+2011;Dragonkin Crest;龙人纹章
+2012;Chime of Godwyn;葛德文的钟
+2013;Scale of Gransax;古兰桑克斯的鳞片
 2020;Fire Scorpion Charm;火对蝎
+2021;Firemonk's Filigree;习武修士饰物
+2022;Everburning Ember;永燃余火
+2023;Coal of the Forge;大锅余烬
 2030;Sacred Scorpion Charm;圣对蝎
+2031;Emblem of Gold;黄金徽章
 2040;Red-Feathered Branchsword;红羽七刃剑
 2050;Ritual Sword Talisman;献斗剑护符
 2060;Spear Talisman;矛护符
@@ -57,16 +78,20 @@
 2120;Twinblade Talisman;双头剑护符
 2130;Axe Talisman;斧护符
 2140;Lance Talisman;骑枪护符
-2150;Arrow's Sting Talisman;硬箭护符
+2150;Arrow's Soaring Sting Talisman;远硬箭护符
 2160;Lord of Blood's Exultation;鲜血君王的欢愉
 2170;Kindred of Rot's Exultation;腐败眷属的欢愉
 2180;Claw Talisman;钩爪护符
-2190;Roar Medallion;咆哮链坠
+2190;Giant's Insignia;巨人徽章
 2200;Curved Sword Talisman;曲剑护符
 2210;Companion Jar;友好壶
 2220;Perfumer's Talisman;调香师护符
 3000;Graven-School Talisman;魔法师球护符
 3001;Graven-Mass Talisman;魔法师块护符
+3002;Glowing Glintshard;闪耀魔砾
+3010;Runebear's Claw;卢恩熊的爪
+3020;Primordial Pumice Fragment;原初陨石碎片
+3030;Primordial Glass Shard;原初星星碎片
 3040;Faithful's Canvas Talisman;信徒的立誓布
 3050;Flock's Canvas Talisman;群聚信徒的立誓布
 3060;Old Lord's Talisman;古王护符
@@ -86,7 +111,7 @@
 4030;Boltdrake Talisman;雷龙徽护符
 4031;Boltdrake Talisman +1;雷龙徽护符＋１
 4032;Boltdrake Talisman +2;雷龙徽护符＋２
-4040;Haligdrake Talisman;圣龙徽护符
+4040;Golden Braid;金黄色编发
 4041;Haligdrake Talisman +1;圣龙徽护符＋１
 4042;Haligdrake Talisman +2;圣龙徽护符＋２
 4050;Pearldrake Talisman;珍珠龙徽护符
@@ -98,14 +123,17 @@
 4090;Ritual Shield Talisman;献斗盾护符
 4100;Greatshield Talisman;大盾护符
 4110;Crucible Knot Talisman;熔炉瘤护符
+4120;Blasphemer's Crest;亵渎者徽章
+4130;Sigil of Freedom;自由印记
+4140;Quiver Talisman;箭袋护符
 5000;Crimson Seed Talisman;红种子护符
-5010;Cerulean Seed Talisman;蓝种子护符
+5010;Blessed Blue Dew Talisman;恩惠蓝露滴护符
 5020;Blessed Dew Talisman;恩惠露滴护符
 5030;Taker's Cameo;掠夺浮雕坠饰
 5040;Godskin Swaddling Cloth;神皮襁褓
-5050;Assassin's Crimson Dagger;染红凶刀
+5050;Assassin's Curio;刺客饰物
 5060;Assassin's Cerulean Dagger;染蓝凶刀
-6000;Crepus's Vial;克雷普的小瓶子
+6000;Thief's Bauble;盗贼的饰品
 6010;Concealing Veil;隐身面纱
 6020;Carian Filigreed Crest;卡利亚徽章
 6040;Longtail Cat Talisman;长尾猫别针
@@ -115,3 +143,30 @@
 6080;Furled Finger's Trick-Mirror;勾指伪装镜
 6090;Host's Trick-Mirror;主人伪装镜
 6110;Ancestral Spirit's Horn;祖灵角
+9000;Jewel of the Resolute;果决秘宝
+9010;Jewel of the Valorous;英勇秘宝
+9020;Jewel of the Hunt;猎杀秘宝
+9030;Jewel of the Reckless;蛮勇秘宝
+9040;Jewel of the Immovable;坚毅秘宝
+9050;Jewel of the Relentless;残酷秘宝
+9060;Jewel of the Devious;狡诈秘宝
+9070;Jewel of the Primeval;起源秘宝
+9080;Jewel of the Cosmos;星空秘宝
+9090;Jewel of the Underworld;地底秘宝
+9100;Jewel of the Devourer;吞世秘宝
+9110;Jewel of the Storm;风暴秘宝
+9120;Jewel of the Darkness;黑暗秘宝
+9130;Jewel of the Prince;王子秘宝
+9140;Jewel of the Dark Moon;暗月秘宝
+9150;Jewel of the Sinner;罪人秘宝
+9160;Jewel of the Forge;大锅秘宝
+9170;Jewel of the Righteous;正途秘宝
+9180;Jewel of the Crucible;熔炉秘宝
+9190;Jewel of the Ancients;古龙秘宝
+9200;Jewel of the Flayer;剥制秘宝
+9210;Jewel of the Mindless;失心秘宝
+9220;Jewel of the Formless;无形秘宝
+9230;Jewel of the Sealed;封印秘宝
+9240;Jewel of the Ancestors;祖灵秘宝
+9250;Jewel of the Alchemist;炼金秘宝
+9260;Jewel of the Chained;缚锁秘宝

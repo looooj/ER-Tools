@@ -1,4 +1,6 @@
-﻿100;Tarnished's Furled Finger;褪色者勾指
+﻿1;Reload Map;重新加载地图
+5;Dreamer's Bauble;梦者的小饰物
+100;Tarnished's Furled Finger;褪色者勾指
 101;Duelist's Furled Finger;斗士勾指
 102;Bloody Finger;血指
 103;Finger Severer;断指刀
@@ -14,8 +16,12 @@
 113;Phantom Bloody Finger;血指幻影
 114;Phantom Recusant Finger;叛律指幻影
 115;Memory of Grace;赐福记忆
-130;Spectral Steed Whistle;灵马哨笛
+130;Torrent's Whistle;托雷特的哨笛
 135;Phantom Great Rune;大卢恩幻影
+140;Funeral Whistle;送葬哨笛
+141;Erdtree Whistle;黄金树哨笛
+142;Frenzied Whistle;癫火哨笛
+143;Carian Whistle;卡利亚哨笛
 150;Furlcalling Finger Remedy;唤勾指药
 170;Tarnished's Furled Finger;褪色者勾指
 171;Duelist's Furled Finger;斗士勾指
@@ -179,7 +185,10 @@
 1210;Exalted Flesh;勇者肉块
 1235;Raw Meat Dumpling;生肉丸
 1240;Shabriri Grape;夏玻利利葡萄
+1250;Sacred Ward;圣杯守护
 1290;Starlight Shards;星光碎片
+1291;Starlight Shards;星光碎片
+1295;Golden Extract;黄金精华
 1310;Immunizing White Cured Meat;免疫白肉干
 1320;Invigorating White Cured Meat;健壮白肉干
 1330;Clarifying White Cured Meat;理智白肉干
@@ -237,6 +246,10 @@
 2205;Prattling Pate "My beloved";唤声泥颅“我爱你”
 2206;Prattling Pate "Let's get to it";唤声泥颅“我们开始吧”
 2207;Prattling Pate "You're beautiful";唤声泥颅“你长得很好看”
+2500;Mount: Funeral Steed;坐骑：送葬马
+2501;Mount: Frenzied Mule;坐骑：癫火骡
+2502;Mount: Carian Knight Steed;坐骑：卡利亚骑士马
+2503;Mount: Erdtree Steed;坐骑：黄金树战马
 2900;Golden Rune [1];黄金卢恩【１】
 2901;Golden Rune [2];黄金卢恩【２】
 2902;Golden Rune [3];黄金卢恩【３】
@@ -272,6 +285,13 @@
 2962;Remembrance of the Regal Ancestor;祖灵之王的追忆
 2963;Elden Remembrance;艾尔登的追忆
 2964;Remembrance of the Naturalborn;黑暗弃子的追忆
+2965;Remembrance of the Crucible's Betrayer;背叛熔炉者的追忆
+2966;Remembrance of the Matriarch;女族长的追忆
+2967;Remembrance of the Scion of the Sealed God;神嗣的追忆
+2968;Remembrance of the Scavenger King;剥尸王的追忆
+2969;Remembrance of the Ice Guardian;冰之守卫的追忆
+2970;Remembrance of the Spiritshaper;塑灵者的追忆
+2971;Remembrance of the Feigned Dragonlord;假龙之王的追忆
 2990;Lands Between Rune;交界地卢恩
 3000;Ancestral Infant's Head;稚幼祖灵头部
 3010;Omen Bairn;恶兆幼子像
@@ -295,14 +315,15 @@
 3550;Bloodboil Aromatic;狂热香药
 3580;Poison Spraymist;毒发喷雾
 3610;Acid Spraymist;酸蚀喷雾
+3650;Nox Grounding Stone;诺克斯接地石
 4000;Glintstone Pebble;辉石魔砾
 4001;Great Glintstone Shard;辉石大魔砾
 4010;Swift Glintstone Shard;辉石迅魔砾
 4020;Glintstone Cometshard;辉石彗星
 4021;Comet;帚星
 4030;Shard Spiral;旋飞魔砾
-4040;Glintstone Stars;辉石流星
-4050;Star Shower;流星雨
+4040;Night Stars;黑夜流星
+4050;Star Swarm;流星群
 4060;Crystal Barrage;结晶连弹
 4070;Glintstone Arc;辉石弯弧
 4080;Cannon of Haima;海摩炮弹
@@ -310,8 +331,12 @@
 4100;Shatter Earth;爆碎岩盘
 4110;Rock Blaster;爆破岩盘
 4120;Gavel of Haima;海摩大槌
-4130;Terra Magica;魔法之境
+4130;Anima Magica;魔法之魂
+4131;Corpa Magica;魔法之体
 4140;Starlight;星光
+4150;Glintbeam Orb;辉光球
+4160;Energy Shell;能量盾
+4170;Carian Acuity;卡利亚的敏锐
 4200;Comet Azur;彗星亚兹勒
 4210;Founding Rain of Stars;创星雨
 4220;Stars of Ruin;毁灭流星
@@ -320,74 +345,267 @@
 4302;Greatblade Phalanx;巨剑阵
 4360;Rennala's Full Moon;蕾娜菈的满月
 4361;Ranni's Dark Moon;菈妮的暗月
-4370;Magic Downpour;天降魔力
+4370;Dragonkin Downpour;天降龙力
 4380;Loretta's Greatbow;罗蕾塔的大弓
 4381;Loretta's Mastery;罗蕾塔的绝招
-4390;Magic Glintblade;魔法辉剑
-4400;Glintstone Icecrag;辉石冰块
+4390;Frozen Cragbolt;极寒冰雷
+4400;Icecrag Arrow;碎冰箭
+4401;Ice Dart;冰彗砾
+4402;Icecrag Spear;碎冰矛
+4403;Avalanche;雪崩
 4410;Zamor Ice Storm;萨米尔冰风暴
+4411;Frozen Spikes;冰尖刺
+4412;Renna's Barrier;蕾娜之壁
+4413;Armor of Rime;霜甲
+4414;Snow Witch's Cunning;雪魔女的狡诈
+4415;Ice Guardian's Reckoning;冰之守卫的裁决
+4416;Armor of Ice;冰铠
 4420;Freezing Mist;冰雾
+4421;Icecrag Burst;碎冰爆裂
+4422;Ice Shards;寒冰魔砾
+4423;Frozen Phalanx;冰冻方阵
+4424;Zamor Ice Storm;萨米尔冰风暴
 4430;Carian Greatsword;卡利亚大剑
 4431;Adula's Moonblade;亚杜拉的月光剑
+4432;Freeze Solid;冻固
 4440;Carian Slicer;卡利亚迅剑
 4450;Carian Piercer;卡利亚贯刺
 4460;Scholar's Armament;魔力武器
 4470;Scholar's Shield;魔力盾牌
-4480;Lucidity;镇定
+4480;Sorcerer's Lucidity;法师的镇定
 4490;Frozen Armament;结冰武器
+4491;Whiteout;暴风雪
+4492;Divine Iceburst;神圣冰爆
+4493;Shatter the Shards;破晶碎击
+4494;Mass Freeze;大冻结
+4495;Icequake;冰震
 4500;Shattering Crystal;爆散结晶
 4510;Crystal Release;飞散结晶
-4520;Crystal Torrent;奔放结晶
+4520;Cragbolt Torrent;奔放冰雷
+4530;Cragbolt Wisp;冰雷鞭
+4531;Cragbolt Spear;冰雷矛
+4540;Cragbolt Upwelling;冰雷爆弹
+4550;Cragbolt Mine;冰雷地雷
+4551;Dragonkin Minefield;龙人雷区
+4560;Frozen Lightning Storm;冰雷风暴
+4570;Dragonkin Devastation;龙人大毁灭
+4580;Strength of the Underworld;地底力量
+4581;Wisdom of the Makers;创造者的智慧
+4590;Frozen Lightning Armament;冰雷武器
 4600;Ambush Shard;奇袭魔砾
+4601;Quicksilver Affliction;水银苦痛
+4602;Curse of Midnight;午夜诅咒
+4603;Quicksilver Shard;水银魔砾
+4604;Curse of Shadow;影咒
+4605;Fulminated Quicksilver;雷汞
 4610;Night Shard;黑夜魔砾
 4620;Night Comet;黑夜彗星
+4621;Quicksilver Comet;水银彗星
 4630;Thops's Barrier;托普斯的力场
-4640;Carian Retaliation;卡利亚式奉还
+4640;Dragonkin Retaliation;龙人式奉还
 4650;Eternal Darkness;亘古黑暗
+4651;Black Moon Eulogy;黑月挽歌
+4652;Pure Darkness;纯粹黑暗
 4660;Unseen Blade;无形刀刃
 4670;Unseen Form;化为无形
+4671;Oath of Darkness;黑暗誓言
+4672;Attune to the Black Moon;暗月调和
+4680;Nox Simulacrum;诺克斯拟像
+4690;Shadow Arc;影弧
 4700;Meteorite;陨石
 4701;Meteorite of Astel;艾丝缇陨石
+4702;Stellar Bombardment;星星轰炸
 4710;Rock Sling;岩石球
+4711;Rock Burst;岩石爆裂
+4712;Meteor Sling;流星机弦
 4720;Gravity Well;重力球
 4721;Collapsing Stars;碎星
+4722;Collapsing Nebula;坍缩星云
+4730;Implosion;内爆
+4731;Distortion Field;扭曲场
+4740;Rock Heave;岩石波
+4750;Gravity Beam;重力能量束
+4760;Crush;粉碎
+4770;Gravity Armor;重力护甲
+4780;Cosmic Tunnel;星空隧道
+4790;Primeval Alignment;起源同调
+4791;Meteoric Alignment;陨星同调
 4800;Magma Shot;熔岩球
+4801;Lava Dart;熔岩彗砾
+4802;Burning Rancor;燃烧的怨念
 4810;Gelmir's Fury;格密尔之怒
+4811;Lava Spray;熔岩飞溅
 4820;Roiling Magma;滚烫熔岩
 4830;Rykard's Rancor;拉卡德的怨魂
+4840;Pyroclasm;火山喷发
+4841;Lava Blast;熔岩冲击
+4842;Lava Bomb;熔岩炸弹
+4850;Familial Consumption;吸噬为我族
+4851;Blasphemer's Outrage;亵渎者的愤怒
+4852;Embrace the Devourer;拥抱吞世
+4853;Superheat;超热
+4854;Living Forge;活体铸炉
+4860;Lava Pool;熔岩池
+4861;Molten Stride;熔岩步伐
+4870;Magma Missile;岩浆弹
+4871;Vortex of Eiglay;艾格蕾的漩涡
+4872;Inferno;地狱火
+4880;Slag Spears;熔渣之矛
+4881;Annealed Slag;退火熔渣
+4890;Molten Spikes;熔岩尖刺
+4891;Furnace Maul;铸炉重锤
 4900;Briars of Sin;罪恶荆棘
+4901;Thorn Burst;荆棘爆裂
 4910;Briars of Punishment;责罚荆棘
+4911;Crimson Rose;深红玫瑰
+4920;Body of Briar;荆棘之躯
+4921;Strangling Briars;杀戮荆棘
+4930;Red Glintstone Razor;赤辉石剃刀
+4931;Blood Comet;血色彗星
+4932;Red Glintstone Shards;赤辉石魔砾
+4940;Telekinetic Assault;念动攻击
+4941;Telekinetic Shell;念动壳
+4950;Eochaid's Sap;欧赫之击
+4951;Crimson Greatblade;深红巨刃
+4960;Blood Star;鲜血星光
+4970;Close Wound;伤口缝合
+4971;Ritual of Desecration;亵渎仪式
+4972;Sadistic Glee;虐待狂欢
+4980;Briar-Wrapped Armament;荆棘武器
+4990;Aberrant Ascension;异常升华
+4991;Blood Revelry;鲜血狂欢
 5000;Rancorcall;召唤怨魂
 5001;Ancient Death Rancor;古老死亡怨魂
-5010;Explosive Ghostflame;迸发灵火
+5002;Rancor Bolt;怨恨击
+5010;Ghostflame Cannon;灵火大炮
+5011;Rancorstorm;怨恨风暴
+5012;Ritual of Ghostflame;灵火仪式
 5020;Fia's Mist;菲雅烟雾
+5021;Lingering Blight;缠绕咒死
+5022;Curse of Putrefaction;腐败诅咒
+5023;Wave of Corruption;腐败冲击
 5030;Tibia's Summons;提比亚的唤声
-5040;Death Lightning;死亡雷击
-5100;Oracle Bubbles;神谕泡泡
-5110;Great Oracular Bubble;神谕大泡泡
+5031;Tibia's Conversion;提比亚的转换
+5032;Tibia's Onslaught;提比亚的猛攻
+5040;Death Lightning Storm;死亡雷暴
+5041;Death Spark;死亡火花
+5042;Death Knight's Supplication;死骑士祈愿
+5043;Death Lightning Stake;死亡雷柱
+5044;Death Lightning Barrage;死雷弹幕
+5050;Sacrifice;献祭
+5060;Ghostflame Embrace;拥抱灵火
+5061;Soul Steal;灵魂攫取
+5070;Blighted Armament;咒死武器
+5080;Accursed Binding;诅咒束缚
+5081;Rally the Legion;军团集结
+5082;Reassemble;重组
+5090;Godwyn's Vengeance;葛德文的复仇
+5091;Phoenix of Death;死之凤凰
+5100;Cragbolt Bubbles;冰雷泡泡
+5110;Great Dragonkin Bubble;龙人大泡泡
+5120;Great Bubble Volley;大泡泡齐射
+5130;Armor of Bubbles;泡泡护甲
+5131;Underworld Bubbleshield;地底泡泡盾
+5140;Dragonkin Innervation;龙人枯竭
+5150;Bubble Snare;泡泡诱缚
+5160;Galvanic Barrier;流电屏障
+5170;Cragbolt Dynamo;冰雷迸发
+5180;Galvanic Icefang;流电冰牙
+5190;Maker's Lament;造物者的哀歌
+5200;Storm Gust;阵风风暴
+5201;Twister;龙卷风
+5202;Storm Strike;风暴击
+5210;Rebuff;拒绝
+5211;Gathering Storm;聚集风暴
+5220;Whirlwind;旋风
+5221;Cyclone;气旋
+5222;Tornado;飓风
+5230;Gale Blast;烈风冲击
+5231;Storm Spear;风暴矛
+5232;Tempest Lance;风暴枪
+5240;Storm Arc;风暴弧
+5241;Storm Call;召唤风暴
+5242;Storm Shatter;破碎风暴
+5250;Storm Armament;风暴武器
+5260;Cloud Form;化为云形
+5261;Dematerialize;非物质化
+5270;Suffocate;窒息
+5271;Air Tax;大气压榨
+5280;Stormcaller's Sublimity;风暴呼召者的庄严
+5281;Tempest Form;风暴形态
+5282;Tempest Embrace;风暴之拥
+5283;Tempest Embrace;风暴之拥
+5290;Windborne Vault;御风腾跃
+5291;Zephyr Strike;疾风一击
+5292;Storm Arc Volley;风弧齐发
+5293;Lion's Breath;狮子吐息
 6000;Catch Flame;燃火
-6001;O, Flame!;火焰啊！
+6001;Great Flame;巨焰
 6010;Flame Sling;投火
-6020;Flame, Fall Upon Them;火焰啊，倾注吧
-6030;Whirl, O Flame!;火焰啊，缠绕吧
-6040;Flame, Cleanse Me;火焰的疗愈啊
-6050;Flame, Grant Me Strength;火焰啊，赐予我力量！
-6060;Flame, Protect Me;火焰的庇佑啊
-6100;Giantsflame Take Thee;感受巨人火焰吧
+6020;Flame Scatter;火焰散射
+6030;Flame Whirl;火焰漩涡
+6031;Incinerate;燃灰
+6040;Purging Flames;净化火焰
+6050;Stoke the Flames;燃焰
+6060;Giantsflame Protection;巨人火焰防护
+6070;Cyclopean Prophecy;独眼巨人的预言
+6080;Flaming Armament;火焰武器
+6100;Great Flame Sling;巨焰索
 6110;Flame of the Fell God;恶神火焰
-6120;Burn, O Flame!;火焰啊，吞噬一切！
-6210;Black Flame;黑焰
-6220;Surge, O Flame!;火焰啊，喷发吧
+6111;Anger of the Fell God;恶神的愤怒
+6120;Flame Pillars;火焰柱
+6130;Fell Missile;恶焰弹
+6140;Flame Strike;火焰打击
+6150;Abyssal Flame Dance;深渊火舞
+6190;Flame Surge;火焰喷涌
+6191;Serpent Flame Surge;蛇炎喷涌
+6200;Black Flame Dart;黑焰彗砾
+6201;Black Flame Burst;黑焰爆发
+6202;Godslayer Sickle;狩猎神祇镰刀
+6210;Black Flame Orb;黑焰球
+6211;Burrowing Black Flame;穿身黑焰
+6220;Black Firestorm;黑焰风暴
+6221;Twilight Wisp;暮色幽炎
+6222;Entwined Flare;交缠耀芒
+6223;Twilight Vortex;暮色涡旋
+6224;Soul Tether;灵魂系索
+6225;Sever the Thread;断绝命弦
 6230;Scouring Black Flame;横扫黑焰
+6231;Black Flame Wave;黑焰冲击
 6240;Black Flame Ritual;黑焰仪式
 6250;Black Flame Blade;黑焰刀刃
-6260;Black Flame's Protection;黑焰庇佑
+6260;Blessing of Gloam;宵色祝福
+6261;Godslayer's Devotion;狩猎神祇之虔敬
+6262;Wrath of the Queen;女王之怒
 6270;Noble Presence;贵族气场
+6280;Black Flame Mortar;黑焰炮击
+6290;Soul Sear;灵魂烧灼
+6291;Deicide;弑杀神祇
+6292;Soul Annihilation;灵魂湮灭
+6293;Dusk Bolt;幽暗击
 6300;Bloodflame Talons;血焰爪痕
-6310;Bloodboon;授血
+6301;Blood Seeker;鲜血追索
+6302;Sanguine Pull;血红撕扯
+6303;Boiling Blood;鲜血沸腾
+6304;Dynastic Sacrament;王朝圣礼
+6310;Bloodboon Scatter;鲜血散布
+6311;Bloodboon Spray;血灵喷洒
+6312;Bloodboon Slash;授血斩击
+6313;Bloodflame Missile;血焰弹
+6314;Bloodflame Outburst;血焰爆发
+6315;Blood Rain;血雨
 6320;Bloodflame Blade;血焰刀刃
+6321;Hex of Mohgwyn;蒙格温的魔咒
+6322;Siphon the Formless;无形汲取
+6323;Outer Realm's Gift;外域的赠礼
+6324;Dynastic Replenishment;王朝的恢复
+6325;Purifying Cautery;净化烧灼
 6330;Barrier of Gold;黄金魔力防护
 6340;Protection of the Erdtree;黄金树庇佑
+6350;Bloodflame Scatter;血焰散射
+6360;Nihil;虚无
+6370;Blood Pact;血之契约
+6371;Hidden Mother's Blessing;隐匿之母的祝福
 6400;Rejection;拒绝
 6410;Wrath of Gold;黄金之怒
 6420;Urgent Heal;紧急恢复
@@ -405,37 +623,76 @@
 6480;Divine Fortification;圣防护
 6490;Lord's Divine Fortification;王之圣防护
 6500;Night Maiden's Mist;黑夜女巫烟雾
+6501;Night Maiden's Fog;黑夜女巫雾霭
 6510;Assassin's Approach;刺客步法
 6520;Shadow Bait;诱敌幻影
 6530;Darkness;黑暗
-6600;Golden Vow;黄金树立誓
+6600;Aura of Valor;勇气灵光
+6610;Rune Shards;卢恩魔砾
+6620;Golden Land;黄金大地
+6630;Elden Blade;艾尔登之刃
+6640;Golden Spear;黄金矛
+6641;Morgott's Spear;蒙格特的矛
 6700;Discus of Light;光环
 6701;Triple Rings of Light;化三光环
 6710;Radagon's Rings of Light;拉达冈的光环
 6720;Elden Stars;艾尔登流星
 6730;Law of Regression;回归性原理
 6740;Immutable Shield;不变盾牌
-6750;Litany of Proper Death;纠死圣律
+6741;Golden Displacement;黄金瞬移
+6750;Sacred Ground;圣土
 6760;Law of Causality;因果性原理
 6770;Order's Blade;圣律剑刃
 6780;Order Healing;圣律疗愈
-6800;Bestial Sling;兽石
+6790;Blessing of Grace;恩赐祝福
+6791;Blessing of Protection;防护祝福
+6792;Blessing of Wisdom;智慧祝福
+6793;Blessing of Power;力量祝福
+6794;Elden Benediction;艾尔登祝福
+6800;Gravel Sling;碎石
+6801;Stone Throw;掷石
 6810;Stone of Gurranq;古兰格的岩石
+6811;Boulder Volley;石砾齐射
 6820;Beast Claw;兽爪
+6821;Beast Talons;兽爪
+6822;Savage Lunge;野蛮冲刺
 6830;Gurranq's Beast Claw;古兰格的兽爪
-6840;Bestial Vitality;野兽活力
-6850;Bestial Constitution;野兽健壮
+6840;Crucible Vitality;熔炉活力
+6841;Crucible Regeneration;熔炉回生
+6842;Stone Skin;石头皮肤
+6850;Bestial Strength;野兽力量
+6851;Bestial Fervor;野兽热情
+6852;Source of Creation;创造之源
+6860;Earthen Spikes;大地尖刺
+6861;Landslide;山崩
+6870;Earthquake;地震
+6871;Seismic Instability;地动山摇
+6880;Fissure;裂地
+6890;Crucible Spear;熔炉矛
+6891;Stone Spears;石矛
 6900;Lightning Spear;雷电枪
-6910;Ancient Dragons' Lightning Strike;古龙雷击
+6901;Lightning Channel;雷电引导
+6902;Lightning Orb;雷电球
+6903;Ancient Lightning Spear;古龙雷电矛
+6910;Ancient Lightning Storm;古龙雷电风暴
 6920;Lightning Strike;雷击
-6921;Frozen Lightning Spear;冰雷枪
+6921;Frozen Lightning Stake;冰雷桩
+6922;Ancient Lightning Strike;古龙雷击
 6930;Honed Bolt;精准雷击
-6940;Ancient Dragons' Lightning Spear;古龙雷枪
-6941;Fortissax's Lightning Spear;弗尔桑克斯的雷枪
+6931;Ancient Honed Bolt;古龙精准雷击
+6932;Ancient Lightning Beacon;古龙雷电
+6940;Ancient Lightning Stake;古龙雷桩
+6941;Fortissax's Lightning Stake;弗尔桑克斯的雷桩
 6950;Lansseax's Glaive;兰斯桑克斯的刀
 6960;Electrify Armament;雷武器
 6970;Vyke's Dragonbolt;维克的龙雷
 6971;Dragonbolt Blessing;龙雷庇佑
+6980;Will of the Lichdragon;死龙的意志
+6981;Ire of the Dragon God;龙神之怒
+6990;Time Warp;时间扭曲
+6991;Static Charge;稳态积电
+6992;Electrocution;电刑
+6993;Ageless Innervation;不朽内流
 7000;Dragonfire;龙焰
 7001;Agheel's Flame;亚基尔的火焰
 7010;Magma Breath;熔岩吐息
@@ -451,23 +708,95 @@
 7080;Dragonmaw;龙咬
 7090;Greyoll's Roar;桂奥尔的咆哮
 7200;Pest Threads;虫丝
+7201;Pest Darts;毒虫彗砾
 7210;Swarm of Flies;蝇群
+7211;Poison Dart;剧毒彗砾
+7212;Blighted Orb;咒死之球
 7220;Poison Mist;毒雾
+7221;Poison Orb;剧毒之球
+7222;Rotten Mist;腐败之雾
 7230;Poison Armament;毒刃
 7240;Scarlet Aeonia;猩红艾奥尼亚
+7241;Rotten Burst;腐败爆裂
+7242;Rotten Cataclysm;腐灾
+7250;Chitinous Shell;角质壳
+7251;Pest's Tenacity;毒虫的坚韧
+7252;Convert Corruption;转化腐败
+7260;Carrion Swarm;腐肉虫群
+7270;Rot Spray;喷洒腐败
+7271;Blighted Contagion;咒死感染
+7280;Toxic Spear;剧毒枪
+7281;Scion's Reaping;神嗣的收割
+7282;Toxic Rupture;剧毒爆
+7283;Orb of Pestilence;瘟疫之球
+7284;Pest-Thread Storm;虫丝暴
+7290;Aspect of the Scorpion;毒蝎的面貌
+7291;Blessing of the Sealed God;受封印神祇的祝福
+7292;Gaze of the Basilisk;咒蛙凝视
 7300;Inescapable Frenzy;发狂扩散
+7301;Touch of Frenzy;癫狂的接触
 7310;The Flame of Frenzy;癫火
 7311;Unendurable Frenzy;难耐癫火
+7312;Chaos Beam;混沌光束
 7320;Frenzied Burst;划空癫火
+7321;Frenzied Flare;癫狂闪光
+7322;Mind Melt;心灵融化
+7323;Hyetta's Flare;海妲的闪光
 7330;Howl of Shabriri;夏玻利利的嘶吼
-7500;Aspects of the Crucible: Tail;熔炉百相之尾
-7510;Aspects of the Crucible: Horns;熔炉百相之角
+7331;Mark of Frenzy;癫狂印记
+7332;Tendrils of Shabriri;夏玻利利的藤蔓
+7340;Rain of Chaos;混沌之雨
+7341;Three Finger Flare;叁指闪光
+7350;Deranged Fury;狂怒
+7351;Disintegration;解体
+7360;Eye of Frenzy;癫狂之眼
+7361;Eye of Chaos;混沌之眼
+7370;Apocalyptic Flames;末日之火
+7380;Heart of Chaos;混沌之心
+7381;Three Finger's Embrace;叁指的拥抱
+7390;Frenzied Flame Blade;癫火剑刃
+7400;Soporific Fume;催眠烟雾
+7401;Dream Siphon;梦境汲取
+7402;Spirit Vapor;灵魂水雾
+7410;Dream Cloak;梦境斗篷
+7411;Phantom Pain;幻痛
+7412;Berserk;狂暴
+7413;Spirit Link;精神链接
+7414;Psychic Agony;精神苦痛
+7420;Vapor Spray;水雾喷射
+7421;Blinding Veil;致盲面纱
+7422;Call to Slumber;呼唤催眠
+7430;Bewitch;蛊惑
+7431;Psychic Corrosion;心灵腐蚀
+7432;Recurring Nightmare;无尽梦境
+7440;Vapor Wave;水雾波
+7441;Spirit Siphon;灵魂汲取
+7442;Ancestral Conduit;祖灵的联系
+7450;Spirit Seekers;精神追索
+7460;Seeker Salvo;追索齐射
+7470;Fleeting Vapor-fly;飞逝灵蜓
+7471;Lulling Dart-fly;镇静镖蝇
+7480;Spirit Weaving;精神交织
+7481;Dream Meld;梦境融合
+7482;Spiritual Equilibrium;灵衡
+7490;Soothing Aura;抚慰灵光
+7491;Tranquility;宁静
+7492;Invocation of Saint Trina;圣托莉娜的祈唤
+7500;Crucible Tail;熔炉之尾
+7510;Crucible Horn;熔炉之角
 7520;Aspects of the Crucible: Breath;熔炉百相之喉囊
 7530;Black Blade;黑剑
 7900;Fire's Deadly Sin;火焰重罪
 7903;Golden Lightning Fortification;黄金雷防护
 8000;Stonesword Key;石剑钥匙
 8010;Rusty Key;生锈钥匙
+8020;Grand Library Key;大书库钥匙
+8030;Mysterious Gate Key;神秘大门钥匙
+8060;First Keystone of the Forge;大锅的第一块钥石
+8061;Second Keystone of the Forge;大锅的第二块钥石
+8062;Third Keystone of the Forge;大锅的第三块钥石
+8063;Fourth Keystone of the Forge;大锅的第四块钥石
+8064;Fifth Keystone of the Forge;大锅的第五块钥石
 8105;Dectus Medallion (Left);迪可达斯符节（左）
 8106;Dectus Medallion (Right);迪可达斯符节（右）
 8107;Rold Medallion;洛德符节
@@ -482,8 +811,11 @@
 8132;Letter from Volcano Manor;来自火山官邸的信
 8133;Red Letter;鲜红书信
 8134;Drawing-Room Key;客房钥匙
+8135;Seaworn Key;海蚀钥匙
 8136;Rya's Necklace;菈雅的项链
 8137;Volcano Manor Invitation;火山官邸的邀请函
+8138;Putrid Key;腐烂钥匙
+8139;Black Stone Key;黑石钥匙
 8142;Amber Starlight;琥珀星光
 8143;Seluvis's Introduction;赛尔维斯的介绍信
 8144;Sellen's Primal Glintstone;瑟濂的源辉石
@@ -541,7 +873,122 @@
 8225;Weathered Map;老旧地图
 8226;Note: The Preceptor's Secret;文件：关于教授的秘密
 8227;Weathered Map;老旧地图
+8230;Map of Tricia’s Secret;托莉夏的秘密地图
+8300;Faint Rune of Beasts;微光野兽卢恩
+8301;Shimmering Rune of Beasts;闪光野兽卢恩
+8302;Glowing Rune of Beasts;明亮野兽卢恩
+8303;Shining Rune of Beasts;闪耀野兽卢恩
+8304;Radiant Rune of Beasts;辉光野兽卢恩
+8305;Faint Rune of Order;微光律法卢恩
+8306;Shimmering Rune of Order;闪光律法卢恩
+8307;Glowing Rune of Order;明亮律法卢恩
+8308;Shining Rune of Order;闪耀律法卢恩
+8309;Radiant Rune of Order;辉光律法卢恩
+8310;Faint Rune of Fell Flame;微光恶焰卢恩
+8311;Shimmering Rune of Fell Flame;闪光恶焰卢恩
+8312;Glowing Rune of Fell Flame;明亮恶焰卢恩
+8313;Shining Rune of Fell Flame;闪耀恶焰卢恩
+8314;Radiant Rune of Fell Flame;辉光恶焰卢恩
+8315;Faint Rune of Lightning;微光雷电卢恩
+8316;Shimmering Rune of Lightning;闪光雷电卢恩
+8317;Glowing Rune of Lightning;明亮雷电卢恩
+8318;Shining Rune of Lightning;闪耀雷电卢恩
+8319;Radiant Rune of Lightning;辉光雷电卢恩
+8320;Faint Rune of Black Flame;微光黑焰卢恩
+8321;Shimmering Rune of Black Flame;闪光黑焰卢恩
+8322;Glowing Rune of Black Flame;明亮黑焰卢恩
+8323;Shining Rune of Black Flame;闪耀黑焰卢恩
+8324;Radiant Rune of Black Flame;辉光黑焰卢恩
+8325;Faint Rune of Frenzied Flame;微光癫火卢恩
+8326;Shimmering Rune of Frenzied Flame;闪光癫火卢恩
+8327;Glowing Rune of Frenzied Flame;明亮癫火卢恩
+8328;Shining Rune of Frenzied Flame;闪耀癫火卢恩
+8329;Radiant Rune of Frenzied Flame;辉光癫火卢恩
+8330;Faint Rune of Bloodflame;微光血焰卢恩
+8331;Shimmering Rune of Bloodflame;闪光血焰卢恩
+8332;Glowing Rune of Bloodflame;明亮血焰卢恩
+8333;Shining Rune of Bloodflame;闪耀血焰卢恩
+8334;Radiant Rune of Bloodflame;辉光血焰卢恩
+8335;Faint Rune of Rot;微光腐败卢恩
+8336;Shimmering Rune of Rot;闪光腐败卢恩
+8337;Glowing Rune of Rot;明亮腐败卢恩
+8338;Shining Rune of Rot;闪耀腐败卢恩
+8339;Radiant Rune of Rot;辉光腐败卢恩
+8340;Faint Rune of Ancestors;微光祖灵卢恩
+8341;Shimmering Rune of Ancestors;闪光祖灵卢恩
+8342;Glowing Rune of Ancestors;明亮祖灵卢恩
+8343;Shining Rune of Ancestors;闪耀祖灵卢恩
+8344;Radiant Rune of Ancestors;辉光祖灵卢恩
+8345;Faint Glintstone Rune;微光辉石卢恩
+8346;Shimmering Glintstone Rune;闪光辉石卢恩
+8347;Glowing Glintstone Rune;明亮辉石卢恩
+8348;Shining Glintstone Rune;闪耀辉石卢恩
+8349;Radiant Glintstone Rune;辉光辉石卢恩
+8350;Faint Rune of Gravity;微光重力卢恩
+8351;Shimmering Rune of Gravity;闪光重力卢恩
+8352;Glowing Rune of Gravity;明亮重力卢恩
+8353;Shining Rune of Gravity;闪耀重力卢恩
+8354;Radiant Rune of Gravity;辉光重力卢恩
+8355;Faint Rune of the Dragonkin;微光龙人卢恩
+8356;Shimmering Rune of the Dragonkin;闪光龙人卢恩
+8357;Glowing Rune of the Dragonkin;明亮龙人卢恩
+8358;Shining Rune of the Dragonkin;闪耀龙人卢恩
+8359;Radiant Rune of the Dragonkin;辉光龙人卢恩
+8360;Faint Rune of Magma;微光岩浆卢恩
+8361;Shimmering Rune of Magma;闪光岩浆卢恩
+8362;Glowing Rune of Magma;明亮岩浆卢恩
+8363;Shining Rune of Magma;闪耀岩浆卢恩
+8364;Radiant Rune of Magma;辉光岩浆卢恩
+8365;Faint Rune of Night;微光黑夜卢恩
+8366;Shimmering Rune of Night;闪光黑夜卢恩
+8367;Glowing Rune of Night;明亮黑夜卢恩
+8368;Shining Rune of Night;闪耀黑夜卢恩
+8369;Radiant Rune of Night;辉光黑夜卢恩
+8370;Faint Rune of Necromancy;微光死灵卢恩
+8371;Shimmering Rune of Necromancy;闪光死灵卢恩
+8372;Glowing Rune of Necromancy;明亮死灵卢恩
+8373;Shining Rune of Necromancy;闪耀死灵卢恩
+8374;Radiant Rune of Necromancy;辉光死灵卢恩
+8375;Faint Rune of the Storm;微光风暴卢恩
+8376;Shimmering Rune of the Storm;闪光风暴卢恩
+8377;Glowing Rune of the Storm;明亮风暴卢恩
+8378;Shining Rune of the Storm;闪耀风暴卢恩
+8379;Radiant Rune of the Storm;辉光风暴卢恩
+8380;Faint Rune of Frost;微光冰霜卢恩
+8381;Shimmering Rune of Frost;闪光冰霜卢恩
+8382;Glowing Rune of Frost;明亮冰霜卢恩
+8383;Shining Rune of Frost;闪耀冰霜卢恩
+8384;Radiant Rune of Frost;辉光冰霜卢恩
+8385;Faint Rune of Thorns;微光荆棘卢恩
+8386;Shimmering Rune of Thorns;闪光荆棘卢恩
+8387;Glowing Rune of Thorns;明亮荆棘卢恩
+8388;Shining Rune of Thorns;闪耀荆棘卢恩
+8389;Radiant Rune of Thorns;辉光荆棘卢恩
+8400;Shadow Rune of Beasts;幽影野兽卢恩
+8405;Shadow Rune of Order;幽影律法卢恩
+8410;Shadow Rune of Fell Flame;幽影恶焰卢恩
+8415;Shadow Rune of Lightning;幽影雷电卢恩
+8420;Shadow Rune of Black Flame;幽影黑焰卢恩
+8425;Shadow Rune of Frenzied Flame;幽影癫火卢恩
+8430;Shadow Rune of Bloodflame;幽影血焰卢恩
+8435;Shadow Rune of Rot;幽影腐败卢恩
+8440;Shadow Rune of Ancestors;幽影祖灵卢恩
+8445;Shadow Glintstone Rune;幽影辉石卢恩
+8450;Shadow Rune of Gravity;幽影重力卢恩
+8455;Shadow Rune of the Dragonkin;幽影龙人卢恩
+8460;Shadow Rune of Magma;幽影岩浆卢恩
+8465;Shadow Rune of Night;幽影黑夜卢恩
+8470;Shadow Rune of Necromancy;幽影死灵卢恩
+8475;Shadow Rune of the Storm;幽影风暴卢恩
+8480;Shadow Rune of Frost;幽影冰霜卢恩
+8485;Shadow Rune of Thorns;幽影荆棘卢恩
 8500;Crafting Kit;工具皮袋
+8510;Broken Perfumer’s Censer;破损的调香师香炉
+8511;Perfumer’s Essence of Fire;调香师的火之精髓
+8512;Perfumer’s Essence of Frost;调香师的冰之精髓
+8513;Perfumer’s Essence of Lightning;调香师的雷之精髓
+8514;Perfumer’s Essence of Frenzy;调香师的癫狂精髓
+8550;Magma Rune Fragment;岩浆卢恩碎片
 8590;Whetstone Knife;砥石小刀
 8600;Map: Limgrave, West;地图碎片：宁姆格福（西）
 8601;Map: Weeping Peninsula;地图碎片：啜泣半岛
@@ -562,6 +1009,15 @@
 8616;Map: Mohgwyn Palace;地图碎片：蒙格温王朝
 8617;Map: Deeproot Depths;地图碎片：深根底层
 8618;Map: Consecrated Snowfield;地图碎片：化圣雪原
+8620;Map: Limgrave;地图：宁姆格福
+8621;Map: Caelid;地图：盖利德
+8622;Map: Liurnia;地图：利耶尼亚
+8623;Map: Altus Plateau;地图：亚坛高原
+8624;Map: Mountaintops of the Giants;地图：巨人山顶
+8625;Map: Consecrated Snowfield;地图：化圣雪原
+8626;Map: Farum Azula;地图：法姆·亚兹拉
+8627;Map: Underworld;地图：地底世界
+8628;Map: Realm of Shadows;地图：幽影之地
 8660;Mirage Riddle;海市蜃楼的谜题
 8700;Note: Hidden Cave;文件：关于隐藏洞窟
 8701;Note: Imp Shades;文件：关于小恶魔群的影子
@@ -595,6 +1051,33 @@
 8763;Note: Gateway;文件：关于传送门
 8765;Note: Frenzied Flame Village;文件：关于癫火村
 8767;Note: Below the Capital;文件：关于王城地底
+8800;Note: Path of the Retainer;说明：扈从之路
+8801;Note: Path of the Vanguard;说明：先锋之路
+8802;Note: Path of the Marksman;说明：神射手之路
+8803;Note: Path of the Berserker;说明：狂战士之路
+8804;Note: Path of the Dreadnought;说明：无畏者之路
+8805;Note: Path of the Sellsword;说明：佣兵之路
+8806;Note: Path of the Rogue;说明：游荡者之路
+8807;Note: Path of the Glint Sorcerer;说明：辉石魔法师之路
+8808;Note: Path of the Starcaller;说明：唤星者之路
+8809;Note: Path of the Underworld Mage;说明：地底魔法师之路
+8810;Note: Path of the Volcanist;说明：火山术士之路
+8811;Note: Path of the Stormcaller;说明：风暴呼召者之路
+8812;Note: Path of the Nox Oracle;说明：诺克斯神谕官之路
+8813;Note: Path of the Necromancer;说明：死灵术士之路
+8814;Note: Path of the Frost Witch;说明：冰霜巫师之路
+8815;Note: Path of the Aberrant Heretic;说明：左道异端之路
+8816;Note: Path of the Flame Prophet;说明：火焰预言家之路
+8817;Note: Path of the Fundamentalist;说明：基本主义者之路
+8818;Note: Path of the Bestial Devout;说明：野兽宗徒之路
+8819;Note: Path of the Dragon Cultist;说明：古龙祀者之路
+8820;Note: Path of the Godskin Celebrant;说明：神皮庆典者之路
+8821;Note: Path of the Frenzied Zealot;说明：癫火狂徒之路
+8822;Note: Path of the Blood Initiate;说明：鲜血新锐之路
+8823;Note: Path of the Servant of Rot;说明：腐败侍仆之路
+8824;Note: Path of the Mystic;说明：密契者之路
+8825;Note: Path of the Perfumer;说明：调香师之路
+8826;Note: Path of the Prisoner;说明：囚犯之路
 8850;Conspectus Scroll;教室卷轴
 8851;Royal House Scroll;王室卷轴
 8855;Fire Monks' Prayerbook;火焰习武修士祷告书
@@ -608,6 +1091,32 @@
 8864;Dragon Cult Prayerbook;龙信仰祷告书
 8865;Ancient Dragon Prayerbook;古龙祷告书
 8866;Academy Scroll;学院卷轴
+8870;Note: Weapons for Retainer;说明：扈从的武器
+8871;Note: Weapons for Vanguard;说明：先锋的武器
+8872;Note: Weapons for Marksman;说明：神射手的武器
+8873;Note: Weapons for Berserker;说明：狂战士的武器
+8874;Note: Weapons for Dreadnought;说明：无畏者的武器
+8875;Note: Weapons for Sellsword;说明：佣兵的武器
+8876;Note: Weapons for Rogue;说明：游荡者的武器
+8877;Note: Weapons for Glint Sorcerer;说明：辉石魔法师的武器
+8878;Note: Weapons for Starcaller;说明：唤星者的武器
+8879;Note: Weapons for Underworld Mage;说明：地底魔法师的武器
+8880;Note: Weapons for Volcanist;说明：火山术士的武器
+8881;Note: Weapons for Stormcaller;说明：风暴呼召者的武器
+8882;Note: Weapons for Nox Oracle;说明：诺克斯神谕官的武器
+8883;Note: Weapons for Necromancer;说明：死灵术士的武器
+8884;Note: Weapons for Frost Witch;说明：冰霜巫师的武器
+8885;Note: Weapons for Aberrant Heretic;说明：左道异端的武器
+8886;Note: Weapons for Flame Prophet;说明：火焰预言家的武器
+8887;Note: Weapons for Fundamentalist;说明：基本主义者的武器
+8888;Note: Weapons for Bestial Devout;说明：野兽宗徒的武器
+8889;Note: Weapons for Dragon Cultist;说明：古龙祀者的武器
+8890;Note: Weapons for Godskin Celebrant;说明：神皮庆典者的武器
+8891;Note: Weapons for Frenzied Zealot;说明：癫火狂徒的武器
+8892;Note: Weapons for Blood Initiate;说明：鲜血新锐的武器
+8893;Note: Weapons for Servant of Rot;说明：腐败侍仆的武器
+8894;Note: Weapons for Mystic;说明：密契者的武器
+8895;Note: Weapons for Perfumer;说明：调香师的武器
 8910;Pidia's Bell Bearing;毕迪的铃珠
 8911;Seluvis's Bell Bearing;赛尔维斯的铃珠
 8912;Patches' Bell Bearing;帕奇的铃珠
@@ -619,11 +1128,11 @@
 8919;Thops's Bell Bearing;托普斯的铃珠
 8920;Kalé's Bell Bearing;咖列的铃珠
 8921;Nomadic Merchant's Bell Bearing [1];流浪商人的铃珠【１】
-8922;Nomadic Merchant's Bell Bearing [2];流浪商人的铃珠【２】
-8923;Nomadic Merchant's Bell Bearing [3];流浪商人的铃珠【３】
-8924;Nomadic Merchant's Bell Bearing [4];流浪商人的铃珠【４】
+8922;Woodsman Merchant's Bell Bearing;林中商人的铃珠
+8923;Survivalist Merchant's Bell Bearing;求生商人的铃珠
+8924;Herbalist Merchant's Bell Bearing;草药商人的铃珠
 8925;Nomadic Merchant's Bell Bearing [5];流浪商人的铃珠【５】
-8926;Isolated Merchant's Bell Bearing [1];隐居商人的铃珠【１】
+8926;Collector Merchant's Bell Bearing;拾荒商人的铃珠
 8927;Isolated Merchant's Bell Bearing [2];隐居商人的铃珠【２】
 8928;Nomadic Merchant's Bell Bearing [6];流浪商人的铃珠【６】
 8929;Hermit Merchant's Bell Bearing [1];遁世商人的铃珠【１】
@@ -671,6 +1180,12 @@
 8978;Sellia's Secret;瑟利亚镇的秘密
 8979;Beast Eye;野兽眼眸
 8980;Weathered Dagger;侵蚀短剑
+8981;Shadow Stone Bell Bearing [1];幽影锻造石铃珠【１】
+8982;Shadow Stone Bell Bearing [2];幽影锻造石铃珠【２】
+8983;Shadow Stone Bell Bearing [3];幽影锻造石铃珠【３】
+8984;Somber Shadow Stone Bell Bearing [1];失色幽影锻造石铃珠【１】
+8985;Somber Shadow Stone Bell Bearing [2];失色幽影锻造石铃珠【２】
+8986;Somber Shadow Stone Bell Bearing [3];失色幽影锻造石铃珠【３】
 9000;Bow;敬礼
 9001;Polite Bow;郑重敬礼
 9002;My Thanks;致谢
@@ -839,44 +1354,54 @@
 10070;Lost Ashes of War;失力战灰
 10080;Great Rune of the Unborn;无缘诞生者的大卢恩
 10100;Smithing Stone [1];锻造石【１】
-10101;Smithing Stone [2];锻造石【２】
+10101;Smithing Stone;锻造石
 10102;Smithing Stone [3];锻造石【３】
 10103;Smithing Stone [4];锻造石【４】
 10104;Smithing Stone [5];锻造石【５】
-10105;Smithing Stone [6];锻造石【６】
+10105;Large Smithing Stone;大锻造石
 10106;Smithing Stone [7];锻造石【７】
-10107;Smithing Stone [8];锻造石【８】
-10140;Ancient Dragon Smithing Stone;古龙岩锻造石
-10160;Somber Smithing Stone [1];失色锻造石【１】
+10107;Great Smithing Stone;特大锻造石
+10110;Shadow Smithing Stone;幽影锻造石
+10111;Large Shadow Smithing Stone;大幽影锻造石
+10112;Great Shadow Smithing Stone;特大幽影锻造石
+10113;Colossal Shadow Smithing Stone;超特大幽影锻造石
+10114;Primordial Shadow Smithing Stone;原初幽影锻造石
+10140;Ancient Smithing Stone;古龙锻造石
+10160;Somber Stone;失色锻造石
 10161;Somber Smithing Stone [2];失色锻造石【２】
 10162;Somber Smithing Stone [3];失色锻造石【３】
 10163;Somber Smithing Stone [4];失色锻造石【４】
-10164;Somber Smithing Stone [5];失色锻造石【５】
-10165;Somber Smithing Stone [6];失色锻造石【６】
+10164;Large Somber Stone;大失色锻造石
+10165;Great Somber Stone;特大失色锻造石
 10166;Somber Smithing Stone [7];失色锻造石【７】
-10167;Somber Smithing Stone [8];失色锻造石【８】
-10168;Somber Ancient Dragon Smithing Stone;古龙岩失色锻造石
+10167;Colossal Somber Stone;超特大失色锻造石
+10168;Ancient Somber Stone;古龙失色锻造石
+10170;Somber Shadow Stone;失色幽影锻造石
+10171;Large Somber Shadow Stone;大失色幽影锻造石
+10172;Great Somber Shadow Stone;特大失色幽影锻造石
+10173;Colossal Somber Shadow Stone;超特大失色幽影锻造石
+10174;Primordial Somber Shadow Stone;原初失色幽影锻造石
 10200;Somber Smithing Stone [9];失色锻造石【９】
-10900;Grave Glovewort [1];墓地铃兰【１】
+10900;Sprouting Grave Glovewort;萌芽墓地铃兰
 10901;Grave Glovewort [2];墓地铃兰【２】
 10902;Grave Glovewort [3];墓地铃兰【３】
-10903;Grave Glovewort [4];墓地铃兰【４】
+10903;Seedling Grave Glovewort;幼苗墓地铃兰
 10904;Grave Glovewort [5];墓地铃兰【５】
 10905;Grave Glovewort [6];墓地铃兰【６】
-10906;Grave Glovewort [7];墓地铃兰【７】
+10906;Budding Grave Glovewort;含苞墓地铃兰
 10907;Grave Glovewort [8];墓地铃兰【８】
-10908;Grave Glovewort [9];墓地铃兰【９】
-10909;Great Grave Glovewort;大朵墓地铃兰
-10910;Ghost Glovewort [1];灵依墓地铃兰【１】
+10908;Blooming Grave Glovewort;开花墓地铃兰
+10909;Elder Grave Glovewort;古老墓地铃兰
+10910;Sprouting Ghost Glovewort;萌芽灵依墓地铃兰
 10911;Ghost Glovewort [2];灵依墓地铃兰【２】
 10912;Ghost Glovewort [3];灵依墓地铃兰【３】
-10913;Ghost Glovewort [4];灵依墓地铃兰【４】
+10913;Seedling Ghost Glovewort;幼苗灵依墓地铃兰
 10914;Ghost Glovewort [5];灵依墓地铃兰【５】
 10915;Ghost Glovewort [6];灵依墓地铃兰【６】
-10916;Ghost Glovewort [7];灵依墓地铃兰【７】
+10916;Budding Ghost Glovewort;含苞灵依墓地铃兰
 10917;Ghost Glovewort [8];灵依墓地铃兰【８】
-10918;Ghost Glovewort [9];灵依墓地铃兰【９】
-10919;Great Ghost Glovewort;大朵灵依墓地铃兰
+10918;Blooming Ghost Glovewort;开花灵依墓地铃兰
+10919;Elder Ghost Glovewort;古老灵依墓地铃兰
 11000;Crimsonspill Crystal Tear;漫红结晶露滴
 11001;Greenspill Crystal Tear;漫绿结晶露滴
 11002;Crimson Crystal Tear;红结晶露滴
@@ -909,6 +1434,26 @@
 11029;Magic-Shrouding Cracked Tear;带魔力破露滴
 11030;Lightning-Shrouding Cracked Tear;带雷破露滴
 11031;Holy-Shrouding Cracked Tear;带圣破露滴
+11032;Stone-Shrouding Cracked Tear;带岩破露滴
+11033;Arcane-knot Crystal Tear;感应瘤结晶露滴
+11034;Knight's Crystal Tear;骑士露滴
+11035;Battlemage's Crystal Tear;战斗法师露滴
+11036;Templar's Crystal Tear;圣堂战士露滴
+11037;Barbarian's Crystal Tear;蛮族露滴
+11038;Assassin's Crystal Tear;刺客露滴
+11039;Inquisitor's Crystal Tear;审判者露滴
+11040;Rogue's Crystal Tear;游荡者露滴
+11041;Zealot's Crystal Tear;狂热者露滴
+11042;Witch's Crystal Tear;女巫露滴
+11043;Cultist's Crystal Tear;异教徒露滴
+11050;Waterblade Cracked Tear;水刃露滴
+11051;Stonetalon Cracked Tear;石爪露滴
+11052;Windbarb Cracked Tear;风刺露滴
+11053;Shadowblade Cracked Tear;影刃露滴
+11054;Stoneblade Cracked Tear;石刃露滴
+11055;Stonehoof Cracked Tear;石蹄露滴
+11056;Ceruleanburst Crystal Tear;涌蓝结晶露滴
+11057;Ceruleanspill Crystal Tear;漫蓝结晶露滴
 15000;Sliver of Meat;肉片
 15010;Beast Liver;野兽肝
 15020;Lump of Flesh;野兽肉块
@@ -979,6 +1524,19 @@
 20850;Volcanic Stone;火山石
 20852;Formic Rock;蚁酸石
 20855;Gravel Stone;碎石
+20900;Essence Physick Remnant;精华灵药遗物
+20901;Elemental Physick Remnant;元素灵药遗物
+20902;Prowess Physick Remnant;英勇灵药遗物
+20903;Invigorating Physick Remnant;振奋灵药遗物
+20904;Enduring Physick Remnant;持久灵药遗物
+20950;Combat Remnant;战斗遗物
+20951;Heirloom Remnant;传说遗物
+20952;Faint Relic Remnant;微光圣遗物
+20953;Shimmering Relic Remnant;闪光圣遗物
+20954;Glowing Relic Remnant;明亮圣遗物
+20955;Shining Relic Remnant;闪耀圣遗物
+20956;Enchanted Remnant;魔法遗物
+20957;Warding Remnant;守护遗物
 200000;Black Knife Tiche;“黑刀”狄希
 200001;Black Knife Tiche +1;“黑刀”狄希＋１
 200002;Black Knife Tiche +2;“黑刀”狄希＋２
