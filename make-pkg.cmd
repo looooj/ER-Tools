@@ -2,7 +2,7 @@
 cd %~p0
 SetLocal
 
-del /q /s tmp\*.*
+del /q /s tmp\ER-Tools\*.*
 cd tmp
 rd /s /q ER-Tools
 md ER-Tools
