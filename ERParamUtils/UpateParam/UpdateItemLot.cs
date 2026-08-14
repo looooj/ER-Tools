@@ -521,7 +521,7 @@ namespace ERParamUtils.UpdateParam
                 if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceBellBearing))
                     if (SpecEquipConfig.isBellBearing(itemId, (EquipType)itemType))
                     {
-                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2918);
                         incLotItemNum = 10;
                     }
 
@@ -633,7 +633,7 @@ namespace ERParamUtils.UpdateParam
                     //8000; Stonesword Key; 石剑钥匙
                     if ((itemId == 8000) && itemType == (int)EquipType.Good)
                     {
-                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2918);
                         incLotItemNum = 5;
 
                     }
@@ -665,7 +665,7 @@ namespace ERParamUtils.UpdateParam
                 if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceRuneArc))
                     if ((itemId == 190) && itemType == (int)EquipType.Good)
                     {
-                        updateCommand.AddItem(row, "lotItemId0" + i, 2919);
+                        updateCommand.AddItem(row, "lotItemId0" + i, 2918);
                     }
 
                 //
@@ -700,12 +700,13 @@ namespace ERParamUtils.UpdateParam
                 if (itemEquipType == EquipType.Good && itemId == 8186) {
                     incLotItemNum = 4;
                 }
+
                 //
-                if (itemEquipType == EquipType.Good &&
-                    updateCommand.HaveOption(UpdateParamOptionNames.EnhanceBuddy))
-                {
-                    updateCommand.AddItem(row, "lotItemId0" + i, itemId + 10);
-                }
+                //if (itemEquipType == EquipType.Good &&
+                //    updateCommand.HaveOption(UpdateParamOptionNames.EnhanceBuddy))
+                //{
+                //   updateCommand.AddItem(row, "lotItemId0" + i, itemId + 10);
+                //}
 
                 if (incLotItemNum > 1)
                 {

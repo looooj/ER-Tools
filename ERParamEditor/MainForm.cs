@@ -32,7 +32,7 @@ namespace ERParamEditor
         private static async Task<int> InitLoadTask()
         {
 
-            
+
             try
             {
 
@@ -175,8 +175,10 @@ namespace ERParamEditor
         private void OpenInExplorerClick(object? sender, EventArgs e)
         {
             var item = ListViewUtils.GetCurrentItem(listViewProject);
-            if (item != null) {
-                if (item.Text == "ModRegulationPath") {
+            if (item != null)
+            {
+                if (item.Text == "ModRegulationPath")
+                {
 
                     ProcessUtils.OpenInExplorer(item.SubItems[1].Text);
                     return;
@@ -340,7 +342,7 @@ namespace ERParamEditor
         private void buttonRestore_Click(object sender, EventArgs e)
         {
             var proj = GlobalConfig.GetCurrentProject();
-            if (proj == null) 
+            if (proj == null)
                 return;
 
             string msg = MultiLang.GetDefaultText("restore", "Are you sure exec restore?");
@@ -353,6 +355,8 @@ namespace ERParamEditor
             proj.Restore();
 
         }
+
+
 
         private void buttonFind_Click(object sender, EventArgs e)
         {
@@ -371,6 +375,24 @@ namespace ERParamEditor
 
             TestForm form = new TestForm();
             form.ShowDialog();
+        }
+
+        private void buttonRestorePublish_Click(object sender, EventArgs e)
+        {
+            var proj = GlobalConfig.GetCurrentProject();
+            if (proj == null)
+                return;
+
+            string msg = MultiLang.GetDefaultText("restore", "Are you sure exec restore and publish?");
+            DialogResult r = MessageBox.Show(msg, "", MessageBoxButtons.YesNo);
+            if (r != DialogResult.Yes)
+            {
+                return;
+            }
+
+            proj.Restore();
+
+            UpdateParamExector.PublishCurrent(proj);
         }
     }
 }

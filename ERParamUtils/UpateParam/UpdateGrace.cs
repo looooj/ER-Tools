@@ -162,9 +162,8 @@ namespace ERParamUtils.UpdateParam
                 }
 
                 int textId = ParamRowUtils.GetCellInt(row, "textId1", 0);
-                if (normalSkipRowIds.Contains(row.ID) || normalSkipRowIds.Contains(textId))
+                if ( normalSkipRowIds.Contains(textId))
                     continue;
-
 
                 updateCommand.AddItem(row, eventflagIdKey, "71801");
             }
@@ -243,10 +242,10 @@ namespace ERParamUtils.UpdateParam
 
 
                 int textId = ParamRowUtils.GetCellInt(row, "textId1", 0);
-                if (normalSkipRowIds.Contains(row.ID) || normalSkipRowIds.Contains(textId))
+                if ( normalSkipRowIds.Contains(textId))
                     continue;
 
-                if (!customIdSet.Contains(textId) && !customIdSet.Contains(row.ID))
+                if (!customIdSet.Contains(textId) )
                     continue;
                 updateCommand.AddItem(row, eventflagIdKey, "71801");
             }
@@ -257,6 +256,9 @@ namespace ERParamUtils.UpdateParam
 
         public static void UnlockRoundtableHold(UpdateCommand updateCommand)
         {
+            if (!ModConfig.UnlockRoundtableHold()) {
+                return;
+            }
 
             //111000;Table of Lost Grace;大赐福
             int[] defaultIds = { 111000 };

@@ -15,6 +15,11 @@ namespace ERParamUtils.UpdateParam
         public static void Exec(ParamProject paramProject,UpdateCommand updateCommand)
         {
             if (!updateCommand.HaveOption(UpdateParamOptionNames.EnhanceBuddy)) {
+                UpdateLogger.Info("===UpdateBuddyStone Skip");
+                return;
+            }
+            if (!ModConfig.EnhanceBuddy()) {
+                UpdateLogger.Info("===UpdateBuddyStone Skip ModConfig");
                 return;
             }
             UpdateLogger.Info("===UpdateBuddyStone.Exec");
@@ -43,7 +48,7 @@ namespace ERParamUtils.UpdateParam
             }
 
             UpdateLogger.InfoTime("UpdateBuddyStone ProcRemoveConsume");
-
+            UpdateLogger.Begin(param.Name);
             for (int i = 0; i < param.Rows.Count; i++)
             {
 
@@ -72,7 +77,7 @@ namespace ERParamUtils.UpdateParam
                 return;
             }
             UpdateLogger.InfoTime("UpdateBuddyStone ProcBuddyStone");
-
+            UpdateLogger.Begin(param.Name);
             for (int i = 0; i < param.Rows.Count; i++)
             {
 

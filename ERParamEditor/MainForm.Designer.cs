@@ -1,4 +1,4 @@
-﻿namespace ERParamEditor
+namespace ERParamEditor
 {
     partial class MainForm
     {
@@ -43,12 +43,13 @@
             statusInfo = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             panelBottom = new Panel();
+            buttonTestForm = new Button();
             buttonFind = new Button();
             buttonRestore = new Button();
             buttonTest = new Button();
             buttonExec = new Button();
             errorProvider1 = new ErrorProvider(components);
-            buttonTestForm = new Button();
+            buttonRestorePublish = new Button();
             panel1.SuspendLayout();
             panelClient.SuspendLayout();
             panelParamList.SuspendLayout();
@@ -185,6 +186,7 @@
             // 
             // panelBottom
             // 
+            panelBottom.Controls.Add(buttonRestorePublish);
             panelBottom.Controls.Add(buttonTestForm);
             panelBottom.Controls.Add(buttonFind);
             panelBottom.Controls.Add(buttonRestore);
@@ -196,9 +198,20 @@
             panelBottom.Size = new Size(1008, 45);
             panelBottom.TabIndex = 12;
             // 
+            // buttonTestForm
+            // 
+            buttonTestForm.Location = new Point(909, 12);
+            buttonTestForm.Name = "buttonTestForm";
+            buttonTestForm.Size = new Size(75, 23);
+            buttonTestForm.TabIndex = 5;
+            buttonTestForm.Text = "TestForm";
+            buttonTestForm.UseVisualStyleBackColor = true;
+            buttonTestForm.Visible = false;
+            buttonTestForm.Click += buttonTestForm_Click;
+            // 
             // buttonFind
             // 
-            buttonFind.Location = new Point(219, 12);
+            buttonFind.Location = new Point(347, 12);
             buttonFind.Name = "buttonFind";
             buttonFind.Size = new Size(75, 23);
             buttonFind.TabIndex = 4;
@@ -241,16 +254,15 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
-            // buttonTestForm
+            // buttonRestorePublish
             // 
-            buttonTestForm.Location = new Point(909, 12);
-            buttonTestForm.Name = "buttonTestForm";
-            buttonTestForm.Size = new Size(75, 23);
-            buttonTestForm.TabIndex = 5;
-            buttonTestForm.Text = "TestForm";
-            buttonTestForm.UseVisualStyleBackColor = true;
-            buttonTestForm.Visible = false;
-            buttonTestForm.Click += buttonTestForm_Click;
+            buttonRestorePublish.Location = new Point(214, 12);
+            buttonRestorePublish.Name = "buttonRestorePublish";
+            buttonRestorePublish.Size = new Size(113, 23);
+            buttonRestorePublish.TabIndex = 6;
+            buttonRestorePublish.Text = "RestorePublish";
+            buttonRestorePublish.UseVisualStyleBackColor = true;
+            buttonRestorePublish.Click += buttonRestorePublish_Click;
             // 
             // MainForm
             // 
@@ -299,5 +311,6 @@
         private Button buttonFind;
         private Button buttonCompare;
         private Button buttonTestForm;
+        private Button buttonRestorePublish;
     }
 }

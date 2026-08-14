@@ -106,6 +106,14 @@ namespace ERParamEditor
             panel.Init(control);
             //panel.AddSpace("---");
 
+            var modTypeNames =
+                MultiLang.GetText("UpdateParam", UpdateParamOptionNames.ModType,
+                ModConfig.GetModTypeNames());
+            var modTypeIds = ModConfig.GetModTypeIds();
+
+            panel.AddSelectionNameValue(UpdateParamOptionNames.ModType,
+              UpdateParamOptionNames.ModType, modTypeNames, modTypeIds, "0");
+
             for (int i = 0; i < updateParamOptions.Count; i++)
             {
                 var option = updateParamOptions[i];

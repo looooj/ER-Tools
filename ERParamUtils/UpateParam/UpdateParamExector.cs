@@ -288,6 +288,16 @@ namespace ERParamUtils.UpdateParam
             //updateParamOptions.Add(new UpdateParamOption(UpdateParamOption.RemoveRemembranceRequire));
         }
 
+        public static void PublishCurrent(ParamProject paramProject) {
+
+            UpdateLogger.SetDir(paramProject.GetUpdateDir() + @"/logs");
+            UpdateLogger.InfoTime("===PublishCurrent");
+            paramProject.Publish();
+            UpdateLogger.Save();
+            UpdateLogger.InfoTime("===End");
+            UpdateLogger.Clear();
+        }
+
         public static void Exec(ParamProject paramProject, UpdateParamExecOptions options)
         {
 
@@ -309,7 +319,7 @@ namespace ERParamUtils.UpdateParam
             UpdateCommand updateCommand = new UpdateCommand(paramProject);
             updateCommand.AddOption(options.UpdateCommandOptions);
 
-
+            ModConfig.SetModType(updateCommand);
 
             /*
             foreach (var task in options.UpdateTasks)
@@ -338,7 +348,7 @@ namespace ERParamUtils.UpdateParam
             ParamRemoveWeight.Exec(paramProject, updateCommand);
             UpdateBuddyStone.Exec(paramProject, updateCommand);
 
-            //if (updateCommand.HaveOption(UpdateParamOptionNames.InitMagicSlotAccSlot))
+            if (ModConfig.InitAccSlot())
             {
                 updateCommand.AddItem(
                     UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
@@ -349,14 +359,14 @@ namespace ERParamUtils.UpdateParam
                 updateCommand.SetOption(UpdateParamOptionNames.ReplaceMemoryStone, 1);
             }            
 
-            //if (updateCommand.HaveOption(UpdateParamOptionNames.AddMapPiece))
+            if (ModConfig.AddMapPiece())
             {
                 UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
             }
 
-            if (updateCommand.HaveOption(UpdateParamOptionNames.EnhanceMinicTear)) {
-                UpdateRow.LoadUpdateRow("patch-mimic-tear.txt", updateCommand);
-            }
+            //if (updateCommand.HaveOption(UpdateParamOptionNames.EnhanceMinicTear)) {
+            //    UpdateRow.LoadUpdateRow("patch-mimic-tear.txt", updateCommand);
+            //}
 
             if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGoldenSeedSacredTear))
             {
@@ -374,17 +384,17 @@ namespace ERParamUtils.UpdateParam
                 UpdateSoul.Proc(paramProject, updateCommand);
             }
 
-            if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGiantCrowSoul))
-            {
+            //if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGiantCrowSoul))
+            //{
 
                 //45610068,Bloodbane Giant Crow,11038,0
-                updateCommand.AddItem(
-                    UpdateCommandItem.Create(ParamNames.NpcParam, 45610068, "getSoul", "10000000"));
+                //updateCommand.AddItem(
+                //    UpdateCommandItem.Create(ParamNames.NpcParam, 45610068, "getSoul", "10000000"));
 
-            }
+            //}
 
 
-            //if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceWhetblade))
+            if ( ModConfig.AddWhetblade())
             {
                 UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
             }
@@ -405,7 +415,8 @@ namespace ERParamUtils.UpdateParam
             //UpdateShopLineupParam.ReplaceAncientStone(paramProject, updateCommand);
             //}
 
-            UpdateRow.LoadUpdateRow("patch-lot.txt",updateCommand);
+            if ( ModConfig.GetModType() == ModConfig.ModType.STD)
+                 UpdateRow.LoadUpdateRow("patch-lot.txt",updateCommand);
 
             foreach (var task in options.UpdateTasks)
             {

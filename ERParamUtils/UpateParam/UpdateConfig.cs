@@ -147,7 +147,7 @@ namespace ERParamUtils.UpateParam
 
     public class UpdateParamOptionNames
     {
-
+        public static readonly string ModType = "ModType";
         public static readonly string UnlockCrafting = "UnlockCrafting";
         public static readonly string EnhanceBuddy = "EnhanceBuddy";
         public static readonly string RemoveWeight = "RemoveWeight";
@@ -209,7 +209,7 @@ namespace ERParamUtils.UpateParam
         public static readonly string ReplaceRemnant = "ReplaceRemnant";
 
 
-        public static readonly string ReplaceGiantCrowSoul = "ReplaceGiantCrowSoul";
+        //public static readonly string ReplaceGiantCrowSoul = "ReplaceGiantCrowSoul";
         public static readonly string ReplaceGoldenRune = "ReplaceGoldenRune";
         //public static readonly string DoubleGetSoul = "DoubleGetSoul";
 
@@ -220,7 +220,7 @@ namespace ERParamUtils.UpateParam
 
         public static readonly string ReplaceWhetblade = "ReplaceWhetblade";
 
-        public static readonly string EnhanceMinicTear = "EnhanceMinicTear";
+        //public static readonly string EnhanceMinicTear = "EnhanceMinicTear";
 
 
         //public static readonly string RemoveRemembranceRequire = "RemoveRemembranceRequire";

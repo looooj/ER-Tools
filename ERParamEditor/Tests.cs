@@ -413,7 +413,7 @@ namespace ERParamEditor
         static void GenMenuText()
         {
             string[] names = { "GR_MenuText", "ActionButtonText", "BloodMsg", "EventTextForTalk" };
-            string[] subNames = { "menu","menu_dlc01" };
+            string[] subNames = { "menu","menu_dlc01","menu_dlc02" };
 
             GenDlcText(@"D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer", 
                 @"D:\myprojects\game-tools\ER-Tools\docs\cer-menu-text",
@@ -528,11 +528,11 @@ namespace ERParamEditor
 
             //GenAccessoryId();
             //GenAutoLot();
-            GenItemText();
+            //GenItemText();
             //GenMenuText();
             //Tools.CleanUpdateLog(5);
             //Tests2.FindRemnant();
-            //ExtractMsg();
+            ExtractMsg();
             //Tests2.FindGuardLevel();
             //Tests2.ExportParamGrace();
         }
