@@ -164,7 +164,7 @@ namespace ERParamEditor
                UpdateParamOptionNames.UnlockGrace,
                unlockGraceNames, UnlockGraceConfig.GetValueList(), "0");
 
-            panel.AddCheckBox(UpdateParamOptionNames.UnlockRoundtableHold, "");
+            //panel.AddCheckBox(UpdateParamOptionNames.UnlockRoundtableHold, "");
             panel.AddCheckBox(UpdateParamOptionNames.EnableFastTravel, "");
 
 
@@ -198,6 +198,7 @@ namespace ERParamEditor
             //List<UpdateParamOptionItem> updateParamOptionItems = new List<UpdateParamOptionItem>();
 
             panel.AddCheckBox(UpdateParamOptionNames.AddInitCrimsonAmberMedallion, "");
+            panel.AddCheckBox(UpdateParamOptionNames.AddInitJewelOfTheCosmos, "");
             panel.AddCheckBox(UpdateParamOptionNames.AddInit99Rune, "");
             panel.AddCheckBox(UpdateParamOptionNames.AddInitMimicTear, "");
             panel.AddCheckBox(UpdateParamOptionNames.AddInitPurebloodKnightMeda, "");

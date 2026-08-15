@@ -4,6 +4,7 @@ using Org.BouncyCastle.Tls;
 using SoulsFormats.Util;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,14 +81,41 @@ namespace ERParamUtils.UpdateParam
             return s;
         }
 
-        public static void Exec(ParamProject paramProject, UpdateCommand updateCommand)
-        {
+        static int ID_CrimsonAmberMedallion = 1000;
+        static int ID_JewelOfTheCosmos = 9080;
+
+        static int GIFT_ROW_ID = 2400;
+        static int CLASS_ROW_ID = 3000;
+
+        public static void Exec(ParamProject paramProject, UpdateCommand updateCommand) {
+
             var param = paramProject.FindParam(ParamNames.CharaInitParam);
             if (param == null)
                 return;
-            removeWeaponRequireDict.Clear();
             UpdateLogger.Begin(param.Name);
-            //bool startFlag = false;
+
+            ExecClass(paramProject,param, updateCommand);
+            ExecGift(paramProject, param, updateCommand);
+        }
+        private static void ExecGift(ParamProject paramProject, SoulsParam.Param param, UpdateCommand updateCommand)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+
+                SoulsParam.Param.Row? row = param.FindRow(GIFT_ROW_ID + i);
+                if (row == null || row.Name == null)
+                {
+                    continue;
+                }
+                if (row.Name.Contains("Gift"))
+                {
+                    IncRemnant(updateCommand, row);
+                }
+            }
+        }
+        private static void ExecClass(ParamProject paramProject, SoulsParam.Param param, UpdateCommand updateCommand)
+        {
+            removeWeaponRequireDict.Clear();
             int classCount = 0;
             for (int i = 0; i < 200; i++)
             {
@@ -95,24 +123,28 @@ namespace ERParamUtils.UpdateParam
                     break;
                 addItemOffset = 0;
                 addSecondaryItemOffset = 0;
+                addAccessoryOffset = 0;
                 replaceWeaponDict.Clear();
-                SoulsParam.Param.Row? row = param.FindRow(3000 + i);
-                if (row == null || row.Name == null || row.Name.Length < 3
-                    || !row.Name.StartsWith("Class")
-                    )
+                
+                
+                SoulsParam.Param.Row? row = param.FindRow(CLASS_ROW_ID + i);
+                if (row == null || row.Name == null) {
+                    continue;
+                }
+
+                if ( !row.Name.StartsWith("Class") )
                 {
-                    //if (startFlag)
-                    //{
-                    //    break;
-                    //}
                     continue;
                 }
                 classCount++;
                 UpdateLogger.InfoParam("{0},{1},{2}", classCount,row.ID,row.Name);
-                //startFlag = true;
                 if (updateCommand.HaveOption(UpdateParamOptionNames.AddInitCrimsonAmberMedallion))
                 {
-                    AddCrimsonAmberMedallion(updateCommand, row);
+                    AddAccessory(updateCommand, row, ID_CrimsonAmberMedallion);
+                }
+                if (updateCommand.HaveOption(UpdateParamOptionNames.AddInitJewelOfTheCosmos))
+                {
+                    AddAccessory(updateCommand, row, ID_JewelOfTheCosmos);
                 }
 
                 if (updateCommand.HaveOption(UpdateParamOptionNames.AddInit99Rune))
@@ -130,6 +162,7 @@ namespace ERParamUtils.UpdateParam
                 {
                     AddItem(updateCommand, row, 2160, 1);
                 }
+
 
                 ReplaceShield(updateCommand, row);
 
@@ -159,29 +192,50 @@ namespace ERParamUtils.UpdateParam
         }
 
 
+        private static void IncRemnant(UpdateCommand updateCommand, SoulsParam.Param.Row row) {
 
-        private static void AddCrimsonAmberMedallion(UpdateCommand updateCommand, SoulsParam.Param.Row row)
+            var v = updateCommand.GetOption(UpdateParamOptionNames.IncRemnant);
+            if (v < 1)
+                return;
+            for (int i = 1; i <= 8; i++) {
+
+                var key = "item_0" + i;
+                var eqId = ParamRowUtils.GetCellInt(row, key, 0);
+
+                if (!SpecEquipConfig.IsRemnant(eqId, EquipType.Good)) {
+                    continue;
+                }
+                var numKey = "itemNum_0" + i;
+                updateCommand.AddItem(row, numKey, 5);
+            }
+        }
+
+        static int addAccessoryOffset = 0;
+        private static void AddAccessory(UpdateCommand updateCommand, SoulsParam.Param.Row row, int accId)
         {
+
             for (int i = 1; i <= 4; i++)
             {
                 string key = "equip_Accessory0" + i;
                 var v = ParamRowUtils.GetCellInt(row, key, 0);
                 if (v < 1)
                 {
-                    updateCommand.AddItem(row, key, 1000);
+                    string newKey = "equip_Accessory0" + (i + addAccessoryOffset);
+                    updateCommand.AddItem(row, newKey, accId);
+                    addAccessoryOffset++;
                     return;
                 }
             }
         }
 
-        private static void AddAccessory(UpdateCommand updateCommand, SoulsParam.Param.Row row, int i, int eqId)
-        {
-            {
-                string key = "equip_Accessory0" + i;
-                var v = ParamRowUtils.GetCellInt(row, key, 0);
-                updateCommand.AddItem(row, key, eqId);
-            }
-        }
+        //private static void AddAccessory(UpdateCommand updateCommand, SoulsParam.Param.Row row, int i, int eqId)
+        //{
+        //    {
+        //        string key = "equip_Accessory0" + i;
+        //        var v = ParamRowUtils.GetCellInt(row, key, 0);
+        //        updateCommand.AddItem(row, key, eqId);
+        //    }
+        //}
 
         //item_01
         static int addItemOffset = 0;

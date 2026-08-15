@@ -19,13 +19,13 @@ namespace ERParamUtils.UpateParam
 
         public static string GetValueList()
         {
-            return "0,1,2"; 
+            return "0,2"; 
         }
 
         public static string GetNameList()
         {
 
-            return "None,UnlockAll(exclude boss grace),UnlockCustom(custom_grace.txt)";
+            return "None,UnlockCustom(custom_grace.txt)";
         }
 
         public static UnlockGraceType ValueToType(int v) { 
@@ -165,12 +165,15 @@ namespace ERParamUtils.UpateParam
         public static readonly string CrimsonAmberMedallionDamageCorrectRate = "CrimsonAmberMedallionDamageCorrectRate";
 
         public static readonly string AddInitCrimsonAmberMedallion = "AddInitCrimsonAmberMedallion";
+        public static readonly string AddInitJewelOfTheCosmos = "AddInitJewelOfTheCosmos";
 
         public static readonly string AddInit99Rune = "AddInit99Rune";
         //207010 MimicTear Ashes +10
         public static readonly string AddInitMimicTear = "AddInitMimicTear";
         //Pureblood Knight's Meda
         public static readonly string AddInitPurebloodKnightMeda = "AddInitPurebloodKnightMeda";
+
+
         public static readonly string ReplaceInitBow = "ReplaceInitBow";
         public static readonly string ReplaceInitWeaponRight3 = "ReplaceInitWeaponRight3";
         public static readonly string ReplaceInitWeaponRight2 = "ReplaceInitWeaponRight2";
@@ -186,7 +189,7 @@ namespace ERParamUtils.UpateParam
         public static readonly string RemoveInitWeaponWeightRequire = "RemoveInitWeaponWeightRequire";
 
         public static readonly string UnlockGrace = "UnlockGrace";
-        public static readonly string UnlockRoundtableHold = "UnlockRoundtableHold";
+        //public static readonly string UnlockRoundtableHold = "UnlockRoundtableHold";
         public static readonly string EnableFastTravel = "EnableFastTravel";
 
         public static readonly string ReplaceGoldenSeedSacredTear = "ReplaceGoldenSeedSacredTear";

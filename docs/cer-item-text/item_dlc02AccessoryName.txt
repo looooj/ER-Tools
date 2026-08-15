@@ -143,7 +143,7 @@
 6080;Furled Finger's Trick-Mirror;勾指伪装镜
 6090;Host's Trick-Mirror;主人伪装镜
 6110;Ancestral Spirit's Horn;祖灵角
-9000;Jewel of the Resolute;果决秘宝
+9000;Jewel of the Resolute;果决秘宝     
 9010;Jewel of the Valorous;英勇秘宝
 9020;Jewel of the Hunt;猎杀秘宝
 9030;Jewel of the Reckless;蛮勇秘宝
