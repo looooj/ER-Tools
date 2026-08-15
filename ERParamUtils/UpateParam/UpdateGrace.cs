@@ -15,6 +15,7 @@ namespace ERParamUtils.UpdateParam
     {
 
         static string eventflagIdKey = "eventflagId";
+        //static string eventflagIdValue = "71190";//"76101";//71801
 
         public static void UnlockGrace(ParamProject paramProject, UpdateCommand updateCommand)
         {
@@ -43,12 +44,14 @@ namespace ERParamUtils.UpdateParam
             }
             if (updateCommand.HaveOption(UpdateParamOptionNames.EnableFastTravel))
             {
-                SetMapInfoParam(paramProject, updateCommand);
+                if ( ModConfig.GetModType() != ModConfig.ModType.CER )
+                    SetMapInfoParam(paramProject, updateCommand);
             }
-            if (updateCommand.HaveOption(UpdateParamOptionNames.UnlockRoundtableHold))
-            {
-                UnlockRoundtableHold(updateCommand);
-            }
+
+            //if (updateCommand.HaveOption(UpdateParamOptionNames.UnlockRoundtableHold))
+            //{
+            //    UnlockRoundtableHold(updateCommand);
+            //}
         }
         static int[] normalSkipRowIds = {
                 111000,
@@ -165,7 +168,9 @@ namespace ERParamUtils.UpdateParam
                 if ( normalSkipRowIds.Contains(textId))
                     continue;
 
-                updateCommand.AddItem(row, eventflagIdKey, "71801");
+                updateCommand.AddItem(row, eventflagIdKey, ModConfig.GetUnlockGraceEventId());
+                updateCommand.AddItem(row, "clearedEventFlagId", 0);
+
             }
         }
 
@@ -247,13 +252,19 @@ namespace ERParamUtils.UpdateParam
 
                 if (!customIdSet.Contains(textId) )
                     continue;
-                updateCommand.AddItem(row, eventflagIdKey, "71801");
+
+
+                updateCommand.AddItem(row, eventflagIdKey, ModConfig.GetUnlockGraceEventId());
+
+                //100000;[Stormveil Castle] Godrick the Grafted;11-clearedEventFlagId; 
+                updateCommand.AddItem(row, "clearedEventFlagId", 0);
             }
 
             //todo
         }
 
 
+        /*
         public static void UnlockRoundtableHold(UpdateCommand updateCommand)
         {
             if (!ModConfig.UnlockRoundtableHold()) {
@@ -264,10 +275,10 @@ namespace ERParamUtils.UpdateParam
             int[] defaultIds = { 111000 };
             foreach (int rowId in defaultIds)
             {
-                updateCommand.AddItem(ParamNames.BonfireWarpParam, rowId, eventflagIdKey, 71801);
+                updateCommand.AddItem(ParamNames.BonfireWarpParam, rowId, eventflagIdKey, eventflagIdValue);
             }
         }
-
+        */
 
         //MapDefaultInfoParam
         public static void SetMapInfoParam(ParamProject paramProject, UpdateCommand updateCommand)

@@ -81,6 +81,19 @@ namespace ERParamUtils.UpateParam
             
         }
 
+        public static string GetUnlockGraceEventId() {
+            //        //static string eventflagIdValue = "71190";//"76101";//71801
+
+            switch (currentModType)
+            {
+                case ModType.CER:
+                    return "71190";
+            }
+
+            return "71801";
+
+        }
+
         public enum ModType { 
             STD = 0,
             RADN = 1,
