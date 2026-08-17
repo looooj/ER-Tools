@@ -1,5 +1,6 @@
-﻿using ERParamUtils.UpateParam;
+using ERParamUtils.UpateParam;
 using NLog.LayoutRenderers.Wrappers;
+using SoulsFormats.Util;
 using SoulsParam;
 using System;
 using System.Collections.Generic;
@@ -69,6 +70,8 @@ namespace ERParamUtils.UpdateParam
 
         public static void UnlockCrafting(ParamProject paramProject, UpdateCommand updateCommand)
         {
+            RemoveLimit(paramProject, updateCommand);
+
             if (!updateCommand.HaveOption(UpdateParamOptionNames.UnlockCrafting)) {
                 return;
             }
@@ -96,6 +99,26 @@ namespace ERParamUtils.UpdateParam
                 {
                     updateCommand.AddItem(row, key, "-1");
                 }
+            }
+        }
+
+        public static void RemoveLimit(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+
+            var param = paramProject.FindParam(ParamNames.EquipParamGoods);
+            if (param == null)
+                return;
+
+            for (int i = 0; i < param.Rows.Count; i++)
+            {
+
+                var row = param.Rows[i];
+                var potGroupId = ParamRowUtils.GetCellInt(row, "potGroupId", -1);
+                if (potGroupId != -1) {
+                    updateCommand.AddItem(row, "potGroupId", "-1");
+                    updateCommand.AddItem(row, "maxNum", "99");
+                }
+
             }
         }
 
