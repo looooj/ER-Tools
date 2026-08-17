@@ -124,7 +124,19 @@ namespace ERParamEditor
 
         }
 
-        public static void ExportParamGrace()
+
+
+        public static void ExportParamGraceCER() {
+            string[] names = { "item_dlc02PlaceName.txt", "item_dlc02PlaceName_dlc01.txt" };
+            ExportParamGrace("C:\\EldenRingMods\\ER-Tools\\docs\\cer-item-text",names);
+        }
+        public static void ExportParamGraceSTD() {
+            string[] names = { "item_dlc01PlaceName.txt", "item_dlc01PlaceName_dlc01.txt" };
+            ExportParamGrace("C:\\EldenRingMods\\ER-Tools\\docs\\dlc-item-text", names);
+
+        }
+
+        public static void ExportParamGrace(string baseDir, string[] names)
         {
 
             var proj = GlobalConfig.GetCurrentProject();
@@ -137,8 +149,8 @@ namespace ERParamEditor
 
 
 
-            string baseDir = "C:\\EldenRingMods\\ER-Tools\\docs\\cer-item-text";
-            string[] names = { "item_dlc02PlaceName.txt", "item_dlc02PlaceName_dlc01.txt" };
+            //string baseDir = "C:\\EldenRingMods\\ER-Tools\\docs\\cer-item-text";
+            //string[] names = { "item_dlc02PlaceName.txt", "item_dlc02PlaceName_dlc01.txt" };
             var d = LoadGraceText(baseDir, names);
 
 

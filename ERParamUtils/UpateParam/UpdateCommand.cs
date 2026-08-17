@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -400,8 +400,10 @@ namespace ERParamUtils.UpdateParam
             return _updateOptions.ContainsKey(optName);
         }
 
-        public int GetOption(string optName) {
-            return _updateOptions[optName];
+        public int GetOption(string optName, int def=0) {
+            if ( _updateOptions.ContainsKey(optName))
+                return _updateOptions[optName];
+            return def;
         }
     }
 

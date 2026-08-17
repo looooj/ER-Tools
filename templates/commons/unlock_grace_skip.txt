@@ -1,0 +1,119 @@
+100000;Godrick the Grafted;“接肢”葛瑞克;100000
+100001;Margit, the Fell Omen;“恶兆妖鬼”玛尔基特;100001
+
+110000;Elden Throne;艾尔登宝座;110000
+110001;Erdtree Sanctuary;黄金树大教堂;110001
+110007;Queen's Bedchamber;女王闺阁;110007
+
+110500;Elden Throne;艾尔登宝座;110500
+110501;Erdtree Sanctuary;黄金树大教堂;110501
+110502;East Capital Rampart;王城东边城墙;110502
+110503;Leyndell, Capital of Ash;“灰烬王城”罗德尔;110503
+110504;Queen's Bedchamber;女王闺阁;110504
+110505;Divine Bridge;神授桥;110505
+111000;Table of Lost Grace;大赐福;111000
+
+350000;Cathedral of the Forsaken;弃置恶兆的大教堂;350000
+390000;Magma Wyrm Makar;“熔岩土龙”马卡尔;390000
+
+
+120100;Dragonkin Soldier of Nokstella;诺克史黛拉的龙人士兵;120100
+120201;Mimic Tear;仿身泪滴;120201
+120300;Prince of Death's Throne;死王子宝座;120300
+120200;Great Waterfall Basin;大瀑布水潭;120200
+
+120400;Astel, Naturalborn of the Void;“黑暗弃子”艾丝缇;120400
+120500;Cocoon of the Empyrean;神人坠眠之茧;120500
+
+130000;Maliketh, the Black Blade;“黑剑”玛利喀斯;130000
+130001;Dragonlord Placidusax;“龙王”普拉顿桑克斯;130001
+130002;Dragon Temple Altar;龙教堂祭坛;130002
+140000;Raya Lucaria Grand Library;雷亚卢卡利亚大书库;140000
+140001;Debate Parlor;讨论室;140001
+
+150000;Malenia, Goddess of Rot;“腐败女神”玛莲妮亚;150000
+150005;Haligtree Promenade;圣树大舞台;150005
+
+160000;Rykard, Lord of Blasphemy;“亵渎君王”拉卡德;160000
+160001;Temple of Eiglay;艾格蕾教堂;160001
+
+160006;Abductor Virgin;掳人少女人偶;160006
+190000;Fractured Marika;濒毁玛莉卡;190000
+
+620062;Ranni's Chamber;菈妮的房间;62345001
+620047;Royal Moongazing Grounds;王室赏月地;62355002
+
+630050;Castellan's Hall;城主大厅;63395402
+630013;Windmill Heights;风车村高台;63425500
+
+640007;Heart of Aeonia;艾奥尼亚中心地;64493800
+640008;Chair-Crypt of Sellia;瑟利亚椅子庙;64493901
+640014;Starscourge Radahn;“碎星”拉塔恩;64523800
+640010;Redmane Castle Plaza;红狮子城（广场）;64513600
+640025;Bestial Sanctum;野兽神殿;64514300
+
+650008;Fire Giant;火焰巨人;65535200
+650054;Castle Sol Rooftop;索尔城（屋顶）;65515703
+
+
+200000;Theatre of the Divine Beast;神兽舞台;200000
+200100;Gate of Divinity;神之门;200100
+
+210001;Main Gate Plaza;正门广场;210001
+210007;Sunken Chapel;沉水礼拜堂;210007
+
+250000;Finger Birthing Grounds;指头产房;250000
+280000;Discussion Chamber;对谈室;280000
+220000;Garden of Deep Purple;深紫花园;220000
+
+
+682002;Ensis Moongazing Grounds;恩希斯赏月地;61484400
+
+
+685003;Rest of the Dread Dragon;狂龙之席;68553900
+694005;Church of the Bud;花蕾教堂;69444501
+
+692000;Scaduview;望影露台;69494800
+696000;Scadutree Base;幽影树的树脚;69504801
+
+
+300000;Tombsward Catacombs;灵庙原野地下墓地;300000
+300100;Impaler's Catacombs;穿刺地下墓地;300100
+300200;Stormfoot Catacombs;风暴根脚的地下墓地;300200
+300300;Road's End Catacombs;绝路地下墓地;300300
+300400;Murkwater Catacombs;蒙流地下墓地;300400
+300500;Black Knife Catacombs;黑刀地下墓地;300500
+300600;Cliffbottom Catacombs;断崖下的地下墓地;300600
+300700;Wyndham Catacombs;威达姆地下墓地;300700
+300800;Sainted Hero's Grave;尊贵者的英雄墓地;300800
+300900;Gelmir Hero's Grave;格密尔英雄墓地;300900
+301000;Auriza Hero's Grave;亚雷萨英雄墓地;301000
+301100;Deathtouched Catacombs;死亡降临的地下墓地;301100
+301200;Unsightly Catacombs;丑恶地下墓地;301200
+301300;Auriza Side Tomb;亚雷萨副墓地;301300
+301400;Minor Erdtree Catacombs;小黄金树地下墓地;301400
+301500;Caelid Catacombs;盖利德地下墓地;301500
+301600;War-Dead Catacombs;英灵地下墓地;301600
+301700;Giant-Conquering Hero's Grave;巨人战争的英雄墓地;301700
+301800;Giants' Mountaintop Catacombs;巨人山顶地下墓地;301800
+301900;Consecrated Snowfield Catacombs;化圣雪原地下墓地;301900
+
+350003;Leyndell Catacombs;罗德尔地下墓地;350003
+
+400000;Fog Rift Catacombs;雾谷地下墓地;400000
+400100;Scorpion River Catacombs;蝎河地下墓地;400100
+400200;Darklight Catacombs;驱暗地下墓地;400200
+684001;Charo's Hidden Grave;卡罗隐藏墓地;68483901
+686002;Forsaken Graveyard;荒废墓地;68524300
+
+
+#341000;Limgrave Tower Bridge;宁姆格福神授塔（桥上）;341000
+#341002;Divine Tower of Limgrave;宁姆格福神授塔;341002
+341102;Divine Tower of Liurnia;利耶尼亚神授塔;341102
+341200;Divine Tower of West Altus;西亚坛神授塔;341200
+341202;Divine Tower of West Altus: Gate;西亚坛神授塔（门口）;341202
+#341301;Divine Tower of Caelid: Basement;盖利德神授塔（地底）;341301
+#341302;Divine Tower of Caelid: Center;盖利德神授塔（中段）;341302
+341400;Divine Tower of East Altus: Gate;东亚坛神授塔（门口）;341400
+341401;Divine Tower of East Altus;东亚坛神授塔;341401
+341500;Isolated Divine Tower;孤立神授塔;341500

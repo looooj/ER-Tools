@@ -48,7 +48,7 @@
 210007;Sunken Chapel;沉水礼拜堂;210007
 
 250000;Finger Birthing Grounds;指头产房;250000
-
+280000;Discussion Chamber;对谈室;280000
 220000;Garden of Deep Purple;深紫花园;220000
 
 
@@ -151,5 +151,5 @@
 690019;Minor Erdtree Cave;小黄金树洞窟;69494500
 696000;Scadutree Base;幽影树的树脚;69504801
 
-693003;Shaman Village;巫者村;69514701
-400201;Abyssal Overlook;谷底眺望处;69514401
+#693003;Shaman Village;巫者村;69514701
+#400201;Abyssal Overlook;谷底眺望处;69514401
