@@ -28,6 +28,17 @@ namespace ERParamUtils.UpateParam
             return "None,UnlockCustom(custom_grace.txt)";
         }
 
+        public static string GetValueList3()
+        {
+            return "0,1,2";
+        }
+
+        public static string GetNameList3()
+        {
+
+            return "None,All,UnlockCustom(custom_grace.txt)";
+        }
+
         public static UnlockGraceType ValueToType(int v) { 
 
             
@@ -189,6 +200,9 @@ namespace ERParamUtils.UpateParam
         public static readonly string RemoveInitWeaponWeightRequire = "RemoveInitWeaponWeightRequire";
 
         public static readonly string UnlockGrace = "UnlockGrace";
+        public static readonly string UnlockGrace3 = "UnlockGrace3";
+
+        public static readonly string UnlockGraceAll = "UnlockGraceAll";
         //public static readonly string UnlockRoundtableHold = "UnlockRoundtableHold";
         public static readonly string EnableFastTravel = "EnableFastTravel";
 

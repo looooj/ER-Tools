@@ -411,9 +411,7 @@ namespace ERParamUtils.UpdateParam
             UpdateTalisman.Exec(paramProject, updateCommand);
 
             UpdateShopLineupParam.Exec(paramProject, updateCommand);
-            //if (updateCommand.HaveOption(UpdateParamOptionNames.UnlockCrafting)) {
-            //UpdateShopLineupParam.ReplaceAncientStone(paramProject, updateCommand);
-            //}
+
 
             if ( ModConfig.GetModType() == ModConfig.ModType.STD)
                  UpdateRow.LoadUpdateRow("patch-lot.txt",updateCommand);

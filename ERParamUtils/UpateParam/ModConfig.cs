@@ -94,6 +94,41 @@ namespace ERParamUtils.UpateParam
 
         }
 
+        public static string GetUnlockGraceName()
+        {
+            switch (currentModType)
+            {
+                case ModType.CER:
+                    return "unlock_grace_all_cer.txt";
+            }
+            return "unlock_grace_all.txt";
+
+        }
+
+
+
+        public static string GetUnlockGraceSkipName()
+        {
+            switch (currentModType)
+            {
+                case ModType.CER:
+                    return "unlock_grace_skip_cer.txt";
+            }
+            return "unlock_grace_skip.txt";
+
+        }
+
+        public static string GetUnlockGraceSkipName(ParamProject paramProject)
+        {
+            return "";
+        }
+
+        public static string GetUnlockGraceName(ParamProject paramProject)
+        {
+            return "";
+        }
+
+
         public enum ModType { 
             STD = 0,
             RADN = 1,

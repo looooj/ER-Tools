@@ -52,7 +52,7 @@ CrimsonAmberMedallionConsumptionRate=红琥珀链坠: 减耗20%
 AllTalisman=全部护符: (血量,专注值,精力,获取卢恩，物品掉落)*1.2 
 
 ReplaceGoldenRune=不变,黄金卢恩 [13](10000),英雄卢恩 [4](30000),随机英雄卢恩
-UnlockGrace1=不变,解锁全部,解锁指定(unlock_grace.txt)
+UnlockGrace3=不变,解锁全部,解锁指定(unlock_grace.txt)
 UnlockGrace=不变,解锁指定(unlock_grace.txt)
 
 AddInitCrimsonAmberMedallion=初始添加红琥珀链坠

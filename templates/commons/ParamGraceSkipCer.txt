@@ -1,0 +1,146 @@
+100000;Godrick the Grafted;“接肢”葛瑞克;100000
+100001;Margit, the Fell Omen;“恶兆妖鬼”玛尔基特;100001
+
+110000;Elden Throne;艾尔登宝座;110000
+110001;Erdtree Sanctuary;黄金树大教堂;110001
+110007;Queen's Bedchamber;女王闺阁;110007
+110500;Elden Throne;艾尔登宝座;110500
+110501;Erdtree Sanctuary;黄金树大教堂;110501
+110502;East Capital Rampart;王城东边城墙;110502
+110503;Leyndell, Capital of Ash;“灰烬王城”罗德尔;110503
+110504;Queen's Bedchamber;女王闺阁;110504
+111000;Table of Lost Grace;大赐福;111000
+
+120100;Dragonkin Soldier of Nokstella;诺克史黛拉的龙人士兵;120100
+120110;Ainsel River Minor Erdtree;安瑟尔河小黄金树;120110
+120201;Goras, Scourge of Dreams;“梦之灾厄”哥拉斯;120201
+120300;Prince of Death's Throne;死王子宝座;120300
+120306;Deeproot Depths Minor Erdtree;深根底层小黄金树;120306
+120400;Astel, Naturalborn of the Void;“黑暗弃子”艾丝缇;120400
+120500;Cocoon of the Empyrean;神人坠眠之茧;120500
+
+904800010;Konrad, Pureblood Knight;“纯血骑士”康拉德;120504
+
+
+130000;Maliketh, the Black Blade;“黑剑”玛利喀斯;130000
+130001;Dragonlord Placidusax;“龙王”普拉顿桑克斯;130001
+130013;Dragonlord's Annex;龙王偏殿;130013
+
+150000;Malenia, Goddess of Rot;“腐败女神”玛莲妮亚;150000
+150005;Haligtree Promenade;圣树大舞台;150005
+
+160000;Rykard, Lord of Blasphemy;“亵渎君王”拉卡德;160000
+160001;Temple of Eiglay;艾格蕾教堂;160001
+160006;Abductor Virgin;掳人少女人偶;160006
+
+
+170001;Defiled Chapel;污秽礼拜堂;170001
+170002;Noxumbra Great Hall;诺克斯安布拉大厅;170002
+
+190000;Fractured Marika;濒毁玛莉卡;190000
+
+
+200000;Theatre of the Divine Beast;神兽舞台;200000
+
+210001;Main Gate Plaza;正门广场;210001
+
+210100;Messmer's Dark Chamber;梅瑟莫的暗室;210100
+210007;Sunken Chapel;沉水礼拜堂;210007
+
+250000;Finger Birthing Grounds;指头产房;250000
+
+220000;Garden of Deep Purple;深紫花园;220000
+
+
+300000;Tombsward Catacombs;灵庙原野地下墓地;300000
+300100;Impaler's Catacombs;穿刺地下墓地;300100
+300200;Stormfoot Catacombs;风暴根脚的地下墓地;300200
+300300;Road's End Catacombs;绝路地下墓地;300300
+300400;Murkwater Catacombs;蒙流地下墓地;300400
+300500;Black Knife Catacombs;黑刀地下墓地;300500
+300600;Cliffbottom Catacombs;断崖下的地下墓地;300600
+300700;Wyndham Catacombs;威达姆地下墓地;300700
+300800;Sainted Hero's Grave;尊贵者的英雄墓地;300800
+300900;Gelmir Hero's Grave;格密尔英雄墓地;300900
+301000;Auriza Hero's Grave;亚雷萨英雄墓地;301000
+301100;Deathtouched Catacombs;死亡降临的地下墓地;301100
+301200;Unsightly Catacombs;丑恶地下墓地;301200
+301300;Auriza Side Tomb;亚雷萨副墓地;301300
+301400;Minor Erdtree Catacombs;小黄金树地下墓地;301400
+301500;Caelid Catacombs;盖利德地下墓地;301500
+301600;War-Dead Catacombs;英灵地下墓地;301600
+301700;Giant-Conquering Hero's Grave;巨人战争的英雄墓地;301700
+301800;Giants' Mountaintop Catacombs;巨人山顶地下墓地;301800
+301900;Sanctum of Eiglay;艾格蕾圣所;301900
+302000;Hidden Path to the Haligtree;通往圣树的密道;302000
+302100;Vulgar Militia Stronghold;恶兵要塞;302100
+
+
+
+350000;Cathedral of the Forsaken;弃置恶兆的大教堂;350000
+350003;Leyndell Catacombs;罗德尔地下墓地;350003
+
+
+390000;Magma Wyrm Makar;“熔岩土龙”马卡尔;390000
+
+
+611009;Morne Courtyard;摩恩院落;61433101
+611011;Morne Moangrave;摩恩悲叹墓;61433000
+
+611013;Weeping Peninsula Minor Erdtree;啜泣半岛小黄金树;61433300
+610018;Waypoint Ruins Cellar;驿站街遗迹的地下室;61443600
+610021;Limgrave Minor Erdtree;宁姆格福小黄金树;61453700
+610020;Stormhill Overlook;风暴山丘眺望处;61413700
+
+
+680006;Gravesite Woodland;墓地森林;61474000
+682002;Ensis Moongazing Grounds;恩希斯赏月地;61484400
+682001;Castle-Lord's Chamber;城主的房间;61484401
+
+620063;West Liurnia Minor Erdtree;利耶尼亚西部小黄金树;62334300
+620064;North Liurnia Minor Erdtree;利耶尼亚北部小黄金树;62384801
+620036;Liurnia Highway North;利耶尼亚大道（北方）;62394200
+
+620068;Einar, Ice Guardian;“冰之守卫”艾纳尔;62355004
+620030;Slumbering Wolf's Shack;眠狼的破屋;62364100
+620066;Lucarian Nexus;卢卡利亚枢纽;62364501
+620062;Ranni's Chamber;菈妮的房间;62345001
+
+
+
+631008;West Gelmir Minor Erdtree;格密尔西部小黄金树;63365201
+631009;East Gelmir Minor Erdtree;格密尔东部小黄金树;63375400
+630050;Castellan's Hall;城主大厅;63395402
+
+630015;Central Altus Minor Erdtree;亚坛中部小黄金树;63415300
+630002;Minor Erdtree Church;小黄金树教堂;63435000
+630016;East Altus Minor Erdtree;亚坛东部小黄金树;63445300
+
+640019;Caelid Highway South;盖利德大道南方;64483700
+640030;West Caelid Minor Erdtree;盖利德西部小黄金树;64474001
+640008;Chair-Crypt of Sellia;瑟利亚椅子庙;64493901
+640010;Redmane Castle Plaza;红狮子城（广场）;64513600
+
+640033;Sanctum Undercroft;神殿下方;64514301
+640014;Starscourge Radahn;“碎星”拉塔恩;64523800
+
+651004;Consecrated Snowfield Minor Erdtree;化圣雪原小黄金树;65495700
+650011;South Mountaintops Minor Erdtree;巨人山顶南部小黄金树;65515301
+650054;Castle Sol Rooftop;索尔城（屋顶）;65515703
+650008;Fire Giant;火焰巨人;65535200
+
+
+683006;Cerulean Bluffs;青蓝断崖;68483800
+
+685003;Rest of the Dread Dragon;狂龙之席;68553900
+
+694005;Church of the Bud;花蕾教堂;69444501
+694006;Rauh Steppes;劳弗草原;69474701
+
+692000;Scaduview;望影露台;69494800
+
+690019;Minor Erdtree Cave;小黄金树洞窟;69494500
+696000;Scadutree Base;幽影树的树脚;69504801
+
+693003;Shaman Village;巫者村;69514701
+400201;Abyssal Overlook;谷底眺望处;69514401

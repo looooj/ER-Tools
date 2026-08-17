@@ -1,3 +1,8 @@
 
 2049430500;[Fort Reprimand] Repeating Crossbow (Used to be Large Smithing Stone x8);
 0-lotItemId01;43500000;Repeating Crossbow 
+
+
+5210100;Ascetic's Loincloth;修行者腰巾
+5210200;Ascetic's Wrist Guards;修行者手环
+5210300;Ascetic's Ankle Guards;修行者脚环

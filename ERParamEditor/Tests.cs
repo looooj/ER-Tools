@@ -532,9 +532,9 @@ namespace ERParamEditor
             //GenMenuText();
             //Tools.CleanUpdateLog(5);
             //Tests2.FindRemnant();
-            ExtractMsg();
+            //ExtractMsg();
             //Tests2.FindGuardLevel();
-            //Tests2.ExportParamGrace();
+            Tests2.ExportParamGrace();
         }
     }
 }

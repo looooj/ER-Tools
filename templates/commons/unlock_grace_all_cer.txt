@@ -1,0 +1,475 @@
+100000;Godrick the Grafted;“接肢”葛瑞克;100000
+100001;Margit, the Fell Omen;“恶兆妖鬼”玛尔基特;100001
+100002;Castleward Tunnel;通城隧道;100002
+100003;Eastern Parapet;东部护墙;100003
+100004;Stormveil Cliffside;史东薇尔断崖;100004
+100005;Rampart Tower;城墙塔;100005
+100006;Liftside Chamber;升降机旁房间;100006
+100007;Secluded Cell;深处小房间;100007
+100008;Stormveil Main Gate;史东薇尔正门;100008
+100009;Castle Storehouse;城堡仓库;100009
+110000;Elden Throne;艾尔登宝座;110000
+110001;Erdtree Sanctuary;黄金树大教堂;110001
+110002;East Capital Rampart;王城东边城墙;110002
+110003;Lower Capital Church;王城底层教堂;110003
+110004;Avenue Balcony;大道旁露台;110004
+110005;West Capital Rampart;王城西边城墙;110005
+110007;Queen's Bedchamber;女王闺阁;110007
+110008;Fortified Manor, First Floor;城寨一楼;110008
+110009;Divine Bridge;神授桥;110009
+110500;Elden Throne;艾尔登宝座;110500
+110501;Erdtree Sanctuary;黄金树大教堂;110501
+110502;East Capital Rampart;王城东边城墙;110502
+110503;Leyndell, Capital of Ash;“灰烬王城”罗德尔;110503
+110504;Queen's Bedchamber;女王闺阁;110504
+110505;Divine Bridge;神授桥;110505
+111000;Table of Lost Grace;大赐福;111000
+120100;Dragonkin Soldier of Nokstella;诺克史黛拉的龙人士兵;120100
+120101;Ainsel River Well Depths;安瑟尔河（井底）;120101
+120102;Ainsel River Sluice Gate;安瑟尔河（水门）;120102
+120103;Ainsel River Downstream;安瑟尔河（下游）;120103
+120104;Ainsel River Main;安瑟尔河主流;120104
+120105;Nokstella, Eternal City;“永恒之城”诺克史黛拉;120105
+120106;Lake of Rot Shoreside;腐败湖畔;120106
+120107;Lake of Rot Overlook;腐败湖眺望处;120107
+120108;Grand Cloister;大回廊;120108
+120109;Nokstella Waterfall Basin;诺克史黛拉水潭;120109
+120110;Ainsel River Minor Erdtree;安瑟尔河小黄金树;120110
+120211;Great Waterfall Basin;大瀑布水潭;120200
+120201;Goras, Scourge of Dreams;“梦之灾厄”哥拉斯;120201
+120202;Siofra Plateau;希芙拉高地;120202
+120203;Siofra River Bank;希芙拉河（岸边）;120203
+120204;Worshippers' Woods;信仰者森林;120204
+120205;Ruined Pavilion;破败亭阁;120205
+120206;Nokron Overlook;诺克隆恩眺望处;120206
+120207;Aqueduct-Facing Cliffs;导水桥旁断崖;120207
+120208;Night's Sacred Ground;黑夜神域;120208
+120209;Below the Well;出口井的下方;120209
+120300;Prince of Death's Throne;死王子宝座;120300
+120301;Root-Facing Cliffs;树根旁断崖;120301
+120302;Great Waterfall Crest;大瀑布顶端;120302
+120303;Deeproot Depths;深根底层;120303
+120304;The Nameless Eternal City;无名永恒之城;120304
+120305;Across the Roots;树根前路;120305
+120306;Deeproot Depths Minor Erdtree;深根底层小黄金树;120306
+120400;Astel, Naturalborn of the Void;“黑暗弃子”艾丝缇;120400
+120500;Cocoon of the Empyrean;神人坠眠之茧;120500
+120501;Palace Approach Ledge-Road;通往王朝的崖上道路;120501
+120502;Dynasty Mausoleum Entrance;王朝庙（入口）;120502
+120503;Dynasty Mausoleum Midpoint;王朝庙（中段）;120503
+904800010;Konrad, Pureblood Knight;“纯血骑士”康拉德;120504
+120700;Siofra River Well Depths;希芙拉河（井底）;120700
+120701;Nokron, Eternal City;“永恒之城”诺克隆恩;120701
+130000;Maliketh, the Black Blade;“黑剑”玛利喀斯;130000
+130001;Dragonlord Placidusax;“龙王”普拉顿桑克斯;130001
+130002;Dragon Temple Altar;龙教堂祭坛;130002
+130003;Crumbling Beast Grave;渐毁野兽墓;130003
+130004;Crumbling Beast Grave Depths;渐毁野兽墓（深处）;130004
+130005;Tempest-Facing Balcony;龙卷旁露台;130005
+130006;Forum Ruins;法姆遗迹;130006
+130007;Dragon Temple Transept;龙教堂（耳堂）;130007
+130008;Dragon Temple Lift;龙教堂（升降机前）;130008
+130009;The Great Bridge;大桥;130009
+130010;Garden Courtyard;花园庭院;130010
+130011;Heart of the Storm;风暴中心;130011
+130012;Dragon's Rest;龙之安息处;130012
+130013;Dragonlord's Annex;龙王偏殿;130013
+130014;Lost Tribe Spirit Grounds;失落部族灵地;130014
+140000;Raya Lucaria Grand Library;雷亚卢卡利亚大书库;140000
+140001;Debate Parlor;讨论室;140001
+140002;Church of the Cuckoo;杜鹃教堂;140002
+140003;Schoolhouse Classroom;校舍内的教室;140003
+140004;Academy Rooftops;学院屋顶;140004
+140005;Great Water Wheel;大水车;140005
+150000;Malenia, Goddess of Rot;“腐败女神”玛莲妮亚;150000
+150001;Prayer Room;祈祷室;150001
+150002;Elphael Inner Wall;艾布雷菲尔城墙内部;150002
+150003;Drainage Channel;排水通道;150003
+150004;Haligtree Roots;圣树底层;150004
+150005;Haligtree Promenade;圣树大舞台;150005
+150006;Haligtree Canopy;圣树树冠;150006
+150007;Haligtree Town;圣树镇;150007
+150008;Haligtree Library;圣树图书馆;150008
+160000;Rykard, Lord of Blasphemy;“亵渎君王”拉卡德;160000
+160001;Temple of Eiglay;艾格蕾教堂;160001
+160002;Volcano Manor;火山官邸;160002
+160003;Prison Town Church;牢镇教堂;160003
+160004;Guest Hall;迎宾厅;160004
+160005;Audience Pathway;谒见之路;160005
+160006;Abductor Virgin;掳人少女人偶;160006
+160007;Subterranean Inquisition Chamber;地底拷问所;160007
+160008;Manor Passage;官邸通道;160008
+160010;Temple Canyon;神殿峡谷;160009
+170000;Noxumbra Annex;诺克斯安布拉偏殿;170000
+170001;Defiled Chapel;污秽礼拜堂;170001
+170002;Noxumbra Great Hall;诺克斯安布拉大厅;170002
+180000;Cave of Knowledge;求学洞窟;180000
+180001;Stranded Graveyard;漂流墓地;180001
+190000;Fractured Marika;濒毁玛莉卡;190000
+200000;Theatre of the Divine Beast;神兽舞台;200000
+200001;Belurat, Tower Settlement;“塔之镇”贝瑞特;200001
+200002;Small Private Altar;民宅小祭坛;200002
+200003;Stagefront;舞台前方;200003
+200100;Gate of Divinity;神之门;200100
+200102;Enir-Ilim: Outer Wall;艾尼尔·伊利姆外墙;200102
+200103;First Rise;第一塔;200103
+200104;Spiral Rise;螺旋塔;200104
+200105;Cleansing Chamber Anteroom;净身厅前室;200105
+200106;Divine Gate Front Staircase;神之门（门前楼梯平台）;200106
+210001;Main Gate Plaza;正门广场;210001
+210002;Shadow Keep Main Gate;幽影城（正门）;210002
+210006;Church District Entrance;教区入口;210006
+210007;Sunken Chapel;沉水礼拜堂;210007
+210008;Tree-Worship Passage;礼树暗道;210008
+210009;Tree-Worship Sanctum;礼树教堂;210009
+210100;Messmer's Dark Chamber;梅瑟莫的暗室;210100
+210101;Storehouse, First Floor;保藏库（一楼）;210101
+210102;Storehouse, Fourth Floor;保藏库（四楼）;210102
+210103;Storehouse, Seventh Floor;保藏库（七楼）;210103
+210104;Dark Chamber Entrance;暗室门前;210104
+210106;Storehouse, Back Section;保藏库（内区）;210105
+210107;Storehouse, Loft;保藏库（阁楼）;210106
+210201;West Rampart;西边城墙;210201
+220000;Garden of Deep Purple;深紫花园;220000
+220001;Stone Coffin Fissure;石棺大洞;220001
+220002;Fissure Cross;大洞的十字记号;220002
+220003;Fissure Waypoint;大洞中段;220003
+220004;Fissure Depths;大洞深处;220004
+250000;Finger Birthing Grounds;指头产房;250000
+280000;Discussion Chamber;对谈室;280000
+280001;Manse Hall;府邸大厅;280001
+280002;Midra's Library;米德拉的书库;280002
+280003;Second Floor Chamber;二楼小房间;280003
+300000;Tombsward Catacombs;灵庙原野地下墓地;300000
+300100;Impaler's Catacombs;穿刺地下墓地;300100
+300200;Stormfoot Catacombs;风暴根脚的地下墓地;300200
+300300;Road's End Catacombs;绝路地下墓地;300300
+300400;Murkwater Catacombs;蒙流地下墓地;300400
+300500;Black Knife Catacombs;黑刀地下墓地;300500
+300600;Cliffbottom Catacombs;断崖下的地下墓地;300600
+300700;Wyndham Catacombs;威达姆地下墓地;300700
+300800;Sainted Hero's Grave;尊贵者的英雄墓地;300800
+300900;Gelmir Hero's Grave;格密尔英雄墓地;300900
+301000;Auriza Hero's Grave;亚雷萨英雄墓地;301000
+301100;Deathtouched Catacombs;死亡降临的地下墓地;301100
+301200;Unsightly Catacombs;丑恶地下墓地;301200
+301300;Auriza Side Tomb;亚雷萨副墓地;301300
+301400;Minor Erdtree Catacombs;小黄金树地下墓地;301400
+301500;Caelid Catacombs;盖利德地下墓地;301500
+301600;War-Dead Catacombs;英灵地下墓地;301600
+301700;Giant-Conquering Hero's Grave;巨人战争的英雄墓地;301700
+301800;Giants' Mountaintop Catacombs;巨人山顶地下墓地;301800
+301900;Sanctum of Eiglay;艾格蕾圣所;301900
+302000;Hidden Path to the Haligtree;通往圣树的密道;302000
+302100;Vulgar Militia Stronghold;恶兵要塞;302100
+310000;Murkwater Cave;蒙流洞窟;310000
+310100;Earthbore Cave;垂穴洞窟;310100
+310200;Tombsward Cave;灵庙原野洞窟;310200
+310300;Groveside Cave;近林洞窟;310300
+310400;Stillwater Cave;留水洞窟;310400
+310500;Lakeside Crystal Cave;湖旁结晶洞窟;310500
+310600;Academy Crystal Cave;学院结晶洞窟;310600
+310700;Seethewater Cave;沸滚河洞窟;310700
+310900;Volcano Cave;火山洞窟;310900
+311000;Dragonbarrow Cave;龙墓洞窟;311000
+311100;Sellia Hideaway;瑟利亚隐藏洞窟;311100
+311200;Cave of the Forlorn;安身洞窟;311200
+311500;Coastal Cave;海岸洞窟;311500
+311700;Highroad Cave;大道下的洞窟;311700
+311800;Perfumer's Grotto;调香师的隐藏洞窟;311800
+311900;Sage's Cave;贤者的洞窟;311900
+312000;Abandoned Cave;废弃洞窟;312000
+312100;Gaol Cave;牢狱洞窟;312100
+312200;Spiritcaller Cave;唤灵洞窟;312200
+320000;Morne Tunnel;摩恩坑道;320000
+320100;Limgrave Tunnels;宁姆格福坑道;320100
+320200;Raya Lucaria Crystal Tunnel;雷亚卢卡利亚结晶坑道;320200
+320400;Old Altus Tunnel;旧亚坛坑道;320400
+320500;Altus Tunnel;亚坛坑道;320500
+320700;Gael Tunnel;盖尔坑道;320700
+320701;Rear Gael Tunnel Entrance;盖尔坑道（侧门口）;320701
+320800;Sellia Crystal Tunnel;瑟利亚结晶坑道;320800
+321100;Yelough Anix Tunnel;耶罗·亚尼斯坑道;321100
+341000;Limgrave Tower Bridge;宁姆格福神授塔（桥上）;341000
+341002;Divine Tower of Limgrave;宁姆格福神授塔;341002
+341100;Study Hall Entrance;书斋入口;341100
+341101;Liurnia Tower Bridge;利耶尼亚神授塔（桥上）;341101
+341102;Divine Tower of Liurnia;利耶尼亚神授塔;341102
+341200;Divine Tower of West Altus;西亚坛神授塔;341200
+341201;Sealed Tunnel;封印坑道;341201
+341202;Divine Tower of West Altus: Gate;西亚坛神授塔（门口）;341202
+341301;Divine Tower of Caelid: Basement;盖利德神授塔（地底）;341301
+341302;Divine Tower of Caelid: Center;盖利德神授塔（中段）;341302
+341400;Divine Tower of East Altus: Gate;东亚坛神授塔（门口）;341400
+341401;Divine Tower of East Altus;东亚坛神授塔;341401
+341500;Isolated Divine Tower;孤立神授塔;341500
+350000;Cathedral of the Forsaken;弃置恶兆的大教堂;350000
+350001;Underground Roadside;地底大道旁;350001
+350002;Forsaken Depths;弃置恶兆的底层;350002
+350003;Leyndell Catacombs;罗德尔地下墓地;350003
+350004;Frenzied Flame Proscription;癫火封印;350004
+390000;Magma Wyrm Makar;“熔岩土龙”马卡尔;390000
+390001;Ruin-Strewn Precipice;古遗迹断崖;390001
+390002;Ruin-Strewn Precipice Overlook;古遗迹断崖（对岸）;390002
+400000;Fog Rift Catacombs;雾谷地下墓地;400000
+400100;Scorpion River Catacombs;蝎河地下墓地;400100
+400200;Darklight Catacombs;驱暗地下墓地;400200
+410000;Belurat Gaol;贝瑞特监牢;410000
+410100;Bonny Gaol;波尼监牢;410100
+410200;Lamenter's Gaol;喟叹监牢;410200
+420000;Ruined Forge Lava Intake;熔岩管锻造遗迹;420000
+420200;Ruined Forge of Starfall Past;古铁陨石锻造遗迹;420200
+420300;Taylew's Ruined Forge;泰乌尔锻造遗迹;420300
+430000;Rivermouth Cave;河尾洞窟;430000
+430100;Dragon's Pit;龙洞;430100
+430101;Dragon's Pit Terminus;龙洞（终点）;430101
+611006;Collector Merchant's Shack;拾荒商人的破屋;61413200
+611000;Fourth Church of Marika;玛莉卡第四教堂;61413300
+610008;Demi-Human Isle;亚人岛;61413500
+610020;Stormhill Overlook;风暴山丘眺望处;61413700
+610001;Stormhill Shack;风暴山丘的破屋;61413800
+611002;Tombsward Rise;灵庙原野塔;61423300
+610000;Church of Elleh;艾雷教堂;61423600
+610019;The First Step;引导之始;61423601
+610009;Gatefront;关卡前方;61423700
+610017;Warmaster's Shack;习战者的破屋;61423800
+611011;Morne Moangrave;摩恩悲叹墓;61433000
+611008;Castle Morne Lift;摩恩城（升降机前方）;61433100
+611009;Morne Courtyard;摩恩院落;61433101
+611010;Western Lookout Tower;西部监视塔;61433102
+611014;Castle Morne Town;摩恩城下镇;61433103
+611013;Weeping Peninsula Minor Erdtree;啜泣半岛小黄金树;61433300
+611012;Church of Pilgrimage;巡礼教堂;61433400
+610011;Seaside Ruins;傍海古遗迹;61433500
+610007;Agheel Lake North;亚基尔湖北方;61433700
+610014;Murkwater Coast;蒙流岸边;61433800
+610015;Saintsbridge;圣人桥;61433900
+611001;Castle Morne Rampart;摩恩城（城墙前方）;61443300
+611003;South of the Lookout Tower;监视塔的南方;61443301
+611004;Ailing Village Outskirts;病村外;61443302
+611007;Bridge of Sacrifice;献祭大桥;61443400
+610005;Agheel Lake South;亚基尔湖南方;61443500
+610018;Waypoint Ruins Cellar;驿站街遗迹的地下室;61443600
+610012;Mistwood Outskirts;雾林边缘;61443700
+610002;Artist's Shack;画家的破屋;61443800
+610016;Summonwater Village Outskirts;水唤村外;61443900
+611005;Beside the Crater-Pocked Glade;地坑旁;61453300
+610004;Fort Haight West;海德要塞西方;61453600
+610021;Limgrave Minor Erdtree;宁姆格福小黄金树;61453700
+680004;Cliffroad Terminus;崖上道路的终点;61454100
+680003;Main Gate Cross;正门前方的十字记号;61454200
+610003;Third Church of Marika;玛莉卡第三教堂;61463800
+680000;Gravesite Plain;墓地平原;61464000
+680002;Three-Path Cross;三叉口的十字记号;61464200
+680005;Greatbridge, North;大桥北方;61464400
+680006;Gravesite Woodland;墓地森林;61474000
+680001;Scorched Ruins;火吻废墟;61474100
+681000;Ellac River Cave;艾拉克河洞窟;61474300
+681003;Castle Front;城的前方;61474400
+682000;Castle Ensis Checkpoint;恩希斯城（关卡）;61474401
+681002;Pillar Path Waypoint;通柱坡中段;61484200
+681004;Rauh Reliquary of Grace;优雅的劳弗圣龛;61484201
+681001;Pillar Path Cross;通柱坡的十字记号;61484300
+682002;Ensis Moongazing Grounds;恩希斯赏月地;61484400
+682001;Castle-Lord's Chamber;城主的房间;61484401
+621002;Altar South;祭坛南方;62334000
+620063;West Liurnia Minor Erdtree;利耶尼亚西部小黄金树;62334300
+620033;Revenger's Shack;复仇者的破屋;62334400
+620020;Foot of the Four Belfries;四钟楼山脚;62334600
+620042;The Four Belfries;四钟楼;62334700
+621000;Moonlight Altar;月光祭坛;62344100
+620035;Village of the Albinaurics;白金村;62344200
+620052;Converted Tower;改宗塔;62344300
+620056;Temple Quarter;教堂区;62344400
+620058;Crystalline Woods;结晶森林;62344600
+620021;Sorcerer's Isle;魔法师塔的小岛;62344701
+620022;Northern Liurnia Lake Shore;利耶尼亚湖（北岸）;62344800
+620023;Road to the Manor;通往城寨的道路;62344900
+620043;Ranni's Rise;菈妮魔法师塔;62345000
+620062;Ranni's Chamber;菈妮的房间;62345001
+621001;Cathedral of Manus Celes;玛努斯·瑟利斯大教堂;62354200
+620034;Folly on the Lake;湖畔凉亭;62354300
+620051;Rose Church;蔷薇教堂;62354400
+620061;South Raya Lucaria Gate;雷亚卢卡利亚（南门）;62354500
+620005;Main Academy Gate;学院正门口;62354600
+620057;East Gate Bridge Trestle;东门桥的桥柱;62354700
+620045;Manor Upper Level;城寨上部;62355000
+620046;Manor Lower Level;城寨下部;62355001
+620047;Royal Moongazing Grounds;王室赏月地;62355002
+620024;Main Caria Manor Gate;卡利亚城寨（正门）;62355003
+620068;Einar, Ice Guardian;“冰之守卫”艾纳尔;62355004
+620030;Slumbering Wolf's Shack;眠狼的破屋;62364100
+620031;Boilprawn Shack;煮虾子的破屋;62364300
+620048;Gate Town North;门前镇的北方;62364500
+620066;Lucarian Nexus;卢卡利亚枢纽;62364501
+620010;East Raya Lucaria Gate;雷亚卢卡利亚（东门）;62364800
+620011;Bellum Church;彼鲁姆教堂;62364900
+620050;The Ravine;谷底;62364901
+620065;Caria Manor Perimeter;卡利亚城寨外围;62364902
+620053;Carian Barbican;卡利亚外堡;62365000
+620067;Manor Bailey;城寨外庭;62365001
+620003;Scenic Isle;远眺岛;62374200
+620004;Academy Gate Town;学院门前镇;62374400
+620039;Church of Vows;结缘教堂;62374600
+620041;Mausoleum Compound;群集灵庙;62374800
+620055;Church of Inhibition;镇静教堂;62374900
+620001;Liurnia Lake Shore;利耶尼亚湖（湖边）;62384000
+620002;Laskyar Ruins;拉斯卡废墟;62384100
+620037;Gate Town Bridge;门前镇大桥;62384300
+620032;Artist's Shack;画家的破屋;62384500
+620038;Eastern Liurnia Lake Shore;利耶尼亚湖（东岸）;62384501
+620049;Eastern Tableland;东边台地;62384600
+620040;Ruined Labyrinth;遗迹迷宫;62384700
+620054;Frenzied Flame Village Outskirts;癫火村外;62384800
+620064;North Liurnia Minor Erdtree;利耶尼亚北部小黄金树;62384801
+620012;Grand Lift of Dectus;迪可达斯大升降机;62385000
+620044;Ravine-Veiled Village;谷底秘村;62385001
+620000;Lake-Facing Cliffs;傍湖断崖;62394000
+620059;Liurnia Highway South;利耶尼亚大道（南方）;62394100
+620036;Liurnia Highway North;利耶尼亚大道（北方）;62394200
+620060;Jarburg;壶村;62394400
+631005;Seethewater Terminus;沸滚河终点;63355300
+631006;Craftsman's Shack;匠人的破屋;63365200
+631008;West Gelmir Minor Erdtree;格密尔西部小黄金树;63365201
+631001;Ninth Mt. Gelmir Campsite;格密尔火山（第９休息站）;63365401
+631003;Road of Iniquity;移送罪人之路;63365402
+630008;Abandoned Coffin;弃置棺材;63375100
+631004;Seethewater River;沸滚河;63375200
+631007;Primeval Sorcerer Azur;“起源魔法师”亚兹勒;63375300
+631009;East Gelmir Minor Erdtree;格密尔东部小黄金树;63375400
+630009;Altus Plateau;亚坛高原;63385002
+630000;Erdtree-Gazing Hill;近黄金树的山丘;63385100
+631002;First Mt. Gelmir Campsite;格密尔火山（第１休息站）;63385400
+630003;Altus Highway Junction;亚坛大道的三叉口;63395100
+631000;Bridge of Iniquity;罪人桥;63395300
+630051;Shaded Castle Ramparts;日荫城（城墙）;63395400
+630052;Shaded Castle Inner Gate;日荫城（内门）;63395401
+630050;Castellan's Hall;城主大厅;63395402
+630007;Forest-Spanning Greatbridge;穿林大桥;63405200
+630010;Bower of Bounty;丰饶森林;63405300
+630006;Road of Iniquity Side Path;移送罪人之路（路旁）;63405400
+630004;Rampartside Path;城墙旁小径;63415201
+630015;Central Altus Minor Erdtree;亚坛中部小黄金树;63415300
+630001;Windmill Village;风车村;63415400
+630011;Outer Wall Phantom Tree;城外幻影树;63425100
+630013;Windmill Heights;风车村高台;63425500
+630002;Minor Erdtree Church;小黄金树教堂;63435000
+630005;Hermit Merchant's Shack;遁世商人的破屋;63435300
+630012;Outer Wall Battleground;城外战场遗迹;63435301
+630016;East Altus Minor Erdtree;亚坛东部小黄金树;63445300
+630014;Capital Rampart;王城城墙前方;63455200
+640000;Smoldering Church;熏火教堂;64464000
+640001;Rotview Balcony;腐败旁露台;64464001
+640013;Fort Gael North;盖尔要塞北方;64473900
+640005;Caelem Ruins;奇列姆废墟;64474000
+640030;West Caelid Minor Erdtree;盖利德西部小黄金树;64474001
+640002;Cathedral of Dragon Communion;大龙飨教堂;64483600
+640019;Caelid Highway South;盖利德大道南方;64483700
+640015;Aeonia Swamp Shore;艾奥尼亚沼泽（岸边）;64483800
+640026;Astray from Caelid Highway North;盖利德大道北方（偏离大道后）;64483801
+640003;Smoldering Wall;熏烧火墙;64483900
+640004;Deep Siofra Well;希芙拉河的出口井;64484000
+640020;Dragonbarrow West;龙墓西方;64484001
+640006;Isolated Merchant's Shack;隐居商人的破屋;64484100
+640016;Southern Aeonia Swamp Bank;艾奥尼亚沼泽（南岸）;64493700
+640007;Heart of Aeonia;艾奥尼亚中心地;64493800
+640028;Inner Aeonia;艾奥尼亚沼泽（深处）;64493801
+640029;Sellia Backstreets;瑟利亚镇后侧;64493900
+640008;Chair-Crypt of Sellia;瑟利亚椅子庙;64493901
+640017;Sellia Under-Stair;瑟利亚镇（楼梯下方）;64493902
+640009;Impassable Greatbridge;不破大桥;64503600
+640018;Church of the Plague;腐败病教堂;64503800
+640022;Dragonbarrow Fork;龙墓的岔路;64504000
+640010;Redmane Castle Plaza;红狮子城（广场）;64513600
+640011;Redmane Staging Area;红狮子集结地;64513601
+640034;Redmane Storehouse;红狮子仓库;64513602
+640035;Redmane Gatehouse;红狮子门房;64513603
+640021;Fort Faroth;法洛斯要塞;64513900
+640032;East Caelid Minor Erdtree;盖利德东部小黄金树;64514000
+640025;Bestial Sanctum;野兽神殿;64514300
+640033;Sanctum Undercroft;神殿下方;64514301
+640014;Starscourge Radahn;“碎星”拉塔恩;64523800
+640023;Lenne's Rise;雷恩魔法师塔;64524100
+640024;Farum Greatbridge;法姆大桥;64524200
+650000;Forbidden Lands;禁域;65475100
+651003;Apostate Derelict;离教废屋;65475800
+651002;Ordina, Liturgical Town;“仪典镇”奥缇那;65485700
+650013;Rold Reliquary;洛德圣龛;65495200
+650001;Zamor Ruins;萨米尔废墟;65495300
+650010;Grand Lift of Rold;洛德大升降机;65495301
+651000;Consecrated Snowfield;化圣雪原;65495400
+651001;Inner Consecrated Snowfield;化圣雪原（深处）;65495500
+651004;Consecrated Snowfield Minor Erdtree;化圣雪原小黄金树;65495700
+650006;Church of Repose;安歇教堂;65515300
+650011;South Mountaintops Minor Erdtree;巨人山顶南部小黄金树;65515301
+650002;Ancient Snow Valley Ruins;古遗迹降雪谷;65515600
+650051;Snow Valley Ruins Overlook;古遗迹山谷的山崖上;65515700
+650052;Castle Sol Main Gate;索尔城（正门）;65515701
+650053;Church of the Eclipse;日蚀教堂;65515702
+650054;Castle Sol Rooftop;索尔城（屋顶）;65515703
+650007;Foot of the Forge;火焰大锅下方;65525300
+650005;Giants' Gravepost;巨人墓碑;65525400
+650050;Whiteridge Road;降雪棱线路;65525600
+650012;North Mountaintops Minor Erdtree;巨人山顶北部小黄金树;65525601
+650003;Freezing Lake;结冰湖;65525700
+650008;Fire Giant;火焰巨人;65535200
+650009;Forge of the Giants;巨人火焰大锅;65545300
+650004;First Church of Marika;玛莉卡第一教堂;65545500
+683002;Cerulean Coast West;青蓝海岸西边;68463900
+683003;The Fissure;大洞;68473600
+683000;Ellac River Downstream;艾拉克河下游;68474101
+683005;Cerulean Coast Cross;青蓝海岸的十字记号;68483700
+683006;Cerulean Bluffs;青蓝断崖;68483800
+683001;Cerulean Coast;青蓝海岸;68483900
+684001;Charo's Hidden Grave;卡罗隐藏墓地;68483901
+684004;Rauh Reliquary of the Thunder-Bound;掣雷的劳弗圣龛;68484000
+686001;Divided Falls;水帘瀑布;68484300
+684000;Grand Altar of Dragon Communion;龙飨大祭坛;68493900
+684002;Dragon Resting Grounds;龙之休憩地;68494100
+684003;Sarrulat, Basin Town;盆地小镇·赛鲁拉特;68494101
+683004;Finger Ruins of Rhia;利亚指头遗迹;68503800
+686000;Abyssal Woods;谷底森林;68504200
+686003;Woodland Trail;林中兽径;68514200
+685000;Foot of the Jagged Peak;尖刺山的山脚;68524000
+686002;Forsaken Graveyard;荒废墓地;68524300
+685001;Jagged Peak Mountainside;尖刺山（中段）;68533900
+686004;Church Ruins;废弃教堂;68534100
+685002;Jagged Peak Summit;尖刺山（山顶）;68543900
+685004;Rauh Reliquary of the Scorched;炙焦的劳弗圣龛;68543901
+685003;Rest of the Dread Dragon;狂龙之席;68553900
+694004;Ancient Ruins, Grand Stairway;古遗迹（大楼梯）;69444500
+694005;Church of the Bud;花蕾教堂;69444501
+694003;Church of the Bud, Main Entrance;花蕾教堂（正门口）;69444600
+694002;Rauh Ancient Ruins, West;劳弗古遗迹（西方）;69454501
+690013;Temple Town Ruins;神殿镇废墟;69454600
+690014;Ravine North;峡谷北方;69454700
+694007;Rauh Reliquary of Balance;均衡的劳弗圣龛;69464500
+694001;Rauh Ancient Ruins, East;劳弗古遗迹（东方）;69464700
+694008;Rauh Reliquary of the Rugged;粗犷的劳弗圣龛;69464701
+690007;Scadu Altus, West;幽影亚坛（西方）;69474500
+694000;Viaduct Minor Tower;高架桥的小塔;69474700
+694006;Rauh Steppes;劳弗草原;69474701
+690000;Highroad Cross;大道旁的十字记号;69484500
+690012;Ancient Ruins Base;古遗迹下方;69484700
+690008;Moorth Highway, South;穆斯大道（南方）;69494300
+690009;Fort of Reprimand;惩罚要塞;69494301
+690010;Behind the Fort of Reprimand;惩罚要塞（后方）;69494302
+690002;Moorth Ruins;穆斯废墟;69494400
+690003;Bonny Village;波尼村;69494401
+690019;Minor Erdtree Cave;小黄金树洞窟;69494500
+690016;Castle Watering Hole;城底积水处;69494700
+692000;Scaduview;望影露台;69494800
+692001;Shadow Keep, Back Gate;幽影城（后门）;69494801
+690011;Scaduview Cross;远望幽影树的十字记号;69504300
+690018;Recluses' River Downstream;隐者河下游;69504400
+690017;Recluses' River Upstream;隐者河上游;69504500
+693000;Hinterland;隐匿之地;69504800
+696000;Scadutree Base;幽影树的树脚;69504801
+690004;Bridge Leading to the Village;通村吊桥;69514400
+400201;Abyssal Overlook;谷底眺望处;69514401
+690006;Cathedral of Manus Metyr;玛努斯·美特大教堂;69514500
+690005;Church District Highroad;教区大道;69514700
+693003;Shaman Village;巫者村;69514701
+693001;Fingerstone Hill;指岩山丘;69514800
+693002;Hinterland Bridge;隐匿之地（桥边）;69514801
+6930000;Finger Ruins of Dheo;狄欧指头遗迹;69534600

@@ -31,7 +31,7 @@ namespace ERParamEditor
         List<UpdateParamTask> updateParamTasks = new();
         List<UpdateParamOptionItem> updateParamOptions = new();
         List<CustomTablePanel> customTablePanels = new();
-        DictConfig currentConfig = new DictConfig();
+        //DictConfig currentConfig = new DictConfig();
 
         public ParamProject paramProject;
 
@@ -51,12 +51,14 @@ namespace ERParamEditor
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel4.Dock = DockStyle.Fill;
 
+            ControlUtils.InitEditSelection(comboBoxTag, ParamOptionsFile.GetList(), paramProject.GetLastOptionsTag());
+
             InitPages();
         }
 
         private void InitPages()
         {
-            currentConfig = ParamUpdateFormUtils.loadOptions();
+            DictConfig currentConfig = ParamUpdateFormUtils.loadOptions();
             tableLayoutPanel1.RowStyles.Clear();
             tableLayoutPanel2.RowStyles.Clear();
             tableLayoutPanel3.RowStyles.Clear();
@@ -77,11 +79,12 @@ namespace ERParamEditor
             InitPageShop(tableLayoutPanel5);
 
 
+            ParamUpdateFormUtils.applyOptions(customTablePanels,currentConfig);
 
-            for (int i = 0; i < customTablePanels.Count; i++)
-            {
-                customTablePanels[i].SetValues(currentConfig);
-            }
+            //for (int i = 0; i < customTablePanels.Count; i++)
+            //{
+            //    customTablePanels[i].SetValues(currentConfig);
+            //}
 
             MultiLang.ApplyForm(this, "ParamUpdateForm");
 
@@ -157,14 +160,28 @@ namespace ERParamEditor
                 UpdateParamOptionNames.GetRuneRate, rateList, rateList, "1");
 
             ///
-            string unlockGraceNames = MultiLang.GetText("UpdateParam", UpdateParamOptionNames.UnlockGrace,
-                 UnlockGraceConfig.GetNameList());
-            panel.AddSelectionNameValue(
-               UpdateParamOptionNames.UnlockGrace,
-               UpdateParamOptionNames.UnlockGrace,
-               unlockGraceNames, UnlockGraceConfig.GetValueList(), "0");
-
+            if (GlobalConfig.Debug)
+            {
+                string unlockGraceNames = MultiLang.GetText("UpdateParam", UpdateParamOptionNames.UnlockGrace3,
+                     UnlockGraceConfig.GetNameList3());
+                string unlockGraceValues = UnlockGraceConfig.GetValueList3();
+                panel.AddSelectionNameValue(
+                   UpdateParamOptionNames.UnlockGrace,
+                   UpdateParamOptionNames.UnlockGrace,
+                   unlockGraceNames, unlockGraceValues, "0");
+            }
+            else { 
+                string unlockGraceNames = MultiLang.GetText("UpdateParam", UpdateParamOptionNames.UnlockGrace,
+                     UnlockGraceConfig.GetNameList());
+                string unlockGraceValues = UnlockGraceConfig.GetValueList();
+                panel.AddSelectionNameValue(
+                   UpdateParamOptionNames.UnlockGrace,
+                   UpdateParamOptionNames.UnlockGrace,
+                   unlockGraceNames, unlockGraceValues, "0");
+            }
             //panel.AddCheckBox(UpdateParamOptionNames.UnlockRoundtableHold, "");
+            //if ( GlobalConfig.Debug)
+            //    panel.AddCheckBox(UpdateParamOptionNames.UnlockGraceAll, "");
             panel.AddCheckBox(UpdateParamOptionNames.EnableFastTravel, "");
 
 
@@ -281,10 +298,14 @@ namespace ERParamEditor
 
         public void Exec(ParamProject paramProject)
         {
+            ParamOptionsFile.Init(paramProject);
 
             ParamUpdateFormUtils.Init(paramProject);
             this.paramProject = paramProject;
             ShowDialog();
+
+            ParamUpdateFormUtils.saveOptions(customTablePanels);
+
         }
 
         bool showFirstFlag = true;
@@ -304,6 +325,7 @@ namespace ERParamEditor
         void execUpdatePublish(string? msg, bool publishFlag)
         {
 
+            /*
             DictConfig config = new();
             for (int i = 0; i < customTablePanels.Count; i++)
             {
@@ -311,6 +333,8 @@ namespace ERParamEditor
             }
 
             ParamUpdateFormUtils.saveOptions(config);
+            */
+            var config = ParamUpdateFormUtils.saveOptions(customTablePanels);
             ParamUpdateFormUtils.ExecUpdatePublish(this, msg, publishFlag, config);
             Close();
         }
@@ -324,6 +348,41 @@ namespace ERParamEditor
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             execUpdatePublish(null, false);
+        }
+
+        private void comboBoxTag_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //ParamUpdateFormUtils.saveOptions(customTablePanels);
+
+            var v = ControlUtils.GetComboBoxValue(comboBoxTag);
+            if (v == null)
+                return;
+            var tag = v.ToString().Trim();
+            if (tag != ParamOptionsFile.GetCurrentTag()) {
+                ParamUpdateFormUtils.saveOptions(customTablePanels);
+            }
+            ParamOptionsFile.SetCurrentTag(tag);
+            var  config = ParamUpdateFormUtils.loadOptions();
+
+            ParamUpdateFormUtils.applyOptions(customTablePanels, config);
+
+        }
+
+        private void buttonSaveAs_Click(object sender, EventArgs e)
+        {
+            var v = ControlUtils.GetComboBoxValue(comboBoxTag);
+            if (v != null )
+            {
+                var tag = v.ToString().Trim();
+
+                DictConfig config = new();
+                for (int i = 0; i < customTablePanels.Count; i++)
+                {
+                    customTablePanels[i].GetValues(config);
+                }
+                ParamOptionsFile.SetCurrentTag(tag);
+                ParamUpdateFormUtils.saveOptions(config);
+            }
         }
     }
 }

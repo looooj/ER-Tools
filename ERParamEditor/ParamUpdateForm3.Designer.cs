@@ -35,20 +35,22 @@ namespace ERParamEditor
             tableLayoutPanel2 = new TableLayoutPanel();
             tabPage3 = new TabPage();
             tableLayoutPanel3 = new TableLayoutPanel();
+            tabPageShop = new TabPage();
+            tableLayoutPanel5 = new TableLayoutPanel();
             tabPage4 = new TabPage();
             tableLayoutPanel4 = new TableLayoutPanel();
             panel1 = new Panel();
+            comboBoxTag = new ComboBox();
+            buttonSaveAs = new Button();
             buttonPublish = new Button();
             buttonUpdate = new Button();
-            tabPageShop = new TabPage();
-            tableLayoutPanel5 = new TableLayoutPanel();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
+            tabPageShop.SuspendLayout();
             tabPage4.SuspendLayout();
             panel1.SuspendLayout();
-            tabPageShop.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -136,6 +138,30 @@ namespace ERParamEditor
             tableLayoutPanel3.Size = new Size(962, 567);
             tableLayoutPanel3.TabIndex = 2;
             // 
+            // tabPageShop
+            // 
+            tabPageShop.Controls.Add(tableLayoutPanel5);
+            tabPageShop.Location = new Point(4, 26);
+            tabPageShop.Name = "tabPageShop";
+            tabPageShop.Padding = new Padding(3);
+            tabPageShop.Size = new Size(1015, 607);
+            tabPageShop.TabIndex = 4;
+            tabPageShop.Text = "Shop";
+            tabPageShop.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel5.Location = new Point(26, 20);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle());
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel5.Size = new Size(962, 567);
+            tableLayoutPanel5.TabIndex = 4;
+            // 
             // tabPage4
             // 
             tabPage4.Controls.Add(tableLayoutPanel4);
@@ -162,6 +188,8 @@ namespace ERParamEditor
             // 
             // panel1
             // 
+            panel1.Controls.Add(comboBoxTag);
+            panel1.Controls.Add(buttonSaveAs);
             panel1.Controls.Add(buttonPublish);
             panel1.Controls.Add(buttonUpdate);
             panel1.Dock = DockStyle.Bottom;
@@ -169,6 +197,25 @@ namespace ERParamEditor
             panel1.Name = "panel1";
             panel1.Size = new Size(1058, 43);
             panel1.TabIndex = 1;
+            // 
+            // comboBoxTag
+            // 
+            comboBoxTag.FormattingEnabled = true;
+            comboBoxTag.Location = new Point(19, 9);
+            comboBoxTag.Name = "comboBoxTag";
+            comboBoxTag.Size = new Size(146, 25);
+            comboBoxTag.TabIndex = 4;
+            comboBoxTag.SelectedIndexChanged += comboBoxTag_SelectedIndexChanged;
+            // 
+            // buttonSaveAs
+            // 
+            buttonSaveAs.Location = new Point(182, 9);
+            buttonSaveAs.Name = "buttonSaveAs";
+            buttonSaveAs.Size = new Size(75, 23);
+            buttonSaveAs.TabIndex = 2;
+            buttonSaveAs.Text = "SaveAs";
+            buttonSaveAs.UseVisualStyleBackColor = true;
+            buttonSaveAs.Click += buttonSaveAs_Click;
             // 
             // buttonPublish
             // 
@@ -190,30 +237,6 @@ namespace ERParamEditor
             buttonUpdate.UseVisualStyleBackColor = true;
             buttonUpdate.Click += buttonUpdate_Click;
             // 
-            // tabPageShop
-            // 
-            tabPageShop.Controls.Add(tableLayoutPanel5);
-            tabPageShop.Location = new Point(4, 26);
-            tabPageShop.Name = "tabPageShop";
-            tabPageShop.Padding = new Padding(3);
-            tabPageShop.Size = new Size(1015, 607);
-            tabPageShop.TabIndex = 4;
-            tabPageShop.Text = "Shop";
-            tabPageShop.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel5
-            // 
-            tableLayoutPanel5.ColumnCount = 2;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel5.Location = new Point(26, 20);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 1;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle());
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel5.Size = new Size(962, 567);
-            tableLayoutPanel5.TabIndex = 4;
-            // 
             // ParamUpdateForm3
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -233,9 +256,9 @@ namespace ERParamEditor
             tabPage1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tabPage3.ResumeLayout(false);
+            tabPageShop.ResumeLayout(false);
             tabPage4.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            tabPageShop.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -255,5 +278,7 @@ namespace ERParamEditor
         private TableLayoutPanel tableLayoutPanel4;
         private TabPage tabPageShop;
         private TableLayoutPanel tableLayoutPanel5;
+        private Button buttonSaveAs;
+        private ComboBox comboBoxTag;
     }
 }

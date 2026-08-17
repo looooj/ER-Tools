@@ -20,6 +20,7 @@ namespace ERParamUtils
         string CreateTime = "";
         string templateName = "";
         string paramErrors = "";
+        string lastOptionsTag = "default";
         BND4 currentBinder = null;
         GameType gameType = GameType.EldenRing;
 
@@ -54,6 +55,14 @@ namespace ERParamUtils
         public string GetName()
         {
             return Name;
+        }
+
+        public string GetLastOptionsTag() { 
+            return lastOptionsTag;
+        }
+
+        public void SetLastOptionsTag(string tag) { 
+            lastOptionsTag = tag;
         }
 
         public string GetDir()
@@ -448,6 +457,7 @@ namespace ERParamUtils
             }
             config.SetString("ModRegulationPath", modRegulationPath);
             config.SetString("CreateTime", CreateTime);
+            config.SetString("LastOptionsTag", lastOptionsTag);
             config.Save(path);
 
         }
@@ -460,6 +470,7 @@ namespace ERParamUtils
             config.SetString("BaseDir", GlobalConfig.BaseDir);
             config.Load(path);
             ModRegulationPath = config.GetString("ModRegulationPath", "?");
+            lastOptionsTag = config.GetString("LastOptionsTag", "default");
             CreateTime = config.GetString("CreateTime", "?");
         }
 

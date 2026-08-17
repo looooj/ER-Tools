@@ -1,4 +1,4 @@
-﻿using ERParamUtils;
+using ERParamUtils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +20,31 @@ namespace ERParamEditor
             TextBox textBox1 = new TextBox();
             textBox1.Parent = parent;
             textBox1.Text = value;
+        }
+
+        public static void InitSelection(ComboBox comboBox1, List<string> items, string value) {
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.Items.AddRange(items.ToArray<string>());
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (value == items[i])
+                {
+                    comboBox1.SelectedIndex = i;
+                }
+            }
+        }
+
+        public static void InitEditSelection(ComboBox comboBox1, List<string> items, string value)
+        {
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDown;
+            comboBox1.Items.AddRange(items.ToArray<string>());
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (value == items[i])
+                {
+                    comboBox1.SelectedIndex = i;
+                }
+            }
         }
 
         public static void AddSelection2(Control parent, string namePrefix, string text, string selections, string value)
@@ -47,7 +72,13 @@ namespace ERParamEditor
 
         public static object GetComboBoxValue(ComboBox comboBox ) {
 
-            return comboBox.SelectedValue;
+            var v = comboBox.SelectedValue;
+            if (v == null) {
+
+                v = comboBox.Text;
+                return v;
+            }
+            return v;
         }
 
         public static Control FindControl(Control parent, string name) { 

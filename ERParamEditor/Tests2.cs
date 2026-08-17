@@ -49,7 +49,8 @@ namespace ERParamEditor
 
         }
 
-        static void FindRemnant(List<string> items,ParamProject proj,string paramName) {
+        static void FindRemnant(List<string> items, ParamProject proj, string paramName)
+        {
 
             items.Add("====" + paramName + "====");
             var param = proj.FindParam(paramName);
@@ -81,12 +82,45 @@ namespace ERParamEditor
                 return;
             List<string> items = new List<string>();
 
-            FindRemnant(items, proj,ParamNames.ItemLotParamEnemy);
+            FindRemnant(items, proj, ParamNames.ItemLotParamEnemy);
             FindRemnant(items, proj, ParamNames.ItemLotParamMap);
             string path = proj.GetUpdateDir() + "\\FindRemnant.txt";
             string r = string.Join("\n", items);
 
             File.WriteAllText(path, r);
+
+        }
+
+
+        public static Dictionary<int, string> LoadGraceText(string baseDir, string[] names)
+        {
+
+            Dictionary<int, string> ret = new Dictionary<int, string>();
+
+            foreach (string name in names)
+            {
+
+                string fn = baseDir + "\\" + name;
+
+                var lines = File.ReadAllLines(fn);
+
+                foreach (string line in lines)
+                {
+
+                    var t = line.Trim();
+
+                    var items = t.Split(";");
+
+                    if (items.Length > 1)
+                    {
+                        var id = int.Parse(items[0]);
+                        if (id >= 100000 )
+                            ret.TryAdd(id, t);
+                    }
+                }
+
+            }
+            return ret;
 
         }
 
@@ -101,35 +135,60 @@ namespace ERParamEditor
             if (param == null)
                 return;
 
+
+
+            string baseDir = "C:\\EldenRingMods\\ER-Tools\\docs\\cer-item-text";
+            string[] names = { "item_dlc02PlaceName.txt", "item_dlc02PlaceName_dlc01.txt" };
+            var d = LoadGraceText(baseDir, names);
+
+
             List<string> items = new List<string>();
+            List<string> items2 = new List<string>();
+            List<string> items3 = new List<string>();
 
             var rows = param.Rows;
             foreach (var row in rows)
             {
 
-                if (row.Name == null || row.Name.Length < 6) {
+                if (row.Name == null || row.Name.Length < 6)
+                {
                     continue;
                 }
 
                 var rowName = row.Name;
-                var textId = ParamRowUtils.GetCellInt(row, "textId1",0);
-
-                var line = string.Format("{0};{1};{2}",textId,rowName,row.ID);
-
-
+                var textId = ParamRowUtils.GetCellInt(row, "textId1", 0);
+                var line = string.Format("{0};{1};{2}", textId, rowName, row.ID);
                 items.Add(line);
+
+                if (d.ContainsKey(textId))
+                {
+                    items2.Add(d[textId] + ";" + row.ID);
+                }
+                else {
+                    items3.Add(line);
+                }
+
 
             }
 
             string path = proj.GetUpdateDir() + "\\ParamGrace.txt";
             string r = string.Join("\n", items);
-
             File.WriteAllText(path, r);
+
+            path = proj.GetUpdateDir() + "\\ParamGraceText.txt";
+            r = string.Join("\n", items2);
+            File.WriteAllText(path, r);
+
+            path = proj.GetUpdateDir() + "\\ParamGraceText-N.txt";
+            r = string.Join("\n", items3);
+            File.WriteAllText(path, r);
+
 
         }
 
 
-        static void getMaxMinValue(Dictionary<string,int> dict, string key, int v) {
+        static void getMaxMinValue(Dictionary<string, int> dict, string key, int v)
+        {
 
             string maxKey = key + "_max";
             string minKey = key + "_min";
@@ -142,7 +201,8 @@ namespace ERParamEditor
                     dict[maxKey] = v;
                 }
             }
-            else { 
+            else
+            {
                 dict[maxKey] = v;
             }
 
@@ -154,7 +214,8 @@ namespace ERParamEditor
                     dict[minKey] = v;
                 }
             }
-            else {
+            else
+            {
                 dict[minKey] = v;
             }
         }
@@ -182,8 +243,9 @@ namespace ERParamEditor
             }
 
             var lines = new List<string>();
-            foreach (var key in dict.Keys) { 
-                lines.Add(key + "=" + dict[key] );
+            foreach (var key in dict.Keys)
+            {
+                lines.Add(key + "=" + dict[key]);
             }
 
             string path = proj.GetUpdateDir() + "\\npc-max-min.txt";
