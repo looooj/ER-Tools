@@ -27,6 +27,11 @@ namespace ERParamUtils
         private Dictionary<string, SoulsParam.Param> _params = new();
         //private Dictionary<string, ParamWrapper> _paramWrappers = new();
         private ulong _paramVersion;
+        private string _paramStrVersion="?";
+
+        public string GetParamVersion() { 
+            return _paramStrVersion;
+        }
 
         private Dictionary<string, PARAMDEF> _paramdefs = new();
 
@@ -173,7 +178,7 @@ namespace ERParamUtils
         {
             paramErrors = "";
             _params.Clear();
-
+            _paramStrVersion = "?";
             string path = GetRegulationPath();
             InitCopy(false);
             //string orgPath = GetOrginalRegulationPath();
@@ -183,6 +188,7 @@ namespace ERParamUtils
 
             LoadParamdefs();
             currentBinder = SFUtil.DecryptERRegulation(path);
+            _paramStrVersion = currentBinder.Version;
             LoadParamFromBinder(currentBinder, useFilter, out _paramVersion, useFilter);
             ImpRowNames();
 
@@ -493,7 +499,7 @@ namespace ERParamUtils
             string updateDir = GetUpdateDir();
             Directory.CreateDirectory(updateDir);
 
-
+            /*
             string templateDir = GlobalConfig.GetTemplateDir() + "\\" + templateName;
 
             var files = Directory.GetFiles(templateDir + "\\update", "*.txt");
@@ -510,7 +516,7 @@ namespace ERParamUtils
             string updateOpt1 = templateDir + "\\update-opt.txt";
             string updateOpt2 = GetDir() + "\\update-opt.txt";
             if (File.Exists(updateOpt1))
-                File.Copy(updateOpt1, updateOpt2);
+                File.Copy(updateOpt1, updateOpt2); */
 
         }
     }

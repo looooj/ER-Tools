@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,6 +43,7 @@ namespace ERParamUtils
              "ShopLineupParam",
              "ShopLineupParam_Recipe",
              "CharaInitParam",
+             "ChrActivateConditionParam",
              "WorldMapPointParam",
              "WorldMapPlaceNameParam",
              "WorldMapPieceParam",
@@ -81,10 +82,14 @@ namespace ERParamUtils
         static public void LoadParamNames() {
 
             string fn = GlobalConfig.BaseDir + "\\param-names.txt";
-            var result = File.ReadAllLines(fn);
-            if ( result.Length > 1) {
-                includeParamNames = result;
-                return;
+            if (File.Exists(fn))
+            {
+                var result = File.ReadAllLines(fn);
+                if (result.Length > 5)
+                {
+                    includeParamNames = result;
+                    return;
+                }
             }
             includeParamNames = defaultIncludeParamNames;
         }

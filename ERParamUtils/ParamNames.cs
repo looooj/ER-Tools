@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,7 @@ namespace ERParamUtils
         public static readonly string ItemLotParamMap = "ItemLotParam_map";
         public static readonly string ItemLotParamEnemy = "ItemLotParam_enemy";
         public static readonly string CharaInitParam = "CharaInitParam";
-
+        public static readonly string ChrActivateConditionParam = "ChrActivateConditionParam";
         public static readonly string SpEffectParam = "SpEffectParam";
         public static readonly string SpEffectSetParam = "SpEffectSetParam";
 
