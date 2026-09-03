@@ -1,6 +1,7 @@
-﻿using ERParamUtils.UpateParam;
+using ERParamUtils.UpateParam;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,34 @@ namespace ERParamUtils.UpdateParam
     public class ParamUpdateRequire
     {
 
+
+
+        public static void ExecSpec(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+            /*
+           34000000;Finger Seal;指头圣印记
+34010000;Godslayer's Seal;狩猎神祇圣印记
+34020000;Giant's Seal;巨人圣印记
+34030000;Gravel Stone Seal;碎石圣印记
+34040000;Clawmark Seal;爪痕圣印记
+34060000;Golden Order Seal;黄金律法圣印记
+34070000;Erdtree Seal;黄金树圣印记
+34080000;Dragon Communion Seal;龙飨印记
+34090000;Frenzied Flame Seal;癫火圣印记  
+             */
+            var idSeal = new int[]{ 34000000, 34010000, 34020000,
+                34030000, 34040000,
+                34060000, 34070000,
+                34080000, 34090000,
+            };
+
+            foreach (var id in idSeal) { 
+            
+                RemoveWeightRequire2(updateCommand, id);
+            }
+
+
+        }
 
 
         public static void Exec(ParamProject paramProject, UpdateCommand updateCommand)
@@ -55,6 +84,8 @@ namespace ERParamUtils.UpdateParam
             }
         }
 
+
+
         public static void RemoveWeightRequire(UpdateCommand updateCommand, int eqId)
         {
             SoulsParam.Param? param = updateCommand.GetProject().FindParam(ParamNames.EquipParamWeapon);
@@ -78,6 +109,17 @@ namespace ERParamUtils.UpdateParam
                 updateCommand.AddItem(row, key, "0");
             }
             updateCommand.AddItem(row, "weight", 1);
+        }
+
+        static void RemoveWeightRequire2(UpdateCommand updateCommand, int id)
+        {
+            string[] keys = { "properStrength", "properAgility",
+                    "properMagic", "properFaith","properLuck"};
+            foreach (var key in keys)
+            {
+                updateCommand.AddItem(ParamNames.EquipParamWeapon, id, key, "0");
+            }
+            updateCommand.AddItem(ParamNames.EquipParamWeapon, id, "weight", 1);
         }
 
         public static void ProcMagic(ParamProject paramProject, UpdateCommand updateCommand)
