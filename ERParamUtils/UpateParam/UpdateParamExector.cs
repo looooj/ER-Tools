@@ -2,6 +2,7 @@
 using ERParamUtils.UpateParam;
 using SoulsFormats;
 using System.Reflection.Metadata.Ecma335;
+using System.Threading.Tasks;
 
 namespace ERParamUtils.UpdateParam
 {
@@ -298,6 +299,26 @@ namespace ERParamUtils.UpdateParam
             UpdateLogger.Clear();
         }
 
+        static void SetupDayNight(UpdateCommand updateCommand) {
+
+            //timeStartHour = 20  Time: Start Hour(出現開始インゲーム時間_時) u8
+            //timeStartMin = 0  Time: Start Minute(出現開始インゲーム時間_分) u8
+            //timeEndHour = 5  Time: End Hour(出現終了インゲーム時間_時) u8
+            //timeEndMin = 59  Time: End Minute(出現終了インゲーム時間_分) u8
+            //101000
+            
+            UpdateLogger.InfoTime("SetupDayNight");
+            string[] keys = {
+                "timeStartHour",
+                "timeStartMin",
+                "timeEndHour",
+                "timeEndMin"
+            };
+            updateCommand.AddKeysItem(ParamNames.ChrActivateConditionParam,
+                101000, keys, "0");
+
+        }
+
         public static void Exec(ParamProject paramProject, UpdateParamExecOptions options)
         {
 
@@ -314,132 +335,127 @@ namespace ERParamUtils.UpdateParam
                 paramProject.Restore();
             }
 
-            UpdateShopLineupParamRecipe.Init(paramProject);
-
-            UpdateCommand updateCommand = new UpdateCommand(paramProject);
-            updateCommand.AddOption(options.UpdateCommandOptions);
-
-            ModConfig.SetModType(updateCommand);
-
-            /*
-            foreach (var task in options.UpdateTasks)
+            try
             {
-                try
+
+                UpdateShopLineupParamRecipe.Init(paramProject);
+
+                UpdateCommand updateCommand = new UpdateCommand(paramProject);
+                updateCommand.AddOption(options.UpdateCommandOptions);
+
+                ModConfig.SetModType(updateCommand);
+
+                UpdateLogger.InfoTime("options\n{0}", options.CurrentConfig.GetKeyValueString("\n"));
+
+                SetupDayNight(updateCommand);
+
+                //updateCommand.SetOption(UpdateParamOption.ReplaceTalismanPouch, 1);
+                UpdateCharaInit.Exec(paramProject, updateCommand);
+
+                UpdateShopLineupParamRecipe.AddBellBearing(paramProject, updateCommand);
+                UpdateShopLineupParamRecipe.AddOthers(paramProject, updateCommand);
+                UpdateShopLineupParamRecipe.UnlockCrafting(paramProject, updateCommand);
+
+
+                ParamUpdateRequire.ExecSpec(paramProject, updateCommand);
+                ParamUpdateRequire.Exec(paramProject, updateCommand);
+
+                ParamRemoveWeight.Exec(paramProject, updateCommand);
+                UpdateBuddyStone.Exec(paramProject, updateCommand);
+
+                if (ModConfig.InitAccSlot())
                 {
-                    UpdateLogger.InfoTime("ExecBefore {0}", task.GetType().Name);
-                    task.ExecBefore(paramProject, updateCommand);
+                    updateCommand.AddItem(
+                        UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
+                    updateCommand.AddItem(
+                        UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));
+
+                    updateCommand.SetOption(UpdateParamOptionNames.ReplaceTalismanPouch, 1);
+                    updateCommand.SetOption(UpdateParamOptionNames.ReplaceMemoryStone, 1);
                 }
-                catch (Exception ex)
+
+                if (ModConfig.AddMapPiece())
                 {
-                    logger.Error(ex, ex.Message + " " + task.UpdateName);
-                    throw new Exception("ExecBefore (" + task.UpdateName + ") Error " + ex.Message);
+                    UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
                 }
-            }*/
 
-            //updateCommand.SetOption(UpdateParamOption.ReplaceTalismanPouch, 1);
-            UpdateCharaInit.Exec(paramProject, updateCommand);
+                //if (updateCommand.HaveOption(UpdateParamOptionNames.EnhanceMinicTear)) {
+                //    UpdateRow.LoadUpdateRow("patch-mimic-tear.txt", updateCommand);
+                //}
 
-            UpdateShopLineupParamRecipe.AddBellBearing(paramProject, updateCommand);
-            UpdateShopLineupParamRecipe.AddOthers(paramProject, updateCommand);
-            UpdateShopLineupParamRecipe.UnlockCrafting(paramProject, updateCommand);
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGoldenSeedSacredTear))
+                {
+                    UpdateShopLineupParamRecipe.AddSeedTear(paramProject, updateCommand);
+                }
 
-
-            ParamUpdateRequire.Exec(paramProject, updateCommand);
-            ParamRemoveWeight.Exec(paramProject, updateCommand);
-            UpdateBuddyStone.Exec(paramProject, updateCommand);
-
-            if (ModConfig.InitAccSlot())
-            {
-                updateCommand.AddItem(
-                    UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseMagicSlotSize", "10"));
-                updateCommand.AddItem(
-                    UpdateCommandItem.Create(ParamNames.PlayerCommonParam, 0, "baseAccSlotNum", "4"));
-
-                updateCommand.SetOption(UpdateParamOptionNames.ReplaceTalismanPouch, 1);
-                updateCommand.SetOption(UpdateParamOptionNames.ReplaceMemoryStone, 1);
-            }            
-
-            if (ModConfig.AddMapPiece())
-            {
-                UpdateShopLineupParamRecipe.AddMapPiece(paramProject, updateCommand);
-            }
-
-            //if (updateCommand.HaveOption(UpdateParamOptionNames.EnhanceMinicTear)) {
-            //    UpdateRow.LoadUpdateRow("patch-mimic-tear.txt", updateCommand);
-            //}
-
-            if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGoldenSeedSacredTear))
-            {
-                UpdateShopLineupParamRecipe.AddSeedTear(paramProject, updateCommand);
-            }
-
-            if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceScadutreeFragmentSpiritAsh))
-            {
-                UpdateShopLineupParamRecipe.AddFragmentAsh(paramProject, updateCommand);
-            }
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceScadutreeFragmentSpiritAsh))
+                {
+                    UpdateShopLineupParamRecipe.AddFragmentAsh(paramProject, updateCommand);
+                }
 
 
-            if (updateCommand.HaveOption(UpdateParamOptionNames.GetRuneRate))
-            {
-                UpdateSoul.Proc(paramProject, updateCommand);
-            }
+                if (updateCommand.HaveOption(UpdateParamOptionNames.GetRuneRate))
+                {
+                    UpdateSoul.Proc(paramProject, updateCommand);
+                }
 
-            //if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGiantCrowSoul))
-            //{
+                //if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceGiantCrowSoul))
+                //{
 
                 //45610068,Bloodbane Giant Crow,11038,0
                 //updateCommand.AddItem(
                 //    UpdateCommandItem.Create(ParamNames.NpcParam, 45610068, "getSoul", "10000000"));
 
-            //}
+                //}
 
 
-            if ( ModConfig.AddWhetblade())
-            {
-                UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
-            }
+                if (ModConfig.AddWhetblade())
+                {
+                    UpdateShopLineupParamRecipe.AddWhetblade(paramProject, updateCommand);
+                }
 
-            //for cer mod
-            if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceRemnant)) { 
-                UpdateShopLineupParamRecipe.AddRemnant(paramProject, updateCommand);
-            }
+                //for cer mod
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceRemnant))
+                {
+                    UpdateShopLineupParamRecipe.AddRemnant(paramProject, updateCommand);
+                }
 
-            UpdateGrace.UnlockGrace(paramProject, updateCommand);
+                UpdateGrace.UnlockGrace(paramProject, updateCommand);
+                UpdateGrace.SetEnableFastTravel(paramProject, updateCommand);
 
-            //UpdateGrace.UnlockGlaceDefault(updateCommand);
-            //UpdateCharaInit.AddDefault(paramProject,updateCommand);
-            UpdateTalisman.Exec(paramProject, updateCommand);
+                //UpdateGrace.UnlockGlaceDefault(updateCommand);
+                //UpdateCharaInit.AddDefault(paramProject,updateCommand);
+                UpdateTalisman.Exec(paramProject, updateCommand);
 
-            UpdateShopLineupParam.Exec(paramProject, updateCommand);
+                UpdateShopLineupParam.Exec(paramProject, updateCommand);
 
 
-            if ( ModConfig.GetModType() == ModConfig.ModType.STD)
-                 UpdateRow.LoadUpdateRow("patch-lot.txt",updateCommand);
+                if (ModConfig.GetModType() == ModConfig.ModType.STD)
+                    UpdateRow.LoadUpdateRow("patch-lot.txt", updateCommand);
 
-            foreach (var task in options.UpdateTasks)
-            {
-                try
+                foreach (var task in options.UpdateTasks)
                 {
                     UpdateLogger.InfoTime("Exec {0}", task.GetType().Name);
                     task.Exec(paramProject, updateCommand);
                 }
-                catch (Exception ex)
+                ItemLotChangeReplace.SetLotReplace(paramProject, updateCommand);
+
+                updateCommand.Exec(paramProject);
+                paramProject.SaveParams();
+
+                if (options.Publish)
                 {
-                    logger.Error(ex, ex.Message + " " + task.UpdateName);
-                    throw new Exception("Exec (" + task.UpdateName + ") Error " + ex.Message);
+                    UpdateLogger.InfoTime("===Publish");
+
+                    paramProject.Publish();
                 }
             }
-
-            ItemLotChangeReplace.SetLotReplace(paramProject, updateCommand);
-
-            updateCommand.Exec(paramProject);
-            paramProject.SaveParams();
-
-            if (options.Publish)
+            catch (Exception ex)
             {
-                UpdateLogger.InfoTime("===Publish");
+                UpdateLogger.InfoTime("Error " + ex.Message +"\n"+ ex.Source+ "\n" + ex.StackTrace);
+                UpdateLogger.Save();
 
-                paramProject.Publish();
+                throw;
             }
 
             UpdateLogger.Save();

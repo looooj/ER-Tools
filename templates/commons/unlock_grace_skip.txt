@@ -76,6 +76,7 @@
 692000;Scaduview;望影露台;69494800
 696000;Scadutree Base;幽影树的树脚;69504801
 
+310000;Murkwater Cave;蒙流洞窟;310000
 
 300000;Tombsward Catacombs;灵庙原野地下墓地;300000
 300100;Impaler's Catacombs;穿刺地下墓地;300100

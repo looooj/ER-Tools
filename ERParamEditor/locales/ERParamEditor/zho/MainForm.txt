@@ -1,7 +1,8 @@
-﻿buttonExec=执行
+buttonExec=执行
 buttonRestore=还原
 buttonCreate=新建
 buttonOpen=打开
 buttonFind=查找
 buttonCompare=比较
 buttonOpenParam=打开参数文件
+buttonRestorePublish=还原发布

@@ -157,6 +157,8 @@ namespace ERParamEditor
 
             ListViewUtils.AddItem(listViewProject, "RegulationPath", project.GetRegulationPath());
             ListViewUtils.AddItem(listViewProject, "ModRegulationPath", project.GetModRegulationPath());
+            ListViewUtils.AddItem(listViewProject, "ParamVersion", project.GetParamVersion());
+
 
             bool nameFilter = GlobalConfig.UseParamNameFilter;
             var paramList = project.GetParamNameList(nameFilter);

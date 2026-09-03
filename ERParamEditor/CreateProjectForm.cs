@@ -1,4 +1,4 @@
-﻿using ERParamUtils;
+using ERParamUtils;
 using SoulsFormats;
 using System;
 using System.Collections.Generic;
@@ -86,7 +86,7 @@ namespace ERParamEditor
         {
             textProjectName.Text = "proj";
             FormBorderStyle = FormBorderStyle.FixedSingle;
-
+            comboBoxTemplate.Visible = false;
             ParamProjectTemplate.Init();
             var items = ParamProjectTemplate.GetList();
             foreach(var item in items)

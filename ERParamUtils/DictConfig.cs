@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -114,12 +114,17 @@ namespace ERParamUtils
             return def;
         }
 
-        public string GetKeyValueString() {
+        public string GetKeyValueString()
+        {
+            return GetKeyValueString(";");
+        }
+
+        public string GetKeyValueString(string space) {
             var keys = Dict.Keys;
             var str = "";
             foreach (string key in keys) {
                 if (str.Length > 0) {
-                    str = str + ";";
+                    str = str + space;
                 }
                 str = str + key;
                 str = str + "=";

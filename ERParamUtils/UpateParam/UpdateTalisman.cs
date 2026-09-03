@@ -1,4 +1,4 @@
-﻿using ERParamUtils.UpdateParam;
+using ERParamUtils.UpdateParam;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,10 +19,12 @@ namespace ERParamUtils.UpateParam
                 BuildAll(paramProject, updateCommand);
             }
 
-            PatchHpMp(paramProject, updateCommand);
+            UpdateSpEffect.PatchHpMp(updateCommand);
+            UpdateSpEffect.PatchShard(updateCommand);
+            PatchArrowTailsman(updateCommand);
         }
-
-        private static void PatchHpMp(ParamProject? paramProject, UpdateCommand updateCommand) {
+        /*
+        private static void PatchHpMp(UpdateCommand updateCommand) {
 
 
             if (updateCommand.HaveOption(UpdateParamOptionNames.CrimsonAmberMedallionRestore)) {
@@ -35,6 +37,7 @@ namespace ERParamUtils.UpateParam
             //350200[Talisman] Blessed Dew Talisman
             updateCommand.AddItem(ParamNames.SpEffectParam, 350200, "changeHpPoint", "-5");
             updateCommand.AddItem(ParamNames.SpEffectParam, 350200, "changeMpPoint", "-2");
+            updateCommand.AddItem(ParamNames.SpEffectParam, 20380000, "changeHpPoint", "-5");
 
             //5071101[Weapon] Serpent-God's Curved Sword (On Enemy Kill)
             updateCommand.AddItem(ParamNames.SpEffectParam, 5071101, "changeMpPoint", "-5");
@@ -54,7 +57,7 @@ namespace ERParamUtils.UpateParam
 
 
         }
-
+        */
         private static void BuildAll(ParamProject? paramProject, UpdateCommand updateCommand)
         {
             if (paramProject == null)
@@ -120,6 +123,9 @@ darkAttackRate 1.15
             list.Add(new UpdateParamOptionItem(UpdateParamOptionNames.CrimsonAmberMedallionDamageCorrectRate));
             list.Add(new UpdateParamOptionItem(UpdateParamOptionNames.CrimsonAmberMedallionAttackRate));
 
+            //list.Add(new UpdateParamOptionItem(UpdateParamOptionNames.ChangeTalismanSpec));
+
+
             //list.Add(new UpdateParamOptionItem(UpdateParamOptionNames.AllTalisman));
             return list;
         }
@@ -131,6 +137,44 @@ darkAttackRate 1.15
                 updateCommand.AddItem(paramName, rowId, key,value);
 
             }
+        }
+
+
+        static void ChangeSpEffect(UpdateCommand updateCommand,int rowId, string key, string val) {
+
+            updateCommand.AddItem(ParamNames.SpEffectParam, rowId, key, val);
+
+        }
+
+        static void ChangeSpEffect(UpdateCommand updateCommand, string rowIds, string key, string val)
+        {
+
+            var ids = rowIds.Split(";");
+            for (var i = 0; i < ids.Length; i++)
+            {
+                int rowId = int.Parse(ids[i]);
+                updateCommand.AddItem(ParamNames.SpEffectParam, rowId, key, val);
+            }
+
+        }
+
+
+        public static void PatchArrowTailsman(UpdateCommand updateCommand) {
+            //350200[Talisman] Blessed Dew Talisman
+            //350200;[Talisman] Blessed Dew Talisman;40-changeHpPoint;-2; 
+            //20380000[Talisman] Blessed Blue Dew Talisman
+            //ChangeSpEffect(updateCommand, "350200;20380000", "changeHpPoint", "-3");
+            //ChangeSpEffect(updateCommand, "350200;20380000", "changeMpPoint", "-2");
+
+            //321500 [Talisman] Arrow's Sting Talisman
+            //321000 [Talisman] Arrow's Reach Talisman
+            ChangeSpEffect(updateCommand, "321500;321000", "bowDistRate","65");
+            ChangeSpEffect(updateCommand, "321500;321000", "physicsAttackRate", "1.1");
+            ChangeSpEffect(updateCommand, "321500;321000", "magicAttackRate", "1.1");
+            ChangeSpEffect(updateCommand, "321500;321000", "fireAttackRate", "1.1");
+            ChangeSpEffect(updateCommand, "321500;321000", "thunderAttackRate", "1.1");
+            ChangeSpEffect(updateCommand, "321500;321000", "darkAttackRate", "1.1");
+
         }
 
         public static void BuildSuperCrimsonAmberMedallion(ParamProject? paramProject, UpdateCommand updateCommand) {

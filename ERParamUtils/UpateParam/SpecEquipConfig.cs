@@ -256,6 +256,9 @@ namespace ERParamUtils.UpdateParam
 
             if (itemId >= 2009500 && itemId <= 2010100)
                 return true;
+
+            if (itemId == 2003170)
+                return true;
             return false;
         }
 

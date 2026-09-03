@@ -377,7 +377,10 @@ namespace ERParamUtils.UpdateParam
                 SoulsParam.Param? currentParam = project.FindParam(paramName); ;
                 string currentParamName = paramName;
                 if (currentParam == null)
+                {
+                    UpdateLogger.InfoTime("===Not Found {0}", paramName);
                     continue;
+                }
                 currentParam.MakeCellIndex();
                 UpdateLogger.InfoTime("{0} {1}", currentParamName, rowDict.GetCount());
                 UpdateLogger.Begin(currentParamName);
@@ -398,6 +401,7 @@ namespace ERParamUtils.UpdateParam
         public bool HaveOption(string optName)
         {
             return _updateOptions.ContainsKey(optName);
+
         }
 
         public int GetOption(string optName, int def=0) {

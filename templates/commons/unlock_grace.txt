@@ -10,9 +10,6 @@
 
 160005;Audience Pathway;谒见之路
 
-
-
-
 150002;Elphael Inner Wall;艾布雷菲尔城墙内部
 651003;Apostate Derelict;离教废屋
 650006;Church of Repose;安歇教堂
@@ -46,6 +43,9 @@
 620031;Boilprawn Shack;煮虾子的破屋
 620023;Road to the Manor;通往城寨的道路
 620051;Fallen Ruins of the Lake;湖中坠落遗迹
+620011;Bellum Church;彼鲁姆教堂;62364900
+
+
 
 620003;Scenic Isle;远眺岛
 620001;Liurnia Lake Shore;利耶尼亚湖（湖边）

@@ -88,7 +88,7 @@ namespace ERParamUtils.UpdateParam
 
                 updateCommand.AddItem(row, "eliminateTargetEntityId", "0");
                 updateCommand.AddItem(row, "summonedEventFlagId", "0");
-                updateCommand.AddItem(row, "activateRange", "9999");
+                //updateCommand.AddItem(row, "activateRange", "9999");
                 updateCommand.AddItem(row, "overwriteActivateRegionEntityId", "0");
             }
         }

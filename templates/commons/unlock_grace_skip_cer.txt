@@ -50,6 +50,7 @@
 250000;Finger Birthing Grounds;指头产房;250000
 280000;Discussion Chamber;对谈室;280000
 220000;Garden of Deep Purple;深紫花园;220000
+310000;Murkwater Cave;蒙流洞窟;310000
 
 
 300000;Tombsward Catacombs;灵庙原野地下墓地;300000

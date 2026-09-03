@@ -160,7 +160,7 @@ namespace ERParamEditor
                 UpdateParamOptionNames.GetRuneRate, rateList, rateList, "1");
 
             ///
-            if (GlobalConfig.Debug)
+            //if (GlobalConfig.Debug)
             {
                 string unlockGraceNames = MultiLang.GetText("UpdateParam", UpdateParamOptionNames.UnlockGrace3,
                      UnlockGraceConfig.GetNameList3());
@@ -170,7 +170,8 @@ namespace ERParamEditor
                    UpdateParamOptionNames.UnlockGrace,
                    unlockGraceNames, unlockGraceValues, "0");
             }
-            else { 
+            /*
+            //else { 
                 string unlockGraceNames = MultiLang.GetText("UpdateParam", UpdateParamOptionNames.UnlockGrace,
                      UnlockGraceConfig.GetNameList());
                 string unlockGraceValues = UnlockGraceConfig.GetValueList();
@@ -179,10 +180,11 @@ namespace ERParamEditor
                    UpdateParamOptionNames.UnlockGrace,
                    unlockGraceNames, unlockGraceValues, "0");
             }
+            */
             //panel.AddCheckBox(UpdateParamOptionNames.UnlockRoundtableHold, "");
             //if ( GlobalConfig.Debug)
             //    panel.AddCheckBox(UpdateParamOptionNames.UnlockGraceAll, "");
-            panel.AddCheckBox(UpdateParamOptionNames.EnableFastTravel, "");
+            //panel.AddCheckBox(UpdateParamOptionNames.EnableFastTravel, "");
 
 
         }

@@ -10,7 +10,7 @@ SpecRecipeParamTask=执行配方脚本(recipe-spec)
 
 RemoveRequire=移除武器魔法祷告需求
 RemoveWeight=移除武器盔甲重量
-UnlockCrafting=解锁制作笔记,无条件制作,替换制作笔记为王之卢恩
+UnlockCrafting=解锁制作笔记,无条件制作
 EnhanceBuddy=增加骨灰的召唤范围;移除骨灰召唤消耗;无限召唤次数
 UpdateShop=全部商品可见;物品类无限数量;...
 
@@ -51,7 +51,8 @@ CrimsonAmberMedallionConsumptionRate=红琥珀链坠: 减耗20%
 
 AllTalisman=全部护符: (血量,专注值,精力,获取卢恩，物品掉落)*1.2 
 
-ReplaceGoldenRune=不变,黄金卢恩 [13](10000),英雄卢恩 [4](30000),随机英雄卢恩
+ReplaceGoldenRune1=不变,黄金卢恩 [13](10000),英雄卢恩 [4](30000),随机英雄卢恩
+ReplaceGoldenRune=不变,随机黄金卢恩(5000-10000),随机英雄卢恩(15000-35000)
 UnlockGrace3=不变,解锁全部,解锁指定(unlock_grace.txt)
 UnlockGrace=不变,解锁指定(unlock_grace.txt)
 
