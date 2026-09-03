@@ -213,6 +213,13 @@ namespace ERParamUtils.UpdateParam
             AddEquips(updateCommand, param, equipId, equipId, equipType, name, recipeBaseRowId);
         }
 
+        static void AddGood(UpdateCommand updateCommand,
+            SoulsParam.Param param, int equipId,string name="") {
+
+            AddEquip(updateCommand, param, equipId, (int)ShopEquipType.Good, name);
+        }
+
+
         public static void AddWhetblade(ParamProject paramProject, UpdateCommand updateCommand)
         {
             var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
@@ -222,6 +229,7 @@ namespace ERParamUtils.UpdateParam
             AddEquips(updateCommand, param, 8970, 8974, (int)ShopEquipType.Good, "Whetblade", recipeBaseRowId);
 
         }
+
 
 
         public static void AddMapPiece(ParamProject paramProject, UpdateCommand updateCommand)
@@ -286,6 +294,15 @@ namespace ERParamUtils.UpdateParam
                 return;
             AddEquips(updateCommand, param, 3050, 3051, (int)ShopEquipType.Good, "", recipeBaseRowId);
             AddEquips(updateCommand, param, 1290, 1290, (int)ShopEquipType.Good, "", recipeBaseRowId);
+
+            //8171;Chrysalids' Memento;蛹群的遗物
+            //if ( ModConfig.GetModType() == ModConfig.ModType.RAND)
+                AddGood(updateCommand, param, 8171,  "");
+
+            if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceDeathroot)) {
+                //2090;Deathroot;死根
+                AddGood(updateCommand, param, 2090, "");
+            }
 
         }
 
