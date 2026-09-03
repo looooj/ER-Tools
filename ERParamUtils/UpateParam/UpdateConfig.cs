@@ -57,13 +57,14 @@ namespace ERParamUtils.UpateParam
 
 
         public static string GetValueList() {
-            return "0,1,2,10"; 
+            return "0,11,10"; 
         }
 
         public static string GetNameList()
         {
-            
-            return "NotChange,Golden Rune [13](10000),Hero's Rune [4](30000),Rand Hero Rune";
+
+            return "NotChange,Rand Gold Rune(5000-10000),Rand Hero Rune(15000-35000)";
+            //return "NotChange,Golden Rune [13](10000),Hero's Rune [4](30000),Rand Hero Rune";
         }
 
         /*
@@ -76,6 +77,14 @@ namespace ERParamUtils.UpateParam
 
             return 2914+n;
         }
+        static int RandRune()
+        {
+
+            int n = Random.Shared.Next(4);
+
+            return 2909 + n;
+        }
+
         public static int ValueToEquipId(int value)
         {
             switch (value) { 
@@ -83,6 +92,8 @@ namespace ERParamUtils.UpateParam
                     return 2912;
                 case 2:
                     return 2917;
+                case 11:
+                    return RandRune();
                 case 10:
                     return RandHeroRune();
             }
@@ -91,6 +102,12 @@ namespace ERParamUtils.UpateParam
 
         public static int GetRuneValue(int id) {
             switch (id) {
+                case 2909:
+                    return 5000;
+                case 2910:
+                    return 6250;
+                case 2911:
+                    return 7500;
                 case 2912:
                     return 10000;
                 case 2913:
@@ -130,7 +147,7 @@ namespace ERParamUtils.UpateParam
             }
             return 100;
         }
-        static string currentValue = "1";
+        static string currentValue = "0";
 
         public static string GetValue() { 
             return currentValue;
@@ -177,6 +194,8 @@ namespace ERParamUtils.UpateParam
 
         public static readonly string AddInitCrimsonAmberMedallion = "AddInitCrimsonAmberMedallion";
         public static readonly string AddInitJewelOfTheCosmos = "AddInitJewelOfTheCosmos";
+
+        //public static readonly string ChangeTalismanSpec = "ChangeTalismanSpec";
 
         public static readonly string AddInit99Rune = "AddInit99Rune";
         //207010 MimicTear Ashes +10
@@ -262,14 +281,14 @@ namespace ERParamUtils.UpateParam
 
         public List<UpdateParamTask> UpdateTasks = new();
         public Dictionary<string, int> UpdateCommandOptions = new();
-
+        public DictConfig CurrentConfig = new DictConfig();
         public void AddTask(UpdateParamTask task)
         {
             UpdateTasks.Add(task);
         }
 
         public void AddUpdateCommandOption(DictConfig config) {
-
+            CurrentConfig = config;
             foreach (string key in config.GetDict().Keys) {
                 int value = config.GetInt(key,0);
                 UpdateCommandOptions[key]=value;
