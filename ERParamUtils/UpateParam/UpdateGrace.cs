@@ -56,6 +56,14 @@ namespace ERParamUtils.UpdateParam
         static Dictionary<int, string> skipDict= new();
         static Dictionary<int, string> allDict= new();
 
+        public static void SetEnableFastTravel(ParamProject paramProject, UpdateCommand updateCommand) {
+            //if (updateCommand.HaveOption(UpdateParamOptionNames.EnableFastTravel))
+            {
+                if (ModConfig.GetModType() != ModConfig.ModType.CER)
+                    SetMapInfoParam(paramProject, updateCommand);
+            }
+
+        }
         public static void UnlockGrace(ParamProject paramProject, UpdateCommand updateCommand)
         {
 
@@ -93,11 +101,6 @@ namespace ERParamUtils.UpdateParam
                 case UnlockGraceType.UnlockCustom:
                     UnlockGraceCustom(param, paramProject, updateCommand);
                     break;
-            }
-            if (updateCommand.HaveOption(UpdateParamOptionNames.EnableFastTravel))
-            {
-                if ( ModConfig.GetModType() != ModConfig.ModType.CER )
-                    SetMapInfoParam(paramProject, updateCommand);
             }
 
             //if (updateCommand.HaveOption(UpdateParamOptionNames.UnlockRoundtableHold))
@@ -305,11 +308,18 @@ namespace ERParamUtils.UpdateParam
             {
 
                 var row = param.Rows[i];
-                //if (row.Name == null || row.Name.Length < 1)
-                //    continue;
+                if (row.Name == null )
+                    continue;
 
                 int val = ParamRowUtils.GetCellInt(row, key, -1);
-                if (val > 1)
+                if (val > 1 
+                    || row.Name.Contains("Tunnel") 
+                    || row.Name.Contains("Cave") 
+                    || row.Name.Contains("Tomb")
+                    || row.Name.Contains("Catacombs")
+                    || row.Name.Contains("Grave") //
+                    || row.Name.Contains("Gaol")
+                    )
                 {
                     //82001
                     updateCommand.AddItem(row, key, "6001");
