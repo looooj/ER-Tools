@@ -153,11 +153,15 @@ namespace ERParamUtils.UpdateParam
 
         }
 
+        //8500;Crafting Kit; 工具皮袋
+        //8590;Whetstone Knife; 砥石小刀
         static bool NotUsedEquip(int eqId, EquipType eqType) {
 
             if (eqType == EquipType.Good) {
 
-                if (eqId == 1830 || eqId == 104 || eqId == 105)
+                if ( eqId == 104 || eqId == 105)
+                    return true;
+                if (eqId == 8500 || eqId == 8590)
                     return true;
             }
 
@@ -169,7 +173,72 @@ namespace ERParamUtils.UpdateParam
             return false;
         }
 
+        //100000[Gatekeeper Gostoc] Festering Bloody Finger
+        //
+        //100009[Gatekeeper Gostoc] Furlcalling Finger Remedy
+        //100011[Gatekeeper Gostoc] Stormhawk Feather,
+        //100013[Gatekeeper Gostoc] Great Arrow
+        //100014[Gatekeeper Gostoc] Ballista Bolt
+        private static bool ReplaceGatekeeperGostoc(int eqId, EquipType eqType) {
+
+            if (eqType == EquipType.Weapon) {
+                if (SpecEquipConfig.IsArrow(eqId, eqType)) {
+                    return true;
+                }                  
+            }
+            if (eqType == EquipType.Good)
+            {
+                if (eqId == 150 || eqId == 111)
+                    return true;
+            }
+            return false;
+        }
         private static void ReplaceAncientStone(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+
+            var param = paramProject.FindParam(ParamNames.ShopLineupParam);
+            if (param == null)
+                return;
+
+            int replaceIndex = 0;
+            //10140; Ancient Dragon Smithing Stone; 古龙岩锻造石
+            //10168; Somber Ancient Dragon Smithing Stone; 古龙岩失色锻造石
+            int[] idList = { 10168,10909,10919};
+
+            foreach (var row in param.Rows)
+            {
+                if (row.ID >= 100000 && row.ID <= 100018)
+                {
+                    int equipId = GetEquipId(row);
+
+                    ShopEquipType shopEquipType = (ShopEquipType)GetEquipType(row);
+                    EquipType equipType = EquipTypeUtils.ConvertFromShopEquipType((ShopEquipType)shopEquipType);
+
+                    if (ReplaceGatekeeperGostoc(equipId, equipType) && replaceIndex < idList.Length) {
+
+                        int tmpId = idList[replaceIndex];
+                        UpdateLogger.InfoRow("ReplaceAncientStone {0} [{1},{2}]", tmpId, row.ID,equipId);
+
+                        updateCommand.AddItem(row, "equipId", tmpId);
+                        updateCommand.AddItem(row, "equipType", (int)ShopEquipType.Good);
+                        updateCommand.AddItem(row, "value", 2000);
+                        updateCommand.AddItem(row, "sellQuantity", -1);
+                        updateCommand.AddItem(row, "eventFlag_forRelease", 0);
+
+                        replaceIndex++;
+                    }
+
+                    if (equipId == 10140) {
+                        updateCommand.AddItem(row, "value", 2000);
+                        updateCommand.AddItem(row, "sellQuantity", -1);
+                        updateCommand.AddItem(row, "eventFlag_forRelease", 0);
+                    }
+                }
+
+            }
+        }
+
+        private static void ReplaceAncientStone2(ParamProject paramProject, UpdateCommand updateCommand)
         {
 
             int[] idList = { 10168, 10140 };//,10909,10919};
@@ -254,7 +323,10 @@ namespace ERParamUtils.UpdateParam
                 int equipId = GetEquipId(row);
                 ShopEquipType shopEquipType = (ShopEquipType)GetEquipType(row);
                 EquipType equipType = EquipTypeUtils.ConvertFromShopEquipType((ShopEquipType)shopEquipType);
-
+                if (SpecEquipConfig.IsMagic(equipId, equipType) || shopEquipType == ShopEquipType.Ash) {
+                    ChangeVisibility(row, updateCommand);
+                }
+                //
                 if (SpecEquipConfig.IsArrow(equipId, equipType)
                     || SpecEquipConfig.IsPot(equipId, equipType)
                     || SpecEquipConfig.IsRemnant(equipId, equipType)
@@ -278,7 +350,7 @@ namespace ERParamUtils.UpdateParam
             }
 
             if (updateCommand.HaveOption(UpdateParamOptionNames.ShopAddAncient)) {
-
+            
                 ReplaceAncientStone(paramProject,updateCommand);
             }
         }
