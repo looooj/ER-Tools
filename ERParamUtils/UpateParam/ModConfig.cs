@@ -44,10 +44,10 @@ namespace ERParamUtils.UpateParam
         }
 
         public static bool AddMapPiece() {
-            if (currentModType == ModType.CER)
-                return false;
+            if (currentModType == ModType.STD)
+                return true;
 
-            return true;
+            return false;
         }
 
         public static bool EnhanceBuddy() {
@@ -77,7 +77,7 @@ namespace ERParamUtils.UpateParam
                 case ModType.CER:
                     return 27;
             }
-            return 10;
+            return 12;
             
         }
 
@@ -117,7 +117,7 @@ namespace ERParamUtils.UpateParam
             return "unlock_grace_skip.txt";
 
         }
-
+        /*
         public static string GetUnlockGraceSkipName(ParamProject paramProject)
         {
             return "";
@@ -126,12 +126,12 @@ namespace ERParamUtils.UpateParam
         public static string GetUnlockGraceName(ParamProject paramProject)
         {
             return "";
-        }
+        }*/
 
 
         public enum ModType { 
             STD = 0,
-            RADN = 1,
+            RAND = 1,
             CER = 2
         }
 

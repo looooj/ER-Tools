@@ -26,6 +26,8 @@
 3007 Class - Samurai
 3008 Class - Prisoner
 3009 Class - Wretch
+3010 Class - Idus Knight
+3011 Class - Heavy Knight
 3100 
 3101 
 3102 
