@@ -206,7 +206,7 @@ namespace ERParamUtils
             }
             //
             //Dictionary<string, SoulsParam.Param> paramBank = _params;
-
+            ProgressInfo.GetGlobal().InfoTime("LoadParam");
             List<string> paramNames = new();
             foreach (var f in parambnd.Files)
             {
@@ -243,6 +243,7 @@ namespace ERParamUtils
                 {
                     continue;
                 }
+                ProgressInfo.GetGlobal().InfoTime("LoadParam {0}",paramName);
 
                 // Try to fixup Elden Ring ChrModelParam for ER 1.06 because many have been saving botched params and
                 // it's an easy fixup

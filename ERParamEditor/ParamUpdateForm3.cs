@@ -195,6 +195,16 @@ namespace ERParamEditor
             customTablePanels.Add(panel);
             panel.Init(control);
 
+
+            string autoRecoverNames = MultiLang.GetText("UpdateParam",
+                UpdateParamOptionNames.AutoRecover,
+                 AutoRecoverConfig.GetNames());
+            string autoRecoverValues = AutoRecoverConfig.GetValues();
+            panel.AddSelectionNameValue(
+               UpdateParamOptionNames.AutoRecover,
+               UpdateParamOptionNames.AutoRecover,
+               autoRecoverNames, autoRecoverValues, "0");
+
             var updateTalismanOptions = UpdateTalisman.GetUpdateParams();
             MultiLang.ApplyMessage(updateTalismanOptions);
 
@@ -317,27 +327,33 @@ namespace ERParamEditor
             //if (showFirstFlag)
             //    InitPages();
             showFirstFlag = false;
-        }
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
         }
 
-
+        NotifyForm notifyForm;
         void execUpdatePublish(string? msg, bool publishFlag)
         {
 
-            /*
-            DictConfig config = new();
-            for (int i = 0; i < customTablePanels.Count; i++)
-            {
-                customTablePanels[i].GetValues(config);
-            }
 
-            ParamUpdateFormUtils.saveOptions(config);
-            */
+            if (notifyForm == null)
+            {
+                notifyForm = new NotifyForm();
+                notifyForm.StartPosition = FormStartPosition.CenterScreen;
+            }
+        
+            //notifyForm.Show(this);
+
+            //bool r = (notifyForm.ParentForm != this);
+            //if (r)
+            //    MessageBox.Show("not child");
+
             var config = ParamUpdateFormUtils.saveOptions(customTablePanels);
-            ParamUpdateFormUtils.ExecUpdatePublish(this, msg, publishFlag, config);
+            ParamUpdateFormUtils.ExecUpdatePublish(this, msg, publishFlag, config,notifyForm);
+
+            //notifyForm.Hide();
             Close();
         }
 

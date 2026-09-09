@@ -13,6 +13,10 @@
 110505;Divine Bridge;神授桥;110505
 111000;Table of Lost Grace;大赐福;111000
 
+630000;Erdtree-Gazing Hill;近黄金树的山丘;63385100
+611011;Morne Moangrave;摩恩悲叹墓;61433000
+
+
 350000;Cathedral of the Forsaken;弃置恶兆的大教堂;350000
 390000;Magma Wyrm Makar;“熔岩土龙”马卡尔;390000
 
@@ -77,6 +81,8 @@
 696000;Scadutree Base;幽影树的树脚;69504801
 
 310000;Murkwater Cave;蒙流洞窟;310000
+610018;Waypoint Ruins Cellar;驿站街遗迹的地下室;61443600
+
 
 300000;Tombsward Catacombs;灵庙原野地下墓地;300000
 300100;Impaler's Catacombs;穿刺地下墓地;300100

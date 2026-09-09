@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -259,6 +259,28 @@ namespace ERParamUtils
                 return defVal;
 
             return int.Parse(str);
+        }
+
+        public static float GetCellFloat(SoulsParam.Param.Row row, int col, float defVal)
+        {
+
+            var v = row.Cells[col].Value;
+            if (v == null)
+                return defVal;
+            var str = v.ToString();
+            if (str == null)
+                return defVal;
+
+            return float.Parse(str);
+        }
+
+        public static float GetCellFloat(SoulsParam.Param.Row row, string key, float defVal)
+        {
+
+            int cellIndex = row.GetParam().GetCellIndex(key);
+            if (cellIndex < 0)
+                return defVal;
+            return GetCellFloat(row, cellIndex, defVal);
         }
 
         public static int GetCellInt(SoulsParam.Param.Row row, string key, int defVal)

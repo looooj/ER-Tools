@@ -1,4 +1,4 @@
-﻿using ERParamUtils;
+using ERParamUtils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +17,8 @@ namespace ERParamEditor
         {
             InitializeComponent();
         }
-        public bool initCopy() {
+        public bool initCopy()
+        {
             return initCopyCheckBox.Checked;
         }
         List<ParamProject> paramProjects = new List<ParamProject>();
@@ -26,18 +27,28 @@ namespace ERParamEditor
         {
             FormBorderStyle = FormBorderStyle.FixedSingle;
 
+            var currentProj = GlobalConfig.GetCurrentProject();
             paramProjects = ParamProjectManager.GetProjectList2();
+            int index = 0;
             foreach (var proj in paramProjects)
             {
                 var s = proj.GetName() + " (" + proj.GetModRegulationPath() + ")";
-                 listBoxProject.Items.Add(s);
+                listBoxProject.Items.Add(s);
 
+                if (currentProj != null)
+                    if (proj.GetName() == currentProj.GetName())
+                    {
+                        listBoxProject.SelectedIndex = index;
+                    }
+
+                index++;
             }
             buttonOk.Enabled = false;
             if (listBoxProject.Items.Count > 0)
             {
                 buttonOk.Enabled = true;
-                listBoxProject.SelectedIndex = 0;
+                if ( listBoxProject.SelectedIndex < 0 )
+                    listBoxProject.SelectedIndex = 0;
             }
         }
 
@@ -49,7 +60,7 @@ namespace ERParamEditor
                 return;
             int itemIndex = listBoxProject.SelectedIndex;
 
-            ProjectName =  paramProjects[itemIndex].GetName();
+            ProjectName = paramProjects[itemIndex].GetName();
             DialogResult = DialogResult.OK;
             Close();
         }
@@ -74,12 +85,14 @@ namespace ERParamEditor
             var qmsg = "Are you sure delete " + ProjectName;
 
             var ret = MessageBox.Show(qmsg, "", MessageBoxButtons.YesNo);
-            if (ret == DialogResult.No) { 
+            if (ret == DialogResult.No)
+            {
                 return;
             }
 
             string msg = ParamProjectManager.DeleteProject(ProjectName);
-            if (msg != "") {
+            if (msg != "")
+            {
 
                 MessageBox.Show(msg);
                 return;

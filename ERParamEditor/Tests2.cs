@@ -232,6 +232,36 @@ namespace ERParamEditor
             }
         }
 
+        public static void FindMaxHp() {
+
+            var proj = GlobalConfig.GetCurrentProject();
+            if (proj == null)
+                return;
+            var param = proj.FindParam(ParamNames.SpEffectParam);
+
+            if (param == null)
+                return;
+            var rows = param.Rows;
+            var lines = new List<string>();
+
+            foreach (var row in rows) {
+
+
+                var v = ParamRowUtils.GetCellFloat(row, "maxHpRate", 1.0f);
+                if (v < 1.0) { 
+
+                    var s = string.Format("{0},{1},maxHp={2}", row.ID,row.Name,v);
+                    lines.Add(s);
+                }
+
+            }
+            string path = proj.GetUpdateDir() + "\\sp-max-hp.txt";
+            string r = string.Join("\n", lines);
+
+            File.WriteAllText(path, r);
+
+        }
+
         public static void FindGuardLevel()
         {
 

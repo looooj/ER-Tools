@@ -1,5 +1,6 @@
 using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -14,25 +15,36 @@ namespace ERParamUtils.UpdateParam
     public class UpdateLoggerItem {
 
         string Name = "";
-        List<string> _lines = new();
+        ConcurrentQueue<string> _lines = new();
 
-        internal List<string> Lines { get => _lines; }
+        public List<string> Lines { get => GetLines(); }
 
+
+        List<string> GetLines() { 
+        
+            var lines = new List<string>();
+
+            lines.AddRange(_lines);
+
+            return lines;       
+
+        }
 
         public UpdateLoggerItem(string name) {
 
             this.Name = name;
         }
 
-        public void Info(string format, params object[] args) {
+        public string Info(string format, params object[] args) {
 
             string s = string.Format(format, args);
-            _lines.Add(s);
+            _lines.Enqueue(s);
+            return s;
         }
 
         
         public void Add(string s) {
-            _lines.Add(s);
+            _lines.Enqueue(s);
         }
     }
 
@@ -43,7 +55,7 @@ namespace ERParamUtils.UpdateParam
         static string logDir = @".\logs";
         static string defaultName = "Update";
 
-        static Dictionary<string, UpdateLoggerItem> LoggerDict = new();
+        static ConcurrentDictionary<string, UpdateLoggerItem> LoggerDict = new();
 
         static bool Changed = false;
 
@@ -134,14 +146,14 @@ namespace ERParamUtils.UpdateParam
 
         }
 
-        public static void InfoRow(SoulsParam.Param.Row row, string key, object value) {
+        public static string InfoRow(SoulsParam.Param.Row row, string key, object value) {
 
-            GetLogger(currentParamName).Info("{0},{1} {2}={3}", row.ID, row.Name!=null? row.Name:"?", key, value);
+            return GetLogger(currentParamName).Info("{0},{1} {2}={3}", row.ID, row.Name!=null? row.Name:"?", key, value);
 
         }
 
-        public static void InfoRow(string format, params object[] args) {
-            GetLogger(currentParamName).Info(format, args);
+        public static string InfoRow(string format, params object[] args) {
+            return GetLogger(currentParamName).Info(format, args);
         }
 
         public static void InfoUpdateCommandItem(UpdateCommandItem item) {
@@ -149,6 +161,30 @@ namespace ERParamUtils.UpdateParam
             GetLogger(item.ParamName).Info("{0},{1} {2}={3}", 
                 item.RowId, item.RowName, item.Key, item.Value);
 
+        }
+
+        static string NOTIFY_TAG="_notify_";
+        public static void Notify(string format, params object[] args) {
+
+            string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss ");
+            string s = time + string.Format(format, args);
+            ProgressInfo.GetGlobal().Info(s);
+            GetLogger(NOTIFY_TAG).Info(s);
+        }
+
+        public static List<string> GetNotifyLines()
+        {
+            return GetLoggerLines(NOTIFY_TAG);
+
+        }
+
+        public static List<string> GetLoggerLines(string loggerName) { 
+
+            var lines = new List<string>();
+            if (LoggerDict.ContainsKey(loggerName)) {
+                return LoggerDict[loggerName].Lines;
+            }
+            return lines;
         }
 
         internal static void Clear()

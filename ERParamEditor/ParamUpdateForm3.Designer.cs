@@ -74,7 +74,7 @@ namespace ERParamEditor
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(1015, 607);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "Normal";
+            tabPage1.Text = "General";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
@@ -98,7 +98,7 @@ namespace ERParamEditor
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(1015, 607);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Talismans";
+            tabPage2.Text = "Effect";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2

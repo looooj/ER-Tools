@@ -1,4 +1,4 @@
-﻿using ERParamUtils;
+using ERParamUtils;
 using NLog.Time;
 using System;
 using System.Collections.Generic;
@@ -140,6 +140,13 @@ namespace ERParamEditor
             File.WriteAllLines(fn, lines);
         }
 
+        private string getExpDir(ParamProject project) {
+            string t = DateTime.Now.ToString("yyyy_MM_dd_HH");
+
+            string dir = project.GetDir() + @"\exp\" + t;
+            return dir;
+        }
+
         private void exportRowButton_Click(object? sender, EventArgs e)
         {
             if (dataGridViewRow.SelectedRows.Count < 1)
@@ -148,7 +155,9 @@ namespace ERParamEditor
             if (project == null)
                 return;
 
-            string dir = project.GetDir() + @"\exp";
+            //string t = string.Format("yyyy_MM_dd_HH_mm_ss", DateTime.Now);
+
+            string dir = getExpDir(project);// project.GetDir() + @"\exp\"+t;
             Directory.CreateDirectory(dir);
 
             for (int i = 0; i < dataGridViewRow.SelectedRows.Count; i++)
@@ -432,7 +441,7 @@ namespace ERParamEditor
             if (project == null)
                 return;
 
-            string dir = project.GetDir() + @"\exp";
+            string dir = getExpDir(project);// project.GetDir() + @"\exp";
             Directory.CreateDirectory(dir);
 
             if (dataGridViewRow.SelectedRows.Count !=2 )

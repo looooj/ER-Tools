@@ -1,0 +1,7 @@
+
+tabPage1=General
+tabPage2=Effect
+tabPage3=Init
+tabPage4=Script
+
+

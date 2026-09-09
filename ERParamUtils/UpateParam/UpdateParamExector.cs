@@ -187,24 +187,6 @@ namespace ERParamUtils.UpdateParam
 
     }
 
-    /*
-    public class SmithingStoneTask : UpdateParamTask
-    {
-
-        public SmithingStoneTask()
-        {
-            Description = "Update SmithingStone Upgrade 2/4/6->1";
-
-        }
-
-        public override void Exec(ParamProject project, UpdateCommand updateCommand)
-        {
-            UpdateSmithingStone.Proc(project, updateCommand);
-        }
-    }
-    */
-
-
 
 
 
@@ -319,7 +301,10 @@ namespace ERParamUtils.UpdateParam
 
         }
 
-        public static void Exec(ParamProject paramProject, UpdateParamExecOptions options)
+        //
+
+
+        public static int Exec(ParamProject paramProject, UpdateParamExecOptions options)
         {
 
             UpdateLogger.SetDir(paramProject.GetUpdateDir() + @"/logs");
@@ -328,15 +313,18 @@ namespace ERParamUtils.UpdateParam
             UpdateLogger.InfoTime("");
             UpdateLogger.InfoTime("===Begin");
 
-
+            UpdateLogger.Notify("Begin");
             if (options.Restore)
             {
+                UpdateLogger.Notify("Restore...");
+
                 UpdateLogger.InfoTime("===Restore");
                 paramProject.Restore();
             }
 
             try
             {
+                UpdateLogger.Notify("Prepare...");
 
                 UpdateShopLineupParamRecipe.Init(paramProject);
 
@@ -344,10 +332,12 @@ namespace ERParamUtils.UpdateParam
                 updateCommand.AddOption(options.UpdateCommandOptions);
 
                 ModConfig.SetModType(updateCommand);
+                AutoRecoverConfig.SetCurrent(updateCommand);
 
                 UpdateLogger.InfoTime("options\n{0}", options.CurrentConfig.GetKeyValueString("\n"));
 
                 SetupDayNight(updateCommand);
+                UpdateSmithingStone.Exec(paramProject, updateCommand);
 
                 //updateCommand.SetOption(UpdateParamOption.ReplaceTalismanPouch, 1);
                 UpdateCharaInit.Exec(paramProject, updateCommand);
@@ -357,7 +347,7 @@ namespace ERParamUtils.UpdateParam
                 UpdateShopLineupParamRecipe.UnlockCrafting(paramProject, updateCommand);
 
 
-                ParamUpdateRequire.ExecSpec(paramProject, updateCommand);
+                ParamUpdateRequire.ExecOthers(paramProject, updateCommand);
                 ParamUpdateRequire.Exec(paramProject, updateCommand);
 
                 ParamRemoveWeight.Exec(paramProject, updateCommand);
@@ -408,6 +398,8 @@ namespace ERParamUtils.UpdateParam
 
                 //}
 
+                UpdateSpEffect.SetAutoRecover(updateCommand);
+
 
                 if (ModConfig.AddWhetblade())
                 {
@@ -441,12 +433,15 @@ namespace ERParamUtils.UpdateParam
                 ItemLotChangeReplace.SetLotReplace(paramProject, updateCommand);
 
                 updateCommand.Exec(paramProject);
+
+                UpdateLogger.Notify("Save...");
+
                 paramProject.SaveParams();
 
                 if (options.Publish)
                 {
                     UpdateLogger.InfoTime("===Publish");
-
+                    UpdateLogger.Notify("Copy...");
                     paramProject.Publish();
                 }
             }
@@ -461,6 +456,8 @@ namespace ERParamUtils.UpdateParam
             UpdateLogger.Save();
             UpdateLogger.InfoTime("===End");
             UpdateLogger.Clear();
+
+            return 0;
         }
     }
 }

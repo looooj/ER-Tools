@@ -1,4 +1,4 @@
-﻿using ERParamUtils;
+using ERParamUtils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +38,7 @@ namespace ERParamEditor
 
         }
 
+        
         private void buttonOk_Click(object sender, EventArgs e)
         {
             //
@@ -54,6 +55,8 @@ namespace ERParamEditor
                 return;
             }
 
+
+            ProgressTextForm progressTextForm = new();
             List<string> paramNames = new();
             for (int i = 0; i < checkedListBoxParam.CheckedItems.Count; i++)
             {
@@ -63,7 +66,10 @@ namespace ERParamEditor
             }
 
 
-            ParamProjectCompare.CompareProject(proj1, proj2, paramNames);
+            var task = Task.Run(()=> ParamProjectCompare.CompareProject(proj1, proj2, paramNames));
+
+            progressTextForm.UpdateTask(this,task);
+            progressTextForm.Hide();
             Close();
         }
 

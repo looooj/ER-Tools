@@ -71,13 +71,13 @@ namespace ERParamUtils.UpateParam
 1-> 2912;Golden Rune [13];黄金卢恩【１３】
 2-> 2917;Hero's Rune [4];英雄卢恩【４】
          */
-        static int RandHeroRune() { 
+        public static int RandHeroRune() { 
 
             int  n = Random.Shared.Next(5);
 
             return 2914+n;
         }
-        static int RandRune()
+        public static int RandRune()
         {
 
             int n = Random.Shared.Next(4);
@@ -175,6 +175,7 @@ namespace ERParamUtils.UpateParam
 
     public class UpdateParamOptionNames
     {
+        public static readonly string DisableDefault = "DisableDefault";
         public static readonly string ModType = "ModType";
         public static readonly string UnlockCrafting = "UnlockCrafting";
         public static readonly string EnhanceBuddy = "EnhanceBuddy";
@@ -182,11 +183,11 @@ namespace ERParamUtils.UpateParam
         public static readonly string RemoveRequire = "RemoveRequire";
         //public static readonly string UpdateShop = "UpdateShop";
 
-
+        public static readonly string AutoRecover = "AutoRecover";
         public static readonly string AllTalisman = "AllTalisman";
         public static readonly string CrimsonAmberMedallionBase = "CrimsonAmberMedallionBase";
         public static readonly string CrimsonAmberMedallionDisable = "CrimsonAmberMedallionDisable";
-        public static readonly string CrimsonAmberMedallionRestore = "CrimsonAmberMedallionRestore";
+        //public static readonly string CrimsonAmberMedallionRestore = "CrimsonAmberMedallionRestore";
 
         public static readonly string CrimsonAmberMedallionAttackRate = "CrimsonAmberMedallionAttackRate";
         public static readonly string CrimsonAmberMedallionConsumptionRate = "CrimsonAmberMedallionConsumptionRate";

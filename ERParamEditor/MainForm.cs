@@ -50,8 +50,12 @@ namespace ERParamEditor
             return 1;
         }
 
+        ProgressTextForm? progressTextForm;
         private async void MainForm_Shown(object sender, EventArgs e)
         {
+
+            if ( progressTextForm == null) 
+                progressTextForm = new ProgressTextForm();
 
             if (FirstShow)
             {
@@ -60,12 +64,16 @@ namespace ERParamEditor
                 InitConfig();
                 InitControls();
 
-                int r = await Task.Run(InitLoadTask);
+                var task = Task.Run(InitLoadTask);
+
+                ProgressTextForm.ExecUpdateTask(this, task);
+
 
                 logger.Info("===InitRefreshProject 1");
                 RefreshProject();
                 logger.Info("===InitRefreshProject 2");
                 Cursor = Cursors.Default;
+                progressTextForm.Hide();
             }
             FirstShow = false;
         }
@@ -217,10 +225,17 @@ namespace ERParamEditor
             if (ret == DialogResult.OK)
             {
                 ParamProject? project = null;
-
+                Task<ParamProject> task = null;
                 try
                 {
-                    project = ParamProjectManager.OpenProject(form.ProjectName, form.initCopy());
+                    task = Task.Run(() => {
+                        ParamProject  proj = ParamProjectManager.OpenProject(form.ProjectName, form.initCopy());
+
+                        return proj;
+                    });
+
+                    ProgressTextForm.ExecUpdateTask(this, task);
+                    project = task.Result;
 
 
                 }

@@ -51,6 +51,8 @@
 280000;Discussion Chamber;对谈室;280000
 220000;Garden of Deep Purple;深紫花园;220000
 310000;Murkwater Cave;蒙流洞窟;310000
+610018;Waypoint Ruins Cellar;驿站街遗迹的地下室;61443600
+630000;Erdtree-Gazing Hill;近黄金树的山丘;63385100
 
 
 300000;Tombsward Catacombs;灵庙原野地下墓地;300000

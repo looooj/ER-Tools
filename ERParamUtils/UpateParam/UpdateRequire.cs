@@ -13,7 +13,7 @@ namespace ERParamUtils.UpdateParam
 
 
 
-        public static void ExecSpec(ParamProject paramProject, UpdateCommand updateCommand)
+        public static void ExecOthers(ParamProject paramProject, UpdateCommand updateCommand)
         {
             /*
            34000000;Finger Seal;指头圣印记

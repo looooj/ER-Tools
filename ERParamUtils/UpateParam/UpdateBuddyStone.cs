@@ -14,21 +14,30 @@ namespace ERParamUtils.UpdateParam
 
         public static void Exec(ParamProject paramProject,UpdateCommand updateCommand)
         {
+            //for cer
+            DisableDebuff(paramProject, updateCommand);
+
+            //if ( updateCommand.Dis)
+            ProcRemoveConsume(paramProject, updateCommand);
+
+
+            ProcNpcParam(paramProject, updateCommand);
+           
+
             if (!updateCommand.HaveOption(UpdateParamOptionNames.EnhanceBuddy)) {
-                UpdateLogger.Info("===UpdateBuddyStone Skip");
+                UpdateLogger.InfoTime("===UpdateBuddyStone Skip");
                 return;
             }
             if (!ModConfig.EnhanceBuddy()) {
-                UpdateLogger.Info("===UpdateBuddyStone Skip ModConfig");
+                UpdateLogger.InfoTime("===UpdateBuddyStone Skip ModConfig");
                 return;
             }
-            UpdateLogger.Info("===UpdateBuddyStone.Exec");
+            UpdateLogger.InfoTime("===UpdateBuddyStone.Exec");
 
             ProcBuddyStone(paramProject,updateCommand);
-            ProcRemoveConsume(paramProject,updateCommand);
         }
 
-        public static void ProcRemoveConsume(ParamProject? paramProject, UpdateCommand updateCommand) {
+        private static void ProcRemoveConsume(ParamProject? paramProject, UpdateCommand updateCommand) {
 
             //200000 Black Knife Tiche
             //263010 Jarwight Puppet +10
@@ -64,8 +73,74 @@ namespace ERParamUtils.UpdateParam
             }
 
         }
-        public static void ProcBuddyStone(ParamProject? paramProject,UpdateCommand updateCommand)
+        //Spirit Summon
+        private static void ProcNpcParam(ParamProject? paramProject, UpdateCommand updateCommand)
         {
+            if (paramProject == null)
+                return;
+
+            SoulsParam.Param? param = paramProject.FindParam(ParamNames.NpcParam);
+
+            if (param == null)
+            {
+                return;
+            }
+            UpdateLogger.InfoTime("UpdateBuddyStone ProcNpcParam");
+
+            var rows = param.Rows;
+
+            foreach (var row in rows) { 
+                if ( row.Name == null )
+                     continue; 
+                if (row.Name.Contains("Spirit Summon")) {
+
+                    var hp = ParamRowUtils.GetCellInt(row, "hp", 0);
+                    var times = 2;
+                    if (hp > 0) {
+                        if (hp < 500)
+                            times = 4;
+                        if (hp < 1000)
+                            times = 3;
+                        hp = hp * times;
+                        updateCommand.AddItem(row, "hp", hp);
+                    }
+                }
+            }
+        }
+
+        //For Mod CER
+        private static void DisableDebuff(ParamProject? paramProject, UpdateCommand updateCommand) {
+
+            if (paramProject == null)
+                return;
+
+            SoulsParam.Param? param = paramProject.FindParam(ParamNames.SpEffectParam);
+
+            if (param == null)
+            {
+                return;
+            }
+
+            var rows = param.Rows;
+            foreach (var row in rows) {
+
+                if (row.ID >= 40002 && row.ID <= 40122) { 
+                    if ( row.Name == null )
+                        continue;
+                    if (row.Name.Contains("trigger for player")) {
+
+                        UpdateSpEffect.AddKeyValues(updateCommand, row.ID + "",
+                            "maxHpRate;1;maxMpRate;1;maxStaminaRate;1");
+                    }
+                }
+            }
+
+        }
+
+        private static void ProcBuddyStone(ParamProject? paramProject,UpdateCommand updateCommand)
+        {
+
+            //ProcNpcParam(paramProject, updateCommand);
 
             if (paramProject == null)
                 return;
@@ -88,7 +163,7 @@ namespace ERParamUtils.UpdateParam
 
                 updateCommand.AddItem(row, "eliminateTargetEntityId", "0");
                 updateCommand.AddItem(row, "summonedEventFlagId", "0");
-                //updateCommand.AddItem(row, "activateRange", "9999");
+                updateCommand.AddItem(row, "activateRange", "9999");
                 updateCommand.AddItem(row, "overwriteActivateRegionEntityId", "0");
             }
         }

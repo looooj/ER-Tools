@@ -1,0 +1,37 @@
+
+m10_00_00_00 Stormveil Castle
+m10_01_00_00 Chapel of Anticipation
+AEG099_990_9000
+
+10010000
+
+
+
+Modifying or adding custom specs, item locations, and map layouts in Elden Ring requires specialized map-editing and injection tools like DSMapStudio or Smithbox alongside Mod Engine 2. [1, 2]  
+Setup and Tools Needed 
+
+• Unpacking Game Files: Use UXM to unpack your original Elden Ring files so the mapping tools can read map data, assets, and parameters. 
+• Map Editor: Download DSMapStudio or Smithbox to load, view, and edit specific world maps, coordinates, and entity placements. 
+• Mod Loader: Use Mod Engine 2 to inject your modified files and bypass the game's anti-cheat safely during offline launch. [1, 2, 3, 4]  
+
+How to Modify Locations and Items 
+
+1. Launch a Project: Open your map editor of choice, create a new project, and point it toward your unpacked Elden Ring game directory. 
+2. Select the Map: Navigate to the Map Editor tab and choose the specific overworld or dungeon map ID (e.g.,  for Limgrave). 
+3. Edit Entities: Click on specific coordinates or search the object/event list in the editor view to change placement coordinates, swap asset IDs, or alter item lot parameters. 
+4. Save and Test: Export your map modifications into your  Mod Engine 2   folder structure and run the game via the designated batch launcher. [7, 8]  
+
+If you want to proceed, tell me:Are you trying to track/visualize existing items (like overlay map mods) or physically move/create new objects?Which specific map or region are you trying to edit? • Explore reference map textures and assets via the Ultimate Elden Ring Map Resource Pack. [9]  
+
+AI responses may include mistakes.
+
+[1] https://www.reddit.com/r/EldenRingMods/comments/1pdj5mi/map_buildings_mod_tutorial_erdtree/
+[2] https://www.reddit.com/r/EldenRingMods/comments/1aojpo5/mod_engine_2/
+[3] https://dsmapstudio.com/games/elden-ring
+[4] https://www.reddit.com/r/EldenRingMods/comments/14xo2oz/nexus_elden_ring_mod_loader_or_mod_engine_2/
+[5] https://www.nexusmods.com/eldenring/mods/960
+[6] https://www.youtube.com/watch?v=6nF4BVlyJ0s
+[7] https://www.reddit.com/r/EldenRingMods/comments/1d1ox36/how_to_use_maps_for_goblins_elden_ring_mod/
+[8] https://github.com/soulsmods/ModEngine2/releases
+[9] https://www.nexusmods.com/eldenring/mods/960
+

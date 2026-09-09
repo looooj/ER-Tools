@@ -91,8 +91,8 @@ namespace ERParamUtils.UpdateParam
             AddSpec(20, new int[] { 8000, 10060,2100 });
 
 
-            AddSpec(20,
-                new int[] { 9500, 9510, 820, 830 });
+            //AddSpec(20,
+            //    new int[] { 9500, 9510, 820, 830 });
 
 
             AddSpec(10, new int[] { 9501, 10070, 8185, 2008033, 8193, 2090 });
@@ -338,6 +338,17 @@ namespace ERParamUtils.UpdateParam
             return false;
         }
 
+        public static bool IsMagicBook(int itemId, EquipType equipType)
+        {
+            if (equipType != EquipType.Good)
+                return false;
+
+            if (itemId >= 8850 && itemId <= 8866)
+                return true;
+
+            return false;
+        }
+
         public static bool IsCookBook(int itemId, EquipType equipType) {
             if (equipType != EquipType.Good)
                 return false;
@@ -356,9 +367,12 @@ namespace ERParamUtils.UpdateParam
 
             if (itemId >= 8600 && itemId <= 8618)
                 return true;
+            if (itemId >= 2008600 && itemId <= 2008604)
+                return true;
 
             return false;
         }
+              
 
         //2010000;Scadutree Fragment; 幽影树碎片
         //2010100;Revered Spirit Ash;灵灰
@@ -366,6 +380,26 @@ namespace ERParamUtils.UpdateParam
             if (equipType != EquipType.Good)
                 return false;
             if (itemId == 2010000 || itemId == 2010100) {
+                return true;
+            }
+            return false;
+        }
+        /*
+ 9500;Cracked Pot;龟裂壶
+ 9501;Ritual Pot;仪式壶
+ 9510;Perfume Bottle;调香瓶 
+ 2009500;Hefty Cracked Pot;大龟裂壶
+
+ */
+        public static bool IsContainer(int itemId, EquipType equipType) {
+            if (equipType != EquipType.Good)
+                return false;
+            if (itemId == 9500 
+                || itemId == 9501
+                || itemId == 9510
+                || itemId == 2009500
+                )
+            {
                 return true;
             }
             return false;

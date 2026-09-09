@@ -70,7 +70,7 @@ namespace ERParamUtils.UpdateParam
 
         public static void UnlockCrafting(ParamProject paramProject, UpdateCommand updateCommand)
         {
-            RemoveLimit(paramProject, updateCommand);
+            RemoveGoodContainerNumLimit(paramProject, updateCommand);
 
             if (!updateCommand.HaveOption(UpdateParamOptionNames.UnlockCrafting)) {
                 return;
@@ -102,7 +102,8 @@ namespace ERParamUtils.UpdateParam
             }
         }
 
-        public static void RemoveLimit(ParamProject paramProject, UpdateCommand updateCommand)
+
+        public static void RemoveGoodContainerNumLimit(ParamProject paramProject, UpdateCommand updateCommand)
         {
 
             var param = paramProject.FindParam(ParamNames.EquipParamGoods);
@@ -114,12 +115,19 @@ namespace ERParamUtils.UpdateParam
 
                 var row = param.Rows[i];
                 var potGroupId = ParamRowUtils.GetCellInt(row, "potGroupId", -1);
+                var maxNum = ParamRowUtils.GetCellInt(row, "maxNum", -1);
                 if (potGroupId != -1) {
                     updateCommand.AddItem(row, "potGroupId", "-1");
+                    //updateCommand.AddItem(row, "maxNum", "99");
+                }
+
+                if (maxNum > 1 && maxNum < 99 ) {
                     updateCommand.AddItem(row, "maxNum", "99");
                 }
 
             }
+
+
         }
 
         public static void RemoveRequire(ParamProject paramProject, UpdateCommand updateCommand)
@@ -304,6 +312,19 @@ namespace ERParamUtils.UpdateParam
                 AddGood(updateCommand, param, 2090, "");
             }
 
+        }
+
+        public static void AddAncient(ParamProject paramProject, UpdateCommand updateCommand) {
+            var param = paramProject.FindParam(ParamNames.ShopLineupParamRecipe);
+            if (param == null)
+                return;
+
+            //10140; Ancient Dragon Smithing Stone; 古龙岩锻造石
+            //10168; Somber Ancient Dragon Smithing Stone; 古龙岩失色锻造石
+            AddGood(updateCommand, param, 10140, "");
+            AddGood(updateCommand, param, 10168, "");
+            AddGood(updateCommand, param, 10909, "");
+            AddGood(updateCommand, param, 10919, "");
         }
 
         public static void ExecSpec(ParamProject paramProject, UpdateCommand updateCommand)

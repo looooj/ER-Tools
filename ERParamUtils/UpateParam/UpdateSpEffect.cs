@@ -12,6 +12,17 @@ namespace ERParamUtils.UpateParam
 
         //
         //312310 [Talisman] Shard of Alexander  312300 [Talisman] Warrior Jar Shard
+
+        public static void SetAutoRecover(UpdateCommand updateCommand) {
+
+            //motionInterval = 2
+            //100621 [HKS] Hand Style - Left Hand
+            //100620 [HKS] Hand Style - Right Hand
+            string kv = AutoRecoverConfig.GetSpEffectKeyValues(updateCommand.GetOption(UpdateParamOptionNames.AutoRecover));
+            if ( kv.Length > 1)
+                AddKeyValues(updateCommand, "100620", "motionInterval;1;"+ kv);
+        }
+
         public static void PatchShard(UpdateCommand updateCommand)
         {
             //physicsAttackRate 1.15 1.1
@@ -30,19 +41,8 @@ namespace ERParamUtils.UpateParam
 
         public static void PatchHpMp(UpdateCommand updateCommand)
         {
-            if (updateCommand.HaveOption(UpdateParamOptionNames.CrimsonAmberMedallionRestore))
-            {
-                return;
-            }
-
+            //350301[Talisman] Taker's Cameo (On Enemy Kill)
             updateCommand.AddItem(ParamNames.SpEffectParam, 350301, "changeMpPoint", "-5");
-
-            //350200[Talisman] Blessed Dew Talisman
-            //updateCommand.AddItem(ParamNames.SpEffectParam, 350200, "changeHpPoint", "-5");
-            //updateCommand.AddItem(ParamNames.SpEffectParam, 350200, "changeMpPoint", "-2");
-            AddKeyValues(updateCommand, "350200", "changeHpPoint;-5;changeMpPoint;-2");
-
-            updateCommand.AddItem(ParamNames.SpEffectParam, 20380000, "changeHpPoint", "-5");
 
             //5071101[Weapon] Serpent-God's Curved Sword (On Enemy Kill)
             updateCommand.AddItem(ParamNames.SpEffectParam, 5071101, "changeMpPoint", "-5");
@@ -56,14 +56,21 @@ namespace ERParamUtils.UpateParam
             //5031401[Weapon] Blasphemous Blade (On Enemy Kill)
             updateCommand.AddItem(ParamNames.SpEffectParam, 5031401, "changeMpPoint", "-5");
 
-            //5321400[Weapon] Icon Shield -Grant HP Restoration
-            //updateCommand.AddItem(ParamNames.SpEffectParam, 5321400, "changeHpPoint", "-5");
-            //updateCommand.AddItem(ParamNames.SpEffectParam, 5321400, "changeMpPoint", "-2");
-            AddKeyValues(updateCommand, "5321400", "changeHpPoint;-5;changeMpPoint;-2");
+            
+            if (AutoRecoverConfig.RecoverHp()) {
+                //5321400[Weapon] Icon Shield -Grant HP Restoration
+                AddKeyValues(updateCommand, "5321400", "motionInterval;0");
+                //350200[Talisman] Blessed Dew Talisman
+                AddKeyValues(updateCommand, "350200", "motionInterval;0");
+            }
+            if (AutoRecoverConfig.RecoverMp()) {
+                //20380000[Talisman] Blessed Blue Dew Talisman
+                AddKeyValues(updateCommand,"20380000", "motionInterval;0");
+            }
 
         }
 
-        static void AddKeyValues(UpdateCommand updateCommand, string rowIds, string keyValues)
+        public static void AddKeyValues(UpdateCommand updateCommand, string rowIds, string keyValues)
         {
 
             var rowIds2 = rowIds.Split(";");

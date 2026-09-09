@@ -66,7 +66,7 @@ namespace ERParamUtils.UpdateParam
         }
         public static void UnlockGrace(ParamProject paramProject, UpdateCommand updateCommand)
         {
-
+            UnlockRoundtableHold(updateCommand);
             int value = updateCommand.GetOption(UpdateParamOptionNames.UnlockGrace);
             UnlockGraceType t = UnlockGraceConfig.ValueToType(value);
             if (t == UnlockGraceType.None)
@@ -103,10 +103,6 @@ namespace ERParamUtils.UpdateParam
                     break;
             }
 
-            //if (updateCommand.HaveOption(UpdateParamOptionNames.UnlockRoundtableHold))
-            //{
-            //    UnlockRoundtableHold(updateCommand);
-            //}
         }
 
         /*
@@ -277,7 +273,7 @@ namespace ERParamUtils.UpdateParam
         }
         */
 
-        /*
+        
         public static void UnlockRoundtableHold(UpdateCommand updateCommand)
         {
             if (!ModConfig.UnlockRoundtableHold()) {
@@ -285,13 +281,12 @@ namespace ERParamUtils.UpdateParam
             }
 
             //111000;Table of Lost Grace;大赐福
-            int[] defaultIds = { 111000 };
-            foreach (int rowId in defaultIds)
-            {
-                updateCommand.AddItem(ParamNames.BonfireWarpParam, rowId, eventflagIdKey, eventflagIdValue);
-            }
+            int rowId = 111000;
+            
+            updateCommand.AddItem(ParamNames.BonfireWarpParam, rowId, eventflagIdKey, ModConfig.GetUnlockGraceEventId());
+            
         }
-        */
+        
 
         //MapDefaultInfoParam
         public static void SetMapInfoParam(ParamProject paramProject, UpdateCommand updateCommand)

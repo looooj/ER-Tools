@@ -153,25 +153,7 @@ namespace ERParamUtils.UpdateParam
 
         }
 
-        //8500;Crafting Kit; 工具皮袋
-        //8590;Whetstone Knife; 砥石小刀
-        static bool NotUsedEquip(int eqId, EquipType eqType) {
 
-            if (eqType == EquipType.Good) {
-
-                if ( eqId == 104 || eqId == 105)
-                    return true;
-                if (eqId == 8500 || eqId == 8590)
-                    return true;
-            }
-
-            if (eqType == EquipType.Weapon) {
-                if (eqId == 14020000)
-                    return true;
-            }
-
-            return false;
-        }
 
         //100000[Gatekeeper Gostoc] Festering Bloody Finger
         //
@@ -238,48 +220,7 @@ namespace ERParamUtils.UpdateParam
             }
         }
 
-        private static void ReplaceAncientStone2(ParamProject paramProject, UpdateCommand updateCommand)
-        {
 
-            int[] idList = { 10168, 10140 };//,10909,10919};
-            //UpdateLogger.Begin(ParamNames.ShopLineupParam);
-
-            UpdateLogger.InfoParam("ReplaceAncientStone");
-
-            var param = paramProject.FindParam(ParamNames.ShopLineupParam);
-            if (param == null)
-                return;
-
-            int replaceIndex = 0;
-
-            foreach (var row in param.Rows)
-            {
-                int equipId = GetEquipId(row);
-
-                ShopEquipType shopEquipType = (ShopEquipType)GetEquipType(row);
-                EquipType equipType = EquipTypeUtils.ConvertFromShopEquipType((ShopEquipType)shopEquipType);
-                //101800
-                if (row.ID >= 101800) {
-
-                    if (NotUsedEquip(equipId, equipType)) {
-
-                        int tmpId = idList[replaceIndex];
-                        UpdateLogger.InfoRow("ReplaceAncientStone {0}", tmpId);
-
-                        updateCommand.AddItem(row, "equipId", tmpId);
-                        updateCommand.AddItem(row, "equipType", (int)ShopEquipType.Good);
-                        updateCommand.AddItem(row, "value", 2000);
-                        updateCommand.AddItem(row, "sellQuantity", -1);
-                        updateCommand.AddItem(row, "eventFlag_forRelease", 0);
-
-                        replaceIndex++;
-                    }
-                }
-                if (replaceIndex >= idList.Length) {
-                    break;
-                }
-            }
-        }
 
         public static void Exec(ParamProject paramProject, UpdateCommand updateCommand)
         {
@@ -291,6 +232,7 @@ namespace ERParamUtils.UpdateParam
             }
 
             //updateCommand.SetOption(UpdateParamOptionNames.ReplaceBellBearing, 1);
+            //ChangeRemembrance(paramProject, updateCommand);
 
 
 
@@ -349,10 +291,18 @@ namespace ERParamUtils.UpdateParam
 
             }
 
-            if (updateCommand.HaveOption(UpdateParamOptionNames.ShopAddAncient)) {
-            
-                ReplaceAncientStone(paramProject,updateCommand);
+
+            if (updateCommand.HaveOption(UpdateParamOptionNames.ShopAddAncient))
+            {
+
+                if (ModConfig.GetModType() == ModConfig.ModType.STD)
+                    ReplaceAncientStone(paramProject, updateCommand);
+                if (ModConfig.GetModType() == ModConfig.ModType.RAND) { 
+                
+                    UpdateShopLineupParamRecipe.AddAncient(paramProject, updateCommand);
+                }
             }
+
         }
 
 
@@ -432,6 +382,26 @@ namespace ERParamUtils.UpdateParam
             }
         }*/
 
+        //900000 Remembrance of the Grafted * 1
+        //900072 Remembrance of a God and a Lord* 1
+        static void ChangeRemembrance(ParamProject paramProject, UpdateCommand updateCommand) {
+
+            var param = paramProject.FindParam(ParamNames.EquipMtrlSetParam);
+
+            if (param == null) {
+                return;
+            }
+            //10160;Somber Smithing Stone [1]
+            var rows = param.Rows;
+            foreach (var row in rows) {
+
+                if (row.ID >= 900000 && row.ID < 900100) {
+
+                    updateCommand.AddItem(row, "materialId01", 10160);
+                }
+            
+            }
+        }
         static void ChangeVisibility(SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
             //if (row.Name == null)
@@ -447,6 +417,13 @@ namespace ERParamUtils.UpdateParam
                 {
                     updateCommand.AddItem(row, key, "0");
                 }
+
+                //key = "mtrlId";
+                //var v = ParamRowUtils.GetCellInt(row, "mtrlId", 0);
+                //if (v >= 900000 && v < 900100 )
+                //{
+                //    updateCommand.AddItem(row, key, "-1");
+                //}
 
                 /*
                 if (updateCommand.HaveOption(UpdateParamOption.RemoveRemembranceRequire) ) {

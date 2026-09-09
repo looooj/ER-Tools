@@ -1,4 +1,4 @@
-﻿using NLog;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +39,7 @@ namespace ERParamUtils
         {
             logger.Info("CompareParam {0}", param1.Name);
 
+            ProgressInfo.GetGlobal().Info("CompareParam {0}", param1.Name);
 
             var rowDict1 = MakeRowDict(param1);
             //var rowDict2 = MakeRowDict(param2);
@@ -53,6 +54,7 @@ namespace ERParamUtils
 
                 bool firstCellFlag = true;
 
+                ProgressInfo.GetGlobal().Info("CompareParam {0} {1}", param1.Name,row2.ID);
 
                 if (!rowDict1.TryGetValue(row2.ID, out SoulsParam.Param.Row? row1))
                 {         

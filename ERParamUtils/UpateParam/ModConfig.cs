@@ -117,16 +117,14 @@ namespace ERParamUtils.UpateParam
             return "unlock_grace_skip.txt";
 
         }
-        /*
-        public static string GetUnlockGraceSkipName(ParamProject paramProject)
-        {
-            return "";
-        }
 
-        public static string GetUnlockGraceName(ParamProject paramProject)
+        internal static bool CanSetupSomber()
         {
-            return "";
-        }*/
+            if (currentModType == ModType.CER)
+                return false;
+
+            return true;
+        }
 
 
         public enum ModType { 

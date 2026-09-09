@@ -352,10 +352,14 @@ namespace ERParamUtils.UpdateParam
                             int cellIndex = currentParam.GetCellIndex(item.Key);
                             if (cellIndex < 0) {
                                 UpdateLogger.InfoRow("row {0} key {1} not found", row.ID, item.Key);
+
+                                //ProgressInfo.GetGlobal().Info(s);
+
                                 continue;
                             }
                             row.Cells[cellIndex].SetValue(item.Value);
-                            UpdateLogger.InfoRow(row, item.Key, item.Value);
+                            var s = UpdateLogger.InfoRow(row, item.Key, item.Value);
+                            ProgressInfo.GetGlobal().Info(currentParam.Name + " " + s);
 
                         }
 

@@ -1,3 +1,4 @@
+using DotNext.Threading.Tasks;
 using ERParamUtils;
 using ERParamUtils.UpateParam;
 using ERParamUtils.UpdateParam;
@@ -79,8 +80,9 @@ namespace ERParamEditor
         }
 
 
+        static UpdateParamExecOptions? updateExecOptions;
 
-        public static void ExecUpdatePublish(Form form,string? msg, bool publish,DictConfig dictConfig)
+        public static void ExecUpdatePublish(Form form, string? msg, bool publish,DictConfig dictConfig, Form notifyForm)
         {
 
             Tools.CleanUpdateLog(30);
@@ -94,8 +96,13 @@ namespace ERParamEditor
                 }
             }
 
+            UpdateLogger.Notify("----");
+
+            if ( notifyForm != null)
+                 notifyForm.Show();
+
             var updateParamTasks = UpdateParamExector.GetTaskList();
-            var updateExecOptions = new UpdateParamExecOptions();
+            updateExecOptions = new UpdateParamExecOptions();
             for (int i = 0; i < updateParamTasks.Count; i++)
             {
                 if (dictConfig.Contains(updateParamTasks[i].UpdateName)) {
@@ -111,7 +118,13 @@ namespace ERParamEditor
             try
             {
                 form.Cursor = Cursors.WaitCursor;
-                UpdateParamExector.Exec(paramProject, updateExecOptions);
+
+                
+
+                var updateExecTask = Task.Run(()=> UpdateParamExector.Exec(paramProject, updateExecOptions));
+
+                ProgressTextForm.ExecUpdateTask(form, updateExecTask);
+
 
                 form.Close();
             }
@@ -121,6 +134,8 @@ namespace ERParamEditor
                 MessageBox.Show(ex.Message);
             }
             form.Cursor = Cursors.Default;
+            if (notifyForm != null)
+                notifyForm.Hide();
         }
 
 
