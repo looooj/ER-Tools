@@ -10,7 +10,8 @@
 110503;Leyndell, Capital of Ash;“灰烬王城”罗德尔;110503
 110504;Queen's Bedchamber;女王闺阁;110504
 111000;Table of Lost Grace;大赐福;111000
-
+630013;Windmill Heights;风车村高台;63425500
+630009;Altus Plateau;亚坛高原;63385002
 120100;Dragonkin Soldier of Nokstella;诺克史黛拉的龙人士兵;120100
 120110;Ainsel River Minor Erdtree;安瑟尔河小黄金树;120110
 120201;Goras, Scourge of Dreams;“梦之灾厄”哥拉斯;120201
@@ -18,6 +19,7 @@
 120306;Deeproot Depths Minor Erdtree;深根底层小黄金树;120306
 120400;Astel, Naturalborn of the Void;“黑暗弃子”艾丝缇;120400
 120500;Cocoon of the Empyrean;神人坠眠之茧;120500
+140001;Debate Parlor;讨论室;140001
 
 904800010;Konrad, Pureblood Knight;“纯血骑士”康拉德;120504
 
@@ -130,14 +132,20 @@
 
 640019;Caelid Highway South;盖利德大道南方;64483700
 640030;West Caelid Minor Erdtree;盖利德西部小黄金树;64474001
+630016;East Altus Minor Erdtree;亚坛东部小黄金树;63445300
+640032;East Caelid Minor Erdtree;盖利德东部小黄金树;64514000
+640025;Bestial Sanctum;野兽神殿;64514300
+640007;Heart of Aeonia;艾奥尼亚中心地;64493800
 640008;Chair-Crypt of Sellia;瑟利亚椅子庙;64493901
 640010;Redmane Castle Plaza;红狮子城（广场）;64513600
 
-640033;Sanctum Undercroft;神殿下方;64514301
+#640033;Sanctum Undercroft;神殿下方;64514301
 640014;Starscourge Radahn;“碎星”拉塔恩;64523800
 
 651004;Consecrated Snowfield Minor Erdtree;化圣雪原小黄金树;65495700
 650011;South Mountaintops Minor Erdtree;巨人山顶南部小黄金树;65515301
+650012;North Mountaintops Minor Erdtree;巨人山顶北部小黄金树;65525601
+
 650054;Castle Sol Rooftop;索尔城（屋顶）;65515703
 650008;Fire Giant;火焰巨人;65535200
 
@@ -154,5 +162,3 @@
 690019;Minor Erdtree Cave;小黄金树洞窟;69494500
 696000;Scadutree Base;幽影树的树脚;69504801
 
-#693003;Shaman Village;巫者村;69514701
-#400201;Abyssal Overlook;谷底眺望处;69514401
