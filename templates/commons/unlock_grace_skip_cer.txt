@@ -49,6 +49,13 @@
 210100;Messmer's Dark Chamber;梅瑟莫的暗室;210100
 210007;Sunken Chapel;沉水礼拜堂;210007
 
+400201;Abyssal Overlook;谷底眺望处;69514401
+693003;Shaman Village;巫者村;69514701
+400000;Fog Rift Catacombs;雾谷地下墓地;400000
+400100;Scorpion River Catacombs;蝎河地下墓地;400100
+400200;Darklight Catacombs;驱暗地下墓地;400200
+686002;Forsaken Graveyard;荒废墓地;68524300
+
 250000;Finger Birthing Grounds;指头产房;250000
 280000;Discussion Chamber;对谈室;280000
 220000;Garden of Deep Purple;深紫花园;220000
@@ -99,7 +106,7 @@
 
 
 611009;Morne Courtyard;摩恩院落;61433101
-611011;Morne Moangrave;摩恩悲叹墓;61433000
+#611011;Morne Moangrave;摩恩悲叹墓;61433000
 
 611013;Weeping Peninsula Minor Erdtree;啜泣半岛小黄金树;61433300
 610018;Waypoint Ruins Cellar;驿站街遗迹的地下室;61443600
@@ -119,8 +126,10 @@
 620030;Slumbering Wolf's Shack;眠狼的破屋;62364100
 620066;Lucarian Nexus;卢卡利亚枢纽;62364501
 620062;Ranni's Chamber;菈妮的房间;62345001
+620047;Royal Moongazing Grounds;王室赏月地;62355002
 
-
+341200;Divine Tower of West Altus;西亚坛神授塔;341200
+341202;Divine Tower of West Altus: Gate;西亚坛神授塔（门口）;341202
 
 631008;West Gelmir Minor Erdtree;格密尔西部小黄金树;63365201
 631009;East Gelmir Minor Erdtree;格密尔东部小黄金树;63375400

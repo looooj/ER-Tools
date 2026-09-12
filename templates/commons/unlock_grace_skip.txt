@@ -110,9 +110,9 @@
 400000;Fog Rift Catacombs;雾谷地下墓地;400000
 400100;Scorpion River Catacombs;蝎河地下墓地;400100
 400200;Darklight Catacombs;驱暗地下墓地;400200
-684001;Charo's Hidden Grave;卡罗隐藏墓地;68483901
+#684001;Charo's Hidden Grave;卡罗隐藏墓地;68483901
 686002;Forsaken Graveyard;荒废墓地;68524300
-
+684002;Dragon Resting Grounds;龙之休憩地;68494100
 
 #341000;Limgrave Tower Bridge;宁姆格福神授塔（桥上）;341000
 #341002;Divine Tower of Limgrave;宁姆格福神授塔;341002
