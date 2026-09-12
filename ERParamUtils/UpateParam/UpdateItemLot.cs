@@ -169,6 +169,100 @@ namespace ERParamUtils.UpdateParam
                 itemLot.Proc(line, updateCommand);
             }
         }
+
+        class DropItem {
+            int itemType;
+            int itemId;
+
+            public DropItem(int itemId, int itemType)
+            {
+                this.itemId = itemId;
+                this.itemType = itemType;
+            }
+        };
+        static Dictionary<string,DropItem> dropItems = new();
+        public static void AddDropItem(int itemId, EquipType itemType=EquipType.Weapon) {
+
+            string key = (int)itemType + "_" + itemId;
+            DropItem item = new( itemId, (int)itemType );
+            dropItems.TryAdd(key, item);
+        }
+
+        static void LoadDropItem(ParamProject paramProject) {
+
+            dropItems.Clear();
+            var lines = UpdateFile.Load(paramProject, "drop_items.txt");
+            foreach(var line in lines) { 
+            
+                var line2 = line.Trim();
+                if (line2.StartsWith("#")) {
+                    continue;
+                }
+                var items = line2.Split(';');
+                if (items.Length < 2)
+                    continue;
+                var eqId = int.Parse(items[1]);
+                var eqType = int.Parse(items[0]);
+
+                UpdateLogger.InfoParamTime("AddDropItem {0};{1}", eqId,eqType);
+                AddDropItem(eqId, (EquipType)eqType);
+            }
+        }
+        public static void SetupLotPoint(ParamProject paramProject,UpdateCommand updateCommand) {
+
+            var customPoint = updateCommand.GetOption(UpdateParamOptionNames.DropRate, 0);
+            //if (customPoint < 1)
+            //    customPoint;
+            if (customPoint > 990)
+                customPoint = 990;
+
+            
+
+            UpdateLogger.InfoTime("SetupLotPoint {0}", customPoint);
+
+            UpdateLogger.Begin(ParamNames.ItemLotParamEnemy);
+
+            LoadDropItem(paramProject);
+
+            var param = paramProject.FindParam(ParamNames.ItemLotParamEnemy);
+
+            if (param == null)
+                return;
+
+            foreach (var row in param.Rows) {
+
+                var itemId = ParamRowUtils.GetCellInt(row, "lotItemId02", 0);
+                var itemType = ParamRowUtils.GetCellInt(row, "lotItemCategory02", 0);
+                var key = itemType + "_" + itemId;
+                if (dropItems.ContainsKey(key)) {
+
+                    updateCommand.AddItem(row, "lotItemBasePoint01", 1);
+                    updateCommand.AddItem(row, "lotItemBasePoint02", 999);
+                    continue;
+                }
+
+                if (customPoint < 10)
+                    continue;
+
+                var point2 = ParamRowUtils.GetCellInt(row, "lotItemBasePoint02", 0);
+                if (point2 < 1 || point2 >= customPoint)
+                    continue;
+                var point1 = ParamRowUtils.GetCellInt(row, "lotItemBasePoint01", 0);
+                if ( point1 >= 500 )
+                {
+                    var eqType =(EquipType) ParamRowUtils.GetCellInt(row, "lotItemCategory02",0);
+
+                    var eqId = ParamRowUtils.GetCellInt(row, "lotItemId02", 0);
+                    if (SpecEquipConfig.IsArrow(eqId, eqType)) {
+                        continue;
+                    }
+                    updateCommand.AddItem(row, "lotItemBasePoint01", 1000 - customPoint);
+                    updateCommand.AddItem(row, "lotItemBasePoint02", customPoint);
+                }
+
+            }
+
+        }
     }
 
 

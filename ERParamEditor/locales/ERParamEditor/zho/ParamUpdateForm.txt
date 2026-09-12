@@ -5,6 +5,7 @@ buttonSaveAs=保存
 ReplaceGoldenRune_label=替换黄金卢恩
 GetRuneRate_label=卢恩获取倍数
 UnlockGrace_label=解锁赐福点
+AutoRecover_label=自动回复
 
 tabPageTalismans=增强护符
 labelCrimsonAmberMedallion=红琥珀链坠

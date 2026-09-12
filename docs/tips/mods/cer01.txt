@@ -1,0 +1,41 @@
+在《艾尔登法环》法魂 3.0（Elden Ring Convergence Mod 3.0）中，“秘宝系统”（Jewel System）是一项重大更新。玩家可以在 幽影地（DLC区域） 中寻找被仪式守卫（小Boss）看守的 “圣龛 / 神龛”，通过消耗4种遗物素材（战斗、传说、魔法、守护遗物）来制作强力的职业专属秘宝。 [1, 2]  
+以下是法魂 3.0 神龛流派与对应秘宝的完整列表： [3]  
+🔮 魔法与法术类流派 (Sorceries / Incantations) 
+
+| 神龛所属流派 / 职业 | 对应秘宝（汉化名称） | 英文原名 | 核心强化与限制  |
+| --- | --- | --- | --- |
+| 基本主义者 (Fundamentalist) | 正途秘宝 | Jewel Of The Righteous | 提升信仰，大幅强化黄金律法基本主义祷告  |
+| 火焰预言家 (Flame Prophet) | 大锅秘宝 | Jewel Of The Forge | 强化火焰巨人、巨人大锅相关火系恶神祷告  |
+| 野兽宗徒 (Bestial Devout) | 熔炉秘宝 | Jewel Of The Crucible | 提升力量/信仰，强化野兽及熔炉百相流派  |
+| 古龙祀者 (Dragon Cultist) | 古龙秘宝 | Jewel Of The Ancients | 强化古龙雷电系列祷告  |
+| 神皮庆典者 (Godskin Celebrant) | 剥制秘宝 | Jewel Of The Flayer | 强化神皮黑焰及命定之死流派  |
+| 癫火狂徒 (Frenzied Zealot) | 失心秘宝 | Jewel Of The Mindless | 极大强化癫火系列祷告与发狂异常  |
+| 鲜血新锐 (Blood Initiate) | 创口秘宝 | Jewel Of The Wounded | 强化血盟祷告，配合出血流派  |
+| 腐败侍仆 (Servant Of Rot) | 封印秘宝（腐败秘宝） | Jewel Of The Sealed | 强力腐败与毒素流核心，甚至能获得二段跳、无限招大盾等强力被动  |
+| 密契者 (Mystic) | 祖灵秘宝 | Jewel Of The Ancestors | 强化祖灵、灵体相关魔法/祷告  |
+| 星空流派 (Cosmos / Astrologer) | 星空秘宝 | Jewel Of The Cosmos | 提升智力，获得空中二段跳能力且免疫坠落伤害  |
+
+⚔️ 近战、射手与功能流派 (Martial / Ranged / Others) 
+
+| 神龛所属流派 / 职业 | 对应秘宝（汉化名称） | 英文原名 | 核心强化与限制  |
+| --- | --- | --- | --- |
+| 近战威猛流 (Martial/Strength) | 蛮勇秘宝 | Jewel of Bravery (暂译) | 提升力量与全属性减伤、大幅加韧，但装备后无法使用任何魔法或祷告  |
+| 近战防御流 (Martial/Defensive) | 坚毅秘宝 | Jewel of Fortitude (暂译) | 提升力量，不防御时受击可恢复生命/精力/专注，并根据物理减伤对周围造成反伤  |
+| 远距离射手 (Marksman) | 神射手秘宝 | Jewel of the Marksman | 移除远程弹道下坠与距离衰减伤害，弩炮装填速度+50%，远程伤害+10%  |
+| 囚犯流派 (Prisoner) | 缚锁秘宝 | Jewel Of The Chained | 强化囚犯/格挡刺杀等特定战技风格  |
+| 扈从流派 (Retainer) | 扈从秘宝 | Jewel of the Retainer | 提升力量与灵巧，单持武器时翻滚、单持攻击伤害和耐力恢复大幅提升  |
+| 调香师 (Perfumer) | 炼金秘宝 | Jewel Of The Alchemist | 专门针对调香瓶、药剂流派的增强（部分早期3.0版本暂未实装）  |
+
+💡 重要机制提示： 
+
+1. 只能装备一个：玩家同时只能装备一个“秘宝”。 
+2. 法术类限制：装备法术类秘宝后，玩家只能施放该秘宝对应职业的法术。如果装备的是近战或无传统法术的秘宝（如蛮勇、神射手），则会直接封印全法术施放。 [1, 4]  
+
+你需要了解这些秘宝中某一个的具体属性与特殊被动效果（例如可以无限招大盾的封印秘宝，或提供二段跳的星空秘宝），还是需要某个圣龛在幽影地地图中的具体位置或走法路线？ 
+AI responses may include mistakes.
+
+[1] https://www.bilibili.com/opus/991770960145154055
+[2] https://wiki.convergencemod.com/wiki/Talisman
+[3] https://github.com/soarqin/ConvergenceER_CN/issues/41
+[4] https://www.scribd.com/document/1064379542/3-0-Patch-Notes-Convergence-Elden-ring-mod
+

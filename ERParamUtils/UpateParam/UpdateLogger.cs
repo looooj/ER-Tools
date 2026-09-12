@@ -145,7 +145,14 @@ namespace ERParamUtils.UpdateParam
             GetLogger(currentParamName).Info(format, args);
 
         }
+        public static void InfoParamTime(string format, params object[] args)
+        {
 
+            string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss ");
+            string s = time + string.Format(format, args);
+            GetLogger(currentParamName).Add(s);
+
+        }
         public static string InfoRow(SoulsParam.Param.Row row, string key, object value) {
 
             return GetLogger(currentParamName).Info("{0},{1} {2}={3}", row.ID, row.Name!=null? row.Name:"?", key, value);

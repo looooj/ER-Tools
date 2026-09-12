@@ -39,7 +39,7 @@ namespace ERParamEditor
             tableLayoutPanel5 = new TableLayoutPanel();
             tabPage4 = new TabPage();
             tableLayoutPanel4 = new TableLayoutPanel();
-            panel1 = new Panel();
+            panelBottom = new Panel();
             comboBoxTag = new ComboBox();
             buttonSaveAs = new Button();
             buttonPublish = new Button();
@@ -50,7 +50,7 @@ namespace ERParamEditor
             tabPage3.SuspendLayout();
             tabPageShop.SuspendLayout();
             tabPage4.SuspendLayout();
-            panel1.SuspendLayout();
+            panelBottom.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -186,17 +186,17 @@ namespace ERParamEditor
             tableLayoutPanel4.Size = new Size(962, 567);
             tableLayoutPanel4.TabIndex = 3;
             // 
-            // panel1
+            // panelBottom
             // 
-            panel1.Controls.Add(comboBoxTag);
-            panel1.Controls.Add(buttonSaveAs);
-            panel1.Controls.Add(buttonPublish);
-            panel1.Controls.Add(buttonUpdate);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 666);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1058, 43);
-            panel1.TabIndex = 1;
+            panelBottom.Controls.Add(comboBoxTag);
+            panelBottom.Controls.Add(buttonSaveAs);
+            panelBottom.Controls.Add(buttonPublish);
+            panelBottom.Controls.Add(buttonUpdate);
+            panelBottom.Dock = DockStyle.Bottom;
+            panelBottom.Location = new Point(0, 666);
+            panelBottom.Name = "panelBottom";
+            panelBottom.Size = new Size(1058, 43);
+            panelBottom.TabIndex = 1;
             // 
             // comboBoxTag
             // 
@@ -242,7 +242,7 @@ namespace ERParamEditor
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1058, 709);
-            Controls.Add(panel1);
+            Controls.Add(panelBottom);
             Controls.Add(tabControl1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -258,7 +258,7 @@ namespace ERParamEditor
             tabPage3.ResumeLayout(false);
             tabPageShop.ResumeLayout(false);
             tabPage4.ResumeLayout(false);
-            panel1.ResumeLayout(false);
+            panelBottom.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -267,7 +267,7 @@ namespace ERParamEditor
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private Panel panel1;
+        private Panel panelBottom;
         private Button buttonPublish;
         private Button buttonUpdate;
         private TableLayoutPanel tableLayoutPanel1;

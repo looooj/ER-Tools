@@ -261,7 +261,38 @@ namespace ERParamEditor
             File.WriteAllText(path, r);
 
         }
+        public static void FindMp()
+        {
 
+            var proj = GlobalConfig.GetCurrentProject();
+            if (proj == null)
+                return;
+            var param = proj.FindParam(ParamNames.SpEffectParam);
+
+            if (param == null)
+                return;
+            var rows = param.Rows;
+            var lines = new List<string>();
+
+            foreach (var row in rows)
+            {
+
+
+                var v = ParamRowUtils.GetCellInt(row, "changeMpPoint", 1);
+                if (v != 0)
+                {
+
+                    var s = string.Format("{0},{1},changeMpPoint={2}", row.ID, row.Name, v);
+                    lines.Add(s);
+                }
+
+            }
+            string path = proj.GetUpdateDir() + "\\sp-mp.txt";
+            string r = string.Join("\n", lines);
+
+            File.WriteAllText(path, r);
+
+        }
         public static void FindGuardLevel()
         {
 

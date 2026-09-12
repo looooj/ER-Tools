@@ -1,0 +1,9 @@
+#None=0, Good=1, Weapon=2, Protector=3, Accessory=4, Gem=5
+
+2;12160000;Envoy's Long Horn;众使者的长笛子
+2;19010000;Grave Scythe;墓地大镰刀
+2;7050000;Magma Blade;熔岩刀
+2;12140000;Pickaxe;十字镐
+2;3020000;Iron Greatsword;铁制大剑
+
+

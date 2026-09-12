@@ -1,4 +1,4 @@
-﻿using ERParamUtils;
+using ERParamUtils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +14,7 @@ namespace ERParamUtils
         public static string RegulationFileName = "regulation.bin";
         public static string TemplateDir = "templates";
         public static bool Debug = false;
+        public static bool DefaultEnhance = true;
         private static string ConfigFile="config.txt";
 
 
@@ -54,6 +55,7 @@ namespace ERParamUtils
             AssetsDir = config.GetString("AssetsDir", BaseDir + "\\assets");
             TemplateDir = config.GetString("TemplateDir", BaseDir + "\\templates" );
             Debug = (config.GetInt("Debug", 0) != 0);
+            DefaultEnhance = (config.GetInt("DefaultEnhance", 1) != 0);
             UseParamNameFilter = (config.GetInt("UseParamNameFilter", 1) != 0);
         }
 

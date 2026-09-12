@@ -60,21 +60,6 @@ namespace ERParamUtils.UpateParam
             }
         }
 
-        /*
-         Shard of Alexander
-physicsAttackRate 1.15
-magicAttackRate 1.15
-fireAttackRate 1.15
-thunderAttackRate 1.15
-magicSubCategoryChange1  112
-magicSubCategoryChange2  111
-darkAttackRate 1.15        
-         */
-
-        public static void BuildSuperTalisman2(ParamProject? paramProject, UpdateCommand updateCommand)
-        {
-
-        }
 
         //CrimsonAmberMedallion
 
@@ -96,22 +81,7 @@ darkAttackRate 1.15
             return list;
         }
 
-        /*
-        private static void AddKeysValue(UpdateCommand updateCommand,string paramName, int rowId, string[] keys, string value) {
 
-            foreach (var key in keys) {
-
-                updateCommand.AddItem(paramName, rowId, key,value);
-
-            }
-        }
-
-
-        static void ChangeSpEffect(UpdateCommand updateCommand,int rowId, string key, string val) {
-
-            updateCommand.AddItem(ParamNames.SpEffectParam, rowId, key, val);
-
-        } */
 
         static void ChangeSpEffect(UpdateCommand updateCommand, string rowIds, string key, string val)
         {
@@ -128,6 +98,7 @@ darkAttackRate 1.15
 
         public static void PatchArrowTailsman(UpdateCommand updateCommand) {
 
+            UpdateLogger.InfoTime("PatchArrowTailsman");
             //321500 [Talisman] Arrow's Sting Talisman
             //321000 [Talisman] Arrow's Reach Talisman
             var ids = "321000";

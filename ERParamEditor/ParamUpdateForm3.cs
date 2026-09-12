@@ -79,7 +79,7 @@ namespace ERParamEditor
             InitPageShop(tableLayoutPanel5);
 
 
-            ParamUpdateFormUtils.applyOptions(customTablePanels,currentConfig);
+            ParamUpdateFormUtils.applyOptions(customTablePanels, currentConfig);
 
             //for (int i = 0; i < customTablePanels.Count; i++)
             //{
@@ -186,7 +186,12 @@ namespace ERParamEditor
             //    panel.AddCheckBox(UpdateParamOptionNames.UnlockGraceAll, "");
             //panel.AddCheckBox(UpdateParamOptionNames.EnableFastTravel, "");
 
-
+            var lotPointNames = LotPointConfig.GetNameList();
+            var lotPointValues = LotPointConfig.GetValueList();
+            panel.AddSelectionNameValue(
+                UpdateParamOptionNames.DropRate,
+                UpdateParamOptionNames.DropRate,
+               lotPointNames, lotPointValues, "0");
         }
 
         private void InitPageC(TableLayoutPanel control)
@@ -333,25 +338,14 @@ namespace ERParamEditor
         {
         }
 
-        NotifyForm notifyForm;
         void execUpdatePublish(string? msg, bool publishFlag)
         {
-
-
-            if (notifyForm == null)
-            {
-                notifyForm = new NotifyForm();
-                notifyForm.StartPosition = FormStartPosition.CenterScreen;
-            }
-        
-            //notifyForm.Show(this);
-
-            //bool r = (notifyForm.ParentForm != this);
-            //if (r)
-            //    MessageBox.Show("not child");
+            panelBottom.Enabled = false;
 
             var config = ParamUpdateFormUtils.saveOptions(customTablePanels);
-            ParamUpdateFormUtils.ExecUpdatePublish(this, msg, publishFlag, config,notifyForm);
+            config.SetString(UpdateParamOptionNames.DefaultEnhance, GlobalConfig.DefaultEnhance + "");
+            ParamUpdateFormUtils.ExecUpdatePublish(this, msg, publishFlag, config);
+            panelBottom.Enabled = true;
 
             //notifyForm.Hide();
             Close();
@@ -376,11 +370,12 @@ namespace ERParamEditor
             if (v == null)
                 return;
             var tag = v.ToString().Trim();
-            if (tag != ParamOptionsFile.GetCurrentTag()) {
+            if (tag != ParamOptionsFile.GetCurrentTag())
+            {
                 ParamUpdateFormUtils.saveOptions(customTablePanels);
             }
             ParamOptionsFile.SetCurrentTag(tag);
-            var  config = ParamUpdateFormUtils.loadOptions();
+            var config = ParamUpdateFormUtils.loadOptions();
 
             ParamUpdateFormUtils.applyOptions(customTablePanels, config);
 
@@ -389,7 +384,7 @@ namespace ERParamEditor
         private void buttonSaveAs_Click(object sender, EventArgs e)
         {
             var v = ControlUtils.GetComboBoxValue(comboBoxTag);
-            if (v != null )
+            if (v != null)
             {
                 var tag = v.ToString().Trim();
 

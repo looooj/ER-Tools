@@ -19,12 +19,34 @@ namespace ERParamUtils.UpateParam
             //100621 [HKS] Hand Style - Left Hand
             //100620 [HKS] Hand Style - Right Hand
             string kv = AutoRecoverConfig.GetSpEffectKeyValues(updateCommand.GetOption(UpdateParamOptionNames.AutoRecover));
-            if ( kv.Length > 1)
-                AddKeyValues(updateCommand, "100620", "motionInterval;1;"+ kv);
+            if (kv.Length > 1)
+            {
+                var rowId = "100620";
+                if (ModConfig.GetModType() == ModConfig.ModType.CER) {
+                    rowId = "330";
+                }
+                AddKeyValues(updateCommand, rowId, "motionInterval;1;" + kv);
+            }
+
+
+            if (AutoRecoverConfig.RecoverHp())
+            {
+                //5321400[Weapon] Icon Shield -Grant HP Restoration
+                AddKeyValues(updateCommand, "5321400", "motionInterval;0");
+                //350200[Talisman] Blessed Dew Talisman
+                AddKeyValues(updateCommand, "350200", "motionInterval;0");
+            }
+            if (AutoRecoverConfig.RecoverMp())
+            {
+                //20380000[Talisman] Blessed Blue Dew Talisman
+                AddKeyValues(updateCommand, "20380000", "motionInterval;0");
+            }
         }
 
         public static void PatchShard(UpdateCommand updateCommand)
         {
+            UpdateLogger.InfoTime("PatchShard");
+
             //physicsAttackRate 1.15 1.1
             //magicAttackRate 1.15 1.1
             //fireAttackRate 1.15 1.1
@@ -41,6 +63,8 @@ namespace ERParamUtils.UpateParam
 
         public static void PatchHpMp(UpdateCommand updateCommand)
         {
+            UpdateLogger.InfoTime("PatchHpMp");
+
             //350301[Talisman] Taker's Cameo (On Enemy Kill)
             updateCommand.AddItem(ParamNames.SpEffectParam, 350301, "changeMpPoint", "-5");
 
@@ -55,19 +79,6 @@ namespace ERParamUtils.UpateParam
 
             //5031401[Weapon] Blasphemous Blade (On Enemy Kill)
             updateCommand.AddItem(ParamNames.SpEffectParam, 5031401, "changeMpPoint", "-5");
-
-            
-            if (AutoRecoverConfig.RecoverHp()) {
-                //5321400[Weapon] Icon Shield -Grant HP Restoration
-                AddKeyValues(updateCommand, "5321400", "motionInterval;0");
-                //350200[Talisman] Blessed Dew Talisman
-                AddKeyValues(updateCommand, "350200", "motionInterval;0");
-            }
-            if (AutoRecoverConfig.RecoverMp()) {
-                //20380000[Talisman] Blessed Blue Dew Talisman
-                AddKeyValues(updateCommand,"20380000", "motionInterval;0");
-            }
-
         }
 
         public static void AddKeyValues(UpdateCommand updateCommand, string rowIds, string keyValues)

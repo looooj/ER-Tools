@@ -82,7 +82,7 @@ namespace ERParamEditor
 
         static UpdateParamExecOptions? updateExecOptions;
 
-        public static void ExecUpdatePublish(Form form, string? msg, bool publish,DictConfig dictConfig, Form notifyForm)
+        public static void ExecUpdatePublish(Form form, string? msg, bool publish,DictConfig dictConfig)
         {
 
             Tools.CleanUpdateLog(30);
@@ -96,10 +96,8 @@ namespace ERParamEditor
                 }
             }
 
+            
             UpdateLogger.Notify("----");
-
-            if ( notifyForm != null)
-                 notifyForm.Show();
 
             var updateParamTasks = UpdateParamExector.GetTaskList();
             updateExecOptions = new UpdateParamExecOptions();
@@ -117,9 +115,7 @@ namespace ERParamEditor
             updateExecOptions.Publish = publish;
             try
             {
-                form.Cursor = Cursors.WaitCursor;
-
-                
+                form.Cursor = Cursors.WaitCursor;                
 
                 var updateExecTask = Task.Run(()=> UpdateParamExector.Exec(paramProject, updateExecOptions));
 
@@ -134,8 +130,7 @@ namespace ERParamEditor
                 MessageBox.Show(ex.Message);
             }
             form.Cursor = Cursors.Default;
-            if (notifyForm != null)
-                notifyForm.Hide();
+
         }
 
 

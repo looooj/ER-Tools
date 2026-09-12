@@ -535,7 +535,8 @@ namespace ERParamEditor
             //ExtractMsg();
             //Tests2.FindGuardLevel();
             //Tests2.ExportParamGraceSTD();
-            Tests2.FindMaxHp();
+            //Tests2.FindMaxHp();
+            Tests2.FindMp();
         }
     }
 }

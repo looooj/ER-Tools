@@ -155,6 +155,19 @@ namespace ERParamUtils.UpateParam
 
     }
 
+    public class LotPointConfig {
+        public static string GetValueList()
+        {
+            return "0,500,900";
+        }
+
+        public static string GetNameList()
+        {
+            return "NotChange,50%,90%";
+        }
+
+    };
+
     public class UpdateParamOptionItem {
 
         public string Name;
@@ -175,12 +188,14 @@ namespace ERParamUtils.UpateParam
 
     public class UpdateParamOptionNames
     {
-        public static readonly string DisableDefault = "DisableDefault";
+        public static readonly string DefaultEnhance = "DefaultEnhance";
+        public static readonly string DisableDefaultEnhance = "DisableDefaultEnhance";
         public static readonly string ModType = "ModType";
         public static readonly string UnlockCrafting = "UnlockCrafting";
         public static readonly string EnhanceBuddy = "EnhanceBuddy";
         public static readonly string RemoveWeight = "RemoveWeight";
         public static readonly string RemoveRequire = "RemoveRequire";
+        public static readonly string DropRate = "DropRate";
         //public static readonly string UpdateShop = "UpdateShop";
 
         public static readonly string AutoRecover = "AutoRecover";

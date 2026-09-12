@@ -421,9 +421,10 @@ namespace ERParamUtils.UpdateParam
 
                 UpdateShopLineupParam.Exec(paramProject, updateCommand);
 
+                UpdateItemLot.SetupLotPoint(paramProject, updateCommand);
 
-                if (ModConfig.GetModType() == ModConfig.ModType.STD)
-                    UpdateRow.LoadUpdateRow("patch-lot.txt", updateCommand);
+                //if (ModConfig.GetModType() == ModConfig.ModType.STD)
+                //    UpdateRow.LoadUpdateRow("patch-lot.txt", updateCommand);
 
                 foreach (var task in options.UpdateTasks)
                 {

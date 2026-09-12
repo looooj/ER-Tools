@@ -17,11 +17,14 @@ namespace ERParamUtils.UpdateParam
             //for cer
             DisableDebuff(paramProject, updateCommand);
 
-            //if ( updateCommand.Dis)
-            ProcRemoveConsume(paramProject, updateCommand);
+            if (updateCommand.HaveOption(UpdateParamOptionNames.DefaultEnhance) ||
+                updateCommand.HaveOption(UpdateParamOptionNames.EnhanceBuddy)
+                )
+            {
 
-
-            ProcNpcParam(paramProject, updateCommand);
+                ProcRemoveConsume(paramProject, updateCommand);
+                ProcNpcParam(paramProject, updateCommand);
+            }
            
 
             if (!updateCommand.HaveOption(UpdateParamOptionNames.EnhanceBuddy)) {
@@ -140,7 +143,6 @@ namespace ERParamUtils.UpdateParam
         private static void ProcBuddyStone(ParamProject? paramProject,UpdateCommand updateCommand)
         {
 
-            //ProcNpcParam(paramProject, updateCommand);
 
             if (paramProject == null)
                 return;
