@@ -1,4 +1,5 @@
 using ERParamUtils.UpateParam;
+using SoulsFormats.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -38,6 +39,30 @@ namespace ERParamUtils.UpdateParam
             }
 
 
+            ProcWeaponFile(paramProject, updateCommand);
+            ProcMagicFile(paramProject, updateCommand);
+
+        }
+
+        private static void ProcWeaponFile(ParamProject paramProject, UpdateCommand updateCommand) {
+
+            var lines = UpdateFile.LoadIdFile(paramProject,"remove_weapon_req.txt");
+
+            foreach (var line in lines) {
+
+                ProcWeaponId(updateCommand, line.Id);
+            }           
+
+        }
+        private static void ProcMagicFile(ParamProject paramProject, UpdateCommand updateCommand)
+        {
+
+            var lines = UpdateFile.LoadIdFile(paramProject, "remove_magic_req.txt");
+            foreach (var line in lines)
+            {
+                ProcMagicId(updateCommand, line.Id);
+            }
+
         }
 
 
@@ -53,6 +78,26 @@ namespace ERParamUtils.UpdateParam
             ProcWeapon(paramProject, updateCommand);
             ProcMagic(paramProject, updateCommand);
 
+        }
+
+        public static void ProcWeaponId(UpdateCommand updateCommand, string id) {
+
+            string[] keys = { "properStrength", "properAgility",
+                    "properMagic", "properFaith","properLuck"};
+            var rowId = int.Parse(id);
+            foreach (var key in keys)
+            {
+                
+                updateCommand.AddItem(ParamNames.EquipParamWeapon,rowId,key,1);
+            }
+        }
+        public static void ProcMagicId(UpdateCommand updateCommand, string id)
+        {
+
+            string[] keys = { "properStrength", "properAgility",
+                    "properMagic", "properFaith","properLuck"};
+            var rowId = int.Parse(id);
+            updateCommand.AddKeysItem(ParamNames.MagicParam, rowId, keys, "1");
         }
 
         public static void ProcWeapon(ParamProject? paramProject, UpdateCommand updateCommand)
@@ -78,7 +123,7 @@ namespace ERParamUtils.UpdateParam
                     "properMagic", "properFaith","properLuck"};
                 foreach (var key in keys)
                 {
-                    UpdateCommandItem item = UpdateCommandItem.Create(row, key, "0");
+                    UpdateCommandItem item = UpdateCommandItem.Create(row, key, "1");
                     updateCommand.AddItem(item);
                 }
             }
@@ -106,7 +151,7 @@ namespace ERParamUtils.UpdateParam
                     "properMagic", "properFaith","properLuck"};
             foreach (var key in keys)
             {
-                updateCommand.AddItem(row, key, "0");
+                updateCommand.AddItem(row, key, "1");
             }
             updateCommand.AddItem(row, "weight", 1);
         }
@@ -117,7 +162,7 @@ namespace ERParamUtils.UpdateParam
                     "properMagic", "properFaith","properLuck"};
             foreach (var key in keys)
             {
-                updateCommand.AddItem(ParamNames.EquipParamWeapon, id, key, "0");
+                updateCommand.AddItem(ParamNames.EquipParamWeapon, id, key, "1");
             }
             updateCommand.AddItem(ParamNames.EquipParamWeapon, id, "weight", 1);
         }

@@ -306,6 +306,12 @@ namespace ERParamUtils.UpdateParam
             //8171;Chrysalids' Memento;蛹群的遗物
             //if ( ModConfig.GetModType() == ModConfig.ModType.RAND)
                 AddGood(updateCommand, param, 8171,  "");
+            //8186;Imbued Sword Key;魔石剑钥匙
+            AddGood(updateCommand, param, 8186, "");
+
+            //2130; Celestial Dew; 星星泪滴
+            AddGood(updateCommand, param, 2130, "");
+
 
             if (updateCommand.HaveOption(UpdateParamOptionNames.ReplaceDeathroot)) {
                 //2090;Deathroot;死根

@@ -1,0 +1,28 @@
+60540000;Bracelet of Gold;黄金手环
+40000000;Shortbow;短弓
+40010000;Misbegotten Shortbow;混种小弓
+40020000;Red Branch Shortbow;红木短弓
+40030000;Harp Bow;竖琴弓
+40050000;Composite Bow;复合弓
+41000000;Longbow;长弓
+41010000;Albinauric Bow;白金弓
+41020000;Horn Bow;角弓
+41030000;Erdtree Bow;黄金树弓
+41040000;Serpent Bow;蛇弓
+41060000;Pulley Bow;滑轮弓
+41070000;Black Bow;黑弓
+41080000;Scadu Sapling;幽影树苗
+41090000;Devonia's Longbow;泥盆亚的长弓
+42000000;Lion Greatbow;狮子大弓
+42010000;Golem Greatbow;魔像大弓
+42030000;Erdtree Greatbow;黄金树大弓
+42040000;Greatbow;大弓
+43000000;Soldier's Crossbow;士兵弩
+43020000;Light Crossbow;轻弩
+43030000;Heavy Crossbow;重弩
+43050000;Pulley Crossbow;滑轮弩
+43060000;Full Moon Crossbow;圆月弩
+43080000;Arbalest;钢弩
+43110000;Crepus's Black-Key Crossbow;克雷普的黑键
+44000000;Hand Ballista;携带型弩炮
+44010000;Jar Cannon;壶大炮

@@ -319,7 +319,11 @@ namespace ERParamUtils.UpdateParam
         {
             AddItem(paramName, rowId, key, value + "");
         }
-
+        public void AddItem(string paramName, int rowId, string[] keys, int value)
+        {
+            foreach(var key  in keys) 
+                AddItem(paramName, rowId, key, value + "");
+        }
         public void AddItem(SoulsParam.Param.Row row, string key, int value) {
             AddItem(row, key, value + "");
         }

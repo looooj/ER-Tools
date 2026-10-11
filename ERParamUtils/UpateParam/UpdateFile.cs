@@ -1,4 +1,4 @@
-﻿using Org.BouncyCastle.Tls;
+using Org.BouncyCastle.Tls;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -162,6 +162,36 @@ namespace ERParamUtils.UpdateParam
             if (varMap.Count > 0 )
                 result = ProcLineVar(result, varMap);
             return result;
+        }
+
+        public class IdLine {
+            public string Id="";
+            public string Line="";
+        }
+        public static List<IdLine> LoadIdFile(ParamProject paramProject,string name) { 
+
+            List<IdLine> idLines = new List<IdLine>();
+            var lines = UpdateFile.Load(paramProject, name);
+            foreach (var line in lines)
+            {
+                var line2 = line.Trim();
+                if (line2.StartsWith("#"))
+                {
+                    continue;
+                }
+                if (line2.Length < 5)
+                    continue;
+                var items = line2.Split(';');
+                if (items.Length > 0)
+                {
+                    var id = items[0];
+                    IdLine idLine = new();
+                    idLine.Id = id;
+                    idLine.Line = line;
+                    idLines.Add(idLine);
+                }
+            }
+            return idLines;
         }
 
         static List<string> ProcLineVar(List<string> lines, Dictionary<string, string> varMap) {
