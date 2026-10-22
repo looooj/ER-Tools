@@ -101,13 +101,14 @@ namespace ERParamUtils.UpateParam
             UpdateLogger.InfoTime("PatchArrowTailsman");
             //321500 [Talisman] Arrow's Sting Talisman
             //321000 [Talisman] Arrow's Reach Talisman
-            var ids = "321000";
-            ChangeSpEffect(updateCommand, ids, "bowDistRate","65");
+            var ids = "321000;321500";
+            ChangeSpEffect(updateCommand, ids, "bowDistRate","9999");
             ChangeSpEffect(updateCommand, ids, "physicsAttackRate", "1.1");
             ChangeSpEffect(updateCommand, ids, "magicAttackRate", "1.1");
             ChangeSpEffect(updateCommand, ids, "fireAttackRate", "1.1");
             ChangeSpEffect(updateCommand, ids, "thunderAttackRate", "1.1");
             ChangeSpEffect(updateCommand, ids, "darkAttackRate", "1.1");
+            ChangeSpEffect(updateCommand, ids, "stateInfo", "168");
 
         }
 
