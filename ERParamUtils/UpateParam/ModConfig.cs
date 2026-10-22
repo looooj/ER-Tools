@@ -1,7 +1,9 @@
 using ERParamUtils.UpdateParam;
+using SoulsFormats.KF4;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +14,17 @@ namespace ERParamUtils.UpateParam
         public static string GetModTypeNames() {
 
             return "STD,RAND,CER";
+        }
+
+        public static List<string> GetModTypeNameList() { 
+        
+            var list = new List<string>();
+            var items = GetModTypeNames().Split(',');
+            foreach (var item in items)
+            {
+                list.Add(item);
+            }
+            return list;
         }
 
         public static string GetModTypeIds()
@@ -27,6 +40,10 @@ namespace ERParamUtils.UpateParam
                 currentModType = (ModType)v;
             }
             
+        }
+
+        public static void SetModType(ModConfig.ModType v) { 
+            currentModType=v;
         }
 
         public static bool AddWhetblade()
@@ -77,8 +94,17 @@ namespace ERParamUtils.UpateParam
                 case ModType.CER:
                     return 27;
             }
-            return 12;
-            
+            return 12;            
+        }
+
+        public static string GetCharaClassNames() {
+
+            switch (currentModType)
+            {
+                case ModType.CER:
+                    return "chara-names-cer.txt";
+            }
+            return "chara-names.txt";
         }
 
         public static string GetUnlockGraceEventId() {
@@ -126,6 +152,10 @@ namespace ERParamUtils.UpateParam
             return true;
         }
 
+        public static string GetDefaultModTypeName()
+        {
+            return "STD";
+        }
 
         public enum ModType { 
             STD = 0,

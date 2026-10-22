@@ -1,4 +1,5 @@
 using ERParamUtils;
+using ERParamUtils.UpateParam;
 using SoulsFormats;
 using System;
 using System.Collections.Generic;
@@ -36,13 +37,14 @@ namespace ERParamEditor
         public string RegulationPath = "";
         public string ProjectName = "";
         public string TemplateName = "";
-
+        public ModConfig.ModType modType=0;
         private void buttonOk_Click(object sender, EventArgs e)
         {
 
             RegulationPath = textFilename.Text.Trim();
             ProjectName = textProjectName.Text.Trim();
-            TemplateName = comboBoxTemplate.Text;
+            modType =(ModConfig.ModType)int.Parse(comboBoxModType.SelectedValue.ToString());
+            //TemplateName = comboBoxTemplate.Text;
             try
             {
                 string? errorMsg = ParamProjectManager.CheckProjectName(ProjectName);
@@ -84,8 +86,12 @@ namespace ERParamEditor
 
         private void CreateProjectForm_Load(object sender, EventArgs e)
         {
-            textProjectName.Text = "proj";
+            textProjectName.Text = "proj"+ (new Random().Next(9000)+1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            ControlUtils.InitSelection2(comboBoxModType, ModConfig.GetModTypeNames(), ModConfig.GetModTypeIds(), 
+                ModConfig.GetDefaultModTypeName());
+            /*
             comboBoxTemplate.Visible = false;
             ParamProjectTemplate.Init();
             var items = ParamProjectTemplate.GetList();
@@ -93,6 +99,7 @@ namespace ERParamEditor
                comboBoxTemplate.Items.Add(item);
             if (items.Count > 0 )
                 comboBoxTemplate.SelectedIndex = 0;
+            */
         }
 
         private void checkBoxEldenRing_CheckedChanged(object sender, EventArgs e)

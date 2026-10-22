@@ -86,6 +86,11 @@ namespace ERParamUtils
             //Dict[key.ToLower()] = value;
         }
 
+        public void SetInt(string key, int value) {
+
+            Dict[key] = value + "";
+        }
+
         public bool Contains(string key) {
             return Dict.ContainsKey(key);
         }

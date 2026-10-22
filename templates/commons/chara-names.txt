@@ -1,0 +1,13 @@
+0;All;全部
+3000;Vagabond;流浪骑士
+3001;Warrior;剑士
+3002;Hero;勇者
+3003;Bandit;盗贼
+3004;Astrologer;观星者
+3005;Prophet;预言家
+3006;Confessor;密使
+3007;Samurai;武士
+3008;Prisoner;囚犯
+3009;Wretch;一贫如洗
+3010;Idus Knight;伊德斯骑士
+3011;Heavy Knight;重装骑士

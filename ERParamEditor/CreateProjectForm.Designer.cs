@@ -1,4 +1,4 @@
-﻿namespace ERParamEditor
+namespace ERParamEditor
 {
     partial class CreateProjectForm
     {
@@ -37,8 +37,8 @@
             textProjectName = new TextBox();
             label2 = new Label();
             checkBoxEldenRing = new CheckBox();
-            comboBoxTemplate = new ComboBox();
-            labTemplate = new Label();
+            comboBoxModType = new ComboBox();
+            label3 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -59,7 +59,7 @@
             // 
             // buttonOk
             // 
-            buttonOk.Location = new Point(673, 134);
+            buttonOk.Location = new Point(673, 190);
             buttonOk.Name = "buttonOk";
             buttonOk.Size = new Size(75, 23);
             buttonOk.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new Point(769, 134);
+            buttonCancel.Location = new Point(769, 190);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(75, 23);
             buttonCancel.TabIndex = 3;
@@ -110,7 +110,7 @@
             // checkBoxEldenRing
             // 
             checkBoxEldenRing.AutoSize = true;
-            checkBoxEldenRing.Location = new Point(69, 136);
+            checkBoxEldenRing.Location = new Point(69, 192);
             checkBoxEldenRing.Name = "checkBoxEldenRing";
             checkBoxEldenRing.Size = new Size(136, 21);
             checkBoxEldenRing.TabIndex = 7;
@@ -118,31 +118,30 @@
             checkBoxEldenRing.UseVisualStyleBackColor = true;
             checkBoxEldenRing.CheckedChanged += checkBoxEldenRing_CheckedChanged;
             // 
-            // comboBoxTemplate
+            // comboBoxModType
             // 
-            comboBoxTemplate.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxTemplate.FormattingEnabled = true;
-            comboBoxTemplate.Location = new Point(114, 83);
-            comboBoxTemplate.Name = "comboBoxTemplate";
-            comboBoxTemplate.Size = new Size(730, 25);
-            comboBoxTemplate.TabIndex = 8;
+            comboBoxModType.FormattingEnabled = true;
+            comboBoxModType.Location = new Point(114, 98);
+            comboBoxModType.Name = "comboBoxModType";
+            comboBoxModType.Size = new Size(730, 25);
+            comboBoxModType.TabIndex = 8;
             // 
-            // labTemplate
+            // label3
             // 
-            labTemplate.AutoSize = true;
-            labTemplate.Location = new Point(45, 86);
-            labTemplate.Name = "labTemplate";
-            labTemplate.Size = new Size(65, 17);
-            labTemplate.TabIndex = 9;
-            labTemplate.Text = "Template:";
+            label3.AutoSize = true;
+            label3.Location = new Point(43, 101);
+            label3.Name = "label3";
+            label3.Size = new Size(67, 17);
+            label3.TabIndex = 9;
+            label3.Text = "ModType:";
             // 
             // CreateProjectForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(958, 180);
-            Controls.Add(labTemplate);
-            Controls.Add(comboBoxTemplate);
+            ClientSize = new Size(958, 225);
+            Controls.Add(label3);
+            Controls.Add(comboBoxModType);
             Controls.Add(checkBoxEldenRing);
             Controls.Add(textProjectName);
             Controls.Add(label2);
@@ -172,7 +171,7 @@
         private TextBox textProjectName;
         private Label label2;
         private CheckBox checkBoxEldenRing;
-        private ComboBox comboBoxTemplate;
-        private Label labTemplate;
+        private ComboBox comboBoxModType;
+        private Label label3;
     }
 }

@@ -1,3 +1,4 @@
+using DotNext.Collections.Generic;
 using ERParamUtils;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,43 @@ namespace ERParamEditor
                 {
                     comboBox1.SelectedIndex = i;
                 }
+            }
+        }
+
+        public static void InitSelection2(ComboBox comboBox1, string selections, string values, string value)
+        {
+
+            List<object> list = new List<object>();
+            var items = selections.Split(",");
+            var itemValues = values.Split(",");
+            for (int i = 0; i < items.Length; i++)
+            {
+
+                var dict = new SelectionItem
+                {
+                    ItemName = items[i],
+                    ItemValue = itemValues[i]
+                };
+                list.Add(dict);
+            }
+
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            BindingSource source = new BindingSource();
+            source.DataSource = list;
+            
+            comboBox1.DataSource = source.DataSource;
+            comboBox1.DisplayMember = "ItemName";
+            comboBox1.ValueMember = "ItemValue";
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (value == ObjectUtils.GetPropertyValue(list[i], "ItemName"))
+                {
+                    comboBox1.SelectedIndex = i;
+                    break;
+                }
+            }
+            if (comboBox1.Items.Count > 0) {
+                comboBox1.SelectedIndex = 0;
             }
         }
 

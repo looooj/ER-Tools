@@ -38,6 +38,7 @@ namespace ERParamEditor
         private void InitControls()
         {
             //currentConfig = ParamUpdateFormUtils.loadOptions();
+            ModConfig.SetModType(paramProject.GetModType());
             UpdateParamExector.CreateTaskList(updateParamTasks);
             MultiLang.ApplyMessage(updateParamTasks);
 
@@ -115,7 +116,8 @@ namespace ERParamEditor
             var modTypeIds = ModConfig.GetModTypeIds();
 
             panel.AddSelectionNameValue(UpdateParamOptionNames.ModType,
-              UpdateParamOptionNames.ModType, modTypeNames, modTypeIds, "0");
+              UpdateParamOptionNames.ModType, modTypeNames, modTypeIds, 
+              (int)paramProject.GetModType()+"");
 
             for (int i = 0; i < updateParamOptions.Count; i++)
             {
@@ -229,6 +231,12 @@ namespace ERParamEditor
             customTablePanels.Add(panel);
             panel.Init(control);
 
+            var classDict = UpdateFile.LoadIdFileToDict(paramProject, ModConfig.GetCharaClassNames());
+            var classNames = string.Join(",", classDict.Values.ToList<string>());
+            var classIds = string.Join(",", classDict.Keys.ToList<int>());
+
+            panel.AddSelectionNameValue(UpdateParamOptionNames.InitCharaClass,
+                 UpdateParamOptionNames.InitCharaClass, classNames, classIds, "0");
             //List<UpdateParamOptionItem> updateParamOptionItems = new List<UpdateParamOptionItem>();
 
             panel.AddCheckBox(UpdateParamOptionNames.AddInitCrimsonAmberMedallion, "");

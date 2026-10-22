@@ -1,9 +1,11 @@
 using ERParamUtils;
+using ERParamUtils.UpdateParam;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace ERParamEditor
 {
@@ -114,7 +116,7 @@ namespace ERParamEditor
                     if (items.Length > 1)
                     {
                         var id = int.Parse(items[0]);
-                        if (id >= 100000 )
+                        if (id >= 100000)
                             ret.TryAdd(id, t);
                     }
                 }
@@ -128,7 +130,7 @@ namespace ERParamEditor
 
         public static void ExportParamGraceCER() {
             string[] names = { "item_dlc02PlaceName.txt", "item_dlc02PlaceName_dlc01.txt" };
-            ExportParamGrace("C:\\EldenRingMods\\ER-Tools\\docs\\cer-item-text",names);
+            ExportParamGrace("C:\\EldenRingMods\\ER-Tools\\docs\\cer-item-text", names);
         }
         public static void ExportParamGraceSTD() {
             string[] names = { "item_dlc01PlaceName.txt", "item_dlc01PlaceName_dlc01.txt" };
@@ -248,9 +250,9 @@ namespace ERParamEditor
 
 
                 var v = ParamRowUtils.GetCellFloat(row, "maxHpRate", 1.0f);
-                if (v < 1.0) { 
+                if (v < 1.0) {
 
-                    var s = string.Format("{0},{1},maxHp={2}", row.ID,row.Name,v);
+                    var s = string.Format("{0},{1},maxHp={2}", row.ID, row.Name, v);
                     lines.Add(s);
                 }
 
@@ -327,6 +329,140 @@ namespace ERParamEditor
             File.WriteAllText(path, r);
 
         }
-    }
 
+        public static SortedDictionary<int, string> GetMsgIdName(XmlElement root)
+        {
+
+            SortedDictionary<int, string> dict = new();
+            var msgs = root.GetElementsByTagName("msg");
+
+            for (int i = 0; i < msgs.Count; i++)
+            {
+
+                XmlElement item = (XmlElement)msgs[i];
+                XmlElement idNode = (XmlElement)item.SelectSingleNode("ID");
+                XmlElement textNode = (XmlElement)item.SelectSingleNode("Text");
+                int id = int.Parse(idNode.InnerText);
+                string text = textNode.InnerText;
+                text = text.Trim();
+                if (text.ToUpper().Contains("[ERROR]") || text.Length < 1)
+                    continue;
+                dict.TryAdd(id, text);
+            }
+
+            return dict;
+        }
+
+        //D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer\zhocn\menu_dlc02.msgbnd\msg\zhoCN\GR_MenuText.fmg.xml
+        //D:\myprojects\game-tools\ER-Tools\tmp\msg-text\zhocn\menu_dlc02.msgbnd\msg\zhoCN\GR_MenuText.fmg.xml
+        static void GenCharaClassNamesX(string path, int startId, int count, string outName)
+        {
+
+            string engFileName = string.Format("{0}\\engus\\menu_dlc02.msgbnd\\msg\\engUS\\GR_MenuText.fmg.xml", path);
+            string zhoFileName = string.Format("{0}\\zhocn\\menu_dlc02.msgbnd\\msg\\zhoCN\\GR_MenuText.fmg.xml", path);
+
+            if (!File.Exists(engFileName))
+            {
+                return;
+            }
+            XmlDocument engDoc = new();
+            XmlDocument zhoDoc = new();
+
+            engDoc.Load(engFileName);
+            zhoDoc.Load(zhoFileName);
+
+            var engDict = GetMsgIdName(engDoc.DocumentElement);
+            var choDict = GetMsgIdName(zhoDoc.DocumentElement);
+            var keys = engDict.Keys;
+
+
+            List<string> outLines = new();
+            int endId = startId + count;
+            int index = 0;
+            foreach (int id in keys)
+            {
+                if (id >= startId && id < endId) {
+
+                    var enName = engDict[id];
+                    var cnName = choDict[id];
+                    outLines.Add(string.Format("{0};{1};{2}", 3000+index, enName, cnName));
+                    index++;
+                }
+            }
+
+            File.WriteAllLines(outName, outLines);
+        }
+
+        static void GenCharaClassNamesCer(string path, int startId, int count,SortedDictionary<int,string> rowNameDict, string outName)
+        {
+
+            string engFileName = string.Format("{0}\\engus\\menu_dlc02.msgbnd\\msg\\engUS\\GR_MenuText.fmg.xml", path);
+            string zhoFileName = string.Format("{0}\\zhocn\\menu_dlc02.msgbnd\\msg\\zhoCN\\GR_MenuText.fmg.xml", path);
+
+            if (!File.Exists(engFileName))
+            {
+                return;
+            }
+            XmlDocument engDoc = new();
+            XmlDocument zhoDoc = new();
+
+            engDoc.Load(engFileName);
+            zhoDoc.Load(zhoFileName);
+
+            var engDict = GetMsgIdName(engDoc.DocumentElement);
+            var choDict = GetMsgIdName(zhoDoc.DocumentElement);
+            var keys = engDict.Keys;
+
+
+            List<string> outLines = new();
+            SortedDictionary<int, string> outDict = new();
+            int endId = startId + count;
+            int index = 0;
+            var rowNames = rowNameDict.Values.ToList<string>();
+            var rowIds = rowNameDict.Keys.ToList<int>();
+            foreach (int id in keys)
+            {
+                if (id >= startId && id < endId)
+                {
+
+                    var enName = engDict[id];
+                    var cnName = choDict[id];
+                    if (enName == "Stormcaller") {
+                        //Class - Storm Caller
+                        enName = "Storm Caller";
+                    }
+                    var tmp = "Class - " + enName;
+                    var tmpIndex = rowNames.IndexOf(tmp);
+                    if ( tmpIndex >=0)
+                    {
+                        var tmpId = rowIds[tmpIndex];
+                        var line = string.Format("{0};{1};{2}", tmpId, enName, cnName);
+                        outDict.Add(tmpId, line);
+                        //outLines.Add();
+                        index++;
+                    }
+                }
+            }
+
+            File.WriteAllLines(outName, outDict.Values.ToList<string>());
+        }
+
+        public static void GetCharaClassRowNames() { 
+        
+
+        }
+
+        public static void GenCharaClassNames() {
+
+
+            string baseDir= GlobalConfig.BaseDir;
+
+            GenCharaClassNamesX("D:\\myprojects\\game-tools\\ER-Tools\\tmp\\msg-text", 
+                288100,12, baseDir+ "\\tmp\\chara-names.txt");
+
+            GenCharaClassNamesCer("D:\\myprojects\\game-tools\\ER-Tools\\tmp\\msg-text-cer",
+                297113,300,UpdateCharaInit.GetCharaClassRowNames(),
+               baseDir +"\\tmp\\chara-names-cer.txt");
+        }
+    }
 }

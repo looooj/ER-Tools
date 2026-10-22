@@ -1,0 +1,28 @@
+0;All;全部
+3000;Retainer;扈从
+3001;Vanguard;先锋
+3002;Marksman;神射手
+3003;Berserker;狂战士
+3004;Dreadnought;无畏者
+3005;Sellsword;佣兵
+3006;Rogue;游荡者
+3007;Glint Sorcerer;辉石魔法师
+3008;Starcaller;唤星者
+3009;Underworld Mage;地底魔法师
+3012;Volcanist;火山术士
+3013;Storm Caller;风暴呼召者
+3014;Nox Oracle;诺克斯神谕官
+3015;Necromancer;死灵术士
+3016;Frost Witch;冰霜巫师
+3017;Aberrant Heretic;左道异端
+3018;Flame Prophet;火焰预言家
+3019;Fundamentalist;基本主义者
+3020;Bestial Devout;野兽宗徒
+3021;Dragon Cultist;古龙祀者
+3022;Godskin Celebrant;神皮庆典者
+3023;Frenzied Zealot;癫火狂徒
+3024;Blood Initiate;鲜血新锐
+3025;Servant of Rot;腐败侍仆
+3026;Mystic;密契者
+3027;Perfumer;调香师
+3028;Prisoner;囚犯

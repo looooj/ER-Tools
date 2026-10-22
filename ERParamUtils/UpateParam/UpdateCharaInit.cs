@@ -113,13 +113,54 @@ namespace ERParamUtils.UpdateParam
                 }
             }
         }
+
+        public static SortedDictionary<int,string> GetCharaClassRowNames() { 
+        
+            var list = new SortedDictionary<int, string>();
+
+            var paramProject = GlobalConfig.GetCurrentProject();
+            if (paramProject == null) {
+                return list;
+            }
+            var param = paramProject.FindParam(ParamNames.CharaInitParam);
+            if (param == null) 
+                return list;
+
+            ModConfig.SetModType(paramProject.GetModType());
+            int classCount = 0;
+
+            for (int i = 0; i < 200; i++)
+            {
+                if (classCount > ModConfig.GetCharaClassCount())
+                    break;
+
+                SoulsParam.Param.Row? row = param.FindRow(CLASS_ROW_ID + i);
+                if (row == null || row.Name == null)
+                {
+                    continue;
+                }
+
+                if (!row.Name.StartsWith("Class"))
+                {
+                    continue;
+                }
+                classCount++;
+
+                list.Add(row.ID,row.Name);
+            }
+            return list;
+        }
+
         private static void ExecClass(ParamProject paramProject, SoulsParam.Param param, UpdateCommand updateCommand)
         {
             removeWeaponRequireDict.Clear();
             int classCount = 0;
+            var classId = updateCommand.GetOption(UpdateParamOptionNames.InitCharaClass);
+            UpdateLogger.InfoParam("{0}={1}", UpdateParamOptionNames.InitCharaClass, classId);
+
             for (int i = 0; i < 200; i++)
             {
-                if (classCount >= ModConfig.GetCharaClassCount())
+                if (classCount > ModConfig.GetCharaClassCount())
                     break;
                 addItemOffset = 0;
                 addSecondaryItemOffset = 0;
@@ -138,6 +179,14 @@ namespace ERParamUtils.UpdateParam
                 }
                 classCount++;
                 UpdateLogger.InfoParam("{0},{1},{2}", classCount,row.ID,row.Name);
+
+                AddArrow(updateCommand, row);
+
+                if (classId != 0 && classId != row.ID) {
+                    UpdateLogger.InfoParam("skip");
+                    continue;
+                }
+
                 if (updateCommand.HaveOption(UpdateParamOptionNames.AddInitCrimsonAmberMedallion))
                 {
                     AddAccessory(updateCommand, row, ID_CrimsonAmberMedallion);
@@ -187,7 +236,6 @@ namespace ERParamUtils.UpdateParam
 
                 ReplaceBow(updateCommand, row);
 
-                AddArrow(updateCommand, row);
             }
         }
 

@@ -208,6 +208,7 @@ namespace ERParamUtils.UpateParam
         public static readonly string CrimsonAmberMedallionConsumptionRate = "CrimsonAmberMedallionConsumptionRate";
         public static readonly string CrimsonAmberMedallionDamageCorrectRate = "CrimsonAmberMedallionDamageCorrectRate";
 
+        public static readonly string InitCharaClass = "InitCharaClass";
         public static readonly string AddInitCrimsonAmberMedallion = "AddInitCrimsonAmberMedallion";
         public static readonly string AddInitJewelOfTheCosmos = "AddInitJewelOfTheCosmos";
 

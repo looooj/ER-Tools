@@ -76,6 +76,8 @@ namespace ERParamEditor
             dictConfig.Save(fn);
 
             paramProject.SetLastOptionsTag(ParamOptionsFile.GetCurrentTag());
+            var modType = (int)paramProject.GetModType();
+            paramProject.SetModType(dictConfig.GetInt("ModType", modType));
             paramProject.SaveConfig();
         }
 

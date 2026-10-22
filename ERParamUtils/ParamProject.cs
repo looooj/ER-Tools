@@ -1,4 +1,5 @@
 using ERParamUtils;
+using ERParamUtils.UpateParam;
 using SoulsFormats;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -21,6 +22,7 @@ namespace ERParamUtils
         string templateName = "";
         string paramErrors = "";
         string lastOptionsTag = "default";
+        ModConfig.ModType  modType = 0;
         BND4 currentBinder = null;
         GameType gameType = GameType.EldenRing;
 
@@ -32,6 +34,8 @@ namespace ERParamUtils
         public string GetParamVersion() { 
             return _paramStrVersion;
         }
+
+        public ModConfig.ModType GetModType() { return modType; }
 
         private Dictionary<string, PARAMDEF> _paramdefs = new();
 
@@ -465,6 +469,7 @@ namespace ERParamUtils
             config.SetString("ModRegulationPath", modRegulationPath);
             config.SetString("CreateTime", CreateTime);
             config.SetString("LastOptionsTag", lastOptionsTag);
+            config.SetInt("ModType", (int)modType);
             config.Save(path);
 
         }
@@ -479,6 +484,7 @@ namespace ERParamUtils
             ModRegulationPath = config.GetString("ModRegulationPath", "?");
             lastOptionsTag = config.GetString("LastOptionsTag", "default");
             CreateTime = config.GetString("CreateTime", "?");
+            modType = (ModConfig.ModType)config.GetInt("ModType", 0);
         }
 
         public void InitDirs()
@@ -519,6 +525,11 @@ namespace ERParamUtils
             if (File.Exists(updateOpt1))
                 File.Copy(updateOpt1, updateOpt2); */
 
+        }
+
+        public void SetModType(int v)
+        {
+            modType = (ModConfig.ModType)v;
         }
     }
 }

@@ -108,6 +108,7 @@ namespace ERParamEditor
 
 
 
+
             listViewParam.Dock = DockStyle.Fill;
             listViewParam.Columns.Add("ParamName", 440);
             listViewParam.Columns.Add("", -2);
@@ -161,8 +162,7 @@ namespace ERParamEditor
 
             ListViewUtils.AddItem(listViewProject, "ProjectDir", project.GetDir());
             ListViewUtils.AddItem(listViewProject, "ProjectName", project.GetName());
-
-
+            ListViewUtils.AddItem(listViewProject, "ModType", project.GetModType());
             ListViewUtils.AddItem(listViewProject, "RegulationPath", project.GetRegulationPath());
             ListViewUtils.AddItem(listViewProject, "ModRegulationPath", project.GetModRegulationPath());
             ListViewUtils.AddItem(listViewProject, "ParamVersion", project.GetParamVersion());
@@ -286,7 +286,7 @@ namespace ERParamEditor
             ParamUpdateForm3 form = new();
 
             form.Exec(paramProject);
-
+            RefreshProject();
         }
 
         private void listViewParam_DoubleClick(object sender, EventArgs e)

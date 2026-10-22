@@ -17,10 +17,32 @@ namespace ERParamEditor
 
 
 
-            
+            //InitCurrentDirectory();
             ApplicationConfiguration.Initialize();
             InitNLogger();
             Application.Run(new MainForm());
+        }
+        static void InitCurrentDirectory() {
+            if (File.Exists("config.txt"))
+            {
+                return;
+            }
+            int tryCount = 0;
+            while (tryCount<4)
+            {
+                tryCount++;
+                if (File.Exists("config.txt"))
+                {
+                    break;
+                }
+                if (Directory.Exists("assets")) {
+                    break;
+                }
+                var d = Directory.GetParent(Directory.GetCurrentDirectory());
+                Directory.SetCurrentDirectory(d.FullName);
+            }
+            
+
         }
         static void InitNLogger() {
 

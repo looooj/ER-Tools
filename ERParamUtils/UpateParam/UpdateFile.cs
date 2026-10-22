@@ -168,6 +168,16 @@ namespace ERParamUtils.UpdateParam
             public string Id="";
             public string Line="";
         }
+
+        public static SortedDictionary<int,string> LoadIdFileToDict(ParamProject paramProject, string name) {
+
+            var list = LoadIdFile(paramProject, name);
+            var dict = new SortedDictionary<int,string>();
+            foreach (var item in list) {
+                dict.Add(int.Parse(item.Id), item.Line);
+            }
+            return dict;
+        }
         public static List<IdLine> LoadIdFile(ParamProject paramProject,string name) { 
 
             List<IdLine> idLines = new List<IdLine>();

@@ -68,7 +68,7 @@ namespace ERParamEditor
 
         }
 
-        public static void ExtractMsg()
+        public static void ExtractMsgX(string baseDir,string targetBaseDir)
         {
 
             string[] langs = { "engus", "zhocn" };
@@ -77,9 +77,11 @@ namespace ERParamEditor
                 //string dir = @"D:\docs\game\er\unpack-\unpack-files\msg\" + lang;
 
                 //string dir = "F:\\docs\\games\\ER\\Game\\msg\\" + lang;
-                string dir = "E:\\games\\er\\ConvergenceER\\mod\\msg\\" + lang;
+                string dir = baseDir + "\\" + lang;
+                //"E:\\games\\er\\ConvergenceER\\mod\\msg\\" + lang;
                 //string targetDir = @"D:\docs\game\er\unpack-\unpack-files-text";
-                string targetDir = @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer\"+lang;
+                string targetDir = targetBaseDir + "\\" + lang;
+                //@"D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer\"+lang;
                 Directory.CreateDirectory(targetDir);
                 var files = Directory.GetFiles(dir, "*.dcx");
                 foreach (var file in files)
@@ -95,6 +97,19 @@ namespace ERParamEditor
                     }
                 }
             }
+        }
+
+        public static void ExtractCerMsg() {
+
+            ExtractMsgX("E:\\games\\er\\ConvergenceER\\mod\\msg",
+                @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer");
+        }
+
+        public static void ExtractMsg()
+        {
+
+            ExtractMsgX("F:\\docs\\unpack117a\\msg",
+                @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text");
         }
 
         public static void TestEvent()
@@ -536,7 +551,11 @@ namespace ERParamEditor
             //Tests2.FindGuardLevel();
             //Tests2.ExportParamGraceSTD();
             //Tests2.FindMaxHp();
-            Tests2.FindMp();
+            //Tests2.FindMp();
+            //ExtractCerMsg();
+            //ExtractMsg();
+
+            Tests2.GenCharaClassNames();
         }
     }
 }
