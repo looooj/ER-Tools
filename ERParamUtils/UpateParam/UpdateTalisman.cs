@@ -66,7 +66,7 @@ namespace ERParamUtils.UpateParam
         public static List<UpdateParamOptionItem> GetUpdateParams() { 
         
             var list = new List<UpdateParamOptionItem>();
-            list.Add(new UpdateParamOptionItem(UpdateParamOptionNames.CrimsonAmberMedallionBase));
+            //list.Add(new UpdateParamOptionItem(UpdateParamOptionNames.CrimsonAmberMedallionBase));
             //list.Add(new UpdateParamOptionItem(UpdateParamOptionNames.CrimsonAmberMedallionRestore));
             list.Add(new UpdateParamOptionItem(UpdateParamOptionNames.CrimsonAmberMedallionDisable));
 

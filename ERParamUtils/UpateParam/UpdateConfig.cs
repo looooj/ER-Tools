@@ -158,12 +158,12 @@ namespace ERParamUtils.UpateParam
     public class LotPointConfig {
         public static string GetValueList()
         {
-            return "0,500,900";
+            return "0,150,250,350,450,550";
         }
 
         public static string GetNameList()
         {
-            return "NotChange,50%,90%";
+            return "NotChange,15%,25%,35%,45%,55%";
         }
 
     };
@@ -199,6 +199,7 @@ namespace ERParamUtils.UpateParam
         //public static readonly string UpdateShop = "UpdateShop";
 
         public static readonly string AutoRecover = "AutoRecover";
+        public static readonly string HpMpStaminaRate = "HpMpStaminaRate";
         public static readonly string AllTalisman = "AllTalisman";
         public static readonly string CrimsonAmberMedallionBase = "CrimsonAmberMedallionBase";
         public static readonly string CrimsonAmberMedallionDisable = "CrimsonAmberMedallionDisable";

@@ -202,6 +202,7 @@ namespace ERParamEditor
             customTablePanels.Add(panel);
             panel.Init(control);
 
+            panel.AddSpace("------");
 
             string autoRecoverNames = MultiLang.GetText("UpdateParam",
                 UpdateParamOptionNames.AutoRecover,
@@ -211,6 +212,10 @@ namespace ERParamEditor
                UpdateParamOptionNames.AutoRecover,
                UpdateParamOptionNames.AutoRecover,
                autoRecoverNames, autoRecoverValues, "0");
+
+            panel.AddCheckBox(UpdateParamOptionNames.HpMpStaminaRate, "");
+
+            panel.AddSpace("------");
 
             var updateTalismanOptions = UpdateTalisman.GetUpdateParams();
             MultiLang.ApplyMessage(updateTalismanOptions);

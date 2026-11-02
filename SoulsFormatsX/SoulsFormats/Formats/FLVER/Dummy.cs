@@ -48,7 +48,7 @@ namespace SoulsFormats
             /// <summary>
             /// Unknown.
             /// </summary>
-            public bool Flag1 { get; set; }
+            public bool FollowAttachBone { get; set; }
 
             /// <summary>
             /// If false, the upward vector is not read.
@@ -75,18 +75,26 @@ namespace SoulsFormats
             }
 
             /// <summary>
-            /// Returns a string representation of the dummy.
+            /// Clone an existing <see cref="Dummy"/>.
             /// </summary>
-            public override string ToString()
+            public Dummy(Dummy dummy)
             {
-                return $"{ReferenceID}";
+                Position = dummy.Position;
+                Forward = dummy.Forward;
+                Upward = dummy.Upward;
+                ReferenceID = dummy.ReferenceID;
+                ParentBoneIndex = dummy.ParentBoneIndex;
+                AttachBoneIndex = dummy.AttachBoneIndex;
+                Color = dummy.Color;
+                FollowAttachBone = dummy.FollowAttachBone;
+                UseUpwardVector = dummy.UseUpwardVector;
+                Unk30 = dummy.Unk30;
+                Unk34 = dummy.Unk34;
             }
 
-            public Dummy Clone()
-            {
-                return (Dummy)MemberwiseClone();
-            }
-
+            /// <summary>
+            /// Read a new <see cref="Dummy"/> from a stream.
+            /// </summary>
             internal Dummy(BinaryReaderEx br, int version)
             {
                 Position = br.ReadVector3();
@@ -100,7 +108,7 @@ namespace SoulsFormats
                 ParentBoneIndex = br.ReadInt16();
                 Upward = br.ReadVector3();
                 AttachBoneIndex = br.ReadInt16();
-                Flag1 = br.ReadBoolean();
+                FollowAttachBone = br.ReadBoolean();
                 UseUpwardVector = br.ReadBoolean();
                 Unk30 = br.ReadInt32();
                 Unk34 = br.ReadInt32();
@@ -108,6 +116,9 @@ namespace SoulsFormats
                 br.AssertInt32(0);
             }
 
+            /// <summary>
+            /// Write this <see cref="Dummy"/> to a stream.
+            /// </summary>
             internal void Write(BinaryWriterEx bw, int version)
             {
                 bw.WriteVector3(Position);
@@ -120,12 +131,20 @@ namespace SoulsFormats
                 bw.WriteInt16(ParentBoneIndex);
                 bw.WriteVector3(Upward);
                 bw.WriteInt16(AttachBoneIndex);
-                bw.WriteBoolean(Flag1);
+                bw.WriteBoolean(FollowAttachBone);
                 bw.WriteBoolean(UseUpwardVector);
                 bw.WriteInt32(Unk30);
                 bw.WriteInt32(Unk34);
                 bw.WriteInt32(0);
                 bw.WriteInt32(0);
+            }
+
+            /// <summary>
+            /// Returns a string representation of the <see cref="Dummy"/>.
+            /// </summary>
+            public override string ToString()
+            {
+                return ReferenceID.ToString();
             }
         }
     }

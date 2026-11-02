@@ -14,7 +14,7 @@ public abstract class MountedSoulsFile<TFormat> : SoulsFile<TFormat>, IDisposabl
     /// <summary>
     /// Loads file data while be given a memory owner object to keep the mapped memory alive
     /// </summary>
-    protected virtual void Read(BinaryReaderEx br, IMappedMemoryOwner owner)
+    protected virtual void Read(BinaryReaderEx br, IMappedMemory owner)
     {
         throw new NotImplementedException("Read is not implemented for this format.");
     }
@@ -37,11 +37,21 @@ public abstract class MountedSoulsFile<TFormat> : SoulsFile<TFormat>, IDisposabl
     /// </summary>
     public new static TFormat Read(string path)
     {
-        using var file = MemoryMappedFile.CreateFromFile(path, FileMode.Open, null, 0, MemoryMappedFileAccess.Read);
+        var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+        using var file = MemoryMappedFile.CreateFromFile(fs, null, 0, MemoryMappedFileAccess.Read,
+        HandleInheritability.None, leaveOpen: false);
+
         var accessor = file.CreateMemoryAccessor(0, 0, MemoryMappedFileAccess.Read);
         BinaryReaderEx br = new BinaryReaderEx(false, accessor.Memory);
         TFormat ret = new TFormat();
         br = SFUtil.GetDecompressedBR(br, out DCX.Type compression);
+        if (compression != DCX.Type.None)
+        {
+            // We can safely dispose of the memory mapped file accessor,
+            // because decompression produced a new reader to use going forward.
+            // Keeping it open at this point only wastes RAM we'll never access.
+            accessor.Dispose();
+        }
         ret.Compression = compression;
         ret.Read(br, accessor);
         return ret;

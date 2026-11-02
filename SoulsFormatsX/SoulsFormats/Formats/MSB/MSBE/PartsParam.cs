@@ -309,7 +309,12 @@ namespace SoulsFormats
             /// <summary>
             /// Unknown.
             /// </summary>
-            public short UnkE3E { get; set; }
+            public byte UnkE3E { get; set; }
+
+            /// <summary>
+            /// Disables Ray Traced Ambient Occlusion on this part.
+            /// </summary>
+            public bool DisableRTAO { get; set; }
 
             private protected Part(string name)
             {
@@ -364,32 +369,35 @@ namespace SoulsFormats
                 br.AssertInt64(0);
                 br.AssertInt64(0);
 
-                if (nameOffset == 0)
-                    throw new InvalidDataException($"{nameof(nameOffset)} must not be 0 in type {GetType()}.");
-                if (sibOffset == 0)
-                    throw new InvalidDataException($"{nameof(sibOffset)} must not be 0 in type {GetType()}.");
-                if (HasUnk1 ^ unkOffset1 != 0)
-                    throw new InvalidDataException($"Unexpected {nameof(unkOffset1)} 0x{unkOffset1:X} in type {GetType()}.");
-                if (HasUnk2 ^ unkOffset2 != 0)
-                    throw new InvalidDataException($"Unexpected {nameof(unkOffset2)} 0x{unkOffset2:X} in type {GetType()}.");
-                if (entityDataOffset == 0)
-                    throw new InvalidDataException($"{nameof(entityDataOffset)} must not be 0 in type {GetType()}.");
-                if (typeDataOffset == 0)
-                    throw new InvalidDataException($"{nameof(typeDataOffset)} must not be 0 in type {GetType()}.");
-                if (HasGparamConfig ^ gparamOffset != 0)
-                    throw new InvalidDataException($"Unexpected {nameof(gparamOffset)} 0x{gparamOffset:X} in type {GetType()}.");
-                if (HasSceneGparamConfig ^ sceneGParamOffset != 0)
-                    throw new InvalidDataException($"Unexpected {nameof(sceneGParamOffset)} 0x{sceneGParamOffset:X} in type {GetType()}.");
-                if (HasGrassConfig ^ unkOffset7 != 0)
-                    throw new InvalidDataException($"Unexpected {nameof(unkOffset7)} 0x{unkOffset7:X} in type {GetType()}.");
-                if (HasUnk8 ^ unkOffset8 != 0)
-                    throw new InvalidDataException($"Unexpected {nameof(unkOffset8)} 0x{unkOffset8:X} in type {GetType()}.");
-                if (HasUnk9 ^ unkOffset9 != 0)
-                    throw new InvalidDataException($"Unexpected {nameof(unkOffset9)} 0x{unkOffset9:X} in type {GetType()}.");
-                if (HasTileLoadConfig ^ unkOffset10 != 0)
-                    throw new InvalidDataException($"Unexpected {nameof(unkOffset10)} 0x{unkOffset10:X} in type {GetType()}.");
-                if (HasUnk11 ^ unkOffset11 != 0)
-                    throw new InvalidDataException($"Unexpected {nameof(unkOffset11)} 0x{unkOffset11:X} in type {GetType()}.");
+                if (!BinaryReaderEx.IgnoreAsserts)
+                {
+                    if (nameOffset == 0)
+                        throw new InvalidDataException($"{nameof(nameOffset)} must not be 0 in type {GetType()}.");
+                    if (sibOffset == 0)
+                        throw new InvalidDataException($"{nameof(sibOffset)} must not be 0 in type {GetType()}.");
+                    if (HasUnk1 ^ unkOffset1 != 0)
+                        throw new InvalidDataException($"Unexpected {nameof(unkOffset1)} 0x{unkOffset1:X} in type {GetType()}.");
+                    if (HasUnk2 ^ unkOffset2 != 0)
+                        throw new InvalidDataException($"Unexpected {nameof(unkOffset2)} 0x{unkOffset2:X} in type {GetType()}.");
+                    if (entityDataOffset == 0)
+                        throw new InvalidDataException($"{nameof(entityDataOffset)} must not be 0 in type {GetType()}.");
+                    if (typeDataOffset == 0)
+                        throw new InvalidDataException($"{nameof(typeDataOffset)} must not be 0 in type {GetType()}.");
+                    if (HasGparamConfig ^ gparamOffset != 0)
+                        throw new InvalidDataException($"Unexpected {nameof(gparamOffset)} 0x{gparamOffset:X} in type {GetType()}.");
+                    if (HasSceneGparamConfig ^ sceneGParamOffset != 0)
+                        throw new InvalidDataException($"Unexpected {nameof(sceneGParamOffset)} 0x{sceneGParamOffset:X} in type {GetType()}.");
+                    if (HasGrassConfig ^ unkOffset7 != 0)
+                        throw new InvalidDataException($"Unexpected {nameof(unkOffset7)} 0x{unkOffset7:X} in type {GetType()}.");
+                    if (HasUnk8 ^ unkOffset8 != 0)
+                        throw new InvalidDataException($"Unexpected {nameof(unkOffset8)} 0x{unkOffset8:X} in type {GetType()}.");
+                    if (HasUnk9 ^ unkOffset9 != 0)
+                        throw new InvalidDataException($"Unexpected {nameof(unkOffset9)} 0x{unkOffset9:X} in type {GetType()}.");
+                    if (HasTileLoadConfig ^ unkOffset10 != 0)
+                        throw new InvalidDataException($"Unexpected {nameof(unkOffset10)} 0x{unkOffset10:X} in type {GetType()}.");
+                    if (HasUnk11 ^ unkOffset11 != 0)
+                        throw new InvalidDataException($"Unexpected {nameof(unkOffset11)} 0x{unkOffset11:X} in type {GetType()}.");
+                }
 
                 br.Position = start + nameOffset;
                 Name = br.ReadUTF16();
@@ -483,7 +491,8 @@ namespace SoulsFormats
                 UnkE18 = br.ReadInt32();
                 EntityGroupIDs = br.ReadUInt32s(8);
                 UnkE3C = br.ReadInt16();
-                UnkE3E = br.ReadInt16();
+                UnkE3E = br.ReadByte();
+                DisableRTAO = br.ReadBoolean();
                 //br.AssertPattern(0x10, 0x00);
             }
 
@@ -675,7 +684,8 @@ namespace SoulsFormats
                 bw.WriteInt32(UnkE18);
                 bw.WriteUInt32s(EntityGroupIDs);
                 bw.WriteInt16(UnkE3C);
-                bw.WriteInt16(UnkE3E);
+                bw.WriteByte(UnkE3E);
+                bw.WriteBoolean(DisableRTAO);
                 //bw.WritePattern(0x10, 0x00);
                 bw.Pad(8);
             }
@@ -1115,7 +1125,12 @@ namespace SoulsFormats
                 /// <summary>
                 /// Unknown.
                 /// </summary>
-                public int GrassConfigStruct_Unk18 { get; set; }
+                public short GrassConfigStruct_Unk18 { get; set; }
+
+                /// <summary>
+                /// Unknown.
+                /// </summary>
+                public short GrassConfigStruct_Unk1a { get; set; }
 
                 /// <summary>
                 /// Creates an UnkStruct7 with default values.
@@ -1138,7 +1153,8 @@ namespace SoulsFormats
                     GrassParamId3 = br.ReadInt32();
                     GrassParamId4 = br.ReadInt32();
                     GrassParamId5 = br.ReadInt32();
-                    GrassConfigStruct_Unk18 = br.ReadInt32();
+                    GrassConfigStruct_Unk18 = br.ReadInt16();
+                    GrassConfigStruct_Unk1a = br.ReadInt16();
                     br.AssertInt32(0);
                 }
 
@@ -1150,7 +1166,8 @@ namespace SoulsFormats
                     bw.WriteInt32(GrassParamId3);
                     bw.WriteInt32(GrassParamId4);
                     bw.WriteInt32(GrassParamId5);
-                    bw.WriteInt32(GrassConfigStruct_Unk18);
+                    bw.WriteInt16(GrassConfigStruct_Unk18);
+                    bw.WriteInt16(GrassConfigStruct_Unk1a);
                     bw.WriteInt32(0);
                 }
             }
@@ -2433,9 +2450,9 @@ namespace SoulsFormats
                 public byte UnkT10 { get; set; }
 
                 /// <summary>
-                /// Unknown.
+                /// If enabled, any destructible objects touching this object will always be destroyed when it is destroyed.
                 /// </summary>
-                public bool UnkT11 { get; set; }
+                public bool ApplyDestructionToAdjacentAssets { get; set; }
 
                 /// <summary>
                 /// Unknown.
@@ -3040,7 +3057,7 @@ namespace SoulsFormats
                     br.AssertInt32(0);
                     br.AssertInt32(0);
                     UnkT10 = br.ReadByte();
-                    UnkT11 = br.ReadBoolean();
+                    ApplyDestructionToAdjacentAssets = br.ReadBoolean();
                     UnkT12 = br.ReadByte();
                     br.AssertByte(0);
                     br.AssertInt32(0);
@@ -3093,7 +3110,7 @@ namespace SoulsFormats
                     bw.WriteInt32(0);
                     bw.WriteInt32(0);
                     bw.WriteByte(UnkT10);
-                    bw.WriteBoolean(UnkT11);
+                    bw.WriteBoolean(ApplyDestructionToAdjacentAssets);
                     bw.WriteByte(UnkT12);
                     bw.WriteByte(0);
                     bw.WriteInt32(0);

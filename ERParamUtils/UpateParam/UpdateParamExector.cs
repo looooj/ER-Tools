@@ -398,7 +398,7 @@ namespace ERParamUtils.UpdateParam
 
                 //}
 
-                UpdateSpEffect.SetAutoRecover(updateCommand);
+                UpdateSpEffect.SetGlobal(updateCommand);
 
 
                 if (ModConfig.AddWhetblade())

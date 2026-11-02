@@ -13,18 +13,20 @@ namespace ERParamUtils.UpateParam
         //
         //312310 [Talisman] Shard of Alexander  312300 [Talisman] Warrior Jar Shard
 
-        public static void SetAutoRecover(UpdateCommand updateCommand) {
+        public static void SetGlobal(UpdateCommand updateCommand)
+        {
 
             //motionInterval = 2
             //100621 [HKS] Hand Style - Left Hand
             //100620 [HKS] Hand Style - Right Hand
             string kv = AutoRecoverConfig.GetSpEffectKeyValues(updateCommand.GetOption(UpdateParamOptionNames.AutoRecover));
+            var rowId = "100620";
+            if (ModConfig.GetModType() == ModConfig.ModType.CER)
+            {
+                rowId = "330";
+            }
             if (kv.Length > 1)
             {
-                var rowId = "100620";
-                if (ModConfig.GetModType() == ModConfig.ModType.CER) {
-                    rowId = "330";
-                }
                 AddKeyValues(updateCommand, rowId, "motionInterval;1;" + kv);
             }
 
@@ -41,6 +43,17 @@ namespace ERParamUtils.UpateParam
                 //20380000[Talisman] Blessed Blue Dew Talisman
                 AddKeyValues(updateCommand, "20380000", "motionInterval;0");
             }
+
+            if (updateCommand.HaveOption(UpdateParamOptionNames.HpMpStaminaRate))
+            {
+
+                AddKeyValues(updateCommand, rowId, "maxHpRate;1.5");
+                AddKeyValues(updateCommand, rowId, "maxMpRate;1.5");
+                AddKeyValues(updateCommand, rowId, "maxStaminaRate;1.5");
+                AddKeyValues(updateCommand, rowId, "equipWeightChangeRate;1.5");
+            }
+
+
         }
 
         public static void PatchShard(UpdateCommand updateCommand)
@@ -105,4 +118,4 @@ namespace ERParamUtils.UpateParam
 
     }
 
-    }
+}

@@ -626,20 +626,23 @@ namespace SoulsFormats
 
                 Shape = MSB.Shape.Create(shapeType);
 
-                if (nameOffset == 0)
-                    throw new InvalidDataException($"{nameof(nameOffset)} must not be 0 in type {GetType()}.");
-                if (baseDataOffset1 == 0)
-                    throw new InvalidDataException($"{nameof(baseDataOffset1)} must not be 0 in type {GetType()}.");
-                if (baseDataOffset2 == 0)
-                    throw new InvalidDataException($"{nameof(baseDataOffset2)} must not be 0 in type {GetType()}.");
-                if (Shape.HasShapeData ^ shapeDataOffset != 0)
-                    throw new InvalidDataException($"Unexpected {nameof(shapeDataOffset)} 0x{shapeDataOffset:X} in type {GetType()}.");
-                if (baseDataOffset3 == 0)
-                    throw new InvalidDataException($"{nameof(baseDataOffset3)} must not be 0 in type {GetType()}.");
-                if (HasTypeData ^ typeDataOffset != 0)
-                    throw new InvalidDataException($"Unexpected {nameof(typeDataOffset)} 0x{typeDataOffset:X} in type {GetType()}.");
-                if (unkOffset4 == 0)
-                    throw new InvalidDataException($"{nameof(unkOffset4)} must not be 0 in type {GetType()}.");
+                if (!BinaryReaderEx.IgnoreAsserts)
+                {
+                    if (nameOffset == 0)
+                        throw new InvalidDataException($"{nameof(nameOffset)} must not be 0 in type {GetType()}.");
+                    if (baseDataOffset1 == 0)
+                        throw new InvalidDataException($"{nameof(baseDataOffset1)} must not be 0 in type {GetType()}.");
+                    if (baseDataOffset2 == 0)
+                        throw new InvalidDataException($"{nameof(baseDataOffset2)} must not be 0 in type {GetType()}.");
+                    if (Shape.HasShapeData ^ shapeDataOffset != 0)
+                        throw new InvalidDataException($"Unexpected {nameof(shapeDataOffset)} 0x{shapeDataOffset:X} in type {GetType()}.");
+                    if (baseDataOffset3 == 0)
+                        throw new InvalidDataException($"{nameof(baseDataOffset3)} must not be 0 in type {GetType()}.");
+                    if (HasTypeData ^ typeDataOffset != 0)
+                        throw new InvalidDataException($"Unexpected {nameof(typeDataOffset)} 0x{typeDataOffset:X} in type {GetType()}.");
+                    if (unkOffset4 == 0)
+                        throw new InvalidDataException($"{nameof(unkOffset4)} must not be 0 in type {GetType()}.");
+                }
 
                 br.Position = start + nameOffset;
                 Name = br.ReadUTF16();
@@ -1714,7 +1717,7 @@ namespace SoulsFormats
                 /// <summary>
                 /// Unknown.
                 /// </summary>
-                public short UnkT0A { get; set; }
+                public short CommonPlaceType { get; set; }
 
                 /// <summary>
                 /// Unknown.
@@ -1736,7 +1739,7 @@ namespace SoulsFormats
                     UnkT03 = br.ReadByte();
                     WwiseEnvPlaceTypeID = br.ReadInt32();
                     UnkT08 = br.ReadInt16();
-                    UnkT0A = br.ReadInt16();
+                    CommonPlaceType = br.ReadInt16();
                     UnkT0C = br.ReadByte();
                     br.AssertPattern(19, 0x00);
                 }
@@ -1749,7 +1752,7 @@ namespace SoulsFormats
                     bw.WriteByte(UnkT03);
                     bw.WriteInt32(WwiseEnvPlaceTypeID);
                     bw.WriteInt16(UnkT08);
-                    bw.WriteInt16(UnkT0A);
+                    bw.WriteInt16(CommonPlaceType);
                     bw.WriteByte(UnkT0C);
                     bw.WritePattern(19, 0x00);
                 }

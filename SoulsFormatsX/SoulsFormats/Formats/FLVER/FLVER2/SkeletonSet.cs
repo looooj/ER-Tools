@@ -78,11 +78,6 @@ namespace SoulsFormats
                     member.Write(bw);
             }
 
-            public SkeletonSet Clone()
-            {
-                return (SkeletonSet)MemberwiseClone();
-            }
-
             /// <summary>
             /// A bone in a skeleton.
             /// </summary>
@@ -92,22 +87,22 @@ namespace SoulsFormats
                 /// Index of the parent bone, or -1 for none.
                 /// </summary>
                 public short ParentIndex { get; set; }
-                
+
                 /// <summary>
                 /// Index of the bone's first child, or -1 for none.
                 /// </summary>
                 public short FirstChildIndex { get; set; }
-                
+
                 /// <summary>
                 /// Index of the bone's next sibling, or -1 for none.
                 /// </summary>
                 public short NextSiblingIndex { get; set; }
-                
+
                 /// <summary>
                 /// Index of the bone's sibling, or -1 for none.
                 /// </summary>
                 public short PreviousSiblingIndex { get; set; }
-                
+
                 /// <summary>
                 /// Index of the node in the <see cref="FLVER2.Nodes"/> list
                 /// </summary>
@@ -143,10 +138,6 @@ namespace SoulsFormats
                     bw.WriteInt16(PreviousSiblingIndex);
                     bw.WriteInt32(NodeIndex);
                     bw.WriteInt32(0);
-                }
-                public Bone Clone()
-                {
-                    return (Bone)MemberwiseClone();
                 }
             }
         }

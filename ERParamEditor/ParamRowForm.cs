@@ -251,6 +251,9 @@ namespace ERParamEditor
 
             for (int i = startEquipIdIndex; i < dataGridViewRow.Rows.Count; i++)
             {
+                var item = dataGridViewRow.Rows[i].DataBoundItem;
+                if (item == null)
+                    continue;
                 var row = (RowWrapper)dataGridViewRow.Rows[i].DataBoundItem;
                 var eqId = ParamRowUtils.GetCellInt(row.GetRow(), "equipId",-1);
                 if (eqId == equipId)
@@ -526,6 +529,9 @@ namespace ERParamEditor
         {
             if (dataGridViewCell.SelectedRows.Count < 1)
                 return;
+            var item = dataGridViewCell.SelectedRows[0];
+            if ( item == null ) 
+                { return; }
             string value = "";
             ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[0].DataBoundItem;
 
@@ -553,6 +559,10 @@ namespace ERParamEditor
             string text = "";
             for (int i = 0; i < dataGridViewCell.SelectedRows.Count; i++)
             {
+                var item = dataGridViewCell.SelectedRows[i].DataBoundItem;
+                if (item == null) {
+                    continue;
+                }
                 ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[i].DataBoundItem;
 
                 string line = string.Format("{0};{1};{2}-{3};{4};{5}",
@@ -578,13 +588,18 @@ namespace ERParamEditor
                 return;
 
             string text = "";
+            int itemCount = 0;
             for (int i = 0; i < dataGridViewCell.SelectedRows.Count; i++)
             {
+                var item = dataGridViewCell.SelectedRows[i].DataBoundItem;
+                if (item == null)
+                    continue;
+
                 ParamCellItem cell = (ParamCellItem)dataGridViewCell.SelectedRows[i].DataBoundItem;
 
-                if (i > 0)
+                if (itemCount > 0)
                     text = text + " ";
-
+                itemCount++;
                 string line = cell.Key == null ? "" : cell.Key;
                 ClipTextFile.Add(line);
                 text = text + line;

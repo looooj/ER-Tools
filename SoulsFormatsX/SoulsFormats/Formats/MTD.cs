@@ -162,7 +162,29 @@ namespace SoulsFormats
             /// <summary>
             /// The type of this value.
             /// </summary>
-            public ParamType Type { get; }
+            public ParamType Type
+            {
+                get => _type;
+                set
+                {
+                    if (_type == value)
+                        return;
+
+                    _type = value;
+
+                    switch (value)
+                    {
+                        case ParamType.Bool: Value = false; break;
+                        case ParamType.Float: Value = 0f; break;
+                        case ParamType.Float2: Value = new float[2]; break;
+                        case ParamType.Float3: Value = new float[3]; break;
+                        case ParamType.Float4: Value = new float[4]; break;
+                        case ParamType.Int: Value = 0; break;
+                        case ParamType.Int2: Value = new int[2]; break;
+                    }
+                }
+            }
+            private ParamType _type;
 
             /// <summary>
             /// The value itself.
@@ -306,6 +328,8 @@ namespace SoulsFormats
         // I believe the engine supports Bool2-4 and Int3-4 as well, but they're never used so I won't bother yet.
         public enum ParamType
         {
+            None,
+
             /// <summary>
             /// A one-byte boolean value.
             /// </summary>

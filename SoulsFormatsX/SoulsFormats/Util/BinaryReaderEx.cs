@@ -1,13 +1,14 @@
-﻿using System;
+﻿using CommunityToolkit.HighPerformance;
+using DotNext.Buffers;
+using System;
 using System.Buffers.Binary;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Numerics;
+using System.Runtime.InteropServices;
 using System.Text;
-using DotNext.Buffers;
-using CommunityToolkit.HighPerformance;
 
 namespace SoulsFormats
 {
@@ -58,8 +59,8 @@ namespace SoulsFormats
         
         public unsafe T Read<T>() where T : unmanaged
         {
-            var reader = new SpanReader<byte>(_memory.Span[(int)Position..]);
-            var ret = reader.Read<T>();
+            var span = _memory.Span[(int)Position..];
+            var ret = MemoryMarshal.Read<T>(span);
             Position += sizeof(T);
             return ret;
         }
@@ -93,6 +94,25 @@ namespace SoulsFormats
             byte[] bytes = ReadBytes(length);
             Array.Reverse(bytes);
             return bytes;
+        }
+
+        /// <summary>
+        /// Reads length sbytes, makes the last returned element a BCD-decoded value if valid.
+        /// </summary>
+        public sbyte[] ReadMapIDBytes(int length)
+        {
+            sbyte[] sbytes = ReadSBytes(length);
+            if (length > 0)
+            {
+                byte b0 = unchecked((byte)sbytes[0]);
+                int hi = (b0 >> 4) & 0xF;
+                int lo = b0 & 0xF;
+                if (hi <= 9 && lo <= 9)
+                    sbytes[0] = (sbyte)(hi * 10 + lo);
+            }
+
+            Array.Reverse(sbytes);
+            return sbytes;
         }
 
         /// <summary>
@@ -1254,6 +1274,18 @@ namespace SoulsFormats
             float z = ReadSingle();
             float w = ReadSingle();
             return new Vector4(x, y, z, w);
+        }
+
+        /// <summary>
+        /// Reads a Quaternion of floating point numbers in XYZW order.
+        /// </summary>
+        public Quaternion ReadQuaternion()
+        {
+            float x = ReadSingle();
+            float y = ReadSingle();
+            float z = ReadSingle();
+            float w = ReadSingle();
+            return new Quaternion(x, y, z, w);
         }
 
         /// <summary>
