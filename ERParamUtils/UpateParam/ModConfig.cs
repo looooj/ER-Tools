@@ -152,9 +152,35 @@ namespace ERParamUtils.UpateParam
             return true;
         }
 
+        public record struct RowIdRange(int StartID, int EndId);
+
+        /*
+        public static RowIdRange GetKaleId() {
+
+            var ret = new RowIdRange(100500, 100524);
+
+            return ret;            
+        }
+        */
+
+        public static RowIdRange GetSuperMerchantId() {
+            var ret = new RowIdRange(810000, 810400);
+            return ret;
+        }
+
+
         public static string GetDefaultModTypeName()
         {
             return "STD";
+        }
+
+        internal static string GetSuperMerchantFile()
+        {
+            switch (currentModType) { 
+                case ModType.CER:
+                    return "super-merchant-cer.txt"; ;
+            }
+            return "super-merchant.txt";
         }
 
         public enum ModType { 

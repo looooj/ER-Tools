@@ -464,5 +464,18 @@ namespace ERParamEditor
                 297113,300,UpdateCharaInit.GetCharaClassRowNames(),
                baseDir +"\\tmp\\chara-names-cer.txt");
         }
+
+
+        public static void TestReplacePy() {
+
+            //E:\games\er\ESDStudio_v1.0.2\net6.0-windows\esdtool\t602006000.py
+            //string pyFile = @"E:\games\er\ESDStudio_v1.0.2\net6.0-windows\esdtool\t000001000.py";
+            //string rpFile = @"E:\games\er\ESDStudio_v1.0.2\net6.0-windows\esdtool\rp01.txt";
+
+            string pyFile = @"E:\games\er\ESDStudio_v1.0.2\net6.0-windows\esdtool\t602006000.py";
+            string rpFile = @"D:\myprojects\game-tools\ER-Tools\templates\commons\rp02.txt";
+
+           // ReplacePython.Proc(pyFile, rpFile, pyFile + ".py");
+        }
     }
 }

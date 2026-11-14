@@ -19,6 +19,7 @@ namespace ERParamUtils
         string Name = "";
         string ModRegulationPath = "";
         string CreateTime = "";
+        string PublishTime = "";
         string templateName = "";
         string paramErrors = "";
         string lastOptionsTag = "default";
@@ -112,6 +113,14 @@ namespace ERParamUtils
         {
             return paramErrors;
         }
+
+        public void SetPublishTime() { 
+        
+            PublishTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+        }
+
+        public string GetPublishTime() { return PublishTime; }
 
         private List<(string, PARAMDEF)> LoadParamdefs()
         {
@@ -449,6 +458,8 @@ namespace ERParamUtils
                 source, target);
 
             File.Copy(source, target, true);
+
+            SetPublishTime();
         }
 
         public static readonly string ConfigName = "project.txt";
@@ -470,6 +481,7 @@ namespace ERParamUtils
             config.SetString("CreateTime", CreateTime);
             config.SetString("LastOptionsTag", lastOptionsTag);
             config.SetInt("ModType", (int)modType);
+            config.SetString("PublishTime", PublishTime);
             config.Save(path);
 
         }
@@ -485,6 +497,7 @@ namespace ERParamUtils
             lastOptionsTag = config.GetString("LastOptionsTag", "default");
             CreateTime = config.GetString("CreateTime", "?");
             modType = (ModConfig.ModType)config.GetInt("ModType", 0);
+            PublishTime = config.GetString("PublishTime", "");
         }
 
         public void InitDirs()

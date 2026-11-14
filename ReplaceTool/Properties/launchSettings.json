@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ReplaceTool": {
+      "commandName": "Project",
+      "commandLineArgs": "t2"
+    }
+  }
+}

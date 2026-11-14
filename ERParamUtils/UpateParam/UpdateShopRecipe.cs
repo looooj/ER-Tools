@@ -60,8 +60,8 @@ namespace ERParamUtils.UpdateParam
 
         public static void Init(ParamProject project)
         {
-            EventFlagForStockBuilder.FindFromLot(project);
-            EventFlagForStockBuilder.FindFromShop(project);
+            //EventFlagForStockBuilder.FindFromLot(project);
+            //EventFlagForStockBuilder.FindFromShop(project);
             //eventFlagForStockMap = EventFlagForStockBuilder.GetEventFlagStockMap();
         }
 
@@ -191,7 +191,8 @@ namespace ERParamUtils.UpdateParam
                 "menuTitleMsgId,-1," +
                 "menuIconId,-1";
 
-            ParamRowUtils.SetCellValue(row, keyValues);
+            //ParamRowUtils.SetCellValue(row, keyValues);
+            updateCommand.AddKeyValues(param.Name, row.ID, keyValues);
             updateCommand.AddItem(row, "equipId", equipId);
             //UpdateLogger.InfoRow("add {0} {1} {2}", rowId, equipId, equipType);
             return true;

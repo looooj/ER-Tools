@@ -1,0 +1,45 @@
+To create a custom merchant or heavily modify a merchant's inventory in [Elden Ring](https://www.google.com/search?q=elden+ring&kgmid=/g/11h3z4_20j), you must sync two completely separate files: the item database row IDs in ShopLineupParam (edited via DSMapStudio) and the allowed shop item range defined in the merchant's Talk Script .esd files (edited via ESDStudio). [1, 2] 
+When you use an external tool to call a merchant shop in-game, the engine checks the script's startRowId and endRowId variables. If your custom rows in ShopLineupParam fall outside of that script's range, the items will not appear in the shop. [3] 
+------------------------------
+## 1. Default Merchant startRowId and endRowId Ranges
+By default, Elden Ring groups merchant shops into tight ID brackets. If you are modifying a vanilla merchant without changing their ESD script files, your custom row IDs in ShopLineupParam must sit strictly between these numbers: [3] 
+
+* Merchant Kalé: 100500 to 100522
+* Twin Maiden Husks (Base inventory): 100000 to 100040
+* Patches: 101300 to 101325
+* Nomadic / Isolated Merchants: Generally grouped by region in blocks of 20–30 starting around 100600 up to 101900. [3, 4] 
+
+## 2. Creating a Custom Merchant Range
+If you want to add a massive custom inventory (like the Grand Merchant mod, which uses thousands of rows) or build a standalone merchant, you must widen the range inside the talk script: [3] 
+
+   1. Extract the Talk Scripts: Use Soulstruct or ESDStudio / ESDtool to decompile the talk scripts found in your game's script/talk/ folder. For example, Kalé’s script file is typically t300001000.esd. [3] 
+   2. Modify the Shop Range Call: Find the section of code handling the shop menu function call (often formatted like OpenRegularShop(startRowId, endRowId) or defined via specific test conditions). [2, 3] 
+   3. Expand the IDs: Change the baseline range to a massive custom block. For example, change Kalé's range from (100500, 100522) to (9100000, 9109999). [3] 
+   4. Recompile: Recompile your modified .esd file back into a .dcx format and place it in your Mod Engine 2 path: .../mod/script/talk/t300001000.esd.dcx. [3] 
+
+## 3. Setting Up ShopLineupParam in DSMapStudio
+Once your talk script allows a larger range, match those exact numbers in your regulation.bin file: [1, 3] 
+
+* Open DSMapStudio and navigate to Param Editor -> ShopLineupParam. [5] 
+* Duplicate an existing shop row or create a new row ID that fits within your new custom range (e.g., 9100001). [3] 
+* Configure the item details inside that row:
+* Value / EquipId: The actual ID of the weapon, armor, spell, or item you want to sell.
+   * ShopType: Set to 0 for a regular shop.
+   * Cost: The amount of runes required to purchase the item.
+   * Quantity: Set to -1 for infinite stock, or a positive integer for limited stock. [1, 6] 
+
+If you match your ShopLineupParam row IDs perfectly with the startRowId and endRowId defined in that NPC's active ESD file, your custom merchant items will load seamlessly in-game. [3] 
+------------------------------
+If you'd like to narrow this down, let me know:
+
+* Which specific NPC or merchant are you trying to assign the shop to?
+* Are you adding new lines to a vanilla merchant, or building a brand new standalone shop?
+* Do you already have ESDStudio/Soulstruct set up to handle talk script files?
+
+
+[1] [https://www.nexusmods.com](https://www.nexusmods.com/eldenring/mods/4775)
+[2] [https://www.reddit.com](https://www.reddit.com/r/EldenRingMods/comments/1ab64ug/how_to_add_items_to_shops/)
+[3] [https://www.nexusmods.com](https://www.nexusmods.com/eldenring/mods/2830?tab=posts)
+[4] [https://www.youtube.com](https://www.youtube.com/watch?v=plmcYXHXouA&t=7)
+[5] [https://www.youtube.com](https://www.youtube.com/watch?v=bbpR-0s61cc&t=150)
+[6] [https://www.youtube.com](https://www.youtube.com/watch?v=9q-N4Yu7rV8&t=312)

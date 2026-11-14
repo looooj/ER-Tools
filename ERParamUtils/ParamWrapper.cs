@@ -82,7 +82,7 @@ namespace SoulsParam
             return row;
         }
         
-        public Row? InsertRow(int id,string name) {
+        public Row? InsertRow(int id,string name,int copyId=0) {
 
             if (_param.Rows.Count < 0)
                 return null;
@@ -90,13 +90,25 @@ namespace SoulsParam
                 return null;
 
             //PARAM.Row
-            var newPARAMRow = new PARAM.Row(_param.Rows[0]);
-
+            var newName = name;
+            PARAM.Row newPARAMRow;
+            if (copyId > 0)
+            {
+                if (!_rowDict.ContainsKey(copyId))
+                {
+                    return null;
+                }
+                var tmp = _rowDict[copyId];
+                newName = tmp.Name;
+                newPARAMRow = new PARAM.Row(tmp.GetParamRow());
+            }
+            else {
+                newPARAMRow = new PARAM.Row(_param.Rows[0]);
+            }         
             newPARAMRow.ID = id;
-            newPARAMRow.Name = name;
+            newPARAMRow.Name = newName;
             bool insert = false;
 
-            //rowWrapper
             var row = new Row();
             row.Init(newPARAMRow, this);
 
@@ -106,6 +118,7 @@ namespace SoulsParam
                 if (id < tmp.ID) {
                     _param.Rows.Insert(i, newPARAMRow);
                     _rows.Insert(i, row);
+                    _rowDict.TryAdd(id, row);
                     insert = true;
                     break;
                 }
@@ -115,9 +128,12 @@ namespace SoulsParam
             {
                 _param.Rows.Add(newPARAMRow);
                 _rows.Add(row);
+                _rowDict.TryAdd(id, row);
             }
             return row;
         }
+
+
 
         public byte[] Write()
         {
@@ -142,6 +158,10 @@ namespace SoulsParam
                 if (impRowName.Length > 0)
                     return impRowName;
                 return _row.Name;
+            }
+
+            public SoulsFormats.PARAM.Row GetParamRow() {
+                return _row;
             }
 
             public void SetImpName(string name) {

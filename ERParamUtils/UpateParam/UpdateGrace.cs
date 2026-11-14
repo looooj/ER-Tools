@@ -154,7 +154,7 @@ namespace ERParamUtils.UpdateParam
         {
 
             string unlockName = "unlock_grace.txt";
-            string fn = paramProject.GetDir() + "\\" + unlockName;
+            string fn = paramProject.GetUpdateDir() + "\\" + unlockName;
             if (File.Exists(fn))
             {
                 return fn;
@@ -208,70 +208,7 @@ namespace ERParamUtils.UpdateParam
 
         }
 
-        /*
-        private static void UnlockGraceCustom1(SoulsParam.Param param, ParamProject paramProject, UpdateCommand updateCommand)
-        {
-
-            string fn = FindUnlockFile(paramProject);
-
-            UpdateLogger.InfoTime("UnlockGraceCustom [{0}]", fn);
-            // paramProject.GetDir() + "\\unlock_grace.txt";
-            if (fn.Length < 3)
-            {
-                return;
-            }
-
-            var lines = File.ReadAllLines(fn);
-            HashSet<int> customIdSet = new();
-
-            foreach (var line in lines)
-            {
-
-                var line1 = line.Trim();
-                if (line1.StartsWith("#"))
-                {
-                    continue;
-                }
-                if (line1.Length < 6)
-                {
-                    continue;
-                }
-                var items = line1.Split(';');
-
-                if (items.Length >= 1)
-                {
-                    var id = int.Parse(items[0]);
-                    if (id < 100000)
-                        continue;
-                    customIdSet.Add(id);
-                }
-            }
-            if (customIdSet.Count < 1)
-                return;
-
-            for (int i = 0; i < param.Rows.Count; i++)
-            {
-
-                var row = param.Rows[i];
-
-
-                int textId = ParamRowUtils.GetCellInt(row, "textId1", 0);
-                if ( normalSkipRowIds.Contains(textId))
-                    continue;
-
-                if (!customIdSet.Contains(textId) )
-                    continue;
-
-
-                updateCommand.AddItem(row, eventflagIdKey, ModConfig.GetUnlockGraceEventId());
-
-                //100000;[Stormveil Castle] Godrick the Grafted;11-clearedEventFlagId; 
-                updateCommand.AddItem(row, "clearedEventFlagId", 0);
-            }
-
-            //todo
-        }
-        */
+        
 
         
         public static void UnlockRoundtableHold(UpdateCommand updateCommand)

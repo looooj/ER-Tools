@@ -44,6 +44,8 @@ namespace ERParamUtils.UpdateParam
         }
     }
     */
+    
+    /*
     public class SpecShopParamTask : UpdateParamTask
     {
         public SpecShopParamTask()
@@ -56,9 +58,10 @@ namespace ERParamUtils.UpdateParam
         public override void Exec(ParamProject project, UpdateCommand updateCommand)
         {
             //UpdateName = Description;
-            UpdateShopLineupParam.ExecSpec(project, updateCommand);
+            UpdateShopLineupParam.ExecFile(project, updateCommand,UpdateFile.UpdateShopSpec);
         }
     }
+    */
 
     /*
     public class ItemLotCountParamTask : UpdateParamTask
@@ -208,7 +211,7 @@ namespace ERParamUtils.UpdateParam
             //updateParamTasks.Add(new SpecRecipeParamTask());
 
   
-            updateParamTasks.Add(new SpecShopParamTask());
+            //updateParamTasks.Add(new SpecShopParamTask());
             //updateParamTasks.Add(new ItemLotCountParamTask());
             //updateParamTasks.Add(new LotParamTask());
 
@@ -325,7 +328,7 @@ namespace ERParamUtils.UpdateParam
             try
             {
                 UpdateLogger.Notify("Prepare...");
-
+                EventFlagForStockBuilder.Init(paramProject);
                 UpdateShopLineupParamRecipe.Init(paramProject);
 
                 UpdateCommand updateCommand = new UpdateCommand(paramProject);
@@ -420,6 +423,8 @@ namespace ERParamUtils.UpdateParam
                 UpdateTalisman.Exec(paramProject, updateCommand);
 
                 UpdateShopLineupParam.Exec(paramProject, updateCommand);
+
+                
 
                 UpdateItemLot.SetupLotPoint(paramProject, updateCommand);
 

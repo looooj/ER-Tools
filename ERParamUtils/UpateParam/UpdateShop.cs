@@ -26,6 +26,8 @@ namespace ERParamUtils.UpdateParam
         public int EquipType;
         public int SellQuantity;
 
+        public string NewName="";
+
         public bool Parse(string line)
         {
 
@@ -43,6 +45,7 @@ namespace ERParamUtils.UpdateParam
             SellQuantity = 1;
             RowId = Int32.Parse(items[0]);
             NewEquipId = Int32.Parse(items[1]);
+            NewName = items[2];
             EquipType = Int32.Parse(items[3]);
             if (items.Length >= 5)
                 Price = Int32.Parse(items[4]);
@@ -61,10 +64,27 @@ namespace ERParamUtils.UpdateParam
             return item;
         }
 
+        static int insertBaseId=0;
+        public static void SetInsertBaseId(int v) { 
+
+            insertBaseId = v;
+        }
         public static void Proc(ShopUpdateItem shopUpdateItem, SoulsParam.Param param, ParamProject paramProject, UpdateCommand updateCommand)
         {
-
+            if (shopUpdateItem.RowId == 0) {
+                shopUpdateItem.RowId = insertBaseId;
+                insertBaseId++;
+            }                
             UpdateCommandItem item = Create(shopUpdateItem);
+            var row = ParamRowUtils.FindRow(param, item.RowId);
+            var shopEquipType = (ShopEquipType)shopUpdateItem.EquipType;
+            if (row == null) {
+
+                UpdateShopLineupParam.AddRow(paramProject, updateCommand, shopUpdateItem.RowId,
+                    shopEquipType, shopUpdateItem.NewEquipId, shopUpdateItem.Price, shopUpdateItem.SellQuantity,
+                    shopUpdateItem.NewName);
+                return;
+            }
             item.Key = "equipType";
             item.Value = shopUpdateItem.EquipType + "";
             updateCommand.AddItem(item);
@@ -78,7 +98,7 @@ namespace ERParamUtils.UpdateParam
             if (shopUpdateItem.Price > 0)
             {
 
-                ChangePrice(paramProject, param, shopUpdateItem, updateCommand);
+                UpdateShopLineupParam.ChangeToMinPrice(paramProject, row, shopUpdateItem.NewEquipId, shopEquipType, updateCommand);                
             }
 
             if (shopUpdateItem.SellQuantity != 0)
@@ -88,6 +108,11 @@ namespace ERParamUtils.UpdateParam
                 item.Value = shopUpdateItem.SellQuantity + "";
                 updateCommand.AddItem(item);
             }
+            if (string.IsNullOrEmpty(shopUpdateItem.NewName)) {
+                shopUpdateItem.NewName = shopUpdateItem.EquipType +"_"+shopUpdateItem.EquipType;
+            } 
+            row.GetParamRow().Name = shopUpdateItem.NewName;
+
 
             /*
              * todo change row name
@@ -100,37 +125,14 @@ namespace ERParamUtils.UpdateParam
                 row.Name = name;
             } */
         }
-
-
-        public static void ChangePrice(ParamProject paramProject,
-            SoulsParam.Param param, ShopUpdateItem shopUpdateItem, UpdateCommand updateCommand)
-        {
-
-            var row = ParamRowUtils.FindRow(param, shopUpdateItem.RowId);
-            if (row == null)
-                return;
-
-            string? paramName = EquipTypeUtils.ShopTypeParamName((ShopEquipType)shopUpdateItem.EquipType);
-            if (paramName == null)
-                return;
-
-            int minPrice = ParamRowUtils.GetCellInt(paramProject, paramName, shopUpdateItem.NewEquipId, "sellValue", -1);
-            if (minPrice <= 0)
-                minPrice = 100;
-
-            int price = minPrice;//shopUpdateItem.Price > minPrice ? minPrice : shopUpdateItem.Price;
-
-            updateCommand.AddItem(row, "value", price);
-        }
     }
-
 
 
        
     public class UpdateShopLineupParam
     {
 
-        public static void ExecSpec(ParamProject paramProject, UpdateCommand updateCommand)
+        public static void ExecFile(ParamProject paramProject, UpdateCommand updateCommand,String fn)
         {
 
             UpdateLogger.Begin(ParamNames.ShopLineupParam);
@@ -139,7 +141,7 @@ namespace ERParamUtils.UpdateParam
             if (param == null)
                 return;
 
-            var lines = UpdateFile.Load(paramProject, UpdateFile.UpdateShopSpec);
+            var lines = UpdateFile.Load(paramProject, fn);
 
             foreach (string line in lines)
             {
@@ -153,6 +155,76 @@ namespace ERParamUtils.UpdateParam
 
         }
 
+        /*
+        private static void ProcKale(ParamProject paramProject, UpdateCommand updateCommand) {
+
+            if (!updateCommand.HaveOption(UpdateParamOptionNames.ShopSuperKale)) {
+                return;
+            }
+
+            var param = paramProject.FindParam(ParamNames.ShopLineupParam);
+            if (param == null)
+                return;
+            UpdateLogger.InfoParam("ProcKale");
+            var oldIdRange = ModConfig.GetOldKaleId();
+
+            var newIdRange = ModConfig.GetNewKaleId();
+
+            int startId = newIdRange.StartID;
+            for (int i = oldIdRange.StartID; i <= oldIdRange.EndId; i++) {
+
+                param.InsertRow(startId, "", i);
+                startId++;
+            }
+
+            ShopUpdateItem.SetInsertBaseId(startId);
+
+            ExecFile(paramProject, updateCommand, ModConfig.GetShopKaleFile());// "shop-kale.txt");
+        }
+        */
+
+        private static void ProcSuperMerchant(ParamProject paramProject, UpdateCommand updateCommand) {
+
+
+            var opt = (SuperMerchantType)updateCommand.GetOption(UpdateParamOptionNames.SuperMerchant);
+
+            if ( opt == 0 )
+            {
+                return;
+            }
+
+            var param = paramProject.FindParam(ParamNames.ShopLineupParam);
+            if (param == null)
+                return;
+
+
+            UpdateLogger.InfoParam("ProcSuperMerchant");
+
+
+            
+
+            var superIdRange = ModConfig.GetSuperMerchantId();
+
+            int startId = superIdRange.StartID;
+            /*
+            if (opt == SuperMerchantType.AppendKale)
+            {
+
+                UpdateLogger.InfoParam("Copy Kale");
+                var kaleIdRange = ModConfig.GetKaleId();
+                for (int i = kaleIdRange.StartID; i <= kaleIdRange.EndId; i++)
+                {
+                    //copy to SuperMerchant
+                    param.InsertRow(startId, "", i);
+                    startId++;
+                }
+            }*/
+
+            ShopUpdateItem.SetInsertBaseId(startId);
+
+            ExecFile(paramProject, updateCommand, ModConfig.GetSuperMerchantFile());
+
+        }
 
 
         //100000[Gatekeeper Gostoc] Festering Bloody Finger
@@ -221,6 +293,61 @@ namespace ERParamUtils.UpdateParam
         }
 
 
+        public static void AddRow(ParamProject paramProject, UpdateCommand updateCommand, int rowId,ShopEquipType equipType, int equipId, int value, int count,string name) {
+
+            var param = paramProject.FindParam(ParamNames.ShopLineupParam);
+            if (param == null)
+                return;
+            //var shopEqType = EquipTypeUtils.ConvertToShopEquipType(equipType);
+            var newName = name;
+            if (newName == "")
+                newName = equipId + "";
+            var row = param.InsertRow(rowId, newName);
+            if (row == null) {
+                return;
+            }
+
+            /*
+0,equipId=52000000  Reference ID(装備ID) s32 Bolt
+1,value=20  Sell Price Overwrite(価格) s32 
+2,mtrlId=-1  Required Material ID(購入に必要な素材ID) s32 
+3,eventFlag_forStock=150200  Quantity - Event Flag ID(個数保持イベントフラグ) u32 
+4,eventFlag_forRelease=0  Visibility - Event Flag ID(販売解禁イベントフラグ) u32 
+5,sellQuantity=-1  Amount to Sell(販売個数) s16 
+7,equipType=Weapon(0)  Equipment Type(装備タイプ) SHOP_LINEUP_EQUIPTYPE(u8) 0=Weapon;1=Protector;2=Accessory;3=Good;4=Ashes;
+8,costType=Runes(0)  Currency Type(価格タイプ) SHOP_LINEUP_COSTTYPE(u8) 0=Runes;1=Dragon Heart (Goods 10060);2=Starlight Shard (Goods 1290);3=Unknown (Goods 22000);4=Lost Ashes of War (Goods 10070);
+10,setNum=1  Amount on Purchase(販売セット数) u16 
+11,value_Add=0  Price Addition(加算) s32 
+12,value_Magnification=1  Price Multiplier(倍率) f32 
+13,iconId=-1  Icon ID(アイコンID) s32 
+14,nameMsgId=-1  Name - Text ID(テキストID) s32 
+15,menuTitleMsgId=-1  Menu Title - Text ID(メニュータイトルテキストID) s32 
+16,menuIconId=-1  Menu Icon ID(メニューアイコンID) s16 
+              
+             */
+            var eventFlag = EventFlagForStockBuilder.GetEventFlag((int)equipType, equipId);
+            string keyValues = 
+                "mtrlId,-1,"+
+                //"eventFlag_forStock,150200," +
+                "eventFlag_forRelease,0," +
+                "costType,0," +
+                "setNum,1," +
+                "value_Add,0," +
+                "value_Magnification,1," +
+                "iconId,-1," +
+                "nameMsgId,-1," +
+                "menuTitleMsgId,-1," +
+                "menuIconId,-1"
+                ;
+            //ParamRowUtils.SetCellValue(row, keyValues);
+            updateCommand.AddKeyValues(param.Name, row.ID, keyValues);
+            updateCommand.AddItem(row, "equipId", equipId);
+            updateCommand.AddItem(row, "equipType", (int)equipType);
+            updateCommand.AddItem(row, "value", value);
+            updateCommand.AddItem(row, "sellQuantity", count);
+            updateCommand.AddItem(row, "eventFlag_forStock", eventFlag);
+
+        }
 
         public static void Exec(ParamProject paramProject, UpdateCommand updateCommand)
         {
@@ -241,6 +368,8 @@ namespace ERParamUtils.UpdateParam
 
             UpdateLogger.Begin(ParamNames.ShopLineupParam);
 
+            //
+            ProcSuperMerchant(paramProject,updateCommand);
 
 
             var param = paramProject.FindParam(ParamNames.ShopLineupParam);

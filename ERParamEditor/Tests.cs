@@ -555,7 +555,9 @@ namespace ERParamEditor
             //ExtractCerMsg();
             //ExtractMsg();
 
-            Tests2.GenCharaClassNames();
+            //Tests2.GenCharaClassNames();
+
+            Tests2.TestReplacePy();
         }
     }
 }

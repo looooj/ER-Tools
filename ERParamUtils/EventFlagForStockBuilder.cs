@@ -17,10 +17,14 @@ namespace ERParamUtils
             return eventFlagForStockMap;
         }
 
+        public static void Init(ParamProject project) {
+            FindFromLot(project);
+            FindFromShop(project);
+        }
+        //
+        public static int GetEventFlag(int shopEquipType,int eqId) {
 
-        public static int GetEventFlag(int eqType,int eqId) {
-
-            string key = buildKey(eqType, eqId);
+            string key = buildKey(shopEquipType, eqId);
             if (eventFlagForStockMap.TryGetValue(key, out int flag)) { 
                 return flag;
             }
@@ -101,7 +105,10 @@ namespace ERParamUtils
                     continue;
                 }
 
-                if (itemType == (int)EquipType.Good)
+                EquipType eqType = (EquipType)itemType;
+                if (eqType == EquipType.Good 
+                    || eqType == EquipType.Weapon
+                    )
                 {
 
                     key = "getItemFlagId";

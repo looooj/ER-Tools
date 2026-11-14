@@ -155,13 +155,15 @@ namespace ERParamEditor
             if (project == null)
             {
                 ListViewUtils.AddItem(listViewProject, "CurrentProject", "?");
-                EnabledPanels(false);
+                if ( !GlobalConfig.Debug)
+                     EnabledPanels(false);
                 return;
             }
             EnabledPanels(true);
 
             ListViewUtils.AddItem(listViewProject, "ProjectDir", project.GetDir());
             ListViewUtils.AddItem(listViewProject, "ProjectName", project.GetName());
+            ListViewUtils.AddItem(listViewProject, "LastPublishTime", project.GetPublishTime());
             ListViewUtils.AddItem(listViewProject, "ModType", project.GetModType());
             ListViewUtils.AddItem(listViewProject, "RegulationPath", project.GetRegulationPath());
             ListViewUtils.AddItem(listViewProject, "ModRegulationPath", project.GetModRegulationPath());

@@ -7,6 +7,32 @@ using System.Threading.Tasks;
 
 namespace ERParamUtils.UpateParam
 {
+
+    //
+    public enum SuperMerchantType
+    { 
+        None = 0,
+        //AppendKale = 1,
+        Grace = 2
+        //NewTalk = 3
+    };
+
+    public class SuperMerchant
+    {
+
+
+        public static string GetValueList()
+        {
+            return "0,1,2";
+        }
+
+        public static string GetNameList()
+        {
+            return "None,AppendKale,Grace";
+        }
+
+    };
+
     public enum UnlockGraceType { 
         None = 0,
         UnlockNormal,
@@ -286,8 +312,10 @@ namespace ERParamUtils.UpateParam
         public static readonly string ShopSellQuantityUnlimited = "ShopSellQuantityUnlimited";
         public static readonly string ShopVisibilityAll = "ShopVisibilityAll";
         public static readonly string ShopAddAncient = "ShopAddAncient";
+        //public static readonly string ShopSuperKale = "ShopSuperKale";
         public static readonly string ShopSetAll = "ShopSetAll";
 
+        public static readonly string SuperMerchant = "SuperMerchant";
     }
 
 

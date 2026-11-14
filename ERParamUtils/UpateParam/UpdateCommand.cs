@@ -341,6 +341,19 @@ namespace ERParamUtils.UpdateParam
             }
                      
         }
+        public void AddKeyValues(string paramName, int rowId, string keyValues)
+        {
+            var kv = keyValues.Split(',');
+            for (int i = 0; i < kv.Length; i+=2) {
+
+                if ((i + 1) >= kv.Length) {
+                    break;
+                }
+                var key = kv[i];
+                var val = kv[i + 1];
+                AddItem(paramName, rowId, key, val);
+            }
+        }
 
 
         void Exec(SoulsParam.Param currentParam, UpdateRowItemDict rowDict) {

@@ -1,0 +1,56 @@
+
+t800006000.py
+
+def t800006000_x51():
+
+800000
+800200
+
+880000
+
+900000
+
+Action
+22230000
+
+
+            OpenRegularShop(shop1, shop2)
+            assert not (CheckSpecificPersonMenuIsOpen(5, 0) and not CheckSpecificPersonGenericDialogIsOpen(0))
+
+
+Action
+15000700
+
+  <msg>
+    <ID>22130001</ID>
+    <Text>强化武器</Text>
+  </msg>
+
+  <msg>
+    <ID>23200000</ID>
+    <Text>调灵</Text>
+  </msg>
+   OpenBuddyUpgradeMenu
+
+
+  <msg>
+    <ID>20000010</ID>
+    <Text>Purchase</Text>
+  </msg>
+  <msg>
+    <ID>20000011</ID>
+    <Text>Sell</Text>
+  </msg>   
+
+def t602006000_x3():
+
+
+            OpenEnhanceShop(EnhanceType.LimitedRange)
+
+            OpenEnhanceShop(EnhanceType.UnlimitedRange)
+
+
+
+            OpenBuddyUpgradeMenu()
+            RecordPlayLog(23)
+            assert not (CheckSpecificPersonMenuIsOpen(23, 0) and not CheckSpecificPersonGenericDialogIsOpen(0))

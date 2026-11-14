@@ -1,0 +1,30 @@
+In Elden Ring (https://www.google.com/search?kgmid=%2Fg%2F11h3z4_20j&q=Elden+Ring) map modding and data editing via tools like Smithbox, configuring custom item drops involves two primary components: the ItemLotParam_map (which defines what rewards drop and how many) and the Map Editor/EMEVD scripting (which triggers the drop from an object or event). [1] (https://www.reddit.com/r/EldenRingMods/comments/1pdj5mi/map_buildings_mod_tutorial_erdtree/), [2] (https://soulsmodding.wikidot.com/mapping-mini-tutorials-compilation)
+Here is how item lot types, counts, and custom assignments function under the hood.
+
+1. ItemLotParam Structure (Type & Count)
+
+Every map-based item pickup, chest, or enemy drop relies on a specific row inside ItemLotParam_map. Each item slot within a single lot row uses the following variables to manage type and quantity: [1] (https://soulsmodding.wikidot.com/mapping-mini-tutorials-compilation)
+• lotItemCategory0X (Lot Type): This specifies the type of data the game should look up. You must match this to the correct parameter table:
+	• 0: None / Empty
+	• 1: Weapon (EquipParamWeapon)
+	• 2: Armor (EquipParamProtector)
+	• 3: Accessory / Talisman (EquipParamAccessory)
+	• 4: Good / Consumable / Key Item (EquipParamGoods)
+	• 5: Gem / Ash of War (EquipParamGem) [1] (https://soulsmodding.wikidot.com/mapping-mini-tutorials-compilation)
+• lotItemID0X (Item ID): The exact ID of the item from the corresponding parameter table chosen above. [1] (https://soulsmodding.wikidot.com/mapping-mini-tutorials-compilation)
+• lotItemNum0X (Count): The raw quantity of that specific item awarded to the player upon interaction. For unique weapons or talismans, this is typically set to 1. For upgrade materials or consumables, it can be increased to your desired amount (e.g., 5 or 10).
+
+2. Item Lot Distribution Mechanics
+
+An individual ItemLotParam row features up to 8 item slots (lotItemID01 through lotItemID08), allowing a single lot to drop multiple items simultaneously.
+• Guaranteed Drops: If the item chances (lotItemBasePoint0X) are configured equally or set as definitive rewards, the player receives all items in the lot.
+• Randomization & Drop Chance: If you are configuring a custom enemy drop rate, you modify the lotItemBasePoint (individual weight) and the overall category allocation to scale drop probabilities.
+
+How to Implement a Custom Map Lot
+
+To spawn a new chest or custom interactive pickup on the map, use Smithbox to tie these parameters together: [1] (https://www.reddit.com/r/EldenRingMods/comments/1pdj5mi/map_buildings_mod_tutorial_erdtree/), [2] (https://soulsmodding.wikidot.com/mapping-mini-tutorials-compilation)
+1. Create the ItemLot Entry: Open the Param Editor, duplicate a vanilla row in ItemLotParam_map, and give it a unique ID. Set your lotItemCategory (type), lotItemID, and lotItemNum (count).
+2. Assign a Event Flag: Set a unique getItemFlagId on your row. This ensures that the item can only be looted once. If left at 0 or blank, the item lot will respawn infinitely every time the zone reloads.
+3. Place the Entity: In the Map Editor tab, create or duplicate a physical object container—such as a chest asset (AEG099_630) or a generic corpse item layout.
+4. Link the ID: Under the object's properties, update the ItemLotID fields to point directly to your newly created custom ItemLotParam_map ID row. [1] (https://soulsmodding.wikidot.com/tutorial:intro-to-elden-ring-emevd), [2] (https://soulsmodding.wikidot.com/mapping-mini-tutorials-compilation)
+Are you setting up this custom lot for a physical map asset (like a chest or a glowing item pickup corpse) or tying it to an enemy character drop? Let me know so I can provide the exact steps or scripting requirements for either setup.
