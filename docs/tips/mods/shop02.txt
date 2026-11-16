@@ -41,6 +41,12 @@ Action
     <ID>20000011</ID>
     <Text>Sell</Text>
   </msg>   
+  <msg>
+    <ID>26000010</ID>
+    <Text>Purchase</Text>
+  </msg>
+def t600001110_x3():
+
 
 def t602006000_x3():
 

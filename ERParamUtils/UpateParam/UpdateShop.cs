@@ -64,16 +64,15 @@ namespace ERParamUtils.UpdateParam
             return item;
         }
 
-        static int insertBaseId=0;
-        public static void SetInsertBaseId(int v) { 
-
-            insertBaseId = v;
-        }
+        //static int insertBaseId=0;
+        //public static void SetInsertBaseId(int v) { 
+        //
+        //    insertBaseId = v;
+        //}
         public static void Proc(ShopUpdateItem shopUpdateItem, SoulsParam.Param param, ParamProject paramProject, UpdateCommand updateCommand)
         {
             if (shopUpdateItem.RowId == 0) {
-                shopUpdateItem.RowId = insertBaseId;
-                insertBaseId++;
+                shopUpdateItem.RowId = SuperMerchantConfig.GetStartId(1);                
             }                
             UpdateCommandItem item = Create(shopUpdateItem);
             var row = ParamRowUtils.FindRow(param, item.RowId);
@@ -186,7 +185,7 @@ namespace ERParamUtils.UpdateParam
         private static void ProcSuperMerchant(ParamProject paramProject, UpdateCommand updateCommand) {
 
 
-            var opt = (SuperMerchantType)updateCommand.GetOption(UpdateParamOptionNames.SuperMerchant);
+            var opt = updateCommand.GetOption(UpdateParamOptionNames.SuperMerchant);
 
             if ( opt == 0 )
             {
@@ -197,11 +196,7 @@ namespace ERParamUtils.UpdateParam
             if (param == null)
                 return;
 
-
-            UpdateLogger.InfoParam("ProcSuperMerchant");
-
-
-            
+            UpdateLogger.InfoParam("ProcSuperMerchant");            
 
             var superIdRange = ModConfig.GetSuperMerchantId();
 
@@ -219,13 +214,25 @@ namespace ERParamUtils.UpdateParam
                     startId++;
                 }
             }*/
-
-            ShopUpdateItem.SetInsertBaseId(startId);
+            SuperMerchantConfig.SetStartId(startId);
+            //?ShopUpdateItem.SetInsertBaseId(startId);
 
             ExecFile(paramProject, updateCommand, ModConfig.GetSuperMerchantFile());
 
         }
 
+        private static void AddSuperMerchantItem(ParamProject paramProject, UpdateCommand updateCommand, SoulsParam.Param param, string name,int eqId, ShopEquipType eqType,int price,int sellQuantity) {
+
+            ShopUpdateItem item = new ShopUpdateItem();
+            item.RowId = 0;
+            item.EquipType = (int)eqType;
+            item.NewEquipId = eqId;
+            item.NewName = name;
+            item.Price = price;
+            item.SellQuantity = sellQuantity;
+
+            ShopUpdateItem.Proc(item, param, paramProject, updateCommand);
+        }
 
         //100000[Gatekeeper Gostoc] Festering Bloody Finger
         //
@@ -247,13 +254,34 @@ namespace ERParamUtils.UpdateParam
             }
             return false;
         }
-        private static void ReplaceAncientStone(ParamProject paramProject, UpdateCommand updateCommand)
+
+        private static void AddAncientStone(ParamProject paramProject, UpdateCommand updateCommand,SoulsParam.Param param) {
+
+            int[] idList = { 10168, 10909, 10919 };
+            string[] nameList = { "Ancient Dragon Smithing Stone",
+                "Somber Ancient Dragon Smithing Stone", "Great Ghost Glovewort" };
+
+            for (int i = 0; i < idList.Length; i++) {
+                AddSuperMerchantItem(paramProject, updateCommand, param, "", idList[i], ShopEquipType.Good, 1000, -1);
+            }
+
+        }
+        public static void ReplaceAncientStone(ParamProject paramProject, UpdateCommand updateCommand)
         {
 
             var param = paramProject.FindParam(ParamNames.ShopLineupParam);
             if (param == null)
                 return;
-
+            if (updateCommand.HaveOption(UpdateParamOptionNames.SuperMerchant)) {
+                var startId = ModConfig.GetSuperMerchantId().StartID;
+                SuperMerchantConfig.SetStartId(startId);
+                AddAncientStone(paramProject, updateCommand, param);
+                return;
+            }
+            if (ModConfig.GetModType() == ModConfig.ModType.RAND) {
+                UpdateShopLineupParamRecipe.AddAncient(paramProject, updateCommand);
+                return;
+            }
             int replaceIndex = 0;
             //10140; Ancient Dragon Smithing Stone; 古龙岩锻造石
             //10168; Somber Ancient Dragon Smithing Stone; 古龙岩失色锻造石
@@ -421,16 +449,16 @@ namespace ERParamUtils.UpdateParam
             }
 
 
+            /*
             if (updateCommand.HaveOption(UpdateParamOptionNames.ShopAddAncient))
             {
-
-                if (ModConfig.GetModType() == ModConfig.ModType.STD)
-                    ReplaceAncientStone(paramProject, updateCommand);
-                if (ModConfig.GetModType() == ModConfig.ModType.RAND) { 
                 
-                    UpdateShopLineupParamRecipe.AddAncient(paramProject, updateCommand);
-                }
-            }
+                //if (ModConfig.GetModType() == ModConfig.ModType.STD)
+                    ReplaceAncientStone(paramProject, updateCommand);
+                //if (ModConfig.GetModType() == ModConfig.ModType.RAND) {                 
+                //    UpdateShopLineupParamRecipe.AddAncient(paramProject, updateCommand);
+                //}
+            }*/
 
         }
 

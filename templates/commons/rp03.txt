@@ -1,0 +1,10 @@
+@@cancel@@def t600001110_x3():@@AddTalkListData(8, 20000011, -1)@@
+        #
+@@insert@@def t600001110_x3():@@AddTalkListData(99, 20000009, -1)@@
+        AddTalkListData(8, 20000011, -1)
+@@cancel@@def t600001110_x3():@@GetTalkListEntryResult() == 8@@        
+        # 
+@@insert@@def t600001110_x3():@@GetTalkListEntryResult() == 9@@
+            OpenSellShop(-1, -1)
+            RecordPlayLog(6)
+            assert not (CheckSpecificPersonMenuIsOpen(6, 0) and not CheckSpecificPersonGenericDialogIsOpen(0)) 

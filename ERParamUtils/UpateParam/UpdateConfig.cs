@@ -9,28 +9,45 @@ namespace ERParamUtils.UpateParam
 {
 
     //
-    public enum SuperMerchantType
-    { 
-        None = 0,
-        //AppendKale = 1,
-        Grace = 2
-        //NewTalk = 3
-    };
+    //public enum SuperMerchantType
+    //{ 
+    //    None = 0,
+    //    //AppendKale = 1,
+    //    Grace = 2
+    //    //NewTalk = 3
+    //};
 
-    public class SuperMerchant
+    //public class SuperMerchant
+    //{
+
+
+    //    public static string GetValueList()
+    //    {
+    //        return "0,1,2";
+    //    }
+
+    //    public static string GetNameList()
+    //    {
+    //        return "None,AppendKale,Grace";
+    //    }
+
+    //};
+
+    public class SuperMerchantConfig
     {
+        static int startId = 0;
 
 
-        public static string GetValueList()
-        {
-            return "0,1,2";
+        public static void SetStartId(int id) { 
+            if ( id > startId)
+               startId = id;
         }
-
-        public static string GetNameList()
-        {
-            return "None,AppendKale,Grace";
+        public static int GetStartId(int inc) {
+            var id = startId;
+            if (inc > 0)
+                startId += inc;
+            return id;
         }
-
     };
 
     public enum UnlockGraceType { 

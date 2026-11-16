@@ -1,15 +1,10 @@
 @@append@@def t000001000_x31():@@AddTalkListData(4, 15000390, -1)@@
         #
-        AddTalkListData(60, 20000010, -1)
+        AddTalkListData(61, 20000010, -1)
         #        
 @@insert@@def t000001000_x31():@@elif GetTalkListEntryResult() == 2:@@
-        elif GetTalkListEntryResult() == 60:
+        elif GetTalkListEntryResult() == 61:
             #
             OpenRegularShop(810000, 810400)
             assert not (CheckSpecificPersonMenuIsOpen(5, 0) and not CheckSpecificPersonGenericDialogIsOpen(0))
             #
-
-        
-
-
-

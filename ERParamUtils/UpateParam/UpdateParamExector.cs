@@ -424,7 +424,9 @@ namespace ERParamUtils.UpdateParam
 
                 UpdateShopLineupParam.Exec(paramProject, updateCommand);
 
-                
+                if (updateCommand.HaveOption(UpdateParamOptionNames.ShopAddAncient)) { 
+                    UpdateShopLineupParam.ReplaceAncientStone(paramProject, updateCommand);
+                }
 
                 UpdateItemLot.SetupLotPoint(paramProject, updateCommand);
 

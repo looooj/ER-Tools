@@ -29,6 +29,7 @@ namespace Utils
         public int SkipCount = 0;
 
         public bool IsConsole = false;
+        public List<ReplaceCommand> Commands = new();
     }
 
     /*
@@ -145,19 +146,21 @@ namespace Utils
                     int indent = line.IndexOf("def");
                     if (funcDict.ContainsKey(line1)) { 
                     
-                        var currentCmds = funcDict[line1];
+                        //var currentCmds = funcDict[line1];
+                        context.Commands = funcDict[line1];
                         context.LineNo = i + 1;
                         context.Indent = indent;
 
-                        i = ProcCmd(pyLines, context, currentCmds, result);
+                        i = ProcCmd(pyLines, context, result);
                     }
                 }
 
             }
         }
 
-        static int ProcCmd(List<string> pyLines, ReplaceContext context, List<ReplaceCommand> cmds,List<string> result) {
+        static int ProcCmd(List<string> pyLines, ReplaceContext context,List<string> result) {
 
+            var cmds = context.Commands;
             var i = context.LineNo;
             for (; i < pyLines.Count; i++) {
 
@@ -185,17 +188,18 @@ namespace Utils
                         break;
                     }
                 }
-                ProcLines(line,i, context, cmds, result);
+                ProcLines(line,i, context, result);
             }
             return i;             
         }
 
-        static void ProcLines(string line, int lineNo, ReplaceContext context, List<ReplaceCommand> cmds, List<string> result)
+        static void ProcLines(string line, int lineNo, ReplaceContext context,  List<string> result)
         {
-
+            var cmds = context.Commands;
+            var index = 0;
             foreach (var cmd in cmds)
             {
-
+                index++;
                 if (cmd.Finish)
                 {
                     continue;
@@ -213,7 +217,12 @@ namespace Utils
                         Console.WriteLine(tmp);
                     }
                 }
-
+                if (cmd.Id == "cancel") {
+                    cmd.Finish = true;
+                    cmd.Active = true;
+                    if (index <= cmds.Count) 
+                        cmds[index].Finish = true;
+                }
                 if (cmd.Id == "insert")
                 {
                     result.InsertRange(result.Count - 1, cmd.Lines);

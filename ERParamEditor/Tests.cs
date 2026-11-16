@@ -552,12 +552,12 @@ namespace ERParamEditor
             //Tests2.ExportParamGraceSTD();
             //Tests2.FindMaxHp();
             //Tests2.FindMp();
-            //ExtractCerMsg();
+            ExtractCerMsg();
             //ExtractMsg();
 
             //Tests2.GenCharaClassNames();
 
-            Tests2.TestReplacePy();
+            //Tests2.TestReplacePy();
         }
     }
 }
