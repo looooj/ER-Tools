@@ -1,3 +1,5 @@
+#smithing table;铸造台
+@@include@@shop_id.txt@@
 @@append@@def t602006000_x3():@@AddTalkListData(1, 26020000, -1)@@
         AddTalkListData(2, 20000010, -1)
         AddTalkListData(3, 20000011, -1)
@@ -12,10 +14,9 @@
             RecordPlayLog(23)
             assert not (CheckSpecificPersonMenuIsOpen(23, 0) and not CheckSpecificPersonGenericDialogIsOpen(0))
         elif GetTalkListEntryResult() == 2:
-            OpenRegularShop(810000, 810400)
+            OpenRegularShop(table_start_id, table_end_id)
             RecordPlayLog(5)
             assert not (CheckSpecificPersonMenuIsOpen(5, 0) and not CheckSpecificPersonGenericDialogIsOpen(0))
         elif GetTalkListEntryResult() == 3:
             OpenSellShop(-1, -1)
             assert not (CheckSpecificPersonMenuIsOpen(6, 0) and not CheckSpecificPersonGenericDialogIsOpen(0))
-

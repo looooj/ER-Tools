@@ -1,4 +1,5 @@
 using ERParamUtils.UpdateParam;
+using Org.BouncyCastle.Tls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,36 +34,99 @@ namespace ERParamUtils.UpateParam
 
     //};
 
+    /*
     public class SuperMerchantConfig
     {
         static int startId = 0;
 
-
-        public static void SetStartId(int id) { 
-            if ( id > startId)
-               startId = id;
+        public static void SetStartId(int id)
+        {
+            if (id > startId)
+                startId = id;
         }
-        public static int GetStartId(int inc) {
+        public static int GetStartId(int inc)
+        {
             var id = startId;
             if (inc > 0)
                 startId += inc;
             return id;
         }
-    };
+    }
+    */
 
-    public enum UnlockGraceType { 
+    public class ShopConfigItem
+    {
+        public int StartID;
+        public int EndId;
+        public int Index = 0;
+        public string File;
+        public ShopConfigItem(int startId, int endId, string fn)
+        {
+            StartID = startId;
+            EndId = endId;
+            File = fn;
+        }
+    }
+    public class ESDShopConfig
+    {
+
+        /*
+@@var@@table_start_id@@810100
+@@var@@table_end_id@@810199
+@@var@@grace_start_id@@810200
+@@var@@grace_end_id@@810400
+@@var@@kale_start_id@@810500
+@@var@@kale_end_id@@810999  
+        */
+        static Dictionary<string, ShopConfigItem> dict = new();
+        public static void Init()
+        {
+
+            dict.Add(UpdateParamOptionNames.ShopTable, new ShopConfigItem(810100, 810199,"shop-table"));
+            dict.Add(UpdateParamOptionNames.ShopGrace, new ShopConfigItem(810200, 810400,"shop-grace"));
+            dict.Add(UpdateParamOptionNames.ShopKale, new ShopConfigItem(810500, 810999,"shop-kale"));
+
+        }
+        public static ShopConfigItem GetIdRange(string name)
+        {
+            if (dict.Count == 0)
+            {
+                Init();
+            }
+            return dict[name];
+        }
+
+        static ShopConfigItem? currentItem;
+        public static void SetCurrent(ShopConfigItem idRange)
+        {
+            currentItem = idRange;
+        }
+
+        public static int GetNextId()
+        {
+            if (currentItem == null)
+                return 0;
+            int id = (currentItem.StartID + currentItem.Index);
+            currentItem.Index++;
+            return id;
+        }
+    }
+
+    public enum UnlockGraceType
+    {
         None = 0,
         UnlockNormal,
         UnlockCustom
         //UnlockForCER
     };
 
-    public class UnlockGraceConfig {
+    public class UnlockGraceConfig
+    {
 
 
         public static string GetValueList()
         {
-            return "0,2"; 
+            return "0,2";
         }
 
         public static string GetNameList()
@@ -82,10 +146,12 @@ namespace ERParamUtils.UpateParam
             return "None,All,UnlockCustom(custom_grace.txt)";
         }
 
-        public static UnlockGraceType ValueToType(int v) { 
+        public static UnlockGraceType ValueToType(int v)
+        {
 
-            
-            switch (v) {
+
+            switch (v)
+            {
                 case 1:
                     return UnlockGraceType.UnlockNormal;
                 case 2:
@@ -96,11 +162,13 @@ namespace ERParamUtils.UpateParam
         }
     };
 
-    public class ReplaceGoldenRune {
+    public class ReplaceGoldenRune
+    {
 
 
-        public static string GetValueList() {
-            return "0,11,10"; 
+        public static string GetValueList()
+        {
+            return "0,11,10";
         }
 
         public static string GetNameList()
@@ -114,11 +182,12 @@ namespace ERParamUtils.UpateParam
 1-> 2912;Golden Rune [13];黄金卢恩【１３】
 2-> 2917;Hero's Rune [4];英雄卢恩【４】
          */
-        public static int RandHeroRune() { 
+        public static int RandHeroRune()
+        {
 
-            int  n = Random.Shared.Next(5);
+            int n = Random.Shared.Next(5);
 
-            return 2914+n;
+            return 2914 + n;
         }
         public static int RandRune()
         {
@@ -130,8 +199,9 @@ namespace ERParamUtils.UpateParam
 
         public static int ValueToEquipId(int value)
         {
-            switch (value) { 
-                case 1: 
+            switch (value)
+            {
+                case 1:
                     return 2912;
                 case 2:
                     return 2917;
@@ -143,8 +213,10 @@ namespace ERParamUtils.UpateParam
             return 0;
         }
 
-        public static int GetRuneValue(int id) {
-            switch (id) {
+        public static int GetRuneValue(int id)
+        {
+            switch (id)
+            {
                 case 2909:
                     return 5000;
                 case 2910:
@@ -192,13 +264,15 @@ namespace ERParamUtils.UpateParam
         }
         static string currentValue = "0";
 
-        public static string GetValue() { 
+        public static string GetValue()
+        {
             return currentValue;
         }
 
     }
 
-    public class LotPointConfig {
+    public class LotPointConfig
+    {
         public static string GetValueList()
         {
             return "0,150,250,350,450,550";
@@ -211,7 +285,8 @@ namespace ERParamUtils.UpateParam
 
     };
 
-    public class UpdateParamOptionItem {
+    public class UpdateParamOptionItem
+    {
 
         public string Name;
         public string Description;
@@ -331,8 +406,12 @@ namespace ERParamUtils.UpateParam
         public static readonly string ShopAddAncient = "ShopAddAncient";
         //public static readonly string ShopSuperKale = "ShopSuperKale";
         public static readonly string ShopSetAll = "ShopSetAll";
+        public static readonly string ShopESD = "ShopESD";
+        public static readonly string ShopTable = "ShopTable";
+        public static readonly string ShopGrace = "ShopGrace";
+        public static readonly string ShopKale = "ShopKale";
 
-        public static readonly string SuperMerchant = "SuperMerchant";
+        //public static readonly string SuperMerchant = "SuperMerchant";
     }
 
 
@@ -350,22 +429,24 @@ namespace ERParamUtils.UpateParam
             UpdateTasks.Add(task);
         }
 
-        public void AddUpdateCommandOption(DictConfig config) {
+        public void AddUpdateCommandOption(DictConfig config)
+        {
             CurrentConfig = config;
-            foreach (string key in config.GetDict().Keys) {
-                int value = config.GetInt(key,0);
-                UpdateCommandOptions[key]=value;
+            foreach (string key in config.GetDict().Keys)
+            {
+                int value = config.GetInt(key, 0);
+                UpdateCommandOptions[key] = value;
             }
         }
 
         public void AddUpdateCommandOption(string name)
         {
-            UpdateCommandOptions[name]=1;
+            UpdateCommandOptions[name] = 1;
         }
 
         public void AddUpdateCommandOption(string name, int val)
         {
-            UpdateCommandOptions[name]=val;
+            UpdateCommandOptions[name] = val;
         }
 
     }

@@ -311,7 +311,7 @@ namespace ERParamEditor
             //panel.AddCheckBox(UpdateParamOptionNames.ShopAddAncient, "");
             //panel.AddCheckBox(UpdateParamOptionNames.ShopSuperKale, "");
             //panel.AddCheckBox(UpdateParamOptionNames.ShopSetAll, "");
-            panel.AddCheckBox(UpdateParamOptionNames.SuperMerchant, "");
+            //panel.AddCheckBox(UpdateParamOptionNames.SuperMerchant, "");
             /*
             string mNames = MultiLang.GetText("UpdateParam", UpdateParamOptionNames.SuperMerchant,
                 SuperMerchant.GetNameList());

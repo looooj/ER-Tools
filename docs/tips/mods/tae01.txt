@@ -1,0 +1,33 @@
+In Elden Ring (https://www.google.com/search?kgmid=%2Fg%2F11h3z4_20j&q=Elden+Ring), the Pulley Crossbow's 3-bolt burst is not controlled by a simple "shot count" number in weapon params. Instead, it is driven by animation events (TAE) and ammunition/bullet parameters.
+To customize the number of bolts fired per volley using tools like Smithbox and DSAnimStudio, you have two main approaches depending on whether you want a sequential burst or a simultaneous spread:
+
+Method 1: Sequential Burst (Changing TAE Animation Events)
+
+The Pulley Crossbow fires three bolts in rapid succession because its attack animation triggers the "fire bolt" event three separate times.
+1. Locate the Weapon's TAE: Open the Pulley Crossbow in Smithbox under EquipParamWeapon (ID 44050000) and check its animIdOffset or behavior variation ID to find its corresponding .anibnd.dcx file (typically c0000 player animations under the crossbow weapon category).
+2. Open in DSAnimStudio: Load the character's animation file (c0000.anibnd.dcx) in DSAnimStudio and navigate to the Pulley Crossbow's firing animations (Light Attack / Fire, Jump Attack, etc.).
+3. Duplicate or Remove Fire Events: Look at the timeline tracks for the Shoot / Fire or Spawn Bullet TAE events (such as InvokeBulletBehavior or ShootAmmo).
+	• To increase bolts: Copy and paste existing fire events along the timeline, adjusting their start/end frames so they fire in rapid succession before the reload animation begins.
+	• To decrease bolts: Delete one or two of the existing fire events.
+4. Save & Pack: Save the .anibnd.dcx into your mod folder (chr directory) so Mod Engine loads the updated animation timings.
+
+Method 2: Simultaneous Spread (Editing Bullet Params in Smithbox)
+
+If you want each trigger pull to fire multiple bolts simultaneously in a fan or spread (similar to the Spread Crossbow), you can modify the ammunition's projectile behavior instead of editing animations.
+1. Open Smithbox (Param Editor): Navigate to EquipParamGoods or EquipParamWeapon to find the Bullet ID used by your bolts (standard bolts typically map to rows in the Bullet param, such as 10000100 for Bone Bolts).
+2. Modify Projectile Count (numShoot):
+	• Select the bolt's row in the Bullet param.
+	• Change numShoot from 1 to your desired count per shot (for example, setting numShoot to 3 on a 3-round burst animation will fire 9 bolts total).
+3. Adjust Spread (shootAngleInterval):
+	• Set shootAngleInterval (horizontal spread angle in degrees, e.g., 2.0 to 5.0) so the extra bolts fan out rather than overlapping on the exact same pixel.
+	• Optionally adjust shootAngle or shootAngleXZ if you want vertical or random scatter.
+4. Control Ammo Consumption: By default, multiplying bullets via Bullet params does not consume extra ammo per sub-projectile—only each TAE fire event consumes a bolt from your inventory. (If you want zero ammo consumption while testing, you can also pair your setup with the Infinite Arrows and Bolts Mod.) [1] (https://www.nexusmods.com/eldenring/mods/10389)
+
+Summary of Trade-Offs
+
+
+Approach	Tool Used	Firing Behavior	Ammo Cost
+Edit TAE Events	DSAnimStudio	Fires bolts one after another in a longer/shorter mechanical burst.	Consumes 1 bolt per fired shot.
+Edit Bullet Params	Smithbox	Fires multiple bolts at the exact same instant in a spread.	Only consumes 1 bolt per burst tick.
+
+Are you trying to change the burst length (e.g., a 5-round sequential burst) or turn it into a shotgun-style spread, and are you building this on top of vanilla params or an overhaul like The Convergence? Let me know so I can point you to the exact Param/TAE IDs.

@@ -178,10 +178,17 @@ namespace ERParamUtils.UpdateParam
             }
             return dict;
         }
-        public static List<IdLine> LoadIdFile(ParamProject paramProject,string name) { 
+        public static List<IdLine> LoadIdFile(ParamProject? paramProject,string name) { 
 
             List<IdLine> idLines = new List<IdLine>();
-            var lines = UpdateFile.Load(paramProject, name);
+            List<string> lines;
+            if (paramProject == null) {
+                lines = new();
+                if ( File.Exists(name))
+                    lines.AddRange(File.ReadAllLines(name));
+            }
+            else 
+                lines = UpdateFile.Load(paramProject, name);
             foreach (var line in lines)
             {
                 var line2 = line.Trim();

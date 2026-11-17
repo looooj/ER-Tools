@@ -1,0 +1,9 @@
+#kale shop
+@@include@@shop_id.txt@@
+@@replace@@def t800001100_x51():@@AddTalkListDataIf(GetEventFlag(1042369319), 3, 28000002, -1)@@
+        AddTalkListData(3, 28000002, -1)     
+@@append-block@@def t800001100_x51():@@elif GetTalkListEntryResult() == 3:@@
+            OpenRegularShop(kale_start_id, kale_end_id)
+            RecordPlayLog(5)
+            assert not (CheckSpecificPersonMenuIsOpen(5, 0) and not CheckSpecificPersonGenericDialogIsOpen(0))        
+

@@ -1,0 +1,6 @@
+@@var@@table_start_id@@810100
+@@var@@table_end_id@@810199
+@@var@@grace_start_id@@810200
+@@var@@grace_end_id@@810400
+@@var@@kale_start_id@@810500
+@@var@@kale_end_id@@810999

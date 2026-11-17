@@ -152,7 +152,7 @@ namespace ERParamUtils.UpateParam
             return true;
         }
 
-        public record struct RowIdRange(int StartID, int EndId);
+        
 
         /*
         public static RowIdRange GetKaleId() {
@@ -163,10 +163,10 @@ namespace ERParamUtils.UpateParam
         }
         */
 
-        public static RowIdRange GetSuperMerchantId() {
-            var ret = new RowIdRange(810000, 810400);
-            return ret;
-        }
+        //public static RowIdRange GetSuperMerchantId() {
+        //    var ret = new RowIdRange(810000, 810400);
+        //    return ret;
+        //}
 
 
         public static string GetDefaultModTypeName()
@@ -174,6 +174,7 @@ namespace ERParamUtils.UpateParam
             return "STD";
         }
 
+        /*
         internal static string GetSuperMerchantFile()
         {
             switch (currentModType) { 
@@ -181,6 +182,38 @@ namespace ERParamUtils.UpateParam
                     return "super-merchant-cer.txt"; ;
             }
             return "super-merchant.txt";
+        }
+
+
+
+        internal static string GetShopKaleFile()
+        {
+            switch (currentModType)
+            {
+                case ModType.CER:
+                    return "shop-kale-cer.txt"; ;
+            }
+            return "shop-kale.txt";
+        }
+
+        internal static string GetShopTaleFile()
+        {
+            switch (currentModType)
+            {
+                case ModType.CER:
+                    return "shop-table-cer.txt"; ;
+            }
+            return "shop-table.txt";
+        }
+        */
+        public static string GetShopFile(string fn)
+        {
+            switch (currentModType)
+            {
+                case ModType.CER:
+                    return fn + "-cer.txt"; ;
+            }
+            return fn + ".txt";
         }
 
         public enum ModType { 

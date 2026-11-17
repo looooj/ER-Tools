@@ -100,6 +100,30 @@ namespace ERParamUtils.UpdateParam
             updateCommand.AddKeysItem(ParamNames.MagicParam, rowId, keys, "1");
         }
 
+
+        public static void ProcArrowNum(ParamProject? paramProject, UpdateCommand updateCommand)
+        {
+            if (paramProject == null)
+                return;
+
+            SoulsParam.Param? param = paramProject.FindParam(ParamNames.EquipParamWeapon);
+
+            if (param == null)
+            {
+                return;
+            }
+
+            for (int i = 0; i < param.Rows.Count; i++)         
+            {
+                var row = param.Rows[i];
+                var val = ParamRowUtils.GetCellInt(row, "maxArrowQuantity", 1);
+                if (val > 1 && val < 99 ) {
+
+                    updateCommand.AddItem(row, "maxArrowQuantity", "99");
+                }
+
+            }
+        }
         public static void ProcWeapon(ParamProject? paramProject, UpdateCommand updateCommand)
         {
 

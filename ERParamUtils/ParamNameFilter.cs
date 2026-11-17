@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SoulsFormats.BHD5;
 
 namespace ERParamUtils
 {
@@ -34,6 +35,8 @@ namespace ERParamUtils
         static string[] defaultIncludeParamNames = new string[] {
              //"Bullet",
              //"AtkParam_Npc",
+             "Bullet",
+             "BulletCreateLimitParam",
              "AtkParam_Pc",
              "BonfireWarpParam",
              "ItemLotParam_enemy",

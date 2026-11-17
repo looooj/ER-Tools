@@ -9,6 +9,7 @@ using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static ERParamUtils.UpateParam.ShopConfigItem;
 using static SoulsFormats.MSBE.Event;
 using static SoulsFormats.PARAM;
 
@@ -72,7 +73,11 @@ namespace ERParamUtils.UpdateParam
         public static void Proc(ShopUpdateItem shopUpdateItem, SoulsParam.Param param, ParamProject paramProject, UpdateCommand updateCommand)
         {
             if (shopUpdateItem.RowId == 0) {
-                shopUpdateItem.RowId = SuperMerchantConfig.GetStartId(1);                
+                shopUpdateItem.RowId = ESDShopConfig.GetNextId();
+                if (shopUpdateItem.RowId == 0) {
+
+                    return;
+                }
             }                
             UpdateCommandItem item = Create(shopUpdateItem);
             var row = ParamRowUtils.FindRow(param, item.RowId);
@@ -181,23 +186,42 @@ namespace ERParamUtils.UpdateParam
             ExecFile(paramProject, updateCommand, ModConfig.GetShopKaleFile());// "shop-kale.txt");
         }
         */
+        static void ExecESDShopFile(ParamProject paramProject, UpdateCommand updateCommand, SoulsParam.Param param, string shopName) {
+            
+            var config = ESDShopConfig.GetIdRange(shopName);
+            string fn = ModConfig.GetShopFile(config.File);
+            var lines = UpdateFile.Load(paramProject, fn);
+            ESDShopConfig.SetCurrent(config);
 
-        private static void ProcSuperMerchant(ParamProject paramProject, UpdateCommand updateCommand) {
-
-
-            var opt = updateCommand.GetOption(UpdateParamOptionNames.SuperMerchant);
-
-            if ( opt == 0 )
+            foreach (string line in lines)
             {
-                return;
+                var item = new ShopUpdateItem();
+                if (item.Parse(line))
+                {
+                    ShopUpdateItem.Proc(item, param, paramProject, updateCommand);
+                }
             }
+
+        }
+        private static void ProcESDShop(ParamProject paramProject, UpdateCommand updateCommand) {
+
+
+            //var opt = updateCommand.GetOption(UpdateParamOptionNames.SuperMerchant);
+
+            //if ( opt == 0 )
+            //{
+            //    return;
+            //}
 
             var param = paramProject.FindParam(ParamNames.ShopLineupParam);
             if (param == null)
                 return;
 
-            UpdateLogger.InfoParam("ProcSuperMerchant");            
+            UpdateLogger.InfoParam("ProcESDShop");
 
+            ExecESDShopFile(paramProject, updateCommand, param, UpdateParamOptionNames.ShopTable);
+
+            /*
             var superIdRange = ModConfig.GetSuperMerchantId();
 
             int startId = superIdRange.StartID;
@@ -213,15 +237,16 @@ namespace ERParamUtils.UpdateParam
                     param.InsertRow(startId, "", i);
                     startId++;
                 }
-            }*/
+            }
             SuperMerchantConfig.SetStartId(startId);
+            */
             //?ShopUpdateItem.SetInsertBaseId(startId);
 
-            ExecFile(paramProject, updateCommand, ModConfig.GetSuperMerchantFile());
+            //ExecFile(paramProject, updateCommand, ModConfig.GetSuperMerchantFile());
 
         }
 
-        private static void AddSuperMerchantItem(ParamProject paramProject, UpdateCommand updateCommand, SoulsParam.Param param, string name,int eqId, ShopEquipType eqType,int price,int sellQuantity) {
+        private static void AddSuperShopItem(ParamProject paramProject, UpdateCommand updateCommand, SoulsParam.Param param, string name,int eqId, ShopEquipType eqType,int price,int sellQuantity) {
 
             ShopUpdateItem item = new ShopUpdateItem();
             item.RowId = 0;
@@ -262,7 +287,7 @@ namespace ERParamUtils.UpdateParam
                 "Somber Ancient Dragon Smithing Stone", "Great Ghost Glovewort" };
 
             for (int i = 0; i < idList.Length; i++) {
-                AddSuperMerchantItem(paramProject, updateCommand, param, "", idList[i], ShopEquipType.Good, 1000, -1);
+                //AddSuperMerchantItem(paramProject, updateCommand, param, "", idList[i], ShopEquipType.Good, 1000, -1);
             }
 
         }
@@ -272,10 +297,10 @@ namespace ERParamUtils.UpdateParam
             var param = paramProject.FindParam(ParamNames.ShopLineupParam);
             if (param == null)
                 return;
-            if (updateCommand.HaveOption(UpdateParamOptionNames.SuperMerchant)) {
-                var startId = ModConfig.GetSuperMerchantId().StartID;
-                SuperMerchantConfig.SetStartId(startId);
-                AddAncientStone(paramProject, updateCommand, param);
+            if (updateCommand.HaveOption(UpdateParamOptionNames.ShopTable)) {
+                //var startId = ModConfig.GetSuperMerchantId().StartID;
+                //SuperMerchantConfig.SetStartId(startId);
+                //AddAncientStone(paramProject, updateCommand, param);
                 return;
             }
             if (ModConfig.GetModType() == ModConfig.ModType.RAND) {
@@ -397,7 +422,7 @@ namespace ERParamUtils.UpdateParam
             UpdateLogger.Begin(ParamNames.ShopLineupParam);
 
             //
-            ProcSuperMerchant(paramProject,updateCommand);
+            ProcESDShop(paramProject,updateCommand);
 
 
             var param = paramProject.FindParam(ParamNames.ShopLineupParam);

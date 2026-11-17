@@ -351,6 +351,7 @@ namespace ERParamUtils.UpdateParam
 
 
                 ParamUpdateRequire.ExecOthers(paramProject, updateCommand);
+                ParamUpdateRequire.ProcArrowNum(paramProject, updateCommand);
                 ParamUpdateRequire.Exec(paramProject, updateCommand);
 
                 ParamRemoveWeight.Exec(paramProject, updateCommand);
@@ -421,6 +422,7 @@ namespace ERParamUtils.UpdateParam
                 //UpdateGrace.UnlockGlaceDefault(updateCommand);
                 //UpdateCharaInit.AddDefault(paramProject,updateCommand);
                 UpdateTalisman.Exec(paramProject, updateCommand);
+
 
                 UpdateShopLineupParam.Exec(paramProject, updateCommand);
 

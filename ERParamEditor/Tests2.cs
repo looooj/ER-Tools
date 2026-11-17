@@ -477,5 +477,24 @@ namespace ERParamEditor
 
            // ReplacePython.Proc(pyFile, rpFile, pyFile + ".py");
         }
+
+        public static void GenShopFileLines(string idFile, ShopEquipType eqType, int price, int amount, int startId, int endId, List<string> result) {
+
+            var idLines = UpdateFile.LoadIdFile(null,idFile);
+
+            foreach (var idLine in idLines) {
+
+                if (idLine == null ) 
+                    continue;
+                if ( int.Parse(idLine.Id) < startId || int.Parse(idLine.Id) > endId) {
+                    continue;
+                }
+                string items = idLine.Line.Split(';');
+                string name = "";
+                string tmp = string.Format("0;{0};{1};{2};{3};{4}", idLine.Id, name, eqType, price, amount);
+            }
+        }
+
+
     }
 }
