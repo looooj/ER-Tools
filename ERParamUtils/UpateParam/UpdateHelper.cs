@@ -43,7 +43,7 @@ namespace ERParamUtils.UpateParam
             foreach (var fn in lotIdFiles)
             {
 
-                var full = GlobalConfig.GetTemplateDir() + "/commons/" + fn;
+                var full = GlobalConfig.GetCommonsDir() + "//" + fn;
 
                 LoadIdLines(full, idlines);
             }

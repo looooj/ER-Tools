@@ -29,17 +29,33 @@ namespace ERParamEditor
 
         }
         private bool FirstShow = true;
+        private static bool OpenLastProject = true;
+
+        private static void checkArgs() {
+            string[] allArgs = Environment.GetCommandLineArgs();
+
+            string[] userArgs = allArgs.Skip(1).ToArray();
+            foreach (var arg in userArgs) {
+
+                if (arg == "--skip-last-project")
+                    OpenLastProject = false;
+            }
+
+        }
         private static async Task<int> InitLoadTask()
         {
 
 
             try
             {
+                checkArgs();
 
                 RowNamesManager.Load();
                 ParamFieldMetaManager.Load();
                 ParamNames.LoadDesc(MultiLang.GetLangId());
-                ParamProjectManager.OpenLastProject();
+
+                if ( OpenLastProject)
+                     ParamProjectManager.OpenLastProject();
             }
             catch (Exception e)
             {
@@ -207,7 +223,7 @@ namespace ERParamEditor
             if (ret == DialogResult.OK)
             {
 
-                var project = ParamProjectManager.CreateProject(form.ProjectName, form.RegulationPath, form.TemplateName);
+                var project = ParamProjectManager.CreateProject(form.ProjectName, form.RegulationPath);//, form.TemplateName);
                 if (project != null)
                 {
 

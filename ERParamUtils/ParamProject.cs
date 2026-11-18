@@ -55,12 +55,12 @@ namespace ERParamUtils
             CreateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
-        public void SetTemplateName(string name)
-        {
-            if (name == null || name == "")
-                name = ParamProjectTemplate.GetDefault();
-            templateName = name;
-        }
+        //public void SetTemplateName(string name)
+        //{
+        //    if (name == null || name == "")
+        //        name = ParamProjectTemplate.GetDefault();
+        //    templateName = name;
+        //}
 
         public string GetName()
         {

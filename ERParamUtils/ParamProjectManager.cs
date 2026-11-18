@@ -99,12 +99,12 @@ namespace ERParamUtils
             return "Invalid Project Name, Only Include a-z,0-9 \nExamples abc, abc1, abcd ";
         }
 
-        public static ParamProject CreateProject(string name, string modRegulationPath, string templateName)
+        public static ParamProject CreateProject(string name, string modRegulationPath)
         {
 
             ParamProject paramProject = new(name);
 
-            paramProject.SetTemplateName(templateName);
+            //paramProject.SetTemplateName(templateName);
             paramProject.Create(modRegulationPath);
             Directory.CreateDirectory(paramProject.GetDir());
             paramProject.SaveConfig();

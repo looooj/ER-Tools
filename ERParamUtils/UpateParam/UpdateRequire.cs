@@ -46,7 +46,7 @@ namespace ERParamUtils.UpdateParam
 
         private static void ProcWeaponFile(ParamProject paramProject, UpdateCommand updateCommand) {
 
-            var lines = UpdateFile.LoadIdFile(paramProject,"remove_weapon_req.txt");
+            var lines = UpdateFile.LoadIdFile(paramProject,"remove_weapon_req.txt",false);
 
             foreach (var line in lines) {
 
@@ -57,7 +57,7 @@ namespace ERParamUtils.UpdateParam
         private static void ProcMagicFile(ParamProject paramProject, UpdateCommand updateCommand)
         {
 
-            var lines = UpdateFile.LoadIdFile(paramProject, "remove_magic_req.txt");
+            var lines = UpdateFile.LoadIdFile(paramProject, "remove_magic_req.txt", false);
             foreach (var line in lines)
             {
                 ProcMagicId(updateCommand, line.Id);

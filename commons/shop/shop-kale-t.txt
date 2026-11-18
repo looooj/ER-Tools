@@ -1,0 +1,15 @@
+# equipType WEAPON=0, ARMOR=1, RING=2, GOOD=3, ASH=4
+
+@@var@@type=3
+@@var@@amount=1
+@@var@@price=1000
+2140;Margit's Shackle;玛尔基特的囚具
+2150;Mohg's Shackle;蒙格的囚具
+2160;Pureblood Knight's Medal;纯血骑士勋章
+204010;Latenna the Albinauric +10;白金之子勒缇娜＋１０
+253010;Radahn Soldier Ashes +10;拉塔恩士兵的骨灰＋１０
+207010;Mimic Tear Ashes +10;仿身泪滴的骨灰＋１０
+
+@@var@@amount=-1
+2130;Celestial Dew;星星泪滴
+8185;Larval Tear;泪滴幼体

@@ -1,5 +1,5 @@
 #GraceShop
-@@include@@shop_id.txt@@
+@@include@@shop_id_var.txt@@
 @@append@@def t000001000_x31():@@AddTalkListData(4, 15000390, -1)@@
         #
         AddTalkListData(61, 20000010, -1)

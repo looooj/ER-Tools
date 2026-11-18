@@ -1,5 +1,5 @@
 #smithing table;铸造台
-@@include@@shop_id.txt@@
+@@include@@shop_id_var.txt@@
 @@append@@def t602006000_x3():@@AddTalkListData(1, 26020000, -1)@@
         AddTalkListData(2, 20000010, -1)
         AddTalkListData(3, 20000011, -1)

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ERParamEditor": {
+      "commandName": "Project",
+      "commandLineArgs": "--skip-last-project"
+    }
+  }
+}

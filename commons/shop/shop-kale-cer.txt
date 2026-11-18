@@ -1,0 +1,8 @@
+0;2140;Margit's Shackle;3;1000;1
+0;2150;Mohg's Shackle;3;1000;1
+0;2160;Pureblood Knight's Medal;3;1000;1
+0;204010;Latenna the Albinauric +10;3;1000;1
+0;253010;Radahn Soldier Ashes +10;3;1000;1
+0;207010;Mimic Tear Ashes +10;3;1000;1
+0;2130;Celestial Dew;3;1000;-1
+0;8185;Larval Tear;3;1000;-1

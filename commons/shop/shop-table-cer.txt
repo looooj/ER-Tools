@@ -1,0 +1,49 @@
+0;10100;Smithing Stone [1];3;1000;-1
+0;10101;Smithing Stone;3;1000;-1
+0;10102;Smithing Stone [3];3;1000;-1
+0;10103;Smithing Stone [4];3;1000;-1
+0;10104;Smithing Stone [5];3;1000;-1
+0;10105;Large Smithing Stone;3;1000;-1
+0;10106;Smithing Stone [7];3;1000;-1
+0;10107;Great Smithing Stone;3;1000;-1
+0;10110;Shadow Smithing Stone;3;1000;-1
+0;10111;Large Shadow Smithing Stone;3;1000;-1
+0;10112;Great Shadow Smithing Stone;3;1000;-1
+0;10113;Colossal Shadow Smithing Stone;3;1000;-1
+0;10114;Primordial Shadow Smithing Stone;3;1000;-1
+0;10140;Ancient Smithing Stone;3;1000;-1
+0;10160;Somber Stone;3;1000;-1
+0;10161;Somber Smithing Stone [2];3;1000;-1
+0;10162;Somber Smithing Stone [3];3;1000;-1
+0;10163;Somber Smithing Stone [4];3;1000;-1
+0;10164;Large Somber Stone;3;1000;-1
+0;10165;Great Somber Stone;3;1000;-1
+0;10166;Somber Smithing Stone [7];3;1000;-1
+0;10167;Colossal Somber Stone;3;1000;-1
+0;10168;Ancient Somber Stone;3;1000;-1
+0;10170;Somber Shadow Stone;3;1000;-1
+0;10171;Large Somber Shadow Stone;3;1000;-1
+0;10172;Great Somber Shadow Stone;3;1000;-1
+0;10173;Colossal Somber Shadow Stone;3;1000;-1
+0;10174;Primordial Somber Shadow Stone;3;1000;-1
+0;10200;Somber Smithing Stone [9];3;1000;-1
+0;10900;Sprouting Grave Glovewort;3;1000;-1
+0;10901;Grave Glovewort [2];3;1000;-1
+0;10902;Grave Glovewort [3];3;1000;-1
+0;10903;Seedling Grave Glovewort;3;1000;-1
+0;10904;Grave Glovewort [5];3;1000;-1
+0;10905;Grave Glovewort [6];3;1000;-1
+0;10906;Budding Grave Glovewort;3;1000;-1
+0;10907;Grave Glovewort [8];3;1000;-1
+0;10908;Blooming Grave Glovewort;3;1000;-1
+0;10909;Elder Grave Glovewort;3;1000;-1
+0;10910;Sprouting Ghost Glovewort;3;1000;-1
+0;10911;Ghost Glovewort [2];3;1000;-1
+0;10912;Ghost Glovewort [3];3;1000;-1
+0;10913;Seedling Ghost Glovewort;3;1000;-1
+0;10914;Ghost Glovewort [5];3;1000;-1
+0;10915;Ghost Glovewort [6];3;1000;-1
+0;10916;Budding Ghost Glovewort;3;1000;-1
+0;10917;Ghost Glovewort [8];3;1000;-1
+0;10918;Blooming Ghost Glovewort;3;1000;-1
+0;10919;Elder Ghost Glovewort;3;1000;-1

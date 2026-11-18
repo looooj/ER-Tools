@@ -19,7 +19,7 @@ namespace ERParamUtils
         {
             List<string> list = new();
 
-            var dirs = Directory.GetDirectories(GlobalConfig.GetTemplateDir(), "*.*");
+/*            var dirs = Directory.GetDirectories(GlobalConfig.GetTemplateDir(), "*.*");
 
             foreach (string d in dirs)
             {
@@ -29,7 +29,7 @@ namespace ERParamUtils
                 {
                     list.Add(name);
                 }
-            }
+            }*/
             templateList = list;
 
         }

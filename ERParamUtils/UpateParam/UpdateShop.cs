@@ -70,7 +70,7 @@ namespace ERParamUtils.UpdateParam
         //
         //    insertBaseId = v;
         //}
-        public static void Proc(ShopUpdateItem shopUpdateItem, SoulsParam.Param param, ParamProject paramProject, UpdateCommand updateCommand)
+        public static void Proc(ShopUpdateItem shopUpdateItem, SoulsParam.Param param, ParamProject paramProject, UpdateCommand updateCommand, bool forceMinPrice)
         {
             if (shopUpdateItem.RowId == 0) {
                 shopUpdateItem.RowId = ESDShopConfig.GetNextId();
@@ -84,9 +84,12 @@ namespace ERParamUtils.UpdateParam
             var shopEquipType = (ShopEquipType)shopUpdateItem.EquipType;
             if (row == null) {
 
-                UpdateShopLineupParam.AddRow(paramProject, updateCommand, shopUpdateItem.RowId,
+                row =UpdateShopLineupParam.AddRow(paramProject, updateCommand, shopUpdateItem.RowId,
                     shopEquipType, shopUpdateItem.NewEquipId, shopUpdateItem.Price, shopUpdateItem.SellQuantity,
                     shopUpdateItem.NewName);
+
+                if ( row != null )
+                    UpdateShopLineupParam.ChangeToMinPrice(paramProject, row, shopUpdateItem.NewEquipId, shopEquipType, updateCommand, forceMinPrice);
                 return;
             }
             item.Key = "equipType";
@@ -102,7 +105,7 @@ namespace ERParamUtils.UpdateParam
             if (shopUpdateItem.Price > 0)
             {
 
-                UpdateShopLineupParam.ChangeToMinPrice(paramProject, row, shopUpdateItem.NewEquipId, shopEquipType, updateCommand);                
+                UpdateShopLineupParam.ChangeToMinPrice(paramProject, row, shopUpdateItem.NewEquipId, shopEquipType, updateCommand,false);                
             }
 
             if (shopUpdateItem.SellQuantity != 0)
@@ -153,7 +156,7 @@ namespace ERParamUtils.UpdateParam
                 if (item.Parse(line))
                 {
 
-                    ShopUpdateItem.Proc(item, param, paramProject, updateCommand);
+                    ShopUpdateItem.Proc(item, param, paramProject, updateCommand,false);
                 }
             }
 
@@ -198,7 +201,7 @@ namespace ERParamUtils.UpdateParam
                 var item = new ShopUpdateItem();
                 if (item.Parse(line))
                 {
-                    ShopUpdateItem.Proc(item, param, paramProject, updateCommand);
+                    ShopUpdateItem.Proc(item, param, paramProject, updateCommand,true);
                 }
             }
 
@@ -220,6 +223,8 @@ namespace ERParamUtils.UpdateParam
             UpdateLogger.InfoParam("ProcESDShop");
 
             ExecESDShopFile(paramProject, updateCommand, param, UpdateParamOptionNames.ShopTable);
+            ExecESDShopFile(paramProject, updateCommand, param, UpdateParamOptionNames.ShopGrace);
+            ExecESDShopFile(paramProject, updateCommand, param, UpdateParamOptionNames.ShopKale);
 
             /*
             var superIdRange = ModConfig.GetSuperMerchantId();
@@ -246,18 +251,18 @@ namespace ERParamUtils.UpdateParam
 
         }
 
-        private static void AddSuperShopItem(ParamProject paramProject, UpdateCommand updateCommand, SoulsParam.Param param, string name,int eqId, ShopEquipType eqType,int price,int sellQuantity) {
+        //private static void AddSuperShopItem(ParamProject paramProject, UpdateCommand updateCommand, SoulsParam.Param param, string name,int eqId, ShopEquipType eqType,int price,int sellQuantity) {
 
-            ShopUpdateItem item = new ShopUpdateItem();
-            item.RowId = 0;
-            item.EquipType = (int)eqType;
-            item.NewEquipId = eqId;
-            item.NewName = name;
-            item.Price = price;
-            item.SellQuantity = sellQuantity;
+        //    ShopUpdateItem item = new ShopUpdateItem();
+        //    item.RowId = 0;
+        //    item.EquipType = (int)eqType;
+        //    item.NewEquipId = eqId;
+        //    item.NewName = name;
+        //    item.Price = price;
+        //    item.SellQuantity = sellQuantity;
 
-            ShopUpdateItem.Proc(item, param, paramProject, updateCommand);
-        }
+        //    ShopUpdateItem.Proc(item, param, paramProject, updateCommand);
+        //}
 
         //100000[Gatekeeper Gostoc] Festering Bloody Finger
         //
@@ -346,18 +351,18 @@ namespace ERParamUtils.UpdateParam
         }
 
 
-        public static void AddRow(ParamProject paramProject, UpdateCommand updateCommand, int rowId,ShopEquipType equipType, int equipId, int value, int count,string name) {
+        public static SoulsParam.Param.Row? AddRow(ParamProject paramProject, UpdateCommand updateCommand, int rowId,ShopEquipType equipType, int equipId, int value, int count,string name) {
 
             var param = paramProject.FindParam(ParamNames.ShopLineupParam);
             if (param == null)
-                return;
+                return null;
             //var shopEqType = EquipTypeUtils.ConvertToShopEquipType(equipType);
             var newName = name;
             if (newName == "")
                 newName = equipId + "";
             var row = param.InsertRow(rowId, newName);
             if (row == null) {
-                return;
+                return null;
             }
 
             /*
@@ -400,6 +405,7 @@ namespace ERParamUtils.UpdateParam
             updateCommand.AddItem(row, "sellQuantity", count);
             updateCommand.AddItem(row, "eventFlag_forStock", eventFlag);
 
+            return row;
         }
 
         public static void Exec(ParamProject paramProject, UpdateCommand updateCommand)
@@ -469,7 +475,7 @@ namespace ERParamUtils.UpdateParam
                     if ( updateCommand.HaveOption(UpdateParamOptionNames.ShopSellQuantityUnlimited))
                         ChangeSellAmount(row, "sellQuantity", -1, updateCommand);
                 }
-                ChangeToMinPrice(paramProject, row, equipId, shopEquipType, updateCommand);
+                ChangeToMinPrice(paramProject, row, equipId, shopEquipType, updateCommand,false);
 
             }
 
@@ -489,7 +495,7 @@ namespace ERParamUtils.UpdateParam
 
 
         public static void ChangeToMinPrice(ParamProject paramProject,
-            SoulsParam.Param.Row row, int equipId, ShopEquipType shopEquipType, UpdateCommand updateCommand)
+            SoulsParam.Param.Row row, int equipId, ShopEquipType shopEquipType, UpdateCommand updateCommand, bool force)
         {
 
             EquipType equipType = EquipTypeUtils.ConvertFromShopEquipType(shopEquipType);
@@ -497,11 +503,11 @@ namespace ERParamUtils.UpdateParam
             string? paramName = EquipTypeUtils.ShopTypeParamName(shopEquipType);
             if (paramName == null)
                 return;
-
+            
             int minPrice = ParamRowUtils.GetCellInt(paramProject, paramName, equipId, "sellValue", -1);
             if (minPrice <= 0)
             {
-                minPrice = 100;
+                minPrice = 2000;
             }
 
             int price = ParamRowUtils.GetCellInt(row, "value", 0);
@@ -515,7 +521,7 @@ namespace ERParamUtils.UpdateParam
             if (SpecEquipConfig.IsArrow(equipId, equipType))
                 minPrice = 20;
 
-            if (price > minPrice || price < 1)
+            if (price > minPrice || price < 1 || force)
             {
                 updateCommand.AddItem(row, "value", minPrice);
             }

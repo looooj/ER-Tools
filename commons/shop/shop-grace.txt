@@ -1,0 +1,10 @@
+0;50000000;Arrow;3;100;-1
+0;50010000;Fire Arrow;3;100;-1
+0;50020000;Serpent Arrow;3;100;-1
+0;50090000;Golden Arrow;3;100;-1
+0;50100000;Dwelling Arrow;3;100;-1
+0;51000000;Great Arrow;3;100;-1
+0;51010000;Golem's Great Arrow;3;100;-1
+0;51020000;Golden Great Arrow;3;100;-1
+0;51030000;Golem's Magic Arrow;3;100;-1
+0;51040000;Radahn's Spear;3;100;-1

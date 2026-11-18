@@ -12,7 +12,7 @@ namespace ReplaceTool
             {
                 //src = @"E:\games\er\ESDStudio_v1.0.2\net6.0-windows\esdtool\t602006000.py";
                 src = @"E:\games\er\ESDStudio_v1.0.2\net6.0-windows\esdtool\t800001100.py";
-                cfg = @"D:\myprojects\game-tools\ER-Tools\templates\commons\rp04.txt";
+                cfg = @"D:\myprojects\game-tools\ER-Tools\commons\esd\rp04.txt";
             }
             else
             {

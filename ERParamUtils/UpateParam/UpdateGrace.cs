@@ -78,10 +78,10 @@ namespace ERParamUtils.UpdateParam
                 return;
 
 
-            var skipIdFile = GlobalConfig.TemplateDir + "\\commons\\" + ModConfig.GetUnlockGraceSkipName();
+            var skipIdFile = GlobalConfig.GetCommonsDir() + "\\" + ModConfig.GetUnlockGraceSkipName();
             skipDict = LoadGraceFile(skipIdFile);
 
-            var allIdFile = GlobalConfig.TemplateDir + "\\commons\\" + ModConfig.GetUnlockGraceName();
+            var allIdFile = GlobalConfig.GetCommonsDir() + "\\" + ModConfig.GetUnlockGraceName();
 
             allDict = LoadGraceFile(allIdFile);
 
@@ -160,7 +160,7 @@ namespace ERParamUtils.UpdateParam
                 return fn;
             } 
 
-            fn = GlobalConfig.TemplateDir + "\\commons\\" + ModConfig.GetUnlockGraceName();
+            fn = GlobalConfig.GetCommonsDir() + "\\" + ModConfig.GetUnlockGraceName();
             if (File.Exists(fn))
             {
                 return fn;

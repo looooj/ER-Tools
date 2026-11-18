@@ -32,7 +32,7 @@ namespace ERParamUtils.UpdateParam
             Directory.CreateDirectory(dir);          
         }
 
-        static bool checkVar(string line, Dictionary<string, string> varMap) {
+        public static bool ParseVar(string line, Dictionary<string, string> varMap) {
 
             if (line.StartsWith("@@var@@"))
             {
@@ -68,36 +68,109 @@ namespace ERParamUtils.UpdateParam
             if (File.Exists(includePath))
                 return includePath;
 
-            includePath = Path.Combine(GlobalConfig.GetTemplateDir() + "\\commons", includeName);
+            includePath = Path.Combine(GlobalConfig.GetCommonsDir(), includeName);
             if (File.Exists(includePath))
                 return includePath;
 
-            includePath = Path.Combine(GlobalConfig.GetTemplateDir() + "\\commons", currentName + "-" + includeName);
+            includePath = Path.Combine(GlobalConfig.GetCommonsDir(), currentName + "-" + includeName);
+            if (File.Exists(includePath))
+                return includePath;
+
+            return "";
+        }
+        static string GetIncludePath2(string baseDir, string filePath, string includeName)
+        {
+            if (filePath == null || string.IsNullOrEmpty(filePath))
+                return "";
+
+            if (!includeName.EndsWith(".txt"))
+                includeName = includeName + ".txt";
+
+            string currentName = Path.GetFileNameWithoutExtension(filePath);
+            string includePath = "";
+            
+            string? currentDir = Path.GetDirectoryName(filePath);
+            if (currentDir != null)
+            {
+                //search current dir
+                includePath = Path.Combine(currentDir, includeName);
+                if (File.Exists(includePath))
+                    return includePath;
+
+                includePath = Path.Combine(currentDir, currentName + "-" + includeName);
+                if (File.Exists(includePath))
+                    return includePath;
+            }
+            //search base dir
+            includePath = Path.Combine(baseDir, includeName);
+            if (File.Exists(includePath))
+                return includePath;
+
+            includePath = Path.Combine(baseDir, currentName + "-" + includeName);
+            if (File.Exists(includePath))
+                return includePath;
+
+            //search commons dir
+            includePath = Path.Combine(GlobalConfig.GetCommonsDir(), includeName);
+            if (File.Exists(includePath))
+                return includePath;
+
+            includePath = Path.Combine(GlobalConfig.GetCommonsDir(), currentName + "-" + includeName);
             if (File.Exists(includePath))
                 return includePath;
 
             return "";
         }
 
-        public static string FindFile(ParamProject project, string updateName) {
-            string baseDir = project.GetUpdateDir();
-            string fullPath = Path.Combine(baseDir, updateName);
+        public static string FindFile2(string? currentDir, string filename)
+        {
+            string? fullPath="";
+            if (!string.IsNullOrEmpty(currentDir))
+            {
+                fullPath = Path.Combine(currentDir, filename);
 
+                if (File.Exists(fullPath))
+                    return fullPath;
+            }
+
+            string[] subPath = { "","\\param", "\\shop" };
+            foreach (var tmp in subPath)
+            {
+                fullPath = Path.Combine(GlobalConfig.GetCommonsDir() + tmp, filename);
+                if (File.Exists(fullPath))
+                    return fullPath;
+            }
+            return "";
+        }
+        public static string FindFile(ParamProject? project, string filename) {
+            string baseDir = "";
+            string fullPath = "";
+            if (project != null)
+            {
+                project.GetUpdateDir();
+                fullPath = Path.Combine(baseDir, filename);
+
+                if (File.Exists(fullPath))
+                    return fullPath;
+            }
+            baseDir = GlobalConfig.GetCommonsDir();
+            fullPath = Path.Combine(baseDir, filename);
             if (File.Exists(fullPath))
                 return fullPath;
-
-            baseDir = GlobalConfig.GetTemplateDir() + "\\commons";
-            fullPath = Path.Combine(baseDir, updateName);
-            if (File.Exists(fullPath))
-                return fullPath;
-
-            return project.GetUpdateFile(updateName);  
+            string[] subPath = { "\\param", "\\shop" };
+            foreach (var tmp in subPath) {
+                fullPath = Path.Combine(baseDir+tmp, filename);
+                if (File.Exists(fullPath))
+                    return fullPath;
+            }
+            return "";
         }
 
-        public static List<string> Load(ParamProject project, string updateName) {
+        public static List<string> Load(ParamProject? project, string updateName, bool includeVarLine=false) {
 
             List<string> result = new();
-            Dictionary<string, string> varMap = new();
+            Dictionary<string, string>? varMap;// vMap;
+            varMap = new();
             string path = FindFile(project, updateName);
 
             if (!File.Exists(path)) {
@@ -125,10 +198,10 @@ namespace ERParamUtils.UpdateParam
                 if (line.StartsWith("@@include="))
                 {
                     string[] ss = line.Split("=");
-                    string currentName = Path.GetFileNameWithoutExtension(path);
+                    //string currentName = Path.GetFileNameWithoutExtension(path);
                     string includeName = ss[1];
 
-                    string includePath = GetIncludePath(baseDir, currentName, includeName);
+                    string includePath = GetIncludePath2(baseDir, path, includeName);
 
                     if (includePath.Length < 1 || !File.Exists(includePath))
                     {
@@ -146,16 +219,20 @@ namespace ERParamUtils.UpdateParam
                     var includeLines = File.ReadLines(includePath);
                     foreach (string includeLine in includeLines)
                     {
-                        if (checkVar(includeLine, varMap)) {
-                            continue;
+                        if (ParseVar(includeLine, varMap)) {
+                            if ( !includeVarLine)
+                                 continue;
                         }
                         result.Add(includeLine);
                     }
                     continue;
                 }
 
-                if (checkVar(line, varMap))
-                    continue;
+                if (ParseVar(line, varMap))
+                {
+                    if (!includeVarLine)
+                        continue;
+                }
 
                 result.Add(line);
             }
@@ -171,24 +248,26 @@ namespace ERParamUtils.UpdateParam
 
         public static SortedDictionary<int,string> LoadIdFileToDict(ParamProject paramProject, string name) {
 
-            var list = LoadIdFile(paramProject, name);
+            var list = LoadIdFile(paramProject, name,false);
             var dict = new SortedDictionary<int,string>();
             foreach (var item in list) {
                 dict.Add(int.Parse(item.Id), item.Line);
             }
             return dict;
         }
-        public static List<IdLine> LoadIdFile(ParamProject? paramProject,string name) { 
+        public static List<IdLine> LoadIdFile(ParamProject? paramProject,string name, bool includeVarLine) { 
 
             List<IdLine> idLines = new List<IdLine>();
             List<string> lines;
+            /*
             if (paramProject == null) {
                 lines = new();
-                if ( File.Exists(name))
-                    lines.AddRange(File.ReadAllLines(name));
+                string fullName = FindFile2(null, name);
+                if (File.Exists(fullName))
+                    lines.AddRange(File.ReadAllLines(fullName));
             }
-            else 
-                lines = UpdateFile.Load(paramProject, name);
+            else */ 
+            lines = UpdateFile.Load(paramProject, name, includeVarLine);
             foreach (var line in lines)
             {
                 var line2 = line.Trim();
