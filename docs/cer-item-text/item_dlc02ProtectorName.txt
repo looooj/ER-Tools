@@ -703,3 +703,21 @@
 3020100;Carian Golem Armor;卡利亚魔像铠甲
 3020200;Carian Golem Gauntlets;卡利亚魔像臂甲
 3020300;Carian Golem Greaves;卡利亚魔像腿甲
+5340000;Broken Gold Mask;破碎金面具
+5340100;Gold Tattoo (Chest);黄金文身（身体）
+5340200;Gold Tattoo (Arm);黄金文身（手部）
+5340300;Gold Tattoo (Leg);黄金文身（腿部）
+5350000;Silver Grooved Helm;银槽头盔
+5350100;Silver Grooved Armor;银槽铠甲
+5350200;Silver Grooved Gauntlets;银槽臂甲
+5350300;Silver Grooved Greaves;银槽腿甲
+5351100;Silver Grooved Armor (Altered);银槽铠甲（轻装）
+5360000;Leontiel's Hat;里翁提耶帽子
+5360100;Leontiel's Armor;里翁提耶铠甲
+5360200;Leontiel's Leather Gloves;里翁提耶皮手套
+5360300;Leontiel's Boots;里翁提耶靴子
+5361000;Leontiel's Hat (Altered);里翁提耶帽子（轻装）
+5370000;Steel Helm;钢铁头盔
+5370100;Steel Armor;钢铁铠甲
+5370200;Steel Gauntlets;钢铁臂甲
+5370300;Steel Greaves;钢铁腿甲

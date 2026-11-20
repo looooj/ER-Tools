@@ -1,6 +1,6 @@
 # equipType WEAPON=0, ARMOR=1, RING=2, GOOD=3, ASH=4
 
-@@var@@type=3
+@@var@@type=0
 @@var@@amount=-1
 @@var@@price=100
 
@@ -10,11 +10,27 @@
 50090000;Golden Arrow;黄金箭
 50100000;Dwelling Arrow;宿灵箭
 
-
 51000000;Great Arrow;大箭
 51010000;Golem's Great Arrow;魔像大箭
 51020000;Golden Great Arrow;黄金大箭
 51030000;Golem's Magic Arrow;魔像魔力箭
 51040000;Radahn's Spear;拉塔恩的矛
 
+@@var@@type=3
+@@var@@amount=-1
+@@var@@price=100
+
+190;Rune Arc;卢恩弯弧
+820;Boiled Crab;煮熟螃蟹
+1210;Exalted Flesh;勇者肉块
+1235;Raw Meat Dumpling;生肉丸
+1290;Starlight Shards;星光碎片
+
+900;Neutralizing Boluses;中毒苔药
+910;Stanching Boluses;出血苔药
+920;Thawfrost Boluses;冻伤苔药
+930;Stimulating Boluses;催眠苔药
+940;Preserving Boluses;腐败苔药
+950;Rejuvenating Boluses;死亡苔药
+960;Clarifying Boluses;发狂苔药
 

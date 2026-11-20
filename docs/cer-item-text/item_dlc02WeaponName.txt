@@ -616,6 +616,7 @@
 3250000;Regal Splitblade;王室分刃
 3255000;Regal Splitblade;王室分刃
 3300000;Prime Maliketh's Black Blade;玛利喀斯的黑剑·原初
+3560000;Leontiel's Greatsword;里翁提耶的大剑
 4000000;Greatsword;巨剑
 4000100;Heavy Greatsword;厚重巨剑
 4000200;Keen Greatsword;锋利巨剑
@@ -714,6 +715,7 @@
 4120000;Gravelstone Arcblades;碎石弧形双刃
 4130000;Osian's Greatsword;奥西安大剑
 4140000;Fingerprint Hexmark;指痕咒印
+4150000;Keystone Sword;钥石剑
 5000000;Estoc;刺剑
 5000100;Heavy Estoc;厚重刺剑
 5000200;Keen Estoc;锋利刺剑
@@ -841,6 +843,7 @@
 5070000;Thorn of the Guilty;罪恶荆棘
 5080000;Foil of Caddock;卡多克的花剑
 5090000;Quicksilver Rapier;水银细剑
+5100000;Huntress's Estoc;女猎手的刺剑
 6000000;Bloody Helice;鲜血旋流
 6010000;Godskin Stitcher;神皮缝针
 6010100;Heavy Godskin Stitcher;厚重神皮缝针
@@ -1203,6 +1206,28 @@
 8111000;Bestial Holy Inferno Greatsword;野兽神火大弯刀
 8111100;Night Holy Inferno Greatsword;黑夜神火大弯刀
 8111200;Lava Holy Inferno Greatsword;熔岩神火大弯刀
+8530000;Hefty Scimitar;重弯刀
+8530100;Heavy Hefty Scimitar;厚重重弯刀
+8530200;Keen Hefty Scimitar;锋利重弯刀
+8530300;Quality Hefty Scimitar;优质重弯刀
+8530400;Glint Hefty Scimitar;辉石重弯刀
+8530500;Dragonkin Hefty Scimitar;龙人重弯刀
+8530600;Gravity Hefty Scimitar;重力重弯刀
+8530700;Flame Hefty Scimitar;火焰重弯刀
+8530800;Golden Hefty Scimitar;黄金重弯刀
+8530900;Draconic Hefty Scimitar;龙装重弯刀
+8531000;Bestial Hefty Scimitar;野兽重弯刀
+8531100;Night Hefty Scimitar;黑夜重弯刀
+8531200;Lava Hefty Scimitar;熔岩重弯刀
+8531300;Frenzy Hefty Scimitar;癫狂重弯刀
+8531400;Death Hefty Scimitar;死亡重弯刀
+8531500;Godslayer Hefty Scimitar;狩猎神祇重弯刀
+8531600;Frost Hefty Scimitar;冰霜重弯刀
+8531700;Aberrant Hefty Scimitar;异端重弯刀
+8531800;Bloodflame Hefty Scimitar;血焰重弯刀
+8531900;Rotten Hefty Scimitar;腐败重弯刀
+8532000;Storm Hefty Scimitar;风暴重弯刀
+8532100;Mystic Hefty Scimitar;密契重弯刀
 9000000;Uchigatana;打刀
 9000100;Heavy Uchigatana;厚重打刀
 9000200;Keen Uchigatana;锋利打刀
@@ -1857,6 +1882,7 @@
 13042100;Mystic Chainlink Flail;密契铁块连枷
 13050000;Mohgwyn Censer;蒙格温香炉
 13060000;Seething Flail;沸腾连枷
+13510000;Golden Order Flail;黄金律法连枷
 14000000;Battle Axe;战斧
 14000100;Heavy Battle Axe;厚重战斧
 14000200;Keen Battle Axe;锋利战斧
@@ -3721,6 +3747,28 @@
 31341100;Night Black Leather Shield;黑夜黑皮盾
 31341200;Lava Black Leather Shield;熔岩黑皮盾
 31350000;Aegis of Hadea;哈迪亚之盾
+31540000;Silver Grooved Shield;银槽盾
+31540100;Heavy Silver Grooved Shield;厚重银槽盾
+31540200;Keen Silver Grooved Shield;锋利银槽盾
+31540300;Quality Silver Grooved Shield;优质银槽盾
+31540400;Glint Silver Grooved Shield;辉石银槽盾
+31540500;Dragonkin Silver Grooved Shield;龙人银槽盾
+31540600;Gravity Silver Grooved Shield;重力银槽盾
+31540700;Flame Silver Grooved Shield;火焰银槽盾
+31540800;Golden Silver Grooved Shield;黄金银槽盾
+31540900;Draconic Silver Grooved Shield;龙装银槽盾
+31541000;Bestial Silver Grooved Shield;野兽银槽盾
+31541100;Night Silver Grooved Shield;黑夜银槽盾
+31541200;Lava Silver Grooved Shield;熔岩银槽盾
+31541300;Frenzy Silver Grooved Shield;癫狂银槽盾
+31541400;Death Silver Grooved Shield;死亡银槽盾
+31541500;Godslayer Silver Grooved Shield;狩猎神祇银槽盾
+31541600;Frost Silver Grooved Shield;冰霜银槽盾
+31541700;Aberrant Silver Grooved Shield;异端银槽盾
+31541800;Bloodflame Silver Grooved Shield;血焰银槽盾
+31541900;Rotten Silver Grooved Shield;腐败银槽盾
+31542000;Storm Silver Grooved Shield;风暴银槽盾
+31542100;Mystic Silver Grooved Shield;密契银槽盾
 32000000;Dragon Towershield;龙塔盾
 32000100;Heavy Dragon Towershield;厚重龙塔盾
 32000200;Keen Dragon Towershield;锋利龙塔盾
@@ -4140,10 +4188,98 @@
 53010000;Lightning Greatbolt;雷电大弩箭
 53020000;Explosive Greatbolt;爆炸大弩箭
 53030000;Bone Ballista Bolt;兽骨弩炮箭
-64530000;Fingerslayer Blade;猎杀指头刀
-67530000;Sword of the Cosmos;星空之剑
+62520000;Ritual Thrusting Shield;献斗突刺盾
+62520100;Heavy Ritual Thrusting Shield;厚重献斗突刺盾
+62520200;Keen Ritual Thrusting Shield;锋利献斗突刺盾
+62520300;Quality Ritual Thrusting Shield;优质献斗突刺盾
+62520400;Glint Ritual Thrusting Shield;辉石献斗突刺盾
+62520500;Dragonkin Ritual Thrusting Shield;龙人献斗突刺盾
+62520600;Gravity Ritual Thrusting Shield;重力献斗突刺盾
+62520700;Flame Ritual Thrusting Shield;火焰献斗突刺盾
+62520800;Golden Ritual Thrusting Shield;黄金献斗突刺盾
+62520900;Draconic Ritual Thrusting Shield;龙装献斗突刺盾
+62521000;Bestial Ritual Thrusting Shield;野兽献斗突刺盾
+62521100;Night Ritual Thrusting Shield;黑夜献斗突刺盾
+62521200;Lava Ritual Thrusting Shield;熔岩献斗突刺盾
+62521300;Frenzy Ritual Thrusting Shield;癫狂献斗突刺盾
+62521400;Death Ritual Thrusting Shield;死亡献斗突刺盾
+62521500;Godslayer Ritual Thrusting Shield;狩猎神祇献斗突刺盾
+62521600;Frost Ritual Thrusting Shield;冰霜献斗突刺盾
+62521700;Aberrant Ritual Thrusting Shield;异端献斗突刺盾
+62521800;Bloodflame Ritual Thrusting Shield;血焰献斗突刺盾
+62521900;Rotten Ritual Thrusting Shield;腐败献斗突刺盾
+62522000;Storm Ritual Thrusting Shield;风暴献斗突刺盾
+62522100;Mystic Ritual Thrusting Shield;密契献斗突刺盾
+64530000;Reverse-Bladed Sword;逆刃曲剑
+64530100;Heavy Reverse-Bladed Sword;厚重逆刃曲剑
+64530200;Keen Reverse-Bladed Sword;锋利逆刃曲剑
+64530300;Quality Reverse-Bladed Sword;优质逆刃曲剑
+64530400;Glint Reverse-Bladed Sword;辉石逆刃曲剑
+64530500;Dragonkin Reverse-Bladed Sword;龙人逆刃曲剑
+64530600;Gravity Reverse-Bladed Sword;重力逆刃曲剑
+64530700;Flame Reverse-Bladed Sword;火焰逆刃曲剑
+64530800;Golden Reverse-Bladed Sword;黄金逆刃曲剑
+64530900;Draconic Reverse-Bladed Sword;龙装逆刃曲剑
+64531000;Bestial Reverse-Bladed Sword;野兽逆刃曲剑
+64531100;Night Reverse-Bladed Sword;黑夜逆刃曲剑
+64531200;Lava Reverse-Bladed Sword;熔岩逆刃曲剑
+64531300;Frenzy Reverse-Bladed Sword;癫狂逆刃曲剑
+64531400;Death Reverse-Bladed Sword;死亡逆刃曲剑
+64531500;Godslayer Reverse-Bladed Sword;狩猎神祇逆刃曲剑
+64531600;Frost Reverse-Bladed Sword;冰霜逆刃曲剑
+64531700;Aberrant Reverse-Bladed Sword;异端逆刃曲剑
+64531800;Bloodflame Reverse-Bladed Sword;血焰逆刃曲剑
+64531900;Rotten Reverse-Bladed Sword;腐败逆刃曲剑
+64532000;Storm Reverse-Bladed Sword;风暴逆刃曲剑
+64532100;Mystic Reverse-Bladed Sword;密契逆刃曲剑
+64570000;Fingerslayer Blade;猎杀指头刀
+66530000;Reed Great Katana;芦苇大刀
+66530100;Heavy Reed Great Katana;厚重芦苇大刀
+66530200;Keen Reed Great Katana;锋利芦苇大刀
+66530300;Quality Reed Great Katana;优质芦苇大刀
+66530400;Glint Reed Great Katana;辉石芦苇大刀
+66530500;Dragonkin Reed Great Katana;龙人芦苇大刀
+66530600;Gravity Reed Great Katana;重力芦苇大刀
+66530700;Flame Reed Great Katana;火焰芦苇大刀
+66530800;Golden Reed Great Katana;黄金芦苇大刀
+66530900;Draconic Reed Great Katana;龙装芦苇大刀
+66531000;Bestial Reed Great Katana;野兽芦苇大刀
+66531100;Night Reed Great Katana;黑夜芦苇大刀
+66531200;Lava Reed Great Katana;熔岩芦苇大刀
+66531300;Frenzy Reed Great Katana;癫狂芦苇大刀
+66531400;Death Reed Great Katana;死亡芦苇大刀
+66531500;Godslayer Reed Great Katana;狩猎神祇芦苇大刀
+66531600;Frost Reed Great Katana;冰霜芦苇大刀
+66531700;Aberrant Reed Great Katana;异端芦苇大刀
+66531800;Bloodflame Reed Great Katana;血焰芦苇大刀
+66531900;Rotten Reed Great Katana;腐败芦苇大刀
+66532000;Storm Reed Great Katana;风暴芦苇大刀
+66532100;Mystic Reed Great Katana;密契芦苇大刀
+67530000;Idus Sword;伊德斯剑
+67530100;Heavy Idus Sword;厚重伊德斯剑
+67530200;Keen Idus Sword;锋利伊德斯剑
+67530300;Quality Idus Sword;优质伊德斯剑
+67530400;Glint Idus Sword;辉石伊德斯剑
+67530500;Dragonkin Idus Sword;龙人伊德斯剑
+67530600;Gravity Idus Sword;重力伊德斯剑
+67530700;Flame Idus Sword;火焰伊德斯剑
+67530800;Golden Idus Sword;黄金伊德斯剑
+67530900;Draconic Idus Sword;龙装伊德斯剑
+67531000;Bestial Idus Sword;野兽伊德斯剑
+67531100;Night Idus Sword;黑夜伊德斯剑
+67531200;Lava Idus Sword;熔岩伊德斯剑
+67531300;Frenzy Idus Sword;癫狂伊德斯剑
+67531400;Death Idus Sword;死亡伊德斯剑
+67531500;Godslayer Idus Sword;狩猎神祇伊德斯剑
+67531600;Frost Idus Sword;冰霜伊德斯剑
+67531700;Aberrant Idus Sword;异端伊德斯剑
+67531800;Bloodflame Idus Sword;血焰伊德斯剑
+67531900;Rotten Idus Sword;腐败伊德斯剑
+67532000;Storm Idus Sword;风暴伊德斯剑
+67532100;Mystic Idus Sword;密契伊德斯剑
 67540000;Konrad's Bloodletter;康拉德的放血剑
 67550000;Nia's Passot;尼亚的破甲剑
+67580000;Sword of the Cosmos;星空之剑
 67700000;Primeval Splinter;起源碎锋
 68540000;Goras' Claw;哥拉斯之爪
 68550000;Transcendent Talons;达格拉夫之爪

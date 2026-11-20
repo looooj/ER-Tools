@@ -9,7 +9,21 @@
 204010;Latenna the Albinauric +10;白金之子勒缇娜＋１０
 253010;Radahn Soldier Ashes +10;拉塔恩士兵的骨灰＋１０
 207010;Mimic Tear Ashes +10;仿身泪滴的骨灰＋１０
+2070;Lantern;携带照明灯
 
 @@var@@amount=-1
 2130;Celestial Dew;星星泪滴
 8185;Larval Tear;泪滴幼体
+8186;Imbued Sword Key;魔石剑钥匙
+8000;Stonesword Key;石剑钥匙
+
+
+@@var@@amount=1
+@@var@@type=0
+@@var@@price=2000
+
+9020000;Hand of Malenia;玛莲妮亚的义手刀
+3100000;Sacred Relic Sword;神躯化剑
+12160000;Envoy's Long Horn;众使者的长笛子
+42010000;Golem Greatbow;魔像大弓
+32130000;Fingerprint Stone Shield;指纹石盾

@@ -21,16 +21,16 @@
 121880;Erdtree Nursery;黄金树苗圃
 121890;Rauh Reliquary;劳弗圣龛
 121900;Old Albus;艾尔帕斯
-121910;Forgotten Ritekeeper of Rauh;被遗忘的劳弗仪卫
-121911;Refined Ritekeeper of Rauh;精干的劳弗仪卫
-121912;Staunch Ritekeeper of Rauh;坚定的劳弗仪卫
-121913;Deft Ritekeeper of Rauh;机敏的劳弗仪卫
-121914;Iridescent Ritekeeper of Rauh;虹彩的劳弗仪卫
-121915;Gnarled Ritekeeper of Rauh;虬曲的劳弗仪卫
-121916;Scorched Ritekeeper of Rauh;炙焦的劳弗仪卫
-121917;Primeval Ritekeeper of Rauh;始源的劳弗仪卫
-121918;Fulminated Ritekeeper of Rauh;轰雷的劳弗仪卫
-121919;Hallowed Ritekeeper of Rauh;神圣的劳弗仪卫
+121910;Forgotten Ritekeeper of Rauh;被遗忘的劳弗仪式守卫
+121911;Refined Ritekeeper of Rauh;精干的劳弗仪式守卫
+121912;Staunch Ritekeeper of Rauh;坚定的劳弗仪式守卫
+121913;Deft Ritekeeper of Rauh;机敏的劳弗仪式守卫
+121914;Iridescent Ritekeeper of Rauh;虹彩的劳弗仪式守卫
+121915;Gnarled Ritekeeper of Rauh;虬曲的劳弗仪式守卫
+121916;Scorched Ritekeeper of Rauh;炙焦的劳弗仪式守卫
+121917;Primeval Ritekeeper of Rauh;始源的劳弗仪式守卫
+121918;Fulminated Ritekeeper of Rauh;轰雷的劳弗仪式守卫
+121919;Hallowed Ritekeeper of Rauh;神圣的劳弗仪式守卫
 122000;Alexander, Warrior Jar;“战士壶”亚历山大
 122300;Demi-Human Boc;亚人柏克
 122310;Boc the Seamster;裁缝师柏克
@@ -164,6 +164,9 @@
 139000;Polyanna, Youngest Sister;么妹波莉安娜
 139001;Polyanna, Adopted Daughter;养女波莉安娜
 139100;Magnus the Beast Claw;“兽爪”玛格纳斯
+147000;Knight Leontiel;骑士里翁提耶
+147001;Knight Leontiel;骑士里翁提耶
+147100;The Noble Broken Mask;碎面具
 160000;Twin Maiden Husks;孪生老妪
 160100;Church of Dragon Communion;龙飨教堂
 160110;Erdtree Transporter;黄金树传送门

@@ -221,6 +221,7 @@ namespace ERParamUtils.UpdateParam
                 return;
 
             UpdateLogger.InfoParam("ProcESDShop");
+            UpdateShopFile.GenShopFiles();
 
             ExecESDShopFile(paramProject, updateCommand, param, UpdateParamOptionNames.ShopTable);
             ExecESDShopFile(paramProject, updateCommand, param, UpdateParamOptionNames.ShopGrace);
@@ -251,18 +252,7 @@ namespace ERParamUtils.UpdateParam
 
         }
 
-        //private static void AddSuperShopItem(ParamProject paramProject, UpdateCommand updateCommand, SoulsParam.Param param, string name,int eqId, ShopEquipType eqType,int price,int sellQuantity) {
 
-        //    ShopUpdateItem item = new ShopUpdateItem();
-        //    item.RowId = 0;
-        //    item.EquipType = (int)eqType;
-        //    item.NewEquipId = eqId;
-        //    item.NewName = name;
-        //    item.Price = price;
-        //    item.SellQuantity = sellQuantity;
-
-        //    ShopUpdateItem.Proc(item, param, paramProject, updateCommand);
-        //}
 
         //100000[Gatekeeper Gostoc] Festering Bloody Finger
         //
@@ -397,11 +387,11 @@ namespace ERParamUtils.UpdateParam
                 "menuTitleMsgId,-1," +
                 "menuIconId,-1"
                 ;
-            //ParamRowUtils.SetCellValue(row, keyValues);
+            ParamRowUtils.SetCellValue(row, "value", value +"");
             updateCommand.AddKeyValues(param.Name, row.ID, keyValues);
             updateCommand.AddItem(row, "equipId", equipId);
             updateCommand.AddItem(row, "equipType", (int)equipType);
-            updateCommand.AddItem(row, "value", value);
+            //updateCommand.AddItem(row, "value", value);
             updateCommand.AddItem(row, "sellQuantity", count);
             updateCommand.AddItem(row, "eventFlag_forStock", eventFlag);
 
@@ -411,15 +401,11 @@ namespace ERParamUtils.UpdateParam
         public static void Exec(ParamProject paramProject, UpdateCommand updateCommand)
         {
 
-            if (updateCommand.HaveOption(UpdateParamOptionNames.ShopSetAll)) {
-                updateCommand.SetOption(UpdateParamOptionNames.ShopVisibilityAll,1);
-                updateCommand.SetOption(UpdateParamOptionNames.ShopSellQuantityUnlimited, 1);
-                updateCommand.SetOption(UpdateParamOptionNames.ShopAddAncient, 1);
-            }
-
-            //updateCommand.SetOption(UpdateParamOptionNames.ReplaceBellBearing, 1);
-            //ChangeRemembrance(paramProject, updateCommand);
-
+            //if (updateCommand.HaveOption(UpdateParamOptionNames.ShopSetAll)) {
+            //    updateCommand.SetOption(UpdateParamOptionNames.ShopVisibilityAll,1);
+            //    updateCommand.SetOption(UpdateParamOptionNames.ShopSellQuantityUnlimited, 1);
+            //    updateCommand.SetOption(UpdateParamOptionNames.ShopAddAncient, 1);
+            //}
 
 
             UpdateLogger.InfoTime("===UpdateShopLineupParam.Exec");
@@ -507,7 +493,7 @@ namespace ERParamUtils.UpdateParam
             int minPrice = ParamRowUtils.GetCellInt(paramProject, paramName, equipId, "sellValue", -1);
             if (minPrice <= 0)
             {
-                minPrice = 2000;
+                minPrice = 100;
             }
 
             int price = ParamRowUtils.GetCellInt(row, "value", 0);
@@ -546,50 +532,9 @@ namespace ERParamUtils.UpdateParam
 
             updateCommand.AddItem(row, key, amount);
 
-
         }
 
-        /*
-        public static void ChangeSpecVisibility(ParamProject paramProject, UpdateCommand updateCommand)
-        {
 
-            var param = paramProject.FindParam(ParamNames.ShopLineupParam);
-            if (param == null)
-                return;
-
-            foreach (var row in param.Rows)
-            {
-
-                if (row.ID >= 110000 || row.ID < 100000)
-                    continue;
-
-                ChangeVisibility(row, updateCommand);
-
-                int equipId = GetEquipId(row);
-
-            }
-        }*/
-
-        //900000 Remembrance of the Grafted * 1
-        //900072 Remembrance of a God and a Lord* 1
-        static void ChangeRemembrance(ParamProject paramProject, UpdateCommand updateCommand) {
-
-            var param = paramProject.FindParam(ParamNames.EquipMtrlSetParam);
-
-            if (param == null) {
-                return;
-            }
-            //10160;Somber Smithing Stone [1]
-            var rows = param.Rows;
-            foreach (var row in rows) {
-
-                if (row.ID >= 900000 && row.ID < 900100) {
-
-                    updateCommand.AddItem(row, "materialId01", 10160);
-                }
-            
-            }
-        }
         static void ChangeVisibility(SoulsParam.Param.Row row, UpdateCommand updateCommand)
         {
             //if (row.Name == null)
@@ -605,21 +550,10 @@ namespace ERParamUtils.UpdateParam
                 {
                     updateCommand.AddItem(row, key, "0");
                 }
-
-                //key = "mtrlId";
-                //var v = ParamRowUtils.GetCellInt(row, "mtrlId", 0);
-                //if (v >= 900000 && v < 900100 )
-                //{
-                //    updateCommand.AddItem(row, key, "-1");
-                //}
-
-                /*
-                if (updateCommand.HaveOption(UpdateParamOption.RemoveRemembranceRequire) ) {
-                    key = "mtrlId";
-                    updateCommand.AddItem(row, key, "-1");
-                }*/
             }
         }
+
+
 
     }
 }

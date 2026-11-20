@@ -1,0 +1,13 @@
+@@include=shop-grace-t.txt
+
+@@var@@type=0
+@@var@@amount=-1
+@@var@@price=100
+
+51070000;Lightning Great Arrow;雷电大箭
+
+
+53000000;Ballista Bolt;弩炮箭
+53010000;Lightning Greatbolt;雷电大弩箭
+53020000;Explosive Greatbolt;爆炸大弩箭
+

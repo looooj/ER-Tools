@@ -1,0 +1,80 @@
+﻿2000;Dryleaf Whirlwind;落叶旋风脚
+2001;Aspects of the Crucible: Wings;熔炉百相之羽
+4000;Spinning Gravity Thrust;重力旋刺
+4010;Palm Blast;发劲
+4020;Piercing Throw;贯穿投掷
+4030;Scattershot Throw;多重投掷
+4040;Wall of Sparks;四面火花香
+4050;Rolling Sparks;串联火花香
+4060;Raging Beast;野兽突袭
+4070;Savage Claws;野兽爪击
+4080;Red Bear Hunt;红熊猎法
+4090;Blind Spot;死角一击
+4100;Swift Slash;迅斩
+4110;Overhead Stance;大上段
+4120;Wing Stance;单翼架式
+4130;Blinkbolt;瞬雷
+4140;Flame Skewer;火焰穿刺
+4150;Savage Lion's Claw;勇猛狮子斩
+4160;Divine Beast Frost Stomp;神兽冻霜踏地
+4170;Flame Spear;火焰枪
+4180;Carian Sovereignty;尊矣卡利亚
+4190;Shriek of Sorrow;悲恸惨叫
+4200;Shield Strike;盾牌攻击
+4210;Igon's Drake Hunt;埃贡的猎龙
+4220;Ghostflame Call;唤起灵火
+5000;Dragonwound Slash;伤龙斩
+5010;Needle Piercer;贯刺针
+5020;Light;光明
+5030;Darkness;黑暗
+5040;Onze's Line of Stars;翁吉的连星
+5050;The Poison Flower Blooms Twice;双刺毒花
+5080;Spinning Guillotine;回旋断首
+5090;Unending Dance;无尽之舞
+5100;Revenger's Blade;复仇之刃
+5110;Mists of Eternal Sleep;永眠烟雾
+5120;Dynastic Sickleplay;王朝镰技
+5130;Blinkbolt: Twinaxe;瞬雷之对斧
+5140;Blinkbolt: Long-hafted Axe;瞬雷之长柄斧
+5150;Promised Consort;约定之王
+5160;Shadow Sunflower Headbutt;影轮草头槌
+5170;Moon-and-Fire Stance;月与火的架式
+5180;Devonia's Vortex;泥盆亚的漩涡
+5190;Messmer's Assault;梅瑟莫的强攻
+5210;Sleep Evermore;永恒沉眠
+5220;Golden Crux;黄金穿刺
+5230;Moore's Charge;穆尔的突击
+5240;White Light Charge;白光突袭
+5250;Rancor Slash;怨魂斩
+5260;Witching Hour Slash;夜暗斩击
+5270;Euporia Vortex;艾珀莉亚漩涡
+5280;Smithing Art Spears;锻造术之矛
+5290;Rancor Slash;怨魂斩
+5300;Romina's Purification;萝蜜娜的解厄
+5310;Poison Spear-Hand Strike;贯穿毒手
+5320;Madding Spear-Hand Strike;贯穿癫狂手
+5330;Feeble Lord's Frenzied Flame;弱小王的癫火
+5340;Repeating Fire;连射弩的射击
+5350;Deadly Dance;灾厄之舞
+5360;Fan Shot;扇形射击
+5370;Discus Hurl;飞盘投掷
+5380;Flower Dragonbolt;花之龙雷
+5390;Kowtower's Resentment;叩头之怒
+5420;Painful Strike;痛击
+5430;Solitary Moon Slash;孤月斩
+5440;Revenge of the Night;黑夜式奉还
+5450;Weed Cutter;割草
+5460;Blindfold of Happiness;幸福遮眼
+5470;Jori's Inquisition;约里的拷问
+5480;Roaring Bash;咆哮冲击
+5490;Deadly Poison Spray;释放剧毒
+5500;Flare, O Serpent;蛇啊，燃烧吧
+5510;Scattershot (Claws);多重投掷之爪
+5520;Hone Blade;磨刀
+5530;Horn Calling;角降临
+5540;Horn Calling: Storm;角降临之风暴
+5550;Tremendous Phalanx;巨剑阵
+5560;Bloodfiends' Bloodboon;血怪授血
+5570;Dragonform Flame;龙形火焰
+5580;Lightspeed Slash;光速斩
+5600;Rancor Shot;怨魂射击

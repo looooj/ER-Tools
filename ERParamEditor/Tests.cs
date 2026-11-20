@@ -108,7 +108,7 @@ namespace ERParamEditor
         public static void ExtractMsg()
         {
 
-            ExtractMsgX("F:\\docs\\unpack117a\\msg",
+            ExtractMsgX("F:\\docs\\unpack117b\\msg",
                 @"D:\myprojects\game-tools\ER-Tools\tmp\msg-text");
         }
 
@@ -413,16 +413,35 @@ namespace ERParamEditor
         }
 
 
-        static void GenItemText() {
+        static void GenItemTextCer() {
 
             string[] names = { "AccessoryName","GoodsName",
-                "ProtectorName","WeaponName","NpcName","PlaceName","GemName" };
+                "ProtectorName","WeaponName","NpcName","PlaceName","GemName","ArtsName","NpcName" };
             string[] subNames = { "item", "item_dlc01", "item_dlc02" };
 
             GenDlcText(@"D:\myprojects\game-tools\ER-Tools\tmp\msg-text-cer", 
                 @"D:\myprojects\game-tools\ER-Tools\docs\cer-item-text",
                names, subNames);
 
+        }
+
+        static void GenItemTextStd()
+        {
+
+            string[] names = { "AccessoryName","GoodsName",
+                "ProtectorName","WeaponName","NpcName","PlaceName","GemName","ArtsName","NpcName" };
+            string[] subNames = { "item", "item_dlc01", "item_dlc02" };
+
+            GenDlcText(@"D:\myprojects\game-tools\ER-Tools\tmp\msg-text",
+                @"D:\myprojects\game-tools\ER-Tools\docs\item-text",
+               names, subNames);
+
+        }
+
+        static void GenItemText() { 
+        
+            GenItemTextCer();
+            GenItemTextStd();
         }
 
         static void GenMenuText()
@@ -543,7 +562,9 @@ namespace ERParamEditor
 
             //GenAccessoryId();
             //GenAutoLot();
-            //GenItemText();
+            ExtractCerMsg();
+            ExtractMsg();
+            GenItemText();
             //GenMenuText();
             //Tools.CleanUpdateLog(5);
             //Tests2.FindRemnant();
@@ -552,14 +573,13 @@ namespace ERParamEditor
             //Tests2.ExportParamGraceSTD();
             //Tests2.FindMaxHp();
             //Tests2.FindMp();
-            //ExtractCerMsg();
-            //ExtractMsg();
 
             //Tests2.GenCharaClassNames();
 
             //Tests2.TestReplacePy();
 
-            Tests2.GenShopFiles();
+            //Tests2.GenShopFiles();
+
         }
     }
 }

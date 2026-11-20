@@ -1,0 +1,294 @@
+﻿10;No Skill;无战技
+100;Lion's Claw;狮子斩
+101;Impaling Thrust;贯穿
+102;Piercing Fang;突刺
+103;Spinning Slash;回旋斩
+105;Charge Forth;突击
+106;Stamp;箭步
+107;Stamp (Sweep);箭步（回旋斩）
+108;Blood Tax;鲜血征收
+109;Repeating Thrust;连击
+110;Wild Strikes;盲击
+111;Spinning Strikes;回旋击
+112;Double Slash;二连斩
+113;Prelate's Charge;主教冲锋
+114;Unsheathe;居合
+115;Square Off;准备架式
+116;Giant Hunt;狩猎巨人
+117;Torch Attack;火把攻击
+118;Loretta's Slash;罗蕾塔的斩击
+119;Poison Moth Flight;双吻毒蛾
+120;Spinning Weapon;转啊转
+121;Storm Stomp;风暴足
+122;Storm Assault;风暴袭击
+123;Stormcaller;唤起风暴
+124;Sword Dance;剑舞
+125;Spinning Chain;回旋锁链
+126;Storm Stance;风暴架势
+127;Spear of Frenzy;癫狂之矛
+128;Soporific Assault;催眠突袭
+129;Evisceration;剖心
+130;Malenian Homage;玛莲妮亚的效仿
+131;Whirling Iceblades;旋舞冰刃
+132;Osian's Fury;奥西安之怒
+133;Storm Thrust;风暴突刺
+136;Bloodhound Assault;猎犬突袭
+137;Wind Dance;风之舞
+138;Lunging Harvest;突进收割
+141;Carwyn's Bladestorm;卡尔温的剑刃风暴
+142;Vaulting Strike;腾跃击
+143;Icy Fling;寒冰投掷
+144;Evasive Strike;闪避打击
+145;Heart Piercer;贯心
+146;Underworld Conduit;地底世界之导引
+148;Whirling Slice;旋风斩
+149;Concussive Smash;震荡冲击
+150;Martyr's Vengeance;殉道者的复仇
+151;Death Rune's Invocation;死亡卢恩的祈唤
+154;Runic Stance;卢恩架势
+155;Finger Severer;断指
+160;Hoarfrost Stomp;冻霜踏地
+161;Crusader's Ignition;征伐之焰燃
+162;Archea's Dance;太古亚之舞
+165;Impaling Vapors;水雾突刺
+177;Blighted Summoning;唤起咒死
+179;Frozen Lightning Orb;冰雷球
+180;Galvanic Extraction;流电抽取
+181;Umbral Stance;暗影架势
+182;Virtuous Consecration;高洁圣裁
+183;Blighted Breath;咒死吐息
+184;Flash of Gold;黄金闪光
+185;Flash of Gold;黄金闪光
+186;Valiant Upheaval;英勇激变
+187;Kindred's Upheaval;眷属激变
+188;Smithscript Arsenal;流纹兵武
+194;Virulent Slice;致命切割
+195;Ritekeeper's Splendor;仪式守卫的辉煌
+200;Glintblade Phalanx;辉剑圆阵
+201;Sacred Blade;神圣刀刃
+202;Ice Spear;冰枪
+203;Glintstone Pebble;辉石魔砾
+204;Bloody Slash;鲜血斩击
+205;Lifesteal Fist;夺命拳
+206;Bloody Slash;鲜血斩击
+207;Eruption;熔岩火浆
+208;Prayerful Strike;祈祷一击
+209;Gravitas;重力
+210;Storm Blade;风暴刃
+212;Earthshaker;撼地
+213;Golden Land;黄金大地
+214;Flaming Strike;炎击
+216;Thunderbolt;落雷
+217;Lightning Slash;雷击斩
+218;Carian Grandeur;伟哉卡利亚
+219;Carian Greatsword;卡利亚大剑
+220;Vacuum Slice;真空斩
+221;Black Flame Tornado;黑焰漩涡
+222;Sacred Ring of Light;神圣光环
+223;Firebreather;喷火
+224;Blood Blade;血刃
+225;Phantom Slash;幻影共击
+226;Spectral Lance;幻影枪
+227;Chilling Mist;寒气冻雾
+228;Poisonous Mist;毒雾
+229;Erdtree Mastery;黄金树绝招
+231;Magma Splash;熔岩斩
+232;Splitblade Sundering;分刃裂斩
+238;Valiant Cyclone;勇猛旋风
+239;Death Cyclone;死亡旋风
+261;Eochaid Stance;欧赫架势
+300;Shield Bash;盾牌冲击
+301;Barricade Shield;铁壁盾防
+302;Parry;格挡
+303;Buckler Parry;小圆盾格挡
+304;Parry;格挡
+305;Carian Retaliation;卡利亚式奉还
+306;Storm Wall;风暴障壁
+307;Golden Parry;黄金格挡
+308;Shield Crash;突进冲击
+309;Cragbolt Slam;冰雷震击
+310;Cast Incantation;施放祷告
+311;Cast Sorcery;施放魔法
+400;Titanic Shot;强力射击
+401;Barrage;连续射击
+402;Mighty Shot;拉满弓
+404;Enchanted Shot;宿灵射击
+405;Sky Shot;对空射击
+406;Rain of Arrows;箭雨
+410;Scadu Shot;幽影射击
+411;Spiral Shot;螺旋射击
+501;Succumb to Madness;臣服于癫狂
+502;Cyclopean Conflagration;独眼焚炎
+503;Kick;踢击
+504;Lightning Ram;雷电羊球
+505;Flame of the Redmanes;红狮子火焰
+506;Ground Slam;坠落震击
+507;Golden Slam;黄金坠落震击
+508;Waves of Darkness;黑暗波动
+509;Hoarah Loux's Earthshaker;荷莱·露的撼地
+510;Break the Seal;解除封印
+512;Frenzied Assault;癫狂突袭
+600;Determination;决心
+601;Royal Knight's Resolve;侍王骑士的决心
+602;Assassin's Gambit;暗杀办法
+603;Golden Vow;黄金树立誓
+604;Sacred Order;圣律
+605;Shared Order;共享圣律
+606;Seppuku;切腹
+607;Cragblade;岩石剑
+608;Stormbreaker's Deflection;破风暴者偏折
+650;Barbaric Roar;野蛮咆哮
+651;War Cry;战吼
+652;Beast's Roar;野兽咆哮
+653;Troll's Roar;山妖咆哮
+654;Braggart's Roar;夸耀咆哮
+656;Pikeman's Flourish;枪兵的绝技
+657;Stone Excavation;掘石
+660;Magma Crush;岩浆粉碎
+670;Rancorous Summoning;呼唤咒魂
+700;Endure;忍耐
+701;Vow of the Indomitable;无敌
+702;Holy Ground;圣域
+703;Shadow Dash;暗影冲刺
+704;Berserker's Leap;狂战士之跃
+800;Quickstep;碎步
+801;Bloodhound's Step;猎犬步法
+802;Raptor of the Mists;潜雾猛禽
+803;Champion's Evasion;斗士之遁
+804;Dance of Unification;合一之舞
+805;Assassin’s Feint;刺客佯攻
+806;Storm's Reckoning;风暴清算
+807;Flame Arc;火焰弧
+808;Rotten Assault;腐败突袭
+809;Fell Furnace;恶之燃炉
+810;Whirling Black Flames;黑焰旋流
+811;Spread Corruption;散播腐坏
+812;Roar of Goras;哥拉斯的咆哮
+813;Carian Gallantry;卡利亚的勇武
+814;Dragonlord's Recall;龙王召还
+815;Ancient Thunderclap;远古雷霆
+816;Briar Assault;荆棘袭击
+817;Bestial Mauling;野兽痛击
+818;Primeval Cascade;原始源流
+819;Crucible's Fury;熔炉之怒
+820;Call to Thunder;呼唤雷电
+821;Ice Spikes;冰刺
+822;Celestial Ascension;天启
+823;Aeonian Rush;艾奥尼亚疾斩
+824;Titanic Cleave;巨人劈击
+825;Shabriri's Revenge;夏玻利利的复仇
+826;Scorched Earth;焦土
+827;Storm of the Ancients;远古风暴
+828;Flowing Piercer;流体锥
+829;Telekinetic Vortex;念动旋流
+830;Quicksilver Spray;水银飞溅
+850;White Shadow's Lure;白影诱惑
+1000;Surge of Faith;信仰喷发
+1001;Flame Spit;火焰唾球
+1002;Tongues of Fire;火焰舌柱
+1003;Oracular Bubble;神谕泡泡
+1004;Bubble Shower;倾注泡泡
+1005;Great Oracular Bubble;神谕大泡泡
+1006;Sea of Magma;熔岩海
+1007;Viper Bite;毒蛇咬杀
+1008;Moonlight Greatsword;月光剑
+1009;Siluria's Woe;志留亚的漩涡
+1010;Rallying Standard;归于麾下
+1011;Bear Witness!;敬请见证！
+1012;Eochaid's Dancing Blade;欧赫剑舞
+1013;Soul Stifler;恶意气息
+1014;Taker's Flames;掠夺火焰
+1015;Shriek of Milos;灭洛斯的狂嚎
+1016;Reduvia Blood Blade;逆刺血刃
+1017;Glintstone Dart;辉石彗砾
+1018;Flowing Form;流体化
+1019;Night-and-Flame Stance;夜与火的架式
+1020;Wave of Gold;黄金波动
+1021;Ruinous Ghostflame;毁灭灵火
+1022;Establish Order;高举黄金律法
+1023;Mists of Slumber;催眠烟雾
+1024;Spearcall Ritual;唤矛仪式
+1025;Wolf's Assault;狼袭
+1026;Thundercloud Form;雷云化身
+1027;Cursed-Blood Slice;咒血斩击
+1028;Waterfowl Dance;水鸟乱舞
+1029;Gold Breaker;黄金碎击
+1030;Sulien's Mastery;苏莲的绝招
+1031;Regal Roar;王者嘶吼
+1032;Starcaller Cry;唤星
+1033;Wave of Destruction;崩坏波
+1034;Bloodboon Ritual;授血仪式
+1035;Flowing Form;流体化
+1036;Blade of Death;死亡刀刃
+1037;Blade of Gold;黄金刀刃
+1038;Destined Death;命定之死
+1039;Spinning Wheel;旋转刺轮
+1040;Alabaster Lords' Pull;白王引力波
+1041;Onyx Lords' Repulsion;黑王推力波
+1042;Oath of Vengeance;复仇誓言
+1043;Ice Lightning Sword;冰雷剑
+1044;Regal Beastclaw;兽王爪
+1045;Flame Dance;火焰舞
+1046;Claw Flick;弹指
+1047;Nebula;星云
+1048;Ghostflame Ignition;点燃灵火
+1049;Lightning Spear of Gransax;古兰桑克斯的雷枪
+1050;Frenzyflame Thrust;癫火突击
+1051;Twister Shot;龙卷射击
+1052;Golden Tempering;黄金剑技
+1053;Last Rites;哀悼墓碑
+1054;Unblockable Blade;不可挡之刃
+1055;Eochaid's Dancing Blade;欧赫剑舞
+1056;Omen's Roar;噩兆咆哮
+1057;Cleave of Devastation;毁灭劈击
+1058;Giantsflame Arc;巨人火焰之弧
+1059;Wrath of the Ancients;古龙盛怒
+1060;Ronin's Technique;浪人技艺
+1061;Godslayer Ascension;狩猎神祇之极意
+1062;Cull the Sacrifice;屠宰献祭
+1063;Dyru's Savagery;迪鲁的暴虐
+1064;Einar's Icestorm;艾纳尔的冰风暴
+1065;Fire Monk's Fury;火焰习武修士的盛怒
+1066;Crystal Pincer;结晶钳
+1166;Cragbolt Slash;冰雷斩
+1167;Corpse Wax Cutter;尸蜡斩击
+1168;Zamor Ice Storm;萨米尔冰风暴
+1169;Radahn's Rain;拉塔恩的骤雨
+1170;The Queen's Black Flame;女王黑焰
+1171;Dynast's Finesse;王朝剑技
+1172;Magma Shower;泼洒熔岩
+1173;Nebula;星云
+1174;Death Flare;死亡闪焰
+1175;Bloodhound's Finesse;猎犬剑技
+1176;Magma Guillotine;熔岩断首
+1177;Corpse Piler;尸横遍野
+1178;Transient Moonlight;隙间月影
+1179;Bloodblade Dance;血刃乱舞
+1182;Knowledge Above All;百智的世界
+1183;Devourer of Worlds;吞世
+1184;Familial Rancor;家族怨魂
+1185;Rosus's Summons;罗泽司的唤声
+1186;Thunderstorm;雷电风暴
+1187;Sacred Phalanx;圣矛障壁
+1188;Great-Serpent Hunt;狩猎大蛇
+1189;Angel's Wings;天使羽翼
+1190;Storm Kick;风暴踢击
+1191;Unblockable Blade;不可挡之刃
+1192;Sorcery of the Crozier;锡杖魔法
+1193;Erdtree Slam;黄金树坠落震击
+1194;Gravity Bolt;重力雷电
+1195;Fires of Slumber;催眠火焰
+1196;Golden Retaliation;黄金式奉还
+1197;Contagious Fury;共鸣愤怒
+1198;Ordovis's Vortex;奥陶琵斯的漩涡
+1199;Spinning Weapon;转啊转
+1200;Muleta;诱敌红布
+1201;Causality's Wrath;因果之怒
+1202;Cosmic Stance;星空架势
+1203;Spiritshaper's Resplendence;塑灵者的辉煌
+1204;Rotten Slam;腐败震击
+1205;Pulverizing Thrust;粉碎突刺
+1206;Bloodflame Stomp;血焰踏地
+1207;Telekinetic Butchery;念动屠宰
+1208;Vapor-fly Ignition;灵蜓焰燃
+1209;Aromatic Chain-Whip;香药链鞭

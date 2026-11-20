@@ -2,6 +2,7 @@
 10100;Ash of War: Impaling Thrust;战灰：贯穿
 10200;Ash of War: Piercing Fang;战灰：突刺
 10300;Ash of War: Spinning Slash;战灰：回旋斩
+10400;Ash of War: Ritekeeper's Splendor;战灰：仪式守卫的辉煌
 10500;Ash of War: Charge Forth;战灰：突击
 10600;Ash of War: Stamp;战灰：箭步
 10700;Ash of War: Stamp (Sweep);战灰：箭步（回旋斩）

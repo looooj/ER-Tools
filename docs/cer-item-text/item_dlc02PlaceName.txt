@@ -214,6 +214,7 @@
 130013;Dragonlord's Annex;龙王偏殿
 130014;Lost Tribe Spirit Grounds;失落部族灵地
 130015;Tanith, Volcano Manor Proprietress;“火山官邸之主”塔妮丝
+130016;Defiled Shrine;污秽圣坛
 130100;White Mask Varré;“白面具”梵雷
 130200;Gatekeeper Gostoc;门卫葛托克
 130400;Festering Fingerprint Vyke;“烧灼指痕”维克
@@ -870,15 +871,15 @@
 8100001;Tenebrae Demesne;迪涅布雷地区
 900000001;Quicksilver Husk;水银躯壳
 900000002;Daergraf, Underworld Archmage;“地底大法师”达格拉夫
-900000003;Refined Ritekeeper of Rauh;精干的劳弗仪卫
-900000004;Staunch Ritekeeper of Rauh;坚定的劳弗仪卫
-900000005;Deft Ritekeeper of Rauh;机敏的劳弗仪卫
-900000006;Iridescent Ritekeeper of Rauh;虹彩的劳弗仪卫
-900000007;Gnarled Ritekeeper of Rauh;虬曲的劳弗仪卫
-900000008;Scorched Ritekeeper of Rauh;炙焦的劳弗仪卫
-900000009;Primeval Ritekeeper of Rauh;始源的劳弗仪卫
-900000010;Fulminated Ritekeeper of Rauh;轰雷的劳弗仪卫
-900000011;Hallowed Ritekeeper of Rauh;神圣的劳弗仪卫
+900000003;Refined Ritekeeper of Rauh;精干的劳弗仪式守卫
+900000004;Staunch Ritekeeper of Rauh;坚定的劳弗仪式守卫
+900000005;Deft Ritekeeper of Rauh;机敏的劳弗仪式守卫
+900000006;Iridescent Ritekeeper of Rauh;虹彩的劳弗仪式守卫
+900000007;Gnarled Ritekeeper of Rauh;虬曲的劳弗仪式守卫
+900000008;Scorched Ritekeeper of Rauh;炙焦的劳弗仪式守卫
+900000009;Primeval Ritekeeper of Rauh;始源的劳弗仪式守卫
+900000010;Fulminated Ritekeeper of Rauh;轰雷的劳弗仪式守卫
+900000011;Hallowed Ritekeeper of Rauh;神圣的劳弗仪式守卫
 900000012;Stormcaller Taran;风暴呼召者塔兰
 900000013;Tempestcaller Corwynt;风暴敕令者科温特
 900000014;Idris, Godskin Deceiver;“神皮欺诈者”伊德里斯

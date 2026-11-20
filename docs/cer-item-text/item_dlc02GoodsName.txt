@@ -18,10 +18,15 @@
 115;Memory of Grace;赐福记忆
 130;Torrent's Whistle;托雷特的哨笛
 135;Phantom Great Rune;大卢恩幻影
-140;Funeral Whistle;送葬哨笛
+140;Night's Cavalry Whistle;黑夜骑兵哨笛
 141;Erdtree Whistle;黄金树哨笛
-142;Frenzied Whistle;癫火哨笛
-143;Carian Whistle;卡利亚哨笛
+142;Frenzied Mule Whistle;癫火骡哨笛
+143;Royal Knight Whistle;禁卫骑士哨笛
+144;Tree Sentinel Whistle;大树守卫哨笛
+145;Carian Silver Whistle;卡利亚白银哨笛
+146;Funereal Night Whistle;送葬黑夜哨笛
+147;Revenant Whistle;幽魂哨笛
+148;Ancestral Whistle;祖灵哨笛
 150;Furlcalling Finger Remedy;唤勾指药
 170;Tarnished's Furled Finger;褪色者勾指
 171;Duelist's Furled Finger;斗士勾指
@@ -2241,3 +2246,6 @@
 263008;Jarwight Puppet +8;壶男的傀儡＋８
 263009;Jarwight Puppet +9;壶男的傀儡＋９
 263010;Jarwight Puppet +10;壶男的傀儡＋１０
+2009600;Spectral Steed Regalia: Tree Sentinel;灵马装饰：大树守卫
+2009610;Spectral Steed Regalia: Carian Silver;灵马装饰：卡利亚白银
+2009620;Spectral Steed Regalia: Funereal Night;灵马装饰：送葬黑夜

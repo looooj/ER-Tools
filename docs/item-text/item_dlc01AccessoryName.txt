@@ -1,0 +1,117 @@
+﻿100;Petition for Help;求援书
+101;Broken Finger Stalker Contract;狩猎崩指契约书
+1000;Crimson Amber Medallion;红琥珀链坠
+1001;Crimson Amber Medallion +1;红琥珀链坠＋１
+1002;Crimson Amber Medallion +2;红琥珀链坠＋２
+1010;Cerulean Amber Medallion;蓝琥珀链坠
+1011;Cerulean Amber Medallion +1;蓝琥珀链坠＋１
+1012;Cerulean Amber Medallion +2;蓝琥珀链坠＋２
+1020;Viridian Amber Medallion;绿琥珀链坠
+1021;Viridian Amber Medallion +1;绿琥珀链坠＋１
+1022;Viridian Amber Medallion +2;绿琥珀链坠＋２
+1030;Arsenal Charm;众武护符
+1031;Arsenal Charm +1;众武护符＋１
+1032;Great-Jar's Arsenal;大壶众武护符
+1040;Erdtree's Favor;黄金树的恩惠
+1041;Erdtree's Favor +1;黄金树的恩惠＋１
+1042;Erdtree's Favor +2;黄金树的恩惠＋２
+1050;Radagon's Scarseal;拉达冈的烙印
+1051;Radagon's Soreseal;拉达冈的糜烂烙印
+1060;Starscourge Heirloom;碎星的传说
+1070;Prosthesis-Wearer Heirloom;义手剑士的传说
+1080;Stargazer Heirloom;观星少女的传说
+1090;Two Fingers Heirloom;双指的传说
+1100;Silver Scarab;银色粪金龟
+1110;Gold Scarab;金色粪金龟
+1140;Moon of Nokstella;诺克史黛拉之月
+1150;Green Turtle Talisman;绿龟护符
+1160;Stalwart Horn Charm;健壮角饰品
+1161;Stalwart Horn Charm +1;健壮角饰品＋１
+1170;Immunizing Horn Charm;免疫角饰品
+1171;Immunizing Horn Charm +1;免疫角饰品＋１
+1180;Clarifying Horn Charm;理智角饰品
+1181;Clarifying Horn Charm +1;理智角饰品＋１
+1190;Prince of Death's Pustule;死王子的脓疮
+1191;Prince of Death's Cyst;死王子的恶性脓疮
+1200;Mottled Necklace;斑斓项链
+1201;Mottled Necklace +1;斑斓项链＋１
+1210;Bull-Goat's Talisman;大山羊护符
+1220;Marika's Scarseal;玛莉卡的烙印
+1221;Marika's Soreseal;玛莉卡的糜烂烙印
+1230;Warrior Jar Shard;战士壶碎片
+1231;Shard of Alexander;亚历山大的碎片
+1250;Millicent's Prosthesis;米莉森的义手
+2000;Magic Scorpion Charm;魔力对蝎
+2010;Lightning Scorpion Charm;雷对蝎
+2020;Fire Scorpion Charm;火对蝎
+2030;Sacred Scorpion Charm;圣对蝎
+2040;Red-Feathered Branchsword;红羽七刃剑
+2050;Ritual Sword Talisman;献斗剑护符
+2060;Spear Talisman;矛护符
+2070;Hammer Talisman;大槌护符
+2080;Winged Sword Insignia;带翼剑徽章
+2081;Rotten Winged Sword Insignia;腐败翼剑徽章
+2090;Dagger Talisman;短剑护符
+2100;Arrow's Reach Talisman;远箭护符
+2110;Blue Dancer Charm;蓝色舞娘
+2120;Twinblade Talisman;双头剑护符
+2130;Axe Talisman;斧护符
+2140;Lance Talisman;骑枪护符
+2150;Arrow's Sting Talisman;硬箭护符
+2160;Lord of Blood's Exultation;鲜血君王的欢愉
+2170;Kindred of Rot's Exultation;腐败眷属的欢愉
+2180;Claw Talisman;钩爪护符
+2190;Roar Medallion;咆哮链坠
+2200;Curved Sword Talisman;曲剑护符
+2210;Companion Jar;友好壶
+2220;Perfumer's Talisman;调香师护符
+3000;Graven-School Talisman;魔法师球护符
+3001;Graven-Mass Talisman;魔法师块护符
+3040;Faithful's Canvas Talisman;信徒的立誓布
+3050;Flock's Canvas Talisman;群聚信徒的立誓布
+3060;Old Lord's Talisman;古王护符
+3070;Radagon Icon;拉达冈的肖像
+3080;Primal Glintstone Blade;源辉石刀
+3090;Godfrey Icon;葛孚雷的肖像
+4000;Dragoncrest Shield Talisman;龙徽盾护符
+4001;Dragoncrest Shield Talisman +1;龙徽盾护符＋１
+4002;Dragoncrest Shield Talisman +2;龙徽盾护符＋２
+4003;Dragoncrest Greatshield Talisman;龙徽大盾护符
+4010;Spelldrake Talisman;魔力龙徽护符
+4011;Spelldrake Talisman +1;魔力龙徽护符＋１
+4012;Spelldrake Talisman +2;魔力龙徽护符＋２
+4020;Flamedrake Talisman;火龙徽护符
+4021;Flamedrake Talisman +1;火龙徽护符＋１
+4022;Flamedrake Talisman +2;火龙徽护符＋２
+4030;Boltdrake Talisman;雷龙徽护符
+4031;Boltdrake Talisman +1;雷龙徽护符＋１
+4032;Boltdrake Talisman +2;雷龙徽护符＋２
+4040;Haligdrake Talisman;圣龙徽护符
+4041;Haligdrake Talisman +1;圣龙徽护符＋１
+4042;Haligdrake Talisman +2;圣龙徽护符＋２
+4050;Pearldrake Talisman;珍珠龙徽护符
+4051;Pearldrake Talisman +1;珍珠龙徽护符＋１
+4052;Pearldrake Talisman +2;珍珠龙徽护符＋２
+4060;Crucible Scale Talisman;熔炉鳞护符
+4070;Crucible Feather Talisman;熔炉羽护符
+4080;Blue-Feathered Branchsword;蓝羽七刃剑
+4090;Ritual Shield Talisman;献斗盾护符
+4100;Greatshield Talisman;大盾护符
+4110;Crucible Knot Talisman;熔炉瘤护符
+5000;Crimson Seed Talisman;红种子护符
+5010;Cerulean Seed Talisman;蓝种子护符
+5020;Blessed Dew Talisman;恩惠露滴护符
+5030;Taker's Cameo;掠夺浮雕坠饰
+5040;Godskin Swaddling Cloth;神皮襁褓
+5050;Assassin's Crimson Dagger;染红凶刀
+5060;Assassin's Cerulean Dagger;染蓝凶刀
+6000;Crepus's Vial;克雷普的小瓶子
+6010;Concealing Veil;隐身面纱
+6020;Carian Filigreed Crest;卡利亚徽章
+6040;Longtail Cat Talisman;长尾猫别针
+6050;Shabriri's Woe;夏玻利利之祸
+6060;Daedicar's Woe;狄蒂卡之祸
+6070;Sacrificial Twig;牺牲细枝
+6080;Furled Finger's Trick-Mirror;勾指伪装镜
+6090;Host's Trick-Mirror;主人伪装镜
+6110;Ancestral Spirit's Horn;祖灵角

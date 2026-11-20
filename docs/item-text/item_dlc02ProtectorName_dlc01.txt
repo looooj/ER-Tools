@@ -1,0 +1,145 @@
+﻿3000000;Dane's Hat;丹恩帽子
+3000100;Dryleaf Robe;落叶派长袍
+3000200;Dryleaf Arm Wraps;落叶派腕套
+3000300;Dryleaf Cuissardes;落叶派长靴
+3001100;Dryleaf Robe (Altered);落叶派长袍（轻装）
+3010000;Gaius's Helm;盖乌斯头盔
+3010100;Gaius's Armor;盖乌斯铠甲
+3010200;Gaius's Gauntlets;盖乌斯臂甲
+3010300;Gaius's Greaves;盖乌斯腿甲
+5000000;Oathseeker Knight Helm;誓约骑士头盔
+5000100;Leda's Armor;蕾妲铠甲
+5000200;Oathseeker Knight Gauntlets;誓约骑士臂甲
+5000300;Oathseeker Knight Greaves;誓约骑士腿甲
+5002100;Oathseeker Knight Armor;誓约骑士铠甲
+5010000;Verdigris Helm;铜绿头盔
+5010100;Verdigris Armor;铜绿铠甲
+5010200;Verdigris Gauntlets;铜绿臂甲
+5010300;Verdigris Greaves;铜绿腿甲
+5020000;Pelt of Ralva;拉鲁瓦毛皮
+5020100;Iron Rivet Armor;铁铆钉上衣
+5020200;Iron Rivet Gauntlets;铁铆钉臂甲
+5020300;Iron Rivet Greaves;铁铆钉腿甲
+5021000;Fang Helm;狮牙头盔
+5030000;Thiollier's Mask;休里耶面具
+5030100;Thiollier's Garb;休里耶上衣
+5030200;Thiollier's Gloves;休里耶长手套
+5030300;Thiollier's Trousers;休里耶长裤
+5031100;Thiollier's Garb (Altered);休里耶上衣（轻装）
+5060000;High Priest Hat;大祭司帽子
+5060100;High Priest Robe;大祭司长袍
+5060200;High Priest Gloves;大祭司长手套
+5060300;High Priest Undergarments;大祭司衬裤
+5062100;Finger Robe;指头长袍
+5070000;Caterpillar Mask;毛虫面具
+5070100;Braided Cord Robe;编绳长袍
+5070200;Braided Arm Wraps;编绳腕套
+5070300;Soiled Loincloth;破旧兜裆布
+5080000;Dancer's Hood;舞娘风帽
+5080100;Dancer's Dress;舞娘连身裙
+5080200;Dancer's Bracer;舞娘臂甲
+5080300;Dancer's Trousers;舞娘长裤
+5081100;Dancer's Dress (Altered);舞娘连身裙（轻装）
+5090000;Helm of Night;黑夜头盔
+5090100;Armor of Night;黑夜铠甲
+5090200;Gauntlets of Night;黑夜臂甲
+5090300;Greaves of Night;黑夜腿甲
+5100000;Igon's Helm;埃贡头盔
+5100100;Igon's Armor;埃贡铠甲
+5100200;Igon's Gauntlets;埃贡臂甲
+5100300;Igon's Loincloth;埃贡腰巾
+5101000;Igon's Helm (Altered);埃贡头盔（轻装）
+5101100;Igon's Armor (Altered);埃贡铠甲（轻装）
+5110000;Wise Man's Mask;老贤者面具
+5110100;Ansbach's Attire;安帕赫上衣
+5110200;Ansbach's Manchettes;安帕赫腕套
+5110300;Ansbach's Boots;安帕赫靴子
+5111100;Ansbach's Attire (Altered);安帕赫上衣（轻装）
+5120000;Freyja's Helm;弗蕾亚头盔
+5120100;Freyja's Armor;弗蕾亚铠甲
+5120200;Freyja's Gauntlets;弗蕾亚臂甲
+5120300;Freyja's Greaves;弗蕾亚腿甲
+5121100;Freyja's Armor (Altered);弗蕾亚铠甲（轻装）
+5130000;Helm of Solitude;孤牢头盔
+5130100;Armor of Solitude;孤牢铠甲
+5130200;Gauntlets of Solitude;孤牢臂甲
+5130300;Greaves of Solitude;孤牢腿甲
+5131100;Armor of Solitude (Altered);孤牢铠甲（轻装）
+5140000;Messmer Soldier Helm;梅瑟莫士兵头盔
+5140100;Messmer Soldier Armor;梅瑟莫士兵铠甲
+5140200;Messmer Soldier Gauntlets;梅瑟莫士兵臂甲
+5140300;Messmer Soldier Greaves;梅瑟莫士兵腿甲
+5141100;Messmer Soldier Armor (Altered);梅瑟莫士兵铠甲（轻装）
+5150000;Black Knight Helm;黑骑士头盔
+5150100;Black Knight Armor;黑骑士铠甲
+5150200;Black Knight Gauntlets;黑骑士臂甲
+5150300;Black Knight Greaves;黑骑士腿甲
+5160000;Rakshasa Helm;罗刹头盔
+5160100;Rakshasa Armor;罗刹铠甲
+5160200;Rakshasa Gauntlets;罗刹臂甲
+5160300;Rakshasa Greaves;罗刹腿甲
+5180000;Fire Knight Helm;火焰骑士头盔
+5180100;Fire Knight Armor;火焰骑士铠甲
+5180200;Fire Knight Gauntlets;火焰骑士臂甲
+5180300;Fire Knight Greaves;火焰骑士腿甲
+5181100;Fire Knight Armor (Altered);火焰骑士铠甲（轻装）
+5182000;Death Mask Helm;死亡面具头盔
+5183000;Winged Serpent Helm;带翼蛇头盔
+5184000;Salza's Hood;萨赞风帽
+5190000;Leather Headband;皮革头带
+5190100;Gloried Attire;荣誉上衣
+5190200;Leather Arm Wraps;皮革腕套
+5190300;Leather Leg Wraps;皮革绑腿
+5191000;Leather Crown;皮革头盔
+5191100;Highland Attire;高地上衣
+5200000;Death Knight Helm;死骑士头盔
+5200100;Death Knight Armor;死骑士铠甲
+5200200;Death Knight Gauntlets;死骑士臂甲
+5200300;Death Knight Greaves;死骑士腿甲
+5210000;Curseblade Mask;咒剑士面具
+5210100;Ascetic's Loincloth;修行者腰巾
+5210200;Ascetic's Wrist Guards;修行者手环
+5210300;Ascetic's Ankle Guards;修行者脚环
+5220000;Messmer's Helm;梅瑟莫头盔
+5220100;Messmer's Armor;梅瑟莫铠甲
+5220200;Messmer's Gauntlets;梅瑟莫臂甲
+5220300;Messmer's Greaves;梅瑟莫腿甲
+5221000;Messmer's Helm (Altered);梅瑟莫头盔（轻装）
+5230000;Gravebird Helm;守墓鸟头盔
+5230100;Gravebird's Blackquill Armor;守墓鸟黑羽铠甲
+5230200;Gravebird Bracelets;守墓鸟手环
+5230300;Gravebird Anklets;守墓鸟脚环
+5231100;Gravebird Armor;守墓鸟铠甲
+5240000;Common Soldier Helm;士兵头盔
+5240100;Common Soldier Cloth Armor;士兵软铠甲
+5240200;Common Soldier Gauntlets;士兵臂甲
+5240300;Common Soldier Greaves;士兵腿甲
+5250000;Horned Warrior Helm;角战士头盔
+5250100;Horned Warrior Armor;角战士铠甲
+5250200;Horned Warrior Gauntlets;角战士臂甲
+5250300;Horned Warrior Greaves;角战士腿甲
+5252000;Divine Beast Helm;神兽头盔
+5252100;Divine Beast Warrior Armor;神兽战士铠甲
+5253000;Divine Bird Helm;神鸟头盔
+5253100;Divine Bird Warrior Armor;神鸟战士铠甲
+5253200;Divine Bird Warrior Gauntlets;神鸟战士臂甲
+5253300;Divine Bird Warrior Greaves;神鸟战士腿甲
+5260000;Rellana's Helm;蕾菈娜头盔
+5260100;Rellana's Armor;蕾菈娜铠甲
+5260200;Rellana's Gloves;蕾菈娜手套
+5260300;Rellana's Greaves;蕾菈娜腿甲
+5270000;Young Lion's Helm;年少狮子头盔
+5270100;Young Lion's Armor;年少狮子铠甲
+5270200;Young Lion's Gauntlets;年少狮子臂甲
+5270300;Young Lion's Greaves;年少狮子腿甲
+5271100;Young Lion's Armor (Altered);年少狮子铠甲（轻装）
+5272000;Circlet of Light;光芒头冠
+5280000;Shadow Militiaman Helm;幽影恶兵头盔
+5280100;Shadow Militiaman Armor;幽影恶兵铠甲
+5280200;Shadow Militiaman Gauntlets;幽影恶兵臂甲
+5280300;Shadow Militiaman Greaves;幽影恶兵腿甲
+5290000;Divine Beast Head;神兽头部
+5300000;St. Trina's Blossom;托莉娜孤花
+5310000;Crucible Hammer-Helm;熔炉槌形盔
+5320000;Greatjar;大壶头罩
+5330000;Imp Head (Lion);小恶魔头罩（狮子）

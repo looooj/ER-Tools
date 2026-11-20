@@ -145,8 +145,8 @@
 5310000;Crucible Hammer-Helm;熔炉槌形盔
 5320000;Greatjar;大壶头罩
 5330000;Imp Head (Lion);小恶魔头罩（狮子）
-5340000;Midra's Gaze;米德拉的凝视
-5360000;Quicksilver Circlet;水银头环
-5360100;Quicksilver Scale Robe;水银鳞袍
-5360200;Quicksilver Cuffs;水银护腕
-5360300;Quicksilver Greaves;水银腿甲
+5400000;Midra's Gaze;米德拉的凝视
+5420000;Quicksilver Circlet;水银头环
+5420100;Quicksilver Scale Robe;水银鳞袍
+5420200;Quicksilver Cuffs;水银护腕
+5420300;Quicksilver Greaves;水银腿甲
